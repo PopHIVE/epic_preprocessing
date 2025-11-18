@@ -1,0 +1,16 @@
+[
+  {
+    "file": "raw/staging/2025_11_14_A06e_RSV_Admissions_State_Month_Age_2018-2025.csv",
+    "md5": "9c19ff4cb9661dac5e8a1d1ff60024ec",
+    "date_processed": "2025-11-17 20:00:49",
+    "standard_name": "rsv_tests",
+    "Session Title": "Positive RSV tests and RSV tests and Number of Admissions by Age at Admission Range and State of Residence (U.S.)",
+    "Session ID": "2776822",
+    "Data Model": "Admissions",
+    "Population Base": "All Admissions",
+    "Population Criteria Filters: These criteria are a summary and do not fully reflect the content of the exported session.": "Country of Residence: United States of America,Diagnosis (All): pneumonia j12-j18",
+    "Session Date Range": "1/1/2018 - 10/30/2025 (Based On Admission Date)",
+    "Export User": "Stephanie Perniciaro",
+    "Date of Export": "11/14/2025"
+  }
+]
