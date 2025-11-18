@@ -212,8 +212,8 @@
   "epic_pct_rsv_pos_tests": {
     "id": "epic_pct_rsv_pos_tests",
     "short_name": "Percent positive",
-    "long_name": "Percent of tests among pneumonia patients in the ED (J12-J18) that are positive for RSV",
-    "short_description": "Percent of tests among pneumonia patients in the ED (J12-J18) that are positive for RSV",
+    "long_name": "Percent of tests among hospitalized pneumonia admissions (ICD10: J12-J18) that are positive for RSV",
+    "short_description": "Percent of tests among pneumonia admissions (ICD10: J12-J18) that are positive for RSV. This is among hospital admissions, including those that started in the emergency department",
     "measure_type": "percent",
     "unit": "%",
     "sources": [{ "id": "epic_cosmos" }]
@@ -221,8 +221,8 @@
   "epic_pct_j12_j18_tested_rsv": {
     "id": "epic_pct_j12_j18_tested_rsv",
     "short_name": "Percent tested",
-    "long_name": "Percent of pneumonia patients (J12-J18) in the ED receiving a test for RSV",
-    "short_description": "Percent of pneumonia patients (J12-J18) in the ED receiving a test for RSV",
+    "long_name": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV. This is among hospital admissions, including those that started in the emergency department",
+    "short_description": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV",
     "measure_type": "percent",
     "unit": "%",
     "sources": [{ "id": "epic_cosmos" }]
