@@ -133,8 +133,8 @@
    "diabetes_a1c_6_5": {
     "id": "diabetes_a1c_6_5",
     "short_name": "Elevated hemoglobbin A1c > 6.5%",
-    "long_name": "Prevalence of fiabetes based on elevated Hemoglobin A1c in the previous 2 years",
-    "long_description": "Percent of sample with a an measurement of Hemoglobin A1c greater than 6.5% in the past 2 years.",
+    "long_name": "Prevalence of diabetes based on elevated Hemoglobin A1c in the previous 2 years",
+    "long_description": "Percent of sample with a measurement of Hemoglobin A1c greater than 6.5% in the past 2 years.",
     "measure_type": "percent",
     "unit": "%",
     "sources": [{ "id": "epic_cosmos" }]
