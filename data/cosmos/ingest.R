@@ -51,19 +51,25 @@ chronic_import <- function(yearset){
     rename(diabetes_a1c_6_5 = "...3",
            diabetes_dx_cdw = "...4",
            n_patients_chronic = "...5",
-           geography_name ="State of Residence (U.S.)",
            age = "Age at Encounter in Years"
     ) %>%
-    tidyr::fill(geography_name, age, .direction='down') 
+    rename_with(~ "geography_name", 
+                .cols = matches("^State")) %>%
+    tidyr::fill(geography_name, age, .direction='down') %>%
+    mutate(  n_patients_chronic = as.numeric(n_patients_chronic) 
+             )
   
   b1 <- read_csv(paste0("./raw/staging_chronic/2025_11_12_C03_OBESITY_ICD_BMI_State_Age_",yearset,".csv"), skip = 11) %>%
     rename(obesity_bmi = "...3",
            obesity_dx_cdw = "...4",
            n_patients_chronic = "...5",
-           geography_name ="State of Residence (U.S.)",
            age = "Age at Encounter in Years"
     ) %>%
-    tidyr::fill(geography_name, age, .direction='down') 
+    rename_with(~ "geography_name", 
+                .cols = matches("^State")) %>%
+    tidyr::fill(geography_name, age, .direction='down') %>%
+    mutate(  n_patients_chronic = as.numeric(n_patients_chronic) 
+             )
   
   combined <- full_join(a1, b1)  %>%
     mutate(age = gsub("≥ ","", age),
@@ -75,7 +81,6 @@ chronic_import <- function(yearset){
            diabetes_a1c_6_5 = as.numeric(gsub('%','', diabetes_a1c_6_5)),
            obesity_dx_cdw = as.numeric(gsub('%','', obesity_dx_cdw)),
            obesity_bmi = as.numeric(gsub('%','', obesity_bmi)),
-           n_patients_chronic = as.numeric(n_patients_chronic),
            geography_name = gsub('Total','United States',geography_name)
            
     ) %>%
