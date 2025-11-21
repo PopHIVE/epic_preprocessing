@@ -18,10 +18,20 @@
   "check_results": {
     "./data/cosmos/standard/monthly.csv.gz": {
       "data": "time_nas",
-      "measures": ["missing_info: epic_n_ed_firearm", "missing_info: epic_pct_ed_firearm", "missing_info: suppressed_opioid", "missing_info: suppressed_firearm"]
+      "measures": [
+        "missing_info: epic_n_ed_firearm",
+        "missing_info: epic_pct_ed_firearm",
+        "missing_info: suppressed_opioid",
+        "missing_info: suppressed_firearm"
+      ]
     },
     "./data/cosmos/standard/monthly_injury.csv.gz": {
-      "measures": ["missing_info: epic_n_ed_firearm", "missing_info: epic_pct_ed_firearm", "missing_info: suppressed_opioid", "missing_info: suppressed_firearm"]
+      "measures": [
+        "missing_info: epic_n_ed_firearm",
+        "missing_info: epic_pct_ed_firearm",
+        "missing_info: suppressed_opioid",
+        "missing_info: suppressed_firearm"
+      ]
     },
     "./data/cosmos/standard/monthly_tests.csv.gz": {
       "data": "time_nas",
@@ -29,13 +39,25 @@
     },
     "./data/cosmos/standard/no_geo.csv.gz": {
       "data": "time_nas",
-      "measures": ["missing_info: positive_rsv_tests_(%)", "missing_info: rsv_tests"]
+      "measures": [
+        "missing_info: positive_rsv_tests_(%)",
+        "missing_info: rsv_tests"
+      ]
     },
     "./data/cosmos/standard/state_no_time.csv.gz": {
-      "measures": ["missing_info: bmi_30_49.8", "missing_info: obesity_icd10_(%)", "missing_info: Year"]
+      "measures": [
+        "missing_info: bmi_30_49.8",
+        "missing_info: obesity_icd10_(%)",
+        "missing_info: Year"
+      ]
     },
     "./data/cosmos/standard/state_year.csv.gz": {
-      "measures": ["missing_info: a1c_6.5+_(%)", "missing_info: dm_(%)", "missing_info: n_hba1c", "missing_info: Year"]
+      "measures": [
+        "missing_info: a1c_6.5+_(%)",
+        "missing_info: dm_(%)",
+        "missing_info: n_hba1c",
+        "missing_info: Year"
+      ]
     },
     "./data/cosmos/standard/weekly.csv.gz": {
       "measures": "missing_info: epic_n_all_encounters_weekly"
@@ -44,7 +66,7 @@
   "vintages": {
     "weekly.csv.gz": "2025-11-05",
     "state_no_time.csv.gz": {},
-    "county_no_time.csv.gz": {},
+    "county_no_time.csv.gz": "2025-11-14",
     "no_geo.csv.gz": "2025-11-14",
     "children.csv.gz": {}
   }
