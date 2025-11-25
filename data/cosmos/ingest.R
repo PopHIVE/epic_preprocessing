@@ -298,7 +298,7 @@ dcf::dcf_process_record(updated = process)
 
 #Monthly data ; injury and test data use different age groups so don't merge
 
-monthly_injury <- data[["ed_opioid"]] %>%
+monthly_injury <- data[["opioid_od"]] %>%
   filter(!is.na(age))%>%
   rename(epic_n_ed_opioid = ed_opioid,
          epic_n_ed_firearm = firearms_initial,
