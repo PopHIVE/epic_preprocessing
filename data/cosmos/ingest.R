@@ -13,6 +13,14 @@ raw <- dcf::dcf_process_epic_staging(cleanup=T, standard_names = c(
 )
 )
 
+raw2 <- dcf::dcf_process_epic_staging(cleanup=F, staging_dir = "raw/staging_injury_OD",
+                                      standard_names = c(
+  opioid_od="OPIOID OD",
+  heat_related ="Heat",
+  firearms = "firearms initial"
+)
+)
+
 
 process <- dcf::dcf_process_record()
 meta_files <- list.files("raw", "json", full.names = TRUE)

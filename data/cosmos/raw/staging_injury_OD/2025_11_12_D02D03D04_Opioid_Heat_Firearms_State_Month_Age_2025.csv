@@ -1,0 +1,3863 @@
+﻿Session Title,"Opioid OD Heat Firearms in ED, State Month Age",,,,,,
+Session ID,2776087,,,,,,
+Data Model,Patients,,,,,,
+Population Base,All Patients,,,,,,
+Population Criteria Filters: These criteria are a summary and do not fully reflect the content of the exported session.,"Encounter Type: Emergency, Emergency to Inpatient",,,,,,
+Session Date Range,1/1/2025 - 10/30/2025,,,,,,
+Measure,Number of Patients,,,,,,
+Export User,Stephanie Perniciaro,,,,,,
+Date of Export,11/12/2025,,,,,,
+,,,,,,,
+,,,,,,,
+,,,Diagnosis (Encounter),OPIOID OD,Heat,firearms initial,"Total: Total includes all data, including data from columns not currently displayed."
+State of Residence (U.S.),Age at Encounter in Years,Year,Month,,,,
+Texas,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,72189
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,65444
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,68111
+,,,Apr,10 or fewer,14,10 or fewer,69094
+,,,May,10 or fewer,37,10 or fewer,67832
+,,,Jun,10 or fewer,42,10 or fewer,52382
+,,,Jul,10 or fewer,39,10 or fewer,49317
+,,,Aug,10 or fewer,47,10 or fewer,59868
+,,,Sep,10 or fewer,29,10 or fewer,65369
+,,,Oct 1 – Oct 30,10 or fewer,17,10 or fewer,51264
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,80,42686
+,,,Feb,10 or fewer,10 or fewer,65,38053
+,,,Mar,15,10 or fewer,77,41569
+,,,Apr,18,21,104,41369
+,,,May,21,60,83,41226
+,,,Jun,21,142,87,38109
+,,,Jul,32,185,116,39357
+,,,Aug,21,167,88,41620
+,,,Sep,16,75,52,42803
+,,,Oct 1 – Oct 30,10 or fewer,36,44,30551
+,≥ 25 and < 45 Years,2025,Jan,41,10 or fewer,92,91955
+,,,Feb,49,10 or fewer,89,81608
+,,,Mar,63,22,94,89865
+,,,Apr,69,46,107,88388
+,,,May,118,136,85,91225
+,,,Jun,110,337,94,89191
+,,,Jul,78,407,84,91946
+,,,Aug,63,343,82,92120
+,,,Sep,61,161,89,91213
+,,,Oct 1 – Oct 30,48,41,42,64873
+,≥ 45 and < 65 Years,2025,Jan,26,10 or fewer,29,74821
+,,,Feb,26,10 or fewer,24,68479
+,,,Mar,39,23,30,74880
+,,,Apr,40,21,26,73315
+,,,May,39,104,29,76143
+,,,Jun,31,273,28,74331
+,,,Jul,32,281,22,75955
+,,,Aug,33,314,19,76085
+,,,Sep,35,114,24,74481
+,,,Oct 1 – Oct 30,23,38,19,52390
+,65 Years or more,2025,Jan,23,11,11,77312
+,,,Feb,25,13,10 or fewer,71072
+,,,Mar,25,16,10 or fewer,78128
+,,,Apr,25,28,15,75085
+,,,May,27,93,13,78549
+,,,Jun,26,172,13,75476
+,,,Jul,28,225,14,76333
+,,,Aug,22,226,13,77381
+,,,Sep,21,88,10 or fewer,75012
+,,,Oct 1 – Oct 30,15,26,10 or fewer,50922
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,11133
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,12031
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,11068
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,11466
+,,,May,10 or fewer,10 or fewer,11,10837
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,10551
+,,,Jul,10 or fewer,10 or fewer,14,10480
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,10002
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,9976
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,11271
+,"Total: Total includes all data under the Texas bucket, including data from rows not currently displayed.",2025,Jan,103,28,229,370052
+,,,Feb,111,31,199,336644
+,,,Mar,146,77,221,363571
+,,,Apr,154,131,268,358683
+,,,May,208,429,228,365763
+,,,Jun,191,967,238,339998
+,,,Jul,170,1139,256,343329
+,,,Aug,140,1101,218,357018
+,,,Sep,136,467,188,358800
+,,,Oct 1 – Oct 30,91,158,122,261249
+Florida,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,66423
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,62313
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,62673
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,61027
+,,,May,10 or fewer,21,10 or fewer,60422
+,,,Jun,10 or fewer,41,10 or fewer,47277
+,,,Jul,10 or fewer,45,10 or fewer,44990
+,,,Aug,10 or fewer,34,10 or fewer,53845
+,,,Sep,10 or fewer,27,10 or fewer,59155
+,,,Oct 1 – Oct 30,10 or fewer,14,10 or fewer,45645
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,35,40974
+,,,Feb,12,10 or fewer,31,36605
+,,,Mar,11,10 or fewer,32,38662
+,,,Apr,12,25,33,38288
+,,,May,10 or fewer,59,35,38163
+,,,Jun,10 or fewer,73,58,34414
+,,,Jul,10 or fewer,122,44,35604
+,,,Aug,10 or fewer,93,31,37742
+,,,Sep,12,42,40,38681
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,19,27978
+,≥ 25 and < 45 Years,2025,Jan,91,10 or fewer,40,90837
+,,,Feb,80,15,58,81153
+,,,Mar,87,19,48,87840
+,,,Apr,90,59,53,86487
+,,,May,120,165,51,89685
+,,,Jun,102,177,38,85231
+,,,Jul,80,263,54,87858
+,,,Aug,87,210,51,88283
+,,,Sep,71,90,50,86413
+,,,Oct 1 – Oct 30,53,13,36,61251
+,≥ 45 and < 65 Years,2025,Jan,63,10 or fewer,17,76368
+,,,Feb,46,12,15,70439
+,,,Mar,68,14,19,74911
+,,,Apr,61,49,16,72646
+,,,May,75,113,20,76030
+,,,Jun,69,124,20,72693
+,,,Jul,58,232,14,74430
+,,,Aug,77,159,16,74516
+,,,Sep,63,69,18,73385
+,,,Oct 1 – Oct 30,30,14,10 or fewer,50920
+,65 Years or more,2025,Jan,30,10 or fewer,10 or fewer,88273
+,,,Feb,32,20,10 or fewer,80005
+,,,Mar,30,32,10 or fewer,86208
+,,,Apr,40,70,10 or fewer,83367
+,,,May,45,117,10 or fewer,86812
+,,,Jun,35,145,10 or fewer,82994
+,,,Jul,39,189,10 or fewer,84108
+,,,Aug,32,139,10 or fewer,84728
+,,,Sep,29,65,10 or fewer,83103
+,,,Oct 1 – Oct 30,20,26,10 or fewer,57904
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,10915
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,11747
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,10762
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,11331
+,,,May,10 or fewer,10 or fewer,10 or fewer,10572
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,10367
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,10189
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,10297
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,10362
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,11358
+,"Total: Total includes all data under the Florida bucket, including data from rows not currently displayed.",2025,Jan,194,22,107,373753
+,,,Feb,173,61,117,342223
+,,,Mar,200,82,114,361013
+,,,Apr,204,213,119,353108
+,,,May,250,476,123,361645
+,,,Jun,214,560,136,332938
+,,,Jul,189,851,125,337138
+,,,Aug,207,637,114,349367
+,,,Sep,175,294,117,351056
+,,,Oct 1 – Oct 30,111,77,71,255048
+Ohio,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,42100
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,47437
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,44323
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,42012
+,,,May,10 or fewer,10 or fewer,10 or fewer,40892
+,,,Jun,10 or fewer,49,10 or fewer,33283
+,,,Jul,10 or fewer,33,10 or fewer,33910
+,,,Aug,10 or fewer,20,10 or fewer,36251
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,41774
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,33068
+,≥ 15 and < 25 Years,2025,Jan,13,10 or fewer,63,39447
+,,,Feb,10 or fewer,10 or fewer,52,38526
+,,,Mar,15,10 or fewer,62,38783
+,,,Apr,10 or fewer,10 or fewer,67,37915
+,,,May,10 or fewer,13,71,38602
+,,,Jun,12,145,83,37236
+,,,Jul,18,111,109,38535
+,,,Aug,19,51,69,39587
+,,,Sep,10 or fewer,25,64,41291
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,45,31101
+,≥ 25 and < 45 Years,2025,Jan,105,10 or fewer,78,86615
+,,,Feb,95,10 or fewer,69,83425
+,,,Mar,131,10 or fewer,108,86363
+,,,Apr,142,16,93,83826
+,,,May,131,22,100,87077
+,,,Jun,159,300,125,86236
+,,,Jul,148,234,113,89973
+,,,Aug,131,95,116,89524
+,,,Sep,117,27,106,88400
+,,,Oct 1 – Oct 30,66,10 or fewer,72,66368
+,≥ 45 and < 65 Years,2025,Jan,57,11,33,75030
+,,,Feb,54,10 or fewer,20,74250
+,,,Mar,57,12,29,74438
+,,,Apr,101,10 or fewer,34,72116
+,,,May,81,18,26,74449
+,,,Jun,91,257,44,74751
+,,,Jul,102,193,39,77224
+,,,Aug,72,96,32,77238
+,,,Sep,54,25,39,75178
+,,,Oct 1 – Oct 30,38,13,20,56225
+,65 Years or more,2025,Jan,21,22,10 or fewer,81153
+,,,Feb,12,23,10 or fewer,79959
+,,,Mar,28,24,10 or fewer,83636
+,,,Apr,29,32,10 or fewer,80219
+,,,May,24,38,19,83583
+,,,Jun,23,220,14,82269
+,,,Jul,31,202,14,84391
+,,,Aug,27,114,16,84244
+,,,Sep,22,47,10 or fewer,81425
+,,,Oct 1 – Oct 30,18,20,10 or fewer,60754
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,8664
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,9009
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,8784
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,8169
+,,,May,10 or fewer,10 or fewer,10 or fewer,8024
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,7832
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,7878
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,7564
+,,,Sep,10 or fewer,10 or fewer,15,7819
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,17,8285
+,"Total: Total includes all data under the Ohio bucket, including data from rows not currently displayed.",2025,Jan,198,43,197,332972
+,,,Feb,170,40,158,332557
+,,,Mar,233,43,219,336276
+,,,Apr,280,65,219,324212
+,,,May,248,95,229,332594
+,,,Jun,285,972,280,321558
+,,,Jul,300,774,292,331855
+,,,Aug,250,377,247,334348
+,,,Sep,204,134,244,335832
+,,,Oct 1 – Oct 30,130,45,160,255772
+Pennsylvania,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,27470
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,24548
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,26202
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,24566
+,,,May,10 or fewer,10 or fewer,10 or fewer,24598
+,,,Jun,10 or fewer,31,10 or fewer,20586
+,,,Jul,10 or fewer,20,10 or fewer,19662
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,19806
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,22933
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,14931
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,22,22607
+,,,Feb,10 or fewer,10 or fewer,21,20174
+,,,Mar,10 or fewer,10 or fewer,28,22031
+,,,Apr,10 or fewer,10 or fewer,34,21476
+,,,May,10 or fewer,10 or fewer,50,22185
+,,,Jun,10 or fewer,83,45,21038
+,,,Jul,10 or fewer,55,61,22119
+,,,Aug,12,27,36,22046
+,,,Sep,10 or fewer,13,26,22949
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,20,16182
+,≥ 25 and < 45 Years,2025,Jan,97,10 or fewer,56,52802
+,,,Feb,111,10 or fewer,42,47985
+,,,Mar,123,10 or fewer,47,52693
+,,,Apr,142,10 or fewer,54,51804
+,,,May,158,10 or fewer,64,54583
+,,,Jun,160,186,62,53401
+,,,Jul,186,136,85,56371
+,,,Aug,141,34,50,55774
+,,,Sep,127,10 or fewer,50,53539
+,,,Oct 1 – Oct 30,77,10 or fewer,41,36980
+,≥ 45 and < 65 Years,2025,Jan,54,10 or fewer,15,47713
+,,,Feb,55,10 or fewer,16,44500
+,,,Mar,101,10 or fewer,21,47605
+,,,Apr,100,10 or fewer,19,46434
+,,,May,102,10 or fewer,21,48920
+,,,Jun,93,118,16,48854
+,,,Jul,108,127,15,50538
+,,,Aug,102,35,23,50175
+,,,Sep,83,10 or fewer,16,47906
+,,,Oct 1 – Oct 30,48,10 or fewer,13,32440
+,65 Years or more,2025,Jan,18,10 or fewer,10 or fewer,58584
+,,,Feb,20,10 or fewer,10 or fewer,54833
+,,,Mar,28,10 or fewer,10 or fewer,58520
+,,,Apr,22,10 or fewer,10 or fewer,56781
+,,,May,25,13,10 or fewer,58597
+,,,Jun,22,163,13,58715
+,,,Jul,28,100,12,60068
+,,,Aug,35,45,12,59953
+,,,Sep,21,25,10 or fewer,56749
+,,,Oct 1 – Oct 30,16,10 or fewer,10 or fewer,38906
+,No value,2025,Jan,10 or fewer,10 or fewer,12,7542
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7620
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,7197
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,6970
+,,,May,10 or fewer,10 or fewer,10 or fewer,6737
+,,,Jun,10 or fewer,10 or fewer,11,6613
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,6762
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,6307
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,6270
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,6608
+,"Total: Total includes all data under the Pennsylvania bucket, including data from rows not currently displayed.",2025,Jan,171,11,116,216698
+,,,Feb,194,10 or fewer,96,199639
+,,,Mar,258,21,112,214230
+,,,Apr,273,22,118,208015
+,,,May,293,39,153,215602
+,,,Jun,281,581,149,209189
+,,,Jul,324,439,184,215489
+,,,Aug,290,149,130,214032
+,,,Sep,239,57,108,210318
+,,,Oct 1 – Oct 30,145,15,85,146032
+New York,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,25438
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,21048
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,23743
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,22485
+,,,May,10 or fewer,10 or fewer,10 or fewer,22783
+,,,Jun,10 or fewer,32,10 or fewer,21234
+,,,Jul,10 or fewer,20,10 or fewer,20293
+,,,Aug,10 or fewer,13,10 or fewer,18664
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,20857
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,16612
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,25,20876
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,18787
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,20988
+,,,Apr,10 or fewer,10 or fewer,17,20802
+,,,May,10 or fewer,11,21,20957
+,,,Jun,10 or fewer,53,17,19644
+,,,Jul,10 or fewer,46,30,20724
+,,,Aug,11,22,23,20254
+,,,Sep,10 or fewer,10 or fewer,14,21908
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,11,16793
+,≥ 25 and < 45 Years,2025,Jan,56,10 or fewer,23,49395
+,,,Feb,51,10 or fewer,10 or fewer,44225
+,,,Mar,64,10 or fewer,20,48519
+,,,Apr,71,10 or fewer,15,47822
+,,,May,74,13,31,49309
+,,,Jun,93,137,34,49183
+,,,Jul,78,119,30,51870
+,,,Aug,83,42,36,50773
+,,,Sep,62,10 or fewer,24,48863
+,,,Oct 1 – Oct 30,45,10 or fewer,16,35863
+,≥ 45 and < 65 Years,2025,Jan,35,10 or fewer,10 or fewer,43333
+,,,Feb,34,10 or fewer,10 or fewer,39741
+,,,Mar,42,10 or fewer,10 or fewer,42921
+,,,Apr,61,10 or fewer,10 or fewer,42581
+,,,May,71,10 or fewer,10 or fewer,44016
+,,,Jun,55,99,10 or fewer,43878
+,,,Jul,54,115,13,45758
+,,,Aug,57,38,14,44297
+,,,Sep,39,10 or fewer,10 or fewer,42903
+,,,Oct 1 – Oct 30,38,10 or fewer,10 or fewer,31356
+,65 Years or more,2025,Jan,16,13,10 or fewer,50081
+,,,Feb,12,17,10 or fewer,46295
+,,,Mar,12,14,10 or fewer,49733
+,,,Apr,22,21,10 or fewer,50569
+,,,May,19,26,10 or fewer,52620
+,,,Jun,32,124,10 or fewer,51859
+,,,Jul,24,119,10 or fewer,52846
+,,,Aug,17,47,10 or fewer,51875
+,,,Sep,16,22,10 or fewer,49284
+,,,Oct 1 – Oct 30,12,16,10 or fewer,36785
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,7299
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7547
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,7336
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,7332
+,,,May,10 or fewer,10 or fewer,10 or fewer,7032
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,6900
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,7092
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,6568
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,6945
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7250
+,"Total: Total includes all data under the New York bucket, including data from rows not currently displayed.",2025,Jan,111,32,61,196408
+,,,Feb,101,27,25,177632
+,,,Mar,126,25,37,193218
+,,,Apr,157,40,49,191568
+,,,May,172,61,66,196700
+,,,Jun,190,447,64,192674
+,,,Jul,163,420,82,198561
+,,,Aug,168,162,76,192408
+,,,Sep,126,40,54,190736
+,,,Oct 1 – Oct 30,96,33,36,144652
+North Carolina,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,30640
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,27237
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,26608
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,24425
+,,,May,10 or fewer,10 or fewer,10 or fewer,24910
+,,,Jun,10 or fewer,22,10 or fewer,21058
+,,,Jul,10 or fewer,13,10 or fewer,19556
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,21504
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,25063
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,20172
+,≥ 15 and < 25 Years,2025,Jan,12,10 or fewer,52,22979
+,,,Feb,18,10 or fewer,40,20671
+,,,Mar,20,10 or fewer,39,22027
+,,,Apr,25,13,49,21323
+,,,May,17,14,63,21623
+,,,Jun,17,98,67,20492
+,,,Jul,17,121,48,20991
+,,,Aug,18,18,49,21388
+,,,Sep,10 or fewer,17,47,23155
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,28,18084
+,≥ 25 and < 45 Years,2025,Jan,75,10 or fewer,74,51637
+,,,Feb,85,10 or fewer,56,45858
+,,,Mar,91,10 or fewer,55,48297
+,,,Apr,92,17,70,47489
+,,,May,113,24,73,50038
+,,,Jun,101,248,57,49560
+,,,Jul,89,244,84,51739
+,,,Aug,88,41,59,51088
+,,,Sep,96,19,64,50882
+,,,Oct 1 – Oct 30,49,10 or fewer,48,39622
+,≥ 45 and < 65 Years,2025,Jan,32,10 or fewer,15,44657
+,,,Feb,30,10 or fewer,20,41208
+,,,Mar,46,10 or fewer,29,43428
+,,,Apr,61,14,21,42272
+,,,May,67,16,19,43986
+,,,Jun,41,207,22,43791
+,,,Jul,46,239,31,45371
+,,,Aug,40,38,35,44774
+,,,Sep,34,20,20,43840
+,,,Oct 1 – Oct 30,36,10 or fewer,13,33970
+,65 Years or more,2025,Jan,14,10 or fewer,10 or fewer,48696
+,,,Feb,18,10 or fewer,10 or fewer,45563
+,,,Mar,20,10 or fewer,10 or fewer,49003
+,,,Apr,21,24,10 or fewer,47190
+,,,May,16,24,14,49013
+,,,Jun,23,165,10 or fewer,47704
+,,,Jul,25,178,10 or fewer,49390
+,,,Aug,17,42,10 or fewer,49513
+,,,Sep,10 or fewer,24,11,48332
+,,,Oct 1 – Oct 30,18,10 or fewer,10 or fewer,37636
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,6410
+,,,Feb,10 or fewer,10 or fewer,12,6760
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,6346
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,6185
+,,,May,10 or fewer,10 or fewer,10 or fewer,5785
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,5695
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,5783
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,5558
+,,,Sep,10 or fewer,10 or fewer,13,5614
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,6215
+,"Total: Total includes all data under the North Carolina bucket, including data from rows not currently displayed.",2025,Jan,137,10 or fewer,157,204995
+,,,Feb,152,13,138,187276
+,,,Mar,178,25,144,195691
+,,,Apr,202,73,158,188868
+,,,May,216,88,181,195336
+,,,Jun,183,740,166,188273
+,,,Jul,178,799,180,192814
+,,,Aug,163,146,160,193799
+,,,Sep,150,84,162,196860
+,,,Oct 1 – Oct 30,111,15,99,155693
+California,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,26053
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,24803
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,24820
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,22871
+,,,May,10 or fewer,10 or fewer,10 or fewer,23804
+,,,Jun,10 or fewer,12,10 or fewer,19674
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,18178
+,,,Aug,10 or fewer,11,10 or fewer,20671
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,22239
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,18280
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,21,19941
+,,,Feb,10 or fewer,10 or fewer,13,17835
+,,,Mar,11,10 or fewer,21,19474
+,,,Apr,10 or fewer,10 or fewer,26,19039
+,,,May,13,13,22,19759
+,,,Jun,12,17,21,17857
+,,,Jul,15,23,18,18707
+,,,Aug,13,29,28,19804
+,,,Sep,12,16,19,19690
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,16143
+,≥ 25 and < 45 Years,2025,Jan,93,10 or fewer,31,47672
+,,,Feb,79,10 or fewer,31,42097
+,,,Mar,85,10 or fewer,30,46240
+,,,Apr,86,10 or fewer,25,45775
+,,,May,68,26,39,48302
+,,,Jun,90,56,24,45955
+,,,Jul,85,47,31,47211
+,,,Aug,74,54,38,47990
+,,,Sep,68,27,31,46689
+,,,Oct 1 – Oct 30,37,10 or fewer,19,36038
+,≥ 45 and < 65 Years,2025,Jan,48,10 or fewer,10 or fewer,40297
+,,,Feb,45,10 or fewer,13,36151
+,,,Mar,36,10 or fewer,15,38580
+,,,Apr,52,10 or fewer,10 or fewer,38941
+,,,May,43,24,17,40244
+,,,Jun,36,24,10 or fewer,38674
+,,,Jul,39,49,10 or fewer,39334
+,,,Aug,30,45,10 or fewer,40088
+,,,Sep,32,22,10 or fewer,39120
+,,,Oct 1 – Oct 30,34,10 or fewer,12,30123
+,65 Years or more,2025,Jan,13,10 or fewer,10 or fewer,43183
+,,,Feb,18,10 or fewer,10 or fewer,37625
+,,,Mar,28,10 or fewer,10 or fewer,40820
+,,,Apr,13,11,10 or fewer,40761
+,,,May,23,34,10 or fewer,42374
+,,,Jun,18,28,10 or fewer,40723
+,,,Jul,18,24,10 or fewer,41454
+,,,Aug,17,46,10 or fewer,42006
+,,,Sep,11,18,10 or fewer,40238
+,,,Oct 1 – Oct 30,16,10 or fewer,10 or fewer,31588
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,5677
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,6123
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,5810
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,5801
+,,,May,10 or fewer,10 or fewer,10 or fewer,5755
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,5481
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,5593
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,5247
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,5444
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5679
+,"Total: Total includes all data under the California bucket, including data from rows not currently displayed.",2025,Jan,164,15,71,182800
+,,,Feb,151,15,66,164618
+,,,Mar,163,24,73,175725
+,,,Apr,163,31,68,173166
+,,,May,148,107,83,180221
+,,,Jun,160,137,60,168343
+,,,Jul,157,150,66,170454
+,,,Aug,134,186,82,175782
+,,,Sep,124,89,66,173399
+,,,Oct 1 – Oct 30,99,22,41,137838
+Virginia,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,24583
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,25387
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,26513
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,23489
+,,,May,10 or fewer,10 or fewer,10 or fewer,23997
+,,,Jun,10 or fewer,24,10 or fewer,19692
+,,,Jul,10 or fewer,21,10 or fewer,18271
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,19951
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,22601
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,18703
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,24,20976
+,,,Feb,10 or fewer,10 or fewer,19,19169
+,,,Mar,10 or fewer,10 or fewer,24,20765
+,,,Apr,12,10 or fewer,23,19390
+,,,May,16,12,24,19888
+,,,Jun,10 or fewer,104,22,18699
+,,,Jul,10 or fewer,99,29,19071
+,,,Aug,14,24,30,19577
+,,,Sep,12,13,20,20748
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,11,16527
+,≥ 25 and < 45 Years,2025,Jan,39,10 or fewer,45,48641
+,,,Feb,40,10 or fewer,28,43979
+,,,Mar,46,10 or fewer,38,46885
+,,,Apr,68,17,31,45333
+,,,May,63,13,28,47048
+,,,Jun,63,269,31,45992
+,,,Jul,52,244,33,47631
+,,,Aug,58,42,23,47359
+,,,Sep,42,18,39,46906
+,,,Oct 1 – Oct 30,45,10 or fewer,20,37300
+,≥ 45 and < 65 Years,2025,Jan,38,10 or fewer,10 or fewer,40749
+,,,Feb,29,10 or fewer,12,37643
+,,,Mar,41,10 or fewer,10 or fewer,40168
+,,,Apr,44,10 or fewer,10 or fewer,38357
+,,,May,51,21,10 or fewer,40230
+,,,Jun,57,196,10 or fewer,39922
+,,,Jul,56,190,10 or fewer,40478
+,,,Aug,29,33,21,40543
+,,,Sep,34,11,10 or fewer,39525
+,,,Oct 1 – Oct 30,26,10 or fewer,10 or fewer,31074
+,65 Years or more,2025,Jan,15,10 or fewer,10 or fewer,44403
+,,,Feb,11,11,10 or fewer,41902
+,,,Mar,14,15,10 or fewer,44770
+,,,Apr,12,19,10 or fewer,43399
+,,,May,12,42,10 or fewer,45110
+,,,Jun,17,193,10 or fewer,44747
+,,,Jul,27,157,10 or fewer,45058
+,,,Aug,14,36,10 or fewer,45682
+,,,Sep,13,32,10 or fewer,44456
+,,,Oct 1 – Oct 30,10 or fewer,21,10 or fewer,35642
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4695
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4870
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4688
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4614
+,,,May,10 or fewer,10 or fewer,10 or fewer,4315
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,4294
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,4420
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,4158
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4212
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4590
+,"Total: Total includes all data under the Virginia bucket, including data from rows not currently displayed.",2025,Jan,99,12,92,184018
+,,,Feb,91,18,66,172927
+,,,Mar,109,33,78,183769
+,,,Apr,138,54,72,174561
+,,,May,144,92,72,180566
+,,,Jun,149,787,69,173323
+,,,Jul,146,713,74,174905
+,,,Aug,117,138,84,177245
+,,,Sep,102,81,73,178422
+,,,Oct 1 – Oct 30,87,36,44,143824
+Michigan,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,23306
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,22937
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,22365
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,20623
+,,,May,10 or fewer,10 or fewer,10 or fewer,21505
+,,,Jun,10 or fewer,24,10 or fewer,18186
+,,,Jul,10 or fewer,13,10 or fewer,16859
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,17180
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,19857
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,15012
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,18,18659
+,,,Feb,10 or fewer,10 or fewer,14,16738
+,,,Mar,10 or fewer,10 or fewer,26,17979
+,,,Apr,10 or fewer,10 or fewer,16,17140
+,,,May,10 or fewer,10 or fewer,20,18057
+,,,Jun,10 or fewer,61,37,17350
+,,,Jul,10 or fewer,34,35,18112
+,,,Aug,10 or fewer,21,22,17792
+,,,Sep,10 or fewer,10 or fewer,25,17796
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,12,12314
+,≥ 25 and < 45 Years,2025,Jan,36,10 or fewer,36,42572
+,,,Feb,34,10 or fewer,25,39137
+,,,Mar,46,10 or fewer,21,41508
+,,,Apr,50,10 or fewer,30,39753
+,,,May,53,10 or fewer,34,41500
+,,,Jun,53,132,47,40987
+,,,Jul,55,95,55,43218
+,,,Aug,43,45,45,42304
+,,,Sep,37,10 or fewer,39,40149
+,,,Oct 1 – Oct 30,27,10 or fewer,18,27215
+,≥ 45 and < 65 Years,2025,Jan,31,10 or fewer,13,38223
+,,,Feb,22,10 or fewer,11,35842
+,,,Mar,35,10 or fewer,13,37504
+,,,Apr,31,10 or fewer,17,35395
+,,,May,36,10 or fewer,17,37160
+,,,Jun,47,94,13,36725
+,,,Jul,44,95,22,38460
+,,,Aug,37,28,23,37763
+,,,Sep,22,10 or fewer,21,35490
+,,,Oct 1 – Oct 30,18,10 or fewer,10 or fewer,23374
+,65 Years or more,2025,Jan,22,10 or fewer,10 or fewer,44274
+,,,Feb,11,10 or fewer,10 or fewer,41837
+,,,Mar,30,11,10 or fewer,44069
+,,,Apr,14,15,10 or fewer,42936
+,,,May,18,17,10 or fewer,45097
+,,,Jun,14,86,10 or fewer,44006
+,,,Jul,33,66,10 or fewer,44340
+,,,Aug,24,39,10 or fewer,44042
+,,,Sep,19,12,10 or fewer,41017
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,26417
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,5146
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5251
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,5094
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4830
+,,,May,10 or fewer,10 or fewer,10 or fewer,4797
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,4675
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,4745
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,4467
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4598
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4342
+,"Total: Total includes all data under the Michigan bucket, including data from rows not currently displayed.",2025,Jan,93,14,75,172160
+,,,Feb,70,18,62,161725
+,,,Mar,118,19,74,168496
+,,,Apr,102,28,73,160662
+,,,May,111,41,80,168098
+,,,Jun,115,397,108,161910
+,,,Jul,140,304,123,165713
+,,,Aug,107,141,107,163530
+,,,Sep,81,35,96,158890
+,,,Oct 1 – Oct 30,55,17,46,108662
+Illinois,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,29028
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,25480
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,26872
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,25277
+,,,May,10 or fewer,10 or fewer,10 or fewer,25657
+,,,Jun,10 or fewer,30,10 or fewer,20337
+,,,Jul,10 or fewer,26,10 or fewer,20127
+,,,Aug,10 or fewer,15,10 or fewer,22951
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,25074
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,18892
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,22,18623
+,,,Feb,10 or fewer,10 or fewer,30,16751
+,,,Mar,11,10 or fewer,34,17960
+,,,Apr,10 or fewer,10 or fewer,28,17693
+,,,May,10 or fewer,10 or fewer,18,17699
+,,,Jun,10 or fewer,67,40,16546
+,,,Jul,10 or fewer,51,36,17027
+,,,Aug,10 or fewer,32,42,18132
+,,,Sep,10 or fewer,13,22,18987
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,22,14472
+,≥ 25 and < 45 Years,2025,Jan,31,10 or fewer,43,38084
+,,,Feb,30,10 or fewer,34,34274
+,,,Mar,47,10 or fewer,44,37433
+,,,Apr,40,10 or fewer,35,36013
+,,,May,50,13,35,37253
+,,,Jun,58,134,44,36856
+,,,Jul,55,139,53,38255
+,,,Aug,63,68,45,38539
+,,,Sep,58,18,31,37579
+,,,Oct 1 – Oct 30,41,10 or fewer,18,28151
+,≥ 45 and < 65 Years,2025,Jan,38,10 or fewer,10 or fewer,34479
+,,,Feb,52,10 or fewer,12,31588
+,,,Mar,61,10 or fewer,10 or fewer,33476
+,,,Apr,47,10 or fewer,13,32409
+,,,May,54,10 or fewer,10 or fewer,33426
+,,,Jun,74,124,13,33032
+,,,Jul,48,128,10 or fewer,34112
+,,,Aug,61,55,14,34488
+,,,Sep,58,13,12,32956
+,,,Oct 1 – Oct 30,37,10 or fewer,10 or fewer,24766
+,65 Years or more,2025,Jan,11,10 or fewer,10 or fewer,41593
+,,,Feb,11,10 or fewer,10 or fewer,38386
+,,,Mar,20,10 or fewer,10 or fewer,40776
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,39205
+,,,May,17,21,10 or fewer,41221
+,,,Jun,29,129,10 or fewer,40042
+,,,Jul,31,113,10 or fewer,40824
+,,,Aug,28,58,10 or fewer,40780
+,,,Sep,23,26,10 or fewer,40257
+,,,Oct 1 – Oct 30,26,10 or fewer,10 or fewer,29994
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,5176
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5270
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4717
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4807
+,,,May,10 or fewer,10 or fewer,10 or fewer,4649
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,4570
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,4527
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,4299
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4652
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4894
+,"Total: Total includes all data under the Illinois bucket, including data from rows not currently displayed.",2025,Jan,85,10 or fewer,83,166969
+,,,Feb,99,11,83,151730
+,,,Mar,139,10 or fewer,95,161214
+,,,Apr,101,14,92,155385
+,,,May,128,56,69,159895
+,,,Jun,169,484,104,151362
+,,,Jul,138,458,111,154850
+,,,Aug,157,228,109,159166
+,,,Sep,147,78,73,159488
+,,,Oct 1 – Oct 30,111,15,48,121161
+Georgia,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,29950
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,26661
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,30053
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,27406
+,,,May,10 or fewer,15,10 or fewer,27443
+,,,Jun,10 or fewer,21,10 or fewer,20806
+,,,Jul,10 or fewer,21,11,20599
+,,,Aug,10 or fewer,15,10 or fewer,26752
+,,,Sep,10 or fewer,12,10 or fewer,27659
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,22101
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,50,16127
+,,,Feb,10 or fewer,10 or fewer,41,14634
+,,,Mar,12,10 or fewer,56,16270
+,,,Apr,10 or fewer,10 or fewer,38,15676
+,,,May,12,11,53,15648
+,,,Jun,10 or fewer,41,67,14718
+,,,Jul,10 or fewer,73,71,15494
+,,,Aug,10 or fewer,22,37,17009
+,,,Sep,10 or fewer,11,38,16534
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,42,12623
+,≥ 25 and < 45 Years,2025,Jan,44,10 or fewer,52,33522
+,,,Feb,35,10 or fewer,56,30200
+,,,Mar,45,10 or fewer,75,33248
+,,,Apr,50,10 or fewer,58,32622
+,,,May,47,13,65,34264
+,,,Jun,33,96,61,33064
+,,,Jul,35,149,57,34095
+,,,Aug,40,47,50,34978
+,,,Sep,23,22,63,33491
+,,,Oct 1 – Oct 30,22,10 or fewer,38,25623
+,≥ 45 and < 65 Years,2025,Jan,23,10 or fewer,22,29062
+,,,Feb,25,10 or fewer,11,26453
+,,,Mar,36,10 or fewer,25,28752
+,,,Apr,25,10 or fewer,25,28076
+,,,May,31,20,26,29101
+,,,Jun,27,80,11,29038
+,,,Jul,21,162,25,29095
+,,,Aug,20,41,19,29219
+,,,Sep,15,12,18,28049
+,,,Oct 1 – Oct 30,22,10 or fewer,13,21359
+,65 Years or more,2025,Jan,13,10 or fewer,10 or fewer,27421
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,24775
+,,,Mar,14,13,10 or fewer,26916
+,,,Apr,10 or fewer,17,10 or fewer,26341
+,,,May,17,13,10 or fewer,27439
+,,,Jun,14,56,10 or fewer,26762
+,,,Jul,14,78,10 or fewer,26914
+,,,Aug,10 or fewer,20,10 or fewer,26843
+,,,Sep,10 or fewer,16,10 or fewer,25714
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,18940
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4539
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4513
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4313
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4260
+,,,May,10 or fewer,10 or fewer,10 or fewer,4122
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,4120
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,4154
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3943
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4024
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4240
+,"Total: Total includes all data under the Georgia bucket, including data from rows not currently displayed.",2025,Jan,91,10 or fewer,149,140609
+,,,Feb,79,13,124,127221
+,,,Mar,109,27,174,139529
+,,,Apr,95,42,135,134371
+,,,May,109,72,158,137994
+,,,Jun,83,294,153,128494
+,,,Jul,79,482,175,130327
+,,,Aug,73,145,121,138716
+,,,Sep,55,73,131,135451
+,,,Oct 1 – Oct 30,58,19,108,104871
+South Carolina,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,21068
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,18021
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,18553
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,16729
+,,,May,10 or fewer,10 or fewer,10 or fewer,17143
+,,,Jun,10 or fewer,17,10 or fewer,13628
+,,,Jul,10 or fewer,21,10 or fewer,13480
+,,,Aug,10 or fewer,16,10 or fewer,17038
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,18111
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,14592
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,37,15492
+,,,Feb,10 or fewer,10 or fewer,30,13597
+,,,Mar,10 or fewer,10 or fewer,41,14809
+,,,Apr,13,10 or fewer,45,14122
+,,,May,14,13,45,14162
+,,,Jun,10 or fewer,73,50,13604
+,,,Jul,10 or fewer,57,44,14371
+,,,Aug,10 or fewer,24,41,15331
+,,,Sep,10 or fewer,10 or fewer,36,15507
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,26,12216
+,≥ 25 and < 45 Years,2025,Jan,33,10 or fewer,43,33506
+,,,Feb,70,10 or fewer,21,29164
+,,,Mar,53,10 or fewer,44,31708
+,,,Apr,66,10 or fewer,52,30924
+,,,May,62,21,69,32431
+,,,Jun,67,150,60,31946
+,,,Jul,53,202,46,33092
+,,,Aug,40,45,42,33691
+,,,Sep,47,18,35,32975
+,,,Oct 1 – Oct 30,25,10 or fewer,40,26334
+,≥ 45 and < 65 Years,2025,Jan,21,10 or fewer,17,29578
+,,,Feb,27,10 or fewer,15,26840
+,,,Mar,29,10 or fewer,19,28866
+,,,Apr,38,14,12,28162
+,,,May,31,20,21,28990
+,,,Jun,36,150,22,29107
+,,,Jul,43,197,27,29972
+,,,Aug,24,36,15,30002
+,,,Sep,23,20,13,29265
+,,,Oct 1 – Oct 30,30,10 or fewer,13,23343
+,65 Years or more,2025,Jan,10 or fewer,12,10 or fewer,31196
+,,,Feb,10 or fewer,11,10 or fewer,28643
+,,,Mar,16,10 or fewer,10 or fewer,30961
+,,,Apr,10 or fewer,14,10 or fewer,29979
+,,,May,15,27,10 or fewer,30991
+,,,Jun,12,103,10 or fewer,30566
+,,,Jul,14,147,10 or fewer,31325
+,,,Aug,16,46,10 or fewer,31576
+,,,Sep,14,23,10 or fewer,31433
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,25003
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,3187
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3507
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3107
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3104
+,,,May,10 or fewer,10 or fewer,10 or fewer,2932
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2999
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2956
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2811
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2994
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3162
+,"Total: Total includes all data under the South Carolina bucket, including data from rows not currently displayed.",2025,Jan,69,18,114,134014
+,,,Feb,111,20,76,119758
+,,,Mar,107,17,117,127985
+,,,Apr,126,42,120,122999
+,,,May,127,85,153,126634
+,,,Jun,125,493,144,121830
+,,,Jul,119,626,137,125179
+,,,Aug,86,169,116,130430
+,,,Sep,90,71,103,130263
+,,,Oct 1 – Oct 30,69,18,86,104642
+New Jersey,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,22639
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,17901
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,19292
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,17565
+,,,May,10 or fewer,10 or fewer,10 or fewer,17528
+,,,Jun,10 or fewer,27,10 or fewer,15775
+,,,Jul,10 or fewer,11,10 or fewer,14387
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,13446
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,15957
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,13021
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,13243
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,11677
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,12328
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,11894
+,,,May,10 or fewer,10 or fewer,10 or fewer,12513
+,,,Jun,10 or fewer,47,10 or fewer,11507
+,,,Jul,10 or fewer,30,10 or fewer,11489
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,11389
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,12514
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,9822
+,≥ 25 and < 45 Years,2025,Jan,36,10 or fewer,13,29604
+,,,Feb,39,10 or fewer,10 or fewer,25580
+,,,Mar,39,10 or fewer,12,27401
+,,,Apr,58,10 or fewer,12,26446
+,,,May,55,10 or fewer,14,27856
+,,,Jun,42,83,14,27363
+,,,Jul,46,67,10 or fewer,27659
+,,,Aug,66,13,10 or fewer,27117
+,,,Sep,56,10 or fewer,10 or fewer,26846
+,,,Oct 1 – Oct 30,39,10 or fewer,10 or fewer,20546
+,≥ 45 and < 65 Years,2025,Jan,48,10 or fewer,10 or fewer,25664
+,,,Feb,48,10 or fewer,10 or fewer,22569
+,,,Mar,55,10 or fewer,10 or fewer,23632
+,,,Apr,73,10 or fewer,10 or fewer,23200
+,,,May,87,10 or fewer,10 or fewer,24579
+,,,Jun,78,78,10 or fewer,24123
+,,,Jul,70,58,10 or fewer,24045
+,,,Aug,71,17,10 or fewer,23508
+,,,Sep,64,10 or fewer,10 or fewer,23150
+,,,Oct 1 – Oct 30,26,10 or fewer,10 or fewer,17499
+,65 Years or more,2025,Jan,16,10 or fewer,10 or fewer,27939
+,,,Feb,16,10 or fewer,10 or fewer,24931
+,,,Mar,20,10 or fewer,10 or fewer,26297
+,,,Apr,19,10 or fewer,10 or fewer,25647
+,,,May,24,12,10 or fewer,26925
+,,,Jun,21,82,10 or fewer,26284
+,,,Jul,21,54,10 or fewer,26047
+,,,Aug,27,19,10 or fewer,25847
+,,,Sep,21,10 or fewer,10 or fewer,24982
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,18834
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,3936
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4160
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3901
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3880
+,,,May,10 or fewer,10 or fewer,10 or fewer,3680
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,3640
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,3620
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3531
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3443
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4001
+,"Total: Total includes all data under the New Jersey bucket, including data from rows not currently displayed.",2025,Jan,102,10 or fewer,21,123008
+,,,Feb,106,10 or fewer,18,106809
+,,,Mar,119,10 or fewer,24,112839
+,,,Apr,152,10 or fewer,25,108622
+,,,May,168,24,28,113065
+,,,Jun,143,319,27,108681
+,,,Jul,138,221,22,107233
+,,,Aug,172,62,17,104828
+,,,Sep,143,22,15,106879
+,,,Oct 1 – Oct 30,80,10 or fewer,13,83716
+Colorado,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,24507
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,24603
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,24511
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,23238
+,,,May,10 or fewer,10 or fewer,10 or fewer,23053
+,,,Jun,10 or fewer,14,10 or fewer,17773
+,,,Jul,10 or fewer,11,10 or fewer,16885
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,19979
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,21575
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,18029
+,≥ 15 and < 25 Years,2025,Jan,11,10 or fewer,16,12241
+,,,Feb,17,10 or fewer,12,11466
+,,,Mar,20,10 or fewer,13,12350
+,,,Apr,15,10 or fewer,16,12198
+,,,May,14,10 or fewer,12,12112
+,,,Jun,14,23,13,11673
+,,,Jul,16,20,26,12141
+,,,Aug,13,15,16,12692
+,,,Sep,10 or fewer,10 or fewer,13,13450
+,,,Oct 1 – Oct 30,12,10 or fewer,10 or fewer,10684
+,≥ 25 and < 45 Years,2025,Jan,68,10 or fewer,18,24810
+,,,Feb,68,10 or fewer,15,22665
+,,,Mar,104,10 or fewer,22,25106
+,,,Apr,100,10 or fewer,19,24235
+,,,May,117,10 or fewer,21,25131
+,,,Jun,95,43,17,24838
+,,,Jul,64,44,17,25785
+,,,Aug,73,32,20,26015
+,,,Sep,62,10 or fewer,13,26019
+,,,Oct 1 – Oct 30,54,10 or fewer,19,20332
+,≥ 45 and < 65 Years,2025,Jan,23,10 or fewer,10 or fewer,17430
+,,,Feb,27,10 or fewer,10 or fewer,15962
+,,,Mar,33,10 or fewer,10 or fewer,17509
+,,,Apr,38,10 or fewer,10 or fewer,16699
+,,,May,36,10 or fewer,10 or fewer,17933
+,,,Jun,30,30,13,17400
+,,,Jul,23,25,13,17974
+,,,Aug,33,25,10 or fewer,18692
+,,,Sep,19,10 or fewer,10 or fewer,18403
+,,,Oct 1 – Oct 30,26,10 or fewer,10 or fewer,14146
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,18430
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,17136
+,,,Mar,13,10 or fewer,10 or fewer,19059
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,18310
+,,,May,10 or fewer,10 or fewer,10 or fewer,19506
+,,,Jun,15,27,10 or fewer,18951
+,,,Jul,10 or fewer,24,10 or fewer,19385
+,,,Aug,10 or fewer,19,10 or fewer,19560
+,,,Sep,11,10 or fewer,10 or fewer,19998
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,15118
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2032
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2093
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2057
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2091
+,,,May,10 or fewer,10 or fewer,10 or fewer,1968
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1921
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1929
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1868
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1962
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2269
+,"Total: Total includes all data under the Colorado bucket, including data from rows not currently displayed.",2025,Jan,108,10 or fewer,43,99436
+,,,Feb,119,10 or fewer,37,93911
+,,,Mar,172,10 or fewer,44,100584
+,,,Apr,162,10 or fewer,48,96762
+,,,May,173,23,48,99695
+,,,Jun,154,137,45,92547
+,,,Jul,110,127,60,94088
+,,,Aug,127,100,46,98791
+,,,Sep,102,20,34,101393
+,,,Oct 1 – Oct 30,99,10 or fewer,26,80574
+Massachusetts,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,16382
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,13504
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,13865
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,12821
+,,,May,10 or fewer,10 or fewer,10 or fewer,13635
+,,,Jun,10 or fewer,16,10 or fewer,11827
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,10974
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,10581
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,12151
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,9746
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,10746
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,9544
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,10006
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,9882
+,,,May,10 or fewer,10 or fewer,10 or fewer,9780
+,,,Jun,10 or fewer,35,10 or fewer,8914
+,,,Jul,10 or fewer,14,10 or fewer,9300
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,9525
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,10669
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,8552
+,≥ 25 and < 45 Years,2025,Jan,29,10 or fewer,10 or fewer,23036
+,,,Feb,30,10 or fewer,11,21072
+,,,Mar,47,10 or fewer,10 or fewer,22136
+,,,Apr,44,10 or fewer,10 or fewer,21736
+,,,May,52,10 or fewer,10 or fewer,22355
+,,,Jun,54,47,10 or fewer,21636
+,,,Jul,62,38,10 or fewer,23026
+,,,Aug,81,16,10 or fewer,22782
+,,,Sep,60,10 or fewer,10 or fewer,22808
+,,,Oct 1 – Oct 30,43,10 or fewer,10 or fewer,17519
+,≥ 45 and < 65 Years,2025,Jan,14,10 or fewer,10 or fewer,20282
+,,,Feb,19,10 or fewer,10 or fewer,19283
+,,,Mar,24,10 or fewer,10 or fewer,19358
+,,,Apr,37,10 or fewer,10 or fewer,18833
+,,,May,39,10 or fewer,10 or fewer,19782
+,,,Jun,39,40,10 or fewer,19413
+,,,Jul,32,31,10 or fewer,20063
+,,,Aug,38,10 or fewer,10 or fewer,20390
+,,,Sep,34,10 or fewer,10 or fewer,20009
+,,,Oct 1 – Oct 30,19,10 or fewer,10 or fewer,15467
+,65 Years or more,2025,Jan,11,10 or fewer,10 or fewer,24457
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,22775
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,23605
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,23482
+,,,May,10 or fewer,10 or fewer,10 or fewer,24301
+,,,Jun,12,64,10 or fewer,23790
+,,,Jul,10 or fewer,43,10 or fewer,23972
+,,,Aug,17,18,10 or fewer,24297
+,,,Sep,13,10 or fewer,10 or fewer,24241
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,18276
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,3121
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3189
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3143
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3038
+,,,May,10 or fewer,10 or fewer,10 or fewer,2831
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2865
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2873
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2715
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2803
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3215
+,"Total: Total includes all data under the Massachusetts bucket, including data from rows not currently displayed.",2025,Jan,56,14,12,98015
+,,,Feb,52,10 or fewer,14,89359
+,,,Mar,79,13,10 or fewer,92106
+,,,Apr,87,11,10 or fewer,89777
+,,,May,104,19,10 or fewer,92674
+,,,Jun,108,202,16,88432
+,,,Jul,106,130,16,90196
+,,,Aug,138,53,15,90279
+,,,Sep,109,12,14,92671
+,,,Oct 1 – Oct 30,69,15,10 or fewer,72764
+Indiana,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,12611
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,13433
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,12101
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,11250
+,,,May,10 or fewer,10 or fewer,10 or fewer,11412
+,,,Jun,10 or fewer,12,10 or fewer,9630
+,,,Jul,10 or fewer,12,10 or fewer,9684
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,11433
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,11804
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,8652
+,≥ 15 and < 25 Years,2025,Jan,11,10 or fewer,26,9807
+,,,Feb,10 or fewer,10 or fewer,16,9467
+,,,Mar,10 or fewer,10 or fewer,21,9706
+,,,Apr,11,10 or fewer,13,9656
+,,,May,10 or fewer,10 or fewer,17,9983
+,,,Jun,10 or fewer,57,14,9580
+,,,Jul,10 or fewer,43,30,9854
+,,,Aug,10 or fewer,20,11,10505
+,,,Sep,10 or fewer,10 or fewer,16,10285
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7719
+,≥ 25 and < 45 Years,2025,Jan,56,10 or fewer,14,21916
+,,,Feb,55,10 or fewer,17,21192
+,,,Mar,60,10 or fewer,29,22346
+,,,Apr,61,10 or fewer,21,21444
+,,,May,71,10 or fewer,25,22528
+,,,Jun,48,110,18,22372
+,,,Jul,54,86,22,23322
+,,,Aug,45,52,23,23623
+,,,Sep,57,10 or fewer,24,22504
+,,,Oct 1 – Oct 30,33,10 or fewer,16,17077
+,≥ 45 and < 65 Years,2025,Jan,24,10 or fewer,10 or fewer,19158
+,,,Feb,20,10 or fewer,10 or fewer,18833
+,,,Mar,21,10 or fewer,11,19486
+,,,Apr,33,10 or fewer,10 or fewer,18672
+,,,May,26,10 or fewer,10 or fewer,19348
+,,,Jun,26,89,10 or fewer,19409
+,,,Jul,36,100,10 or fewer,19887
+,,,Aug,31,34,10 or fewer,19834
+,,,Sep,21,11,11,19176
+,,,Oct 1 – Oct 30,22,10 or fewer,10 or fewer,14572
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,19954
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,19903
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,20980
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,19866
+,,,May,10 or fewer,10 or fewer,10 or fewer,20713
+,,,Jun,10 or fewer,58,10 or fewer,20353
+,,,Jul,10 or fewer,57,10 or fewer,20683
+,,,Aug,10 or fewer,24,10 or fewer,20894
+,,,Sep,10 or fewer,15,10 or fewer,20305
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,15147
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2120
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2097
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2100
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2071
+,,,May,10 or fewer,10 or fewer,10 or fewer,1930
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1867
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1785
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1752
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1797
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1978
+,"Total: Total includes all data under the Indiana bucket, including data from rows not currently displayed.",2025,Jan,97,10 or fewer,55,85554
+,,,Feb,89,10 or fewer,41,84918
+,,,Mar,97,10 or fewer,64,86714
+,,,Apr,112,13,40,82950
+,,,May,109,23,54,85906
+,,,Jun,88,326,43,83201
+,,,Jul,104,298,66,85201
+,,,Aug,88,134,44,88029
+,,,Sep,97,39,55,85860
+,,,Oct 1 – Oct 30,61,10 or fewer,38,65136
+Connecticut,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,13983
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,11663
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,13669
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,12643
+,,,May,10 or fewer,10 or fewer,10 or fewer,13646
+,,,Jun,10 or fewer,12,10 or fewer,11291
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,10568
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,10304
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,11914
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,8837
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,9201
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,8254
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,9444
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,8993
+,,,May,10 or fewer,10 or fewer,10 or fewer,9470
+,,,Jun,10 or fewer,21,10 or fewer,8704
+,,,Jul,10 or fewer,12,13,9062
+,,,Aug,10 or fewer,11,10 or fewer,8955
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,9495
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,6977
+,≥ 25 and < 45 Years,2025,Jan,32,10 or fewer,12,21002
+,,,Feb,27,10 or fewer,10 or fewer,19149
+,,,Mar,59,10 or fewer,10 or fewer,21668
+,,,Apr,62,10 or fewer,10 or fewer,20801
+,,,May,51,10 or fewer,11,21727
+,,,Jun,88,66,14,21482
+,,,Jul,59,46,13,22065
+,,,Aug,46,10 or fewer,17,22025
+,,,Sep,36,10 or fewer,14,20879
+,,,Oct 1 – Oct 30,18,10 or fewer,10 or fewer,15113
+,≥ 45 and < 65 Years,2025,Jan,40,10 or fewer,10 or fewer,19905
+,,,Feb,24,10 or fewer,10 or fewer,18245
+,,,Mar,46,10 or fewer,10 or fewer,19686
+,,,Apr,57,10 or fewer,10 or fewer,19657
+,,,May,78,10 or fewer,10 or fewer,20442
+,,,Jun,72,61,10 or fewer,20217
+,,,Jul,49,43,10 or fewer,20614
+,,,Aug,67,17,10 or fewer,20332
+,,,Sep,43,10 or fewer,11,19539
+,,,Oct 1 – Oct 30,22,10 or fewer,10 or fewer,13917
+,65 Years or more,2025,Jan,13,10 or fewer,10 or fewer,22422
+,,,Feb,12,10 or fewer,10 or fewer,20670
+,,,Mar,14,10 or fewer,10 or fewer,22593
+,,,Apr,18,10 or fewer,10 or fewer,22199
+,,,May,22,10 or fewer,10 or fewer,23221
+,,,Jun,22,69,10 or fewer,23101
+,,,Jul,23,44,10 or fewer,23416
+,,,Aug,23,18,10 or fewer,23193
+,,,Sep,31,10 or fewer,10 or fewer,22036
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,16173
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4355
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4435
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4222
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3768
+,,,May,10 or fewer,10 or fewer,10 or fewer,2883
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2954
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2894
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2866
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2888
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3088
+,"Total: Total includes all data under the Connecticut bucket, including data from rows not currently displayed.",2025,Jan,91,10 or fewer,21,90859
+,,,Feb,67,10 or fewer,11,82408
+,,,Mar,119,10 or fewer,13,91269
+,,,Apr,139,15,21,88050
+,,,May,159,10 or fewer,25,91377
+,,,Jun,185,229,29,87741
+,,,Jul,135,155,31,88611
+,,,Aug,138,62,30,87662
+,,,Sep,115,16,35,86738
+,,,Oct 1 – Oct 30,54,10 or fewer,17,64098
+Kentucky,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,13076
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,13931
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,14964
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,12936
+,,,May,10 or fewer,10 or fewer,10 or fewer,13731
+,,,Jun,10 or fewer,11,10 or fewer,11084
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,11127
+,,,Aug,10 or fewer,12,10 or fewer,13511
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,14679
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,11331
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,8551
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7967
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,8934
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,8411
+,,,May,10 or fewer,10 or fewer,10 or fewer,9043
+,,,Jun,10 or fewer,41,10 or fewer,7987
+,,,Jul,10 or fewer,49,10 or fewer,8664
+,,,Aug,10 or fewer,19,10 or fewer,8977
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,9510
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7407
+,≥ 25 and < 45 Years,2025,Jan,24,10 or fewer,10 or fewer,17824
+,,,Feb,34,10 or fewer,10 or fewer,16846
+,,,Mar,31,10 or fewer,10 or fewer,18417
+,,,Apr,22,10 or fewer,10 or fewer,17353
+,,,May,44,11,15,19273
+,,,Jun,48,122,12,18486
+,,,Jul,31,117,10 or fewer,19026
+,,,Aug,40,44,10 or fewer,19072
+,,,Sep,28,13,10 or fewer,18739
+,,,Oct 1 – Oct 30,20,10 or fewer,10 or fewer,15117
+,≥ 45 and < 65 Years,2025,Jan,13,10 or fewer,10 or fewer,16711
+,,,Feb,16,10 or fewer,10 or fewer,16057
+,,,Mar,21,10 or fewer,10 or fewer,17353
+,,,Apr,17,10 or fewer,10 or fewer,16408
+,,,May,26,11,10 or fewer,17922
+,,,Jun,20,91,10 or fewer,17364
+,,,Jul,23,123,11,17800
+,,,Aug,26,49,10 or fewer,17631
+,,,Sep,18,10 or fewer,10 or fewer,17491
+,,,Oct 1 – Oct 30,11,10 or fewer,10 or fewer,13696
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,17653
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,17082
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,18577
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,17902
+,,,May,10 or fewer,10 or fewer,10 or fewer,19156
+,,,Jun,11,53,10 or fewer,18542
+,,,Jul,10 or fewer,59,10 or fewer,18429
+,,,Aug,10 or fewer,38,10 or fewer,18828
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,18270
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,14272
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2469
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2335
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2379
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2310
+,,,May,10 or fewer,10 or fewer,10 or fewer,2115
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2251
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2166
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2088
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2123
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2388
+,"Total: Total includes all data under the Kentucky bucket, including data from rows not currently displayed.",2025,Jan,42,10 or fewer,28,76277
+,,,Feb,63,10 or fewer,20,74208
+,,,Mar,65,11,20,80617
+,,,Apr,48,22,20,75313
+,,,May,80,28,35,81231
+,,,Jun,83,319,33,75706
+,,,Jul,61,357,27,77202
+,,,Aug,78,162,23,80099
+,,,Sep,60,43,22,80805
+,,,Oct 1 – Oct 30,36,10 or fewer,18,64211
+Louisiana,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,11712
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,11292
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,12840
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,12025
+,,,May,10 or fewer,10 or fewer,10 or fewer,11615
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,9187
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,8770
+,,,Aug,10 or fewer,13,10 or fewer,11241
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,12284
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,10242
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,33,9428
+,,,Feb,10 or fewer,10 or fewer,28,8855
+,,,Mar,10 or fewer,10 or fewer,44,9934
+,,,Apr,10 or fewer,10 or fewer,31,9448
+,,,May,10 or fewer,13,50,9432
+,,,Jun,12,49,36,8875
+,,,Jul,10 or fewer,67,37,9027
+,,,Aug,10 or fewer,30,37,9830
+,,,Sep,10 or fewer,19,27,10568
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,30,8550
+,≥ 25 and < 45 Years,2025,Jan,28,10 or fewer,36,19447
+,,,Feb,26,10 or fewer,20,17818
+,,,Mar,39,10 or fewer,34,20293
+,,,Apr,31,14,24,19689
+,,,May,37,32,33,19950
+,,,Jun,32,109,36,19504
+,,,Jul,30,137,34,19814
+,,,Aug,24,91,32,20624
+,,,Sep,30,41,29,20802
+,,,Oct 1 – Oct 30,26,13,28,17119
+,≥ 45 and < 65 Years,2025,Jan,18,10 or fewer,10 or fewer,15615
+,,,Feb,17,10 or fewer,13,14653
+,,,Mar,27,10 or fewer,10 or fewer,16390
+,,,Apr,22,13,10 or fewer,15760
+,,,May,21,23,10 or fewer,16486
+,,,Jun,25,66,11,15856
+,,,Jul,13,106,10 or fewer,15937
+,,,Aug,21,64,15,16610
+,,,Sep,18,29,12,17065
+,,,Oct 1 – Oct 30,14,10 or fewer,10 or fewer,13450
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,15674
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,14485
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,16498
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,15563
+,,,May,10 or fewer,15,10 or fewer,16229
+,,,Jun,10 or fewer,25,10 or fewer,15429
+,,,Jul,10 or fewer,54,10 or fewer,15686
+,,,Aug,10 or fewer,39,10 or fewer,15855
+,,,Sep,10 or fewer,22,10 or fewer,16225
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,12797
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1958
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1947
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1811
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2005
+,,,May,10 or fewer,10 or fewer,10 or fewer,1791
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1802
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1830
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1805
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1920
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2013
+,"Total: Total includes all data under the Louisiana bucket, including data from rows not currently displayed.",2025,Jan,59,10 or fewer,90,73826
+,,,Feb,50,10 or fewer,67,69046
+,,,Mar,84,18,95,77756
+,,,Apr,64,42,70,74476
+,,,May,72,89,96,75487
+,,,Jun,74,256,89,70641
+,,,Jul,55,372,92,71053
+,,,Aug,62,237,95,75950
+,,,Sep,57,118,75,78850
+,,,Oct 1 – Oct 30,46,31,75,64167
+Tennessee,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,13923
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,12904
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,13073
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,12628
+,,,May,10 or fewer,10 or fewer,10 or fewer,12613
+,,,Jun,10 or fewer,18,10 or fewer,10180
+,,,Jul,10 or fewer,23,10 or fewer,10203
+,,,Aug,10 or fewer,16,10 or fewer,12706
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,13532
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,10430
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,15,8474
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7621
+,,,Mar,10 or fewer,10 or fewer,14,8262
+,,,Apr,10 or fewer,10 or fewer,12,8239
+,,,May,10 or fewer,10 or fewer,15,8132
+,,,Jun,10 or fewer,48,15,8008
+,,,Jul,10 or fewer,62,13,8293
+,,,Aug,10 or fewer,26,15,8847
+,,,Sep,10 or fewer,12,10 or fewer,8813
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7075
+,≥ 25 and < 45 Years,2025,Jan,35,10 or fewer,22,17169
+,,,Feb,23,10 or fewer,12,15509
+,,,Mar,44,10 or fewer,15,16730
+,,,Apr,45,10 or fewer,10 or fewer,16060
+,,,May,55,10 or fewer,15,17082
+,,,Jun,48,99,10 or fewer,17560
+,,,Jul,44,135,10 or fewer,18433
+,,,Aug,40,61,12,17959
+,,,Sep,31,12,10 or fewer,17711
+,,,Oct 1 – Oct 30,25,10 or fewer,10 or fewer,14493
+,≥ 45 and < 65 Years,2025,Jan,13,10 or fewer,11,15405
+,,,Feb,12,10 or fewer,10 or fewer,14513
+,,,Mar,14,10 or fewer,10 or fewer,15691
+,,,Apr,21,14,10 or fewer,15160
+,,,May,26,10 or fewer,10 or fewer,16009
+,,,Jun,28,98,12,16509
+,,,Jul,29,151,11,16996
+,,,Aug,21,56,10 or fewer,16720
+,,,Sep,15,10 or fewer,10 or fewer,16130
+,,,Oct 1 – Oct 30,18,10 or fewer,10 or fewer,13259
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,15804
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,14743
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,16321
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,15413
+,,,May,10 or fewer,10 or fewer,10 or fewer,16087
+,,,Jun,10 or fewer,49,10 or fewer,16554
+,,,Jul,10 or fewer,92,10 or fewer,16702
+,,,Aug,10 or fewer,33,10 or fewer,16846
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,16285
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,13576
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2272
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2269
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2069
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2191
+,,,May,10 or fewer,10 or fewer,10 or fewer,1936
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2009
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1982
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1994
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1954
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2165
+,"Total: Total includes all data under the Tennessee bucket, including data from rows not currently displayed.",2025,Jan,62,10 or fewer,51,73040
+,,,Feb,46,10 or fewer,26,67552
+,,,Mar,69,10 or fewer,43,72137
+,,,Apr,83,33,29,69679
+,,,May,94,34,46,71846
+,,,Jun,87,312,41,70811
+,,,Jul,87,463,35,72599
+,,,Aug,69,193,43,75063
+,,,Sep,60,46,33,74415
+,,,Oct 1 – Oct 30,57,19,26,60996
+Wisconsin,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,15888
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,13845
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,12591
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,12107
+,,,May,10 or fewer,10 or fewer,10 or fewer,12210
+,,,Jun,10 or fewer,11,10 or fewer,10324
+,,,Jul,10 or fewer,12,10 or fewer,9756
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,10432
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,12007
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,10273
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,8031
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7377
+,,,Mar,10 or fewer,10 or fewer,12,7332
+,,,Apr,10 or fewer,10 or fewer,12,7572
+,,,May,10 or fewer,10 or fewer,15,7489
+,,,Jun,10 or fewer,19,16,6951
+,,,Jul,10 or fewer,20,14,7513
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,7712
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,8486
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,6818
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,13,16805
+,,,Feb,13,10 or fewer,10 or fewer,14713
+,,,Mar,13,10 or fewer,10 or fewer,15887
+,,,Apr,21,10 or fewer,10 or fewer,15262
+,,,May,13,10 or fewer,10 or fewer,15585
+,,,Jun,35,53,10 or fewer,15320
+,,,Jul,20,39,10 or fewer,16291
+,,,Aug,21,14,11,17055
+,,,Sep,19,10 or fewer,10 or fewer,16514
+,,,Oct 1 – Oct 30,26,10 or fewer,10 or fewer,13063
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,14560
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,13720
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,14315
+,,,Apr,12,10 or fewer,10 or fewer,13850
+,,,May,11,10 or fewer,10 or fewer,14333
+,,,Jun,14,52,10 or fewer,14155
+,,,Jul,10 or fewer,35,10 or fewer,14670
+,,,Aug,10 or fewer,15,10 or fewer,15576
+,,,Sep,17,10 or fewer,10 or fewer,15096
+,,,Oct 1 – Oct 30,11,10 or fewer,10 or fewer,11637
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,17514
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,16096
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,16943
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,16871
+,,,May,10 or fewer,10 or fewer,10 or fewer,17666
+,,,Jun,10 or fewer,40,10 or fewer,17156
+,,,Jul,10 or fewer,30,10 or fewer,17631
+,,,Aug,10 or fewer,21,10 or fewer,18534
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,18268
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,14198
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1692
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1772
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1691
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1546
+,,,May,10 or fewer,10 or fewer,10 or fewer,1680
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1598
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1577
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1500
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1617
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1668
+,"Total: Total includes all data under the Wisconsin bucket, including data from rows not currently displayed.",2025,Jan,18,10 or fewer,30,74484
+,,,Feb,20,10 or fewer,18,67514
+,,,Mar,29,10 or fewer,29,68750
+,,,Apr,42,10 or fewer,19,67201
+,,,May,31,17,33,68949
+,,,Jun,57,175,35,65498
+,,,Jul,42,136,27,67428
+,,,Aug,40,60,28,70802
+,,,Sep,47,18,20,71976
+,,,Oct 1 – Oct 30,44,10 or fewer,17,57653
+Minnesota,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,12505
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,9828
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,10091
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,9257
+,,,May,10 or fewer,10 or fewer,10 or fewer,9845
+,,,Jun,10 or fewer,11,10 or fewer,8190
+,,,Jul,10 or fewer,15,10 or fewer,8421
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,8462
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,9293
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7029
+,≥ 15 and < 25 Years,2025,Jan,12,10 or fewer,17,8107
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7055
+,,,Mar,24,10 or fewer,10 or fewer,7483
+,,,Apr,14,10 or fewer,10 or fewer,7443
+,,,May,11,10 or fewer,10 or fewer,7793
+,,,Jun,10 or fewer,23,19,7427
+,,,Jul,10 or fewer,21,12,7854
+,,,Aug,10 or fewer,11,10 or fewer,7950
+,,,Sep,13,10 or fewer,12,8332
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,6550
+,≥ 25 and < 45 Years,2025,Jan,48,10 or fewer,10 or fewer,17160
+,,,Feb,59,10 or fewer,10 or fewer,14772
+,,,Mar,57,10 or fewer,12,16688
+,,,Apr,44,10 or fewer,10 or fewer,15961
+,,,May,46,10 or fewer,10 or fewer,16838
+,,,Jun,54,32,12,16532
+,,,Jul,45,55,10 or fewer,17842
+,,,Aug,48,20,19,18074
+,,,Sep,31,10 or fewer,16,17310
+,,,Oct 1 – Oct 30,23,10 or fewer,10 or fewer,13557
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,14806
+,,,Feb,22,10 or fewer,10 or fewer,12756
+,,,Mar,24,10 or fewer,10 or fewer,13906
+,,,Apr,23,10 or fewer,10 or fewer,13802
+,,,May,20,11,10 or fewer,14236
+,,,Jun,22,33,10 or fewer,14249
+,,,Jul,21,41,10 or fewer,14858
+,,,Aug,18,10 or fewer,10 or fewer,14863
+,,,Sep,22,10 or fewer,10 or fewer,14448
+,,,Oct 1 – Oct 30,14,10 or fewer,10 or fewer,11218
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,18227
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,16088
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,17709
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,17011
+,,,May,10 or fewer,10 or fewer,10 or fewer,18321
+,,,Jun,10 or fewer,27,10 or fewer,17897
+,,,Jul,10 or fewer,43,10 or fewer,18569
+,,,Aug,10 or fewer,11,10 or fewer,18439
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,18092
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,14195
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1836
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1832
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1703
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1614
+,,,May,10 or fewer,10 or fewer,10 or fewer,1631
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1640
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1656
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1556
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1633
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1767
+,"Total: Total includes all data under the Minnesota bucket, including data from rows not currently displayed.",2025,Jan,75,10 or fewer,26,72635
+,,,Feb,90,10 or fewer,25,62326
+,,,Mar,114,10 or fewer,24,67576
+,,,Apr,89,10 or fewer,24,65081
+,,,May,85,47,24,68661
+,,,Jun,89,126,38,65930
+,,,Jul,80,175,27,69192
+,,,Aug,82,57,41,69335
+,,,Sep,75,23,40,69101
+,,,Oct 1 – Oct 30,47,10 or fewer,18,54315
+Mississippi,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,11808
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,10985
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,10572
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,10745
+,,,May,10 or fewer,10 or fewer,10 or fewer,10802
+,,,Jun,10 or fewer,11,10 or fewer,8639
+,,,Jul,10 or fewer,24,10 or fewer,8287
+,,,Aug,10 or fewer,12,10 or fewer,11150
+,,,Sep,10 or fewer,12,10 or fewer,11122
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,8436
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,44,8951
+,,,Feb,10 or fewer,10 or fewer,26,8037
+,,,Mar,10 or fewer,10 or fewer,38,8371
+,,,Apr,10 or fewer,10 or fewer,25,8446
+,,,May,10 or fewer,19,41,8787
+,,,Jun,13,38,39,8158
+,,,Jul,10 or fewer,81,31,8338
+,,,Aug,10 or fewer,43,31,9258
+,,,Sep,10 or fewer,25,28,9170
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,24,7276
+,≥ 25 and < 45 Years,2025,Jan,15,10 or fewer,29,18285
+,,,Feb,14,10 or fewer,31,16391
+,,,Mar,12,10 or fewer,36,17351
+,,,Apr,12,12,30,17089
+,,,May,15,28,42,18379
+,,,Jun,24,103,45,17775
+,,,Jul,15,170,39,18471
+,,,Aug,16,78,31,18769
+,,,Sep,10 or fewer,20,34,18034
+,,,Oct 1 – Oct 30,13,10 or fewer,34,14367
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,14,16777
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,15499
+,,,Mar,12,10 or fewer,19,16651
+,,,Apr,18,13,10 or fewer,16096
+,,,May,18,17,13,16879
+,,,Jun,14,86,16,16630
+,,,Jul,10 or fewer,143,16,17013
+,,,Aug,10 or fewer,83,12,17114
+,,,Sep,10 or fewer,26,15,16635
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,13077
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,17213
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,15535
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,17166
+,,,Apr,11,11,10 or fewer,16487
+,,,May,10 or fewer,15,10 or fewer,17448
+,,,Jun,10 or fewer,68,10 or fewer,17017
+,,,Jul,10 or fewer,82,10 or fewer,17124
+,,,Aug,10 or fewer,45,10 or fewer,17107
+,,,Sep,10 or fewer,25,10 or fewer,16543
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,13202
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2227
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2188
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2025
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2061
+,,,May,10 or fewer,10 or fewer,10 or fewer,1939
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1982
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2013
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1904
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1995
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2129
+,"Total: Total includes all data under the Mississippi bucket, including data from rows not currently displayed.",2025,Jan,25,10 or fewer,98,75251
+,,,Feb,32,10 or fewer,72,68624
+,,,Mar,35,12,106,72123
+,,,Apr,47,44,77,70917
+,,,May,46,81,107,74221
+,,,Jun,59,306,113,70190
+,,,Jul,34,501,101,71237
+,,,Aug,35,261,81,75284
+,,,Sep,21,108,89,73485
+,,,Oct 1 – Oct 30,31,25,75,58483
+Maryland,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,8685
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,8488
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,9059
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,8293
+,,,May,10 or fewer,10 or fewer,10 or fewer,8014
+,,,Jun,10 or fewer,16,10 or fewer,6901
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,6455
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,6449
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,7608
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5570
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,7192
+,,,Feb,10 or fewer,10 or fewer,12,6750
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,7156
+,,,Apr,10 or fewer,10 or fewer,11,6884
+,,,May,10 or fewer,10 or fewer,10 or fewer,7100
+,,,Jun,10 or fewer,39,19,6503
+,,,Jul,10 or fewer,23,10 or fewer,6678
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,6885
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,7275
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5216
+,≥ 25 and < 45 Years,2025,Jan,18,10 or fewer,20,17379
+,,,Feb,16,10 or fewer,10 or fewer,15751
+,,,Mar,27,10 or fewer,15,16955
+,,,Apr,31,10 or fewer,16,16221
+,,,May,25,10 or fewer,14,16976
+,,,Jun,34,70,17,16818
+,,,Jul,32,60,17,17405
+,,,Aug,30,19,12,17351
+,,,Sep,19,10 or fewer,12,16718
+,,,Oct 1 – Oct 30,13,10 or fewer,10 or fewer,11963
+,≥ 45 and < 65 Years,2025,Jan,11,10 or fewer,10 or fewer,15083
+,,,Feb,17,10 or fewer,10 or fewer,13873
+,,,Mar,23,10 or fewer,10 or fewer,14659
+,,,Apr,21,10 or fewer,10 or fewer,13841
+,,,May,18,10 or fewer,10 or fewer,14499
+,,,Jun,24,62,10 or fewer,14485
+,,,Jul,32,45,10 or fewer,14665
+,,,Aug,33,17,10 or fewer,14695
+,,,Sep,27,10 or fewer,10 or fewer,14094
+,,,Oct 1 – Oct 30,15,10 or fewer,10 or fewer,9982
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,15888
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,14790
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,15755
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,14952
+,,,May,10 or fewer,10 or fewer,10 or fewer,15601
+,,,Jun,12,76,10 or fewer,15495
+,,,Jul,10 or fewer,58,10 or fewer,15363
+,,,Aug,10 or fewer,16,10 or fewer,15348
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,14722
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,10695
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2170
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2372
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2139
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2208
+,,,May,10 or fewer,10 or fewer,10 or fewer,1976
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2029
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1974
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1907
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1915
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1992
+,"Total: Total includes all data under the Maryland bucket, including data from rows not currently displayed.",2025,Jan,36,10 or fewer,39,66389
+,,,Feb,42,10 or fewer,30,62017
+,,,Mar,59,10 or fewer,31,65721
+,,,Apr,65,11,37,62395
+,,,May,55,26,22,64159
+,,,Jun,74,263,44,62226
+,,,Jul,79,192,36,62536
+,,,Aug,73,67,25,62629
+,,,Sep,56,13,30,62321
+,,,Oct 1 – Oct 30,37,10 or fewer,22,45413
+Oregon,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,8699
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,8742
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,8487
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,8041
+,,,May,10 or fewer,10 or fewer,10 or fewer,8511
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,7280
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,6404
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,6397
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,7246
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5544
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,6261
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5699
+,,,Mar,11,10 or fewer,10 or fewer,5946
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,5925
+,,,May,10 or fewer,10 or fewer,10 or fewer,6253
+,,,Jun,10 or fewer,15,10 or fewer,5796
+,,,Jul,10 or fewer,14,10 or fewer,5876
+,,,Aug,10 or fewer,21,10 or fewer,5851
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,6090
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4784
+,≥ 25 and < 45 Years,2025,Jan,46,10 or fewer,10 or fewer,13648
+,,,Feb,40,10 or fewer,10 or fewer,12398
+,,,Mar,52,10 or fewer,10 or fewer,13097
+,,,Apr,37,10 or fewer,10 or fewer,12826
+,,,May,54,10 or fewer,14,13533
+,,,Jun,42,22,10 or fewer,13180
+,,,Jul,43,49,10 or fewer,13570
+,,,Aug,31,42,12,13717
+,,,Sep,35,10 or fewer,10 or fewer,13545
+,,,Oct 1 – Oct 30,36,10 or fewer,10 or fewer,10577
+,≥ 45 and < 65 Years,2025,Jan,11,10 or fewer,10 or fewer,11275
+,,,Feb,16,10 or fewer,10 or fewer,10467
+,,,Mar,16,10 or fewer,10 or fewer,11273
+,,,Apr,15,10 or fewer,10 or fewer,10716
+,,,May,26,10 or fewer,10 or fewer,11525
+,,,Jun,16,18,10 or fewer,11155
+,,,Jul,27,23,10 or fewer,11412
+,,,Aug,31,29,10 or fewer,11464
+,,,Sep,26,10 or fewer,10 or fewer,11237
+,,,Oct 1 – Oct 30,21,10 or fewer,10 or fewer,8642
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,13728
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,12761
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,13572
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,13211
+,,,May,11,10 or fewer,10 or fewer,13942
+,,,Jun,10 or fewer,26,10 or fewer,13644
+,,,Jul,10 or fewer,26,10 or fewer,14076
+,,,Aug,12,30,10 or fewer,14022
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,13401
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,10573
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1352
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1369
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1246
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1257
+,,,May,10 or fewer,10 or fewer,10 or fewer,1224
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1169
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1175
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1097
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1150
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1222
+,"Total: Total includes all data under the Oregon bucket, including data from rows not currently displayed.",2025,Jan,68,10 or fewer,18,54957
+,,,Feb,80,10 or fewer,19,51433
+,,,Mar,87,10 or fewer,10 or fewer,53614
+,,,Apr,66,10 or fewer,12,51976
+,,,May,99,18,24,54982
+,,,Jun,71,86,17,52215
+,,,Jul,89,120,10 or fewer,52506
+,,,Aug,83,129,22,52540
+,,,Sep,76,18,16,52662
+,,,Oct 1 – Oct 30,69,10 or fewer,17,41342
+Iowa,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,7751
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7102
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,6346
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,5862
+,,,May,10 or fewer,10 or fewer,10 or fewer,6359
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,6601
+,,,Jul,10 or fewer,11,10 or fewer,6656
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,6980
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,7712
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5105
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4254
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3925
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3988
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3959
+,,,May,10 or fewer,10 or fewer,10 or fewer,4247
+,,,Jun,10 or fewer,31,10 or fewer,5231
+,,,Jul,10 or fewer,32,10 or fewer,5457
+,,,Aug,10 or fewer,17,10 or fewer,5718
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,5728
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3668
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,8711
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7970
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,8560
+,,,Apr,11,10 or fewer,10 or fewer,8191
+,,,May,10 or fewer,10 or fewer,10 or fewer,8919
+,,,Jun,10 or fewer,64,10 or fewer,11515
+,,,Jul,12,60,10 or fewer,12217
+,,,Aug,10 or fewer,23,10 or fewer,12327
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,11588
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7228
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,7742
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7237
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,7587
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,7246
+,,,May,10 or fewer,10 or fewer,10 or fewer,7774
+,,,Jun,13,45,10 or fewer,10213
+,,,Jul,10 or fewer,55,10 or fewer,10688
+,,,Aug,10 or fewer,32,10 or fewer,10765
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,10049
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,6191
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,9302
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,8807
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,9282
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,8995
+,,,May,10 or fewer,10 or fewer,10 or fewer,10133
+,,,Jun,10 or fewer,38,10 or fewer,12843
+,,,Jul,10 or fewer,52,10 or fewer,13157
+,,,Aug,10 or fewer,29,10 or fewer,13351
+,,,Sep,10 or fewer,20,10 or fewer,12382
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7577
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1018
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1076
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1063
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1002
+,,,May,10 or fewer,10 or fewer,10 or fewer,876
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1341
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1206
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1175
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1313
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1166
+,"Total: Total includes all data under the Iowa bucket, including data from rows not currently displayed.",2025,Jan,21,10 or fewer,10 or fewer,38776
+,,,Feb,19,10 or fewer,10 or fewer,36111
+,,,Mar,23,10 or fewer,17,36818
+,,,Apr,19,10 or fewer,12,35250
+,,,May,16,25,20,38303
+,,,Jun,30,185,18,47738
+,,,Jul,22,211,23,49375
+,,,Aug,20,108,19,50306
+,,,Sep,19,49,11,48770
+,,,Oct 1 – Oct 30,11,10 or fewer,10 or fewer,30935
+Oklahoma,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,12080
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,9342
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,8677
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,8307
+,,,May,10 or fewer,10 or fewer,10 or fewer,8222
+,,,Jun,10 or fewer,12,10 or fewer,6812
+,,,Jul,10 or fewer,12,10 or fewer,7005
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,7960
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,8978
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7219
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,5484
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4411
+,,,Mar,10 or fewer,10 or fewer,13,4836
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4645
+,,,May,10 or fewer,10 or fewer,17,4772
+,,,Jun,10 or fewer,45,17,4608
+,,,Jul,10 or fewer,40,15,4797
+,,,Aug,10 or fewer,27,10 or fewer,5001
+,,,Sep,10 or fewer,10 or fewer,11,5127
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4157
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,13,10514
+,,,Feb,10 or fewer,10 or fewer,13,9406
+,,,Mar,19,10 or fewer,10 or fewer,10053
+,,,Apr,11,10 or fewer,10 or fewer,9633
+,,,May,21,10 or fewer,11,10205
+,,,Jun,22,84,11,9935
+,,,Jul,10 or fewer,131,10 or fewer,10426
+,,,Aug,10 or fewer,65,10 or fewer,10162
+,,,Sep,10 or fewer,19,15,10075
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,11,8198
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,8979
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,8140
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,8571
+,,,Apr,11,10 or fewer,10 or fewer,8243
+,,,May,10 or fewer,10 or fewer,10 or fewer,8601
+,,,Jun,10 or fewer,65,10 or fewer,8597
+,,,Jul,10 or fewer,104,10 or fewer,8895
+,,,Aug,10 or fewer,48,10 or fewer,8717
+,,,Sep,10 or fewer,16,10 or fewer,8696
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,6767
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,9163
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,8447
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,8876
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,8716
+,,,May,10 or fewer,10 or fewer,10 or fewer,8975
+,,,Jun,10 or fewer,34,10 or fewer,8609
+,,,Jul,10 or fewer,49,10 or fewer,8816
+,,,Aug,10 or fewer,37,10 or fewer,8828
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,8569
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,6731
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1479
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1613
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1455
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1444
+,,,May,10 or fewer,10 or fewer,10 or fewer,1209
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1174
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1280
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1195
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1279
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1304
+,"Total: Total includes all data under the Oklahoma bucket, including data from rows not currently displayed.",2025,Jan,20,10 or fewer,33,47691
+,,,Feb,16,10 or fewer,25,41355
+,,,Mar,37,10 or fewer,33,42461
+,,,Apr,32,15,25,40984
+,,,May,40,24,38,41977
+,,,Jun,38,240,40,39728
+,,,Jul,26,337,39,41212
+,,,Aug,18,186,29,41858
+,,,Sep,21,57,38,42721
+,,,Oct 1 – Oct 30,13,18,26,34373
+Arizona,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4846
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4873
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4549
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4191
+,,,May,10 or fewer,10 or fewer,10 or fewer,4061
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2990
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2877
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3518
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3446
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2909
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,3757
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3586
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3863
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3821
+,,,May,10 or fewer,10 or fewer,10 or fewer,3599
+,,,Jun,10 or fewer,25,10 or fewer,3365
+,,,Jul,10 or fewer,20,10 or fewer,3485
+,,,Aug,10 or fewer,19,10 or fewer,3663
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3750
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3141
+,≥ 25 and < 45 Years,2025,Jan,34,10 or fewer,10 or fewer,8430
+,,,Feb,46,10 or fewer,10 or fewer,8204
+,,,Mar,38,10 or fewer,10 or fewer,8887
+,,,Apr,39,10 or fewer,10 or fewer,8816
+,,,May,46,12,10 or fewer,8787
+,,,Jun,37,43,10 or fewer,8510
+,,,Jul,39,58,10 or fewer,8655
+,,,Aug,37,81,10 or fewer,8561
+,,,Sep,31,27,10 or fewer,8424
+,,,Oct 1 – Oct 30,31,10 or fewer,10 or fewer,6689
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,7585
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7488
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,8061
+,,,Apr,15,10 or fewer,10 or fewer,7623
+,,,May,18,10 or fewer,10 or fewer,7648
+,,,Jun,14,31,10 or fewer,7339
+,,,Jul,20,50,10 or fewer,7457
+,,,Aug,10 or fewer,59,10 or fewer,7553
+,,,Sep,12,21,10 or fewer,7354
+,,,Oct 1 – Oct 30,14,10 or fewer,10 or fewer,5883
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,10699
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,9587
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,10254
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,9499
+,,,May,10 or fewer,14,10 or fewer,9885
+,,,Jun,10 or fewer,25,10 or fewer,9154
+,,,Jul,10 or fewer,32,10 or fewer,9312
+,,,Aug,10 or fewer,29,10 or fewer,9290
+,,,Sep,10 or fewer,17,10 or fewer,9247
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7508
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1043
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1036
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,990
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1023
+,,,May,10 or fewer,10 or fewer,10 or fewer,925
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,847
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,892
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,860
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,875
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,954
+,"Total: Total includes all data under the Arizona bucket, including data from rows not currently displayed.",2025,Jan,46,10 or fewer,11,36357
+,,,Feb,60,10 or fewer,18,34772
+,,,Mar,62,10 or fewer,13,36597
+,,,Apr,67,17,13,34970
+,,,May,69,39,19,34903
+,,,Jun,61,131,12,32201
+,,,Jul,65,164,12,32677
+,,,Aug,52,191,17,33443
+,,,Sep,55,70,16,33091
+,,,Oct 1 – Oct 30,53,10 or fewer,12,27081
+West Virginia,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,3882
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5430
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,5380
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4721
+,,,May,10 or fewer,10 or fewer,10 or fewer,4977
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,4054
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,3762
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3990
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4696
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3975
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,3719
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3883
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4284
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3960
+,,,May,10 or fewer,10 or fewer,10 or fewer,3969
+,,,Jun,10 or fewer,26,10 or fewer,3906
+,,,Jul,10 or fewer,16,10 or fewer,3939
+,,,Aug,10 or fewer,11,10 or fewer,4111
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4311
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3507
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,7875
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7809
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,8347
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,7970
+,,,May,10 or fewer,10 or fewer,10 or fewer,8274
+,,,Jun,10 or fewer,33,10 or fewer,8365
+,,,Jul,13,49,10 or fewer,8626
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,8230
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,8516
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,6758
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,8166
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,8379
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,8984
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,8717
+,,,May,10 or fewer,10 or fewer,10 or fewer,8957
+,,,Jun,10 or fewer,35,10 or fewer,8955
+,,,Jul,10 or fewer,52,10 or fewer,9297
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,8935
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,8758
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,6904
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,9298
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,9574
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,10579
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,10214
+,,,May,10 or fewer,10 or fewer,10 or fewer,10855
+,,,Jun,10 or fewer,33,10 or fewer,10514
+,,,Jul,10 or fewer,17,10 or fewer,10507
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,10306
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,10033
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,8136
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1032
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1024
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1088
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1025
+,,,May,10 or fewer,10 or fewer,10 or fewer,960
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,970
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,997
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,863
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,876
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1016
+,"Total: Total includes all data under the West Virginia bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,10 or fewer,33969
+,,,Feb,10 or fewer,10 or fewer,11,36096
+,,,Mar,13,10 or fewer,10 or fewer,38655
+,,,Apr,24,10 or fewer,10 or fewer,36603
+,,,May,20,10 or fewer,10 or fewer,37989
+,,,Jun,19,131,11,36762
+,,,Jul,20,137,14,37120
+,,,Aug,20,36,10 or fewer,36429
+,,,Sep,12,10 or fewer,10 or fewer,37186
+,,,Oct 1 – Oct 30,17,10 or fewer,10 or fewer,30291
+Washington,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4704
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4395
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4515
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4112
+,,,May,10 or fewer,10 or fewer,10 or fewer,4624
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,3972
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,3390
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3371
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3739
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2919
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,3511
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3155
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3354
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3130
+,,,May,10 or fewer,10 or fewer,10 or fewer,3310
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,3136
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,3315
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3288
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3391
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2633
+,≥ 25 and < 45 Years,2025,Jan,20,10 or fewer,10 or fewer,8484
+,,,Feb,20,10 or fewer,10 or fewer,7803
+,,,Mar,32,10 or fewer,10 or fewer,8401
+,,,Apr,33,10 or fewer,10 or fewer,8101
+,,,May,30,10 or fewer,10 or fewer,8672
+,,,Jun,30,10 or fewer,10 or fewer,8112
+,,,Jul,26,11,10 or fewer,8446
+,,,Aug,32,17,10 or fewer,8607
+,,,Sep,23,10 or fewer,10 or fewer,8416
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,6802
+,≥ 45 and < 65 Years,2025,Jan,11,10 or fewer,10 or fewer,7146
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,6574
+,,,Mar,19,10 or fewer,10 or fewer,7278
+,,,Apr,13,10 or fewer,10 or fewer,6811
+,,,May,17,10 or fewer,10 or fewer,7193
+,,,Jun,18,10 or fewer,10 or fewer,6990
+,,,Jul,16,16,10 or fewer,7417
+,,,Aug,16,10 or fewer,10 or fewer,7270
+,,,Sep,15,10 or fewer,10 or fewer,6964
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5623
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,8728
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,8259
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,8943
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,8692
+,,,May,10 or fewer,10 or fewer,10 or fewer,9271
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,8874
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,9107
+,,,Aug,10 or fewer,15,10 or fewer,9168
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,8957
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7178
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,968
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,957
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,952
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,917
+,,,May,10 or fewer,10 or fewer,10 or fewer,818
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,835
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,852
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,821
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,790
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,880
+,"Total: Total includes all data under the Washington bucket, including data from rows not currently displayed.",2025,Jan,38,10 or fewer,10 or fewer,33535
+,,,Feb,38,10 or fewer,10 or fewer,31140
+,,,Mar,66,10 or fewer,10 or fewer,33437
+,,,Apr,61,10 or fewer,10 or fewer,31760
+,,,May,59,17,10 or fewer,33883
+,,,Jun,62,25,10 or fewer,31915
+,,,Jul,58,48,10 or fewer,32526
+,,,Aug,58,53,10 or fewer,32522
+,,,Sep,41,10 or fewer,10 or fewer,32256
+,,,Oct 1 – Oct 30,22,10 or fewer,10 or fewer,26034
+Arkansas,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,9462
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,8758
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,8761
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,8151
+,,,May,10 or fewer,10 or fewer,10 or fewer,8420
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,6967
+,,,Jul,10 or fewer,17,10 or fewer,6979
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,7786
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,8702
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7286
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4143
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3735
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3978
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3908
+,,,May,10 or fewer,10 or fewer,15,3983
+,,,Jun,10 or fewer,31,10 or fewer,3866
+,,,Jul,10 or fewer,40,10 or fewer,3934
+,,,Aug,10 or fewer,17,10 or fewer,3970
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4279
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3297
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,16,7276
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,6687
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,7265
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,7014
+,,,May,10 or fewer,10 or fewer,14,7572
+,,,Jun,12,83,13,7577
+,,,Jul,10 or fewer,103,12,7548
+,,,Aug,10 or fewer,46,13,7402
+,,,Sep,10 or fewer,10 or fewer,12,7326
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5906
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,6395
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,6048
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,6538
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,6245
+,,,May,10 or fewer,10 or fewer,10 or fewer,6683
+,,,Jun,10 or fewer,49,10 or fewer,6479
+,,,Jul,10 or fewer,78,10 or fewer,6490
+,,,Aug,10 or fewer,38,10 or fewer,6505
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,6439
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5070
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,6332
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5854
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,6488
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,6254
+,,,May,10 or fewer,10 or fewer,10 or fewer,6530
+,,,Jun,10 or fewer,18,10 or fewer,6170
+,,,Jul,10 or fewer,39,10 or fewer,6221
+,,,Aug,10 or fewer,24,10 or fewer,6353
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,5993
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4817
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1025
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1060
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,950
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,976
+,,,May,10 or fewer,10 or fewer,10 or fewer,909
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,977
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,914
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,857
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,910
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,934
+,"Total: Total includes all data under the Arkansas bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,35,34628
+,,,Feb,13,10 or fewer,21,32141
+,,,Mar,18,10 or fewer,22,33977
+,,,Apr,24,11,27,32543
+,,,May,18,24,37,34095
+,,,Jun,23,190,28,32029
+,,,Jul,18,276,25,32081
+,,,Aug,14,130,30,32872
+,,,Sep,12,31,28,33646
+,,,Oct 1 – Oct 30,10 or fewer,16,14,27306
+Idaho,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,3870
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4008
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3961
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3802
+,,,May,10 or fewer,10 or fewer,10 or fewer,3712
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,3253
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,3227
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3488
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3771
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2282
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,3601
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3078
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3359
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3389
+,,,May,10 or fewer,10 or fewer,10 or fewer,3286
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,3293
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,3519
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3552
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3582
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2362
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,6829
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,6327
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,6820
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,6407
+,,,May,10 or fewer,10 or fewer,10 or fewer,6762
+,,,Jun,10 or fewer,12,10 or fewer,6686
+,,,Jul,10 or fewer,22,10 or fewer,6988
+,,,Aug,10 or fewer,15,10 or fewer,7051
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,6835
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4020
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,5804
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5478
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,6078
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,5705
+,,,May,10 or fewer,10 or fewer,10 or fewer,5911
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,5814
+,,,Jul,10 or fewer,16,10 or fewer,6047
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,6078
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,5763
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3511
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,7484
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7028
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,7753
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,7537
+,,,May,10 or fewer,10 or fewer,10 or fewer,7649
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,7446
+,,,Jul,10 or fewer,15,10 or fewer,7723
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,7742
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,7530
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4553
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,543
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,613
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,532
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,599
+,,,May,10 or fewer,10 or fewer,10 or fewer,537
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,539
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,611
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,537
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,560
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,506
+,"Total: Total includes all data under the Idaho bucket, including data from rows not currently displayed.",2025,Jan,14,10 or fewer,10 or fewer,28124
+,,,Feb,11,10 or fewer,10 or fewer,26530
+,,,Mar,21,10 or fewer,10 or fewer,28500
+,,,Apr,13,10 or fewer,10 or fewer,27434
+,,,May,15,24,10 or fewer,27854
+,,,Jun,13,40,10 or fewer,27027
+,,,Jul,17,67,10 or fewer,28105
+,,,Aug,14,46,10 or fewer,28444
+,,,Sep,14,18,10 or fewer,28038
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,17234
+Kansas,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2173
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2445
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2263
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2301
+,,,May,10 or fewer,10 or fewer,10 or fewer,2420
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2085
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2148
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2295
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2523
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2045
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2488
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2335
+,,,Mar,10 or fewer,10 or fewer,13,2459
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2504
+,,,May,10 or fewer,10 or fewer,10 or fewer,2777
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2856
+,,,Jul,10 or fewer,11,10 or fewer,2912
+,,,Aug,10 or fewer,11,12,2925
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3023
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2202
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,5547
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5352
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,5854
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,5741
+,,,May,10 or fewer,10 or fewer,10 or fewer,6564
+,,,Jun,10 or fewer,26,10 or fewer,6380
+,,,Jul,10 or fewer,30,11,6762
+,,,Aug,10 or fewer,12,10 or fewer,6842
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,6539
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4816
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,5015
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4804
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,5101
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4941
+,,,May,10 or fewer,10 or fewer,10 or fewer,5833
+,,,Jun,10 or fewer,12,10 or fewer,5675
+,,,Jul,10 or fewer,21,10 or fewer,5899
+,,,Aug,10 or fewer,11,10 or fewer,5953
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,5811
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4191
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,6161
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5996
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,6710
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,6324
+,,,May,10 or fewer,10 or fewer,10 or fewer,7742
+,,,Jun,10 or fewer,15,10 or fewer,7327
+,,,Jul,10 or fewer,27,10 or fewer,7306
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,7455
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,7320
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5434
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,770
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,747
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,699
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,725
+,,,May,10 or fewer,10 or fewer,10 or fewer,710
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,790
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,785
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,778
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,737
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,845
+,"Total: Total includes all data under the Kansas bucket, including data from rows not currently displayed.",2025,Jan,11,10 or fewer,15,22151
+,,,Feb,12,10 or fewer,16,21676
+,,,Mar,17,10 or fewer,21,23085
+,,,Apr,15,10 or fewer,19,22534
+,,,May,21,21,14,26043
+,,,Jun,12,68,20,25110
+,,,Jul,19,91,18,25808
+,,,Aug,11,48,21,26246
+,,,Sep,17,21,17,25950
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,13,19533
+Missouri,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1917
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1797
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1955
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1818
+,,,May,10 or fewer,10 or fewer,10 or fewer,1973
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1776
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1664
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1759
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1887
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1550
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2480
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2389
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2690
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2612
+,,,May,10 or fewer,10 or fewer,10 or fewer,2677
+,,,Jun,10 or fewer,11,13,2699
+,,,Jul,10 or fewer,15,10 or fewer,2698
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2692
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2798
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2290
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,6046
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5488
+,,,Mar,13,10 or fewer,10 or fewer,6219
+,,,Apr,12,10 or fewer,10 or fewer,6054
+,,,May,10 or fewer,10 or fewer,10 or fewer,6302
+,,,Jun,10 or fewer,35,10 or fewer,6428
+,,,Jul,10 or fewer,54,10 or fewer,6410
+,,,Aug,10 or fewer,24,10 or fewer,6357
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,6413
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4876
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,5600
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5196
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,5955
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,5636
+,,,May,10 or fewer,10 or fewer,10 or fewer,5736
+,,,Jun,10 or fewer,24,10 or fewer,5719
+,,,Jul,10 or fewer,39,10 or fewer,5745
+,,,Aug,10 or fewer,19,10 or fewer,5741
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,5696
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4391
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,6757
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,6432
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,7359
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,6783
+,,,May,10 or fewer,10 or fewer,10 or fewer,7308
+,,,Jun,10 or fewer,12,10 or fewer,6903
+,,,Jul,10 or fewer,30,10 or fewer,6857
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,6798
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,6881
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5175
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,781
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,849
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,751
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,802
+,,,May,10 or fewer,10 or fewer,10 or fewer,705
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,789
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,673
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,683
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,699
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,772
+,"Total: Total includes all data under the Missouri bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,10 or fewer,23577
+,,,Feb,13,10 or fewer,10 or fewer,22149
+,,,Mar,22,10 or fewer,10 or fewer,24923
+,,,Apr,21,10 or fewer,10 or fewer,23703
+,,,May,18,10 or fewer,15,24699
+,,,Jun,10 or fewer,82,24,24308
+,,,Jul,10 or fewer,139,16,24047
+,,,Aug,11,60,10 or fewer,24027
+,,,Sep,10 or fewer,19,14,24370
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,19051
+Hawaii,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4491
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4227
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4213
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4113
+,,,May,10 or fewer,10 or fewer,10 or fewer,4296
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,3392
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,3175
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3403
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3433
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2738
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2467
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2237
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2389
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2281
+,,,May,10 or fewer,10 or fewer,10 or fewer,2338
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2055
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2180
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2300
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2441
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1898
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,5545
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5043
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,5345
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,5117
+,,,May,10 or fewer,10 or fewer,10 or fewer,5375
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,5158
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,5212
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,5282
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,5340
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4300
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,5341
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4851
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,5134
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,5002
+,,,May,10 or fewer,10 or fewer,10 or fewer,5243
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,5069
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,5078
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,5200
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4968
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4060
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,6481
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5934
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,6278
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,6237
+,,,May,10 or fewer,10 or fewer,10 or fewer,6492
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,6279
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,6381
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,6432
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,6138
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4975
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,754
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,807
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,805
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,769
+,,,May,10 or fewer,10 or fewer,10 or fewer,752
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,753
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,735
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,734
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,785
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,736
+,"Total: Total includes all data under the Hawaii bucket, including data from rows not currently displayed.",2025,Jan,11,10 or fewer,10 or fewer,25077
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,23095
+,,,Mar,12,10 or fewer,10 or fewer,24162
+,,,Apr,14,10 or fewer,10 or fewer,23518
+,,,May,10 or fewer,10 or fewer,10 or fewer,24495
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,22700
+,,,Jul,11,13,10 or fewer,22758
+,,,Aug,10 or fewer,17,10 or fewer,23349
+,,,Sep,10 or fewer,11,10 or fewer,23103
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,18704
+Nebraska,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2987
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2785
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2608
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2655
+,,,May,10 or fewer,10 or fewer,10 or fewer,2694
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2341
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2318
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2602
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2679
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2150
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2728
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2547
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2689
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2711
+,,,May,10 or fewer,10 or fewer,10 or fewer,2712
+,,,Jun,10 or fewer,13,10 or fewer,2673
+,,,Jul,10 or fewer,15,10 or fewer,2682
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2805
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2996
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2488
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,5793
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5246
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,5569
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,5489
+,,,May,10 or fewer,10 or fewer,10 or fewer,5775
+,,,Jun,10 or fewer,29,10 or fewer,5706
+,,,Jul,10 or fewer,34,10 or fewer,6038
+,,,Aug,10 or fewer,25,10 or fewer,5937
+,,,Sep,10 or fewer,10 or fewer,12,6010
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4667
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4827
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4510
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4636
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4440
+,,,May,10 or fewer,10 or fewer,10 or fewer,4607
+,,,Jun,10 or fewer,31,10 or fewer,4694
+,,,Jul,10 or fewer,26,10 or fewer,4903
+,,,Aug,10 or fewer,12,10 or fewer,4884
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4851
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3726
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,5691
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5194
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,5543
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,5380
+,,,May,10 or fewer,10 or fewer,10 or fewer,5686
+,,,Jun,10 or fewer,22,10 or fewer,5467
+,,,Jul,10 or fewer,18,10 or fewer,5806
+,,,Aug,10 or fewer,12,10 or fewer,5585
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,5545
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,4379
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,671
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,704
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,651
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,668
+,,,May,10 or fewer,10 or fewer,10 or fewer,596
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,633
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,605
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,647
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,631
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,695
+,"Total: Total includes all data under the Nebraska bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,15,22693
+,,,Feb,10 or fewer,10 or fewer,11,20986
+,,,Mar,10 or fewer,10 or fewer,17,21693
+,,,Apr,10 or fewer,10 or fewer,14,21339
+,,,May,10 or fewer,19,13,22065
+,,,Jun,10 or fewer,104,16,21513
+,,,Jul,10 or fewer,100,11,22347
+,,,Aug,10 or fewer,56,17,22454
+,,,Sep,10 or fewer,13,17,22709
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,14,18103
+Maine,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2737
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2556
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2539
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2242
+,,,May,10 or fewer,10 or fewer,10 or fewer,2352
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2184
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1858
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1760
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1998
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1229
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2102
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1824
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2005
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1906
+,,,May,10 or fewer,10 or fewer,10 or fewer,1916
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2024
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2003
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1902
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1968
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1211
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4991
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4575
+,,,Mar,17,10 or fewer,10 or fewer,4898
+,,,Apr,18,10 or fewer,10 or fewer,4627
+,,,May,14,10 or fewer,10 or fewer,4757
+,,,Jun,13,17,10 or fewer,4935
+,,,Jul,14,12,10 or fewer,5196
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,4903
+,,,Sep,14,10 or fewer,10 or fewer,4775
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2850
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4900
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4699
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4734
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4552
+,,,May,15,10 or fewer,10 or fewer,4834
+,,,Jun,10 or fewer,13,10 or fewer,4914
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,5086
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,4835
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4635
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2808
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,6816
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,6376
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,6640
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,6614
+,,,May,10 or fewer,10 or fewer,10 or fewer,7141
+,,,Jun,10 or fewer,11,10 or fewer,7318
+,,,Jul,10 or fewer,18,10 or fewer,7151
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,6924
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,6560
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3898
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,708
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,742
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,690
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,662
+,,,May,10 or fewer,10 or fewer,10 or fewer,613
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,621
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,638
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,601
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,596
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,696
+,"Total: Total includes all data under the Maine bucket, including data from rows not currently displayed.",2025,Jan,16,10 or fewer,10 or fewer,22252
+,,,Feb,18,10 or fewer,10 or fewer,20771
+,,,Mar,24,10 or fewer,10 or fewer,21505
+,,,Apr,28,10 or fewer,10 or fewer,20602
+,,,May,31,10 or fewer,10 or fewer,21610
+,,,Jun,26,48,10 or fewer,21994
+,,,Jul,21,43,10 or fewer,21929
+,,,Aug,21,25,10 or fewer,20923
+,,,Sep,26,10 or fewer,10 or fewer,20530
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,12691
+Nevada,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,3534
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3424
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3297
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3179
+,,,May,10 or fewer,10 or fewer,10 or fewer,3061
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2532
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2237
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2621
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2776
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2285
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2083
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1897
+,,,Mar,10 or fewer,10 or fewer,17,2103
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2144
+,,,May,10 or fewer,10 or fewer,10 or fewer,2119
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1986
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1974
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2133
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2066
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1642
+,≥ 25 and < 45 Years,2025,Jan,20,10 or fewer,12,4814
+,,,Feb,11,10 or fewer,13,4523
+,,,Mar,19,10 or fewer,13,4991
+,,,Apr,19,10 or fewer,11,4982
+,,,May,17,10 or fewer,10 or fewer,5027
+,,,Jun,20,19,16,4913
+,,,Jul,19,23,10 or fewer,5064
+,,,Aug,14,12,10 or fewer,5000
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4805
+,,,Oct 1 – Oct 30,12,10 or fewer,10 or fewer,3826
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4248
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3937
+,,,Mar,11,10 or fewer,10 or fewer,4219
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4102
+,,,May,10 or fewer,10 or fewer,10 or fewer,4204
+,,,Jun,10 or fewer,19,10 or fewer,4030
+,,,Jul,13,18,10 or fewer,4295
+,,,Aug,10 or fewer,19,10 or fewer,4144
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4024
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3183
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,3638
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3223
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3489
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3492
+,,,May,10 or fewer,10 or fewer,10 or fewer,3603
+,,,Jun,10 or fewer,13,10 or fewer,3484
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,3518
+,,,Aug,10 or fewer,13,10 or fewer,3419
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3489
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2806
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,636
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,688
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,626
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,621
+,,,May,10 or fewer,10 or fewer,10 or fewer,637
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,605
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,588
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,595
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,530
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,603
+,"Total: Total includes all data under the Nevada bucket, including data from rows not currently displayed.",2025,Jan,30,10 or fewer,27,18951
+,,,Feb,26,10 or fewer,22,17689
+,,,Mar,43,10 or fewer,39,18725
+,,,Apr,35,10 or fewer,25,18519
+,,,May,30,16,23,18648
+,,,Jun,41,63,29,17549
+,,,Jul,43,59,22,17671
+,,,Aug,20,52,11,17908
+,,,Sep,23,10 or fewer,24,17687
+,,,Oct 1 – Oct 30,24,10 or fewer,10 or fewer,14342
+Rhode Island,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4083
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3403
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3658
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3314
+,,,May,10 or fewer,10 or fewer,10 or fewer,3641
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,3167
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2997
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2899
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3248
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2695
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1975
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1740
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1942
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1816
+,,,May,10 or fewer,10 or fewer,10 or fewer,1916
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1770
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1863
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1838
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1933
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1614
+,≥ 25 and < 45 Years,2025,Jan,13,10 or fewer,10 or fewer,4138
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3726
+,,,Mar,13,10 or fewer,10 or fewer,3951
+,,,Apr,11,10 or fewer,10 or fewer,4035
+,,,May,10 or fewer,10 or fewer,10 or fewer,4094
+,,,Jun,14,10 or fewer,10 or fewer,3956
+,,,Jul,20,10 or fewer,10 or fewer,4232
+,,,Aug,13,10 or fewer,10 or fewer,4101
+,,,Sep,14,10 or fewer,10 or fewer,3957
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3214
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4124
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3680
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3987
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3809
+,,,May,10 or fewer,10 or fewer,10 or fewer,4108
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,3927
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,4083
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,4019
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4016
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3060
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,5143
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4722
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4766
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4730
+,,,May,10 or fewer,10 or fewer,10 or fewer,4846
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,4674
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,4787
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,4763
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4673
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3731
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,683
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,702
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,652
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,635
+,,,May,10 or fewer,10 or fewer,10 or fewer,641
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,625
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,651
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,621
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,588
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,675
+,"Total: Total includes all data under the Rhode Island bucket, including data from rows not currently displayed.",2025,Jan,16,10 or fewer,10 or fewer,20146
+,,,Feb,17,10 or fewer,10 or fewer,17969
+,,,Mar,19,10 or fewer,10 or fewer,18955
+,,,Apr,15,10 or fewer,10 or fewer,18338
+,,,May,18,10 or fewer,10 or fewer,19244
+,,,Jun,17,22,10 or fewer,18118
+,,,Jul,27,25,10 or fewer,18613
+,,,Aug,20,10 or fewer,10 or fewer,18238
+,,,Sep,18,10 or fewer,10 or fewer,18412
+,,,Oct 1 – Oct 30,11,10 or fewer,10 or fewer,14987
+Alabama,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2008
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1866
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1985
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1824
+,,,May,10 or fewer,10 or fewer,10 or fewer,1927
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1539
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1589
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1890
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1982
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1471
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1935
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1790
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1954
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1819
+,,,May,10 or fewer,10 or fewer,10 or fewer,1890
+,,,Jun,10 or fewer,11,10 or fewer,1837
+,,,Jul,10 or fewer,25,10 or fewer,1896
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1903
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1960
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1529
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4499
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3966
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4385
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4278
+,,,May,10 or fewer,13,10 or fewer,4407
+,,,Jun,10 or fewer,23,10 or fewer,4347
+,,,Jul,10 or fewer,32,10 or fewer,4629
+,,,Aug,10 or fewer,15,10 or fewer,4552
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4449
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3523
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4438
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4031
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4353
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4255
+,,,May,10 or fewer,10 or fewer,10 or fewer,4468
+,,,Jun,10 or fewer,21,10 or fewer,4371
+,,,Jul,10 or fewer,32,10 or fewer,4536
+,,,Aug,10 or fewer,11,10 or fewer,4649
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4375
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3418
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4746
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4410
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4812
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4633
+,,,May,10 or fewer,10 or fewer,10 or fewer,4860
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,4597
+,,,Jul,10 or fewer,16,10 or fewer,4750
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,4921
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,4739
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,3719
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,708
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,700
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,658
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,676
+,,,May,10 or fewer,10 or fewer,10 or fewer,619
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,648
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,649
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,594
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,643
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,598
+,"Total: Total includes all data under the Alabama bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,10 or fewer,18331
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,16761
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,18146
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,17484
+,,,May,10 or fewer,26,11,18169
+,,,Jun,10 or fewer,62,10 or fewer,17337
+,,,Jul,10 or fewer,106,10 or fewer,18046
+,,,Aug,11,44,15,18509
+,,,Sep,10 or fewer,16,10 or fewer,18148
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,14258
+Delaware,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,4323
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4063
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3984
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3889
+,,,May,10 or fewer,10 or fewer,10 or fewer,3995
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,3189
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,3105
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3081
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3589
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2818
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2100
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1905
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2056
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1867
+,,,May,10 or fewer,10 or fewer,10 or fewer,2059
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1865
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1978
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1884
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1986
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1512
+,≥ 25 and < 45 Years,2025,Jan,18,10 or fewer,10 or fewer,3998
+,,,Feb,23,10 or fewer,10 or fewer,3777
+,,,Mar,20,10 or fewer,10 or fewer,3689
+,,,Apr,25,10 or fewer,10 or fewer,3753
+,,,May,24,10 or fewer,10 or fewer,3895
+,,,Jun,26,14,10 or fewer,3758
+,,,Jul,21,19,10 or fewer,3982
+,,,Aug,17,10 or fewer,10 or fewer,3841
+,,,Sep,14,10 or fewer,10 or fewer,3584
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2661
+,≥ 45 and < 65 Years,2025,Jan,15,10 or fewer,10 or fewer,3399
+,,,Feb,24,10 or fewer,10 or fewer,3198
+,,,Mar,11,10 or fewer,10 or fewer,3317
+,,,Apr,15,10 or fewer,10 or fewer,3232
+,,,May,12,10 or fewer,10 or fewer,3257
+,,,Jun,22,15,10 or fewer,3267
+,,,Jul,14,11,10 or fewer,3425
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3263
+,,,Sep,12,10 or fewer,10 or fewer,3058
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2140
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,3902
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,3717
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3934
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,3560
+,,,May,10 or fewer,10 or fewer,10 or fewer,3842
+,,,Jun,10 or fewer,14,10 or fewer,3878
+,,,Jul,10 or fewer,14,10 or fewer,3740
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3791
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3657
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2696
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,541
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,569
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,533
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,488
+,,,May,10 or fewer,10 or fewer,10 or fewer,453
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,427
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,426
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,406
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,388
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,448
+,"Total: Total includes all data under the Delaware bucket, including data from rows not currently displayed.",2025,Jan,35,10 or fewer,10 or fewer,18263
+,,,Feb,51,10 or fewer,10 or fewer,17228
+,,,Mar,37,10 or fewer,10 or fewer,17511
+,,,Apr,42,10 or fewer,10 or fewer,16788
+,,,May,38,10 or fewer,10 or fewer,17497
+,,,Jun,52,50,10 or fewer,16382
+,,,Jul,37,52,10 or fewer,16655
+,,,Aug,33,10 or fewer,10 or fewer,16261
+,,,Sep,27,10 or fewer,10 or fewer,16259
+,,,Oct 1 – Oct 30,13,10 or fewer,10 or fewer,12275
+Utah,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,219
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,241
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,266
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,253
+,,,May,10 or fewer,10 or fewer,10 or fewer,255
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,282
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,278
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,275
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,6753
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,6085
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,857
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,792
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,826
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,839
+,,,May,10 or fewer,10 or fewer,10 or fewer,877
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,837
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,932
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,953
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,5750
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5058
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2227
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1962
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2135
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2262
+,,,May,10 or fewer,10 or fewer,10 or fewer,2282
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2295
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2376
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2381
+,,,Sep,12,10 or fewer,10 or fewer,11068
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,10154
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1569
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1494
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1671
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1611
+,,,May,10 or fewer,10 or fewer,10 or fewer,1683
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1722
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1677
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1741
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,8534
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7742
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1158
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1082
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1266
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1207
+,,,May,10 or fewer,10 or fewer,10 or fewer,1288
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1275
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1312
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1269
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,9255
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,8341
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,294
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,265
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,261
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,299
+,,,May,10 or fewer,10 or fewer,10 or fewer,310
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,297
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,296
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,252
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,320
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1162
+,"Total: Total includes all data under the Utah bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,10 or fewer,6323
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,5835
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,6425
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,6468
+,,,May,10 or fewer,10 or fewer,10 or fewer,6695
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,6708
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,6868
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,6871
+,,,Sep,23,14,10 or fewer,41677
+,,,Oct 1 – Oct 30,23,10 or fewer,13,38541
+North Dakota,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2004
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1908
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1898
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1708
+,,,May,10 or fewer,10 or fewer,10 or fewer,1802
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1475
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1436
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1583
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1717
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1341
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1489
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1335
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1436
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1306
+,,,May,10 or fewer,10 or fewer,10 or fewer,1460
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1335
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1381
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1453
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1593
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1199
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,3296
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2996
+,,,Mar,13,10 or fewer,10 or fewer,3415
+,,,Apr,12,10 or fewer,10 or fewer,3176
+,,,May,10 or fewer,10 or fewer,10 or fewer,3464
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,3289
+,,,Jul,11,12,10 or fewer,3508
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3443
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3400
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2681
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2576
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2243
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2466
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2387
+,,,May,10 or fewer,10 or fewer,10 or fewer,2452
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2441
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2554
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2549
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2523
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1931
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2762
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2558
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,3028
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2919
+,,,May,10 or fewer,10 or fewer,10 or fewer,3048
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2973
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2931
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3155
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2898
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2304
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,334
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,345
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,308
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,314
+,,,May,10 or fewer,10 or fewer,10 or fewer,308
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,331
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,310
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,298
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,313
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,307
+,"Total: Total includes all data under the North Dakota bucket, including data from rows not currently displayed.",2025,Jan,17,10 or fewer,10 or fewer,12459
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,11384
+,,,Mar,20,10 or fewer,10 or fewer,12549
+,,,Apr,21,10 or fewer,10 or fewer,11809
+,,,May,20,14,10 or fewer,12534
+,,,Jun,12,19,10 or fewer,11842
+,,,Jul,14,31,10 or fewer,12119
+,,,Aug,12,12,10 or fewer,12480
+,,,Sep,20,10 or fewer,10 or fewer,12443
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,9762
+Montana,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1288
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1388
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1479
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1213
+,,,May,10 or fewer,10 or fewer,10 or fewer,1236
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1125
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1032
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1044
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1179
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,891
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1158
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1122
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1188
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1167
+,,,May,10 or fewer,10 or fewer,10 or fewer,1242
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1217
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1230
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1314
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1488
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1123
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2232
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2172
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2406
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2317
+,,,May,10 or fewer,10 or fewer,10 or fewer,2392
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2454
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2468
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2523
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2760
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2171
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1956
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1752
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2112
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1989
+,,,May,10 or fewer,10 or fewer,10 or fewer,2054
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2097
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2266
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2200
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2304
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1842
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2578
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2419
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2697
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2710
+,,,May,10 or fewer,10 or fewer,10 or fewer,2909
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2799
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2829
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,3017
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,3102
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2485
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,309
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,361
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,354
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,325
+,,,May,10 or fewer,10 or fewer,10 or fewer,324
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,320
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,337
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,330
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,341
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,358
+,"Total: Total includes all data under the Montana bucket, including data from rows not currently displayed.",2025,Jan,12,10 or fewer,10 or fewer,9520
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,9214
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,10236
+,,,Apr,12,10 or fewer,10 or fewer,9721
+,,,May,12,10 or fewer,10 or fewer,10157
+,,,Jun,10 or fewer,12,10 or fewer,10010
+,,,Jul,10 or fewer,17,10 or fewer,10160
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,10426
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,11172
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,8868
+Vermont,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1128
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,906
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,977
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,909
+,,,May,10 or fewer,10 or fewer,10 or fewer,960
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,837
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,776
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,744
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,858
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,734
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,933
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,851
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,965
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,903
+,,,May,10 or fewer,10 or fewer,10 or fewer,848
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,843
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,928
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,884
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,972
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,801
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2237
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1907
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1996
+,,,Apr,13,10 or fewer,10 or fewer,1953
+,,,May,10 or fewer,10 or fewer,10 or fewer,1968
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2043
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2149
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2144
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1964
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1596
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2083
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1902
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2011
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1866
+,,,May,10 or fewer,10 or fewer,10 or fewer,1961
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1998
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2115
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2173
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1955
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1596
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2795
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2617
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2856
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2737
+,,,May,10 or fewer,10 or fewer,10 or fewer,2890
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2907
+,,,Jul,10 or fewer,11,10 or fewer,2983
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2869
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2870
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2393
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,353
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,357
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,326
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,342
+,,,May,10 or fewer,10 or fewer,10 or fewer,281
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,284
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,300
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,300
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,314
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,297
+,"Total: Total includes all data under the Vermont bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,10 or fewer,9526
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,8540
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,9127
+,,,Apr,17,10 or fewer,10 or fewer,8710
+,,,May,13,10 or fewer,10 or fewer,8906
+,,,Jun,13,24,10 or fewer,8911
+,,,Jul,14,19,10 or fewer,9251
+,,,Aug,18,10 or fewer,10 or fewer,9113
+,,,Sep,12,10 or fewer,10 or fewer,8932
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7417
+New Hampshire,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1013
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,835
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,871
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,827
+,,,May,10 or fewer,10 or fewer,10 or fewer,789
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,782
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,707
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,652
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,735
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,674
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,890
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,834
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,809
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,798
+,,,May,10 or fewer,10 or fewer,10 or fewer,792
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,733
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,710
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,794
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,827
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,747
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1646
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1494
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1578
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1556
+,,,May,10 or fewer,10 or fewer,10 or fewer,1619
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1609
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1703
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1602
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1541
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1364
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1770
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1683
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1758
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1686
+,,,May,10 or fewer,10 or fewer,10 or fewer,1738
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1808
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1900
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1801
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1718
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1540
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2768
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2537
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2657
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2640
+,,,May,10 or fewer,10 or fewer,10 or fewer,2737
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2670
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2660
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2587
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2614
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,2420
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,298
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,307
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,298
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,289
+,,,May,10 or fewer,10 or fewer,10 or fewer,271
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,286
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,262
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,254
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,255
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,308
+,"Total: Total includes all data under the New Hampshire bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,10 or fewer,8384
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7689
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,7969
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,7795
+,,,May,10 or fewer,10 or fewer,10 or fewer,7945
+,,,Jun,10 or fewer,18,10 or fewer,7888
+,,,Jul,10 or fewer,17,10 or fewer,7942
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,7689
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,7689
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7053
+New Mexico,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,778
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,850
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,788
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,677
+,,,May,10 or fewer,10 or fewer,10 or fewer,660
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,504
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,527
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,599
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,574
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,552
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,809
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,689
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,779
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,735
+,,,May,10 or fewer,10 or fewer,10 or fewer,711
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,716
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,762
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,759
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,735
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,547
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2156
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2032
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2192
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2041
+,,,May,10 or fewer,10 or fewer,10 or fewer,2059
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1972
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2012
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2069
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1960
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1560
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1803
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1751
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1847
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1745
+,,,May,10 or fewer,10 or fewer,10 or fewer,1763
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1704
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1848
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1771
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1714
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1399
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,2129
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1996
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2117
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2102
+,,,May,10 or fewer,10 or fewer,10 or fewer,2164
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2011
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2066
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2078
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,2037
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1639
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,221
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,204
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,193
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,206
+,,,May,10 or fewer,10 or fewer,10 or fewer,195
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,165
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,187
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,175
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,179
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,145
+,"Total: Total includes all data under the New Mexico bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,10 or fewer,7895
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,7520
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,7914
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,7505
+,,,May,10 or fewer,10 or fewer,10 or fewer,7551
+,,,Jun,10 or fewer,22,10 or fewer,7071
+,,,Jul,14,21,10 or fewer,7402
+,,,Aug,10 or fewer,13,10 or fewer,7450
+,,,Sep,14,10 or fewer,10 or fewer,7199
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5842
+South Dakota,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1178
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1104
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1147
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1118
+,,,May,10 or fewer,10 or fewer,10 or fewer,1104
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,935
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,991
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,974
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1072
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,782
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,760
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,687
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,722
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,781
+,,,May,10 or fewer,10 or fewer,10 or fewer,786
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,803
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,775
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,800
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,848
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,632
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1610
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1470
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1515
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1488
+,,,May,10 or fewer,10 or fewer,10 or fewer,1568
+,,,Jun,10 or fewer,14,10 or fewer,1730
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1683
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1684
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1611
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1256
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1359
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1203
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1334
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1327
+,,,May,10 or fewer,10 or fewer,10 or fewer,1388
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1415
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1374
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1425
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1323
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1041
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1744
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1657
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1720
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1760
+,,,May,10 or fewer,10 or fewer,10 or fewer,1811
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1795
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1792
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1898
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1744
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1358
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,198
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,207
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,181
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,191
+,,,May,10 or fewer,10 or fewer,10 or fewer,176
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,166
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,182
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,172
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,196
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,189
+,"Total: Total includes all data under the South Dakota bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,10 or fewer,6849
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,6327
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,6619
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,6663
+,,,May,10 or fewer,10 or fewer,10 or fewer,6833
+,,,Jun,10 or fewer,32,10 or fewer,6843
+,,,Jul,10 or fewer,20,10 or fewer,6797
+,,,Aug,10 or fewer,16,10 or fewer,6953
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,6794
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5258
+Wyoming,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,691
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,702
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,741
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,608
+,,,May,10 or fewer,10 or fewer,10 or fewer,670
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,598
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,654
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,749
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,863
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,675
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,668
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,609
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,603
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,602
+,,,May,10 or fewer,10 or fewer,10 or fewer,644
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,572
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,707
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,816
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,868
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,733
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1085
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1009
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1145
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1115
+,,,May,10 or fewer,10 or fewer,10 or fewer,1158
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1223
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1306
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1545
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1495
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1241
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,963
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,869
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,966
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,910
+,,,May,10 or fewer,10 or fewer,10 or fewer,949
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,950
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1120
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1307
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1277
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1024
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1277
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1135
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1277
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1212
+,,,May,10 or fewer,10 or fewer,10 or fewer,1356
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1351
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1561
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1669
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1773
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1401
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,146
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,139
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,147
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,132
+,,,May,10 or fewer,10 or fewer,10 or fewer,140
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,134
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,143
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,174
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,143
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,178
+,"Total: Total includes all data under the Wyoming bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,10 or fewer,4829
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,4463
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,4878
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,4578
+,,,May,10 or fewer,10 or fewer,10 or fewer,4916
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,4827
+,,,Jul,10 or fewer,17,10 or fewer,5490
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,6259
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,6418
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,5251
+District of Columbia,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,199
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,194
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,221
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,205
+,,,May,10 or fewer,10 or fewer,10 or fewer,168
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,162
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,193
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,184
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,173
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,138
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,257
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,240
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,233
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,249
+,,,May,10 or fewer,10 or fewer,10 or fewer,213
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,195
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,232
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,209
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,256
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,183
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,910
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,875
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,847
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,889
+,,,May,10 or fewer,10 or fewer,10 or fewer,880
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,921
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,867
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,868
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,830
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,592
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,469
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,431
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,457
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,435
+,,,May,10 or fewer,10 or fewer,10 or fewer,429
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,431
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,468
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,491
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,439
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,288
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,270
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,265
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,262
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,298
+,,,May,10 or fewer,10 or fewer,10 or fewer,274
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,274
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,295
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,301
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,239
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,147
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,56
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,53
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,54
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,48
+,,,May,10 or fewer,10 or fewer,10 or fewer,32
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,48
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,55
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,51
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,42
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,47
+,"Total: Total includes all data under the District of Columbia bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,10 or fewer,2160
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,2058
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,2073
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,2124
+,,,May,10 or fewer,10 or fewer,10 or fewer,1996
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,2031
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,2110
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,2104
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1979
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1395
+Puerto Rico,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,37
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,24
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,18
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,29
+,,,May,10 or fewer,10 or fewer,10 or fewer,19
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,37
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,33
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,17
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,14
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,51
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,32
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,21
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,37
+,,,May,10 or fewer,10 or fewer,10 or fewer,27
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,36
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,41
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,20
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,24
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,18
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,65
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,44
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,51
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,43
+,,,May,10 or fewer,10 or fewer,10 or fewer,46
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,65
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,52
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,50
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,36
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,30
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,76
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,52
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,69
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,53
+,,,May,10 or fewer,10 or fewer,10 or fewer,62
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,79
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,76
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,64
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,50
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,29
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,135
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,68
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,68
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,75
+,,,May,10 or fewer,10 or fewer,10 or fewer,119
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,124
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,134
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,104
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,76
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,53
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,15
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,12
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,May,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,12
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,11
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,"Total: Total includes all data under the Puerto Rico bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,10 or fewer,379
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,232
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,232
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,243
+,,,May,10 or fewer,10 or fewer,10 or fewer,279
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,353
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,347
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,260
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,209
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,143
+Alaska,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,30
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,28
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,26
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,23
+,,,May,10 or fewer,10 or fewer,10 or fewer,24
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,39
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,34
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,17
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,17
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,30
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,46
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,45
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,33
+,,,May,10 or fewer,10 or fewer,10 or fewer,37
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,30
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,34
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,39
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,43
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,34
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,68
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,45
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,51
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,41
+,,,May,10 or fewer,10 or fewer,10 or fewer,53
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,40
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,54
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,44
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,56
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,54
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,55
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,56
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,58
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,52
+,,,May,10 or fewer,10 or fewer,10 or fewer,52
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,47
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,41
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,41
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,47
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,39
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,106
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,90
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,103
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,89
+,,,May,10 or fewer,10 or fewer,10 or fewer,67
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,51
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,62
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,50
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,74
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,73
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,May,10 or fewer,10 or fewer,10 or fewer,12
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,12
+,"Total: Total includes all data under the Alaska bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,10 or fewer,299
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,274
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,293
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,242
+,,,May,10 or fewer,10 or fewer,10 or fewer,245
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,212
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,228
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,199
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,241
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,220
+Virgin Islands,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,May,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,May,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,≥ 25 and < 45 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,May,10 or fewer,10 or fewer,10 or fewer,13
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,14
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,21
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,12
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,≥ 45 and < 65 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,18
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,11
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,19
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,16
+,,,May,10 or fewer,10 or fewer,10 or fewer,28
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,20
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,27
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,21
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,24
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,14
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,34
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,36
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,36
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,34
+,,,May,10 or fewer,10 or fewer,10 or fewer,40
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,40
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,46
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,46
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,44
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,19
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,May,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,"Total: Total includes all data under the Virgin Islands bucket, including data from rows not currently displayed.",2025,Jan,10 or fewer,10 or fewer,10 or fewer,63
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,62
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,72
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,77
+,,,May,10 or fewer,10 or fewer,10 or fewer,98
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,86
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,109
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,87
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,91
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,52
+None of the above,Less than 15 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,9990
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,8960
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,8491
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,8770
+,,,May,10 or fewer,10 or fewer,10 or fewer,8546
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,7296
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,7038
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,7475
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,8615
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,8226
+,≥ 15 and < 25 Years,2025,Jan,10 or fewer,10 or fewer,10 or fewer,7867
+,,,Feb,10 or fewer,10 or fewer,13,7357
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,7701
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,7671
+,,,May,10 or fewer,10 or fewer,23,6994
+,,,Jun,10 or fewer,21,19,6672
+,,,Jul,10 or fewer,15,12,6988
+,,,Aug,10 or fewer,20,11,6970
+,,,Sep,10 or fewer,10 or fewer,11,7457
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,6247
+,≥ 25 and < 45 Years,2025,Jan,56,10 or fewer,20,17048
+,,,Feb,47,10 or fewer,18,15779
+,,,Mar,59,10 or fewer,13,16568
+,,,Apr,56,10 or fewer,23,16286
+,,,May,53,14,18,16726
+,,,Jun,49,42,19,15867
+,,,Jul,58,55,17,16236
+,,,Aug,52,27,22,16302
+,,,Sep,50,15,12,16179
+,,,Oct 1 – Oct 30,31,10 or fewer,13,13043
+,≥ 45 and < 65 Years,2025,Jan,32,10 or fewer,10 or fewer,12375
+,,,Feb,16,10 or fewer,10 or fewer,11602
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,12249
+,,,Apr,29,10 or fewer,10 or fewer,11958
+,,,May,28,10 or fewer,10 or fewer,11889
+,,,Jun,22,29,10 or fewer,11490
+,,,Jul,31,37,10 or fewer,11872
+,,,Aug,18,17,10 or fewer,11852
+,,,Sep,21,10 or fewer,12,11670
+,,,Oct 1 – Oct 30,16,10 or fewer,10 or fewer,9099
+,65 Years or more,2025,Jan,10 or fewer,10 or fewer,10 or fewer,11104
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,10319
+,,,Mar,12,10 or fewer,10 or fewer,11001
+,,,Apr,15,10 or fewer,10 or fewer,10141
+,,,May,14,10 or fewer,10 or fewer,9958
+,,,Jun,11,22,10 or fewer,9694
+,,,Jul,10 or fewer,30,10 or fewer,9797
+,,,Aug,10 or fewer,13,10 or fewer,9593
+,,,Sep,16,10 or fewer,10 or fewer,9284
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,7192
+,No value,2025,Jan,10 or fewer,10 or fewer,10 or fewer,1748
+,,,Feb,10 or fewer,10 or fewer,10 or fewer,1769
+,,,Mar,10 or fewer,10 or fewer,10 or fewer,1697
+,,,Apr,10 or fewer,10 or fewer,10 or fewer,1675
+,,,May,10 or fewer,10 or fewer,10 or fewer,1556
+,,,Jun,10 or fewer,10 or fewer,10 or fewer,1536
+,,,Jul,10 or fewer,10 or fewer,10 or fewer,1491
+,,,Aug,10 or fewer,10 or fewer,10 or fewer,1460
+,,,Sep,10 or fewer,10 or fewer,10 or fewer,1438
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,10 or fewer,1553
+,"Total: Total includes all data under the None of the above bucket, including data from rows not currently displayed.",2025,Jan,97,10 or fewer,39,60123
+,,,Feb,71,11,41,55779
+,,,Mar,88,10 or fewer,34,57699
+,,,Apr,106,14,44,56496
+,,,May,103,36,53,55662
+,,,Jun,87,121,51,52549
+,,,Jul,101,141,41,53409
+,,,Aug,78,83,47,53645
+,,,Sep,91,33,41,54639
+,,,Oct 1 – Oct 30,62,10 or fewer,35,45358
+Total,Less than 15 Years,2025,Jan,25,22,80,698070
+,,,Feb,19,20,54,650053
+,,,Mar,21,43,64,661568
+,,,Apr,28,72,59,624378
+,,,May,30,166,73,630573
+,,,Jun,22,607,75,517153
+,,,Jul,16,516,89,495854
+,,,Aug,14,365,85,554289
+,,,Sep,20,183,72,619595
+,,,Oct 1 – Oct 30,24,69,38,487200
+,≥ 15 and < 25 Years,2025,Jan,186,33,714,484218
+,,,Feb,183,44,560,440341
+,,,Mar,295,71,718,471850
+,,,Apr,257,148,692,460821
+,,,May,258,344,798,468063
+,,,Jun,254,1698,901,440951
+,,,Jul,247,1727,940,457558
+,,,Aug,238,932,734,473355
+,,,Sep,218,383,639,496911
+,,,Oct 1 – Oct 30,139,130,452,378891
+,≥ 25 and < 45 Years,2025,Jan,1436,52,919,1063398
+,,,Feb,1425,69,767,964656
+,,,Mar,1773,118,929,1041814
+,,,Apr,1856,291,900,1014744
+,,,May,2002,699,1007,1059543
+,,,Jun,2035,3783,1027,1040271
+,,,Jul,1842,4069,1020,1080834
+,,,Aug,1728,1960,936,1080428
+,,,Sep,1538,686,914,1065488
+,,,Oct 1 – Oct 30,1092,176,631,802545
+,≥ 45 and < 65 Years,2025,Jan,821,76,308,917762
+,,,Feb,814,88,265,852863
+,,,Mar,1035,144,330,906988
+,,,Apr,1201,233,315,879992
+,,,May,1282,557,342,918173
+,,,Jun,1221,2974,355,908016
+,,,Jul,1183,3536,362,933340
+,,,Aug,1126,1672,358,932564
+,,,Sep,950,527,334,913606
+,,,Oct 1 – Oct 30,709,139,214,680412
+,65 Years or more,2025,Jan,329,150,107,1020273
+,,,Feb,324,189,94,948229
+,,,Mar,451,221,102,1019409
+,,,Apr,409,348,100,988330
+,,,May,437,667,134,1034001
+,,,Jun,453,2570,116,1011577
+,,,Jul,496,2699,119,1027741
+,,,Aug,451,1442,139,1031155
+,,,Sep,411,620,122,1008111
+,,,Oct 1 – Oct 30,275,213,80,750685
+,No value,2025,Jan,10 or fewer,10 or fewer,106,129268
+,,,Feb,10 or fewer,10 or fewer,93,134223
+,,,Mar,13,10 or fewer,91,126640
+,,,Apr,10 or fewer,10 or fewer,93,125781
+,,,May,10 or fewer,10 or fewer,91,118718
+,,,Jun,10 or fewer,12,85,117989
+,,,Jul,10 or fewer,26,109,118137
+,,,Aug,10 or fewer,19,82,113256
+,,,Sep,10 or fewer,10 or fewer,91,115872
+,,,Oct 1 – Oct 30,10 or fewer,10 or fewer,72,125187
+,"Total: Total includes all data under the Total bucket, including data from rows not currently displayed.",2025,Jan,2802,334,2233,4312509
+,,,Feb,2772,411,1833,3989921
+,,,Mar,3588,599,2230,4227759
+,,,Apr,3755,1099,2158,4093597
+,,,May,4016,2436,2444,4228592
+,,,Jun,3983,11642,2558,4035453
+,,,Jul,3787,12570,2638,4112898
+,,,Aug,3558,6390,2334,4184457
+,,,Sep,3144,2403,2172,4219030
+,,,Oct 1 – Oct 30,2246,729,1486,3224670
