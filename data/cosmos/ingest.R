@@ -302,6 +302,7 @@ monthly_injury <- data[["opioid_od"]] %>%
   filter(!is.na(age))%>%
   rename(epic_n_ed_opioid = ed_opioid,
          epic_n_ed_firearm = firearms_initial,
+         epic_n_ed_heat = heat,
          all_cause = total
   ) %>%
   mutate(
@@ -312,14 +313,20 @@ monthly_injury <- data[["opioid_od"]] %>%
     epic_n_ed_firearm = if_else(epic_n_ed_firearm == '10 or fewer', '5', epic_n_ed_firearm ),
     epic_n_ed_firearm = as.numeric(epic_n_ed_firearm),
     
+    epic_n_ed_heat = if_else(epic_n_ed_heat == '10 or fewer', '5', epic_n_ed_heat ),
+    epic_n_ed_heat = as.numeric(epic_n_ed_heat),
+    
     suppressed_opioid = if_else(epic_n_ed_opioid == 5, 1, 0),
     suppressed_firearm = if_else(epic_n_ed_firearm == 5, 1, 0),
+    suppressed_heat= if_else(epic_n_ed_heat == 5, 1, 0),
     
     epic_pct_ed_opioid = 100* epic_n_ed_opioid/all_cause,
     epic_pct_ed_firearm = 100* epic_n_ed_firearm/all_cause,
+    epic_pct_ed_heat = 100* epic_n_ed_heat/all_cause,
     
+        
   ) %>%
-  dplyr::select(time, geography, age,epic_n_ed_firearm, epic_pct_ed_firearm,epic_n_ed_opioid, epic_pct_ed_opioid, starts_with('suppressed'))
+  dplyr::select(time, geography, age,epic_n_ed_firearm, epic_pct_ed_firearm,epic_n_ed_opioid,epic_n_ed_heat, epic_pct_ed_opioid,epic_pct_ed_heat, starts_with('suppressed'))
 
 
 vroom::vroom_write(
