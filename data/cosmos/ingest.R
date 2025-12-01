@@ -395,5 +395,5 @@ vroom::vroom_write(
 vroom::vroom_write(data$obesity_county, "standard/county_no_time.csv.gz", ",")
 vroom::vroom_write(data$rsv_tests, "standard/no_geo.csv.gz", ",")
 
-vroom::vroom_write(data$vaccine_mmr, "standard/children.csv.gz", ",")
+#vroom::vroom_write(data$vaccine_mmr, "standard/children.csv.gz", ",")
 
