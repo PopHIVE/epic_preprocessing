@@ -63,7 +63,7 @@ chronic_import <- function(yearset){
   
    a1 <- read_csv(file_dm, skip = 11) %>%
     rename(diabetes_a1c_6_5 = "...3",
-           diabetes_dx_cdw = "...4",
+           diabetes_dx_ccw = "...4",
            n_patients_chronic = "...5",
            age = "Age at Encounter in Years"
     ) %>%
@@ -75,7 +75,7 @@ chronic_import <- function(yearset){
   
   b1 <- read_csv(file_obesity, skip = 11) %>%
     rename(obesity_bmi = "...3",
-           obesity_dx_cdw = "...4",
+           obesity_dx_ccw = "...4",
            n_patients_chronic = "...5",
            age = "Age at Encounter in Years"
     ) %>%
@@ -92,9 +92,9 @@ chronic_import <- function(yearset){
            age = gsub("Less than ", "<", age),
            age = gsub("65 Years or more","65+ Years", age),
            age = if_else(grepl('Total', age),'Total', age),
-           diabetes_dx_ccw = as.numeric(gsub('%','', diabetes_dx_cdw)),
+           diabetes_dx_ccw = as.numeric(gsub('%','', diabetes_dx_ccw)),
            diabetes_a1c_6_5 = as.numeric(gsub('%','', diabetes_a1c_6_5)),
-           obesity_dx_cdw = as.numeric(gsub('%','', obesity_dx_cdw)),
+           obesity_dx_ccw = as.numeric(gsub('%','', obesity_dx_ccw)),
            obesity_bmi = as.numeric(gsub('%','', obesity_bmi)),
            geography_name = gsub('Total','United States',geography_name)
            
@@ -103,7 +103,7 @@ chronic_import <- function(yearset){
     left_join(all_fips_state, by='geography_name'
     ) %>%
     mutate(time = paste0(yearset,'-01-01') ) %>%
-    dplyr::select(age, geography, time, diabetes_a1c_6_5,diabetes_dx_ccw, obesity_bmi,obesity_dx_cdw,
+    dplyr::select(age, geography, time, diabetes_a1c_6_5,diabetes_dx_ccw, obesity_bmi,obesity_dx_ccw,
                   n_patients_chronic) %>%
     filter(!is.na(geography)) 
   return(combined)
@@ -168,7 +168,7 @@ all_diabetes_county <- lapply(stage_a1c_county, chronic_import_county) %>%
 all_obesity_county <- lapply(stage_obesity_county, chronic_import_county) %>%
   bind_rows() %>%
   rename(obesity_bmi = lab,
-         obesity_dx_cdw = ccw)%>%
+         obesity_dx_ccw = ccw)%>%
   unique()
 
 all_chronic_county <- all_obesity_county %>% 
