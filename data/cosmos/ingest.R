@@ -112,6 +112,7 @@ chronic_import <- function(yearset){
 all_fips_county = all_fips %>%
   filter(!(geography_name %in% state.name)) %>%
   mutate(geography_name = gsub(' County','', geography_name),
+         geography_name = gsub(' Parish','', geography_name),
          geography_name = paste0(geography_name,', ', state),
          geography_name = toupper(geography_name)
   ) %>%
