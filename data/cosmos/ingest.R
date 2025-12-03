@@ -308,7 +308,14 @@ dcf::dcf_process_record(updated = process)
 
 #Monthly data ; injury and test data use different age groups so don't merge
 
-monthly_injury <- data[["opioid_od"]] %>%
+state_fips <- all_fips %>%
+  filter(geography_name %in% c(state.name,'District of Columbia', 'United States') & geography != '11001')
+
+monthly_injury <-vroom::vroom(
+  "raw/opioid_od.csv.xz",
+    ) %>%
+  mutate(time = as.Date(paste(year, month, '01', sep='-'), format='%Y-%b-%d' )
+  ) %>%
   filter(!is.na(age))%>%
   rename(epic_n_ed_opioid = ed_opioid,
          epic_n_ed_firearm = firearms_initial,
@@ -336,6 +343,7 @@ monthly_injury <- data[["opioid_od"]] %>%
     
         
   ) %>%
+  left_join(state_fips, by=c('state'='geography_name')) %>%
   dplyr::select(time, geography, age,epic_n_ed_firearm, epic_pct_ed_firearm,epic_n_ed_opioid,epic_n_ed_heat, epic_pct_ed_opioid,epic_pct_ed_heat, starts_with('suppressed'))
 
 
