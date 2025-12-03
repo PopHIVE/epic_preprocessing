@@ -314,7 +314,8 @@ state_fips <- all_fips %>%
 monthly_injury <-vroom::vroom(
   "raw/opioid_od.csv.xz",
     ) %>%
-  mutate(time = as.Date(paste(year, month, '01', sep='-'), format='%Y-%b-%d' )
+  mutate(time = as.Date(paste(year, month, '01', sep='-'), format='%Y-%b-%d' ),
+         state = if_else(state =='Total', 'United States', state)
   ) %>%
   filter(!is.na(age))%>%
   rename(epic_n_ed_opioid = ed_opioid,
