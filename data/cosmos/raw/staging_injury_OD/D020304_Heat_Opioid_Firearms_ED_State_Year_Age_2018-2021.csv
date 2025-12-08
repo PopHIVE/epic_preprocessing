@@ -1,0 +1,1553 @@
+﻿Session Title,Heat Opioid OD Firearm ED visits 2018-2021,,,,,
+Session ID,2782574,,,,,
+Data Model,Patients,,,,,
+Population Base,All Patients,,,,,
+Population Criteria Filters: These criteria are a summary and do not fully reflect the content of the exported session.,"Encounter Type: Emergency, Emergency to Inpatient",,,,,
+Session Date Range,1/1/2018 - 12/31/2021,,,,,
+Measure,Number of Patients,,,,,
+Export User,Stephanie Perniciaro,,,,,
+Date of Export,12/8/2025,,,,,
+,,,,,,
+,,,,,,
+,,Diagnosis (Encounter),OPIOID OD,Heat,firearms initial,"Total: Total includes all data, including data from columns not currently displayed."
+State of Residence,Age at Encounter in Years,Year,,,,
+Texas,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,204,55,377269
+,,Jan 1 – Dec 31 2019,12,199,58,438773
+,,Jan 1 – Dec 31 2020,17,80,85,312787
+,,Jan 1 – Dec 31 2021,10 or fewer,137,109,450069
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,64,272,284,157785
+,,Jan 1 – Dec 31 2019,79,359,413,198105
+,,Jan 1 – Dec 31 2020,139,263,791,205247
+,,Jan 1 – Dec 31 2021,218,337,841,256840
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,227,579,368,284675
+,,Jan 1 – Dec 31 2019,241,757,484,365213
+,,Jan 1 – Dec 31 2020,395,649,871,412168
+,,Jan 1 – Dec 31 2021,587,760,1038,507665
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,153,454,127,234118
+,,Jan 1 – Dec 31 2019,191,603,154,294745
+,,Jan 1 – Dec 31 2020,218,563,278,335926
+,,Jan 1 – Dec 31 2021,281,639,304,414242
+,65 Years or more,Jan 1 – Dec 31 2018,87,261,39,176132
+,,Jan 1 – Dec 31 2019,121,357,46,240239
+,,Jan 1 – Dec 31 2020,120,316,59,275063
+,,Jan 1 – Dec 31 2021,163,419,89,345873
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,2156
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,2345
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,3387
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,5266
+,"Total: Total includes all data under the Texas bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,530,1765,869,1227458
+,,Jan 1 – Dec 31 2019,638,2265,1146,1533365
+,,Jan 1 – Dec 31 2020,876,1858,2076,1538409
+,,Jan 1 – Dec 31 2021,1238,2279,2370,1972205
+Ohio,Less than 15 Years,Jan 1 – Dec 31 2018,13,117,39,300779
+,,Jan 1 – Dec 31 2019,15,72,38,308486
+,,Jan 1 – Dec 31 2020,17,30,60,220236
+,,Jan 1 – Dec 31 2021,11,70,81,279128
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,728,254,611,238300
+,,Jan 1 – Dec 31 2019,521,205,676,240630
+,,Jan 1 – Dec 31 2020,519,156,913,209258
+,,Jan 1 – Dec 31 2021,468,200,958,244189
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,4184,507,939,482120
+,,Jan 1 – Dec 31 2019,3877,409,914,490398
+,,Jan 1 – Dec 31 2020,3661,284,1339,445505
+,,Jan 1 – Dec 31 2021,3387,349,1334,504853
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,1353,412,276,413929
+,,Jan 1 – Dec 31 2019,1400,345,275,419904
+,,Jan 1 – Dec 31 2020,1420,268,339,381477
+,,Jan 1 – Dec 31 2021,1385,293,351,438093
+,65 Years or more,Jan 1 – Dec 31 2018,206,335,66,329531
+,,Jan 1 – Dec 31 2019,217,311,69,347392
+,,Jan 1 – Dec 31 2020,244,213,86,320835
+,,Jan 1 – Dec 31 2021,243,294,110,382068
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,2617
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,13,2542
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,2956
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,3156
+,"Total: Total includes all data under the Ohio bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,6383,1611,1903,1756142
+,,Jan 1 – Dec 31 2019,5947,1336,1968,1798036
+,,Jan 1 – Dec 31 2020,5783,943,2705,1571018
+,,Jan 1 – Dec 31 2021,5414,1193,2800,1840656
+Pennsylvania,Less than 15 Years,Jan 1 – Dec 31 2018,11,84,13,201297
+,,Jan 1 – Dec 31 2019,19,72,26,216787
+,,Jan 1 – Dec 31 2020,14,45,34,157493
+,,Jan 1 – Dec 31 2021,15,78,55,218756
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,322,146,462,143543
+,,Jan 1 – Dec 31 2019,288,164,530,154388
+,,Jan 1 – Dec 31 2020,324,105,762,137512
+,,Jan 1 – Dec 31 2021,271,167,771,171875
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,1625,267,543,283047
+,,Jan 1 – Dec 31 2019,1596,238,634,311239
+,,Jan 1 – Dec 31 2020,1801,180,968,298152
+,,Jan 1 – Dec 31 2021,1709,277,1139,367502
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,603,264,149,251697
+,,Jan 1 – Dec 31 2019,604,205,158,279143
+,,Jan 1 – Dec 31 2020,704,208,221,268286
+,,Jan 1 – Dec 31 2021,776,247,262,335466
+,65 Years or more,Jan 1 – Dec 31 2018,95,217,70,225928
+,,Jan 1 – Dec 31 2019,126,196,68,260499
+,,Jan 1 – Dec 31 2020,128,165,106,253809
+,,Jan 1 – Dec 31 2021,194,253,108,328940
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,1834
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,2209
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,2716
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,3312
+,"Total: Total includes all data under the Pennsylvania bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,2620,969,1232,1102329
+,,Jan 1 – Dec 31 2019,2604,867,1410,1218609
+,,Jan 1 – Dec 31 2020,2937,700,2084,1113114
+,,Jan 1 – Dec 31 2021,2927,1010,2328,1419845
+North Carolina,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,70,23,160386
+,,Jan 1 – Dec 31 2019,10 or fewer,86,40,190885
+,,Jan 1 – Dec 31 2020,10 or fewer,20,64,142694
+,,Jan 1 – Dec 31 2021,15,49,60,171030
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,229,210,351,125311
+,,Jan 1 – Dec 31 2019,225,246,400,143070
+,,Jan 1 – Dec 31 2020,272,158,732,132960
+,,Jan 1 – Dec 31 2021,318,168,624,148776
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,787,374,425,254485
+,,Jan 1 – Dec 31 2019,928,512,502,291978
+,,Jan 1 – Dec 31 2020,1293,364,864,289502
+,,Jan 1 – Dec 31 2021,1437,322,839,314714
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,333,324,117,220015
+,,Jan 1 – Dec 31 2019,369,432,159,247298
+,,Jan 1 – Dec 31 2020,564,290,236,244215
+,,Jan 1 – Dec 31 2021,626,322,221,267144
+,65 Years or more,Jan 1 – Dec 31 2018,98,239,38,185498
+,,Jan 1 – Dec 31 2019,118,290,46,211347
+,,Jan 1 – Dec 31 2020,139,206,56,208977
+,,Jan 1 – Dec 31 2021,154,251,53,236651
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,1450
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,1746
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,2137
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,2799
+,"Total: Total includes all data under the North Carolina bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,1429,1204,949,942422
+,,Jan 1 – Dec 31 2019,1617,1555,1141,1080742
+,,Jan 1 – Dec 31 2020,2244,1030,1929,1015410
+,,Jan 1 – Dec 31 2021,2519,1105,1786,1135662
+New York,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,45,10 or fewer,130889
+,,Jan 1 – Dec 31 2019,10 or fewer,33,10 or fewer,137544
+,,Jan 1 – Dec 31 2020,10 or fewer,14,10 or fewer,96631
+,,Jan 1 – Dec 31 2021,10 or fewer,33,14,137747
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,158,80,150,108056
+,,Jan 1 – Dec 31 2019,118,61,138,113999
+,,Jan 1 – Dec 31 2020,171,55,300,102735
+,,Jan 1 – Dec 31 2021,172,91,306,142536
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,697,117,206,213065
+,,Jan 1 – Dec 31 2019,720,97,258,228754
+,,Jan 1 – Dec 31 2020,757,94,482,229229
+,,Jan 1 – Dec 31 2021,1026,138,498,308402
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,310,131,45,189533
+,,Jan 1 – Dec 31 2019,359,113,54,203530
+,,Jan 1 – Dec 31 2020,485,96,76,207174
+,,Jan 1 – Dec 31 2021,627,160,121,278141
+,65 Years or more,Jan 1 – Dec 31 2018,67,156,12,162306
+,,Jan 1 – Dec 31 2019,79,127,14,182976
+,,Jan 1 – Dec 31 2020,92,122,29,189015
+,,Jan 1 – Dec 31 2021,122,177,29,256604
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,1619
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,1823
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,2361
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,3087
+,"Total: Total includes all data under the New York bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,1217,525,417,802203
+,,Jan 1 – Dec 31 2019,1265,428,468,865007
+,,Jan 1 – Dec 31 2020,1494,379,892,824171
+,,Jan 1 – Dec 31 2021,1932,594,968,1122112
+Virginia,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,73,10 or fewer,167655
+,,Jan 1 – Dec 31 2019,10 or fewer,66,15,171039
+,,Jan 1 – Dec 31 2020,13,31,15,107314
+,,Jan 1 – Dec 31 2021,15,47,15,140628
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,143,193,215,124700
+,,Jan 1 – Dec 31 2019,126,175,235,125908
+,,Jan 1 – Dec 31 2020,218,134,340,108596
+,,Jan 1 – Dec 31 2021,237,161,435,130382
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,570,370,288,264456
+,,Jan 1 – Dec 31 2019,622,395,319,273887
+,,Jan 1 – Dec 31 2020,920,286,370,253112
+,,Jan 1 – Dec 31 2021,1011,381,443,291223
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,396,324,96,230825
+,,Jan 1 – Dec 31 2019,378,358,99,236257
+,,Jan 1 – Dec 31 2020,556,283,92,220328
+,,Jan 1 – Dec 31 2021,727,324,147,252924
+,65 Years or more,Jan 1 – Dec 31 2018,109,217,32,197616
+,,Jan 1 – Dec 31 2019,109,260,31,208657
+,,Jan 1 – Dec 31 2020,126,189,31,193102
+,,Jan 1 – Dec 31 2021,178,280,32,230153
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,1434
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,1598
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,1788
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,2224
+,"Total: Total includes all data under the Virginia bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,1213,1165,633,981676
+,,Jan 1 – Dec 31 2019,1233,1242,689,1012148
+,,Jan 1 – Dec 31 2020,1806,914,843,880094
+,,Jan 1 – Dec 31 2021,2137,1184,1063,1042544
+Florida,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,64,31,188593
+,,Jan 1 – Dec 31 2019,10 or fewer,54,24,184879
+,,Jan 1 – Dec 31 2020,10 or fewer,25,28,122323
+,,Jan 1 – Dec 31 2021,12,60,55,202749
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,66,115,321,98048
+,,Jan 1 – Dec 31 2019,64,133,320,97857
+,,Jan 1 – Dec 31 2020,75,78,412,82763
+,,Jan 1 – Dec 31 2021,115,109,493,125573
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,426,142,377,193334
+,,Jan 1 – Dec 31 2019,452,214,402,196238
+,,Jan 1 – Dec 31 2020,509,168,544,177197
+,,Jan 1 – Dec 31 2021,934,194,639,269509
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,176,146,130,180524
+,,Jan 1 – Dec 31 2019,214,173,102,183245
+,,Jan 1 – Dec 31 2020,240,125,154,165322
+,,Jan 1 – Dec 31 2021,457,167,182,231820
+,65 Years or more,Jan 1 – Dec 31 2018,42,110,44,137444
+,,Jan 1 – Dec 31 2019,51,137,46,147155
+,,Jan 1 – Dec 31 2020,50,114,43,128268
+,,Jan 1 – Dec 31 2021,106,144,59,189995
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,1476
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,1627
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,1809
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,1885
+,"Total: Total includes all data under the Florida bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,712,574,892,796045
+,,Jan 1 – Dec 31 2019,777,707,894,807542
+,,Jan 1 – Dec 31 2020,865,507,1185,675091
+,,Jan 1 – Dec 31 2021,1608,673,1431,1017854
+Illinois,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,57,21,137344
+,,Jan 1 – Dec 31 2019,10 or fewer,51,22,161979
+,,Jan 1 – Dec 31 2020,10 or fewer,15,26,137361
+,,Jan 1 – Dec 31 2021,10 or fewer,60,57,188488
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,87,134,185,86628
+,,Jan 1 – Dec 31 2019,101,123,198,102826
+,,Jan 1 – Dec 31 2020,120,75,399,109277
+,,Jan 1 – Dec 31 2021,126,138,627,141055
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,444,207,210,155900
+,,Jan 1 – Dec 31 2019,572,233,278,186117
+,,Jan 1 – Dec 31 2020,767,195,463,218223
+,,Jan 1 – Dec 31 2021,826,221,833,270071
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,271,182,39,135661
+,,Jan 1 – Dec 31 2019,392,202,54,161792
+,,Jan 1 – Dec 31 2020,626,164,98,194690
+,,Jan 1 – Dec 31 2021,681,201,173,239864
+,65 Years or more,Jan 1 – Dec 31 2018,47,151,17,122637
+,,Jan 1 – Dec 31 2019,78,139,20,150748
+,,Jan 1 – Dec 31 2020,132,119,36,183035
+,,Jan 1 – Dec 31 2021,169,188,46,231823
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,938
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,1109
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,1572
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,2354
+,"Total: Total includes all data under the Illinois bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,844,722,468,636197
+,,Jan 1 – Dec 31 2019,1133,744,568,760967
+,,Jan 1 – Dec 31 2020,1624,567,1017,840625
+,,Jan 1 – Dec 31 2021,1793,797,1738,1069088
+Michigan,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,48,10 or fewer,138476
+,,Jan 1 – Dec 31 2019,10 or fewer,30,26,140270
+,,Jan 1 – Dec 31 2020,14,22,27,111346
+,,Jan 1 – Dec 31 2021,10 or fewer,30,38,133936
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,196,122,197,104174
+,,Jan 1 – Dec 31 2019,124,94,226,104869
+,,Jan 1 – Dec 31 2020,159,80,386,108965
+,,Jan 1 – Dec 31 2021,136,103,368,121899
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,1056,168,261,194799
+,,Jan 1 – Dec 31 2019,869,159,307,199881
+,,Jan 1 – Dec 31 2020,1257,182,515,228586
+,,Jan 1 – Dec 31 2021,1050,171,571,251443
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,528,152,95,165473
+,,Jan 1 – Dec 31 2019,421,121,93,170092
+,,Jan 1 – Dec 31 2020,581,148,165,204721
+,,Jan 1 – Dec 31 2021,555,160,171,227423
+,65 Years or more,Jan 1 – Dec 31 2018,175,124,21,137705
+,,Jan 1 – Dec 31 2019,155,101,26,148462
+,,Jan 1 – Dec 31 2020,187,136,42,189008
+,,Jan 1 – Dec 31 2021,243,156,37,215644
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,992
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,1072
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,1175
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,1598
+,"Total: Total includes all data under the Michigan bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,1933,609,576,737745
+,,Jan 1 – Dec 31 2019,1558,502,674,760769
+,,Jan 1 – Dec 31 2020,2178,564,1125,839953
+,,Jan 1 – Dec 31 2021,1961,618,1181,947421
+California,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,33,13,85598
+,,Jan 1 – Dec 31 2019,10 or fewer,36,23,96372
+,,Jan 1 – Dec 31 2020,10 or fewer,18,28,89555
+,,Jan 1 – Dec 31 2021,10 or fewer,38,31,130133
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,46,97,157,80218
+,,Jan 1 – Dec 31 2019,98,63,213,94839
+,,Jan 1 – Dec 31 2020,198,60,392,89640
+,,Jan 1 – Dec 31 2021,200,96,384,103331
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,195,146,232,163510
+,,Jan 1 – Dec 31 2019,331,171,345,202756
+,,Jan 1 – Dec 31 2020,552,125,579,202999
+,,Jan 1 – Dec 31 2021,804,139,691,224656
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,111,110,67,142976
+,,Jan 1 – Dec 31 2019,209,129,87,174120
+,,Jan 1 – Dec 31 2020,297,143,170,169568
+,,Jan 1 – Dec 31 2021,341,142,161,186025
+,65 Years or more,Jan 1 – Dec 31 2018,52,122,20,122233
+,,Jan 1 – Dec 31 2019,73,136,23,152285
+,,Jan 1 – Dec 31 2020,93,119,33,141252
+,,Jan 1 – Dec 31 2021,107,134,39,163562
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,1290
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,1450
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,1873
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,2558
+,"Total: Total includes all data under the California bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,405,505,486,593841
+,,Jan 1 – Dec 31 2019,700,528,692,719280
+,,Jan 1 – Dec 31 2020,1135,461,1195,692411
+,,Jan 1 – Dec 31 2021,1448,546,1304,807472
+Georgia,Less than 15 Years,Jan 1 – Dec 31 2018,16,82,43,216640
+,,Jan 1 – Dec 31 2019,10 or fewer,95,44,217745
+,,Jan 1 – Dec 31 2020,10 or fewer,20,52,143126
+,,Jan 1 – Dec 31 2021,10 or fewer,45,76,187231
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,68,140,386,97845
+,,Jan 1 – Dec 31 2019,64,173,490,100963
+,,Jan 1 – Dec 31 2020,119,72,612,84366
+,,Jan 1 – Dec 31 2021,116,85,669,96142
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,338,229,645,176967
+,,Jan 1 – Dec 31 2019,368,267,683,185626
+,,Jan 1 – Dec 31 2020,517,144,897,160467
+,,Jan 1 – Dec 31 2021,640,118,905,173966
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,175,173,174,137380
+,,Jan 1 – Dec 31 2019,215,235,210,144147
+,,Jan 1 – Dec 31 2020,243,105,218,126144
+,,Jan 1 – Dec 31 2021,326,93,237,136905
+,65 Years or more,Jan 1 – Dec 31 2018,104,96,34,90154
+,,Jan 1 – Dec 31 2019,97,132,50,97125
+,,Jan 1 – Dec 31 2020,97,78,42,87013
+,,Jan 1 – Dec 31 2021,99,63,54,98211
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,987
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,1374
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,1416
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,1746
+,"Total: Total includes all data under the Georgia bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,695,712,1274,716606
+,,Jan 1 – Dec 31 2019,740,897,1476,743407
+,,Jan 1 – Dec 31 2020,977,415,1816,599864
+,,Jan 1 – Dec 31 2021,1181,401,1926,691263
+Colorado,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,31,17,147043
+,,Jan 1 – Dec 31 2019,10 or fewer,19,11,149585
+,,Jan 1 – Dec 31 2020,10 or fewer,13,13,107554
+,,Jan 1 – Dec 31 2021,10 or fewer,25,21,134147
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,61,29,148,72311
+,,Jan 1 – Dec 31 2019,87,39,134,75157
+,,Jan 1 – Dec 31 2020,148,16,203,66980
+,,Jan 1 – Dec 31 2021,194,58,212,79941
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,261,58,180,127546
+,,Jan 1 – Dec 31 2019,290,65,161,132183
+,,Jan 1 – Dec 31 2020,435,49,224,126088
+,,Jan 1 – Dec 31 2021,629,82,259,144144
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,105,38,64,84876
+,,Jan 1 – Dec 31 2019,104,55,46,89332
+,,Jan 1 – Dec 31 2020,151,35,63,87773
+,,Jan 1 – Dec 31 2021,186,52,60,99189
+,65 Years or more,Jan 1 – Dec 31 2018,31,39,16,60048
+,,Jan 1 – Dec 31 2019,34,38,15,67403
+,,Jan 1 – Dec 31 2020,41,30,18,68537
+,,Jan 1 – Dec 31 2021,66,56,10 or fewer,83334
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,554
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,580
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,721
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,764
+,"Total: Total includes all data under the Colorado bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,462,194,427,490257
+,,Jan 1 – Dec 31 2019,516,215,366,512151
+,,Jan 1 – Dec 31 2020,770,143,521,455959
+,,Jan 1 – Dec 31 2021,1066,269,561,539401
+Indiana,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,28,13,76710
+,,Jan 1 – Dec 31 2019,10 or fewer,42,13,83946
+,,Jan 1 – Dec 31 2020,10 or fewer,17,18,60964
+,,Jan 1 – Dec 31 2021,10 or fewer,22,14,82859
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,163,81,192,59157
+,,Jan 1 – Dec 31 2019,145,76,202,62791
+,,Jan 1 – Dec 31 2020,225,48,236,57242
+,,Jan 1 – Dec 31 2021,203,78,223,71241
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,726,151,229,119602
+,,Jan 1 – Dec 31 2019,877,139,230,127924
+,,Jan 1 – Dec 31 2020,1381,73,321,123542
+,,Jan 1 – Dec 31 2021,1357,138,312,151190
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,208,128,67,98070
+,,Jan 1 – Dec 31 2019,274,114,76,107117
+,,Jan 1 – Dec 31 2020,417,94,74,104239
+,,Jan 1 – Dec 31 2021,497,125,98,131060
+,65 Years or more,Jan 1 – Dec 31 2018,40,98,17,77849
+,,Jan 1 – Dec 31 2019,61,80,17,88686
+,,Jan 1 – Dec 31 2020,59,67,23,88823
+,,Jan 1 – Dec 31 2021,92,67,37,114432
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,683
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,697
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,921
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,973
+,"Total: Total includes all data under the Indiana bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,1129,485,515,429874
+,,Jan 1 – Dec 31 2019,1339,447,534,468810
+,,Jan 1 – Dec 31 2020,2061,299,670,433740
+,,Jan 1 – Dec 31 2021,2131,424,685,549250
+Wisconsin,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,39,16,104329
+,,Jan 1 – Dec 31 2019,10 or fewer,24,15,105034
+,,Jan 1 – Dec 31 2020,10 or fewer,11,28,76564
+,,Jan 1 – Dec 31 2021,12,28,49,92332
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,55,71,74,63819
+,,Jan 1 – Dec 31 2019,61,52,71,64045
+,,Jan 1 – Dec 31 2020,70,40,119,54985
+,,Jan 1 – Dec 31 2021,84,63,148,63623
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,284,176,86,119688
+,,Jan 1 – Dec 31 2019,309,107,72,120191
+,,Jan 1 – Dec 31 2020,376,91,111,110076
+,,Jan 1 – Dec 31 2021,408,112,153,120642
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,110,147,46,107207
+,,Jan 1 – Dec 31 2019,124,81,34,109594
+,,Jan 1 – Dec 31 2020,132,91,36,100556
+,,Jan 1 – Dec 31 2021,142,110,53,109706
+,65 Years or more,Jan 1 – Dec 31 2018,26,107,10 or fewer,93947
+,,Jan 1 – Dec 31 2019,30,63,10 or fewer,98044
+,,Jan 1 – Dec 31 2020,36,73,10 or fewer,91219
+,,Jan 1 – Dec 31 2021,38,98,15,102111
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,690
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,721
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,844
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,769
+,"Total: Total includes all data under the Wisconsin bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,474,532,230,487259
+,,Jan 1 – Dec 31 2019,520,327,201,495303
+,,Jan 1 – Dec 31 2020,608,302,297,432305
+,,Jan 1 – Dec 31 2021,671,405,416,486934
+Connecticut,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,22,10 or fewer,91518
+,,Jan 1 – Dec 31 2019,10 or fewer,27,10 or fewer,91144
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,64888
+,,Jan 1 – Dec 31 2021,10 or fewer,28,11,80719
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,90,52,79,57240
+,,Jan 1 – Dec 31 2019,76,39,95,58190
+,,Jan 1 – Dec 31 2020,96,25,145,50775
+,,Jan 1 – Dec 31 2021,97,55,128,63370
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,528,85,112,108453
+,,Jan 1 – Dec 31 2019,487,70,150,111132
+,,Jan 1 – Dec 31 2020,592,63,205,105153
+,,Jan 1 – Dec 31 2021,599,102,229,128427
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,317,93,35,98151
+,,Jan 1 – Dec 31 2019,337,87,27,102696
+,,Jan 1 – Dec 31 2020,371,63,34,101043
+,,Jan 1 – Dec 31 2021,430,86,69,120968
+,65 Years or more,Jan 1 – Dec 31 2018,44,55,10 or fewer,82824
+,,Jan 1 – Dec 31 2019,41,55,12,89672
+,,Jan 1 – Dec 31 2020,48,54,14,92544
+,,Jan 1 – Dec 31 2021,94,84,14,111296
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,1115
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,1724
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,2686
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,3448
+,"Total: Total includes all data under the Connecticut bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,969,300,232,436995
+,,Jan 1 – Dec 31 2019,933,278,285,452235
+,,Jan 1 – Dec 31 2020,1100,215,407,415131
+,,Jan 1 – Dec 31 2021,1206,352,450,505805
+Minnesota,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,35,10 or fewer,75978
+,,Jan 1 – Dec 31 2019,10 or fewer,20,10 or fewer,77450
+,,Jan 1 – Dec 31 2020,10 or fewer,21,14,55244
+,,Jan 1 – Dec 31 2021,10 or fewer,44,15,69925
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,102,86,77,56153
+,,Jan 1 – Dec 31 2019,146,65,94,57028
+,,Jan 1 – Dec 31 2020,296,58,154,50537
+,,Jan 1 – Dec 31 2021,236,63,185,59612
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,283,121,131,111628
+,,Jan 1 – Dec 31 2019,386,95,140,113313
+,,Jan 1 – Dec 31 2020,562,97,213,104494
+,,Jan 1 – Dec 31 2021,674,154,257,120997
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,101,102,41,93350
+,,Jan 1 – Dec 31 2019,135,73,40,95420
+,,Jan 1 – Dec 31 2020,191,83,49,88602
+,,Jan 1 – Dec 31 2021,216,140,60,103454
+,65 Years or more,Jan 1 – Dec 31 2018,34,110,12,85322
+,,Jan 1 – Dec 31 2019,42,75,14,90332
+,,Jan 1 – Dec 31 2020,50,85,11,86928
+,,Jan 1 – Dec 31 2021,61,115,18,104012
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,631
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,612
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,759
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,627
+,"Total: Total includes all data under the Minnesota bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,521,448,267,421221
+,,Jan 1 – Dec 31 2019,701,324,296,432262
+,,Jan 1 – Dec 31 2020,1088,341,437,384981
+,,Jan 1 – Dec 31 2021,1186,511,530,456841
+Massachusetts,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,17,10 or fewer,65251
+,,Jan 1 – Dec 31 2019,10 or fewer,14,10 or fewer,72883
+,,Jan 1 – Dec 31 2020,10 or fewer,13,10 or fewer,48283
+,,Jan 1 – Dec 31 2021,10 or fewer,13,10 or fewer,61780
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,126,48,29,52517
+,,Jan 1 – Dec 31 2019,93,39,41,58867
+,,Jan 1 – Dec 31 2020,96,22,69,47399
+,,Jan 1 – Dec 31 2021,85,22,55,56501
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,797,93,64,105397
+,,Jan 1 – Dec 31 2019,831,48,77,118939
+,,Jan 1 – Dec 31 2020,762,50,80,104822
+,,Jan 1 – Dec 31 2021,671,69,99,117371
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,310,54,18,94970
+,,Jan 1 – Dec 31 2019,341,68,20,105102
+,,Jan 1 – Dec 31 2020,343,44,24,93004
+,,Jan 1 – Dec 31 2021,370,72,20,101966
+,65 Years or more,Jan 1 – Dec 31 2018,42,81,10 or fewer,84374
+,,Jan 1 – Dec 31 2019,60,63,10 or fewer,92686
+,,Jan 1 – Dec 31 2020,62,40,10 or fewer,82837
+,,Jan 1 – Dec 31 2021,56,81,10 or fewer,93228
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,625
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,840
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,981
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,1055
+,"Total: Total includes all data under the Massachusetts bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,1264,292,116,401472
+,,Jan 1 – Dec 31 2019,1316,231,142,447542
+,,Jan 1 – Dec 31 2020,1250,167,183,375921
+,,Jan 1 – Dec 31 2021,1171,254,182,430259
+Kentucky,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,41,10 or fewer,86916
+,,Jan 1 – Dec 31 2019,10 or fewer,36,10 or fewer,89198
+,,Jan 1 – Dec 31 2020,10 or fewer,13,27,60605
+,,Jan 1 – Dec 31 2021,11,22,26,87126
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,204,107,36,52614
+,,Jan 1 – Dec 31 2019,118,78,47,53533
+,,Jan 1 – Dec 31 2020,173,64,76,45408
+,,Jan 1 – Dec 31 2021,155,82,89,58972
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,1140,223,72,104179
+,,Jan 1 – Dec 31 2019,1077,172,61,105656
+,,Jan 1 – Dec 31 2020,1190,133,112,94541
+,,Jan 1 – Dec 31 2021,979,179,120,119242
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,321,188,35,95478
+,,Jan 1 – Dec 31 2019,334,186,27,97759
+,,Jan 1 – Dec 31 2020,442,117,28,87512
+,,Jan 1 – Dec 31 2021,464,147,44,109950
+,65 Years or more,Jan 1 – Dec 31 2018,55,114,13,85019
+,,Jan 1 – Dec 31 2019,55,96,15,89705
+,,Jan 1 – Dec 31 2020,69,64,19,80828
+,,Jan 1 – Dec 31 2021,77,105,19,100143
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,814
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,796
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,917
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,855
+,"Total: Total includes all data under the Kentucky bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,1696,671,164,422836
+,,Jan 1 – Dec 31 2019,1572,562,155,434511
+,,Jan 1 – Dec 31 2020,1854,388,259,368171
+,,Jan 1 – Dec 31 2021,1671,534,298,474252
+South Carolina,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,23,11,64522
+,,Jan 1 – Dec 31 2019,10 or fewer,24,10 or fewer,76849
+,,Jan 1 – Dec 31 2020,10 or fewer,11,19,56977
+,,Jan 1 – Dec 31 2021,10 or fewer,25,49,91807
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,86,81,174,45444
+,,Jan 1 – Dec 31 2019,92,83,162,52822
+,,Jan 1 – Dec 31 2020,164,63,277,49324
+,,Jan 1 – Dec 31 2021,214,81,357,66807
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,336,126,237,90628
+,,Jan 1 – Dec 31 2019,345,176,239,106331
+,,Jan 1 – Dec 31 2020,594,143,322,104643
+,,Jan 1 – Dec 31 2021,847,153,523,135217
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,151,124,80,82951
+,,Jan 1 – Dec 31 2019,148,163,82,95155
+,,Jan 1 – Dec 31 2020,251,125,99,93466
+,,Jan 1 – Dec 31 2021,339,156,138,118590
+,65 Years or more,Jan 1 – Dec 31 2018,44,84,24,68533
+,,Jan 1 – Dec 31 2019,46,110,33,80091
+,,Jan 1 – Dec 31 2020,63,80,36,79854
+,,Jan 1 – Dec 31 2021,77,98,44,102466
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,614
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,721
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,953
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,1131
+,"Total: Total includes all data under the South Carolina bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,609,435,524,350829
+,,Jan 1 – Dec 31 2019,627,551,524,409913
+,,Jan 1 – Dec 31 2020,1061,417,747,383222
+,,Jan 1 – Dec 31 2021,1461,510,1108,513505
+Louisiana,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,51,17,71705
+,,Jan 1 – Dec 31 2019,10 or fewer,48,27,78613
+,,Jan 1 – Dec 31 2020,10 or fewer,14,50,63444
+,,Jan 1 – Dec 31 2021,10 or fewer,32,54,90437
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,77,133,188,54907
+,,Jan 1 – Dec 31 2019,66,155,215,56540
+,,Jan 1 – Dec 31 2020,97,97,343,51998
+,,Jan 1 – Dec 31 2021,113,116,410,63647
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,548,293,200,113508
+,,Jan 1 – Dec 31 2019,528,337,210,114724
+,,Jan 1 – Dec 31 2020,868,209,329,109685
+,,Jan 1 – Dec 31 2021,1054,247,386,128188
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,171,200,43,91831
+,,Jan 1 – Dec 31 2019,195,288,77,91783
+,,Jan 1 – Dec 31 2020,296,182,83,87133
+,,Jan 1 – Dec 31 2021,482,198,92,103197
+,65 Years or more,Jan 1 – Dec 31 2018,53,110,16,69889
+,,Jan 1 – Dec 31 2019,54,122,14,72543
+,,Jan 1 – Dec 31 2020,62,86,17,70729
+,,Jan 1 – Dec 31 2021,88,148,34,82440
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,755
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,758
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,761
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,950
+,"Total: Total includes all data under the Louisiana bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,846,784,462,400436
+,,Jan 1 – Dec 31 2019,837,941,537,412719
+,,Jan 1 – Dec 31 2020,1311,577,814,381841
+,,Jan 1 – Dec 31 2021,1727,736,972,466605
+Maryland,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,23,10 or fewer,44576
+,,Jan 1 – Dec 31 2019,10 or fewer,41,10 or fewer,58842
+,,Jan 1 – Dec 31 2020,10 or fewer,14,10 or fewer,40179
+,,Jan 1 – Dec 31 2021,11,13,10 or fewer,56562
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,94,69,120,37518
+,,Jan 1 – Dec 31 2019,98,64,151,47882
+,,Jan 1 – Dec 31 2020,97,34,175,39437
+,,Jan 1 – Dec 31 2021,63,61,212,52819
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,484,77,210,78525
+,,Jan 1 – Dec 31 2019,556,140,264,102304
+,,Jan 1 – Dec 31 2020,577,106,246,91521
+,,Jan 1 – Dec 31 2021,498,124,314,120161
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,564,66,53,68378
+,,Jan 1 – Dec 31 2019,565,136,45,90928
+,,Jan 1 – Dec 31 2020,384,90,42,81646
+,,Jan 1 – Dec 31 2021,436,110,67,104626
+,65 Years or more,Jan 1 – Dec 31 2018,62,56,10 or fewer,51195
+,,Jan 1 – Dec 31 2019,80,86,10 or fewer,71862
+,,Jan 1 – Dec 31 2020,82,72,19,68166
+,,Jan 1 – Dec 31 2021,112,105,12,88419
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,540
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,730
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,807
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,929
+,"Total: Total includes all data under the Maryland bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,1198,290,398,279611
+,,Jan 1 – Dec 31 2019,1294,466,471,370853
+,,Jan 1 – Dec 31 2020,1137,312,487,320468
+,,Jan 1 – Dec 31 2021,1112,411,613,421924
+New Jersey,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,20,10 or fewer,46721
+,,Jan 1 – Dec 31 2019,10 or fewer,25,10 or fewer,57912
+,,Jan 1 – Dec 31 2020,10 or fewer,12,10 or fewer,41809
+,,Jan 1 – Dec 31 2021,10 or fewer,22,10 or fewer,57099
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,75,34,52,29922
+,,Jan 1 – Dec 31 2019,69,29,57,39811
+,,Jan 1 – Dec 31 2020,73,20,71,35442
+,,Jan 1 – Dec 31 2021,61,37,80,47258
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,466,52,95,58333
+,,Jan 1 – Dec 31 2019,478,50,88,78407
+,,Jan 1 – Dec 31 2020,398,40,109,78114
+,,Jan 1 – Dec 31 2021,432,89,133,98642
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,268,40,18,53826
+,,Jan 1 – Dec 31 2019,251,46,18,73616
+,,Jan 1 – Dec 31 2020,247,42,19,75122
+,,Jan 1 – Dec 31 2021,247,65,21,94940
+,65 Years or more,Jan 1 – Dec 31 2018,29,31,10 or fewer,47507
+,,Jan 1 – Dec 31 2019,47,41,10 or fewer,67798
+,,Jan 1 – Dec 31 2020,44,37,10 or fewer,68421
+,,Jan 1 – Dec 31 2021,57,48,10 or fewer,87760
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,256
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,511
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,840
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,959
+,"Total: Total includes all data under the New Jersey bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,828,176,174,235819
+,,Jan 1 – Dec 31 2019,846,189,171,316953
+,,Jan 1 – Dec 31 2020,751,150,212,298624
+,,Jan 1 – Dec 31 2021,792,261,252,385110
+Mississippi,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,40,34,73000
+,,Jan 1 – Dec 31 2019,10 or fewer,65,52,76268
+,,Jan 1 – Dec 31 2020,10 or fewer,21,55,50132
+,,Jan 1 – Dec 31 2021,10 or fewer,36,87,65464
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,15,165,234,48070
+,,Jan 1 – Dec 31 2019,23,146,299,48644
+,,Jan 1 – Dec 31 2020,46,90,419,41110
+,,Jan 1 – Dec 31 2021,61,111,503,48648
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,92,287,360,92356
+,,Jan 1 – Dec 31 2019,126,341,400,93268
+,,Jan 1 – Dec 31 2020,220,180,530,82867
+,,Jan 1 – Dec 31 2021,260,210,605,94292
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,54,264,95,80312
+,,Jan 1 – Dec 31 2019,98,251,138,81561
+,,Jan 1 – Dec 31 2020,111,135,140,72193
+,,Jan 1 – Dec 31 2021,125,162,135,82494
+,65 Years or more,Jan 1 – Dec 31 2018,43,110,19,62609
+,,Jan 1 – Dec 31 2019,42,146,34,66483
+,,Jan 1 – Dec 31 2020,36,70,41,59791
+,,Jan 1 – Dec 31 2021,46,96,44,68726
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,587
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,655
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,732
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,835
+,"Total: Total includes all data under the Mississippi bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,207,860,740,354801
+,,Jan 1 – Dec 31 2019,289,939,918,364720
+,,Jan 1 – Dec 31 2020,403,496,1182,305187
+,,Jan 1 – Dec 31 2021,486,610,1369,358610
+Oregon,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,20,10 or fewer,56356
+,,Jan 1 – Dec 31 2019,10 or fewer,12,10 or fewer,61016
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,40943
+,,Jan 1 – Dec 31 2021,10 or fewer,21,10 or fewer,46137
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,49,37,41,39972
+,,Jan 1 – Dec 31 2019,48,41,39,42383
+,,Jan 1 – Dec 31 2020,73,20,55,35075
+,,Jan 1 – Dec 31 2021,90,51,56,39792
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,231,61,68,79491
+,,Jan 1 – Dec 31 2019,241,56,54,84372
+,,Jan 1 – Dec 31 2020,240,39,88,74603
+,,Jan 1 – Dec 31 2021,323,142,130,84489
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,112,69,33,67951
+,,Jan 1 – Dec 31 2019,95,56,29,71962
+,,Jan 1 – Dec 31 2020,97,42,29,63520
+,,Jan 1 – Dec 31 2021,141,128,38,71466
+,65 Years or more,Jan 1 – Dec 31 2018,54,62,11,66440
+,,Jan 1 – Dec 31 2019,61,50,10 or fewer,73918
+,,Jan 1 – Dec 31 2020,56,50,15,65483
+,,Jan 1 – Dec 31 2021,80,158,10 or fewer,76106
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,502
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,476
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,582
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,580
+,"Total: Total includes all data under the Oregon bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,444,245,157,309386
+,,Jan 1 – Dec 31 2019,452,214,132,332645
+,,Jan 1 – Dec 31 2020,465,157,192,279011
+,,Jan 1 – Dec 31 2021,633,495,237,317226
+Tennessee,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,29,10 or fewer,49937
+,,Jan 1 – Dec 31 2019,10 or fewer,28,10 or fewer,52033
+,,Jan 1 – Dec 31 2020,10 or fewer,15,14,37783
+,,Jan 1 – Dec 31 2021,10 or fewer,15,13,54338
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,31,67,66,33452
+,,Jan 1 – Dec 31 2019,25,75,51,34417
+,,Jan 1 – Dec 31 2020,51,46,91,31632
+,,Jan 1 – Dec 31 2021,70,49,105,39287
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,112,130,77,65168
+,,Jan 1 – Dec 31 2019,169,116,73,66729
+,,Jan 1 – Dec 31 2020,221,79,146,64408
+,,Jan 1 – Dec 31 2021,327,88,186,76789
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,55,103,36,56038
+,,Jan 1 – Dec 31 2019,55,107,41,58693
+,,Jan 1 – Dec 31 2020,75,69,45,56771
+,,Jan 1 – Dec 31 2021,127,91,64,68790
+,65 Years or more,Jan 1 – Dec 31 2018,21,50,10 or fewer,46233
+,,Jan 1 – Dec 31 2019,19,54,11,50397
+,,Jan 1 – Dec 31 2020,34,40,19,48924
+,,Jan 1 – Dec 31 2021,36,48,14,61464
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,463
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,496
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,556
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,737
+,"Total: Total includes all data under the Tennessee bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,220,374,195,250126
+,,Jan 1 – Dec 31 2019,264,378,178,261552
+,,Jan 1 – Dec 31 2020,381,245,312,239112
+,,Jan 1 – Dec 31 2021,560,290,381,300049
+Iowa,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,29,10 or fewer,48080
+,,Jan 1 – Dec 31 2019,10 or fewer,29,10 or fewer,49666
+,,Jan 1 – Dec 31 2020,10 or fewer,15,10 or fewer,35620
+,,Jan 1 – Dec 31 2021,10 or fewer,20,17,45366
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,24,75,52,31720
+,,Jan 1 – Dec 31 2019,33,69,63,32460
+,,Jan 1 – Dec 31 2020,45,53,78,28688
+,,Jan 1 – Dec 31 2021,55,82,80,32833
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,110,114,55,59852
+,,Jan 1 – Dec 31 2019,121,101,74,61969
+,,Jan 1 – Dec 31 2020,139,101,99,56940
+,,Jan 1 – Dec 31 2021,147,125,112,63048
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,61,99,25,51511
+,,Jan 1 – Dec 31 2019,70,89,24,53138
+,,Jan 1 – Dec 31 2020,75,106,16,50117
+,,Jan 1 – Dec 31 2021,59,96,29,54567
+,65 Years or more,Jan 1 – Dec 31 2018,23,69,10 or fewer,47881
+,,Jan 1 – Dec 31 2019,24,42,10 or fewer,50823
+,,Jan 1 – Dec 31 2020,19,68,17,47221
+,,Jan 1 – Dec 31 2021,25,69,10 or fewer,53546
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,431
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,471
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,558
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,474
+,"Total: Total includes all data under the Iowa bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,218,382,144,238429
+,,Jan 1 – Dec 31 2019,250,326,172,247465
+,,Jan 1 – Dec 31 2020,277,343,213,218286
+,,Jan 1 – Dec 31 2021,286,390,244,248836
+Arkansas,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,44,10 or fewer,44891
+,,Jan 1 – Dec 31 2019,10 or fewer,48,10 or fewer,62996
+,,Jan 1 – Dec 31 2020,10 or fewer,17,15,50434
+,,Jan 1 – Dec 31 2021,10 or fewer,31,16,63392
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,39,107,75,26152
+,,Jan 1 – Dec 31 2019,26,118,95,32271
+,,Jan 1 – Dec 31 2020,39,67,119,29823
+,,Jan 1 – Dec 31 2021,45,66,158,32178
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,140,188,90,50605
+,,Jan 1 – Dec 31 2019,97,231,84,59353
+,,Jan 1 – Dec 31 2020,154,157,168,56598
+,,Jan 1 – Dec 31 2021,244,173,182,59472
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,51,118,50,41849
+,,Jan 1 – Dec 31 2019,49,178,37,49006
+,,Jan 1 – Dec 31 2020,60,97,54,46563
+,,Jan 1 – Dec 31 2021,76,155,62,49117
+,65 Years or more,Jan 1 – Dec 31 2018,17,44,10 or fewer,34689
+,,Jan 1 – Dec 31 2019,18,86,13,41003
+,,Jan 1 – Dec 31 2020,16,45,10 or fewer,38662
+,,Jan 1 – Dec 31 2021,24,66,19,41965
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,412
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,413
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,506
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,590
+,"Total: Total includes all data under the Arkansas bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,243,496,228,197784
+,,Jan 1 – Dec 31 2019,191,656,233,243988
+,,Jan 1 – Dec 31 2020,273,380,364,221611
+,,Jan 1 – Dec 31 2021,386,488,428,245663
+Arizona,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,16,10 or fewer,38970
+,,Jan 1 – Dec 31 2019,10 or fewer,16,10 or fewer,39126
+,,Jan 1 – Dec 31 2020,10 or fewer,12,10 or fewer,24458
+,,Jan 1 – Dec 31 2021,10 or fewer,16,10 or fewer,26882
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,36,42,27,25693
+,,Jan 1 – Dec 31 2019,38,39,21,25213
+,,Jan 1 – Dec 31 2020,57,33,55,20147
+,,Jan 1 – Dec 31 2021,64,30,60,22970
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,76,111,53,52987
+,,Jan 1 – Dec 31 2019,88,116,58,52697
+,,Jan 1 – Dec 31 2020,124,103,88,44432
+,,Jan 1 – Dec 31 2021,174,115,101,49988
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,35,84,24,48504
+,,Jan 1 – Dec 31 2019,50,114,22,48927
+,,Jan 1 – Dec 31 2020,38,105,33,42709
+,,Jan 1 – Dec 31 2021,59,108,35,48247
+,65 Years or more,Jan 1 – Dec 31 2018,23,62,13,50698
+,,Jan 1 – Dec 31 2019,28,50,13,52828
+,,Jan 1 – Dec 31 2020,16,79,12,45750
+,,Jan 1 – Dec 31 2021,30,82,11,53904
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,562
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,478
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,558
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,679
+,"Total: Total includes all data under the Arizona bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,173,313,120,216677
+,,Jan 1 – Dec 31 2019,205,335,114,218601
+,,Jan 1 – Dec 31 2020,236,328,187,177582
+,,Jan 1 – Dec 31 2021,329,350,210,202107
+Washington,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,32945
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,33496
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,21222
+,,Jan 1 – Dec 31 2021,10 or fewer,15,10 or fewer,25227
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,31,28,13,25986
+,,Jan 1 – Dec 31 2019,40,11,16,25771
+,,Jan 1 – Dec 31 2020,74,10 or fewer,23,21359
+,,Jan 1 – Dec 31 2021,66,35,28,24471
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,151,39,23,55494
+,,Jan 1 – Dec 31 2019,145,22,16,56096
+,,Jan 1 – Dec 31 2020,178,19,22,50076
+,,Jan 1 – Dec 31 2021,195,84,43,56167
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,66,29,10 or fewer,46036
+,,Jan 1 – Dec 31 2019,68,16,10 or fewer,46547
+,,Jan 1 – Dec 31 2020,78,17,10 or fewer,41768
+,,Jan 1 – Dec 31 2021,80,60,10 or fewer,46204
+,65 Years or more,Jan 1 – Dec 31 2018,26,21,10 or fewer,44024
+,,Jan 1 – Dec 31 2019,30,20,10 or fewer,46308
+,,Jan 1 – Dec 31 2020,37,10 or fewer,10 or fewer,41341
+,,Jan 1 – Dec 31 2021,44,124,10 or fewer,46657
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,380
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,395
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,421
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,401
+,"Total: Total includes all data under the Washington bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,276,121,46,204199
+,,Jan 1 – Dec 31 2019,283,79,43,207965
+,,Jan 1 – Dec 31 2020,366,55,54,175649
+,,Jan 1 – Dec 31 2021,384,315,79,198509
+Oklahoma,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,23,10 or fewer,35867
+,,Jan 1 – Dec 31 2019,10 or fewer,37,12,41277
+,,Jan 1 – Dec 31 2020,10 or fewer,16,12,30212
+,,Jan 1 – Dec 31 2021,10 or fewer,28,10 or fewer,37683
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,80,43,21087
+,,Jan 1 – Dec 31 2019,11,98,51,24437
+,,Jan 1 – Dec 31 2020,16,62,69,22566
+,,Jan 1 – Dec 31 2021,24,65,75,25677
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,72,179,71,41836
+,,Jan 1 – Dec 31 2019,58,213,54,48800
+,,Jan 1 – Dec 31 2020,73,144,93,46706
+,,Jan 1 – Dec 31 2021,116,196,98,54390
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,32,114,18,35170
+,,Jan 1 – Dec 31 2019,47,152,32,42388
+,,Jan 1 – Dec 31 2020,39,130,23,40487
+,,Jan 1 – Dec 31 2021,48,147,30,46410
+,65 Years or more,Jan 1 – Dec 31 2018,24,71,10 or fewer,33084
+,,Jan 1 – Dec 31 2019,24,84,10 or fewer,40876
+,,Jan 1 – Dec 31 2020,12,61,12,39250
+,,Jan 1 – Dec 31 2021,22,103,10 or fewer,44485
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,282
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,432
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,574
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,616
+,"Total: Total includes all data under the Oklahoma bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,137,464,144,166687
+,,Jan 1 – Dec 31 2019,142,580,155,197324
+,,Jan 1 – Dec 31 2020,138,407,210,179102
+,,Jan 1 – Dec 31 2021,209,534,217,208342
+Nevada,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,18,10 or fewer,32578
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,33596
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,21905
+,,Jan 1 – Dec 31 2021,10 or fewer,13,10 or fewer,25889
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,12,15,76,20150
+,,Jan 1 – Dec 31 2019,13,19,80,20319
+,,Jan 1 – Dec 31 2020,21,11,78,17444
+,,Jan 1 – Dec 31 2021,27,11,106,18781
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,64,31,81,40629
+,,Jan 1 – Dec 31 2019,61,42,83,42190
+,,Jan 1 – Dec 31 2020,61,29,125,39328
+,,Jan 1 – Dec 31 2021,77,55,149,41343
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,37,38,29,33958
+,,Jan 1 – Dec 31 2019,28,28,40,34809
+,,Jan 1 – Dec 31 2020,27,29,43,32304
+,,Jan 1 – Dec 31 2021,33,54,37,33466
+,65 Years or more,Jan 1 – Dec 31 2018,16,13,10 or fewer,21847
+,,Jan 1 – Dec 31 2019,16,23,10 or fewer,23252
+,,Jan 1 – Dec 31 2020,19,30,10 or fewer,21145
+,,Jan 1 – Dec 31 2021,18,27,10 or fewer,23847
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,406
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,420
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,422
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,493
+,"Total: Total includes all data under the Nevada bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,127,114,199,149074
+,,Jan 1 – Dec 31 2019,118,121,215,154022
+,,Jan 1 – Dec 31 2020,129,102,260,132087
+,,Jan 1 – Dec 31 2021,161,160,303,143348
+West Virginia,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,22423
+,,Jan 1 – Dec 31 2019,10 or fewer,15,10 or fewer,24371
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,18659
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,22651
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,14,29,26,18829
+,,Jan 1 – Dec 31 2019,19,25,16,20241
+,,Jan 1 – Dec 31 2020,23,15,23,18454
+,,Jan 1 – Dec 31 2021,10 or fewer,23,13,21429
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,78,28,36,36761
+,,Jan 1 – Dec 31 2019,74,34,42,39443
+,,Jan 1 – Dec 31 2020,90,38,44,38588
+,,Jan 1 – Dec 31 2021,103,44,47,43606
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,25,32,18,34579
+,,Jan 1 – Dec 31 2019,39,54,24,37767
+,,Jan 1 – Dec 31 2020,31,29,25,37593
+,,Jan 1 – Dec 31 2021,34,37,29,43368
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,16,10 or fewer,27799
+,,Jan 1 – Dec 31 2019,10 or fewer,24,10 or fewer,32121
+,,Jan 1 – Dec 31 2020,15,26,10 or fewer,33192
+,,Jan 1 – Dec 31 2021,13,29,13,39757
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,220
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,236
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,276
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,358
+,"Total: Total includes all data under the West Virginia bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,127,114,85,139823
+,,Jan 1 – Dec 31 2019,144,151,93,153286
+,,Jan 1 – Dec 31 2020,154,110,103,146033
+,,Jan 1 – Dec 31 2021,158,137,109,170255
+Missouri,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,12236
+,,Jan 1 – Dec 31 2019,10 or fewer,13,10 or fewer,12319
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,8897
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,12719
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,32,35,16964
+,,Jan 1 – Dec 31 2019,15,30,46,17083
+,,Jan 1 – Dec 31 2020,24,11,61,14957
+,,Jan 1 – Dec 31 2021,44,30,47,18572
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,36,66,41,36954
+,,Jan 1 – Dec 31 2019,32,54,58,37557
+,,Jan 1 – Dec 31 2020,43,37,78,33609
+,,Jan 1 – Dec 31 2021,103,59,79,40366
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,28,58,10 or fewer,33279
+,,Jan 1 – Dec 31 2019,16,52,24,33753
+,,Jan 1 – Dec 31 2020,20,31,20,30375
+,,Jan 1 – Dec 31 2021,45,47,12,36031
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,37,10 or fewer,31408
+,,Jan 1 – Dec 31 2019,14,35,10 or fewer,33069
+,,Jan 1 – Dec 31 2020,12,27,10 or fewer,30909
+,,Jan 1 – Dec 31 2021,22,36,10 or fewer,36940
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,241
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,271
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,318
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,363
+,"Total: Total includes all data under the Missouri bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,84,198,91,130559
+,,Jan 1 – Dec 31 2019,76,184,141,133532
+,,Jan 1 – Dec 31 2020,100,109,170,118638
+,,Jan 1 – Dec 31 2021,214,172,150,144454
+Hawaii,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,29796
+,,Jan 1 – Dec 31 2019,10 or fewer,12,10 or fewer,31332
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,18906
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,20221
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,12,10 or fewer,17768
+,,Jan 1 – Dec 31 2019,11,15,10 or fewer,17350
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,12782
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,11,13315
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,35,27,14,37968
+,,Jan 1 – Dec 31 2019,35,23,14,37594
+,,Jan 1 – Dec 31 2020,34,10 or fewer,17,30745
+,,Jan 1 – Dec 31 2021,35,10 or fewer,27,31456
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,35,18,10 or fewer,35397
+,,Jan 1 – Dec 31 2019,37,26,10 or fewer,35568
+,,Jan 1 – Dec 31 2020,25,13,10 or fewer,30209
+,,Jan 1 – Dec 31 2021,26,12,10 or fewer,30757
+,65 Years or more,Jan 1 – Dec 31 2018,24,17,10 or fewer,32688
+,,Jan 1 – Dec 31 2019,21,21,10 or fewer,34266
+,,Jan 1 – Dec 31 2020,17,11,10 or fewer,30198
+,,Jan 1 – Dec 31 2021,23,10 or fewer,10 or fewer,31935
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,328
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,262
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,332
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,314
+,"Total: Total includes all data under the Hawaii bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,104,75,29,153230
+,,Jan 1 – Dec 31 2019,105,96,32,155646
+,,Jan 1 – Dec 31 2020,82,42,34,122683
+,,Jan 1 – Dec 31 2021,90,35,49,127482
+Rhode Island,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,31712
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,31830
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,21359
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,25528
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,39,14,26,19488
+,,Jan 1 – Dec 31 2019,49,17,13,19178
+,,Jan 1 – Dec 31 2020,38,10 or fewer,38,15022
+,,Jan 1 – Dec 31 2021,42,14,34,16692
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,208,24,42,35465
+,,Jan 1 – Dec 31 2019,240,23,29,35730
+,,Jan 1 – Dec 31 2020,206,17,47,29740
+,,Jan 1 – Dec 31 2021,206,26,47,32083
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,79,26,10 or fewer,33159
+,,Jan 1 – Dec 31 2019,96,21,10 or fewer,33189
+,,Jan 1 – Dec 31 2020,75,12,10 or fewer,28779
+,,Jan 1 – Dec 31 2021,83,18,14,31103
+,65 Years or more,Jan 1 – Dec 31 2018,17,22,10 or fewer,29685
+,,Jan 1 – Dec 31 2019,10 or fewer,38,10 or fewer,30470
+,,Jan 1 – Dec 31 2020,10 or fewer,18,10 or fewer,27989
+,,Jan 1 – Dec 31 2021,16,26,10 or fewer,31355
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,307
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,313
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,384
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,423
+,"Total: Total includes all data under the Rhode Island bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,342,92,81,149120
+,,Jan 1 – Dec 31 2019,391,106,56,150047
+,,Jan 1 – Dec 31 2020,328,59,99,122757
+,,Jan 1 – Dec 31 2021,344,91,98,136619
+Idaho,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,13,10 or fewer,24650
+,,Jan 1 – Dec 31 2019,10 or fewer,11,10 or fewer,25499
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,19338
+,,Jan 1 – Dec 31 2021,10 or fewer,19,10 or fewer,22471
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,21,22,10 or fewer,16043
+,,Jan 1 – Dec 31 2019,10 or fewer,25,10 or fewer,17349
+,,Jan 1 – Dec 31 2020,21,17,10 or fewer,17213
+,,Jan 1 – Dec 31 2021,34,32,10 or fewer,18863
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,41,34,10 or fewer,29418
+,,Jan 1 – Dec 31 2019,42,40,10 or fewer,32213
+,,Jan 1 – Dec 31 2020,53,24,10 or fewer,32488
+,,Jan 1 – Dec 31 2021,106,37,10 or fewer,36397
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,29,25,10 or fewer,25133
+,,Jan 1 – Dec 31 2019,34,23,10 or fewer,27099
+,,Jan 1 – Dec 31 2020,27,24,10 or fewer,27674
+,,Jan 1 – Dec 31 2021,36,34,10 or fewer,31206
+,65 Years or more,Jan 1 – Dec 31 2018,19,25,10 or fewer,25575
+,,Jan 1 – Dec 31 2019,18,27,10 or fewer,28648
+,,Jan 1 – Dec 31 2020,25,15,10 or fewer,28408
+,,Jan 1 – Dec 31 2021,20,41,10 or fewer,32053
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,156
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,135
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,179
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,175
+,"Total: Total includes all data under the Idaho bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,115,117,17,120429
+,,Jan 1 – Dec 31 2019,107,124,14,130403
+,,Jan 1 – Dec 31 2020,126,84,29,124826
+,,Jan 1 – Dec 31 2021,192,162,17,140611
+Nebraska,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,19221
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,22302
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,16098
+,,Jan 1 – Dec 31 2021,10 or fewer,11,10 or fewer,19782
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,37,49,17192
+,,Jan 1 – Dec 31 2019,10 or fewer,34,55,19376
+,,Jan 1 – Dec 31 2020,15,19,66,17778
+,,Jan 1 – Dec 31 2021,33,38,57,20403
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,19,61,45,32299
+,,Jan 1 – Dec 31 2019,28,82,48,35773
+,,Jan 1 – Dec 31 2020,49,50,78,33333
+,,Jan 1 – Dec 31 2021,76,73,72,37800
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,21,29,11,25062
+,,Jan 1 – Dec 31 2019,17,44,15,28612
+,,Jan 1 – Dec 31 2020,22,43,16,27435
+,,Jan 1 – Dec 31 2021,25,43,23,30507
+,65 Years or more,Jan 1 – Dec 31 2018,14,33,10 or fewer,21602
+,,Jan 1 – Dec 31 2019,17,23,10 or fewer,26250
+,,Jan 1 – Dec 31 2020,10 or fewer,29,11,25750
+,,Jan 1 – Dec 31 2021,10 or fewer,35,10 or fewer,29432
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,137
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,291
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,345
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,300
+,"Total: Total includes all data under the Nebraska bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,60,169,108,115049
+,,Jan 1 – Dec 31 2019,70,183,126,132020
+,,Jan 1 – Dec 31 2020,93,141,172,120217
+,,Jan 1 – Dec 31 2021,143,198,162,137624
+Maine,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,15540
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,17861
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,12276
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,14686
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,16,26,10 or fewer,13320
+,,Jan 1 – Dec 31 2019,11,13,10 or fewer,14991
+,,Jan 1 – Dec 31 2020,18,12,10 or fewer,12326
+,,Jan 1 – Dec 31 2021,25,20,11,14275
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,120,22,10 or fewer,29116
+,,Jan 1 – Dec 31 2019,128,22,10 or fewer,32522
+,,Jan 1 – Dec 31 2020,125,26,10 or fewer,28638
+,,Jan 1 – Dec 31 2021,182,40,14,32399
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,39,28,10 or fewer,30286
+,,Jan 1 – Dec 31 2019,35,26,10 or fewer,33748
+,,Jan 1 – Dec 31 2020,53,23,10 or fewer,29147
+,,Jan 1 – Dec 31 2021,76,23,10 or fewer,33295
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,32,10 or fewer,31147
+,,Jan 1 – Dec 31 2019,10 or fewer,31,10 or fewer,35987
+,,Jan 1 – Dec 31 2020,14,26,10 or fewer,31137
+,,Jan 1 – Dec 31 2021,18,28,10 or fewer,36193
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,150
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,211
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,289
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,296
+,"Total: Total includes all data under the Maine bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,181,118,22,119049
+,,Jan 1 – Dec 31 2019,180,93,22,134726
+,,Jan 1 – Dec 31 2020,210,92,18,113343
+,,Jan 1 – Dec 31 2021,298,117,37,130579
+Kansas,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,14934
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,17074
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,11598
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,13453
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,24,71,13011
+,,Jan 1 – Dec 31 2019,10 or fewer,33,87,15079
+,,Jan 1 – Dec 31 2020,19,17,83,13192
+,,Jan 1 – Dec 31 2021,29,30,64,13907
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,32,62,71,26701
+,,Jan 1 – Dec 31 2019,37,57,89,30817
+,,Jan 1 – Dec 31 2020,43,44,74,28090
+,,Jan 1 – Dec 31 2021,78,42,105,28903
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,31,64,23,24440
+,,Jan 1 – Dec 31 2019,30,55,37,28076
+,,Jan 1 – Dec 31 2020,26,36,27,25287
+,,Jan 1 – Dec 31 2021,31,38,39,26593
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,26,10 or fewer,23626
+,,Jan 1 – Dec 31 2019,13,27,10 or fewer,27904
+,,Jan 1 – Dec 31 2020,10 or fewer,24,10 or fewer,25736
+,,Jan 1 – Dec 31 2021,10 or fewer,33,10 or fewer,28735
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,208
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,219
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,290
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,293
+,"Total: Total includes all data under the Kansas bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,78,185,170,102543
+,,Jan 1 – Dec 31 2019,88,181,223,118647
+,,Jan 1 – Dec 31 2020,98,122,199,103796
+,,Jan 1 – Dec 31 2021,149,145,211,111393
+Delaware,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,33262
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,33884
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,23779
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,29479
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,17,20,17,11792
+,,Jan 1 – Dec 31 2019,24,16,29,12193
+,,Jan 1 – Dec 31 2020,19,11,36,10071
+,,Jan 1 – Dec 31 2021,14,14,34,12848
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,137,25,20,18305
+,,Jan 1 – Dec 31 2019,119,31,26,18866
+,,Jan 1 – Dec 31 2020,138,26,37,16846
+,,Jan 1 – Dec 31 2021,148,22,38,21259
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,45,25,10 or fewer,16200
+,,Jan 1 – Dec 31 2019,50,22,10 or fewer,16797
+,,Jan 1 – Dec 31 2020,62,14,10 or fewer,14882
+,,Jan 1 – Dec 31 2021,75,26,10 or fewer,18781
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,13724
+,,Jan 1 – Dec 31 2019,10 or fewer,15,10 or fewer,14919
+,,Jan 1 – Dec 31 2020,10 or fewer,13,10 or fewer,13302
+,,Jan 1 – Dec 31 2021,15,29,10 or fewer,17390
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,132
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,173
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,187
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,235
+,"Total: Total includes all data under the Delaware bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,209,86,45,92981
+,,Jan 1 – Dec 31 2019,197,92,62,96402
+,,Jan 1 – Dec 31 2020,229,69,80,78750
+,,Jan 1 – Dec 31 2021,253,98,90,99598
+North Dakota,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,12,10 or fewer,13471
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,13928
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,10782
+,,Jan 1 – Dec 31 2021,10 or fewer,15,10 or fewer,13719
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,17,18,10 or fewer,10894
+,,Jan 1 – Dec 31 2019,13,15,10 or fewer,10805
+,,Jan 1 – Dec 31 2020,23,19,12,10086
+,,Jan 1 – Dec 31 2021,32,25,16,11523
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,25,29,12,21316
+,,Jan 1 – Dec 31 2019,35,36,14,21847
+,,Jan 1 – Dec 31 2020,69,36,20,20962
+,,Jan 1 – Dec 31 2021,108,34,17,23182
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,12,25,10 or fewer,16261
+,,Jan 1 – Dec 31 2019,15,17,10 or fewer,16452
+,,Jan 1 – Dec 31 2020,16,12,10 or fewer,15986
+,,Jan 1 – Dec 31 2021,25,32,10 or fewer,17742
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,24,10 or fewer,15794
+,,Jan 1 – Dec 31 2019,10 or fewer,13,10 or fewer,16801
+,,Jan 1 – Dec 31 2020,10 or fewer,15,10 or fewer,16523
+,,Jan 1 – Dec 31 2021,10 or fewer,17,10 or fewer,17829
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,130
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,150
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,143
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,125
+,"Total: Total includes all data under the North Dakota bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,60,108,26,77522
+,,Jan 1 – Dec 31 2019,68,88,31,79630
+,,Jan 1 – Dec 31 2020,111,89,45,74144
+,,Jan 1 – Dec 31 2021,169,122,43,83728
+New Mexico,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,9701
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,9507
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,5162
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,6046
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,14,16,10 or fewer,9350
+,,Jan 1 – Dec 31 2019,23,17,10 or fewer,9142
+,,Jan 1 – Dec 31 2020,20,13,10 or fewer,6455
+,,Jan 1 – Dec 31 2021,25,10 or fewer,10 or fewer,7543
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,48,30,10 or fewer,21081
+,,Jan 1 – Dec 31 2019,75,24,10 or fewer,21303
+,,Jan 1 – Dec 31 2020,87,20,14,16273
+,,Jan 1 – Dec 31 2021,73,29,16,18880
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,37,18,10 or fewer,15961
+,,Jan 1 – Dec 31 2019,32,20,10 or fewer,16147
+,,Jan 1 – Dec 31 2020,42,21,10 or fewer,13172
+,,Jan 1 – Dec 31 2021,26,21,10 or fewer,14958
+,65 Years or more,Jan 1 – Dec 31 2018,11,16,10 or fewer,14306
+,,Jan 1 – Dec 31 2019,16,14,10 or fewer,15193
+,,Jan 1 – Dec 31 2020,20,17,10 or fewer,12971
+,,Jan 1 – Dec 31 2021,11,12,10 or fewer,15057
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,89
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,94
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,104
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,112
+,"Total: Total includes all data under the New Mexico bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,109,87,15,70168
+,,Jan 1 – Dec 31 2019,142,81,17,71090
+,,Jan 1 – Dec 31 2020,170,71,28,53945
+,,Jan 1 – Dec 31 2021,134,74,29,62379
+Alabama,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,4314
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,4120
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,3944
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,14587
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,17,10 or fewer,3894
+,,Jan 1 – Dec 31 2019,10 or fewer,15,19,3760
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,13,4762
+,,Jan 1 – Dec 31 2021,10 or fewer,32,45,15003
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,12,29,17,8416
+,,Jan 1 – Dec 31 2019,10 or fewer,47,19,8362
+,,Jan 1 – Dec 31 2020,16,11,15,11138
+,,Jan 1 – Dec 31 2021,53,60,65,32933
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,10 or fewer,21,10 or fewer,7245
+,,Jan 1 – Dec 31 2019,10 or fewer,25,12,7134
+,,Jan 1 – Dec 31 2020,11,16,12,10412
+,,Jan 1 – Dec 31 2021,33,42,19,30890
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,11,10 or fewer,4467
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,4616
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,8530
+,,Jan 1 – Dec 31 2021,10 or fewer,30,10 or fewer,27803
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,57
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,66
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,69
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,289
+,"Total: Total includes all data under the Alabama bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,22,79,35,28270
+,,Jan 1 – Dec 31 2019,15,104,52,27976
+,,Jan 1 – Dec 31 2020,36,38,45,38774
+,,Jan 1 – Dec 31 2021,104,170,139,120991
+South Dakota,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,10611
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,10227
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,7667
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,9852
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,13,10 or fewer,6388
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,11,6377
+,,Jan 1 – Dec 31 2020,10 or fewer,14,10 or fewer,5973
+,,Jan 1 – Dec 31 2021,10 or fewer,19,12,6878
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,10 or fewer,13,10 or fewer,11478
+,,Jan 1 – Dec 31 2019,10 or fewer,16,10 or fewer,11642
+,,Jan 1 – Dec 31 2020,10 or fewer,19,17,11218
+,,Jan 1 – Dec 31 2021,10 or fewer,28,17,13089
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,10287
+,,Jan 1 – Dec 31 2019,10 or fewer,14,10 or fewer,10314
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,9943
+,,Jan 1 – Dec 31 2021,10 or fewer,20,10 or fewer,11187
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,14,10 or fewer,10130
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,10605
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,10227
+,,Jan 1 – Dec 31 2021,10 or fewer,18,10 or fewer,11898
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,93
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,93
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,103
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,109
+,"Total: Total includes all data under the South Dakota bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,20,59,23,48807
+,,Jan 1 – Dec 31 2019,20,49,18,49093
+,,Jan 1 – Dec 31 2020,16,48,32,44981
+,,Jan 1 – Dec 31 2021,18,92,37,52844
+New Hampshire,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,4518
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,5721
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,4479
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,5530
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,28,10 or fewer,10 or fewer,5009
+,,Jan 1 – Dec 31 2019,13,10 or fewer,10 or fewer,6015
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,5260
+,,Jan 1 – Dec 31 2021,15,10 or fewer,10 or fewer,6380
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,64,11,10 or fewer,9332
+,,Jan 1 – Dec 31 2019,59,10 or fewer,10 or fewer,11539
+,,Jan 1 – Dec 31 2020,55,10 or fewer,10 or fewer,10776
+,,Jan 1 – Dec 31 2021,62,22,10 or fewer,12557
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,22,11,10 or fewer,10762
+,,Jan 1 – Dec 31 2019,18,10 or fewer,10 or fewer,13167
+,,Jan 1 – Dec 31 2020,19,10 or fewer,10 or fewer,12156
+,,Jan 1 – Dec 31 2021,28,18,10 or fewer,14066
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,10971
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,13824
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,12884
+,,Jan 1 – Dec 31 2021,10 or fewer,12,10 or fewer,15800
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,97
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,148
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,103
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,128
+,"Total: Total includes all data under the New Hampshire bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,120,41,19,40578
+,,Jan 1 – Dec 31 2019,94,28,21,50255
+,,Jan 1 – Dec 31 2020,89,21,15,45505
+,,Jan 1 – Dec 31 2021,108,60,10 or fewer,54287
+Utah,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,2282
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,2357
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,1892
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,2451
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,6227
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,6482
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,12,6048
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,7301
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,13,14428
+,,Jan 1 – Dec 31 2019,15,10 or fewer,14,15324
+,,Jan 1 – Dec 31 2020,23,10 or fewer,27,15128
+,,Jan 1 – Dec 31 2021,22,12,22,17556
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,11,10 or fewer,10 or fewer,10543
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,11100
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,10438
+,,Jan 1 – Dec 31 2021,10 or fewer,11,10 or fewer,12063
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,7058
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,7371
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,6695
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,8226
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,78
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,86
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,99
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,93
+,"Total: Total includes all data under the Utah bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,29,19,27,40488
+,,Jan 1 – Dec 31 2019,30,27,25,42587
+,,Jan 1 – Dec 31 2020,41,19,45,40182
+,,Jan 1 – Dec 31 2021,39,32,36,47541
+Montana,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,6327
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,6148
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,4758
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,5623
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,5598
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,5788
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,4979
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,5970
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,9245
+,,Jan 1 – Dec 31 2019,21,12,10 or fewer,9503
+,,Jan 1 – Dec 31 2020,14,10 or fewer,10 or fewer,8844
+,,Jan 1 – Dec 31 2021,22,15,10 or fewer,10304
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,7333
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,7647
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,7223
+,,Jan 1 – Dec 31 2021,10 or fewer,13,10 or fewer,8719
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,6434
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,7022
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,6805
+,,Jan 1 – Dec 31 2021,10 or fewer,13,10 or fewer,8380
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,42
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,48
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,64
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,66
+,"Total: Total includes all data under the Montana bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,25,22,15,34858
+,,Jan 1 – Dec 31 2019,35,28,16,36027
+,,Jan 1 – Dec 31 2020,30,16,20,32556
+,,Jan 1 – Dec 31 2021,37,46,20,38938
+Vermont,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,1257
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,2080
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,3777
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,4797
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,1436
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,2223
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,4259
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,5584
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,2472
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,4379
+,,Jan 1 – Dec 31 2020,16,10 or fewer,13,9306
+,,Jan 1 – Dec 31 2021,31,10 or fewer,10 or fewer,11414
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,2975
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,4749
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,9520
+,,Jan 1 – Dec 31 2021,12,10 or fewer,10 or fewer,11326
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,2978
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,5156
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,10103
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,12672
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,37
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,46
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,143
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,120
+,"Total: Total includes all data under the Vermont bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,11135
+,,Jan 1 – Dec 31 2019,16,10 or fewer,10 or fewer,18595
+,,Jan 1 – Dec 31 2020,28,25,22,36970
+,,Jan 1 – Dec 31 2021,53,24,18,45749
+Wyoming,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,4559
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,4933
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,3814
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,4376
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,3452
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,3974
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,3860
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,4343
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,6469
+,,Jan 1 – Dec 31 2019,11,10 or fewer,10 or fewer,7121
+,,Jan 1 – Dec 31 2020,16,10 or fewer,12,6827
+,,Jan 1 – Dec 31 2021,32,10 or fewer,10 or fewer,7506
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,5283
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,6150
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,5763
+,,Jan 1 – Dec 31 2021,11,10 or fewer,10 or fewer,6481
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,4913
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,5874
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,5860
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,6811
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,43
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,59
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,70
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,80
+,"Total: Total includes all data under the Wyoming bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,21,10 or fewer,13,24601
+,,Jan 1 – Dec 31 2019,23,12,18,27969
+,,Jan 1 – Dec 31 2020,33,20,20,26084
+,,Jan 1 – Dec 31 2021,50,20,18,29479
+District of Columbia,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,742
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,871
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,560
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,1169
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,1724
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,1879
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,1358
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,2097
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,3089
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,3676
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,3258
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,27,5911
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,1573
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,1813
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,1455
+,,Jan 1 – Dec 31 2021,12,10 or fewer,10 or fewer,2738
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,831
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,945
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,740
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,1567
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,11
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,13
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,11
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,15
+,"Total: Total includes all data under the District of Columbia bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,10 or fewer,11,10 or fewer,7948
+,,Jan 1 – Dec 31 2019,10 or fewer,12,10 or fewer,9161
+,,Jan 1 – Dec 31 2020,11,10 or fewer,10 or fewer,7360
+,,Jan 1 – Dec 31 2021,23,17,40,13460
+Alaska,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,300
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,280
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,139
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,237
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,275
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,348
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,223
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,299
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,528
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,529
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,349
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,478
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,480
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,489
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,329
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,463
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,442
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,480
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,294
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,428
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,"Total: Total includes all data under the Alaska bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,2030
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,2126
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,1332
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,1902
+Ontario,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,325
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,334
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,86
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,83
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,229
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,221
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,85
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,167
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,440
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,454
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,175
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,236
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,605
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,662
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,248
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,245
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,728
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,751
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,370
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,268
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,"Total: Total includes all data under the Ontario bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,2332
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,2428
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,970
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,1000
+Puerto Rico,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,244
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,224
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,127
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,277
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,250
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,225
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,127
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,304
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,415
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,374
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,275
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,487
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,604
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,559
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,375
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,574
+,65 Years or more,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,501
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,485
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,278
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,525
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,"Total: Total includes all data under the Puerto Rico bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,2020
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,1862
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,1183
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,2161
+None of the above,Less than 15 Years,Jan 1 – Dec 31 2018,10 or fewer,20,11,52463
+,,Jan 1 – Dec 31 2019,10 or fewer,13,10 or fewer,60780
+,,Jan 1 – Dec 31 2020,10 or fewer,11,14,38761
+,,Jan 1 – Dec 31 2021,10 or fewer,11,14,53773
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,69,63,93,46912
+,,Jan 1 – Dec 31 2019,74,53,85,52479
+,,Jan 1 – Dec 31 2020,85,27,125,41163
+,,Jan 1 – Dec 31 2021,96,48,143,50358
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,364,105,132,88178
+,,Jan 1 – Dec 31 2019,395,104,157,101738
+,,Jan 1 – Dec 31 2020,514,75,214,90503
+,,Jan 1 – Dec 31 2021,607,121,255,106759
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,139,65,26,65210
+,,Jan 1 – Dec 31 2019,165,68,32,74862
+,,Jan 1 – Dec 31 2020,225,64,52,65616
+,,Jan 1 – Dec 31 2021,277,76,49,75065
+,65 Years or more,Jan 1 – Dec 31 2018,32,52,16,47605
+,,Jan 1 – Dec 31 2019,40,36,27,54988
+,,Jan 1 – Dec 31 2020,49,39,37,49566
+,,Jan 1 – Dec 31 2021,73,44,33,57328
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,10 or fewer,508
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,10 or fewer,584
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,10 or fewer,698
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,10 or fewer,758
+,"Total: Total includes all data under the None of the above bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,602,302,277,299623
+,,Jan 1 – Dec 31 2019,670,271,305,343957
+,,Jan 1 – Dec 31 2020,867,215,443,285072
+,,Jan 1 – Dec 31 2021,1047,297,492,342618
+Total,Less than 15 Years,Jan 1 – Dec 31 2018,163,1572,475,3707707
+,,Jan 1 – Dec 31 2019,169,1495,553,3993671
+,,Jan 1 – Dec 31 2020,207,633,789,2866944
+,,Jan 1 – Dec 31 2021,249,1239,1058,3838576
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2018,3773,3528,5487,2464537
+,,Jan 1 – Dec 31 2019,3412,3468,6237,2652593
+,,Jan 1 – Dec 31 2020,4610,2330,9419,2395123
+,,Jan 1 – Dec 31 2021,4816,3239,10273,2925080
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2018,18712,6291,7484,4822137
+,,Jan 1 – Dec 31 2019,19219,6724,8262,5246971
+,,Jan 1 – Dec 31 2020,23177,5049,12264,5060886
+,,Jan 1 – Dec 31 2021,25488,6401,14203,6013764
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2018,8120,5249,2294,4145205
+,,Jan 1 – Dec 31 2019,8738,5699,2515,4505660
+,,Jan 1 – Dec 31 2020,10459,4464,3202,4378396
+,,Jan 1 – Dec 31 2021,12214,5537,3733,5194612
+,65 Years or more,Jan 1 – Dec 31 2018,1988,3771,667,3465608
+,,Jan 1 – Dec 31 2019,2238,3919,768,3909340
+,,Jan 1 – Dec 31 2020,2490,3208,979,3844297
+,,Jan 1 – Dec 31 2021,3195,4562,1099,4688247
+,No value,Jan 1 – Dec 31 2018,10 or fewer,10 or fewer,37,31181
+,,Jan 1 – Dec 31 2019,10 or fewer,10 or fewer,57,35329
+,,Jan 1 – Dec 31 2020,10 or fewer,10 or fewer,49,43510
+,,Jan 1 – Dec 31 2021,10 or fewer,10 or fewer,91,52505
+,"Total: Total includes all data under the Total bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2018,32354,20247,16293,18549599
+,,Jan 1 – Dec 31 2019,33385,21154,18256,20248871
+,,Jan 1 – Dec 31 2020,40435,15562,26504,18508251
+,,Jan 1 – Dec 31 2021,45413,20812,30236,22614390
