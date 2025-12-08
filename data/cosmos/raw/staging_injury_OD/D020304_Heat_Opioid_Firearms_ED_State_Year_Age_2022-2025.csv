@@ -1,0 +1,1553 @@
+﻿Session Title,Heat Opioid OD Firearm ED visits 2022-2025,,,,,
+Session ID,2782575,,,,,
+Data Model,Patients,,,,,
+Population Base,All Patients,,,,,
+Population Criteria Filters: These criteria are a summary and do not fully reflect the content of the exported session.,"Encounter Type: Emergency, Emergency to Inpatient",,,,,
+Session Date Range,1/1/2022 - 11/12/2025,,,,,
+Measure,Number of Patients,,,,,
+Export User,Stephanie Perniciaro,,,,,
+Date of Export,12/8/2025,,,,,
+,,,,,,
+,,,,,,
+,,Diagnosis (Encounter),OPIOID OD,Heat,firearms initial,"Total: Total includes all data, including data from columns not currently displayed."
+State of Residence,Age at Encounter in Years,Year,,,,
+Texas,Less than 15 Years,Jan 1 – Dec 31 2022,13,276,118,535279
+,,Jan 1 – Dec 31 2023,24,346,97,517874
+,,Jan 1 – Dec 31 2024,30,298,102,556402
+,,Jan 1 – Nov 12 2025,20,257,71,510481
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,266,620,938,280636
+,,Jan 1 – Dec 31 2023,309,1032,926,292634
+,,Jan 1 – Dec 31 2024,239,730,881,321342
+,,Jan 1 – Nov 12 2025,181,734,853,318126
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,737,1513,1080,540366
+,,Jan 1 – Dec 31 2023,781,2213,1002,577027
+,,Jan 1 – Dec 31 2024,631,1701,1002,645568
+,,Jan 1 – Nov 12 2025,728,1556,903,662442
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,322,1182,322,437384
+,,Jan 1 – Dec 31 2023,376,1891,356,466563
+,,Jan 1 – Dec 31 2024,329,1466,305,519169
+,,Jan 1 – Nov 12 2025,357,1249,309,531827
+,65 Years or more,Jan 1 – Dec 31 2022,204,758,96,394377
+,,Jan 1 – Dec 31 2023,198,1199,112,434092
+,,Jan 1 – Dec 31 2024,227,1093,123,500307
+,,Jan 1 – Nov 12 2025,265,988,133,524802
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,4755
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,4817
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,4739
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,6465
+,"Total: Total includes all data under the Texas bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1526,4314,2539,2183696
+,,Jan 1 – Dec 31 2023,1665,6621,2489,2282982
+,,Jan 1 – Dec 31 2024,1436,5241,2404,2536528
+,,Jan 1 – Nov 12 2025,1536,4747,2266,2545080
+Florida,Less than 15 Years,Jan 1 – Dec 31 2022,14,96,41,357431
+,,Jan 1 – Dec 31 2023,33,190,58,467562
+,,Jan 1 – Dec 31 2024,13,214,44,465205
+,,Jan 1 – Nov 12 2025,12,233,39,437194
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,200,194,524,201341
+,,Jan 1 – Dec 31 2023,253,466,549,286272
+,,Jan 1 – Dec 31 2024,195,489,452,299393
+,,Jan 1 – Nov 12 2025,104,483,390,287962
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,1507,399,664,423417
+,,Jan 1 – Dec 31 2023,2033,964,719,611714
+,,Jan 1 – Dec 31 2024,1224,986,621,645551
+,,Jan 1 – Nov 12 2025,893,1089,522,628710
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,852,332,187,361214
+,,Jan 1 – Dec 31 2023,1185,810,240,519244
+,,Jan 1 – Dec 31 2024,875,783,233,547108
+,,Jan 1 – Nov 12 2025,663,874,203,535278
+,65 Years or more,Jan 1 – Dec 31 2022,218,360,80,359667
+,,Jan 1 – Dec 31 2023,377,681,87,536362
+,,Jan 1 – Dec 31 2024,364,732,93,594768
+,,Jan 1 – Nov 12 2025,376,917,79,597103
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,2661
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,5044
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,4779
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,6106
+,"Total: Total includes all data under the Florida bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,2765,1373,1490,1699618
+,,Jan 1 – Dec 31 2023,3839,3091,1647,2415105
+,,Jan 1 – Dec 31 2024,2632,3175,1438,2544961
+,,Jan 1 – Nov 12 2025,2022,3565,1224,2482760
+Ohio,Less than 15 Years,Jan 1 – Dec 31 2022,20,71,63,325587
+,,Jan 1 – Dec 31 2023,25,80,81,338927
+,,Jan 1 – Dec 31 2024,26,115,79,361542
+,,Jan 1 – Nov 12 2025,10 or fewer,139,54,304129
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,386,218,886,262606
+,,Jan 1 – Dec 31 2023,343,175,946,277390
+,,Jan 1 – Dec 31 2024,220,330,841,304271
+,,Jan 1 – Nov 12 2025,124,398,729,272397
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,2990,411,1284,537282
+,,Jan 1 – Dec 31 2023,2668,333,1259,579239
+,,Jan 1 – Dec 31 2024,1754,570,1310,633043
+,,Jan 1 – Nov 12 2025,1231,784,1059,579834
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,1340,374,365,465630
+,,Jan 1 – Dec 31 2023,1254,280,388,500905
+,,Jan 1 – Dec 31 2024,909,564,468,544656
+,,Jan 1 – Nov 12 2025,741,733,358,500473
+,65 Years or more,Jan 1 – Dec 31 2022,268,351,104,439208
+,,Jan 1 – Dec 31 2023,316,285,120,500024
+,,Jan 1 – Dec 31 2024,301,701,144,572700
+,,Jan 1 – Nov 12 2025,252,865,125,540929
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,4241
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,3417
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,3892
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,4313
+,"Total: Total includes all data under the Ohio bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,4924,1414,2674,2022123
+,,Jan 1 – Dec 31 2023,4537,1147,2767,2186634
+,,Jan 1 – Dec 31 2024,3163,2255,2814,2404717
+,,Jan 1 – Nov 12 2025,2320,2887,2319,2190919
+Pennsylvania,Less than 15 Years,Jan 1 – Dec 31 2022,19,73,62,273594
+,,Jan 1 – Dec 31 2023,23,85,54,284439
+,,Jan 1 – Dec 31 2024,18,97,45,286071
+,,Jan 1 – Nov 12 2025,10 or fewer,98,36,244384
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,198,149,742,181744
+,,Jan 1 – Dec 31 2023,165,153,577,194181
+,,Jan 1 – Dec 31 2024,101,196,430,198856
+,,Jan 1 – Nov 12 2025,66,218,384,175484
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,1505,242,1070,379384
+,,Jan 1 – Dec 31 2023,1293,238,861,413325
+,,Jan 1 – Dec 31 2024,1315,357,707,426694
+,,Jan 1 – Nov 12 2025,1226,425,622,386222
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,837,210,263,342790
+,,Jan 1 – Dec 31 2023,798,219,254,370562
+,,Jan 1 – Dec 31 2024,803,324,239,377083
+,,Jan 1 – Nov 12 2025,779,344,212,342136
+,65 Years or more,Jan 1 – Dec 31 2022,187,254,137,359682
+,,Jan 1 – Dec 31 2023,213,259,115,400176
+,,Jan 1 – Dec 31 2024,205,441,118,422428
+,,Jan 1 – Nov 12 2025,238,431,102,395993
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,4186
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,3617
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,3874
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,4214
+,"Total: Total includes all data under the Pennsylvania bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,2720,922,2271,1534586
+,,Jan 1 – Dec 31 2023,2458,948,1850,1658463
+,,Jan 1 – Dec 31 2024,2403,1403,1534,1706788
+,,Jan 1 – Nov 12 2025,2286,1506,1359,1542912
+New York,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,55,18,186205
+,,Jan 1 – Dec 31 2023,10 or fewer,42,17,190915
+,,Jan 1 – Dec 31 2024,10 or fewer,72,13,199445
+,,Jan 1 – Nov 12 2025,10 or fewer,78,14,176770
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,148,103,281,161401
+,,Jan 1 – Dec 31 2023,136,110,209,172522
+,,Jan 1 – Dec 31 2024,86,141,217,180692
+,,Jan 1 – Nov 12 2025,63,171,181,163227
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,1046,153,473,342334
+,,Jan 1 – Dec 31 2023,1166,175,382,381183
+,,Jan 1 – Dec 31 2024,826,208,342,401227
+,,Jan 1 – Nov 12 2025,668,364,251,368266
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,740,159,111,303032
+,,Jan 1 – Dec 31 2023,825,173,118,327800
+,,Jan 1 – Dec 31 2024,647,268,108,341440
+,,Jan 1 – Nov 12 2025,485,338,91,318534
+,65 Years or more,Jan 1 – Dec 31 2022,158,188,28,301479
+,,Jan 1 – Dec 31 2023,211,187,26,332009
+,,Jan 1 – Dec 31 2024,166,314,37,361292
+,,Jan 1 – Nov 12 2025,189,467,36,356006
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,3663
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,3614
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,3783
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,4258
+,"Total: Total includes all data under the New York bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,2072,653,908,1292945
+,,Jan 1 – Dec 31 2023,2312,682,751,1401976
+,,Jan 1 – Dec 31 2024,1701,1000,713,1481569
+,,Jan 1 – Nov 12 2025,1401,1409,572,1382085
+North Carolina,Less than 15 Years,Jan 1 – Dec 31 2022,18,69,57,219898
+,,Jan 1 – Dec 31 2023,27,77,70,228956
+,,Jan 1 – Dec 31 2024,26,88,62,229413
+,,Jan 1 – Nov 12 2025,16,65,50,196320
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,334,182,666,160818
+,,Jan 1 – Dec 31 2023,354,227,744,169028
+,,Jan 1 – Dec 31 2024,230,282,709,182283
+,,Jan 1 – Nov 12 2025,171,322,504,162903
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,1470,388,813,330817
+,,Jan 1 – Dec 31 2023,1644,418,839,355277
+,,Jan 1 – Dec 31 2024,1081,546,904,383161
+,,Jan 1 – Nov 12 2025,895,661,678,352155
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,709,317,239,279604
+,,Jan 1 – Dec 31 2023,825,395,266,302159
+,,Jan 1 – Dec 31 2024,541,434,314,328352
+,,Jan 1 – Nov 12 2025,455,578,265,303991
+,65 Years or more,Jan 1 – Dec 31 2022,187,275,54,263831
+,,Jan 1 – Dec 31 2023,217,306,75,298600
+,,Jan 1 – Dec 31 2024,207,443,94,339288
+,,Jan 1 – Nov 12 2025,193,547,79,324816
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,2930
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,2895
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,3218
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,3518
+,"Total: Total includes all data under the North Carolina bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,2679,1216,1822,1251746
+,,Jan 1 – Dec 31 2023,3026,1411,1984,1350056
+,,Jan 1 – Dec 31 2024,2065,1777,2075,1458219
+,,Jan 1 – Nov 12 2025,1712,2157,1571,1338251
+California,Less than 15 Years,Jan 1 – Dec 31 2022,11,48,13,180317
+,,Jan 1 – Dec 31 2023,16,57,27,183832
+,,Jan 1 – Dec 31 2024,17,71,27,206231
+,,Jan 1 – Nov 12 2025,11,54,17,186942
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,225,115,353,120754
+,,Jan 1 – Dec 31 2023,215,95,311,131108
+,,Jan 1 – Dec 31 2024,164,174,302,171227
+,,Jan 1 – Nov 12 2025,111,125,215,157284
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,865,199,598,256165
+,,Jan 1 – Dec 31 2023,1169,191,572,290732
+,,Jan 1 – Dec 31 2024,1022,394,537,383881
+,,Jan 1 – Nov 12 2025,796,254,342,355536
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,438,173,171,212905
+,,Jan 1 – Dec 31 2023,545,152,182,241886
+,,Jan 1 – Dec 31 2024,535,340,163,313297
+,,Jan 1 – Nov 12 2025,421,207,125,287725
+,65 Years or more,Jan 1 – Dec 31 2022,160,188,28,192972
+,,Jan 1 – Dec 31 2023,194,154,32,231193
+,,Jan 1 – Dec 31 2024,222,357,39,303522
+,,Jan 1 – Nov 12 2025,188,234,33,291017
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,2419
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,6088
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,2670
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,3504
+,"Total: Total includes all data under the California bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1681,720,1163,962151
+,,Jan 1 – Dec 31 2023,2113,643,1121,1080789
+,,Jan 1 – Dec 31 2024,1939,1328,1059,1375358
+,,Jan 1 – Nov 12 2025,1518,871,734,1277573
+Virginia,Less than 15 Years,Jan 1 – Dec 31 2022,19,76,37,199336
+,,Jan 1 – Dec 31 2023,24,68,34,209243
+,,Jan 1 – Dec 31 2024,12,86,26,214226
+,,Jan 1 – Nov 12 2025,10 or fewer,66,21,179620
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,262,176,481,147877
+,,Jan 1 – Dec 31 2023,268,180,423,156821
+,,Jan 1 – Dec 31 2024,134,228,306,166815
+,,Jan 1 – Nov 12 2025,102,289,230,145894
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,1090,416,560,315806
+,,Jan 1 – Dec 31 2023,1104,423,500,340713
+,,Jan 1 – Dec 31 2024,709,505,440,363462
+,,Jan 1 – Nov 12 2025,519,641,354,323904
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,854,370,156,271110
+,,Jan 1 – Dec 31 2023,886,360,160,289813
+,,Jan 1 – Dec 31 2024,568,418,129,304851
+,,Jan 1 – Nov 12 2025,418,519,116,274281
+,65 Years or more,Jan 1 – Dec 31 2022,240,298,37,259949
+,,Jan 1 – Dec 31 2023,256,301,52,286578
+,,Jan 1 – Dec 31 2024,195,448,47,314039
+,,Jan 1 – Nov 12 2025,152,588,39,294557
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,2353
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,2153
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,2336
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,2469
+,"Total: Total includes all data under the Virginia bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,2426,1325,1267,1190298
+,,Jan 1 – Dec 31 2023,2501,1321,1166,1278557
+,,Jan 1 – Dec 31 2024,1593,1668,943,1358176
+,,Jan 1 – Nov 12 2025,1182,2086,756,1215285
+Illinois,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,54,48,230643
+,,Jan 1 – Dec 31 2023,10 or fewer,53,41,227000
+,,Jan 1 – Dec 31 2024,10 or fewer,57,30,230092
+,,Jan 1 – Nov 12 2025,10 or fewer,93,32,197623
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,106,155,565,145647
+,,Jan 1 – Dec 31 2023,102,131,481,148641
+,,Jan 1 – Dec 31 2024,96,170,437,158781
+,,Jan 1 – Nov 12 2025,59,191,302,138863
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,787,299,706,270019
+,,Jan 1 – Dec 31 2023,720,308,681,282854
+,,Jan 1 – Dec 31 2024,492,268,617,307890
+,,Jan 1 – Nov 12 2025,467,401,442,275158
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,679,243,191,239461
+,,Jan 1 – Dec 31 2023,626,253,174,250283
+,,Jan 1 – Dec 31 2024,513,245,209,269041
+,,Jan 1 – Nov 12 2025,510,369,132,242360
+,65 Years or more,Jan 1 – Dec 31 2022,189,256,61,250599
+,,Jan 1 – Dec 31 2023,211,205,39,268716
+,,Jan 1 – Dec 31 2024,236,276,58,296366
+,,Jan 1 – Nov 12 2025,209,392,47,278213
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,3034
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,2401
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,2475
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,2887
+,"Total: Total includes all data under the Illinois bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1750,998,1571,1134666
+,,Jan 1 – Dec 31 2023,1636,943,1408,1174931
+,,Jan 1 – Dec 31 2024,1323,1008,1344,1258848
+,,Jan 1 – Nov 12 2025,1240,1440,952,1131039
+Michigan,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,37,32,155738
+,,Jan 1 – Dec 31 2023,13,34,20,151665
+,,Jan 1 – Dec 31 2024,12,41,31,170519
+,,Jan 1 – Nov 12 2025,10 or fewer,58,25,164675
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,109,88,297,122212
+,,Jan 1 – Dec 31 2023,91,91,336,121724
+,,Jan 1 – Dec 31 2024,64,142,277,138940
+,,Jan 1 – Nov 12 2025,35,160,239,133681
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,951,149,479,247433
+,,Jan 1 – Dec 31 2023,768,159,453,255053
+,,Jan 1 – Dec 31 2024,528,224,423,297650
+,,Jan 1 – Nov 12 2025,450,336,389,295336
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,510,142,155,221006
+,,Jan 1 – Dec 31 2023,498,135,164,226752
+,,Jan 1 – Dec 31 2024,363,231,194,264236
+,,Jan 1 – Nov 12 2025,339,284,187,262799
+,65 Years or more,Jan 1 – Dec 31 2022,247,136,57,227672
+,,Jan 1 – Dec 31 2023,277,135,49,243067
+,,Jan 1 – Dec 31 2024,259,255,57,292567
+,,Jan 1 – Nov 12 2025,208,335,68,298728
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,2127
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,1935
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,1816
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,2757
+,"Total: Total includes all data under the Michigan bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1802,548,1015,971429
+,,Jan 1 – Dec 31 2023,1629,548,1017,995249
+,,Jan 1 – Dec 31 2024,1209,885,978,1160327
+,,Jan 1 – Nov 12 2025,1022,1166,902,1153405
+Georgia,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,57,72,222322
+,,Jan 1 – Dec 31 2023,16,66,84,239035
+,,Jan 1 – Dec 31 2024,12,75,69,239380
+,,Jan 1 – Nov 12 2025,11,96,66,207806
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,145,120,708,103106
+,,Jan 1 – Dec 31 2023,159,174,691,126767
+,,Jan 1 – Dec 31 2024,124,149,611,133727
+,,Jan 1 – Nov 12 2025,84,179,523,121634
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,660,185,870,187255
+,,Jan 1 – Dec 31 2023,805,280,813,250007
+,,Jan 1 – Dec 31 2024,580,309,834,264064
+,,Jan 1 – Nov 12 2025,393,361,631,240328
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,346,163,237,149398
+,,Jan 1 – Dec 31 2023,426,251,263,203796
+,,Jan 1 – Dec 31 2024,353,322,286,216112
+,,Jan 1 – Nov 12 2025,269,355,216,199883
+,65 Years or more,Jan 1 – Dec 31 2022,123,91,51,120049
+,,Jan 1 – Dec 31 2023,177,183,66,174410
+,,Jan 1 – Dec 31 2024,168,271,68,191826
+,,Jan 1 – Nov 12 2025,130,260,54,182024
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,1646
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,2060
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,2364
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,2638
+,"Total: Total includes all data under the Georgia bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1270,613,1936,780682
+,,Jan 1 – Dec 31 2023,1565,946,1906,991470
+,,Jan 1 – Dec 31 2024,1223,1120,1861,1042477
+,,Jan 1 – Nov 12 2025,874,1241,1492,950594
+South Carolina,Less than 15 Years,Jan 1 – Dec 31 2022,13,57,51,121406
+,,Jan 1 – Dec 31 2023,16,78,57,150232
+,,Jan 1 – Dec 31 2024,10 or fewer,68,59,150499
+,,Jan 1 – Nov 12 2025,10 or fewer,80,47,133938
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,211,112,410,81664
+,,Jan 1 – Dec 31 2023,176,189,465,106236
+,,Jan 1 – Dec 31 2024,107,209,486,113592
+,,Jan 1 – Nov 12 2025,81,189,421,103805
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,975,232,453,163862
+,,Jan 1 – Dec 31 2023,1031,348,567,217336
+,,Jan 1 – Dec 31 2024,568,450,499,231371
+,,Jan 1 – Nov 12 2025,515,474,488,216069
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,468,191,146,142545
+,,Jan 1 – Dec 31 2023,575,329,169,191250
+,,Jan 1 – Dec 31 2024,396,391,174,204336
+,,Jan 1 – Nov 12 2025,304,495,199,191274
+,65 Years or more,Jan 1 – Dec 31 2022,116,159,51,130970
+,,Jan 1 – Dec 31 2023,152,286,44,186481
+,,Jan 1 – Dec 31 2024,137,390,67,207323
+,,Jan 1 – Nov 12 2025,135,438,66,202191
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,11,1336
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,1510
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,1567
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,1665
+,"Total: Total includes all data under the South Carolina bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1757,745,1110,638589
+,,Jan 1 – Dec 31 2023,1920,1223,1291,848198
+,,Jan 1 – Dec 31 2024,1204,1493,1283,903268
+,,Jan 1 – Nov 12 2025,1027,1662,1218,844822
+New Jersey,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,21,10 or fewer,86546
+,,Jan 1 – Dec 31 2023,10 or fewer,30,10 or fewer,118208
+,,Jan 1 – Dec 31 2024,10 or fewer,38,10 or fewer,154464
+,,Jan 1 – Nov 12 2025,10 or fewer,56,10 or fewer,135509
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,46,52,83,62019
+,,Jan 1 – Dec 31 2023,62,59,105,85181
+,,Jan 1 – Dec 31 2024,48,79,73,105768
+,,Jan 1 – Nov 12 2025,29,111,58,95354
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,439,84,131,123624
+,,Jan 1 – Dec 31 2023,539,118,150,175477
+,,Jan 1 – Dec 31 2024,557,145,165,222331
+,,Jan 1 – Nov 12 2025,482,195,116,202187
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,352,68,29,116537
+,,Jan 1 – Dec 31 2023,475,95,29,157750
+,,Jan 1 – Dec 31 2024,639,161,37,191570
+,,Jan 1 – Nov 12 2025,606,186,36,172675
+,65 Years or more,Jan 1 – Dec 31 2022,101,85,11,114295
+,,Jan 1 – Dec 31 2023,151,102,10 or fewer,157932
+,,Jan 1 – Dec 31 2024,168,166,13,192343
+,,Jan 1 – Nov 12 2025,190,204,10 or fewer,180149
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,1100
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,1271
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,2070
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,2332
+,"Total: Total includes all data under the New Jersey bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,936,308,258,502189
+,,Jan 1 – Dec 31 2023,1222,403,297,693175
+,,Jan 1 – Dec 31 2024,1397,582,296,864683
+,,Jan 1 – Nov 12 2025,1288,745,224,785413
+Colorado,Less than 15 Years,Jan 1 – Dec 31 2022,16,39,25,175657
+,,Jan 1 – Dec 31 2023,10 or fewer,35,21,173228
+,,Jan 1 – Dec 31 2024,10 or fewer,44,16,181878
+,,Jan 1 – Nov 12 2025,10 or fewer,44,10 or fewer,167654
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,191,68,224,92061
+,,Jan 1 – Dec 31 2023,166,48,214,94868
+,,Jan 1 – Dec 31 2024,138,80,190,105785
+,,Jan 1 – Nov 12 2025,134,76,150,96194
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,622,96,308,164414
+,,Jan 1 – Dec 31 2023,778,106,275,175036
+,,Jan 1 – Dec 31 2024,674,169,270,204099
+,,Jan 1 – Nov 12 2025,814,147,201,189031
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,196,77,75,112686
+,,Jan 1 – Dec 31 2023,268,87,85,119190
+,,Jan 1 – Dec 31 2024,254,116,70,139830
+,,Jan 1 – Nov 12 2025,303,113,76,129653
+,65 Years or more,Jan 1 – Dec 31 2022,61,58,15,104246
+,,Jan 1 – Dec 31 2023,76,67,15,112668
+,,Jan 1 – Dec 31 2024,84,120,27,141231
+,,Jan 1 – Nov 12 2025,99,128,17,136639
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,911
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,998
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,950
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,1193
+,"Total: Total includes all data under the Colorado bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1071,336,644,647250
+,,Jan 1 – Dec 31 2023,1285,338,610,673029
+,,Jan 1 – Dec 31 2024,1144,523,572,770374
+,,Jan 1 – Nov 12 2025,1347,507,451,717717
+Massachusetts,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,30,10 or fewer,88373
+,,Jan 1 – Dec 31 2023,10 or fewer,13,10 or fewer,88401
+,,Jan 1 – Dec 31 2024,10 or fewer,26,10 or fewer,109138
+,,Jan 1 – Nov 12 2025,10 or fewer,32,10 or fewer,104334
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,96,44,59,69118
+,,Jan 1 – Dec 31 2023,71,31,65,72641
+,,Jan 1 – Dec 31 2024,42,39,56,82306
+,,Jan 1 – Nov 12 2025,23,67,47,80478
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,760,72,100,141750
+,,Jan 1 – Dec 31 2023,659,56,86,156250
+,,Jan 1 – Dec 31 2024,479,86,71,172740
+,,Jan 1 – Nov 12 2025,498,131,60,170417
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,418,80,35,120099
+,,Jan 1 – Dec 31 2023,414,65,44,128640
+,,Jan 1 – Dec 31 2024,313,79,27,143186
+,,Jan 1 – Nov 12 2025,316,111,27,148016
+,65 Years or more,Jan 1 – Dec 31 2022,90,83,10 or fewer,115987
+,,Jan 1 – Dec 31 2023,86,71,16,129581
+,,Jan 1 – Dec 31 2024,93,139,10 or fewer,153016
+,,Jan 1 – Nov 12 2025,97,210,10 or fewer,168084
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,1078
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,1280
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,1314
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,1771
+,"Total: Total includes all data under the Massachusetts bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1359,306,201,534311
+,,Jan 1 – Dec 31 2023,1224,235,215,574429
+,,Jan 1 – Dec 31 2024,914,367,166,658998
+,,Jan 1 – Nov 12 2025,928,548,143,670787
+Indiana,Less than 15 Years,Jan 1 – Dec 31 2022,13,29,20,103847
+,,Jan 1 – Dec 31 2023,10 or fewer,35,11,103743
+,,Jan 1 – Dec 31 2024,10 or fewer,28,17,108664
+,,Jan 1 – Nov 12 2025,10 or fewer,34,10 or fewer,91676
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,216,77,247,78068
+,,Jan 1 – Dec 31 2023,162,96,226,80808
+,,Jan 1 – Dec 31 2024,108,70,219,84356
+,,Jan 1 – Nov 12 2025,74,151,188,74836
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,1227,179,260,160416
+,,Jan 1 – Dec 31 2023,947,183,279,168637
+,,Jan 1 – Dec 31 2024,733,199,246,177664
+,,Jan 1 – Nov 12 2025,538,281,223,161370
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,443,181,81,137517
+,,Jan 1 – Dec 31 2023,430,132,96,142211
+,,Jan 1 – Dec 31 2024,312,164,85,145866
+,,Jan 1 – Nov 12 2025,262,265,94,136400
+,65 Years or more,Jan 1 – Dec 31 2022,110,135,18,129863
+,,Jan 1 – Dec 31 2023,113,114,40,137162
+,,Jan 1 – Dec 31 2024,92,161,25,144555
+,,Jan 1 – Nov 12 2025,74,204,22,140079
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,1329
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,1057
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,1077
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,1200
+,"Total: Total includes all data under the Indiana bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1989,596,621,608065
+,,Jan 1 – Dec 31 2023,1644,554,651,630483
+,,Jan 1 – Dec 31 2024,1241,618,584,658751
+,,Jan 1 – Nov 12 2025,942,932,535,603029
+Kentucky,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,48,25,113122
+,,Jan 1 – Dec 31 2023,13,37,31,116077
+,,Jan 1 – Dec 31 2024,10 or fewer,39,27,116411
+,,Jan 1 – Nov 12 2025,10 or fewer,50,19,102051
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,150,116,97,67500
+,,Jan 1 – Dec 31 2023,121,92,119,71441
+,,Jan 1 – Dec 31 2024,71,105,83,72610
+,,Jan 1 – Nov 12 2025,44,135,81,65655
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,905,281,159,132203
+,,Jan 1 – Dec 31 2023,699,196,127,140802
+,,Jan 1 – Dec 31 2024,448,216,125,143613
+,,Jan 1 – Nov 12 2025,319,340,107,132249
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,443,202,68,120035
+,,Jan 1 – Dec 31 2023,398,165,79,128708
+,,Jan 1 – Dec 31 2024,287,188,85,129467
+,,Jan 1 – Nov 12 2025,240,329,58,121026
+,65 Years or more,Jan 1 – Dec 31 2022,81,118,22,116729
+,,Jan 1 – Dec 31 2023,87,117,30,126815
+,,Jan 1 – Dec 31 2024,87,149,27,131351
+,,Jan 1 – Nov 12 2025,103,183,29,124170
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,1367
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,1247
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,1203
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,1378
+,"Total: Total includes all data under the Kentucky bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1574,759,369,548380
+,,Jan 1 – Dec 31 2023,1305,602,382,582248
+,,Jan 1 – Dec 31 2024,896,689,345,591626
+,,Jan 1 – Nov 12 2025,704,1034,294,544319
+Connecticut,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,33,10 or fewer,102082
+,,Jan 1 – Dec 31 2023,10 or fewer,27,10 or fewer,97161
+,,Jan 1 – Dec 31 2024,10 or fewer,18,10 or fewer,99772
+,,Jan 1 – Nov 12 2025,10 or fewer,33,10 or fewer,94126
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,60,43,126,67391
+,,Jan 1 – Dec 31 2023,41,34,101,67451
+,,Jan 1 – Dec 31 2024,25,43,103,69617
+,,Jan 1 – Nov 12 2025,32,56,75,68836
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,502,75,237,133221
+,,Jan 1 – Dec 31 2023,476,57,181,137284
+,,Jan 1 – Dec 31 2024,307,94,143,145436
+,,Jan 1 – Nov 12 2025,520,156,126,150389
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,354,71,49,123454
+,,Jan 1 – Dec 31 2023,371,85,66,126431
+,,Jan 1 – Dec 31 2024,312,89,45,132627
+,,Jan 1 – Nov 12 2025,525,146,38,136967
+,65 Years or more,Jan 1 – Dec 31 2022,80,81,16,121848
+,,Jan 1 – Dec 31 2023,91,75,13,129996
+,,Jan 1 – Dec 31 2024,81,97,14,141453
+,,Jan 1 – Nov 12 2025,189,185,17,150476
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,4394
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,5120
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,1837
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,2518
+,"Total: Total includes all data under the Connecticut bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,990,303,428,549682
+,,Jan 1 – Dec 31 2023,976,276,370,560627
+,,Jan 1 – Dec 31 2024,716,339,309,587720
+,,Jan 1 – Nov 12 2025,1246,571,258,600858
+Maryland,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,33,10 or fewer,77836
+,,Jan 1 – Dec 31 2023,15,28,10 or fewer,79412
+,,Jan 1 – Dec 31 2024,10 or fewer,33,10 or fewer,76761
+,,Jan 1 – Nov 12 2025,10 or fewer,35,10 or fewer,65202
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,100,61,213,61043
+,,Jan 1 – Dec 31 2023,120,67,250,63860
+,,Jan 1 – Dec 31 2024,71,85,160,65353
+,,Jan 1 – Nov 12 2025,43,87,92,56246
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,505,111,356,136460
+,,Jan 1 – Dec 31 2023,547,97,285,143519
+,,Jan 1 – Dec 31 2024,364,160,265,148314
+,,Jan 1 – Nov 12 2025,252,189,168,129727
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,397,113,76,115194
+,,Jan 1 – Dec 31 2023,461,102,90,121691
+,,Jan 1 – Dec 31 2024,325,141,68,124222
+,,Jan 1 – Nov 12 2025,226,146,52,109270
+,65 Years or more,Jan 1 – Dec 31 2022,96,113,20,104643
+,,Jan 1 – Dec 31 2023,113,103,21,114569
+,,Jan 1 – Dec 31 2024,89,175,14,121539
+,,Jan 1 – Nov 12 2025,82,183,17,111132
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,1345
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,1226
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,1266
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,1327
+,"Total: Total includes all data under the Maryland bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1097,429,673,494712
+,,Jan 1 – Dec 31 2023,1240,394,654,522227
+,,Jan 1 – Dec 31 2024,844,587,514,535300
+,,Jan 1 – Nov 12 2025,598,633,335,471358
+Minnesota,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,22,14,86641
+,,Jan 1 – Dec 31 2023,10 or fewer,32,11,86049
+,,Jan 1 – Dec 31 2024,10 or fewer,25,10 or fewer,89728
+,,Jan 1 – Nov 12 2025,10 or fewer,44,10 or fewer,74121
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,207,69,165,63710
+,,Jan 1 – Dec 31 2023,166,83,151,65826
+,,Jan 1 – Dec 31 2024,133,70,123,68279
+,,Jan 1 – Nov 12 2025,102,75,106,58630
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,662,135,250,128673
+,,Jan 1 – Dec 31 2023,670,140,182,135450
+,,Jan 1 – Dec 31 2024,419,128,190,139200
+,,Jan 1 – Nov 12 2025,443,138,99,120247
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,253,102,55,107843
+,,Jan 1 – Dec 31 2023,266,127,57,113327
+,,Jan 1 – Dec 31 2024,185,93,46,115602
+,,Jan 1 – Nov 12 2025,182,121,51,100627
+,65 Years or more,Jan 1 – Dec 31 2022,45,94,12,116767
+,,Jan 1 – Dec 31 2023,68,140,18,126638
+,,Jan 1 – Dec 31 2024,66,115,23,135297
+,,Jan 1 – Nov 12 2025,65,120,13,123206
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,993
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,936
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,907
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,1055
+,"Total: Total includes all data under the Minnesota bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1151,418,493,502558
+,,Jan 1 – Dec 31 2023,1152,517,411,526000
+,,Jan 1 – Dec 31 2024,798,425,389,546675
+,,Jan 1 – Nov 12 2025,790,498,275,476209
+Wisconsin,Less than 15 Years,Jan 1 – Dec 31 2022,11,28,39,109124
+,,Jan 1 – Dec 31 2023,10 or fewer,25,43,105669
+,,Jan 1 – Dec 31 2024,10 or fewer,21,36,105072
+,,Jan 1 – Nov 12 2025,10 or fewer,41,23,93927
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,62,63,148,66561
+,,Jan 1 – Dec 31 2023,42,59,147,66204
+,,Jan 1 – Dec 31 2024,33,63,150,66777
+,,Jan 1 – Nov 12 2025,31,66,117,59455
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,307,100,139,122906
+,,Jan 1 – Dec 31 2023,275,123,108,127276
+,,Jan 1 – Dec 31 2024,153,94,114,128388
+,,Jan 1 – Nov 12 2025,207,143,90,116266
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,160,71,47,109862
+,,Jan 1 – Dec 31 2023,135,109,53,113222
+,,Jan 1 – Dec 31 2024,71,90,43,113245
+,,Jan 1 – Nov 12 2025,111,136,36,103898
+,65 Years or more,Jan 1 – Dec 31 2022,48,71,14,109832
+,,Jan 1 – Dec 31 2023,47,99,10 or fewer,119043
+,,Jan 1 – Dec 31 2024,33,83,16,125047
+,,Jan 1 – Nov 12 2025,50,139,12,120276
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,1109
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,920
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,915
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,946
+,"Total: Total includes all data under the Wisconsin bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,579,333,383,516940
+,,Jan 1 – Dec 31 2023,500,411,360,529889
+,,Jan 1 – Dec 31 2024,287,349,356,536825
+,,Jan 1 – Nov 12 2025,399,516,280,492833
+Louisiana,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,54,63,105160
+,,Jan 1 – Dec 31 2023,16,85,64,106575
+,,Jan 1 – Dec 31 2024,12,65,49,101521
+,,Jan 1 – Nov 12 2025,10 or fewer,52,43,87221
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,129,158,473,69185
+,,Jan 1 – Dec 31 2023,114,243,431,71767
+,,Jan 1 – Dec 31 2024,63,203,405,75094
+,,Jan 1 – Nov 12 2025,57,209,372,69005
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,981,300,440,134960
+,,Jan 1 – Dec 31 2023,744,528,471,139920
+,,Jan 1 – Dec 31 2024,490,453,396,148335
+,,Jan 1 – Nov 12 2025,325,467,310,137306
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,432,254,141,109038
+,,Jan 1 – Dec 31 2023,392,460,147,113949
+,,Jan 1 – Dec 31 2024,314,344,115,118109
+,,Jan 1 – Nov 12 2025,211,349,107,110565
+,65 Years or more,Jan 1 – Dec 31 2022,107,148,30,93209
+,,Jan 1 – Dec 31 2023,79,246,43,101250
+,,Jan 1 – Dec 31 2024,96,206,54,111400
+,,Jan 1 – Nov 12 2025,74,200,39,106957
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,782
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,902
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,974
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,1108
+,"Total: Total includes all data under the Louisiana bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1640,907,1136,509598
+,,Jan 1 – Dec 31 2023,1334,1548,1146,531325
+,,Jan 1 – Dec 31 2024,958,1263,1012,552238
+,,Jan 1 – Nov 12 2025,668,1271,870,509748
+Mississippi,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,38,63,75226
+,,Jan 1 – Dec 31 2023,10 or fewer,63,68,77197
+,,Jan 1 – Dec 31 2024,10 or fewer,46,46,85097
+,,Jan 1 – Nov 12 2025,10 or fewer,79,37,80016
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,84,142,459,52852
+,,Jan 1 – Dec 31 2023,94,182,479,55493
+,,Jan 1 – Dec 31 2024,74,189,474,64924
+,,Jan 1 – Nov 12 2025,48,245,349,61893
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,230,294,562,100270
+,,Jan 1 – Dec 31 2023,218,422,530,106394
+,,Jan 1 – Dec 31 2024,169,372,500,123246
+,,Jan 1 – Nov 12 2025,151,438,357,119700
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,161,283,173,90090
+,,Jan 1 – Dec 31 2023,121,379,177,96068
+,,Jan 1 – Dec 31 2024,116,357,176,113435
+,,Jan 1 – Nov 12 2025,115,407,128,110810
+,65 Years or more,Jan 1 – Dec 31 2022,68,148,36,81906
+,,Jan 1 – Dec 31 2023,59,221,53,90925
+,,Jan 1 – Dec 31 2024,42,253,66,111558
+,,Jan 1 – Nov 12 2025,65,281,58,110904
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,747
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,11,928
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,948
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,1201
+,"Total: Total includes all data under the Mississippi bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,539,898,1283,398833
+,,Jan 1 – Dec 31 2023,487,1258,1311,424601
+,,Jan 1 – Dec 31 2024,399,1203,1255,496343
+,,Jan 1 – Nov 12 2025,375,1439,929,482150
+Tennessee,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,28,14,63373
+,,Jan 1 – Dec 31 2023,10 or fewer,32,10 or fewer,65836
+,,Jan 1 – Dec 31 2024,15,34,16,80309
+,,Jan 1 – Nov 12 2025,21,72,28,94279
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,76,67,102,40602
+,,Jan 1 – Dec 31 2023,53,69,101,42239
+,,Jan 1 – Dec 31 2024,38,74,113,51076
+,,Jan 1 – Nov 12 2025,44,167,127,61432
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,330,140,130,77804
+,,Jan 1 – Dec 31 2023,335,135,141,81068
+,,Jan 1 – Dec 31 2024,232,119,144,98687
+,,Jan 1 – Nov 12 2025,393,341,126,122456
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,119,132,60,69200
+,,Jan 1 – Dec 31 2023,148,116,67,72327
+,,Jan 1 – Dec 31 2024,121,126,54,88102
+,,Jan 1 – Nov 12 2025,197,364,77,110425
+,65 Years or more,Jan 1 – Dec 31 2022,23,73,18,65689
+,,Jan 1 – Dec 31 2023,39,95,29,71399
+,,Jan 1 – Dec 31 2024,47,93,15,88225
+,,Jan 1 – Nov 12 2025,62,221,27,110294
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,765
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,682
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,735
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,1240
+,"Total: Total includes all data under the Tennessee bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,552,436,322,316017
+,,Jan 1 – Dec 31 2023,575,444,345,331977
+,,Jan 1 – Dec 31 2024,446,446,343,405433
+,,Jan 1 – Nov 12 2025,713,1151,386,497970
+Oregon,Less than 15 Years,Jan 1 – Dec 31 2022,11,17,10 or fewer,67011
+,,Jan 1 – Dec 31 2023,19,19,10 or fewer,65163
+,,Jan 1 – Dec 31 2024,22,28,10 or fewer,68007
+,,Jan 1 – Nov 12 2025,23,26,10 or fewer,61615
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,106,51,58,45373
+,,Jan 1 – Dec 31 2023,136,42,51,45428
+,,Jan 1 – Dec 31 2024,73,64,54,49276
+,,Jan 1 – Nov 12 2025,58,62,37,45363
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,401,95,113,92120
+,,Jan 1 – Dec 31 2023,632,93,122,95440
+,,Jan 1 – Dec 31 2024,500,135,91,102771
+,,Jan 1 – Nov 12 2025,409,147,86,96149
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,194,102,43,78020
+,,Jan 1 – Dec 31 2023,261,70,44,80432
+,,Jan 1 – Dec 31 2024,229,87,42,85148
+,,Jan 1 – Nov 12 2025,215,96,33,78417
+,65 Years or more,Jan 1 – Dec 31 2022,77,94,16,88784
+,,Jan 1 – Dec 31 2023,84,107,16,93072
+,,Jan 1 – Dec 31 2024,100,112,19,99780
+,,Jan 1 – Nov 12 2025,88,106,15,93546
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,660
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,809
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,664
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,772
+,"Total: Total includes all data under the Oregon bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,781,357,239,370322
+,,Jan 1 – Dec 31 2023,1122,327,233,378588
+,,Jan 1 – Dec 31 2024,911,423,212,403660
+,,Jan 1 – Nov 12 2025,782,427,174,374412
+Iowa,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,21,10 or fewer,53351
+,,Jan 1 – Dec 31 2023,10 or fewer,32,10 or fewer,50246
+,,Jan 1 – Dec 31 2024,10 or fewer,25,12,53567
+,,Jan 1 – Nov 12 2025,10 or fewer,40,10 or fewer,55989
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,60,68,93,33495
+,,Jan 1 – Dec 31 2023,60,68,60,33709
+,,Jan 1 – Dec 31 2024,50,63,50,35299
+,,Jan 1 – Nov 12 2025,32,95,53,38160
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,125,117,112,64819
+,,Jan 1 – Dec 31 2023,181,150,74,65736
+,,Jan 1 – Dec 31 2024,103,115,71,69276
+,,Jan 1 – Nov 12 2025,87,186,61,75495
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,69,107,21,55291
+,,Jan 1 – Dec 31 2023,72,122,30,56787
+,,Jan 1 – Dec 31 2024,50,94,33,59291
+,,Jan 1 – Nov 12 2025,55,169,27,66189
+,65 Years or more,Jan 1 – Dec 31 2022,28,77,10 or fewer,59052
+,,Jan 1 – Dec 31 2023,40,83,10 or fewer,62629
+,,Jan 1 – Dec 31 2024,34,80,13,68324
+,,Jan 1 – Nov 12 2025,26,168,12,81119
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,640
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,564
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,556
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,599
+,"Total: Total includes all data under the Iowa bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,285,389,237,265547
+,,Jan 1 – Dec 31 2023,356,445,177,268506
+,,Jan 1 – Dec 31 2024,240,375,182,285082
+,,Jan 1 – Nov 12 2025,202,656,156,316450
+Oklahoma,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,32,10 or fewer,42380
+,,Jan 1 – Dec 31 2023,10 or fewer,41,24,60552
+,,Jan 1 – Dec 31 2024,10 or fewer,45,17,76035
+,,Jan 1 – Nov 12 2025,10 or fewer,44,22,67400
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,45,101,60,26868
+,,Jan 1 – Dec 31 2023,69,140,121,34326
+,,Jan 1 – Dec 31 2024,42,134,137,41660
+,,Jan 1 – Nov 12 2025,27,135,120,37416
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,232,289,91,55974
+,,Jan 1 – Dec 31 2023,279,376,137,69174
+,,Jan 1 – Dec 31 2024,172,364,162,80248
+,,Jan 1 – Nov 12 2025,134,329,115,72179
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,77,196,23,47586
+,,Jan 1 – Dec 31 2023,92,311,73,58257
+,,Jan 1 – Dec 31 2024,76,315,62,66618
+,,Jan 1 – Nov 12 2025,70,254,52,59754
+,65 Years or more,Jan 1 – Dec 31 2022,29,128,10 or fewer,47727
+,,Jan 1 – Dec 31 2023,41,206,16,57774
+,,Jan 1 – Dec 31 2024,53,182,18,65873
+,,Jan 1 – Nov 12 2025,49,157,14,60184
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,598
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,561
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,782
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,846
+,"Total: Total includes all data under the Oklahoma bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,383,738,192,220125
+,,Jan 1 – Dec 31 2023,482,1063,369,279478
+,,Jan 1 – Dec 31 2024,346,1029,394,329612
+,,Jan 1 – Nov 12 2025,280,914,321,296586
+Washington,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,11,10 or fewer,37701
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,38863
+,,Jan 1 – Dec 31 2024,10 or fewer,12,10 or fewer,39609
+,,Jan 1 – Nov 12 2025,10 or fewer,17,10 or fewer,34495
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,71,22,24,27218
+,,Jan 1 – Dec 31 2023,107,30,38,30243
+,,Jan 1 – Dec 31 2024,42,32,29,31454
+,,Jan 1 – Nov 12 2025,45,28,11,27575
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,305,48,49,62227
+,,Jan 1 – Dec 31 2023,475,58,44,73404
+,,Jan 1 – Dec 31 2024,307,61,29,76208
+,,Jan 1 – Nov 12 2025,250,46,18,67744
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,109,32,15,50729
+,,Jan 1 – Dec 31 2023,205,45,21,59894
+,,Jan 1 – Dec 31 2024,142,38,17,62535
+,,Jan 1 – Nov 12 2025,145,39,12,55801
+,65 Years or more,Jan 1 – Dec 31 2022,47,53,10 or fewer,54778
+,,Jan 1 – Dec 31 2023,47,42,10 or fewer,66322
+,,Jan 1 – Dec 31 2024,39,55,10 or fewer,70897
+,,Jan 1 – Nov 12 2025,55,44,10 or fewer,65321
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,487
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,667
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,549
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,604
+,"Total: Total includes all data under the Washington bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,533,163,93,232458
+,,Jan 1 – Dec 31 2023,831,183,110,268572
+,,Jan 1 – Dec 31 2024,533,194,81,280330
+,,Jan 1 – Nov 12 2025,494,174,44,250899
+Arizona,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,34372
+,,Jan 1 – Dec 31 2023,10 or fewer,21,10 or fewer,35540
+,,Jan 1 – Dec 31 2024,10 or fewer,25,10 or fewer,36675
+,,Jan 1 – Nov 12 2025,10 or fewer,21,10 or fewer,33133
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,52,38,63,25291
+,,Jan 1 – Dec 31 2023,49,59,41,27806
+,,Jan 1 – Dec 31 2024,38,67,44,31196
+,,Jan 1 – Nov 12 2025,53,78,38,31576
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,184,114,107,54856
+,,Jan 1 – Dec 31 2023,215,193,100,60501
+,,Jan 1 – Dec 31 2024,186,180,93,67609
+,,Jan 1 – Nov 12 2025,379,251,64,69526
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,57,119,46,50278
+,,Jan 1 – Dec 31 2023,65,172,36,55130
+,,Jan 1 – Dec 31 2024,85,202,33,60536
+,,Jan 1 – Nov 12 2025,134,182,32,59322
+,65 Years or more,Jan 1 – Dec 31 2022,24,94,10 or fewer,59738
+,,Jan 1 – Dec 31 2023,26,107,20,66021
+,,Jan 1 – Dec 31 2024,35,144,12,74858
+,,Jan 1 – Nov 12 2025,35,132,21,73761
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,619
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,609
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,592
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,656
+,"Total: Total includes all data under the Arizona bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,314,373,226,224560
+,,Jan 1 – Dec 31 2023,357,552,196,244934
+,,Jan 1 – Dec 31 2024,343,617,185,270608
+,,Jan 1 – Nov 12 2025,597,661,154,267261
+Arkansas,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,41,31,73282
+,,Jan 1 – Dec 31 2023,10 or fewer,43,17,71400
+,,Jan 1 – Dec 31 2024,10 or fewer,44,13,73302
+,,Jan 1 – Nov 12 2025,10 or fewer,41,17,64335
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,44,118,143,33611
+,,Jan 1 – Dec 31 2023,38,133,121,33402
+,,Jan 1 – Dec 31 2024,19,91,98,34237
+,,Jan 1 – Nov 12 2025,13,110,86,30402
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,197,265,147,60460
+,,Jan 1 – Dec 31 2023,154,310,147,59709
+,,Jan 1 – Dec 31 2024,86,203,116,60029
+,,Jan 1 – Nov 12 2025,73,268,118,53257
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,95,214,57,50535
+,,Jan 1 – Dec 31 2023,77,257,42,50323
+,,Jan 1 – Dec 31 2024,46,181,45,51729
+,,Jan 1 – Nov 12 2025,43,199,47,46260
+,65 Years or more,Jan 1 – Dec 31 2022,25,89,14,45351
+,,Jan 1 – Dec 31 2023,28,109,19,46685
+,,Jan 1 – Dec 31 2024,31,91,18,49684
+,,Jan 1 – Nov 12 2025,34,109,10 or fewer,45073
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,519
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,513
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,543
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,622
+,"Total: Total includes all data under the Arkansas bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,362,722,389,262596
+,,Jan 1 – Dec 31 2023,300,844,343,260833
+,,Jan 1 – Dec 31 2024,183,603,290,268313
+,,Jan 1 – Nov 12 2025,165,721,276,239051
+West Virginia,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,29305
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,34038
+,,Jan 1 – Dec 31 2024,10 or fewer,19,10 or fewer,38224
+,,Jan 1 – Nov 12 2025,10 or fewer,15,10 or fewer,34974
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,24,22,28,23336
+,,Jan 1 – Dec 31 2023,17,23,26,26922
+,,Jan 1 – Dec 31 2024,10 or fewer,45,24,31358
+,,Jan 1 – Nov 12 2025,10 or fewer,65,21,29105
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,93,50,45,45853
+,,Jan 1 – Dec 31 2023,114,38,57,52906
+,,Jan 1 – Dec 31 2024,54,77,35,61659
+,,Jan 1 – Nov 12 2025,70,100,43,57606
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,43,39,24,45932
+,,Jan 1 – Dec 31 2023,54,31,25,53649
+,,Jan 1 – Dec 31 2024,32,82,32,62924
+,,Jan 1 – Nov 12 2025,54,105,20,60138
+,65 Years or more,Jan 1 – Dec 31 2022,21,25,10 or fewer,46231
+,,Jan 1 – Dec 31 2023,24,37,20,55889
+,,Jan 1 – Dec 31 2024,24,65,19,68522
+,,Jan 1 – Nov 12 2025,26,69,11,67480
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,370
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,394
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,462
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,512
+,"Total: Total includes all data under the West Virginia bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,180,146,110,190014
+,,Jan 1 – Dec 31 2023,210,138,134,222564
+,,Jan 1 – Dec 31 2024,118,283,116,261605
+,,Jan 1 – Nov 12 2025,161,352,102,248662
+Idaho,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,17,10 or fewer,33766
+,,Jan 1 – Dec 31 2023,10 or fewer,12,10 or fewer,31677
+,,Jan 1 – Dec 31 2024,10 or fewer,18,10 or fewer,33873
+,,Jan 1 – Nov 12 2025,10 or fewer,24,10 or fewer,30425
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,42,53,24,25704
+,,Jan 1 – Dec 31 2023,44,26,26,26187
+,,Jan 1 – Dec 31 2024,27,53,15,28585
+,,Jan 1 – Nov 12 2025,14,34,20,26519
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,179,66,25,47527
+,,Jan 1 – Dec 31 2023,166,75,32,49661
+,,Jan 1 – Dec 31 2024,101,67,37,53905
+,,Jan 1 – Nov 12 2025,65,68,15,49862
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,49,50,16,41213
+,,Jan 1 – Dec 31 2023,69,55,17,43743
+,,Jan 1 – Dec 31 2024,41,67,10 or fewer,46557
+,,Jan 1 – Nov 12 2025,45,47,10 or fewer,42865
+,65 Years or more,Jan 1 – Dec 31 2022,25,59,10 or fewer,46304
+,,Jan 1 – Dec 31 2023,36,61,10 or fewer,51146
+,,Jan 1 – Dec 31 2024,41,75,10 or fewer,56390
+,,Jan 1 – Nov 12 2025,31,62,10 or fewer,53404
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,231
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,331
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,357
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,323
+,"Total: Total includes all data under the Idaho bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,293,244,71,193884
+,,Jan 1 – Dec 31 2023,314,228,85,201765
+,,Jan 1 – Dec 31 2024,211,277,66,218602
+,,Jan 1 – Nov 12 2025,152,233,53,202633
+Missouri,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,14798
+,,Jan 1 – Dec 31 2023,10 or fewer,18,10 or fewer,18108
+,,Jan 1 – Dec 31 2024,10 or fewer,21,10 or fewer,18861
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,16009
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,31,38,70,19624
+,,Jan 1 – Dec 31 2023,35,61,67,23404
+,,Jan 1 – Dec 31 2024,32,37,54,24162
+,,Jan 1 – Nov 12 2025,15,50,46,21233
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,134,75,74,42394
+,,Jan 1 – Dec 31 2023,132,100,84,50879
+,,Jan 1 – Dec 31 2024,106,93,68,52869
+,,Jan 1 – Nov 12 2025,71,135,49,46688
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,40,68,19,37272
+,,Jan 1 – Dec 31 2023,57,91,27,45110
+,,Jan 1 – Dec 31 2024,36,84,21,47047
+,,Jan 1 – Nov 12 2025,29,96,22,41582
+,65 Years or more,Jan 1 – Dec 31 2022,21,60,10 or fewer,40186
+,,Jan 1 – Dec 31 2023,29,69,10 or fewer,50511
+,,Jan 1 – Dec 31 2024,23,73,10 or fewer,53227
+,,Jan 1 – Nov 12 2025,17,72,10 or fewer,49057
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,446
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,331
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,410
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,440
+,"Total: Total includes all data under the Missouri bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,229,245,170,154105
+,,Jan 1 – Dec 31 2023,256,338,184,187597
+,,Jan 1 – Dec 31 2024,198,305,155,195696
+,,Jan 1 – Nov 12 2025,131,354,124,174426
+Kansas,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,12,10 or fewer,16438
+,,Jan 1 – Dec 31 2023,10 or fewer,23,10 or fewer,20449
+,,Jan 1 – Dec 31 2024,10 or fewer,25,10 or fewer,22062
+,,Jan 1 – Nov 12 2025,10 or fewer,15,10 or fewer,19500
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,44,23,85,15315
+,,Jan 1 – Dec 31 2023,55,53,76,21269
+,,Jan 1 – Dec 31 2024,41,39,53,23115
+,,Jan 1 – Nov 12 2025,29,44,75,21307
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,99,49,109,30650
+,,Jan 1 – Dec 31 2023,91,91,90,43045
+,,Jan 1 – Dec 31 2024,64,88,79,48163
+,,Jan 1 – Nov 12 2025,61,91,60,45566
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,39,42,28,27528
+,,Jan 1 – Dec 31 2023,52,89,38,37798
+,,Jan 1 – Dec 31 2024,56,66,35,40235
+,,Jan 1 – Nov 12 2025,36,61,32,39558
+,65 Years or more,Jan 1 – Dec 31 2022,15,50,12,31313
+,,Jan 1 – Dec 31 2023,33,88,10 or fewer,44186
+,,Jan 1 – Dec 31 2024,17,71,12,48235
+,,Jan 1 – Nov 12 2025,27,78,11,49127
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,341
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,284
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,404
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,459
+,"Total: Total includes all data under the Kansas bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,194,174,233,121030
+,,Jan 1 – Dec 31 2023,226,341,219,166273
+,,Jan 1 – Dec 31 2024,177,287,182,181283
+,,Jan 1 – Nov 12 2025,149,284,177,174872
+Nevada,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,12,10 or fewer,33175
+,,Jan 1 – Dec 31 2023,10 or fewer,16,10 or fewer,29147
+,,Jan 1 – Dec 31 2024,10 or fewer,12,14,28130
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,24119
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,37,12,109,19850
+,,Jan 1 – Dec 31 2023,36,22,130,19251
+,,Jan 1 – Dec 31 2024,21,33,93,18985
+,,Jan 1 – Nov 12 2025,33,27,70,16993
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,126,41,141,41912
+,,Jan 1 – Dec 31 2023,178,58,146,42744
+,,Jan 1 – Dec 31 2024,182,65,148,42622
+,,Jan 1 – Nov 12 2025,162,72,109,38186
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,66,34,53,33757
+,,Jan 1 – Dec 31 2023,105,72,45,34427
+,,Jan 1 – Dec 31 2024,111,70,41,34442
+,,Jan 1 – Nov 12 2025,87,78,43,30706
+,65 Years or more,Jan 1 – Dec 31 2022,46,24,18,26246
+,,Jan 1 – Dec 31 2023,45,41,13,27317
+,,Jan 1 – Dec 31 2024,57,64,12,28523
+,,Jan 1 – Nov 12 2025,45,52,15,26493
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,486
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,439
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,409
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,433
+,"Total: Total includes all data under the Nevada bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,277,122,329,154916
+,,Jan 1 – Dec 31 2023,363,207,343,152792
+,,Jan 1 – Dec 31 2024,373,243,308,152587
+,,Jan 1 – Nov 12 2025,327,235,245,136535
+Hawaii,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,29176
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,32266
+,,Jan 1 – Dec 31 2024,10 or fewer,11,10 or fewer,33937
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,29696
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,13,15578
+,,Jan 1 – Dec 31 2023,14,20,11,17239
+,,Jan 1 – Dec 31 2024,12,17,16,19719
+,,Jan 1 – Nov 12 2025,10 or fewer,23,18,18203
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,70,16,12,34590
+,,Jan 1 – Dec 31 2023,90,10 or fewer,16,38366
+,,Jan 1 – Dec 31 2024,67,21,22,41971
+,,Jan 1 – Nov 12 2025,44,26,14,38745
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,44,18,10 or fewer,33006
+,,Jan 1 – Dec 31 2023,62,18,10 or fewer,37020
+,,Jan 1 – Dec 31 2024,49,17,16,39581
+,,Jan 1 – Nov 12 2025,34,19,10 or fewer,36004
+,65 Years or more,Jan 1 – Dec 31 2022,24,17,10 or fewer,37039
+,,Jan 1 – Dec 31 2023,33,19,10 or fewer,42801
+,,Jan 1 – Dec 31 2024,46,25,10 or fewer,46262
+,,Jan 1 – Nov 12 2025,24,36,10 or fewer,43067
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,302
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,338
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,385
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,412
+,"Total: Total includes all data under the Hawaii bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,147,61,42,149097
+,,Jan 1 – Dec 31 2023,201,68,39,167296
+,,Jan 1 – Dec 31 2024,174,90,55,181076
+,,Jan 1 – Nov 12 2025,105,110,43,165497
+Nebraska,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,22394
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,11,21646
+,,Jan 1 – Dec 31 2024,10 or fewer,20,10 or fewer,23867
+,,Jan 1 – Nov 12 2025,10 or fewer,24,10 or fewer,21586
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,27,42,52,21405
+,,Jan 1 – Dec 31 2023,16,50,47,22108
+,,Jan 1 – Dec 31 2024,13,45,58,23744
+,,Jan 1 – Nov 12 2025,10 or fewer,37,43,21427
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,58,82,71,39265
+,,Jan 1 – Dec 31 2023,34,91,68,41441
+,,Jan 1 – Dec 31 2024,35,93,63,45276
+,,Jan 1 – Nov 12 2025,25,106,65,41577
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,20,73,25,30959
+,,Jan 1 – Dec 31 2023,26,63,24,32810
+,,Jan 1 – Dec 31 2024,21,91,25,35939
+,,Jan 1 – Nov 12 2025,19,93,24,33535
+,65 Years or more,Jan 1 – Dec 31 2022,15,46,10 or fewer,31728
+,,Jan 1 – Dec 31 2023,20,54,10 or fewer,35482
+,,Jan 1 – Dec 31 2024,20,65,10 or fewer,40145
+,,Jan 1 – Nov 12 2025,20,69,10 or fewer,39293
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,386
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,380
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,372
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,402
+,"Total: Total includes all data under the Nebraska bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,120,250,158,145406
+,,Jan 1 – Dec 31 2023,95,266,157,153137
+,,Jan 1 – Dec 31 2024,91,308,161,168524
+,,Jan 1 – Nov 12 2025,74,327,144,157174
+Maine,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,21007
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,20099
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,21027
+,,Jan 1 – Nov 12 2025,10 or fewer,14,10 or fewer,18290
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,20,14,10 or fewer,16569
+,,Jan 1 – Dec 31 2023,29,17,14,16548
+,,Jan 1 – Dec 31 2024,11,22,10 or fewer,17370
+,,Jan 1 – Nov 12 2025,10 or fewer,15,10 or fewer,14976
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,202,31,17,37077
+,,Jan 1 – Dec 31 2023,169,37,15,37828
+,,Jan 1 – Dec 31 2024,129,45,13,39697
+,,Jan 1 – Nov 12 2025,128,42,10 or fewer,35165
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,104,24,10 or fewer,36873
+,,Jan 1 – Dec 31 2023,90,31,10 or fewer,38074
+,,Jan 1 – Dec 31 2024,73,34,13,39064
+,,Jan 1 – Nov 12 2025,72,27,10 or fewer,34565
+,65 Years or more,Jan 1 – Dec 31 2022,22,30,10 or fewer,44305
+,,Jan 1 – Dec 31 2023,20,29,10 or fewer,47537
+,,Jan 1 – Dec 31 2024,18,51,10 or fewer,50879
+,,Jan 1 – Nov 12 2025,12,45,10 or fewer,47253
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,415
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,414
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,388
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,395
+,"Total: Total includes all data under the Maine bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,345,107,41,155533
+,,Jan 1 – Dec 31 2023,308,116,45,159800
+,,Jan 1 – Dec 31 2024,230,154,38,167681
+,,Jan 1 – Nov 12 2025,218,142,28,150093
+Rhode Island,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,30575
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,29643
+,,Jan 1 – Dec 31 2024,10 or fewer,12,10 or fewer,30766
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,26563
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,30,10 or fewer,24,17015
+,,Jan 1 – Dec 31 2023,22,11,32,17231
+,,Jan 1 – Dec 31 2024,14,10 or fewer,19,17363
+,,Jan 1 – Nov 12 2025,10 or fewer,15,15,15030
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,176,10 or fewer,37,32427
+,,Jan 1 – Dec 31 2023,148,22,34,33641
+,,Jan 1 – Dec 31 2024,138,24,22,34670
+,,Jan 1 – Nov 12 2025,123,27,25,30383
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,93,14,10 or fewer,30933
+,,Jan 1 – Dec 31 2023,77,25,10 or fewer,31920
+,,Jan 1 – Dec 31 2024,66,24,10 or fewer,32666
+,,Jan 1 – Nov 12 2025,46,11,10 or fewer,28450
+,65 Years or more,Jan 1 – Dec 31 2022,11,24,10 or fewer,33193
+,,Jan 1 – Dec 31 2023,13,17,10 or fewer,36340
+,,Jan 1 – Dec 31 2024,12,27,10 or fewer,38130
+,,Jan 1 – Nov 12 2025,10 or fewer,22,10 or fewer,33379
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,373
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,382
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,354
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,406
+,"Total: Total includes all data under the Rhode Island bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,311,61,70,143902
+,,Jan 1 – Dec 31 2023,259,84,76,148537
+,,Jan 1 – Dec 31 2024,228,93,54,153292
+,,Jan 1 – Nov 12 2025,175,82,49,133763
+Alabama,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,17,10 or fewer,17780
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,17880
+,,Jan 1 – Dec 31 2024,10 or fewer,13,10 or fewer,18202
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,15419
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,17,37,38,15566
+,,Jan 1 – Dec 31 2023,12,70,37,15869
+,,Jan 1 – Dec 31 2024,10 or fewer,50,36,16499
+,,Jan 1 – Nov 12 2025,10 or fewer,52,19,14794
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,72,93,54,33640
+,,Jan 1 – Dec 31 2023,42,128,43,34979
+,,Jan 1 – Dec 31 2024,39,102,57,35956
+,,Jan 1 – Nov 12 2025,27,90,35,32208
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,30,87,24,32076
+,,Jan 1 – Dec 31 2023,38,102,26,34125
+,,Jan 1 – Dec 31 2024,33,87,21,34781
+,,Jan 1 – Nov 12 2025,24,81,16,31539
+,65 Years or more,Jan 1 – Dec 31 2022,17,39,10 or fewer,31143
+,,Jan 1 – Dec 31 2023,15,59,10 or fewer,33595
+,,Jan 1 – Dec 31 2024,21,56,15,36079
+,,Jan 1 – Nov 12 2025,14,60,10 or fewer,33465
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,355
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,374
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,369
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,427
+,"Total: Total includes all data under the Alabama bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,135,271,127,129938
+,,Jan 1 – Dec 31 2023,107,363,121,136148
+,,Jan 1 – Dec 31 2024,102,304,132,141200
+,,Jan 1 – Nov 12 2025,69,289,79,127355
+Delaware,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,12,34905
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,34281
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,34002
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,28933
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,17,16,45,14364
+,,Jan 1 – Dec 31 2023,10 or fewer,27,33,16385
+,,Jan 1 – Dec 31 2024,10 or fewer,25,38,17051
+,,Jan 1 – Nov 12 2025,10 or fewer,16,24,15013
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,147,26,31,23792
+,,Jan 1 – Dec 31 2023,208,24,23,29744
+,,Jan 1 – Dec 31 2024,222,33,34,31337
+,,Jan 1 – Nov 12 2025,165,39,24,27478
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,87,24,10 or fewer,20343
+,,Jan 1 – Dec 31 2023,114,20,10 or fewer,25053
+,,Jan 1 – Dec 31 2024,122,34,10 or fewer,26738
+,,Jan 1 – Nov 12 2025,133,38,10 or fewer,23394
+,65 Years or more,Jan 1 – Dec 31 2022,10 or fewer,21,10 or fewer,20433
+,,Jan 1 – Dec 31 2023,28,32,10 or fewer,25037
+,,Jan 1 – Dec 31 2024,22,39,10 or fewer,27917
+,,Jan 1 – Nov 12 2025,26,40,10 or fewer,26054
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,285
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,245
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,273
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,279
+,"Total: Total includes all data under the Delaware bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,262,95,100,113603
+,,Jan 1 – Dec 31 2023,358,106,70,130124
+,,Jan 1 – Dec 31 2024,376,135,89,136649
+,,Jan 1 – Nov 12 2025,325,141,54,120695
+North Dakota,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,15828
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,15110
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,15630
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,14115
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,41,24,13,11983
+,,Jan 1 – Dec 31 2023,25,27,17,12120
+,,Jan 1 – Dec 31 2024,15,11,10 or fewer,12097
+,,Jan 1 – Nov 12 2025,28,17,15,10905
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,74,35,19,24492
+,,Jan 1 – Dec 31 2023,96,31,16,25168
+,,Jan 1 – Dec 31 2024,55,26,19,25815
+,,Jan 1 – Nov 12 2025,92,38,14,23575
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,20,23,10 or fewer,18156
+,,Jan 1 – Dec 31 2023,25,23,10 or fewer,18743
+,,Jan 1 – Dec 31 2024,21,18,10 or fewer,18947
+,,Jan 1 – Nov 12 2025,22,18,10 or fewer,17271
+,65 Years or more,Jan 1 – Dec 31 2022,10 or fewer,13,10 or fewer,19679
+,,Jan 1 – Dec 31 2023,14,11,10 or fewer,20641
+,,Jan 1 – Dec 31 2024,10 or fewer,23,10 or fewer,21901
+,,Jan 1 – Nov 12 2025,12,23,10 or fewer,20499
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,185
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,162
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,190
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,186
+,"Total: Total includes all data under the North Dakota bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,142,103,40,89920
+,,Jan 1 – Dec 31 2023,160,96,41,91474
+,,Jan 1 – Dec 31 2024,98,82,31,94135
+,,Jan 1 – Nov 12 2025,154,99,36,86211
+Utah,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,3102
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,2796
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,2697
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,17337
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,10 or fewer,11,10 or fewer,7757
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,7704
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,7632
+,,Jan 1 – Nov 12 2025,10 or fewer,12,18,18415
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,22,14,20,17994
+,,Jan 1 – Dec 31 2023,15,10 or fewer,14,18248
+,,Jan 1 – Dec 31 2024,20,16,18,18804
+,,Jan 1 – Nov 12 2025,41,17,18,37265
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,16,10 or fewer,10 or fewer,12581
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,13264
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,13528
+,,Jan 1 – Nov 12 2025,24,11,13,27720
+,65 Years or more,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,9172
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,10011
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,10535
+,,Jan 1 – Nov 12 2025,12,10 or fewer,10 or fewer,27118
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,107
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,127
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,160
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,194
+,"Total: Total includes all data under the Utah bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,45,35,35,50521
+,,Jan 1 – Dec 31 2023,32,27,30,51965
+,,Jan 1 – Dec 31 2024,34,37,29,53181
+,,Jan 1 – Nov 12 2025,84,48,53,127834
+Montana,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,6988
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,8174
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,10883
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,10314
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,6462
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,7562
+,,Jan 1 – Dec 31 2024,10 or fewer,18,17,10382
+,,Jan 1 – Nov 12 2025,12,10 or fewer,12,10019
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,14,13,10 or fewer,11369
+,,Jan 1 – Dec 31 2023,26,21,13,13871
+,,Jan 1 – Dec 31 2024,35,21,14,19140
+,,Jan 1 – Nov 12 2025,44,12,11,18639
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,10 or fewer,13,10 or fewer,8838
+,,Jan 1 – Dec 31 2023,14,11,10 or fewer,11344
+,,Jan 1 – Dec 31 2024,13,19,10 or fewer,15574
+,,Jan 1 – Nov 12 2025,22,18,10 or fewer,15567
+,65 Years or more,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,9413
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,13252
+,,Jan 1 – Dec 31 2024,11,15,10 or fewer,20191
+,,Jan 1 – Nov 12 2025,12,15,10 or fewer,20472
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,86
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,90
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,108
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,181
+,"Total: Total includes all data under the Montana bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,28,42,23,43009
+,,Jan 1 – Dec 31 2023,54,53,26,54113
+,,Jan 1 – Dec 31 2024,66,73,39,75966
+,,Jan 1 – Nov 12 2025,90,51,37,74929
+Vermont,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,8629
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,8273
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,8507
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,7523
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,7683
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,7787
+,,Jan 1 – Dec 31 2024,10 or fewer,11,10 or fewer,7978
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,7042
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,30,10 or fewer,15,15446
+,,Jan 1 – Dec 31 2023,38,11,12,16346
+,,Jan 1 – Dec 31 2024,16,20,12,16752
+,,Jan 1 – Nov 12 2025,68,17,10 or fewer,15015
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,13,10 or fewer,10 or fewer,15532
+,,Jan 1 – Dec 31 2023,14,10 or fewer,10 or fewer,15994
+,,Jan 1 – Dec 31 2024,11,10 or fewer,10 or fewer,16531
+,,Jan 1 – Nov 12 2025,28,13,10 or fewer,14766
+,65 Years or more,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,18205
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,19711
+,,Jan 1 – Dec 31 2024,10 or fewer,19,10 or fewer,21361
+,,Jan 1 – Nov 12 2025,10 or fewer,30,10 or fewer,20116
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,140
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,205
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,220
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,219
+,"Total: Total includes all data under the Vermont bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,50,30,30,65348
+,,Jan 1 – Dec 31 2023,61,36,30,68003
+,,Jan 1 – Dec 31 2024,34,60,20,71028
+,,Jan 1 – Nov 12 2025,103,70,11,64487
+New Hampshire,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,7533
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,6956
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,7628
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,6878
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,7204
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,7036
+,,Jan 1 – Dec 31 2024,10 or fewer,15,10 or fewer,7501
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,6801
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,63,10 or fewer,10 or fewer,13713
+,,Jan 1 – Dec 31 2023,52,10 or fewer,10 or fewer,13874
+,,Jan 1 – Dec 31 2024,40,10 or fewer,10 or fewer,14418
+,,Jan 1 – Nov 12 2025,24,19,10 or fewer,12949
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,31,10 or fewer,10 or fewer,14733
+,,Jan 1 – Dec 31 2023,24,10 or fewer,10 or fewer,14913
+,,Jan 1 – Dec 31 2024,18,13,10 or fewer,15359
+,,Jan 1 – Nov 12 2025,16,13,10 or fewer,14109
+,65 Years or more,Jan 1 – Dec 31 2022,10 or fewer,15,10 or fewer,17804
+,,Jan 1 – Dec 31 2023,10 or fewer,15,10 or fewer,19185
+,,Jan 1 – Dec 31 2024,10 or fewer,11,10 or fewer,20527
+,,Jan 1 – Nov 12 2025,10 or fewer,16,10 or fewer,19965
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,144
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,181
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,164
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,202
+,"Total: Total includes all data under the New Hampshire bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,107,42,19,60901
+,,Jan 1 – Dec 31 2023,90,40,17,61952
+,,Jan 1 – Dec 31 2024,68,49,20,65367
+,,Jan 1 – Nov 12 2025,49,60,10 or fewer,60745
+New Mexico,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,7905
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,6598
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,6240
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,5440
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,11,12,10 or fewer,7838
+,,Jan 1 – Dec 31 2023,13,10 or fewer,10 or fewer,7287
+,,Jan 1 – Dec 31 2024,10 or fewer,15,10 or fewer,7015
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,5956
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,78,21,13,19160
+,,Jan 1 – Dec 31 2023,66,27,12,18113
+,,Jan 1 – Dec 31 2024,47,22,16,17862
+,,Jan 1 – Nov 12 2025,49,18,13,15274
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,28,16,10 or fewer,15210
+,,Jan 1 – Dec 31 2023,29,31,10 or fewer,14454
+,,Jan 1 – Dec 31 2024,23,18,10 or fewer,14540
+,,Jan 1 – Nov 12 2025,22,21,10 or fewer,13013
+,65 Years or more,Jan 1 – Dec 31 2022,12,13,10 or fewer,16289
+,,Jan 1 – Dec 31 2023,11,20,10 or fewer,15659
+,,Jan 1 – Dec 31 2024,10 or fewer,26,10 or fewer,16980
+,,Jan 1 – Nov 12 2025,10 or fewer,20,10 or fewer,15226
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,120
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,119
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,121
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,142
+,"Total: Total includes all data under the New Mexico bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,128,65,27,66244
+,,Jan 1 – Dec 31 2023,119,89,23,61994
+,,Jan 1 – Dec 31 2024,86,87,23,62505
+,,Jan 1 – Nov 12 2025,83,75,21,54874
+South Dakota,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,10766
+,,Jan 1 – Dec 31 2023,10 or fewer,11,10 or fewer,10125
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,10205
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,8993
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,10 or fewer,12,15,7159
+,,Jan 1 – Dec 31 2023,10 or fewer,15,10 or fewer,7224
+,,Jan 1 – Dec 31 2024,10 or fewer,11,18,7248
+,,Jan 1 – Nov 12 2025,10 or fewer,14,18,6350
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,10 or fewer,32,14,13340
+,,Jan 1 – Dec 31 2023,10 or fewer,29,24,13574
+,,Jan 1 – Dec 31 2024,10 or fewer,18,15,13662
+,,Jan 1 – Nov 12 2025,10 or fewer,31,10 or fewer,12370
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,10 or fewer,13,10 or fewer,11237
+,,Jan 1 – Dec 31 2023,10 or fewer,19,10 or fewer,11412
+,,Jan 1 – Dec 31 2024,10 or fewer,16,10 or fewer,11360
+,,Jan 1 – Nov 12 2025,10 or fewer,17,10 or fewer,10283
+,65 Years or more,Jan 1 – Dec 31 2022,10 or fewer,23,10 or fewer,12939
+,,Jan 1 – Dec 31 2023,10 or fewer,13,10 or fewer,13533
+,,Jan 1 – Dec 31 2024,10 or fewer,16,10 or fewer,13878
+,,Jan 1 – Nov 12 2025,10 or fewer,20,10 or fewer,13205
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,123
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,98
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,127
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,128
+,"Total: Total includes all data under the South Dakota bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,21,84,44,55398
+,,Jan 1 – Dec 31 2023,18,87,45,55777
+,,Jan 1 – Dec 31 2024,25,65,44,56287
+,,Jan 1 – Nov 12 2025,13,88,44,51192
+Wyoming,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,5397
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,5618
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,5803
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,5959
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,4591
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,4939
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,5375
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,5608
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,25,10 or fewer,14,7769
+,,Jan 1 – Dec 31 2023,18,10 or fewer,10 or fewer,8452
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,9051
+,,Jan 1 – Nov 12 2025,10 or fewer,13,10 or fewer,9544
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,6460
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,7375
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,7674
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,7920
+,65 Years or more,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,7667
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,9067
+,,Jan 1 – Dec 31 2024,10 or fewer,13,10 or fewer,9934
+,,Jan 1 – Nov 12 2025,10 or fewer,16,10 or fewer,10405
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,74
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,80
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,104
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,96
+,"Total: Total includes all data under the Wyoming bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,50,28,27,31805
+,,Jan 1 – Dec 31 2023,37,20,22,35385
+,,Jan 1 – Dec 31 2024,23,29,20,37776
+,,Jan 1 – Nov 12 2025,35,45,21,39384
+District of Columbia,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,1847
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,1889
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,1877
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,1674
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,22,2500
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,15,2333
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,15,2340
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,2015
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,27,7334
+,,Jan 1 – Dec 31 2023,15,10 or fewer,27,7844
+,,Jan 1 – Dec 31 2024,11,10 or fewer,19,7986
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,12,6919
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,3630
+,,Jan 1 – Dec 31 2023,14,10 or fewer,10 or fewer,3858
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,3946
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,3486
+,65 Years or more,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,2152
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,2366
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,2657
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,2260
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,42
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,36
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,46
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,39
+,"Total: Total includes all data under the District of Columbia bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,19,16,55,17452
+,,Jan 1 – Dec 31 2023,40,18,47,18286
+,,Jan 1 – Dec 31 2024,22,12,37,18793
+,,Jan 1 – Nov 12 2025,20,21,17,16344
+Ontario,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,456
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,691
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,749
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,533
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,323
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,404
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,484
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,405
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,552
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,796
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,967
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,718
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,671
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,1123
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,1176
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,868
+,65 Years or more,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,875
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,1570
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,1581
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,1290
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,15
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,12
+,"Total: Total includes all data under the Ontario bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,2883
+,,Jan 1 – Dec 31 2023,10 or fewer,12,10 or fewer,4598
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,4966
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,3826
+Puerto Rico,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,486
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,521
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,391
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,232
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,362
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,442
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,396
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,293
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,625
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,747
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,648
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,466
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,812
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,1001
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,845
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,581
+,65 Years or more,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,910
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,1177
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,1226
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,918
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,16
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,16
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,13
+,"Total: Total includes all data under the Puerto Rico bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,3196
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,3898
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,3513
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,2501
+Alaska,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,320
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,304
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,328
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,256
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,328
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,338
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,351
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,377
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,540
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,552
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,529
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,478
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,513
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,561
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,569
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,470
+,65 Years or more,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,546
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,629
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,707
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,709
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,10 or fewer
+,"Total: Total includes all data under the Alaska bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,2251
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,2391
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,2480
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,2297
+None of the above,Less than 15 Years,Jan 1 – Dec 31 2022,10 or fewer,21,17,72665
+,,Jan 1 – Dec 31 2023,10 or fewer,19,17,72005
+,,Jan 1 – Dec 31 2024,10 or fewer,23,23,72422
+,,Jan 1 – Nov 12 2025,10 or fewer,20,10 or fewer,65245
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,89,50,159,57860
+,,Jan 1 – Dec 31 2023,96,54,140,59560
+,,Jan 1 – Dec 31 2024,64,71,128,59922
+,,Jan 1 – Nov 12 2025,45,74,137,53771
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,684,130,246,121988
+,,Jan 1 – Dec 31 2023,723,126,255,128606
+,,Jan 1 – Dec 31 2024,588,154,211,132336
+,,Jan 1 – Nov 12 2025,496,174,187,118427
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,301,92,78,84441
+,,Jan 1 – Dec 31 2023,335,125,69,89450
+,,Jan 1 – Dec 31 2024,249,130,83,92234
+,,Jan 1 – Nov 12 2025,235,111,64,83628
+,65 Years or more,Jan 1 – Dec 31 2022,100,57,56,66946
+,,Jan 1 – Dec 31 2023,142,66,43,73231
+,,Jan 1 – Dec 31 2024,94,85,58,77399
+,,Jan 1 – Nov 12 2025,106,97,47,69497
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,10 or fewer,832
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,10 or fewer,948
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,10 or fewer,959
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,10 or fewer,1095
+,"Total: Total includes all data under the None of the above bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,1164,348,552,403038
+,,Jan 1 – Dec 31 2023,1281,383,524,421898
+,,Jan 1 – Dec 31 2024,983,458,502,433298
+,,Jan 1 – Nov 12 2025,876,472,442,390052
+Total,Less than 15 Years,Jan 1 – Dec 31 2022,321,1668,1023,4928081
+,,Jan 1 – Dec 31 2023,398,1952,1061,5157294
+,,Jan 1 – Dec 31 2024,342,2095,957,5411346
+,,Jan 1 – Nov 12 2025,255,2258,765,4856978
+,≥ 15 and < 25 Years,Jan 1 – Dec 31 2022,4852,3998,10425,3278148
+,,Jan 1 – Dec 31 2023,4700,5081,10194,3573166
+,,Jan 1 – Dec 31 2024,3172,5334,9129,3871658
+,,Jan 1 – Nov 12 2025,2315,5954,7659,3582323
+,≥ 25 and < 45 Years,Jan 1 – Dec 31 2022,25862,8202,13740,6604746
+,,Jan 1 – Dec 31 2023,26438,10349,13084,7386962
+,,Jan 1 – Dec 31 2024,19078,10819,12349,8057851
+,,Jan 1 – Nov 12 2025,16833,12687,9854,7584758
+,≥ 45 and < 65 Years,Jan 1 – Dec 31 2022,13476,6920,3995,5652779
+,,Jan 1 – Dec 31 2023,14687,8985,4313,6302571
+,,Jan 1 – Dec 31 2024,11714,9537,4261,6823056
+,,Jan 1 – Nov 12 2025,10667,10851,3683,6458654
+,65 Years or more,Jan 1 – Dec 31 2022,3818,5602,1209,5501617
+,,Jan 1 – Dec 31 2023,4582,6949,1350,6352062
+,,Jan 1 – Dec 31 2024,4408,8971,1491,7136043
+,,Jan 1 – Nov 12 2025,4394,10295,1338,6977501
+,No value,Jan 1 – Dec 31 2022,10 or fewer,10 or fewer,94,60655
+,,Jan 1 – Dec 31 2023,10 or fewer,10 or fewer,87,65840
+,,Jan 1 – Dec 31 2024,10 or fewer,10 or fewer,98,61804
+,,Jan 1 – Nov 12 2025,10 or fewer,10 or fewer,98,73165
+,"Total: Total includes all data under the Total bucket, including data from rows not currently displayed.",Jan 1 – Dec 31 2022,47760,26194,30256,25910066
+,,Jan 1 – Dec 31 2023,50189,33044,29857,28703098
+,,Jan 1 – Dec 31 2024,38208,36428,28055,31211297
+,,Jan 1 – Nov 12 2025,34053,41732,23258,29418156
