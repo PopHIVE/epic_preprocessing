@@ -317,7 +317,6 @@ monthly_injury <-vroom::vroom(
   mutate(time = as.Date(paste(year, month, '01', sep='-'), format='%Y-%b-%d' ),
          state = if_else(state =='Total', 'United States', state)
   ) %>%
-  filter(!is.na(age))%>%
   rename(epic_n_ed_opioid = ed_opioid,
          epic_n_ed_firearm = firearms_initial,
          epic_n_ed_heat = heat,
@@ -345,7 +344,9 @@ monthly_injury <-vroom::vroom(
         
   ) %>%
   left_join(state_fips, by=c('state'='geography_name')) %>%
-  dplyr::select(time, geography, age,epic_n_ed_firearm, epic_pct_ed_firearm,epic_n_ed_opioid,epic_n_ed_heat, epic_pct_ed_opioid,epic_pct_ed_heat, starts_with('suppressed'))
+  dplyr::select(time, geography, age,epic_n_ed_firearm, epic_pct_ed_firearm,epic_n_ed_opioid,epic_n_ed_heat, epic_pct_ed_opioid,epic_pct_ed_heat, starts_with('suppressed')) %>%
+  filter(!is.na(age) & !is.na(time) & !is.na(geography))
+  
 
 
 vroom::vroom_write(
