@@ -64,10 +64,10 @@
     }
   },
   "vintages": {
-    "weekly.csv.gz": "2025-12-11",
+    "weekly.csv.gz": "2025-12-18",
     "state_no_time.csv.gz": {},
     "county_no_time.csv.gz": "2025-11-14",
-    "no_geo.csv.gz": "2025-11-14",
+    "no_geo.csv.gz": "2025-12-18",
     "children.csv.gz": {}
   }
 }
