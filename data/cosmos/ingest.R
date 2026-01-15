@@ -347,14 +347,14 @@ monthly_injury <-vroom::vroom(
     suppressed_firearm = if_else(epic_n_ed_firearm == 5, 1, 0),
     suppressed_heat= if_else(epic_n_ed_heat == 5, 1, 0),
     
-    epic_pct_ed_opioid = 100* epic_n_ed_opioid/all_cause,
-    epic_pct_ed_firearm = 100* epic_n_ed_firearm/all_cause,
-    epic_pct_ed_heat = 100* epic_n_ed_heat/all_cause,
+    epic_rate_ed_opioid = 100000* epic_n_ed_opioid/all_cause,
+    epic_rate_ed_firearm = 100000* epic_n_ed_firearm/all_cause,
+    epic_rate_ed_heat = 100000* epic_n_ed_heat/all_cause,
     
         
   ) %>%
   left_join(state_fips, by=c('state'='geography_name')) %>%
-  dplyr::select(time, geography, age,epic_n_ed_firearm, epic_pct_ed_firearm,epic_n_ed_opioid,epic_n_ed_heat, epic_pct_ed_opioid,epic_pct_ed_heat, starts_with('suppressed')) %>%
+  dplyr::select(time, geography, age,epic_n_ed_firearm, epic_rate_ed_firearm,epic_n_ed_opioid,epic_n_ed_heat, epic_rate_ed_opioid,epic_rate_ed_heat, starts_with('suppressed')) %>%
   filter(!is.na(age) & !is.na(time) & !is.na(geography))
   
 
@@ -393,9 +393,9 @@ yearly_injury <-vroom::vroom(
     suppressed_firearm = if_else(epic_n_ed_firearm == 5, 1, 0),
     suppressed_heat= if_else(epic_n_ed_heat == 5, 1, 0),
     
-    epic_pct_ed_opioid = 100* epic_n_ed_opioid/all_cause,
-    epic_pct_ed_firearm = 100* epic_n_ed_firearm/all_cause,
-    epic_pct_ed_heat = 100* epic_n_ed_heat/all_cause,
+    epic_rate_ed_opioid = 100000* epic_n_ed_opioid/all_cause,
+    epic_rate_ed_firearm = 100000* epic_n_ed_firearm/all_cause,
+    epic_rate_ed_heat = 100000* epic_n_ed_heat/all_cause,
     
     
   ) %>%
@@ -404,7 +404,7 @@ yearly_injury <-vroom::vroom(
 
 
 yearly_injury %>%
-  dplyr::select(time, geography, age,epic_n_ed_firearm, epic_pct_ed_firearm,epic_n_ed_opioid,epic_n_ed_heat, epic_pct_ed_opioid,epic_pct_ed_heat, starts_with('suppressed')) %>%
+  dplyr::select(time, geography, age,epic_n_ed_firearm, epic_rate_ed_firearm,epic_n_ed_opioid,epic_n_ed_heat, epic_rate_ed_opioid,epic_rate_ed_heat, starts_with('suppressed')) %>%
   vroom::vroom_write(
     .,
     "standard/yearly_injury.csv.gz",
@@ -413,7 +413,7 @@ yearly_injury %>%
 
 
 yearly_heat <- yearly_injury %>%
-  dplyr::select(time, geography, state, age, epic_n_ed_heat, epic_pct_ed_heat, suppressed_heat) %>%
+  dplyr::select(time, geography, state, age, epic_n_ed_heat, epic_rate_ed_heat, suppressed_heat) %>%
   write_csv('./resources/heat_year.csv')
 
 
