@@ -53,13 +53,13 @@
     "sources": [{ "id": "epic_cosmos" }]
   },
 
-  "epic_pct_ed_opioid": {
-    "id": "epic_pct_ed_opioid",
-    "short_name": "Percentage of Patients in the ED for opioid overdose",
-    "long_name": "Percentage of Patients in the ED for opioid overdose",
-    "short_description": "Percentage of patients.",
-    "measure_type": "percent",
-    "unit": "percent",
+  "epic_rate_ed_opioid": {
+    "id": "epic_rate_ed_opioid",
+    "short_name": "Number of people with an opioid overdose per 100,000 ED patients",
+    "long_name": "Number of people with an opioid overdose per 100,000 ED patients",
+    "short_description": "Number of overdoses per 100,000 ED patients.",
+    "measure_type": "Rate",
+    "unit": "Cases per 100,000",
     "sources": [{ "id": "epic_cosmos" }]
   },
 
