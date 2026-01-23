@@ -2,7 +2,7 @@
   {
     "file": "raw/staging_resp_infections/2026_01_06_A04_RSV_EDvisits_ICD10s_State_Week_Age_2025.csv",
     "md5": "9be36e1b75e33dbf7b801937a6065a47",
-    "date_processed": "2026-01-07 14:39:15",
+    "date_processed": "2026-01-22 20:44:21",
     "standard_name": "rsv",
     "Session Title": "RSV ED visits State Week Age",
     "Session Description": "long format of RSV ICD-10 codes from ED encounters, state week age",
@@ -18,7 +18,7 @@
   {
     "file": "raw/staging_resp_infections/2026_01_06_A04_RSV_EDvisits_ICD10s_State_Week_Age_2024.csv",
     "md5": "274c9d1a5d261276d5bbdf8d3d03ca1c",
-    "date_processed": "2026-01-07 14:39:14",
+    "date_processed": "2026-01-22 20:44:20",
     "standard_name": "rsv",
     "Session Title": "RSV ED visits State Week Age",
     "Session Description": "long format of RSV ICD-10 codes from ED encounters, state week age",
@@ -34,7 +34,7 @@
   {
     "file": "raw/staging_resp_infections/2026_01_06_A04_RSV_EDvisits_ICD10s_State_Week_Age_2023.csv",
     "md5": "465965606c383958deddd8d8ee966a7a",
-    "date_processed": "2026-01-07 14:39:14",
+    "date_processed": "2026-01-22 20:44:20",
     "standard_name": "rsv",
     "Session Title": "RSV ED visits State Week Age",
     "Session Description": "long format of RSV ICD-10 codes from ED encounters, state week age",

@@ -2,7 +2,7 @@
   {
     "file": "raw/staging_resp_infections/2026_01_06_A01_AllEDvisits_State_Week_Age_2025.csv",
     "md5": "c9800f1fbb11efc65184622b49ca634f",
-    "date_processed": "2026-01-07 14:39:13",
+    "date_processed": "2026-01-22 20:44:19",
     "standard_name": "all_encounters_weekly",
     "Session Title": "All ED Encounters by State Week Age",
     "Session Description": "All ED Enouncters as base,Slice by 53 states of residenceSlice by 6 age groups",
@@ -18,7 +18,7 @@
   {
     "file": "raw/staging_resp_infections/2026_01_06_A01_AllEDvisits_State_Week_Age_2024.csv",
     "md5": "e7b4e427bd9414283651fea0660c7907",
-    "date_processed": "2026-01-07 14:39:13",
+    "date_processed": "2026-01-22 20:44:19",
     "standard_name": "all_encounters_weekly",
     "Session Title": "All ED Encounters by State Week Age",
     "Session Description": "All ED Enouncters as base,Slice by 53 states of residenceSlice by 6 age groups",
@@ -34,7 +34,7 @@
   {
     "file": "raw/staging_resp_infections/2026_01_06_A01_AllEDvisits_State_Week_Age_2023.csv",
     "md5": "1245f7163d4d9c1eb9c1de066c3e223e",
-    "date_processed": "2026-01-07 14:39:13",
+    "date_processed": "2026-01-22 20:44:19",
     "standard_name": "all_encounters_weekly",
     "Session Title": "All ED Encounters by State Week Age",
     "Session Description": "All ED Enouncters as base,Slice by 53 states of residenceSlice by 6 age groups",

@@ -1,0 +1,2573 @@
+﻿Session Title,Number of Patients by Diagnosis (Encounter) and County of Residence,,
+Session ID,2792481,,
+Data Model,Patients,,
+Population Base,All Patients,,
+Population Criteria Filters: These criteria are a summary and do not fully reflect the content of the exported session.,State of Residence: STATES_AL_DE,"Encounter Type: Emergency, Emergency to Inpatient",
+Session Date Range,1/1/2018 - 12/31/2025,,
+Measure,Number of Patients,,
+Export User,Stephanie Perniciaro,,
+Date of Export,1/22/2026,,
+,,,
+,,,
+,Diagnosis (Encounter),Heat,"Total: Total includes all data, including data from columns not currently displayed."
+Year,County of Residence,,
+Jan 1 – Dec 31 2018,"SAN DIEGO, CA",96,133707
+,"MARICOPA, AZ",249,146574
+,"RIVERSIDE, CA",137,106821
+,"FRESNO, CA",76,89415
+,"EL PASO, CO",33,95093
+,"HARTFORD, CT",61,98676
+,"DENVER, CO",36,86787
+,"SAN BERNARDINO, CA",26,41433
+,"ORANGE, CA",19,20455
+,"ARAPAHOE, CO",15,59556
+,"SANTA CLARA, CA",11,49907
+,"ALAMEDA, CA",18,20926
+,"PULASKI, AR",139,58282
+,"ADAMS, CO",12,52199
+,"PIMA, AZ",32,48199
+,"JEFFERSON, CO",15,41607
+,"WELD, CO",17,38499
+,"LARIMER, CO",33,38623
+,"LOS ANGELES, CA",32,20659
+,"NEW HAVEN, CT",26,37937
+,"NEW CASTLE, DE",14,30409
+,"CONTRA COSTA, CA",10 or fewer,27769
+,"BOULDER, CO",10 or fewer,16025
+,"MONTEREY, CA",10 or fewer,13281
+,"SAN FRANCISCO, CA",10 or fewer,4135
+,"SAN MATEO, CA",10 or fewer,20165
+,"FAIRFIELD, CT",12,18293
+,"KENT, DE",44,34908
+,"DOUGLAS, CO",10 or fewer,16131
+,"NEW LONDON, CT",32,34214
+,"SUSSEX, DE",17,17803
+,"MOBILE, AL",15,4166
+,"BALDWIN, AL",10 or fewer,1866
+,"MIDDLESEX, CT",10 or fewer,7268
+,"PUEBLO, CO",10 or fewer,3370
+,"MADERA, CA",10 or fewer,4206
+,"MESA, CO",12,12096
+,"WINDHAM, CT",17,18171
+,"LITCHFIELD, CT",10 or fewer,3857
+,"FAULKNER, AR",34,13431
+,"CRAIGHEAD, AR",41,13385
+,"SEBASTIAN, AR",10 or fewer,973
+,"SALINE, AR",21,8688
+,"HOUSTON, AL",10 or fewer,317
+,"TOLLAND, CT",11,8140
+,"WASHINGTON, AR",10 or fewer,1324
+,"LONOKE, AR",34,8958
+,"TULARE, CA",10 or fewer,2675
+,"CRITTENDEN, AR",10 or fewer,3031
+,"CRAWFORD, AR",10 or fewer,426
+,"BENTON, AR",10 or fewer,1149
+,"BROOMFIELD, CO",10 or fewer,5667
+,"SACRAMENTO, CA",10 or fewer,4396
+,"PINAL, AZ",10 or fewer,2892
+,"MERCED, CA",10 or fewer,1365
+,"SAN JOAQUIN, CA",10 or fewer,3103
+,"KERN, CA",10 or fewer,1769
+,"JEFFERSON, AR",10 or fewer,3169
+,"KINGS, CA",10 or fewer,1391
+,"HOT SPRING, AR",17,5799
+,"CLEBURNE, AR",21,4780
+,"WHITE, AR",10 or fewer,3250
+,"TELLER, CO",10 or fewer,3285
+,"STANISLAUS, CA",10 or fewer,1670
+,"GREENE, AR",18,3361
+,"CLARK, AR",15,4213
+,"SANTA CRUZ, CA",10 or fewer,1881
+,"YAVAPAI, AZ",10 or fewer,2448
+,"POINSETT, AR",10 or fewer,3441
+,"ROUTT, CO",10 or fewer,1641
+,"IMPERIAL, CA",10 or fewer,1606
+,"SOLANO, CA",10 or fewer,1728
+,"GARLAND, AR",10 or fewer,1735
+,"DALE, AL",10 or fewer,185
+,"JEFFERSON, AL",10 or fewer,1342
+,"VENTURA, CA",10 or fewer,1410
+,"CHEROKEE, AL",10 or fewer,248
+,"ARKANSAS, AR",11,3032
+,"COCHISE, AZ",10 or fewer,1867
+,"MISSISSIPPI, AR",10 or fewer,2085
+,"PLACER, CA",10 or fewer,1433
+,"GRANT, AR",10 or fewer,1787
+,"SONOMA, CA",10 or fewer,1160
+,"POPE, AR",10 or fewer,1041
+,"GENEVA, AL",10 or fewer,65
+,"ELBERT, CO",10 or fewer,1107
+,"MARIN, CA",10 or fewer,885
+,"MOFFAT, CO",10 or fewer,419
+,"FREMONT, CO",10 or fewer,846
+,"MOHAVE, AZ",10 or fewer,1343
+,"MADISON, AL",10 or fewer,1008
+,"EL DORADO, CA",10 or fewer,1171
+,"COFFEE, AL",10 or fewer,145
+,"PICKENS, AL",10 or fewer,573
+,"DREW, AR",10 or fewer,395
+,"SANTA BARBARA, CA",10 or fewer,804
+,"CONWAY, AR",10 or fewer,1379
+,"HUMBOLDT, CA",10 or fewer,512
+,"SAN LUIS OBISPO, CA",10 or fewer,844
+,"HENRY, AL",10 or fewer,41
+,"LAMAR, AL",10 or fewer,1129
+,"CHOCTAW, AL",10 or fewer,83
+,"ESCAMBIA, AL",10 or fewer,1826
+,"ANCHORAGE, AK",10 or fewer,765
+,"CHAMBERS, AL",10 or fewer,1018
+,"VAN BUREN, AR",10 or fewer,1040
+,"GARFIELD, CO",10 or fewer,564
+,"UNION, AR",10 or fewer,675
+,"CALHOUN, AL",10 or fewer,430
+,"MARION, AL",10 or fewer,116
+,"SAINT FRANCIS, AR",10 or fewer,610
+,"LASSEN, CA",10 or fewer,869
+,"JACKSON, AL",10 or fewer,1014
+,"PITKIN, CO",10 or fewer,120
+,"MONROE, AR",10 or fewer,1202
+,"MORGAN, CO",10 or fewer,765
+,"SAN BENITO, CA",10 or fewer,457
+,"PERRY, AR",10 or fewer,1042
+,"LAWRENCE, AR",10 or fewer,931
+,"PRAIRIE, AR",10 or fewer,1091
+,"YUMA, AZ",10 or fewer,595
+,"OUACHITA, AR",10 or fewer,641
+,"CROSS, AR",10 or fewer,716
+,"BARBOUR, AL",10 or fewer,65
+,"ASHLEY, AR",10 or fewer,401
+,"DELTA, CO",10 or fewer,555
+,"EAGLE, CO",10 or fewer,394
+,"PHILLIPS, AR",10 or fewer,596
+,"MONTGOMERY, AL",10 or fewer,430
+,"PARK, CO",10 or fewer,737
+,"LEE, AL",10 or fewer,528
+,"RANDOLPH, AL",10 or fewer,842
+,"INDEPENDENCE, AR",10 or fewer,546
+,"COCONINO, AZ",10 or fewer,606
+,"NEVADA, AR",10 or fewer,896
+,"YOLO, CA",10 or fewer,567
+,"GRAND, CO",10 or fewer,477
+,"OTERO, CO",10 or fewer,289
+,"WASHINGTON, AL",10 or fewer,102
+,"GILA, AZ",10 or fewer,566
+,"NEVADA, CA",10 or fewer,599
+,"TUSCALOOSA, AL",10 or fewer,526
+,"SANTA CRUZ, AZ",10 or fewer,537
+,"MONTROSE, CO",10 or fewer,460
+,"NAVAJO, AZ",10 or fewer,487
+,"SHELBY, AL",10 or fewer,437
+,"BUTTE, CA",10 or fewer,525
+,"LOGAN, AR",10 or fewer,191
+,"FRANKLIN, AR",10 or fewer,119
+,"SHASTA, CA",10 or fewer,507
+,"JOHNSON, AR",10 or fewer,319
+,"GUNNISON, CO",10 or fewer,171
+,"RANDOLPH, AR",10 or fewer,504
+,"YELL, AR",10 or fewer,313
+,"JACKSON, AR",10 or fewer,523
+,"CLAY, AR",10 or fewer,521
+,"PLUMAS, CA",10 or fewer,501
+,"MADISON, AR",10 or fewer,75
+,"NAPA, CA",10 or fewer,344
+,"HEMPSTEAD, AR",10 or fewer,427
+,"LINCOLN, AR",10 or fewer,258
+,"SUMTER, AL",10 or fewer,65
+,"MILLER, AR",10 or fewer,310
+,"DESHA, AR",10 or fewer,288
+,"ETOWAH, AL",10 or fewer,258
+,"BRADLEY, AR",10 or fewer,298
+,"DALLAS, AR",10 or fewer,488
+,"PIKE, AR",10 or fewer,488
+,"SHARP, AR",10 or fewer,404
+,"MARIPOSA, CA",10 or fewer,246
+,"APACHE, AZ",10 or fewer,325
+,"SUMMIT, CO",10 or fewer,297
+,"CLARKE, AL",10 or fewer,54
+,"LOGAN, CO",10 or fewer,342
+,"LA PLATA, CO",10 or fewer,320
+,"RUSSELL, AL",10 or fewer,298
+,"BAXTER, AR",10 or fewer,305
+,"CLEVELAND, AR",10 or fewer,229
+,"LAS ANIMAS, CO",10 or fewer,233
+,"COLUMBIA, AR",10 or fewer,247
+,"CARROLL, AR",10 or fewer,81
+,"CHAFFEE, CO",10 or fewer,240
+,"FAIRBANKS NORTH STAR, AK",10 or fewer,232
+,"CHICOT, AR",10 or fewer,234
+,"LEE, AR",10 or fewer,240
+,"SCOTT, AR",10 or fewer,63
+,"POLK, AR",10 or fewer,163
+,"BOONE, AR",10 or fewer,173
+,"MATANUSKA SUSITNA, AK",10 or fewer,262
+,"COVINGTON, AL",10 or fewer,73
+,"TUOLUMNE, CA",10 or fewer,263
+,"MENDOCINO, CA",10 or fewer,228
+,"MORGAN, AL",10 or fewer,260
+,"GILPIN, CO",10 or fewer,236
+,"INYO, CA",10 or fewer,240
+,"LIMESTONE, AL",10 or fewer,195
+,"MONROE, AL",10 or fewer,199
+,"MARSHALL, AL",10 or fewer,224
+,"GRAHAM, AZ",10 or fewer,250
+,"PROWERS, CO",10 or fewer,209
+,"PIKE, AL",10 or fewer,47
+,"STONE, AR",10 or fewer,200
+,"CLEAR CREEK, CO",10 or fewer,240
+,"HUERFANO, CO",10 or fewer,145
+,"HOWARD, AR",10 or fewer,217
+,"ELMORE, AL",10 or fewer,147
+,"MARENGO, AL",10 or fewer,44
+,"LAUDERDALE, AL",10 or fewer,154
+,"SAINT CLAIR, AL",10 or fewer,155
+,"MONTEZUMA, CO",10 or fewer,172
+,"WOODRUFF, AR",10 or fewer,187
+,"SUTTER, CA",10 or fewer,164
+,"TALLADEGA, AL",10 or fewer,171
+,"LAKE, CA",10 or fewer,182
+,"KENAI PENINSULA, AK",10 or fewer,172
+,"CALAVERAS, CA",10 or fewer,163
+,"SEVIER, AR",10 or fewer,110
+,"CUSTER, CO",10 or fewer,86
+,"SEARCY, AR",10 or fewer,181
+,"YUBA, CA",10 or fewer,178
+,"CULLMAN, AL",10 or fewer,113
+,"RIO GRANDE, CO",10 or fewer,113
+,"CROWLEY, CO",10 or fewer,98
+,"IZARD, AR",10 or fewer,163
+,"ALAMOSA, CO",10 or fewer,143
+,"COLBERT, AL",10 or fewer,128
+,"CLEBURNE, AL",10 or fewer,150
+,"AUTAUGA, AL",10 or fewer,127
+,"SISKIYOU, CA",10 or fewer,169
+,"FRANKLIN, AL",10 or fewer,52
+,"CALHOUN, AR",10 or fewer,104
+,"LINCOLN, CO",10 or fewer,183
+,"MONO, CA",10 or fewer,124
+,"YUMA, CO",10 or fewer,128
+,"MONTGOMERY, AR",10 or fewer,96
+,"KIT CARSON, CO",10 or fewer,122
+,"LA PAZ, AZ",10 or fewer,152
+,"WALKER, AL",10 or fewer,99
+,"BENT, CO",10 or fewer,103
+,"ARCHULETA, CO",10 or fewer,99
+,"AMADOR, CA",10 or fewer,139
+,"MODOC, CA",10 or fewer,147
+,"LITTLE RIVER, AR",10 or fewer,109
+,"JUNEAU, AK",10 or fewer,123
+,"FULTON, AR",10 or fewer,114
+,"TEHAMA, CA",10 or fewer,103
+,"RIO BLANCO, CO",10 or fewer,98
+,"MARION, AR",10 or fewer,84
+,"JACKSON, CO",10 or fewer,89
+,"BLOUNT, AL",10 or fewer,76
+,"DALLAS, AL",10 or fewer,64
+,"CONECUH, AL",10 or fewer,62
+,"DEL NORTE, CA",10 or fewer,106
+,"TALLAPOOSA, AL",10 or fewer,80
+,"WILCOX, AL",10 or fewer,24
+,"GREENLEE, AZ",10 or fewer,117
+,"SAN MIGUEL, CO",10 or fewer,69
+,"CHILTON, AL",10 or fewer,67
+,"FAYETTE, AL",10 or fewer,83
+,"SIERRA, CA",10 or fewer,97
+,"WASHINGTON, CO",10 or fewer,95
+,"LAKE, CO",10 or fewer,83
+,"PHILLIPS, CO",10 or fewer,78
+,"CONEJOS, CO",10 or fewer,80
+,"BACA, CO",10 or fewer,57
+,"CRENSHAW, AL",10 or fewer,28
+,"LAFAYETTE, AR",10 or fewer,66
+,"BUTLER, AL",10 or fewer,33
+,"NEWTON, AR",10 or fewer,30
+,"WINSTON, AL",10 or fewer,59
+,"COSTILLA, CO",10 or fewer,61
+,"LAWRENCE, AL",10 or fewer,37
+,"KODIAK ISLAND, AK",10 or fewer,61
+,"SAGUACHE, CO",10 or fewer,41
+,"GLENN, CA",10 or fewer,54
+,"HALE, AL",10 or fewer,35
+,"CLAY, AL",10 or fewer,47
+,"MACON, AL",10 or fewer,34
+,"SEDGWICK, CO",10 or fewer,53
+,"KETCHIKAN GATEWAY, AK",10 or fewer,34
+,"OURAY, CO",10 or fewer,41
+,"BIBB, AL",10 or fewer,37
+,"COLUSA, CA",10 or fewer,32
+,"TRINITY, CA",10 or fewer,33
+,"KIOWA, CO",10 or fewer,29
+,"GREENE, AL",10 or fewer,17
+,"CHEYENNE, CO",10 or fewer,43
+,"SITKA, AK",10 or fewer,34
+,"BULLOCK, AL",10 or fewer,15
+,"COOSA, AL",10 or fewer,15
+,"ALPINE, CA",10 or fewer,31
+,"SOUTHEAST FAIRBANKS, AK",10 or fewer,18
+,"LOWNDES, AL",10 or fewer,18
+,"VALDEZ CORDOVA, AK",10 or fewer,20
+,"BETHEL, AK",10 or fewer,19
+,"DOLORES, CO",10 or fewer,10 or fewer
+,"PERRY, AL",10 or fewer,11
+,"HINSDALE, CO",10 or fewer,15
+,"NORTH SLOPE, AK",10 or fewer,13
+,"NOME, AK",10 or fewer,13
+,"PRINCE OF WALES HYDER, AK",10 or fewer,14
+,"PETERSBURG, AK",10 or fewer,15
+,"ALEUTIANS WEST, AK",10 or fewer,12
+,"MINERAL, CO",10 or fewer,11
+,"NORTHWEST ARCTIC, AK",10 or fewer,10 or fewer
+,"YUKON KOYUKUK, AK",10 or fewer,10 or fewer
+,"HAINES, AK",10 or fewer,10 or fewer
+,"SAN JUAN, CO",10 or fewer,10 or fewer
+,"WRANGELL, AK",10 or fewer,10 or fewer
+,"DENALI, AK",10 or fewer,10 or fewer
+,"DILLINGHAM, AK",10 or fewer,11
+,"HOONAH ANGOON, AK",10 or fewer,10 or fewer
+,"ALEUTIANS EAST, AK",10 or fewer,10 or fewer
+,"BRISTOL BAY, AK",10 or fewer,10 or fewer
+,"SKAGWAY, AK",10 or fewer,10 or fewer
+,"LAKE AND PENINSULA, AK",10 or fewer,10 or fewer
+,"KUSILVAK, AK",10 or fewer,10 or fewer
+,"YAKUTAT, AK",10 or fewer,10 or fewer
+,None of the above,209,275645
+,Total,1963,2056628
+Jan 1 – Dec 31 2019,"SAN DIEGO, CA",84,193476
+,"MARICOPA, AZ",275,147229
+,"RIVERSIDE, CA",141,112513
+,"FRESNO, CA",105,91674
+,"EL PASO, CO",39,96981
+,"HARTFORD, CT",59,101045
+,"DENVER, CO",34,89285
+,"SAN BERNARDINO, CA",23,44813
+,"ORANGE, CA",12,26058
+,"ARAPAHOE, CO",18,60905
+,"SANTA CLARA, CA",27,52873
+,"ALAMEDA, CA",29,39526
+,"PULASKI, AR",145,71246
+,"ADAMS, CO",29,52201
+,"PIMA, AZ",27,49038
+,"JEFFERSON, CO",12,41930
+,"WELD, CO",21,41667
+,"LARIMER, CO",27,40493
+,"LOS ANGELES, CA",28,23126
+,"NEW HAVEN, CT",20,39177
+,"NEW CASTLE, DE",14,31500
+,"CONTRA COSTA, CA",16,29154
+,"BOULDER, CO",10 or fewer,21068
+,"MONTEREY, CA",10 or fewer,26212
+,"SAN FRANCISCO, CA",10 or fewer,20490
+,"SAN MATEO, CA",10 or fewer,22729
+,"FAIRFIELD, CT",14,18872
+,"KENT, DE",39,35550
+,"DOUGLAS, CO",10 or fewer,16700
+,"NEW LONDON, CT",31,34438
+,"SUSSEX, DE",29,19456
+,"MOBILE, AL",22,4348
+,"BALDWIN, AL",10 or fewer,1794
+,"MIDDLESEX, CT",10 or fewer,7362
+,"PUEBLO, CO",10 or fewer,3479
+,"MADERA, CA",10 or fewer,4503
+,"MESA, CO",10 or fewer,12470
+,"WINDHAM, CT",12,18352
+,"LITCHFIELD, CT",10 or fewer,7618
+,"FAULKNER, AR",41,14604
+,"CRAIGHEAD, AR",37,13973
+,"SEBASTIAN, AR",58,12837
+,"SALINE, AR",19,11350
+,"HOUSTON, AL",10 or fewer,338
+,"TOLLAND, CT",10 or fewer,8343
+,"WASHINGTON, AR",10 or fewer,8561
+,"LONOKE, AR",35,10698
+,"TULARE, CA",10 or fewer,2791
+,"CRITTENDEN, AR",54,11825
+,"CRAWFORD, AR",36,8040
+,"BENTON, AR",10 or fewer,4653
+,"BROOMFIELD, CO",10 or fewer,6070
+,"SACRAMENTO, CA",10 or fewer,4932
+,"PINAL, AZ",10 or fewer,2910
+,"MERCED, CA",10 or fewer,1461
+,"SAN JOAQUIN, CA",10 or fewer,3768
+,"KERN, CA",10 or fewer,1978
+,"JEFFERSON, AR",11,4212
+,"KINGS, CA",10 or fewer,1437
+,"HOT SPRING, AR",22,5851
+,"CLEBURNE, AR",16,4889
+,"WHITE, AR",10 or fewer,3820
+,"TELLER, CO",10 or fewer,4134
+,"STANISLAUS, CA",10 or fewer,1856
+,"GREENE, AR",13,3332
+,"CLARK, AR",17,4559
+,"SANTA CRUZ, CA",10 or fewer,2263
+,"YAVAPAI, AZ",10 or fewer,2542
+,"POINSETT, AR",13,3774
+,"ROUTT, CO",10 or fewer,2395
+,"IMPERIAL, CA",10 or fewer,1798
+,"SOLANO, CA",10 or fewer,2178
+,"GARLAND, AR",10 or fewer,2154
+,"DALE, AL",10 or fewer,153
+,"JEFFERSON, AL",10 or fewer,1506
+,"VENTURA, CA",10 or fewer,1594
+,"CHEROKEE, AL",10 or fewer,303
+,"ARKANSAS, AR",23,3202
+,"COCHISE, AZ",10 or fewer,2001
+,"MISSISSIPPI, AR",10 or fewer,2053
+,"PLACER, CA",10 or fewer,1548
+,"GRANT, AR",10 or fewer,2199
+,"SONOMA, CA",10 or fewer,1407
+,"POPE, AR",10 or fewer,1407
+,"GENEVA, AL",10 or fewer,79
+,"ELBERT, CO",10 or fewer,1103
+,"MARIN, CA",10 or fewer,1056
+,"MOFFAT, CO",10 or fewer,1361
+,"FREMONT, CO",10 or fewer,895
+,"MOHAVE, AZ",10 or fewer,1219
+,"MADISON, AL",10 or fewer,1070
+,"EL DORADO, CA",10 or fewer,1182
+,"COFFEE, AL",10 or fewer,180
+,"PICKENS, AL",10 or fewer,647
+,"DREW, AR",10 or fewer,470
+,"SANTA BARBARA, CA",10 or fewer,978
+,"CONWAY, AR",10 or fewer,1509
+,"HUMBOLDT, CA",10 or fewer,613
+,"SAN LUIS OBISPO, CA",10 or fewer,920
+,"HENRY, AL",10 or fewer,41
+,"LAMAR, AL",11,1155
+,"CHOCTAW, AL",10 or fewer,78
+,"ESCAMBIA, AL",10 or fewer,1461
+,"ANCHORAGE, AK",10 or fewer,876
+,"CHAMBERS, AL",10 or fewer,1196
+,"VAN BUREN, AR",10 or fewer,1145
+,"GARFIELD, CO",10 or fewer,639
+,"UNION, AR",10 or fewer,835
+,"CALHOUN, AL",10 or fewer,469
+,"MARION, AL",10 or fewer,93
+,"SAINT FRANCIS, AR",10 or fewer,1032
+,"LASSEN, CA",10 or fewer,894
+,"JACKSON, AL",10 or fewer,1067
+,"PITKIN, CO",10 or fewer,128
+,"MONROE, AR",10 or fewer,1312
+,"MORGAN, CO",10 or fewer,850
+,"SAN BENITO, CA",10 or fewer,661
+,"PERRY, AR",10 or fewer,1099
+,"LAWRENCE, AR",10 or fewer,897
+,"PRAIRIE, AR",10 or fewer,1167
+,"YUMA, AZ",10 or fewer,641
+,"OUACHITA, AR",10 or fewer,735
+,"CROSS, AR",10 or fewer,786
+,"BARBOUR, AL",10 or fewer,60
+,"ASHLEY, AR",10 or fewer,509
+,"DELTA, CO",10 or fewer,573
+,"EAGLE, CO",10 or fewer,456
+,"PHILLIPS, AR",10 or fewer,689
+,"MONTGOMERY, AL",10 or fewer,503
+,"PARK, CO",10 or fewer,840
+,"LEE, AL",10 or fewer,598
+,"RANDOLPH, AL",10 or fewer,919
+,"INDEPENDENCE, AR",10 or fewer,680
+,"COCONINO, AZ",10 or fewer,574
+,"NEVADA, AR",10 or fewer,911
+,"YOLO, CA",10 or fewer,631
+,"GRAND, CO",10 or fewer,588
+,"OTERO, CO",10 or fewer,305
+,"WASHINGTON, AL",10 or fewer,98
+,"GILA, AZ",10 or fewer,554
+,"NEVADA, CA",10 or fewer,579
+,"TUSCALOOSA, AL",10 or fewer,480
+,"SANTA CRUZ, AZ",10 or fewer,531
+,"MONTROSE, CO",10 or fewer,454
+,"NAVAJO, AZ",10 or fewer,507
+,"SHELBY, AL",10 or fewer,457
+,"BUTTE, CA",10 or fewer,543
+,"LOGAN, AR",10 or fewer,564
+,"FRANKLIN, AR",10 or fewer,599
+,"SHASTA, CA",10 or fewer,518
+,"JOHNSON, AR",10 or fewer,497
+,"GUNNISON, CO",10 or fewer,188
+,"RANDOLPH, AR",10 or fewer,574
+,"YELL, AR",10 or fewer,397
+,"JACKSON, AR",10 or fewer,572
+,"CLAY, AR",10 or fewer,550
+,"PLUMAS, CA",10 or fewer,497
+,"MADISON, AR",10 or fewer,524
+,"NAPA, CA",10 or fewer,396
+,"HEMPSTEAD, AR",10 or fewer,509
+,"LINCOLN, AR",10 or fewer,336
+,"SUMTER, AL",10 or fewer,53
+,"MILLER, AR",10 or fewer,393
+,"DESHA, AR",10 or fewer,414
+,"ETOWAH, AL",10 or fewer,305
+,"BRADLEY, AR",10 or fewer,336
+,"DALLAS, AR",10 or fewer,527
+,"PIKE, AR",10 or fewer,456
+,"SHARP, AR",10 or fewer,407
+,"MARIPOSA, CA",10 or fewer,224
+,"APACHE, AZ",10 or fewer,313
+,"SUMMIT, CO",10 or fewer,316
+,"CLARKE, AL",10 or fewer,88
+,"LOGAN, CO",10 or fewer,391
+,"LA PLATA, CO",10 or fewer,328
+,"RUSSELL, AL",10 or fewer,321
+,"BAXTER, AR",10 or fewer,371
+,"CLEVELAND, AR",10 or fewer,322
+,"LAS ANIMAS, CO",10 or fewer,247
+,"COLUMBIA, AR",10 or fewer,306
+,"CARROLL, AR",10 or fewer,232
+,"CHAFFEE, CO",10 or fewer,253
+,"FAIRBANKS NORTH STAR, AK",10 or fewer,250
+,"CHICOT, AR",10 or fewer,297
+,"LEE, AR",10 or fewer,331
+,"SCOTT, AR",10 or fewer,336
+,"POLK, AR",10 or fewer,305
+,"BOONE, AR",10 or fewer,254
+,"MATANUSKA SUSITNA, AK",10 or fewer,254
+,"COVINGTON, AL",10 or fewer,91
+,"TUOLUMNE, CA",10 or fewer,271
+,"MENDOCINO, CA",10 or fewer,249
+,"MORGAN, AL",10 or fewer,258
+,"GILPIN, CO",10 or fewer,243
+,"INYO, CA",10 or fewer,285
+,"LIMESTONE, AL",10 or fewer,213
+,"MONROE, AL",10 or fewer,179
+,"MARSHALL, AL",10 or fewer,237
+,"GRAHAM, AZ",10 or fewer,268
+,"PROWERS, CO",10 or fewer,208
+,"PIKE, AL",10 or fewer,66
+,"STONE, AR",10 or fewer,240
+,"CLEAR CREEK, CO",10 or fewer,233
+,"HUERFANO, CO",10 or fewer,152
+,"HOWARD, AR",10 or fewer,270
+,"ELMORE, AL",10 or fewer,161
+,"MARENGO, AL",10 or fewer,53
+,"LAUDERDALE, AL",10 or fewer,144
+,"SAINT CLAIR, AL",10 or fewer,159
+,"MONTEZUMA, CO",10 or fewer,159
+,"WOODRUFF, AR",10 or fewer,264
+,"SUTTER, CA",10 or fewer,201
+,"TALLADEGA, AL",10 or fewer,206
+,"LAKE, CA",10 or fewer,198
+,"KENAI PENINSULA, AK",10 or fewer,162
+,"CALAVERAS, CA",10 or fewer,203
+,"SEVIER, AR",10 or fewer,169
+,"CUSTER, CO",10 or fewer,96
+,"SEARCY, AR",10 or fewer,178
+,"YUBA, CA",10 or fewer,190
+,"CULLMAN, AL",10 or fewer,146
+,"RIO GRANDE, CO",10 or fewer,136
+,"CROWLEY, CO",10 or fewer,86
+,"IZARD, AR",10 or fewer,161
+,"ALAMOSA, CO",10 or fewer,151
+,"COLBERT, AL",10 or fewer,129
+,"CLEBURNE, AL",10 or fewer,164
+,"AUTAUGA, AL",10 or fewer,130
+,"SISKIYOU, CA",10 or fewer,157
+,"FRANKLIN, AL",10 or fewer,72
+,"CALHOUN, AR",10 or fewer,157
+,"LINCOLN, CO",10 or fewer,168
+,"MONO, CA",10 or fewer,146
+,"YUMA, CO",10 or fewer,131
+,"MONTGOMERY, AR",10 or fewer,125
+,"KIT CARSON, CO",10 or fewer,126
+,"LA PAZ, AZ",10 or fewer,126
+,"WALKER, AL",10 or fewer,125
+,"BENT, CO",10 or fewer,107
+,"ARCHULETA, CO",10 or fewer,124
+,"AMADOR, CA",10 or fewer,146
+,"MODOC, CA",10 or fewer,154
+,"LITTLE RIVER, AR",10 or fewer,119
+,"JUNEAU, AK",10 or fewer,114
+,"FULTON, AR",10 or fewer,133
+,"TEHAMA, CA",10 or fewer,126
+,"RIO BLANCO, CO",10 or fewer,114
+,"MARION, AR",10 or fewer,114
+,"JACKSON, CO",10 or fewer,131
+,"BLOUNT, AL",10 or fewer,66
+,"DALLAS, AL",10 or fewer,83
+,"CONECUH, AL",10 or fewer,55
+,"DEL NORTE, CA",10 or fewer,119
+,"TALLAPOOSA, AL",10 or fewer,76
+,"WILCOX, AL",10 or fewer,46
+,"GREENLEE, AZ",10 or fewer,118
+,"SAN MIGUEL, CO",10 or fewer,74
+,"CHILTON, AL",10 or fewer,78
+,"FAYETTE, AL",10 or fewer,81
+,"SIERRA, CA",10 or fewer,129
+,"WASHINGTON, CO",10 or fewer,85
+,"LAKE, CO",10 or fewer,71
+,"PHILLIPS, CO",10 or fewer,70
+,"CONEJOS, CO",10 or fewer,75
+,"BACA, CO",10 or fewer,56
+,"CRENSHAW, AL",10 or fewer,29
+,"LAFAYETTE, AR",10 or fewer,84
+,"BUTLER, AL",10 or fewer,30
+,"NEWTON, AR",10 or fewer,62
+,"WINSTON, AL",10 or fewer,36
+,"COSTILLA, CO",10 or fewer,65
+,"LAWRENCE, AL",10 or fewer,48
+,"KODIAK ISLAND, AK",10 or fewer,69
+,"SAGUACHE, CO",10 or fewer,41
+,"GLENN, CA",10 or fewer,45
+,"HALE, AL",10 or fewer,37
+,"CLAY, AL",10 or fewer,62
+,"MACON, AL",10 or fewer,59
+,"SEDGWICK, CO",10 or fewer,46
+,"KETCHIKAN GATEWAY, AK",10 or fewer,47
+,"OURAY, CO",10 or fewer,30
+,"BIBB, AL",10 or fewer,34
+,"COLUSA, CA",10 or fewer,21
+,"TRINITY, CA",10 or fewer,28
+,"KIOWA, CO",10 or fewer,27
+,"GREENE, AL",10 or fewer,24
+,"CHEYENNE, CO",10 or fewer,39
+,"SITKA, AK",10 or fewer,27
+,"BULLOCK, AL",10 or fewer,14
+,"COOSA, AL",10 or fewer,13
+,"ALPINE, CA",10 or fewer,22
+,"SOUTHEAST FAIRBANKS, AK",10 or fewer,24
+,"LOWNDES, AL",10 or fewer,12
+,"VALDEZ CORDOVA, AK",10 or fewer,21
+,"BETHEL, AK",10 or fewer,18
+,"DOLORES, CO",10 or fewer,13
+,"PERRY, AL",10 or fewer,24
+,"HINSDALE, CO",10 or fewer,11
+,"NORTH SLOPE, AK",10 or fewer,12
+,"NOME, AK",10 or fewer,15
+,"PRINCE OF WALES HYDER, AK",10 or fewer,10 or fewer
+,"PETERSBURG, AK",10 or fewer,14
+,"ALEUTIANS WEST, AK",10 or fewer,10 or fewer
+,"MINERAL, CO",10 or fewer,10 or fewer
+,"NORTHWEST ARCTIC, AK",10 or fewer,13
+,"YUKON KOYUKUK, AK",10 or fewer,10 or fewer
+,"HAINES, AK",10 or fewer,10 or fewer
+,"SAN JUAN, CO",10 or fewer,10 or fewer
+,"WRANGELL, AK",10 or fewer,10 or fewer
+,"DENALI, AK",10 or fewer,10 or fewer
+,"DILLINGHAM, AK",10 or fewer,10 or fewer
+,"HOONAH ANGOON, AK",10 or fewer,10 or fewer
+,"ALEUTIANS EAST, AK",10 or fewer,10 or fewer
+,"BRISTOL BAY, AK",10 or fewer,10 or fewer
+,"SKAGWAY, AK",10 or fewer,10 or fewer
+,"LAKE AND PENINSULA, AK",10 or fewer,10 or fewer
+,"KUSILVAK, AK",10 or fewer,10 or fewer
+,"YAKUTAT, AK",10 or fewer,10 or fewer
+,None of the above,203,290174
+,Total,2226,2312560
+Jan 1 – Dec 31 2020,"SAN DIEGO, CA",89,167116
+,"MARICOPA, AZ",282,123159
+,"RIVERSIDE, CA",119,94668
+,"FRESNO, CA",71,97882
+,"EL PASO, CO",21,83691
+,"HARTFORD, CT",32,86780
+,"DENVER, CO",23,76501
+,"SAN BERNARDINO, CA",24,40485
+,"ORANGE, CA",14,29010
+,"ARAPAHOE, CO",11,50219
+,"SANTA CLARA, CA",20,47161
+,"ALAMEDA, CA",40,58872
+,"PULASKI, AR",91,66269
+,"ADAMS, CO",10 or fewer,45750
+,"PIMA, AZ",15,36776
+,"JEFFERSON, CO",10 or fewer,35312
+,"WELD, CO",22,40066
+,"LARIMER, CO",22,37000
+,"LOS ANGELES, CA",19,19728
+,"NEW HAVEN, CT",18,34352
+,"NEW CASTLE, DE",10 or fewer,23442
+,"CONTRA COSTA, CA",17,25417
+,"BOULDER, CO",10 or fewer,26880
+,"MONTEREY, CA",18,22204
+,"SAN FRANCISCO, CA",10 or fewer,29608
+,"SAN MATEO, CA",10 or fewer,23234
+,"FAIRFIELD, CT",10 or fewer,16619
+,"KENT, DE",32,30928
+,"DOUGLAS, CO",10 or fewer,14101
+,"NEW LONDON, CT",21,30908
+,"SUSSEX, DE",18,16414
+,"MOBILE, AL",16,10197
+,"BALDWIN, AL",10 or fewer,7970
+,"MIDDLESEX, CT",22,19105
+,"PUEBLO, CO",10 or fewer,2907
+,"MADERA, CA",10 or fewer,7219
+,"MESA, CO",10 or fewer,11325
+,"WINDHAM, CT",10 or fewer,15579
+,"LITCHFIELD, CT",10 or fewer,13294
+,"FAULKNER, AR",16,12570
+,"CRAIGHEAD, AR",28,12574
+,"SEBASTIAN, AR",34,15569
+,"SALINE, AR",13,10688
+,"HOUSTON, AL",10 or fewer,294
+,"TOLLAND, CT",10 or fewer,7773
+,"WASHINGTON, AR",10 or fewer,8044
+,"LONOKE, AR",21,9004
+,"TULARE, CA",10 or fewer,4426
+,"CRITTENDEN, AR",21,10797
+,"CRAWFORD, AR",17,9664
+,"BENTON, AR",10 or fewer,4682
+,"BROOMFIELD, CO",10 or fewer,5656
+,"SACRAMENTO, CA",10 or fewer,4327
+,"PINAL, AZ",10 or fewer,2376
+,"MERCED, CA",10 or fewer,3145
+,"SAN JOAQUIN, CA",10 or fewer,3506
+,"KERN, CA",10 or fewer,2464
+,"JEFFERSON, AR",10 or fewer,3936
+,"KINGS, CA",10 or fewer,2349
+,"HOT SPRING, AR",14,4917
+,"CLEBURNE, AR",10 or fewer,4293
+,"WHITE, AR",10 or fewer,3249
+,"TELLER, CO",10 or fewer,3815
+,"STANISLAUS, CA",10 or fewer,2197
+,"GREENE, AR",10 or fewer,2946
+,"CLARK, AR",10 or fewer,3879
+,"SANTA CRUZ, CA",10 or fewer,2091
+,"YAVAPAI, AZ",10 or fewer,2058
+,"POINSETT, AR",10 or fewer,3362
+,"ROUTT, CO",10 or fewer,2371
+,"IMPERIAL, CA",10 or fewer,1488
+,"SOLANO, CA",10 or fewer,2047
+,"GARLAND, AR",10 or fewer,1942
+,"DALE, AL",10 or fewer,119
+,"JEFFERSON, AL",10 or fewer,1220
+,"VENTURA, CA",10 or fewer,1145
+,"CHEROKEE, AL",10 or fewer,236
+,"ARKANSAS, AR",11,2889
+,"COCHISE, AZ",10 or fewer,1403
+,"MISSISSIPPI, AR",10 or fewer,2081
+,"PLACER, CA",10 or fewer,1216
+,"GRANT, AR",10 or fewer,1926
+,"SONOMA, CA",10 or fewer,1184
+,"POPE, AR",10 or fewer,1338
+,"GENEVA, AL",10 or fewer,57
+,"ELBERT, CO",10 or fewer,818
+,"MARIN, CA",10 or fewer,924
+,"MOFFAT, CO",10 or fewer,1715
+,"FREMONT, CO",10 or fewer,803
+,"MOHAVE, AZ",10 or fewer,857
+,"MADISON, AL",10 or fewer,747
+,"EL DORADO, CA",10 or fewer,1044
+,"COFFEE, AL",10 or fewer,137
+,"PICKENS, AL",10 or fewer,991
+,"DREW, AR",10 or fewer,461
+,"SANTA BARBARA, CA",10 or fewer,727
+,"CONWAY, AR",10 or fewer,1223
+,"HUMBOLDT, CA",10 or fewer,492
+,"SAN LUIS OBISPO, CA",10 or fewer,728
+,"HENRY, AL",10 or fewer,35
+,"LAMAR, AL",10 or fewer,1111
+,"CHOCTAW, AL",10 or fewer,80
+,"ESCAMBIA, AL",10 or fewer,374
+,"ANCHORAGE, AK",10 or fewer,490
+,"CHAMBERS, AL",10 or fewer,1066
+,"VAN BUREN, AR",10 or fewer,1041
+,"GARFIELD, CO",10 or fewer,540
+,"UNION, AR",10 or fewer,719
+,"CALHOUN, AL",10 or fewer,371
+,"MARION, AL",10 or fewer,97
+,"SAINT FRANCIS, AR",10 or fewer,1035
+,"LASSEN, CA",10 or fewer,729
+,"JACKSON, AL",10 or fewer,850
+,"PITKIN, CO",10 or fewer,114
+,"MONROE, AR",10 or fewer,1155
+,"MORGAN, CO",10 or fewer,751
+,"SAN BENITO, CA",10 or fewer,629
+,"PERRY, AR",10 or fewer,921
+,"LAWRENCE, AR",10 or fewer,844
+,"PRAIRIE, AR",10 or fewer,1092
+,"YUMA, AZ",10 or fewer,505
+,"OUACHITA, AR",10 or fewer,593
+,"CROSS, AR",10 or fewer,791
+,"BARBOUR, AL",10 or fewer,47
+,"ASHLEY, AR",10 or fewer,445
+,"DELTA, CO",10 or fewer,514
+,"EAGLE, CO",10 or fewer,371
+,"PHILLIPS, AR",10 or fewer,660
+,"MONTGOMERY, AL",10 or fewer,371
+,"PARK, CO",10 or fewer,612
+,"LEE, AL",10 or fewer,453
+,"RANDOLPH, AL",10 or fewer,827
+,"INDEPENDENCE, AR",10 or fewer,588
+,"COCONINO, AZ",10 or fewer,455
+,"NEVADA, AR",10 or fewer,824
+,"YOLO, CA",10 or fewer,498
+,"GRAND, CO",10 or fewer,487
+,"OTERO, CO",10 or fewer,256
+,"WASHINGTON, AL",10 or fewer,314
+,"GILA, AZ",10 or fewer,490
+,"NEVADA, CA",10 or fewer,445
+,"TUSCALOOSA, AL",10 or fewer,445
+,"SANTA CRUZ, AZ",10 or fewer,380
+,"MONTROSE, CO",10 or fewer,446
+,"NAVAJO, AZ",10 or fewer,464
+,"SHELBY, AL",10 or fewer,351
+,"BUTTE, CA",10 or fewer,450
+,"LOGAN, AR",10 or fewer,685
+,"FRANKLIN, AR",10 or fewer,689
+,"SHASTA, CA",10 or fewer,404
+,"JOHNSON, AR",10 or fewer,468
+,"GUNNISON, CO",10 or fewer,173
+,"RANDOLPH, AR",10 or fewer,502
+,"YELL, AR",10 or fewer,432
+,"JACKSON, AR",10 or fewer,512
+,"CLAY, AR",10 or fewer,462
+,"PLUMAS, CA",10 or fewer,386
+,"MADISON, AR",10 or fewer,501
+,"NAPA, CA",10 or fewer,303
+,"HEMPSTEAD, AR",10 or fewer,433
+,"LINCOLN, AR",10 or fewer,344
+,"SUMTER, AL",10 or fewer,51
+,"MILLER, AR",10 or fewer,346
+,"DESHA, AR",10 or fewer,371
+,"ETOWAH, AL",10 or fewer,227
+,"BRADLEY, AR",10 or fewer,317
+,"DALLAS, AR",10 or fewer,481
+,"PIKE, AR",10 or fewer,455
+,"SHARP, AR",10 or fewer,353
+,"MARIPOSA, CA",10 or fewer,256
+,"APACHE, AZ",10 or fewer,303
+,"SUMMIT, CO",10 or fewer,279
+,"CLARKE, AL",10 or fewer,130
+,"LOGAN, CO",10 or fewer,320
+,"LA PLATA, CO",10 or fewer,250
+,"RUSSELL, AL",10 or fewer,228
+,"BAXTER, AR",10 or fewer,265
+,"CLEVELAND, AR",10 or fewer,305
+,"LAS ANIMAS, CO",10 or fewer,203
+,"COLUMBIA, AR",10 or fewer,299
+,"CARROLL, AR",10 or fewer,273
+,"CHAFFEE, CO",10 or fewer,198
+,"FAIRBANKS NORTH STAR, AK",10 or fewer,178
+,"CHICOT, AR",10 or fewer,244
+,"LEE, AR",10 or fewer,285
+,"SCOTT, AR",10 or fewer,343
+,"POLK, AR",10 or fewer,286
+,"BOONE, AR",10 or fewer,246
+,"MATANUSKA SUSITNA, AK",10 or fewer,178
+,"COVINGTON, AL",10 or fewer,92
+,"TUOLUMNE, CA",10 or fewer,220
+,"MENDOCINO, CA",10 or fewer,193
+,"MORGAN, AL",10 or fewer,214
+,"GILPIN, CO",10 or fewer,268
+,"INYO, CA",10 or fewer,290
+,"LIMESTONE, AL",10 or fewer,186
+,"MONROE, AL",10 or fewer,117
+,"MARSHALL, AL",10 or fewer,169
+,"GRAHAM, AZ",10 or fewer,194
+,"PROWERS, CO",10 or fewer,207
+,"PIKE, AL",10 or fewer,53
+,"STONE, AR",10 or fewer,203
+,"CLEAR CREEK, CO",10 or fewer,174
+,"HUERFANO, CO",10 or fewer,136
+,"HOWARD, AR",10 or fewer,191
+,"ELMORE, AL",10 or fewer,127
+,"MARENGO, AL",10 or fewer,57
+,"LAUDERDALE, AL",10 or fewer,120
+,"SAINT CLAIR, AL",10 or fewer,133
+,"MONTEZUMA, CO",10 or fewer,134
+,"WOODRUFF, AR",10 or fewer,182
+,"SUTTER, CA",10 or fewer,152
+,"TALLADEGA, AL",10 or fewer,157
+,"LAKE, CA",10 or fewer,187
+,"KENAI PENINSULA, AK",10 or fewer,114
+,"CALAVERAS, CA",10 or fewer,182
+,"SEVIER, AR",10 or fewer,139
+,"CUSTER, CO",10 or fewer,76
+,"SEARCY, AR",10 or fewer,170
+,"YUBA, CA",10 or fewer,165
+,"CULLMAN, AL",10 or fewer,114
+,"RIO GRANDE, CO",10 or fewer,140
+,"CROWLEY, CO",10 or fewer,93
+,"IZARD, AR",10 or fewer,134
+,"ALAMOSA, CO",10 or fewer,131
+,"COLBERT, AL",10 or fewer,89
+,"CLEBURNE, AL",10 or fewer,137
+,"AUTAUGA, AL",10 or fewer,92
+,"SISKIYOU, CA",10 or fewer,147
+,"FRANKLIN, AL",10 or fewer,60
+,"CALHOUN, AR",10 or fewer,120
+,"LINCOLN, CO",10 or fewer,125
+,"MONO, CA",10 or fewer,117
+,"YUMA, CO",10 or fewer,104
+,"MONTGOMERY, AR",10 or fewer,106
+,"KIT CARSON, CO",10 or fewer,95
+,"LA PAZ, AZ",10 or fewer,118
+,"WALKER, AL",10 or fewer,96
+,"BENT, CO",10 or fewer,108
+,"ARCHULETA, CO",10 or fewer,96
+,"AMADOR, CA",10 or fewer,113
+,"MODOC, CA",10 or fewer,96
+,"LITTLE RIVER, AR",10 or fewer,100
+,"JUNEAU, AK",10 or fewer,78
+,"FULTON, AR",10 or fewer,123
+,"TEHAMA, CA",10 or fewer,92
+,"RIO BLANCO, CO",10 or fewer,96
+,"MARION, AR",10 or fewer,91
+,"JACKSON, CO",10 or fewer,147
+,"BLOUNT, AL",10 or fewer,51
+,"DALLAS, AL",10 or fewer,45
+,"CONECUH, AL",10 or fewer,70
+,"DEL NORTE, CA",10 or fewer,79
+,"TALLAPOOSA, AL",10 or fewer,62
+,"WILCOX, AL",10 or fewer,63
+,"GREENLEE, AZ",10 or fewer,67
+,"SAN MIGUEL, CO",10 or fewer,61
+,"CHILTON, AL",10 or fewer,42
+,"FAYETTE, AL",10 or fewer,67
+,"SIERRA, CA",10 or fewer,86
+,"WASHINGTON, CO",10 or fewer,75
+,"LAKE, CO",10 or fewer,83
+,"PHILLIPS, CO",10 or fewer,78
+,"CONEJOS, CO",10 or fewer,44
+,"BACA, CO",10 or fewer,46
+,"CRENSHAW, AL",10 or fewer,29
+,"LAFAYETTE, AR",10 or fewer,66
+,"BUTLER, AL",10 or fewer,33
+,"NEWTON, AR",10 or fewer,73
+,"WINSTON, AL",10 or fewer,37
+,"COSTILLA, CO",10 or fewer,54
+,"LAWRENCE, AL",10 or fewer,29
+,"KODIAK ISLAND, AK",10 or fewer,30
+,"SAGUACHE, CO",10 or fewer,51
+,"GLENN, CA",10 or fewer,29
+,"HALE, AL",10 or fewer,36
+,"CLAY, AL",10 or fewer,43
+,"MACON, AL",10 or fewer,38
+,"SEDGWICK, CO",10 or fewer,58
+,"KETCHIKAN GATEWAY, AK",10 or fewer,35
+,"OURAY, CO",10 or fewer,43
+,"BIBB, AL",10 or fewer,24
+,"COLUSA, CA",10 or fewer,22
+,"TRINITY, CA",10 or fewer,22
+,"KIOWA, CO",10 or fewer,32
+,"GREENE, AL",10 or fewer,18
+,"CHEYENNE, CO",10 or fewer,27
+,"SITKA, AK",10 or fewer,23
+,"BULLOCK, AL",10 or fewer,14
+,"COOSA, AL",10 or fewer,10 or fewer
+,"ALPINE, CA",10 or fewer,21
+,"SOUTHEAST FAIRBANKS, AK",10 or fewer,13
+,"LOWNDES, AL",10 or fewer,15
+,"VALDEZ CORDOVA, AK",10 or fewer,11
+,"BETHEL, AK",10 or fewer,12
+,"DOLORES, CO",10 or fewer,10 or fewer
+,"PERRY, AL",10 or fewer,10 or fewer
+,"HINSDALE, CO",10 or fewer,10 or fewer
+,"NORTH SLOPE, AK",10 or fewer,10 or fewer
+,"NOME, AK",10 or fewer,10 or fewer
+,"PRINCE OF WALES HYDER, AK",10 or fewer,10 or fewer
+,"PETERSBURG, AK",10 or fewer,10 or fewer
+,"ALEUTIANS WEST, AK",10 or fewer,12
+,"MINERAL, CO",10 or fewer,10 or fewer
+,"NORTHWEST ARCTIC, AK",10 or fewer,10 or fewer
+,"YUKON KOYUKUK, AK",10 or fewer,10 or fewer
+,"HAINES, AK",10 or fewer,10 or fewer
+,"SAN JUAN, CO",10 or fewer,11
+,"WRANGELL, AK",10 or fewer,10 or fewer
+,"DENALI, AK",10 or fewer,10 or fewer
+,"DILLINGHAM, AK",10 or fewer,10 or fewer
+,"HOONAH ANGOON, AK",10 or fewer,10 or fewer
+,"ALEUTIANS EAST, AK",10 or fewer,10 or fewer
+,"BRISTOL BAY, AK",10 or fewer,10 or fewer
+,"SKAGWAY, AK",10 or fewer,10 or fewer
+,"LAKE AND PENINSULA, AK",10 or fewer,10 or fewer
+,"KUSILVAK, AK",10 or fewer,10 or fewer
+,"YAKUTAT, AK",10 or fewer,10 or fewer
+,None of the above,138,257073
+,Total,1667,2127529
+Jan 1 – Dec 31 2021,"SAN DIEGO, CA",95,196552
+,"MARICOPA, AZ",271,138539
+,"RIVERSIDE, CA",140,109808
+,"FRESNO, CA",119,115747
+,"EL PASO, CO",48,101264
+,"HARTFORD, CT",52,101600
+,"DENVER, CO",33,85186
+,"SAN BERNARDINO, CA",15,45199
+,"ORANGE, CA",20,33662
+,"ARAPAHOE, CO",21,58783
+,"SANTA CLARA, CA",14,54131
+,"ALAMEDA, CA",25,65558
+,"PULASKI, AR",117,70372
+,"ADAMS, CO",24,56200
+,"PIMA, AZ",38,43550
+,"JEFFERSON, CO",21,40914
+,"WELD, CO",25,48821
+,"LARIMER, CO",41,43066
+,"LOS ANGELES, CA",18,24760
+,"NEW HAVEN, CT",25,41390
+,"NEW CASTLE, DE",19,28230
+,"CONTRA COSTA, CA",13,27803
+,"BOULDER, CO",14,32869
+,"MONTEREY, CA",10 or fewer,24621
+,"SAN FRANCISCO, CA",10 or fewer,32055
+,"SAN MATEO, CA",10 or fewer,24114
+,"FAIRFIELD, CT",27,31575
+,"KENT, DE",40,35739
+,"DOUGLAS, CO",10 or fewer,17529
+,"NEW LONDON, CT",32,36619
+,"SUSSEX, DE",34,25972
+,"MOBILE, AL",51,29614
+,"BALDWIN, AL",41,26264
+,"MIDDLESEX, CT",21,24589
+,"PUEBLO, CO",10 or fewer,3284
+,"MADERA, CA",10 or fewer,11200
+,"MESA, CO",16,13462
+,"WINDHAM, CT",20,18014
+,"LITCHFIELD, CT",19,16353
+,"FAULKNER, AR",24,13345
+,"CRAIGHEAD, AR",31,14741
+,"SEBASTIAN, AR",54,16265
+,"SALINE, AR",13,11594
+,"HOUSTON, AL",10 or fewer,13031
+,"TOLLAND, CT",12,9335
+,"WASHINGTON, AR",10 or fewer,10838
+,"LONOKE, AR",16,9950
+,"TULARE, CA",10 or fewer,7315
+,"CRITTENDEN, AR",32,11287
+,"CRAWFORD, AR",34,10663
+,"BENTON, AR",10 or fewer,7354
+,"BROOMFIELD, CO",10 or fewer,6952
+,"SACRAMENTO, CA",10 or fewer,4967
+,"PINAL, AZ",11,2694
+,"MERCED, CA",10 or fewer,5780
+,"SAN JOAQUIN, CA",10 or fewer,3948
+,"KERN, CA",10 or fewer,3397
+,"JEFFERSON, AR",10 or fewer,4282
+,"KINGS, CA",10 or fewer,4111
+,"HOT SPRING, AR",18,5481
+,"CLEBURNE, AR",17,5140
+,"WHITE, AR",10 or fewer,3680
+,"TELLER, CO",10 or fewer,4444
+,"STANISLAUS, CA",10 or fewer,2769
+,"GREENE, AR",10 or fewer,3677
+,"CLARK, AR",18,4414
+,"SANTA CRUZ, CA",10 or fewer,2367
+,"YAVAPAI, AZ",10 or fewer,2375
+,"POINSETT, AR",14,3660
+,"ROUTT, CO",10 or fewer,2968
+,"IMPERIAL, CA",10 or fewer,1822
+,"SOLANO, CA",10 or fewer,2279
+,"GARLAND, AR",10 or fewer,2138
+,"DALE, AL",10 or fewer,3019
+,"JEFFERSON, AL",10 or fewer,1696
+,"VENTURA, CA",10 or fewer,1612
+,"CHEROKEE, AL",10 or fewer,236
+,"ARKANSAS, AR",11,3283
+,"COCHISE, AZ",10 or fewer,1611
+,"MISSISSIPPI, AR",10 or fewer,2252
+,"PLACER, CA",10 or fewer,1483
+,"GRANT, AR",10 or fewer,2157
+,"SONOMA, CA",10 or fewer,1435
+,"POPE, AR",10 or fewer,1523
+,"GENEVA, AL",10 or fewer,2591
+,"ELBERT, CO",10 or fewer,969
+,"MARIN, CA",10 or fewer,1250
+,"MOFFAT, CO",10 or fewer,2098
+,"FREMONT, CO",10 or fewer,854
+,"MOHAVE, AZ",10 or fewer,997
+,"MADISON, AL",10 or fewer,1045
+,"EL DORADO, CA",10 or fewer,1159
+,"COFFEE, AL",10 or fewer,1348
+,"PICKENS, AL",10 or fewer,1597
+,"DREW, AR",10 or fewer,520
+,"SANTA BARBARA, CA",10 or fewer,978
+,"CONWAY, AR",10 or fewer,1365
+,"HUMBOLDT, CA",10 or fewer,542
+,"SAN LUIS OBISPO, CA",10 or fewer,887
+,"HENRY, AL",10 or fewer,1564
+,"LAMAR, AL",10 or fewer,1209
+,"CHOCTAW, AL",10 or fewer,1741
+,"ESCAMBIA, AL",10 or fewer,1086
+,"ANCHORAGE, AK",10 or fewer,702
+,"CHAMBERS, AL",10 or fewer,1231
+,"VAN BUREN, AR",10 or fewer,1064
+,"GARFIELD, CO",10 or fewer,626
+,"UNION, AR",10 or fewer,836
+,"CALHOUN, AL",10 or fewer,433
+,"MARION, AL",10 or fewer,103
+,"SAINT FRANCIS, AR",10 or fewer,1119
+,"LASSEN, CA",10 or fewer,764
+,"JACKSON, AL",10 or fewer,847
+,"PITKIN, CO",10 or fewer,130
+,"MONROE, AR",10 or fewer,1271
+,"MORGAN, CO",10 or fewer,920
+,"SAN BENITO, CA",10 or fewer,741
+,"PERRY, AR",10 or fewer,1005
+,"LAWRENCE, AR",10 or fewer,933
+,"PRAIRIE, AR",10 or fewer,1159
+,"YUMA, AZ",10 or fewer,645
+,"OUACHITA, AR",10 or fewer,737
+,"CROSS, AR",10 or fewer,846
+,"BARBOUR, AL",10 or fewer,913
+,"ASHLEY, AR",10 or fewer,525
+,"DELTA, CO",10 or fewer,599
+,"EAGLE, CO",10 or fewer,446
+,"PHILLIPS, AR",10 or fewer,804
+,"MONTGOMERY, AL",10 or fewer,635
+,"PARK, CO",10 or fewer,696
+,"LEE, AL",10 or fewer,584
+,"RANDOLPH, AL",10 or fewer,789
+,"INDEPENDENCE, AR",10 or fewer,624
+,"COCONINO, AZ",10 or fewer,464
+,"NEVADA, AR",10 or fewer,875
+,"YOLO, CA",10 or fewer,572
+,"GRAND, CO",10 or fewer,605
+,"OTERO, CO",10 or fewer,321
+,"WASHINGTON, AL",10 or fewer,1059
+,"GILA, AZ",10 or fewer,571
+,"NEVADA, CA",10 or fewer,565
+,"TUSCALOOSA, AL",10 or fewer,614
+,"SANTA CRUZ, AZ",10 or fewer,468
+,"MONTROSE, CO",10 or fewer,573
+,"NAVAJO, AZ",10 or fewer,540
+,"SHELBY, AL",10 or fewer,464
+,"BUTTE, CA",10 or fewer,542
+,"LOGAN, AR",10 or fewer,750
+,"FRANKLIN, AR",10 or fewer,804
+,"SHASTA, CA",10 or fewer,531
+,"JOHNSON, AR",10 or fewer,573
+,"GUNNISON, CO",10 or fewer,218
+,"RANDOLPH, AR",10 or fewer,544
+,"YELL, AR",10 or fewer,487
+,"JACKSON, AR",10 or fewer,549
+,"CLAY, AR",10 or fewer,584
+,"PLUMAS, CA",10 or fewer,424
+,"MADISON, AR",10 or fewer,682
+,"NAPA, CA",10 or fewer,449
+,"HEMPSTEAD, AR",10 or fewer,473
+,"LINCOLN, AR",10 or fewer,382
+,"SUMTER, AL",10 or fewer,572
+,"MILLER, AR",10 or fewer,446
+,"DESHA, AR",10 or fewer,396
+,"ETOWAH, AL",10 or fewer,294
+,"BRADLEY, AR",10 or fewer,324
+,"DALLAS, AR",10 or fewer,545
+,"PIKE, AR",10 or fewer,509
+,"SHARP, AR",10 or fewer,403
+,"MARIPOSA, CA",10 or fewer,361
+,"APACHE, AZ",10 or fewer,335
+,"SUMMIT, CO",10 or fewer,327
+,"CLARKE, AL",10 or fewer,442
+,"LOGAN, CO",10 or fewer,392
+,"LA PLATA, CO",10 or fewer,315
+,"RUSSELL, AL",10 or fewer,354
+,"BAXTER, AR",10 or fewer,335
+,"CLEVELAND, AR",10 or fewer,335
+,"LAS ANIMAS, CO",10 or fewer,254
+,"COLUMBIA, AR",10 or fewer,300
+,"CARROLL, AR",10 or fewer,347
+,"CHAFFEE, CO",10 or fewer,247
+,"FAIRBANKS NORTH STAR, AK",10 or fewer,279
+,"CHICOT, AR",10 or fewer,254
+,"LEE, AR",10 or fewer,342
+,"SCOTT, AR",10 or fewer,400
+,"POLK, AR",10 or fewer,343
+,"BOONE, AR",10 or fewer,289
+,"MATANUSKA SUSITNA, AK",10 or fewer,237
+,"COVINGTON, AL",10 or fewer,323
+,"TUOLUMNE, CA",10 or fewer,235
+,"MENDOCINO, CA",10 or fewer,243
+,"MORGAN, AL",10 or fewer,228
+,"GILPIN, CO",10 or fewer,335
+,"INYO, CA",10 or fewer,260
+,"LIMESTONE, AL",10 or fewer,246
+,"MONROE, AL",10 or fewer,333
+,"MARSHALL, AL",10 or fewer,225
+,"GRAHAM, AZ",10 or fewer,209
+,"PROWERS, CO",10 or fewer,236
+,"PIKE, AL",10 or fewer,256
+,"STONE, AR",10 or fewer,238
+,"CLEAR CREEK, CO",10 or fewer,238
+,"HUERFANO, CO",10 or fewer,154
+,"HOWARD, AR",10 or fewer,231
+,"ELMORE, AL",10 or fewer,167
+,"MARENGO, AL",10 or fewer,268
+,"LAUDERDALE, AL",10 or fewer,175
+,"SAINT CLAIR, AL",10 or fewer,170
+,"MONTEZUMA, CO",10 or fewer,164
+,"WOODRUFF, AR",10 or fewer,273
+,"SUTTER, CA",10 or fewer,187
+,"TALLADEGA, AL",10 or fewer,182
+,"LAKE, CA",10 or fewer,200
+,"KENAI PENINSULA, AK",10 or fewer,167
+,"CALAVERAS, CA",10 or fewer,164
+,"SEVIER, AR",10 or fewer,195
+,"CUSTER, CO",10 or fewer,96
+,"SEARCY, AR",10 or fewer,178
+,"YUBA, CA",10 or fewer,196
+,"CULLMAN, AL",10 or fewer,153
+,"RIO GRANDE, CO",10 or fewer,163
+,"CROWLEY, CO",10 or fewer,89
+,"IZARD, AR",10 or fewer,181
+,"ALAMOSA, CO",10 or fewer,172
+,"COLBERT, AL",10 or fewer,113
+,"CLEBURNE, AL",10 or fewer,143
+,"AUTAUGA, AL",10 or fewer,146
+,"SISKIYOU, CA",10 or fewer,155
+,"FRANKLIN, AL",10 or fewer,79
+,"CALHOUN, AR",10 or fewer,159
+,"LINCOLN, CO",10 or fewer,151
+,"MONO, CA",10 or fewer,129
+,"YUMA, CO",10 or fewer,131
+,"MONTGOMERY, AR",10 or fewer,138
+,"KIT CARSON, CO",10 or fewer,133
+,"LA PAZ, AZ",10 or fewer,136
+,"WALKER, AL",10 or fewer,129
+,"BENT, CO",10 or fewer,129
+,"ARCHULETA, CO",10 or fewer,109
+,"AMADOR, CA",10 or fewer,119
+,"MODOC, CA",10 or fewer,101
+,"LITTLE RIVER, AR",10 or fewer,136
+,"JUNEAU, AK",10 or fewer,100
+,"FULTON, AR",10 or fewer,152
+,"TEHAMA, CA",10 or fewer,116
+,"RIO BLANCO, CO",10 or fewer,108
+,"MARION, AR",10 or fewer,117
+,"JACKSON, CO",10 or fewer,134
+,"BLOUNT, AL",10 or fewer,104
+,"DALLAS, AL",10 or fewer,104
+,"CONECUH, AL",10 or fewer,118
+,"DEL NORTE, CA",10 or fewer,100
+,"TALLAPOOSA, AL",10 or fewer,94
+,"WILCOX, AL",10 or fewer,142
+,"GREENLEE, AZ",10 or fewer,108
+,"SAN MIGUEL, CO",10 or fewer,73
+,"CHILTON, AL",10 or fewer,72
+,"FAYETTE, AL",10 or fewer,98
+,"SIERRA, CA",10 or fewer,104
+,"WASHINGTON, CO",10 or fewer,95
+,"LAKE, CO",10 or fewer,79
+,"PHILLIPS, CO",10 or fewer,72
+,"CONEJOS, CO",10 or fewer,60
+,"BACA, CO",10 or fewer,65
+,"CRENSHAW, AL",10 or fewer,77
+,"LAFAYETTE, AR",10 or fewer,78
+,"BUTLER, AL",10 or fewer,72
+,"NEWTON, AR",10 or fewer,79
+,"WINSTON, AL",10 or fewer,44
+,"COSTILLA, CO",10 or fewer,62
+,"LAWRENCE, AL",10 or fewer,46
+,"KODIAK ISLAND, AK",10 or fewer,65
+,"SAGUACHE, CO",10 or fewer,54
+,"GLENN, CA",10 or fewer,49
+,"HALE, AL",10 or fewer,63
+,"CLAY, AL",10 or fewer,57
+,"MACON, AL",10 or fewer,59
+,"SEDGWICK, CO",10 or fewer,59
+,"KETCHIKAN GATEWAY, AK",10 or fewer,47
+,"OURAY, CO",10 or fewer,49
+,"BIBB, AL",10 or fewer,39
+,"COLUSA, CA",10 or fewer,33
+,"TRINITY, CA",10 or fewer,38
+,"KIOWA, CO",10 or fewer,36
+,"GREENE, AL",10 or fewer,31
+,"CHEYENNE, CO",10 or fewer,28
+,"SITKA, AK",10 or fewer,26
+,"BULLOCK, AL",10 or fewer,23
+,"COOSA, AL",10 or fewer,22
+,"ALPINE, CA",10 or fewer,28
+,"SOUTHEAST FAIRBANKS, AK",10 or fewer,12
+,"LOWNDES, AL",10 or fewer,27
+,"VALDEZ CORDOVA, AK",10 or fewer,18
+,"BETHEL, AK",10 or fewer,10 or fewer
+,"DOLORES, CO",10 or fewer,17
+,"PERRY, AL",10 or fewer,23
+,"HINSDALE, CO",10 or fewer,15
+,"NORTH SLOPE, AK",10 or fewer,10 or fewer
+,"NOME, AK",10 or fewer,10 or fewer
+,"PRINCE OF WALES HYDER, AK",10 or fewer,14
+,"PETERSBURG, AK",10 or fewer,13
+,"ALEUTIANS WEST, AK",10 or fewer,10 or fewer
+,"MINERAL, CO",10 or fewer,10 or fewer
+,"NORTHWEST ARCTIC, AK",10 or fewer,10 or fewer
+,"YUKON KOYUKUK, AK",10 or fewer,10 or fewer
+,"HAINES, AK",10 or fewer,10 or fewer
+,"SAN JUAN, CO",10 or fewer,10 or fewer
+,"WRANGELL, AK",10 or fewer,10 or fewer
+,"DENALI, AK",10 or fewer,10 or fewer
+,"DILLINGHAM, AK",10 or fewer,10 or fewer
+,"HOONAH ANGOON, AK",10 or fewer,10 or fewer
+,"ALEUTIANS EAST, AK",10 or fewer,10 or fewer
+,"BRISTOL BAY, AK",10 or fewer,10 or fewer
+,"SKAGWAY, AK",10 or fewer,10 or fewer
+,"LAKE AND PENINSULA, AK",10 or fewer,10 or fewer
+,"KUSILVAK, AK",10 or fewer,10 or fewer
+,"YAKUTAT, AK",10 or fewer,10 or fewer
+,None of the above,218,315405
+,Total,2302,2575548
+Jan 1 – Dec 31 2022,"SAN DIEGO, CA",126,221599
+,"MARICOPA, AZ",316,153366
+,"RIVERSIDE, CA",176,129081
+,"FRESNO, CA",116,130149
+,"EL PASO, CO",44,115465
+,"HARTFORD, CT",60,111105
+,"DENVER, CO",43,94885
+,"SAN BERNARDINO, CA",63,89102
+,"ORANGE, CA",22,37702
+,"ARAPAHOE, CO",21,68005
+,"SANTA CLARA, CA",31,65838
+,"ALAMEDA, CA",55,74116
+,"PULASKI, AR",175,74613
+,"ADAMS, CO",27,66710
+,"PIMA, AZ",39,51606
+,"JEFFERSON, CO",23,46912
+,"WELD, CO",22,55725
+,"LARIMER, CO",47,48368
+,"LOS ANGELES, CA",37,28165
+,"NEW HAVEN, CT",11,45109
+,"NEW CASTLE, DE",13,33628
+,"CONTRA COSTA, CA",13,30380
+,"BOULDER, CO",23,38339
+,"MONTEREY, CA",13,31520
+,"SAN FRANCISCO, CA",13,34233
+,"SAN MATEO, CA",10 or fewer,28167
+,"FAIRFIELD, CT",19,35351
+,"KENT, DE",37,37384
+,"DOUGLAS, CO",10 or fewer,20170
+,"NEW LONDON, CT",24,39231
+,"SUSSEX, DE",32,31881
+,"MOBILE, AL",84,30991
+,"BALDWIN, AL",51,28536
+,"MIDDLESEX, CT",29,26664
+,"PUEBLO, CO",33,24812
+,"MADERA, CA",10 or fewer,13019
+,"MESA, CO",16,14860
+,"WINDHAM, CT",12,20136
+,"LITCHFIELD, CT",14,18210
+,"FAULKNER, AR",30,14112
+,"CRAIGHEAD, AR",51,16091
+,"SEBASTIAN, AR",91,17646
+,"SALINE, AR",30,11664
+,"HOUSTON, AL",27,15811
+,"TOLLAND, CT",10 or fewer,10442
+,"WASHINGTON, AR",14,13365
+,"LONOKE, AR",31,10156
+,"TULARE, CA",10 or fewer,8146
+,"CRITTENDEN, AR",43,11172
+,"CRAWFORD, AR",50,11820
+,"BENTON, AR",10 or fewer,9154
+,"BROOMFIELD, CO",10 or fewer,8248
+,"SACRAMENTO, CA",10 or fewer,5251
+,"PINAL, AZ",10 or fewer,2823
+,"MERCED, CA",10 or fewer,7233
+,"SAN JOAQUIN, CA",10 or fewer,4345
+,"KERN, CA",10 or fewer,3812
+,"JEFFERSON, AR",10 or fewer,4447
+,"KINGS, CA",10 or fewer,4582
+,"HOT SPRING, AR",31,5688
+,"CLEBURNE, AR",22,5378
+,"WHITE, AR",10 or fewer,4036
+,"TELLER, CO",10 or fewer,4819
+,"STANISLAUS, CA",10 or fewer,3151
+,"GREENE, AR",10 or fewer,3879
+,"CLARK, AR",13,4820
+,"SANTA CRUZ, CA",10 or fewer,2629
+,"YAVAPAI, AZ",10 or fewer,2537
+,"POINSETT, AR",10 or fewer,4045
+,"ROUTT, CO",10 or fewer,3196
+,"IMPERIAL, CA",10 or fewer,2052
+,"SOLANO, CA",10 or fewer,2329
+,"GARLAND, AR",10 or fewer,2198
+,"DALE, AL",10 or fewer,3125
+,"JEFFERSON, AL",10 or fewer,1962
+,"VENTURA, CA",10 or fewer,1893
+,"CHEROKEE, AL",10 or fewer,2338
+,"ARKANSAS, AR",13,3294
+,"COCHISE, AZ",10 or fewer,1890
+,"MISSISSIPPI, AR",10 or fewer,2395
+,"PLACER, CA",10 or fewer,1467
+,"GRANT, AR",10 or fewer,2141
+,"SONOMA, CA",10 or fewer,1500
+,"POPE, AR",10 or fewer,1539
+,"GENEVA, AL",10 or fewer,2225
+,"ELBERT, CO",10 or fewer,941
+,"MARIN, CA",10 or fewer,1446
+,"MOFFAT, CO",10 or fewer,2366
+,"FREMONT, CO",10 or fewer,1860
+,"MOHAVE, AZ",10 or fewer,1071
+,"MADISON, AL",10 or fewer,1087
+,"EL DORADO, CA",10 or fewer,1244
+,"COFFEE, AL",10 or fewer,1520
+,"PICKENS, AL",10 or fewer,2094
+,"DREW, AR",10 or fewer,537
+,"SANTA BARBARA, CA",10 or fewer,1144
+,"CONWAY, AR",10 or fewer,1425
+,"HUMBOLDT, CA",10 or fewer,597
+,"SAN LUIS OBISPO, CA",10 or fewer,1056
+,"HENRY, AL",10 or fewer,1916
+,"LAMAR, AL",10 or fewer,1213
+,"CHOCTAW, AL",10 or fewer,2447
+,"ESCAMBIA, AL",10 or fewer,1239
+,"ANCHORAGE, AK",10 or fewer,858
+,"CHAMBERS, AL",10 or fewer,1241
+,"VAN BUREN, AR",10 or fewer,1131
+,"GARFIELD, CO",10 or fewer,778
+,"UNION, AR",10 or fewer,965
+,"CALHOUN, AL",10 or fewer,979
+,"MARION, AL",10 or fewer,118
+,"SAINT FRANCIS, AR",10 or fewer,1082
+,"LASSEN, CA",10 or fewer,816
+,"JACKSON, AL",10 or fewer,821
+,"PITKIN, CO",10 or fewer,581
+,"MONROE, AR",10 or fewer,1264
+,"MORGAN, CO",10 or fewer,971
+,"SAN BENITO, CA",10 or fewer,862
+,"PERRY, AR",10 or fewer,1033
+,"LAWRENCE, AR",10 or fewer,1033
+,"PRAIRIE, AR",10 or fewer,1204
+,"YUMA, AZ",10 or fewer,622
+,"OUACHITA, AR",10 or fewer,712
+,"CROSS, AR",10 or fewer,904
+,"BARBOUR, AL",10 or fewer,1186
+,"ASHLEY, AR",10 or fewer,585
+,"DELTA, CO",10 or fewer,717
+,"EAGLE, CO",10 or fewer,583
+,"PHILLIPS, AR",10 or fewer,726
+,"MONTGOMERY, AL",10 or fewer,705
+,"PARK, CO",10 or fewer,770
+,"LEE, AL",10 or fewer,659
+,"RANDOLPH, AL",10 or fewer,760
+,"INDEPENDENCE, AR",10 or fewer,685
+,"COCONINO, AZ",10 or fewer,563
+,"NEVADA, AR",10 or fewer,889
+,"YOLO, CA",10 or fewer,617
+,"GRAND, CO",10 or fewer,760
+,"OTERO, CO",10 or fewer,881
+,"WASHINGTON, AL",10 or fewer,1183
+,"GILA, AZ",10 or fewer,606
+,"NEVADA, CA",10 or fewer,563
+,"TUSCALOOSA, AL",10 or fewer,631
+,"SANTA CRUZ, AZ",10 or fewer,596
+,"MONTROSE, CO",10 or fewer,627
+,"NAVAJO, AZ",10 or fewer,605
+,"SHELBY, AL",10 or fewer,557
+,"BUTTE, CA",10 or fewer,547
+,"LOGAN, AR",10 or fewer,750
+,"FRANKLIN, AR",10 or fewer,819
+,"SHASTA, CA",10 or fewer,523
+,"JOHNSON, AR",10 or fewer,596
+,"GUNNISON, CO",10 or fewer,231
+,"RANDOLPH, AR",10 or fewer,543
+,"YELL, AR",10 or fewer,543
+,"JACKSON, AR",10 or fewer,574
+,"CLAY, AR",10 or fewer,610
+,"PLUMAS, CA",10 or fewer,418
+,"MADISON, AR",10 or fewer,908
+,"NAPA, CA",10 or fewer,480
+,"HEMPSTEAD, AR",10 or fewer,471
+,"LINCOLN, AR",10 or fewer,367
+,"SUMTER, AL",10 or fewer,714
+,"MILLER, AR",10 or fewer,466
+,"DESHA, AR",10 or fewer,373
+,"ETOWAH, AL",10 or fewer,423
+,"BRADLEY, AR",10 or fewer,319
+,"DALLAS, AR",10 or fewer,547
+,"PIKE, AR",10 or fewer,524
+,"SHARP, AR",10 or fewer,407
+,"MARIPOSA, CA",10 or fewer,386
+,"APACHE, AZ",10 or fewer,358
+,"SUMMIT, CO",10 or fewer,379
+,"CLARKE, AL",10 or fewer,507
+,"LOGAN, CO",10 or fewer,407
+,"LA PLATA, CO",10 or fewer,358
+,"RUSSELL, AL",10 or fewer,366
+,"BAXTER, AR",10 or fewer,342
+,"CLEVELAND, AR",10 or fewer,381
+,"LAS ANIMAS, CO",10 or fewer,398
+,"COLUMBIA, AR",10 or fewer,329
+,"CARROLL, AR",10 or fewer,408
+,"CHAFFEE, CO",10 or fewer,320
+,"FAIRBANKS NORTH STAR, AK",10 or fewer,313
+,"CHICOT, AR",10 or fewer,274
+,"LEE, AR",10 or fewer,327
+,"SCOTT, AR",10 or fewer,465
+,"POLK, AR",10 or fewer,333
+,"BOONE, AR",10 or fewer,309
+,"MATANUSKA SUSITNA, AK",10 or fewer,282
+,"COVINGTON, AL",10 or fewer,410
+,"TUOLUMNE, CA",10 or fewer,304
+,"MENDOCINO, CA",10 or fewer,277
+,"MORGAN, AL",10 or fewer,264
+,"GILPIN, CO",10 or fewer,355
+,"INYO, CA",10 or fewer,189
+,"LIMESTONE, AL",10 or fewer,268
+,"MONROE, AL",10 or fewer,369
+,"MARSHALL, AL",10 or fewer,222
+,"GRAHAM, AZ",10 or fewer,229
+,"PROWERS, CO",10 or fewer,271
+,"PIKE, AL",10 or fewer,311
+,"STONE, AR",10 or fewer,281
+,"CLEAR CREEK, CO",10 or fewer,255
+,"HUERFANO, CO",10 or fewer,329
+,"HOWARD, AR",10 or fewer,223
+,"ELMORE, AL",10 or fewer,224
+,"MARENGO, AL",10 or fewer,340
+,"LAUDERDALE, AL",10 or fewer,192
+,"SAINT CLAIR, AL",10 or fewer,220
+,"MONTEZUMA, CO",10 or fewer,190
+,"WOODRUFF, AR",10 or fewer,243
+,"SUTTER, CA",10 or fewer,197
+,"TALLADEGA, AL",10 or fewer,189
+,"LAKE, CA",10 or fewer,223
+,"KENAI PENINSULA, AK",10 or fewer,184
+,"CALAVERAS, CA",10 or fewer,186
+,"SEVIER, AR",10 or fewer,180
+,"CUSTER, CO",10 or fewer,259
+,"SEARCY, AR",10 or fewer,198
+,"YUBA, CA",10 or fewer,167
+,"CULLMAN, AL",10 or fewer,196
+,"RIO GRANDE, CO",10 or fewer,192
+,"CROWLEY, CO",10 or fewer,294
+,"IZARD, AR",10 or fewer,193
+,"ALAMOSA, CO",10 or fewer,203
+,"COLBERT, AL",10 or fewer,138
+,"CLEBURNE, AL",10 or fewer,153
+,"AUTAUGA, AL",10 or fewer,168
+,"SISKIYOU, CA",10 or fewer,160
+,"FRANKLIN, AL",10 or fewer,72
+,"CALHOUN, AR",10 or fewer,159
+,"LINCOLN, CO",10 or fewer,146
+,"MONO, CA",10 or fewer,128
+,"YUMA, CO",10 or fewer,124
+,"MONTGOMERY, AR",10 or fewer,157
+,"KIT CARSON, CO",10 or fewer,132
+,"LA PAZ, AZ",10 or fewer,130
+,"WALKER, AL",10 or fewer,140
+,"BENT, CO",10 or fewer,194
+,"ARCHULETA, CO",10 or fewer,131
+,"AMADOR, CA",10 or fewer,144
+,"MODOC, CA",10 or fewer,112
+,"LITTLE RIVER, AR",10 or fewer,114
+,"JUNEAU, AK",10 or fewer,110
+,"FULTON, AR",10 or fewer,132
+,"TEHAMA, CA",10 or fewer,117
+,"RIO BLANCO, CO",10 or fewer,127
+,"MARION, AR",10 or fewer,111
+,"JACKSON, CO",10 or fewer,165
+,"BLOUNT, AL",10 or fewer,101
+,"DALLAS, AL",10 or fewer,130
+,"CONECUH, AL",10 or fewer,151
+,"DEL NORTE, CA",10 or fewer,105
+,"TALLAPOOSA, AL",10 or fewer,109
+,"WILCOX, AL",10 or fewer,143
+,"GREENLEE, AZ",10 or fewer,91
+,"SAN MIGUEL, CO",10 or fewer,92
+,"CHILTON, AL",10 or fewer,92
+,"FAYETTE, AL",10 or fewer,90
+,"SIERRA, CA",10 or fewer,96
+,"WASHINGTON, CO",10 or fewer,95
+,"LAKE, CO",10 or fewer,64
+,"PHILLIPS, CO",10 or fewer,85
+,"CONEJOS, CO",10 or fewer,105
+,"BACA, CO",10 or fewer,93
+,"CRENSHAW, AL",10 or fewer,88
+,"LAFAYETTE, AR",10 or fewer,76
+,"BUTLER, AL",10 or fewer,84
+,"NEWTON, AR",10 or fewer,98
+,"WINSTON, AL",10 or fewer,51
+,"COSTILLA, CO",10 or fewer,86
+,"LAWRENCE, AL",10 or fewer,56
+,"KODIAK ISLAND, AK",10 or fewer,68
+,"SAGUACHE, CO",10 or fewer,58
+,"GLENN, CA",10 or fewer,48
+,"HALE, AL",10 or fewer,57
+,"CLAY, AL",10 or fewer,52
+,"MACON, AL",10 or fewer,56
+,"SEDGWICK, CO",10 or fewer,72
+,"KETCHIKAN GATEWAY, AK",10 or fewer,54
+,"OURAY, CO",10 or fewer,46
+,"BIBB, AL",10 or fewer,49
+,"COLUSA, CA",10 or fewer,40
+,"TRINITY, CA",10 or fewer,32
+,"KIOWA, CO",10 or fewer,35
+,"GREENE, AL",10 or fewer,41
+,"CHEYENNE, CO",10 or fewer,43
+,"SITKA, AK",10 or fewer,27
+,"BULLOCK, AL",10 or fewer,31
+,"COOSA, AL",10 or fewer,25
+,"ALPINE, CA",10 or fewer,24
+,"SOUTHEAST FAIRBANKS, AK",10 or fewer,31
+,"LOWNDES, AL",10 or fewer,23
+,"VALDEZ CORDOVA, AK",10 or fewer,19
+,"BETHEL, AK",10 or fewer,21
+,"DOLORES, CO",10 or fewer,21
+,"PERRY, AL",10 or fewer,15
+,"HINSDALE, CO",10 or fewer,11
+,"NORTH SLOPE, AK",10 or fewer,18
+,"NOME, AK",10 or fewer,10 or fewer
+,"PRINCE OF WALES HYDER, AK",10 or fewer,16
+,"PETERSBURG, AK",10 or fewer,11
+,"ALEUTIANS WEST, AK",10 or fewer,10 or fewer
+,"MINERAL, CO",10 or fewer,16
+,"NORTHWEST ARCTIC, AK",10 or fewer,17
+,"YUKON KOYUKUK, AK",10 or fewer,10 or fewer
+,"HAINES, AK",10 or fewer,10 or fewer
+,"SAN JUAN, CO",10 or fewer,10 or fewer
+,"WRANGELL, AK",10 or fewer,10 or fewer
+,"DENALI, AK",10 or fewer,10 or fewer
+,"DILLINGHAM, AK",10 or fewer,11
+,"HOONAH ANGOON, AK",10 or fewer,10 or fewer
+,"ALEUTIANS EAST, AK",10 or fewer,10 or fewer
+,"BRISTOL BAY, AK",10 or fewer,10 or fewer
+,"SKAGWAY, AK",10 or fewer,10 or fewer
+,"LAKE AND PENINSULA, AK",10 or fewer,10 or fewer
+,"KUSILVAK, AK",10 or fewer,10 or fewer
+,"YAKUTAT, AK",10 or fewer,10 or fewer
+,None of the above,231,346547
+,Total,2878,2952988
+Jan 1 – Dec 31 2023,"SAN DIEGO, CA",86,235000
+,"MARICOPA, AZ",455,171813
+,"RIVERSIDE, CA",138,132559
+,"FRESNO, CA",129,142141
+,"EL PASO, CO",49,118226
+,"HARTFORD, CT",44,111752
+,"DENVER, CO",41,100608
+,"SAN BERNARDINO, CA",63,97210
+,"ORANGE, CA",14,74575
+,"ARAPAHOE, CO",33,70458
+,"SANTA CLARA, CA",22,72235
+,"ALAMEDA, CA",46,78564
+,"PULASKI, AR",230,74708
+,"ADAMS, CO",19,67658
+,"PIMA, AZ",55,52594
+,"JEFFERSON, CO",17,49188
+,"WELD, CO",30,57753
+,"LARIMER, CO",44,50287
+,"LOS ANGELES, CA",31,30081
+,"NEW HAVEN, CT",26,45665
+,"NEW CASTLE, DE",30,43838
+,"CONTRA COSTA, CA",14,30588
+,"BOULDER, CO",22,39543
+,"MONTEREY, CA",10 or fewer,47129
+,"SAN FRANCISCO, CA",10 or fewer,37648
+,"SAN MATEO, CA",10 or fewer,31081
+,"FAIRFIELD, CT",16,35840
+,"KENT, DE",32,38335
+,"DOUGLAS, CO",10 or fewer,21136
+,"NEW LONDON, CT",13,39860
+,"SUSSEX, DE",41,35704
+,"MOBILE, AL",111,31518
+,"BALDWIN, AL",70,30368
+,"MIDDLESEX, CT",21,27788
+,"PUEBLO, CO",28,28509
+,"MADERA, CA",15,20157
+,"MESA, CO",25,15448
+,"WINDHAM, CT",11,20670
+,"LITCHFIELD, CT",12,18706
+,"FAULKNER, AR",36,13770
+,"CRAIGHEAD, AR",42,15878
+,"SEBASTIAN, AR",75,16993
+,"SALINE, AR",37,11434
+,"HOUSTON, AL",32,16915
+,"TOLLAND, CT",10 or fewer,10567
+,"WASHINGTON, AR",15,12941
+,"LONOKE, AR",35,10031
+,"TULARE, CA",10 or fewer,7826
+,"CRITTENDEN, AR",44,11401
+,"CRAWFORD, AR",52,11788
+,"BENTON, AR",11,9101
+,"BROOMFIELD, CO",10 or fewer,8527
+,"SACRAMENTO, CA",10 or fewer,5148
+,"PINAL, AZ",10 or fewer,2837
+,"MERCED, CA",10 or fewer,6692
+,"SAN JOAQUIN, CA",10 or fewer,4320
+,"KERN, CA",10 or fewer,3869
+,"JEFFERSON, AR",21,4485
+,"KINGS, CA",10 or fewer,4427
+,"HOT SPRING, AR",27,5487
+,"CLEBURNE, AR",23,5352
+,"WHITE, AR",12,3944
+,"TELLER, CO",10 or fewer,4947
+,"STANISLAUS, CA",10 or fewer,3120
+,"GREENE, AR",16,3909
+,"CLARK, AR",24,4753
+,"SANTA CRUZ, CA",10 or fewer,2911
+,"YAVAPAI, AZ",11,2628
+,"POINSETT, AR",12,3954
+,"ROUTT, CO",10 or fewer,3302
+,"IMPERIAL, CA",10 or fewer,2132
+,"SOLANO, CA",10 or fewer,2235
+,"GARLAND, AR",10 or fewer,2229
+,"DALE, AL",10 or fewer,3167
+,"JEFFERSON, AL",10 or fewer,2111
+,"VENTURA, CA",10 or fewer,1878
+,"CHEROKEE, AL",10 or fewer,5153
+,"ARKANSAS, AR",29,3158
+,"COCHISE, AZ",10 or fewer,1841
+,"MISSISSIPPI, AR",10 or fewer,2287
+,"PLACER, CA",10 or fewer,1502
+,"GRANT, AR",10 or fewer,2069
+,"SONOMA, CA",10 or fewer,1587
+,"POPE, AR",10 or fewer,1558
+,"GENEVA, AL",10 or fewer,2413
+,"ELBERT, CO",10 or fewer,993
+,"MARIN, CA",10 or fewer,1446
+,"MOFFAT, CO",10 or fewer,2581
+,"FREMONT, CO",10 or fewer,2090
+,"MOHAVE, AZ",10 or fewer,1006
+,"MADISON, AL",10 or fewer,1253
+,"EL DORADO, CA",10 or fewer,1084
+,"COFFEE, AL",10 or fewer,1669
+,"PICKENS, AL",10 or fewer,2350
+,"DREW, AR",10 or fewer,924
+,"SANTA BARBARA, CA",10 or fewer,1175
+,"CONWAY, AR",10 or fewer,1410
+,"HUMBOLDT, CA",10 or fewer,1461
+,"SAN LUIS OBISPO, CA",10 or fewer,1099
+,"HENRY, AL",10 or fewer,2107
+,"LAMAR, AL",10 or fewer,1231
+,"CHOCTAW, AL",10 or fewer,2421
+,"ESCAMBIA, AL",10 or fewer,1362
+,"ANCHORAGE, AK",10 or fewer,935
+,"CHAMBERS, AL",10 or fewer,1341
+,"VAN BUREN, AR",10 or fewer,1087
+,"GARFIELD, CO",10 or fewer,1147
+,"UNION, AR",10 or fewer,972
+,"CALHOUN, AL",10 or fewer,1602
+,"MARION, AL",10 or fewer,122
+,"SAINT FRANCIS, AR",10 or fewer,1074
+,"LASSEN, CA",10 or fewer,870
+,"JACKSON, AL",10 or fewer,804
+,"PITKIN, CO",10 or fewer,1870
+,"MONROE, AR",10 or fewer,1207
+,"MORGAN, CO",10 or fewer,922
+,"SAN BENITO, CA",10 or fewer,1083
+,"PERRY, AR",10 or fewer,1028
+,"LAWRENCE, AR",10 or fewer,986
+,"PRAIRIE, AR",10 or fewer,1097
+,"YUMA, AZ",10 or fewer,733
+,"OUACHITA, AR",10 or fewer,822
+,"CROSS, AR",10 or fewer,861
+,"BARBOUR, AL",10 or fewer,1234
+,"ASHLEY, AR",10 or fewer,648
+,"DELTA, CO",10 or fewer,766
+,"EAGLE, CO",10 or fewer,849
+,"PHILLIPS, AR",10 or fewer,782
+,"MONTGOMERY, AL",10 or fewer,716
+,"PARK, CO",10 or fewer,793
+,"LEE, AL",10 or fewer,709
+,"RANDOLPH, AL",10 or fewer,872
+,"INDEPENDENCE, AR",10 or fewer,689
+,"COCONINO, AZ",10 or fewer,612
+,"NEVADA, AR",10 or fewer,876
+,"YOLO, CA",10 or fewer,645
+,"GRAND, CO",10 or fewer,749
+,"OTERO, CO",10 or fewer,1045
+,"WASHINGTON, AL",10 or fewer,1197
+,"GILA, AZ",10 or fewer,596
+,"NEVADA, CA",10 or fewer,598
+,"TUSCALOOSA, AL",10 or fewer,662
+,"SANTA CRUZ, AZ",10 or fewer,642
+,"MONTROSE, CO",10 or fewer,624
+,"NAVAJO, AZ",10 or fewer,549
+,"SHELBY, AL",10 or fewer,602
+,"BUTTE, CA",10 or fewer,565
+,"LOGAN, AR",10 or fewer,704
+,"FRANKLIN, AR",10 or fewer,728
+,"SHASTA, CA",10 or fewer,563
+,"JOHNSON, AR",10 or fewer,620
+,"GUNNISON, CO",10 or fewer,283
+,"RANDOLPH, AR",10 or fewer,573
+,"YELL, AR",10 or fewer,488
+,"JACKSON, AR",10 or fewer,573
+,"CLAY, AR",10 or fewer,563
+,"PLUMAS, CA",10 or fewer,513
+,"MADISON, AR",10 or fewer,891
+,"NAPA, CA",10 or fewer,476
+,"HEMPSTEAD, AR",10 or fewer,501
+,"LINCOLN, AR",10 or fewer,425
+,"SUMTER, AL",10 or fewer,698
+,"MILLER, AR",10 or fewer,466
+,"DESHA, AR",10 or fewer,405
+,"ETOWAH, AL",10 or fewer,582
+,"BRADLEY, AR",10 or fewer,403
+,"DALLAS, AR",10 or fewer,551
+,"PIKE, AR",10 or fewer,551
+,"SHARP, AR",10 or fewer,403
+,"MARIPOSA, CA",10 or fewer,425
+,"APACHE, AZ",10 or fewer,320
+,"SUMMIT, CO",10 or fewer,392
+,"CLARKE, AL",10 or fewer,532
+,"LOGAN, CO",10 or fewer,407
+,"LA PLATA, CO",10 or fewer,317
+,"RUSSELL, AL",10 or fewer,380
+,"BAXTER, AR",10 or fewer,350
+,"CLEVELAND, AR",10 or fewer,411
+,"LAS ANIMAS, CO",10 or fewer,459
+,"COLUMBIA, AR",10 or fewer,329
+,"CARROLL, AR",10 or fewer,447
+,"CHAFFEE, CO",10 or fewer,389
+,"FAIRBANKS NORTH STAR, AK",10 or fewer,326
+,"CHICOT, AR",10 or fewer,293
+,"LEE, AR",10 or fewer,347
+,"SCOTT, AR",10 or fewer,422
+,"POLK, AR",10 or fewer,331
+,"BOONE, AR",10 or fewer,337
+,"MATANUSKA SUSITNA, AK",10 or fewer,310
+,"COVINGTON, AL",10 or fewer,385
+,"TUOLUMNE, CA",10 or fewer,297
+,"MENDOCINO, CA",10 or fewer,311
+,"MORGAN, AL",10 or fewer,276
+,"GILPIN, CO",10 or fewer,385
+,"INYO, CA",10 or fewer,260
+,"LIMESTONE, AL",10 or fewer,279
+,"MONROE, AL",10 or fewer,366
+,"MARSHALL, AL",10 or fewer,250
+,"GRAHAM, AZ",10 or fewer,220
+,"PROWERS, CO",10 or fewer,294
+,"PIKE, AL",10 or fewer,402
+,"STONE, AR",10 or fewer,262
+,"CLEAR CREEK, CO",10 or fewer,266
+,"HUERFANO, CO",10 or fewer,387
+,"HOWARD, AR",10 or fewer,192
+,"ELMORE, AL",10 or fewer,271
+,"MARENGO, AL",10 or fewer,321
+,"LAUDERDALE, AL",10 or fewer,207
+,"SAINT CLAIR, AL",10 or fewer,241
+,"MONTEZUMA, CO",10 or fewer,193
+,"WOODRUFF, AR",10 or fewer,226
+,"SUTTER, CA",10 or fewer,211
+,"TALLADEGA, AL",10 or fewer,225
+,"LAKE, CA",10 or fewer,196
+,"KENAI PENINSULA, AK",10 or fewer,202
+,"CALAVERAS, CA",10 or fewer,204
+,"SEVIER, AR",10 or fewer,201
+,"CUSTER, CO",10 or fewer,322
+,"SEARCY, AR",10 or fewer,197
+,"YUBA, CA",10 or fewer,174
+,"CULLMAN, AL",10 or fewer,210
+,"RIO GRANDE, CO",10 or fewer,190
+,"CROWLEY, CO",10 or fewer,368
+,"IZARD, AR",10 or fewer,195
+,"ALAMOSA, CO",10 or fewer,205
+,"COLBERT, AL",10 or fewer,144
+,"CLEBURNE, AL",10 or fewer,208
+,"AUTAUGA, AL",10 or fewer,214
+,"SISKIYOU, CA",10 or fewer,148
+,"FRANKLIN, AL",10 or fewer,79
+,"CALHOUN, AR",10 or fewer,173
+,"LINCOLN, CO",10 or fewer,153
+,"MONO, CA",10 or fewer,143
+,"YUMA, CO",10 or fewer,152
+,"MONTGOMERY, AR",10 or fewer,167
+,"KIT CARSON, CO",10 or fewer,138
+,"LA PAZ, AZ",10 or fewer,125
+,"WALKER, AL",10 or fewer,124
+,"BENT, CO",10 or fewer,216
+,"ARCHULETA, CO",10 or fewer,135
+,"AMADOR, CA",10 or fewer,125
+,"MODOC, CA",10 or fewer,123
+,"LITTLE RIVER, AR",10 or fewer,134
+,"JUNEAU, AK",10 or fewer,122
+,"FULTON, AR",10 or fewer,122
+,"TEHAMA, CA",10 or fewer,111
+,"RIO BLANCO, CO",10 or fewer,116
+,"MARION, AR",10 or fewer,115
+,"JACKSON, CO",10 or fewer,160
+,"BLOUNT, AL",10 or fewer,126
+,"DALLAS, AL",10 or fewer,130
+,"CONECUH, AL",10 or fewer,139
+,"DEL NORTE, CA",10 or fewer,108
+,"TALLAPOOSA, AL",10 or fewer,131
+,"WILCOX, AL",10 or fewer,123
+,"GREENLEE, AZ",10 or fewer,75
+,"SAN MIGUEL, CO",10 or fewer,105
+,"CHILTON, AL",10 or fewer,111
+,"FAYETTE, AL",10 or fewer,80
+,"SIERRA, CA",10 or fewer,106
+,"WASHINGTON, CO",10 or fewer,93
+,"LAKE, CO",10 or fewer,90
+,"PHILLIPS, CO",10 or fewer,83
+,"CONEJOS, CO",10 or fewer,84
+,"BACA, CO",10 or fewer,92
+,"CRENSHAW, AL",10 or fewer,88
+,"LAFAYETTE, AR",10 or fewer,81
+,"BUTLER, AL",10 or fewer,69
+,"NEWTON, AR",10 or fewer,90
+,"WINSTON, AL",10 or fewer,67
+,"COSTILLA, CO",10 or fewer,82
+,"LAWRENCE, AL",10 or fewer,53
+,"KODIAK ISLAND, AK",10 or fewer,73
+,"SAGUACHE, CO",10 or fewer,58
+,"GLENN, CA",10 or fewer,59
+,"HALE, AL",10 or fewer,47
+,"CLAY, AL",10 or fewer,66
+,"MACON, AL",10 or fewer,53
+,"SEDGWICK, CO",10 or fewer,52
+,"KETCHIKAN GATEWAY, AK",10 or fewer,51
+,"OURAY, CO",10 or fewer,53
+,"BIBB, AL",10 or fewer,42
+,"COLUSA, CA",10 or fewer,44
+,"TRINITY, CA",10 or fewer,39
+,"KIOWA, CO",10 or fewer,37
+,"GREENE, AL",10 or fewer,36
+,"CHEYENNE, CO",10 or fewer,41
+,"SITKA, AK",10 or fewer,26
+,"BULLOCK, AL",10 or fewer,49
+,"COOSA, AL",10 or fewer,46
+,"ALPINE, CA",10 or fewer,20
+,"SOUTHEAST FAIRBANKS, AK",10 or fewer,30
+,"LOWNDES, AL",10 or fewer,29
+,"VALDEZ CORDOVA, AK",10 or fewer,25
+,"BETHEL, AK",10 or fewer,28
+,"DOLORES, CO",10 or fewer,15
+,"PERRY, AL",10 or fewer,15
+,"HINSDALE, CO",10 or fewer,18
+,"NORTH SLOPE, AK",10 or fewer,17
+,"NOME, AK",10 or fewer,17
+,"PRINCE OF WALES HYDER, AK",10 or fewer,17
+,"PETERSBURG, AK",10 or fewer,12
+,"ALEUTIANS WEST, AK",10 or fewer,11
+,"MINERAL, CO",10 or fewer,11
+,"NORTHWEST ARCTIC, AK",10 or fewer,10 or fewer
+,"YUKON KOYUKUK, AK",10 or fewer,10 or fewer
+,"HAINES, AK",10 or fewer,10 or fewer
+,"SAN JUAN, CO",10 or fewer,10 or fewer
+,"WRANGELL, AK",10 or fewer,12
+,"DENALI, AK",10 or fewer,13
+,"DILLINGHAM, AK",10 or fewer,10 or fewer
+,"HOONAH ANGOON, AK",10 or fewer,10 or fewer
+,"ALEUTIANS EAST, AK",10 or fewer,10 or fewer
+,"BRISTOL BAY, AK",10 or fewer,10 or fewer
+,"SKAGWAY, AK",10 or fewer,10 or fewer
+,"LAKE AND PENINSULA, AK",10 or fewer,10 or fewer
+,"KUSILVAK, AK",10 or fewer,10 or fewer
+,"YAKUTAT, AK",10 or fewer,10 or fewer
+,None of the above,253,361911
+,Total,3196,3159418
+Jan 1 – Dec 31 2024,"SAN DIEGO, CA",305,385103
+,"MARICOPA, AZ",515,190657
+,"RIVERSIDE, CA",200,142014
+,"FRESNO, CA",300,166205
+,"EL PASO, CO",91,121831
+,"HARTFORD, CT",51,116175
+,"DENVER, CO",70,116308
+,"SAN BERNARDINO, CA",87,102721
+,"ORANGE, CA",64,119000
+,"ARAPAHOE, CO",59,99364
+,"SANTA CLARA, CA",40,75201
+,"ALAMEDA, CA",59,82291
+,"PULASKI, AR",147,75273
+,"ADAMS, CO",40,72693
+,"PIMA, AZ",76,59208
+,"JEFFERSON, CO",30,59051
+,"WELD, CO",29,58572
+,"LARIMER, CO",46,51154
+,"LOS ANGELES, CA",55,33645
+,"NEW HAVEN, CT",24,47383
+,"NEW CASTLE, DE",25,43296
+,"CONTRA COSTA, CA",24,31878
+,"BOULDER, CO",29,42772
+,"MONTEREY, CA",29,45694
+,"SAN FRANCISCO, CA",19,39912
+,"SAN MATEO, CA",12,36050
+,"FAIRFIELD, CT",35,37721
+,"KENT, DE",39,39414
+,"DOUGLAS, CO",27,45425
+,"NEW LONDON, CT",21,40709
+,"SUSSEX, DE",54,41326
+,"MOBILE, AL",81,30347
+,"BALDWIN, AL",69,30591
+,"MIDDLESEX, CT",32,27346
+,"PUEBLO, CO",36,29662
+,"MADERA, CA",38,25864
+,"MESA, CO",43,18094
+,"WINDHAM, CT",15,22563
+,"LITCHFIELD, CT",15,19524
+,"FAULKNER, AR",29,13813
+,"CRAIGHEAD, AR",28,15560
+,"SEBASTIAN, AR",61,16861
+,"SALINE, AR",20,11254
+,"HOUSTON, AL",19,17989
+,"TOLLAND, CT",10 or fewer,11260
+,"WASHINGTON, AR",13,12467
+,"LONOKE, AR",34,9549
+,"TULARE, CA",10 or fewer,8935
+,"CRITTENDEN, AR",45,12079
+,"CRAWFORD, AR",37,11792
+,"BENTON, AR",10 or fewer,10489
+,"BROOMFIELD, CO",10 or fewer,9483
+,"SACRAMENTO, CA",11,5180
+,"PINAL, AZ",10 or fewer,4074
+,"MERCED, CA",10 or fewer,7558
+,"SAN JOAQUIN, CA",10 or fewer,4414
+,"KERN, CA",10 or fewer,3994
+,"JEFFERSON, AR",15,4555
+,"KINGS, CA",10 or fewer,5010
+,"HOT SPRING, AR",12,5384
+,"CLEBURNE, AR",16,5705
+,"WHITE, AR",10 or fewer,3826
+,"TELLER, CO",10 or fewer,5219
+,"STANISLAUS, CA",10 or fewer,3300
+,"GREENE, AR",10 or fewer,4056
+,"CLARK, AR",12,4742
+,"SANTA CRUZ, CA",10 or fewer,3192
+,"YAVAPAI, AZ",13,2685
+,"POINSETT, AR",10 or fewer,3882
+,"ROUTT, CO",10 or fewer,3208
+,"IMPERIAL, CA",10 or fewer,2624
+,"SOLANO, CA",10 or fewer,2413
+,"GARLAND, AR",10 or fewer,2230
+,"DALE, AL",10 or fewer,3805
+,"JEFFERSON, AL",10 or fewer,2216
+,"VENTURA, CA",10 or fewer,2201
+,"CHEROKEE, AL",15,5522
+,"ARKANSAS, AR",11,3250
+,"COCHISE, AZ",10 or fewer,1865
+,"MISSISSIPPI, AR",10 or fewer,2478
+,"PLACER, CA",10 or fewer,1612
+,"GRANT, AR",10 or fewer,2247
+,"SONOMA, CA",10 or fewer,1573
+,"POPE, AR",10 or fewer,1697
+,"GENEVA, AL",10 or fewer,2580
+,"ELBERT, CO",10 or fewer,3131
+,"MARIN, CA",10 or fewer,1483
+,"MOFFAT, CO",10 or fewer,2701
+,"FREMONT, CO",10 or fewer,2177
+,"MOHAVE, AZ",10 or fewer,1040
+,"MADISON, AL",10 or fewer,1309
+,"EL DORADO, CA",10 or fewer,1178
+,"COFFEE, AL",10 or fewer,1899
+,"PICKENS, AL",10 or fewer,2487
+,"DREW, AR",10 or fewer,3405
+,"SANTA BARBARA, CA",10 or fewer,1255
+,"CONWAY, AR",10 or fewer,1440
+,"HUMBOLDT, CA",10 or fewer,2366
+,"SAN LUIS OBISPO, CA",10 or fewer,1203
+,"HENRY, AL",10 or fewer,2261
+,"LAMAR, AL",10 or fewer,2121
+,"CHOCTAW, AL",10 or fewer,2522
+,"ESCAMBIA, AL",10 or fewer,1419
+,"ANCHORAGE, AK",10 or fewer,983
+,"CHAMBERS, AL",10 or fewer,1396
+,"VAN BUREN, AR",10 or fewer,1119
+,"GARFIELD, CO",10 or fewer,1230
+,"UNION, AR",10 or fewer,1030
+,"CALHOUN, AL",10 or fewer,1724
+,"MARION, AL",14,2738
+,"SAINT FRANCIS, AR",10 or fewer,1221
+,"LASSEN, CA",10 or fewer,943
+,"JACKSON, AL",10 or fewer,842
+,"PITKIN, CO",10 or fewer,1999
+,"MONROE, AR",10 or fewer,1233
+,"MORGAN, CO",10 or fewer,1010
+,"SAN BENITO, CA",10 or fewer,1136
+,"PERRY, AR",10 or fewer,1008
+,"LAWRENCE, AR",10 or fewer,1008
+,"PRAIRIE, AR",10 or fewer,1103
+,"YUMA, AZ",10 or fewer,863
+,"OUACHITA, AR",10 or fewer,827
+,"CROSS, AR",10 or fewer,919
+,"BARBOUR, AL",10 or fewer,1131
+,"ASHLEY, AR",10 or fewer,1254
+,"DELTA, CO",10 or fewer,807
+,"EAGLE, CO",10 or fewer,1024
+,"PHILLIPS, AR",10 or fewer,924
+,"MONTGOMERY, AL",10 or fewer,769
+,"PARK, CO",10 or fewer,1014
+,"LEE, AL",10 or fewer,697
+,"RANDOLPH, AL",10 or fewer,892
+,"INDEPENDENCE, AR",10 or fewer,702
+,"COCONINO, AZ",10 or fewer,614
+,"NEVADA, AR",10 or fewer,851
+,"YOLO, CA",10 or fewer,642
+,"GRAND, CO",10 or fewer,899
+,"OTERO, CO",10 or fewer,1057
+,"WASHINGTON, AL",10 or fewer,1244
+,"GILA, AZ",10 or fewer,603
+,"NEVADA, CA",10 or fewer,574
+,"TUSCALOOSA, AL",10 or fewer,701
+,"SANTA CRUZ, AZ",10 or fewer,685
+,"MONTROSE, CO",10 or fewer,765
+,"NAVAJO, AZ",10 or fewer,569
+,"SHELBY, AL",10 or fewer,612
+,"BUTTE, CA",10 or fewer,571
+,"LOGAN, AR",10 or fewer,695
+,"FRANKLIN, AR",10 or fewer,835
+,"SHASTA, CA",10 or fewer,535
+,"JOHNSON, AR",10 or fewer,627
+,"GUNNISON, CO",10 or fewer,245
+,"RANDOLPH, AR",10 or fewer,600
+,"YELL, AR",10 or fewer,572
+,"JACKSON, AR",10 or fewer,574
+,"CLAY, AR",10 or fewer,608
+,"PLUMAS, CA",10 or fewer,559
+,"MADISON, AR",10 or fewer,966
+,"NAPA, CA",10 or fewer,508
+,"HEMPSTEAD, AR",10 or fewer,468
+,"LINCOLN, AR",10 or fewer,843
+,"SUMTER, AL",10 or fewer,887
+,"MILLER, AR",10 or fewer,467
+,"DESHA, AR",10 or fewer,616
+,"ETOWAH, AL",10 or fewer,592
+,"BRADLEY, AR",10 or fewer,706
+,"DALLAS, AR",10 or fewer,573
+,"PIKE, AR",10 or fewer,522
+,"SHARP, AR",10 or fewer,394
+,"MARIPOSA, CA",10 or fewer,541
+,"APACHE, AZ",10 or fewer,346
+,"SUMMIT, CO",10 or fewer,388
+,"CLARKE, AL",10 or fewer,553
+,"LOGAN, CO",10 or fewer,420
+,"LA PLATA, CO",10 or fewer,393
+,"RUSSELL, AL",10 or fewer,410
+,"BAXTER, AR",10 or fewer,321
+,"CLEVELAND, AR",10 or fewer,489
+,"LAS ANIMAS, CO",10 or fewer,476
+,"COLUMBIA, AR",10 or fewer,352
+,"CARROLL, AR",10 or fewer,548
+,"CHAFFEE, CO",10 or fewer,348
+,"FAIRBANKS NORTH STAR, AK",10 or fewer,315
+,"CHICOT, AR",10 or fewer,453
+,"LEE, AR",10 or fewer,404
+,"SCOTT, AR",10 or fewer,404
+,"POLK, AR",10 or fewer,295
+,"BOONE, AR",10 or fewer,405
+,"MATANUSKA SUSITNA, AK",10 or fewer,309
+,"COVINGTON, AL",10 or fewer,391
+,"TUOLUMNE, CA",10 or fewer,330
+,"MENDOCINO, CA",10 or fewer,336
+,"MORGAN, AL",10 or fewer,282
+,"GILPIN, CO",10 or fewer,438
+,"INYO, CA",10 or fewer,254
+,"LIMESTONE, AL",10 or fewer,340
+,"MONROE, AL",10 or fewer,352
+,"MARSHALL, AL",10 or fewer,280
+,"GRAHAM, AZ",10 or fewer,213
+,"PROWERS, CO",10 or fewer,300
+,"PIKE, AL",10 or fewer,397
+,"STONE, AR",10 or fewer,283
+,"CLEAR CREEK, CO",10 or fewer,322
+,"HUERFANO, CO",10 or fewer,345
+,"HOWARD, AR",10 or fewer,193
+,"ELMORE, AL",10 or fewer,269
+,"MARENGO, AL",10 or fewer,425
+,"LAUDERDALE, AL",10 or fewer,275
+,"SAINT CLAIR, AL",10 or fewer,231
+,"MONTEZUMA, CO",10 or fewer,236
+,"WOODRUFF, AR",10 or fewer,246
+,"SUTTER, CA",10 or fewer,219
+,"TALLADEGA, AL",10 or fewer,217
+,"LAKE, CA",10 or fewer,206
+,"KENAI PENINSULA, AK",10 or fewer,243
+,"CALAVERAS, CA",10 or fewer,221
+,"SEVIER, AR",10 or fewer,189
+,"CUSTER, CO",10 or fewer,389
+,"SEARCY, AR",10 or fewer,236
+,"YUBA, CA",10 or fewer,193
+,"CULLMAN, AL",10 or fewer,195
+,"RIO GRANDE, CO",10 or fewer,219
+,"CROWLEY, CO",10 or fewer,363
+,"IZARD, AR",10 or fewer,178
+,"ALAMOSA, CO",10 or fewer,203
+,"COLBERT, AL",10 or fewer,257
+,"CLEBURNE, AL",10 or fewer,243
+,"AUTAUGA, AL",10 or fewer,177
+,"SISKIYOU, CA",10 or fewer,142
+,"FRANKLIN, AL",10 or fewer,319
+,"CALHOUN, AR",10 or fewer,210
+,"LINCOLN, CO",10 or fewer,193
+,"MONO, CA",10 or fewer,168
+,"YUMA, CO",10 or fewer,157
+,"MONTGOMERY, AR",10 or fewer,156
+,"KIT CARSON, CO",10 or fewer,164
+,"LA PAZ, AZ",10 or fewer,140
+,"WALKER, AL",10 or fewer,158
+,"BENT, CO",10 or fewer,193
+,"ARCHULETA, CO",10 or fewer,148
+,"AMADOR, CA",10 or fewer,125
+,"MODOC, CA",10 or fewer,152
+,"LITTLE RIVER, AR",10 or fewer,127
+,"JUNEAU, AK",10 or fewer,136
+,"FULTON, AR",10 or fewer,128
+,"TEHAMA, CA",10 or fewer,132
+,"RIO BLANCO, CO",10 or fewer,153
+,"MARION, AR",10 or fewer,130
+,"JACKSON, CO",10 or fewer,188
+,"BLOUNT, AL",10 or fewer,133
+,"DALLAS, AL",10 or fewer,114
+,"CONECUH, AL",10 or fewer,132
+,"DEL NORTE, CA",10 or fewer,120
+,"TALLAPOOSA, AL",10 or fewer,110
+,"WILCOX, AL",10 or fewer,115
+,"GREENLEE, AZ",10 or fewer,100
+,"SAN MIGUEL, CO",10 or fewer,109
+,"CHILTON, AL",10 or fewer,99
+,"FAYETTE, AL",10 or fewer,135
+,"SIERRA, CA",10 or fewer,97
+,"WASHINGTON, CO",10 or fewer,105
+,"LAKE, CO",10 or fewer,100
+,"PHILLIPS, CO",10 or fewer,78
+,"CONEJOS, CO",10 or fewer,78
+,"BACA, CO",10 or fewer,108
+,"CRENSHAW, AL",10 or fewer,93
+,"LAFAYETTE, AR",10 or fewer,74
+,"BUTLER, AL",10 or fewer,88
+,"NEWTON, AR",10 or fewer,90
+,"WINSTON, AL",10 or fewer,101
+,"COSTILLA, CO",10 or fewer,72
+,"LAWRENCE, AL",10 or fewer,81
+,"KODIAK ISLAND, AK",10 or fewer,54
+,"SAGUACHE, CO",10 or fewer,74
+,"GLENN, CA",10 or fewer,61
+,"HALE, AL",10 or fewer,73
+,"CLAY, AL",10 or fewer,55
+,"MACON, AL",10 or fewer,66
+,"SEDGWICK, CO",10 or fewer,61
+,"KETCHIKAN GATEWAY, AK",10 or fewer,54
+,"OURAY, CO",10 or fewer,52
+,"BIBB, AL",10 or fewer,55
+,"COLUSA, CA",10 or fewer,35
+,"TRINITY, CA",10 or fewer,39
+,"KIOWA, CO",10 or fewer,47
+,"GREENE, AL",10 or fewer,45
+,"CHEYENNE, CO",10 or fewer,39
+,"SITKA, AK",10 or fewer,31
+,"BULLOCK, AL",10 or fewer,58
+,"COOSA, AL",10 or fewer,28
+,"ALPINE, CA",10 or fewer,33
+,"SOUTHEAST FAIRBANKS, AK",10 or fewer,35
+,"LOWNDES, AL",10 or fewer,27
+,"VALDEZ CORDOVA, AK",10 or fewer,22
+,"BETHEL, AK",10 or fewer,22
+,"DOLORES, CO",10 or fewer,23
+,"PERRY, AL",10 or fewer,24
+,"HINSDALE, CO",10 or fewer,10 or fewer
+,"NORTH SLOPE, AK",10 or fewer,20
+,"NOME, AK",10 or fewer,23
+,"PRINCE OF WALES HYDER, AK",10 or fewer,12
+,"PETERSBURG, AK",10 or fewer,16
+,"ALEUTIANS WEST, AK",10 or fewer,15
+,"MINERAL, CO",10 or fewer,10 or fewer
+,"NORTHWEST ARCTIC, AK",10 or fewer,10 or fewer
+,"YUKON KOYUKUK, AK",10 or fewer,16
+,"HAINES, AK",10 or fewer,10 or fewer
+,"SAN JUAN, CO",10 or fewer,10 or fewer
+,"WRANGELL, AK",10 or fewer,13
+,"DENALI, AK",10 or fewer,10 or fewer
+,"DILLINGHAM, AK",10 or fewer,10 or fewer
+,"HOONAH ANGOON, AK",10 or fewer,10 or fewer
+,"ALEUTIANS EAST, AK",10 or fewer,10 or fewer
+,"BRISTOL BAY, AK",10 or fewer,10 or fewer
+,"SKAGWAY, AK",10 or fewer,10 or fewer
+,"LAKE AND PENINSULA, AK",10 or fewer,10 or fewer
+,"KUSILVAK, AK",10 or fewer,10 or fewer
+,"YAKUTAT, AK",10 or fewer,10 or fewer
+,None of the above,283,399407
+,Total,3934,3619902
+Jan 1 – Dec 31 2025,"SAN DIEGO, CA",212,404433
+,"MARICOPA, AZ",535,210985
+,"RIVERSIDE, CA",139,139585
+,"FRESNO, CA",191,172795
+,"EL PASO, CO",62,127735
+,"HARTFORD, CT",103,123391
+,"DENVER, CO",73,118128
+,"SAN BERNARDINO, CA",74,99971
+,"ORANGE, CA",52,121154
+,"ARAPAHOE, CO",54,107031
+,"SANTA CLARA, CA",19,76526
+,"ALAMEDA, CA",35,81865
+,"PULASKI, AR",193,73988
+,"ADAMS, CO",47,75398
+,"PIMA, AZ",66,61495
+,"JEFFERSON, CO",43,63780
+,"WELD, CO",51,63333
+,"LARIMER, CO",51,56226
+,"LOS ANGELES, CA",44,33985
+,"NEW HAVEN, CT",41,50572
+,"NEW CASTLE, DE",30,41158
+,"CONTRA COSTA, CA",17,31205
+,"BOULDER, CO",26,44916
+,"MONTEREY, CA",15,53984
+,"SAN FRANCISCO, CA",10 or fewer,39884
+,"SAN MATEO, CA",10 or fewer,47043
+,"FAIRFIELD, CT",62,55613
+,"KENT, DE",39,39813
+,"DOUGLAS, CO",20,49070
+,"NEW LONDON, CT",29,39917
+,"SUSSEX, DE",62,43084
+,"MOBILE, AL",75,31045
+,"BALDWIN, AL",63,31303
+,"MIDDLESEX, CT",37,27564
+,"PUEBLO, CO",29,31857
+,"MADERA, CA",16,21958
+,"MESA, CO",37,21663
+,"WINDHAM, CT",12,22958
+,"LITCHFIELD, CT",27,20878
+,"FAULKNER, AR",39,13461
+,"CRAIGHEAD, AR",46,15320
+,"SEBASTIAN, AR",71,16418
+,"SALINE, AR",32,11229
+,"HOUSTON, AL",22,18475
+,"TOLLAND, CT",10 or fewer,12884
+,"WASHINGTON, AR",10 or fewer,12683
+,"LONOKE, AR",32,9349
+,"TULARE, CA",10 or fewer,9517
+,"CRITTENDEN, AR",52,13119
+,"CRAWFORD, AR",23,11675
+,"BENTON, AR",11,10193
+,"BROOMFIELD, CO",10 or fewer,10091
+,"SACRAMENTO, CA",10 or fewer,4681
+,"PINAL, AZ",41,15490
+,"MERCED, CA",10 or fewer,7644
+,"SAN JOAQUIN, CA",10 or fewer,4197
+,"KERN, CA",10 or fewer,3973
+,"JEFFERSON, AR",10 or fewer,4262
+,"KINGS, CA",10 or fewer,5272
+,"HOT SPRING, AR",25,5442
+,"CLEBURNE, AR",24,5659
+,"WHITE, AR",10 or fewer,3793
+,"TELLER, CO",10 or fewer,5433
+,"STANISLAUS, CA",10 or fewer,3484
+,"GREENE, AR",16,3829
+,"CLARK, AR",21,4685
+,"SANTA CRUZ, CA",10 or fewer,3283
+,"YAVAPAI, AZ",10 or fewer,2586
+,"POINSETT, AR",18,3802
+,"ROUTT, CO",10 or fewer,3678
+,"IMPERIAL, CA",10 or fewer,2924
+,"SOLANO, CA",10 or fewer,2057
+,"GARLAND, AR",10 or fewer,2222
+,"DALE, AL",10 or fewer,3654
+,"JEFFERSON, AL",10 or fewer,2232
+,"VENTURA, CA",10 or fewer,2191
+,"CHEROKEE, AL",11,5648
+,"ARKANSAS, AR",23,3231
+,"COCHISE, AZ",10 or fewer,1826
+,"MISSISSIPPI, AR",10 or fewer,2602
+,"PLACER, CA",10 or fewer,1536
+,"GRANT, AR",10 or fewer,2267
+,"SONOMA, CA",10 or fewer,1462
+,"POPE, AR",10 or fewer,1815
+,"GENEVA, AL",10 or fewer,2655
+,"ELBERT, CO",10 or fewer,3425
+,"MARIN, CA",10 or fewer,1475
+,"MOFFAT, CO",10 or fewer,3021
+,"FREMONT, CO",10 or fewer,2390
+,"MOHAVE, AZ",10 or fewer,1643
+,"MADISON, AL",10 or fewer,1401
+,"EL DORADO, CA",10 or fewer,1022
+,"COFFEE, AL",10 or fewer,1914
+,"PICKENS, AL",10 or fewer,2665
+,"DREW, AR",15,3327
+,"SANTA BARBARA, CA",10 or fewer,1230
+,"CONWAY, AR",10 or fewer,1369
+,"HUMBOLDT, CA",10 or fewer,2419
+,"SAN LUIS OBISPO, CA",10 or fewer,1209
+,"HENRY, AL",10 or fewer,2315
+,"LAMAR, AL",10 or fewer,2288
+,"CHOCTAW, AL",10 or fewer,2564
+,"ESCAMBIA, AL",10 or fewer,1539
+,"ANCHORAGE, AK",10 or fewer,1128
+,"CHAMBERS, AL",10 or fewer,1435
+,"VAN BUREN, AR",10 or fewer,1090
+,"GARFIELD, CO",10 or fewer,1290
+,"UNION, AR",10 or fewer,980
+,"CALHOUN, AL",10 or fewer,1759
+,"MARION, AL",10 or fewer,3450
+,"SAINT FRANCIS, AR",10 or fewer,1232
+,"LASSEN, CA",10 or fewer,1085
+,"JACKSON, AL",10 or fewer,836
+,"PITKIN, CO",10 or fewer,1797
+,"MONROE, AR",10 or fewer,1300
+,"MORGAN, CO",10 or fewer,1001
+,"SAN BENITO, CA",10 or fewer,1164
+,"PERRY, AR",10 or fewer,1081
+,"LAWRENCE, AR",10 or fewer,995
+,"PRAIRIE, AR",10 or fewer,1137
+,"YUMA, AZ",10 or fewer,870
+,"OUACHITA, AR",10 or fewer,849
+,"CROSS, AR",10 or fewer,988
+,"BARBOUR, AL",10 or fewer,1141
+,"ASHLEY, AR",10 or fewer,1278
+,"DELTA, CO",10 or fewer,1003
+,"EAGLE, CO",10 or fewer,950
+,"PHILLIPS, AR",10 or fewer,951
+,"MONTGOMERY, AL",10 or fewer,792
+,"PARK, CO",10 or fewer,1103
+,"LEE, AL",10 or fewer,793
+,"RANDOLPH, AL",10 or fewer,843
+,"INDEPENDENCE, AR",10 or fewer,666
+,"COCONINO, AZ",10 or fewer,765
+,"NEVADA, AR",10 or fewer,847
+,"YOLO, CA",10 or fewer,543
+,"GRAND, CO",10 or fewer,907
+,"OTERO, CO",10 or fewer,1175
+,"WASHINGTON, AL",10 or fewer,1180
+,"GILA, AZ",10 or fewer,761
+,"NEVADA, CA",10 or fewer,597
+,"TUSCALOOSA, AL",10 or fewer,730
+,"SANTA CRUZ, AZ",10 or fewer,770
+,"MONTROSE, CO",10 or fewer,790
+,"NAVAJO, AZ",10 or fewer,677
+,"SHELBY, AL",10 or fewer,648
+,"BUTTE, CA",10 or fewer,546
+,"LOGAN, AR",10 or fewer,691
+,"FRANKLIN, AR",10 or fewer,709
+,"SHASTA, CA",10 or fewer,506
+,"JOHNSON, AR",10 or fewer,611
+,"GUNNISON, CO",10 or fewer,2046
+,"RANDOLPH, AR",10 or fewer,594
+,"YELL, AR",10 or fewer,578
+,"JACKSON, AR",10 or fewer,554
+,"CLAY, AR",10 or fewer,606
+,"PLUMAS, CA",10 or fewer,554
+,"MADISON, AR",10 or fewer,841
+,"NAPA, CA",10 or fewer,485
+,"HEMPSTEAD, AR",10 or fewer,474
+,"LINCOLN, AR",10 or fewer,779
+,"SUMTER, AL",10 or fewer,1141
+,"MILLER, AR",10 or fewer,465
+,"DESHA, AR",10 or fewer,604
+,"ETOWAH, AL",10 or fewer,579
+,"BRADLEY, AR",10 or fewer,704
+,"DALLAS, AR",10 or fewer,535
+,"PIKE, AR",10 or fewer,490
+,"SHARP, AR",10 or fewer,401
+,"MARIPOSA, CA",10 or fewer,533
+,"APACHE, AZ",10 or fewer,383
+,"SUMMIT, CO",10 or fewer,405
+,"CLARKE, AL",10 or fewer,621
+,"LOGAN, CO",10 or fewer,462
+,"LA PLATA, CO",10 or fewer,430
+,"RUSSELL, AL",10 or fewer,406
+,"BAXTER, AR",10 or fewer,333
+,"CLEVELAND, AR",10 or fewer,495
+,"LAS ANIMAS, CO",10 or fewer,480
+,"COLUMBIA, AR",10 or fewer,370
+,"CARROLL, AR",10 or fewer,488
+,"CHAFFEE, CO",10 or fewer,425
+,"FAIRBANKS NORTH STAR, AK",10 or fewer,381
+,"CHICOT, AR",10 or fewer,498
+,"LEE, AR",10 or fewer,462
+,"SCOTT, AR",10 or fewer,393
+,"POLK, AR",10 or fewer,286
+,"BOONE, AR",10 or fewer,365
+,"MATANUSKA SUSITNA, AK",10 or fewer,320
+,"COVINGTON, AL",10 or fewer,423
+,"TUOLUMNE, CA",10 or fewer,318
+,"MENDOCINO, CA",10 or fewer,352
+,"MORGAN, AL",10 or fewer,291
+,"GILPIN, CO",10 or fewer,478
+,"INYO, CA",10 or fewer,234
+,"LIMESTONE, AL",10 or fewer,345
+,"MONROE, AL",10 or fewer,405
+,"MARSHALL, AL",10 or fewer,289
+,"GRAHAM, AZ",10 or fewer,199
+,"PROWERS, CO",10 or fewer,295
+,"PIKE, AL",10 or fewer,387
+,"STONE, AR",10 or fewer,237
+,"CLEAR CREEK, CO",10 or fewer,383
+,"HUERFANO, CO",10 or fewer,386
+,"HOWARD, AR",10 or fewer,202
+,"ELMORE, AL",10 or fewer,268
+,"MARENGO, AL",10 or fewer,514
+,"LAUDERDALE, AL",10 or fewer,284
+,"SAINT CLAIR, AL",10 or fewer,235
+,"MONTEZUMA, CO",10 or fewer,278
+,"WOODRUFF, AR",10 or fewer,245
+,"SUTTER, CA",10 or fewer,210
+,"TALLADEGA, AL",10 or fewer,225
+,"LAKE, CA",10 or fewer,192
+,"KENAI PENINSULA, AK",10 or fewer,247
+,"CALAVERAS, CA",10 or fewer,192
+,"SEVIER, AR",10 or fewer,220
+,"CUSTER, CO",10 or fewer,391
+,"SEARCY, AR",10 or fewer,232
+,"YUBA, CA",10 or fewer,184
+,"CULLMAN, AL",10 or fewer,206
+,"RIO GRANDE, CO",10 or fewer,245
+,"CROWLEY, CO",10 or fewer,415
+,"IZARD, AR",10 or fewer,204
+,"ALAMOSA, CO",10 or fewer,227
+,"COLBERT, AL",10 or fewer,300
+,"CLEBURNE, AL",10 or fewer,251
+,"AUTAUGA, AL",10 or fewer,197
+,"SISKIYOU, CA",10 or fewer,165
+,"FRANKLIN, AL",10 or fewer,403
+,"CALHOUN, AR",10 or fewer,201
+,"LINCOLN, CO",10 or fewer,200
+,"MONO, CA",10 or fewer,123
+,"YUMA, CO",10 or fewer,181
+,"MONTGOMERY, AR",10 or fewer,175
+,"KIT CARSON, CO",10 or fewer,196
+,"LA PAZ, AZ",10 or fewer,177
+,"WALKER, AL",10 or fewer,176
+,"BENT, CO",10 or fewer,190
+,"ARCHULETA, CO",10 or fewer,139
+,"AMADOR, CA",10 or fewer,125
+,"MODOC, CA",10 or fewer,119
+,"LITTLE RIVER, AR",10 or fewer,150
+,"JUNEAU, AK",10 or fewer,152
+,"FULTON, AR",10 or fewer,125
+,"TEHAMA, CA",10 or fewer,110
+,"RIO BLANCO, CO",10 or fewer,174
+,"MARION, AR",10 or fewer,136
+,"JACKSON, CO",10 or fewer,180
+,"BLOUNT, AL",10 or fewer,122
+,"DALLAS, AL",10 or fewer,110
+,"CONECUH, AL",10 or fewer,137
+,"DEL NORTE, CA",10 or fewer,101
+,"TALLAPOOSA, AL",10 or fewer,105
+,"WILCOX, AL",10 or fewer,119
+,"GREENLEE, AZ",10 or fewer,72
+,"SAN MIGUEL, CO",10 or fewer,135
+,"CHILTON, AL",10 or fewer,126
+,"FAYETTE, AL",10 or fewer,147
+,"SIERRA, CA",10 or fewer,113
+,"WASHINGTON, CO",10 or fewer,106
+,"LAKE, CO",10 or fewer,97
+,"PHILLIPS, CO",10 or fewer,102
+,"CONEJOS, CO",10 or fewer,91
+,"BACA, CO",10 or fewer,101
+,"CRENSHAW, AL",10 or fewer,114
+,"LAFAYETTE, AR",10 or fewer,63
+,"BUTLER, AL",10 or fewer,89
+,"NEWTON, AR",10 or fewer,89
+,"WINSTON, AL",10 or fewer,107
+,"COSTILLA, CO",10 or fewer,77
+,"LAWRENCE, AL",10 or fewer,86
+,"KODIAK ISLAND, AK",10 or fewer,56
+,"SAGUACHE, CO",10 or fewer,74
+,"GLENN, CA",10 or fewer,65
+,"HALE, AL",10 or fewer,76
+,"CLAY, AL",10 or fewer,53
+,"MACON, AL",10 or fewer,58
+,"SEDGWICK, CO",10 or fewer,61
+,"KETCHIKAN GATEWAY, AK",10 or fewer,62
+,"OURAY, CO",10 or fewer,64
+,"BIBB, AL",10 or fewer,53
+,"COLUSA, CA",10 or fewer,40
+,"TRINITY, CA",10 or fewer,38
+,"KIOWA, CO",10 or fewer,47
+,"GREENE, AL",10 or fewer,60
+,"CHEYENNE, CO",10 or fewer,47
+,"SITKA, AK",10 or fewer,47
+,"BULLOCK, AL",10 or fewer,43
+,"COOSA, AL",10 or fewer,36
+,"ALPINE, CA",10 or fewer,23
+,"SOUTHEAST FAIRBANKS, AK",10 or fewer,30
+,"LOWNDES, AL",10 or fewer,28
+,"VALDEZ CORDOVA, AK",10 or fewer,30
+,"BETHEL, AK",10 or fewer,24
+,"DOLORES, CO",10 or fewer,39
+,"PERRY, AL",10 or fewer,19
+,"HINSDALE, CO",10 or fewer,55
+,"NORTH SLOPE, AK",10 or fewer,25
+,"NOME, AK",10 or fewer,16
+,"PRINCE OF WALES HYDER, AK",10 or fewer,19
+,"PETERSBURG, AK",10 or fewer,15
+,"ALEUTIANS WEST, AK",10 or fewer,13
+,"MINERAL, CO",10 or fewer,13
+,"NORTHWEST ARCTIC, AK",10 or fewer,10 or fewer
+,"YUKON KOYUKUK, AK",10 or fewer,10 or fewer
+,"HAINES, AK",10 or fewer,15
+,"SAN JUAN, CO",10 or fewer,10 or fewer
+,"WRANGELL, AK",10 or fewer,10 or fewer
+,"DENALI, AK",10 or fewer,10 or fewer
+,"DILLINGHAM, AK",10 or fewer,10 or fewer
+,"HOONAH ANGOON, AK",10 or fewer,10 or fewer
+,"ALEUTIANS EAST, AK",10 or fewer,10 or fewer
+,"BRISTOL BAY, AK",10 or fewer,10 or fewer
+,"SKAGWAY, AK",10 or fewer,10 or fewer
+,"LAKE AND PENINSULA, AK",10 or fewer,10 or fewer
+,"KUSILVAK, AK",10 or fewer,10 or fewer
+,"YAKUTAT, AK",10 or fewer,10 or fewer
+,None of the above,368,448368
+,Total,3929,3824815

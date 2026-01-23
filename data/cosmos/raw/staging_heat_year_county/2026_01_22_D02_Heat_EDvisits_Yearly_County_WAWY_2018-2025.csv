@@ -1,0 +1,1541 @@
+﻿Session Title,Heat only WAWY county year 2018-2025,,
+Session ID,2792488,,
+Data Model,Patients,,
+Population Base,All Patients,,
+Population Criteria Filters: These criteria are a summary and do not fully reflect the content of the exported session.,State of Residence: STATES_WA_WY,"Encounter Type: Emergency, Emergency to Inpatient",
+Session Date Range,1/1/2018 - 12/31/2025,,
+Measure,Number of Patients,,
+Export User,Stephanie Perniciaro,,
+Date of Export,1/22/2026,,
+,,,
+,,,
+,Diagnosis (Encounter),Heat,"Total: Total includes all data, including data from columns not currently displayed."
+Year,County of Residence,,
+Jan 1 – Dec 31 2018,"MILWAUKEE, WI",91,120370
+,"KING, WA",32,78061
+,"DANE, WI",45,54052
+,"CLARK, WA",29,46657
+,"BROWN, WI",43,41836
+,"SNOHOMISH, WA",10 or fewer,16767
+,"BERKELEY, WV",24,27835
+,"WAUKESHA, WI",30,19788
+,"ROCK, WI",26,24179
+,"LARAMIE, WY",10 or fewer,18645
+,"RACINE, WI",15,12597
+,"SHEBOYGAN, WI",20,16721
+,"KENOSHA, WI",10 or fewer,14517
+,"WALWORTH, WI",20,17300
+,"LA CROSSE, WI",27,16831
+,"SKAGIT, WA",10 or fewer,13747
+,"WOOD, WV",10 or fewer,17254
+,"HARRISON, WV",14,17354
+,"CHELAN, WA",10 or fewer,9989
+,"MONONGALIA, WV",10 or fewer,9998
+,"WINNEBAGO, WI",19,9808
+,"JEFFERSON, WV",11,12134
+,"MARION, WV",10 or fewer,7088
+,"MANITOWOC, WI",13,8747
+,"WASHINGTON, WI",10 or fewer,7361
+,"OZAUKEE, WI",10 or fewer,6923
+,"PIERCE, WA",13,6278
+,"MERCER, WV",10 or fewer,529
+,"KANAWHA, WV",10 or fewer,1252
+,"DOUGLAS, WI",10 or fewer,8430
+,"MARINETTE, WI",14,7296
+,"COWLITZ, WA",10 or fewer,6009
+,"DOUGLAS, WA",10 or fewer,5434
+,"OHIO, WV",10 or fewer,1013
+,"EAU CLAIRE, WI",10 or fewer,8325
+,"OUTAGAMIE, WI",10 or fewer,3979
+,"CHIPPEWA, WI",16,7937
+,"MARSHALL, WV",12,3574
+,"UPSHUR, WV",10 or fewer,6208
+,"JACKSON, WV",10 or fewer,1235
+,"OCONTO, WI",10 or fewer,4532
+,"JEFFERSON, WI",10 or fewer,4082
+,"NICHOLAS, WV",10 or fewer,398
+,"MINERAL, WV",10 or fewer,4631
+,"DODGE, WI",10 or fewer,3399
+,"TREMPEALEAU, WI",10 or fewer,4111
+,"ALBANY, WY",10 or fewer,647
+,"FOND DU LAC, WI",10 or fewer,2289
+,"COLUMBIA, WI",10 or fewer,2892
+,"PRESTON, WV",10 or fewer,2520
+,"ISLAND, WA",10 or fewer,2155
+,"GRANT, WI",10 or fewer,3443
+,"VERNON, WI",11,3179
+,"GRANT, WA",10 or fewer,2136
+,"HAMPSHIRE, WV",10 or fewer,794
+,"MONROE, WI",10 or fewer,2423
+,"WETZEL, WV",10 or fewer,987
+,"WHATCOM, WA",10 or fewer,1880
+,"BRAXTON, WV",10 or fewer,598
+,"MORGAN, WV",10 or fewer,1086
+,"LEWIS, WV",10 or fewer,2236
+,"KEWAUNEE, WI",10 or fewer,2249
+,"SPOKANE, WA",10 or fewer,1443
+,"SAUK, WI",10 or fewer,1676
+,"TAYLOR, WV",10 or fewer,2205
+,"PARK, WY",10 or fewer,262
+,"RANDOLPH, WV",10 or fewer,1294
+,"GREEN, WI",10 or fewer,1746
+,"ADAMS, WI",10 or fewer,879
+,"THURSTON, WA",10 or fewer,1355
+,"BARBOUR, WV",10 or fewer,1700
+,"KITSAP, WA",10 or fewer,1161
+,"SHAWANO, WI",10 or fewer,1585
+,"JUNEAU, WI",10 or fewer,1417
+,"HANCOCK, WV",10 or fewer,435
+,"HARDY, WV",10 or fewer,586
+,"CAMPBELL, WY",10 or fewer,393
+,"GRANT, WV",10 or fewer,527
+,"BROOKE, WV",10 or fewer,285
+,"RITCHIE, WV",10 or fewer,1859
+,"DOOR, WI",10 or fewer,1086
+,"FAYETTE, WV",10 or fewer,319
+,"CALUMET, WI",10 or fewer,988
+,"OKANOGAN, WA",10 or fewer,846
+,"RALEIGH, WV",10 or fewer,541
+,"POLK, WI",10 or fewer,695
+,"SAINT CROIX, WI",10 or fewer,712
+,"RUSK, WI",10 or fewer,3137
+,"BENTON, WA",10 or fewer,678
+,"PUTNAM, WV",10 or fewer,281
+,"YAKIMA, WA",10 or fewer,760
+,"BURNETT, WI",10 or fewer,493
+,"CLAY, WV",10 or fewer,105
+,"LINCOLN, WY",10 or fewer,164
+,"CRAWFORD, WI",10 or fewer,1035
+,"TYLER, WV",10 or fewer,452
+,"WEBSTER, WV",10 or fewer,301
+,"JACKSON, WI",10 or fewer,927
+,"BUFFALO, WI",10 or fewer,898
+,"MCDOWELL, WV",10 or fewer,114
+,"MINGO, WV",10 or fewer,104
+,"PENDLETON, WV",10 or fewer,805
+,"DODDRIDGE, WV",10 or fewer,1128
+,"MARATHON, WI",10 or fewer,716
+,"IOWA, WI",10 or fewer,855
+,"WAUSHARA, WI",10 or fewer,698
+,"DUNN, WI",10 or fewer,1067
+,"CABELL, WV",10 or fewer,535
+,"PLEASANTS, WV",10 or fewer,926
+,"WIRT, WV",10 or fewer,965
+,"RICHLAND, WI",10 or fewer,708
+,"WAUPACA, WI",10 or fewer,680
+,"MARQUETTE, WI",10 or fewer,575
+,"SWEETWATER, WY",10 or fewer,498
+,"WOOD, WI",10 or fewer,599
+,"NATRONA, WY",10 or fewer,452
+,"PIERCE, WI",10 or fewer,416
+,"CARBON, WY",10 or fewer,230
+,"BARRON, WI",10 or fewer,639
+,"GREENBRIER, WV",10 or fewer,262
+,"LEWIS, WA",10 or fewer,457
+,"GREEN LAKE, WI",10 or fewer,500
+,"PORTAGE, WI",10 or fewer,505
+,"BAYFIELD, WI",10 or fewer,551
+,"SAWYER, WI",10 or fewer,664
+,"MASON, WV",10 or fewer,218
+,"TUCKER, WV",10 or fewer,248
+,"GILMER, WV",10 or fewer,413
+,"CLARK, WI",10 or fewer,500
+,"PEPIN, WI",10 or fewer,211
+,"KITTITAS, WA",10 or fewer,376
+,"UINTA, WY",10 or fewer,298
+,"ROANE, WV",10 or fewer,205
+,"FREMONT, WY",10 or fewer,292
+,"LAFAYETTE, WI",10 or fewer,402
+,"KLICKITAT, WA",10 or fewer,337
+,"CLALLAM, WA",10 or fewer,350
+,"WASHBURN, WI",10 or fewer,345
+,"GRAYS HARBOR, WA",10 or fewer,367
+,"CALHOUN, WV",10 or fewer,287
+,"BOONE, WV",10 or fewer,98
+,"MONROE, WV",10 or fewer,92
+,"PACIFIC, WA",10 or fewer,350
+,"FRANKLIN, WA",10 or fewer,237
+,"LOGAN, WV",10 or fewer,116
+,"MASON, WA",10 or fewer,290
+,"WYOMING, WV",10 or fewer,96
+,"ASHLAND, WI",10 or fewer,303
+,"LINCOLN, WV",10 or fewer,90
+,"WESTON, WY",10 or fewer,124
+,"SAN JUAN, WA",10 or fewer,258
+,"GOSHEN, WY",10 or fewer,208
+,"ONEIDA, WI",10 or fewer,266
+,"TETON, WY",10 or fewer,174
+,"WAYNE, WV",10 or fewer,218
+,"WHITMAN, WA",10 or fewer,149
+,"PLATTE, WY",10 or fewer,250
+,"SUMMERS, WV",10 or fewer,76
+,"SHERIDAN, WY",10 or fewer,169
+,"SKAMANIA, WA",10 or fewer,264
+,"WALLA WALLA, WA",10 or fewer,201
+,"BIG HORN, WY",10 or fewer,75
+,"CROOK, WY",10 or fewer,150
+,"SUBLETTE, WY",10 or fewer,95
+,"POCAHONTAS, WV",10 or fewer,155
+,"VILAS, WI",10 or fewer,233
+,"MENOMINEE, WI",10 or fewer,248
+,"LINCOLN, WI",10 or fewer,194
+,"LANGLADE, WI",10 or fewer,212
+,"JEFFERSON, WA",10 or fewer,143
+,"STEVENS, WA",10 or fewer,138
+,"TAYLOR, WI",10 or fewer,197
+,"FOREST, WI",10 or fewer,131
+,"CONVERSE, WY",10 or fewer,92
+,"PRICE, WI",10 or fewer,195
+,"WAHKIAKUM, WA",10 or fewer,110
+,"ASOTIN, WA",10 or fewer,92
+,"WASHAKIE, WY",10 or fewer,53
+,"ADAMS, WA",10 or fewer,58
+,"FLORENCE, WI",10 or fewer,89
+,"IRON, WI",10 or fewer,76
+,"JOHNSON, WY",10 or fewer,62
+,"LINCOLN, WA",10 or fewer,62
+,"PEND OREILLE, WA",10 or fewer,36
+,"HOT SPRINGS, WY",10 or fewer,28
+,"FERRY, WA",10 or fewer,27
+,"NIOBRARA, WY",10 or fewer,22
+,"COLUMBIA, WA",10 or fewer,11
+,"GARFIELD, WA",10 or fewer,10 or fewer
+,None of the above,13,23592
+,Total,769,853064
+Jan 1 – Dec 31 2019,"MILWAUKEE, WI",34,121533
+,"KING, WA",33,79475
+,"DANE, WI",41,57719
+,"CLARK, WA",11,47811
+,"BROWN, WI",31,42416
+,"SNOHOMISH, WA",10 or fewer,17322
+,"BERKELEY, WV",25,29130
+,"WAUKESHA, WI",18,20396
+,"ROCK, WI",23,24805
+,"LARAMIE, WY",10 or fewer,19453
+,"RACINE, WI",11,12972
+,"SHEBOYGAN, WI",15,17117
+,"KENOSHA, WI",10 or fewer,15016
+,"WALWORTH, WI",16,17791
+,"LA CROSSE, WI",11,17038
+,"SKAGIT, WA",10 or fewer,13783
+,"WOOD, WV",26,17864
+,"HARRISON, WV",10 or fewer,17793
+,"CHELAN, WA",10 or fewer,10518
+,"MONONGALIA, WV",10 or fewer,10515
+,"WINNEBAGO, WI",10 or fewer,10572
+,"JEFFERSON, WV",18,12298
+,"MARION, WV",10 or fewer,7685
+,"MANITOWOC, WI",13,9108
+,"WASHINGTON, WI",10 or fewer,7575
+,"OZAUKEE, WI",10 or fewer,7119
+,"PIERCE, WA",10 or fewer,6262
+,"MERCER, WV",10 or fewer,546
+,"KANAWHA, WV",10 or fewer,1416
+,"DOUGLAS, WI",10 or fewer,8167
+,"MARINETTE, WI",10 or fewer,7467
+,"COWLITZ, WA",10 or fewer,5848
+,"DOUGLAS, WA",10 or fewer,5751
+,"OHIO, WV",10 or fewer,1960
+,"EAU CLAIRE, WI",10 or fewer,7028
+,"OUTAGAMIE, WI",10 or fewer,4066
+,"CHIPPEWA, WI",10 or fewer,7162
+,"MARSHALL, WV",10 or fewer,5589
+,"UPSHUR, WV",10 or fewer,6353
+,"JACKSON, WV",10 or fewer,1388
+,"OCONTO, WI",10 or fewer,4634
+,"JEFFERSON, WI",10 or fewer,4210
+,"NICHOLAS, WV",10 or fewer,1805
+,"MINERAL, WV",10 or fewer,4672
+,"DODGE, WI",10 or fewer,3434
+,"TREMPEALEAU, WI",10 or fewer,4115
+,"ALBANY, WY",10 or fewer,2155
+,"FOND DU LAC, WI",10 or fewer,2354
+,"COLUMBIA, WI",10 or fewer,3125
+,"PRESTON, WV",10 or fewer,2591
+,"ISLAND, WA",10 or fewer,2318
+,"GRANT, WI",10 or fewer,3430
+,"VERNON, WI",10 or fewer,3205
+,"GRANT, WA",10 or fewer,2167
+,"HAMPSHIRE, WV",10 or fewer,850
+,"MONROE, WI",10 or fewer,2440
+,"WETZEL, WV",10 or fewer,1276
+,"WHATCOM, WA",10 or fewer,1941
+,"BRAXTON, WV",13,2377
+,"MORGAN, WV",10 or fewer,1303
+,"LEWIS, WV",10 or fewer,2329
+,"KEWAUNEE, WI",10 or fewer,2306
+,"SPOKANE, WA",10 or fewer,1508
+,"SAUK, WI",10 or fewer,1787
+,"TAYLOR, WV",10 or fewer,2254
+,"PARK, WY",10 or fewer,317
+,"RANDOLPH, WV",10 or fewer,1395
+,"GREEN, WI",10 or fewer,1880
+,"ADAMS, WI",10 or fewer,2208
+,"THURSTON, WA",10 or fewer,1312
+,"BARBOUR, WV",10 or fewer,1737
+,"KITSAP, WA",10 or fewer,1159
+,"SHAWANO, WI",10 or fewer,1519
+,"JUNEAU, WI",10 or fewer,1603
+,"HANCOCK, WV",10 or fewer,489
+,"HARDY, WV",10 or fewer,606
+,"CAMPBELL, WY",10 or fewer,480
+,"GRANT, WV",10 or fewer,527
+,"BROOKE, WV",10 or fewer,370
+,"RITCHIE, WV",10 or fewer,1948
+,"DOOR, WI",10 or fewer,1159
+,"FAYETTE, WV",10 or fewer,500
+,"CALUMET, WI",10 or fewer,991
+,"OKANOGAN, WA",10 or fewer,819
+,"RALEIGH, WV",10 or fewer,587
+,"POLK, WI",10 or fewer,642
+,"SAINT CROIX, WI",10 or fewer,727
+,"RUSK, WI",10 or fewer,2472
+,"BENTON, WA",10 or fewer,862
+,"PUTNAM, WV",10 or fewer,331
+,"YAKIMA, WA",10 or fewer,747
+,"BURNETT, WI",10 or fewer,449
+,"CLAY, WV",10 or fewer,663
+,"LINCOLN, WY",10 or fewer,172
+,"CRAWFORD, WI",10 or fewer,1042
+,"TYLER, WV",10 or fewer,502
+,"WEBSTER, WV",10 or fewer,576
+,"JACKSON, WI",10 or fewer,922
+,"BUFFALO, WI",10 or fewer,782
+,"MCDOWELL, WV",10 or fewer,134
+,"MINGO, WV",10 or fewer,115
+,"PENDLETON, WV",10 or fewer,822
+,"DODDRIDGE, WV",10 or fewer,1243
+,"MARATHON, WI",10 or fewer,731
+,"IOWA, WI",10 or fewer,832
+,"WAUSHARA, WI",10 or fewer,821
+,"DUNN, WI",10 or fewer,880
+,"CABELL, WV",10 or fewer,581
+,"PLEASANTS, WV",10 or fewer,1089
+,"WIRT, WV",10 or fewer,1039
+,"RICHLAND, WI",10 or fewer,742
+,"WAUPACA, WI",10 or fewer,669
+,"MARQUETTE, WI",10 or fewer,719
+,"SWEETWATER, WY",10 or fewer,474
+,"WOOD, WI",10 or fewer,660
+,"NATRONA, WY",10 or fewer,443
+,"PIERCE, WI",10 or fewer,374
+,"CARBON, WY",10 or fewer,356
+,"BARRON, WI",10 or fewer,561
+,"GREENBRIER, WV",10 or fewer,328
+,"LEWIS, WA",10 or fewer,458
+,"GREEN LAKE, WI",10 or fewer,524
+,"PORTAGE, WI",10 or fewer,528
+,"BAYFIELD, WI",10 or fewer,566
+,"SAWYER, WI",10 or fewer,642
+,"MASON, WV",10 or fewer,251
+,"TUCKER, WV",10 or fewer,270
+,"GILMER, WV",10 or fewer,535
+,"CLARK, WI",10 or fewer,530
+,"PEPIN, WI",10 or fewer,192
+,"KITTITAS, WA",10 or fewer,389
+,"UINTA, WY",10 or fewer,343
+,"ROANE, WV",10 or fewer,277
+,"FREMONT, WY",10 or fewer,291
+,"LAFAYETTE, WI",10 or fewer,429
+,"KLICKITAT, WA",10 or fewer,351
+,"CLALLAM, WA",10 or fewer,359
+,"WASHBURN, WI",10 or fewer,411
+,"GRAYS HARBOR, WA",10 or fewer,336
+,"CALHOUN, WV",10 or fewer,348
+,"BOONE, WV",10 or fewer,113
+,"MONROE, WV",10 or fewer,90
+,"PACIFIC, WA",10 or fewer,357
+,"FRANKLIN, WA",10 or fewer,280
+,"LOGAN, WV",10 or fewer,141
+,"MASON, WA",10 or fewer,270
+,"WYOMING, WV",10 or fewer,111
+,"ASHLAND, WI",10 or fewer,332
+,"LINCOLN, WV",10 or fewer,76
+,"WESTON, WY",10 or fewer,282
+,"SAN JUAN, WA",10 or fewer,239
+,"GOSHEN, WY",10 or fewer,237
+,"ONEIDA, WI",10 or fewer,269
+,"TETON, WY",10 or fewer,183
+,"WAYNE, WV",10 or fewer,247
+,"WHITMAN, WA",10 or fewer,155
+,"PLATTE, WY",10 or fewer,261
+,"SUMMERS, WV",10 or fewer,68
+,"SHERIDAN, WY",10 or fewer,198
+,"SKAMANIA, WA",10 or fewer,276
+,"WALLA WALLA, WA",10 or fewer,229
+,"BIG HORN, WY",10 or fewer,62
+,"CROOK, WY",10 or fewer,138
+,"SUBLETTE, WY",10 or fewer,100
+,"POCAHONTAS, WV",10 or fewer,153
+,"VILAS, WI",10 or fewer,231
+,"MENOMINEE, WI",10 or fewer,234
+,"LINCOLN, WI",10 or fewer,205
+,"LANGLADE, WI",10 or fewer,202
+,"JEFFERSON, WA",10 or fewer,160
+,"STEVENS, WA",10 or fewer,118
+,"TAYLOR, WI",10 or fewer,180
+,"FOREST, WI",10 or fewer,143
+,"CONVERSE, WY",10 or fewer,94
+,"PRICE, WI",10 or fewer,170
+,"WAHKIAKUM, WA",10 or fewer,124
+,"ASOTIN, WA",10 or fewer,79
+,"WASHAKIE, WY",10 or fewer,44
+,"ADAMS, WA",10 or fewer,58
+,"FLORENCE, WI",10 or fewer,81
+,"IRON, WI",10 or fewer,74
+,"JOHNSON, WY",10 or fewer,63
+,"LINCOLN, WA",10 or fewer,55
+,"PEND OREILLE, WA",10 or fewer,49
+,"HOT SPRINGS, WY",10 or fewer,32
+,"FERRY, WA",10 or fewer,36
+,"NIOBRARA, WY",10 or fewer,18
+,"COLUMBIA, WA",10 or fewer,20
+,"GARFIELD, WA",10 or fewer,10 or fewer
+,None of the above,17,22782
+,Total,572,882676
+Jan 1 – Dec 31 2020,"MILWAUKEE, WI",39,103054
+,"KING, WA",16,66175
+,"DANE, WI",34,50573
+,"CLARK, WA",19,40770
+,"BROWN, WI",26,37609
+,"SNOHOMISH, WA",10 or fewer,14716
+,"BERKELEY, WV",22,24427
+,"WAUKESHA, WI",18,17492
+,"ROCK, WI",10 or fewer,21221
+,"LARAMIE, WY",12,16809
+,"RACINE, WI",10 or fewer,12184
+,"SHEBOYGAN, WI",14,15638
+,"KENOSHA, WI",17,14608
+,"WALWORTH, WI",12,15714
+,"LA CROSSE, WI",12,15009
+,"SKAGIT, WA",10 or fewer,12040
+,"WOOD, WV",12,15185
+,"HARRISON, WV",10 or fewer,15272
+,"CHELAN, WA",10 or fewer,9964
+,"MONONGALIA, WV",10 or fewer,8946
+,"WINNEBAGO, WI",10 or fewer,9760
+,"JEFFERSON, WV",14,10453
+,"MARION, WV",10 or fewer,10301
+,"MANITOWOC, WI",10 or fewer,8760
+,"WASHINGTON, WI",10 or fewer,7152
+,"OZAUKEE, WI",10 or fewer,6483
+,"PIERCE, WA",10 or fewer,4810
+,"MERCER, WV",10 or fewer,502
+,"KANAWHA, WV",10 or fewer,1308
+,"DOUGLAS, WI",10 or fewer,7635
+,"MARINETTE, WI",11,6893
+,"COWLITZ, WA",10 or fewer,4599
+,"DOUGLAS, WA",10 or fewer,5387
+,"OHIO, WV",10 or fewer,2421
+,"EAU CLAIRE, WI",10 or fewer,6225
+,"OUTAGAMIE, WI",10 or fewer,4150
+,"CHIPPEWA, WI",10 or fewer,6052
+,"MARSHALL, WV",10 or fewer,5121
+,"UPSHUR, WV",10 or fewer,5620
+,"JACKSON, WV",10 or fewer,3907
+,"OCONTO, WI",10 or fewer,4279
+,"JEFFERSON, WI",10 or fewer,3738
+,"NICHOLAS, WV",10 or fewer,5144
+,"MINERAL, WV",10 or fewer,4177
+,"DODGE, WI",10 or fewer,3141
+,"TREMPEALEAU, WI",10 or fewer,3606
+,"ALBANY, WY",10 or fewer,3675
+,"FOND DU LAC, WI",10 or fewer,2143
+,"COLUMBIA, WI",10 or fewer,2807
+,"PRESTON, WV",10 or fewer,2105
+,"ISLAND, WA",10 or fewer,2109
+,"GRANT, WI",10 or fewer,2949
+,"VERNON, WI",10 or fewer,2787
+,"GRANT, WA",10 or fewer,2070
+,"HAMPSHIRE, WV",10 or fewer,744
+,"MONROE, WI",10 or fewer,2118
+,"WETZEL, WV",10 or fewer,1664
+,"WHATCOM, WA",10 or fewer,1582
+,"BRAXTON, WV",10 or fewer,2861
+,"MORGAN, WV",10 or fewer,1060
+,"LEWIS, WV",10 or fewer,1988
+,"KEWAUNEE, WI",10 or fewer,2010
+,"SPOKANE, WA",10 or fewer,1093
+,"SAUK, WI",10 or fewer,1439
+,"TAYLOR, WV",10 or fewer,1935
+,"PARK, WY",10 or fewer,223
+,"RANDOLPH, WV",10 or fewer,1255
+,"GREEN, WI",10 or fewer,1535
+,"ADAMS, WI",10 or fewer,1996
+,"THURSTON, WA",10 or fewer,1063
+,"BARBOUR, WV",10 or fewer,1509
+,"KITSAP, WA",10 or fewer,880
+,"SHAWANO, WI",10 or fewer,1393
+,"JUNEAU, WI",10 or fewer,1349
+,"HANCOCK, WV",10 or fewer,404
+,"HARDY, WV",10 or fewer,571
+,"CAMPBELL, WY",10 or fewer,369
+,"GRANT, WV",10 or fewer,500
+,"BROOKE, WV",10 or fewer,358
+,"RITCHIE, WV",10 or fewer,1643
+,"DOOR, WI",10 or fewer,992
+,"FAYETTE, WV",10 or fewer,954
+,"CALUMET, WI",10 or fewer,979
+,"OKANOGAN, WA",10 or fewer,833
+,"RALEIGH, WV",10 or fewer,471
+,"POLK, WI",10 or fewer,556
+,"SAINT CROIX, WI",10 or fewer,602
+,"RUSK, WI",10 or fewer,308
+,"BENTON, WA",10 or fewer,650
+,"PUTNAM, WV",10 or fewer,287
+,"YAKIMA, WA",10 or fewer,639
+,"BURNETT, WI",10 or fewer,392
+,"CLAY, WV",10 or fewer,993
+,"LINCOLN, WY",10 or fewer,145
+,"CRAWFORD, WI",10 or fewer,851
+,"TYLER, WV",10 or fewer,607
+,"WEBSTER, WV",10 or fewer,1089
+,"JACKSON, WI",10 or fewer,842
+,"BUFFALO, WI",10 or fewer,667
+,"MCDOWELL, WV",10 or fewer,131
+,"MINGO, WV",10 or fewer,86
+,"PENDLETON, WV",10 or fewer,660
+,"DODDRIDGE, WV",10 or fewer,1064
+,"MARATHON, WI",10 or fewer,557
+,"IOWA, WI",10 or fewer,696
+,"WAUSHARA, WI",10 or fewer,742
+,"DUNN, WI",10 or fewer,723
+,"CABELL, WV",10 or fewer,449
+,"PLEASANTS, WV",10 or fewer,916
+,"WIRT, WV",10 or fewer,929
+,"RICHLAND, WI",10 or fewer,592
+,"WAUPACA, WI",10 or fewer,560
+,"MARQUETTE, WI",10 or fewer,593
+,"SWEETWATER, WY",10 or fewer,359
+,"WOOD, WI",10 or fewer,485
+,"NATRONA, WY",10 or fewer,338
+,"PIERCE, WI",10 or fewer,297
+,"CARBON, WY",10 or fewer,522
+,"BARRON, WI",10 or fewer,454
+,"GREENBRIER, WV",10 or fewer,377
+,"LEWIS, WA",10 or fewer,392
+,"GREEN LAKE, WI",10 or fewer,503
+,"PORTAGE, WI",10 or fewer,407
+,"BAYFIELD, WI",10 or fewer,456
+,"SAWYER, WI",10 or fewer,328
+,"MASON, WV",10 or fewer,368
+,"TUCKER, WV",10 or fewer,212
+,"GILMER, WV",10 or fewer,521
+,"CLARK, WI",10 or fewer,448
+,"PEPIN, WI",10 or fewer,170
+,"KITTITAS, WA",10 or fewer,301
+,"UINTA, WY",10 or fewer,254
+,"ROANE, WV",10 or fewer,294
+,"FREMONT, WY",10 or fewer,258
+,"LAFAYETTE, WI",10 or fewer,316
+,"KLICKITAT, WA",10 or fewer,280
+,"CLALLAM, WA",10 or fewer,238
+,"WASHBURN, WI",10 or fewer,312
+,"GRAYS HARBOR, WA",10 or fewer,263
+,"CALHOUN, WV",10 or fewer,331
+,"BOONE, WV",10 or fewer,93
+,"MONROE, WV",10 or fewer,86
+,"PACIFIC, WA",10 or fewer,268
+,"FRANKLIN, WA",10 or fewer,199
+,"LOGAN, WV",10 or fewer,134
+,"MASON, WA",10 or fewer,221
+,"WYOMING, WV",10 or fewer,105
+,"ASHLAND, WI",10 or fewer,287
+,"LINCOLN, WV",10 or fewer,72
+,"WESTON, WY",10 or fewer,212
+,"SAN JUAN, WA",10 or fewer,214
+,"GOSHEN, WY",10 or fewer,185
+,"ONEIDA, WI",10 or fewer,206
+,"TETON, WY",10 or fewer,135
+,"WAYNE, WV",10 or fewer,157
+,"WHITMAN, WA",10 or fewer,136
+,"PLATTE, WY",10 or fewer,220
+,"SUMMERS, WV",10 or fewer,62
+,"SHERIDAN, WY",10 or fewer,161
+,"SKAMANIA, WA",10 or fewer,223
+,"WALLA WALLA, WA",10 or fewer,163
+,"BIG HORN, WY",10 or fewer,56
+,"CROOK, WY",10 or fewer,141
+,"SUBLETTE, WY",10 or fewer,86
+,"POCAHONTAS, WV",10 or fewer,158
+,"VILAS, WI",10 or fewer,168
+,"MENOMINEE, WI",10 or fewer,219
+,"LINCOLN, WI",10 or fewer,139
+,"LANGLADE, WI",10 or fewer,155
+,"JEFFERSON, WA",10 or fewer,112
+,"STEVENS, WA",10 or fewer,88
+,"TAYLOR, WI",10 or fewer,110
+,"FOREST, WI",10 or fewer,109
+,"CONVERSE, WY",10 or fewer,92
+,"PRICE, WI",10 or fewer,100
+,"WAHKIAKUM, WA",10 or fewer,84
+,"ASOTIN, WA",10 or fewer,63
+,"WASHAKIE, WY",10 or fewer,46
+,"ADAMS, WA",10 or fewer,55
+,"FLORENCE, WI",10 or fewer,68
+,"IRON, WI",10 or fewer,61
+,"JOHNSON, WY",10 or fewer,37
+,"LINCOLN, WA",10 or fewer,26
+,"PEND OREILLE, WA",10 or fewer,35
+,"HOT SPRINGS, WY",10 or fewer,36
+,"FERRY, WA",10 or fewer,26
+,"NIOBRARA, WY",10 or fewer,27
+,"COLUMBIA, WA",10 or fewer,12
+,"GARFIELD, WA",10 or fewer,10 or fewer
+,None of the above,17,17734
+,Total,491,777848
+Jan 1 – Dec 31 2021,"MILWAUKEE, WI",69,114277
+,"KING, WA",135,74992
+,"DANE, WI",41,58820
+,"CLARK, WA",68,43305
+,"BROWN, WI",30,42053
+,"SNOHOMISH, WA",31,16925
+,"BERKELEY, WV",25,26231
+,"WAUKESHA, WI",21,20257
+,"ROCK, WI",20,23922
+,"LARAMIE, WY",12,18610
+,"RACINE, WI",15,13394
+,"SHEBOYGAN, WI",10 or fewer,17305
+,"KENOSHA, WI",15,16510
+,"WALWORTH, WI",17,17563
+,"LA CROSSE, WI",22,17133
+,"SKAGIT, WA",18,13067
+,"WOOD, WV",12,15683
+,"HARRISON, WV",10 or fewer,16944
+,"CHELAN, WA",10 or fewer,13428
+,"MONONGALIA, WV",10 or fewer,10398
+,"WINNEBAGO, WI",14,10929
+,"JEFFERSON, WV",13,11277
+,"MARION, WV",10 or fewer,13553
+,"MANITOWOC, WI",11,9716
+,"WASHINGTON, WI",10 or fewer,8114
+,"OZAUKEE, WI",10 or fewer,7645
+,"PIERCE, WA",14,5430
+,"MERCER, WV",10 or fewer,667
+,"KANAWHA, WV",10 or fewer,1620
+,"DOUGLAS, WI",12,8069
+,"MARINETTE, WI",10 or fewer,7558
+,"COWLITZ, WA",10 or fewer,5126
+,"DOUGLAS, WA",10 or fewer,6945
+,"OHIO, WV",10 or fewer,2625
+,"EAU CLAIRE, WI",10 or fewer,6688
+,"OUTAGAMIE, WI",10 or fewer,5512
+,"CHIPPEWA, WI",10 or fewer,6775
+,"MARSHALL, WV",10 or fewer,5801
+,"UPSHUR, WV",10 or fewer,6910
+,"JACKSON, WV",11,6167
+,"OCONTO, WI",10 or fewer,5000
+,"JEFFERSON, WI",10 or fewer,4215
+,"NICHOLAS, WV",10 or fewer,6149
+,"MINERAL, WV",10 or fewer,4878
+,"DODGE, WI",10 or fewer,3544
+,"TREMPEALEAU, WI",10 or fewer,3851
+,"ALBANY, WY",10 or fewer,4266
+,"FOND DU LAC, WI",10 or fewer,2447
+,"COLUMBIA, WI",10 or fewer,3228
+,"PRESTON, WV",10 or fewer,2404
+,"ISLAND, WA",10 or fewer,2424
+,"GRANT, WI",10 or fewer,3393
+,"VERNON, WI",10 or fewer,3313
+,"GRANT, WA",10 or fewer,2518
+,"HAMPSHIRE, WV",10 or fewer,772
+,"MONROE, WI",10 or fewer,2579
+,"WETZEL, WV",10 or fewer,4134
+,"WHATCOM, WA",10 or fewer,1786
+,"BRAXTON, WV",10 or fewer,3425
+,"MORGAN, WV",10 or fewer,1152
+,"LEWIS, WV",10 or fewer,2408
+,"KEWAUNEE, WI",10 or fewer,2283
+,"SPOKANE, WA",10 or fewer,1357
+,"SAUK, WI",10 or fewer,1614
+,"TAYLOR, WV",10 or fewer,2117
+,"PARK, WY",10 or fewer,276
+,"RANDOLPH, WV",10 or fewer,1497
+,"GREEN, WI",10 or fewer,1744
+,"ADAMS, WI",10 or fewer,2248
+,"THURSTON, WA",10 or fewer,1251
+,"BARBOUR, WV",10 or fewer,1787
+,"KITSAP, WA",10 or fewer,1037
+,"SHAWANO, WI",10 or fewer,1549
+,"JUNEAU, WI",10 or fewer,1647
+,"HANCOCK, WV",10 or fewer,461
+,"HARDY, WV",10 or fewer,594
+,"CAMPBELL, WY",10 or fewer,447
+,"GRANT, WV",10 or fewer,559
+,"BROOKE, WV",10 or fewer,371
+,"RITCHIE, WV",10 or fewer,1803
+,"DOOR, WI",10 or fewer,1103
+,"FAYETTE, WV",10 or fewer,1218
+,"CALUMET, WI",10 or fewer,1234
+,"OKANOGAN, WA",10 or fewer,873
+,"RALEIGH, WV",10 or fewer,619
+,"POLK, WI",10 or fewer,576
+,"SAINT CROIX, WI",10 or fewer,852
+,"RUSK, WI",10 or fewer,359
+,"BENTON, WA",10 or fewer,760
+,"PUTNAM, WV",10 or fewer,386
+,"YAKIMA, WA",10 or fewer,720
+,"BURNETT, WI",10 or fewer,457
+,"CLAY, WV",10 or fewer,1183
+,"LINCOLN, WY",10 or fewer,171
+,"CRAWFORD, WI",10 or fewer,1055
+,"TYLER, WV",10 or fewer,1340
+,"WEBSTER, WV",10 or fewer,1331
+,"JACKSON, WI",10 or fewer,837
+,"BUFFALO, WI",10 or fewer,944
+,"MCDOWELL, WV",10 or fewer,179
+,"MINGO, WV",10 or fewer,155
+,"PENDLETON, WV",10 or fewer,770
+,"DODDRIDGE, WV",10 or fewer,1199
+,"MARATHON, WI",10 or fewer,646
+,"IOWA, WI",10 or fewer,792
+,"WAUSHARA, WI",10 or fewer,843
+,"DUNN, WI",10 or fewer,804
+,"CABELL, WV",10 or fewer,630
+,"PLEASANTS, WV",10 or fewer,946
+,"WIRT, WV",10 or fewer,910
+,"RICHLAND, WI",10 or fewer,654
+,"WAUPACA, WI",10 or fewer,678
+,"MARQUETTE, WI",10 or fewer,662
+,"SWEETWATER, WY",10 or fewer,437
+,"WOOD, WI",10 or fewer,622
+,"NATRONA, WY",10 or fewer,435
+,"PIERCE, WI",10 or fewer,426
+,"CARBON, WY",10 or fewer,555
+,"BARRON, WI",10 or fewer,496
+,"GREENBRIER, WV",10 or fewer,436
+,"LEWIS, WA",10 or fewer,432
+,"GREEN LAKE, WI",10 or fewer,542
+,"PORTAGE, WI",10 or fewer,427
+,"BAYFIELD, WI",10 or fewer,511
+,"SAWYER, WI",10 or fewer,401
+,"MASON, WV",10 or fewer,513
+,"TUCKER, WV",10 or fewer,295
+,"GILMER, WV",10 or fewer,603
+,"CLARK, WI",10 or fewer,488
+,"PEPIN, WI",10 or fewer,257
+,"KITTITAS, WA",10 or fewer,358
+,"UINTA, WY",10 or fewer,290
+,"ROANE, WV",10 or fewer,422
+,"FREMONT, WY",10 or fewer,317
+,"LAFAYETTE, WI",10 or fewer,363
+,"KLICKITAT, WA",10 or fewer,297
+,"CLALLAM, WA",10 or fewer,289
+,"WASHBURN, WI",10 or fewer,337
+,"GRAYS HARBOR, WA",10 or fewer,282
+,"CALHOUN, WV",10 or fewer,349
+,"BOONE, WV",10 or fewer,131
+,"MONROE, WV",10 or fewer,93
+,"PACIFIC, WA",10 or fewer,268
+,"FRANKLIN, WA",10 or fewer,246
+,"LOGAN, WV",10 or fewer,170
+,"MASON, WA",10 or fewer,252
+,"WYOMING, WV",10 or fewer,123
+,"ASHLAND, WI",10 or fewer,250
+,"LINCOLN, WV",10 or fewer,99
+,"WESTON, WY",10 or fewer,277
+,"SAN JUAN, WA",10 or fewer,207
+,"GOSHEN, WY",10 or fewer,217
+,"ONEIDA, WI",10 or fewer,259
+,"TETON, WY",10 or fewer,176
+,"WAYNE, WV",10 or fewer,196
+,"WHITMAN, WA",10 or fewer,133
+,"PLATTE, WY",10 or fewer,252
+,"SUMMERS, WV",10 or fewer,87
+,"SHERIDAN, WY",10 or fewer,209
+,"SKAMANIA, WA",10 or fewer,240
+,"WALLA WALLA, WA",10 or fewer,210
+,"BIG HORN, WY",10 or fewer,78
+,"CROOK, WY",10 or fewer,208
+,"SUBLETTE, WY",10 or fewer,100
+,"POCAHONTAS, WV",10 or fewer,174
+,"VILAS, WI",10 or fewer,174
+,"MENOMINEE, WI",10 or fewer,254
+,"LINCOLN, WI",10 or fewer,170
+,"LANGLADE, WI",10 or fewer,177
+,"JEFFERSON, WA",10 or fewer,135
+,"STEVENS, WA",10 or fewer,100
+,"TAYLOR, WI",10 or fewer,114
+,"FOREST, WI",10 or fewer,149
+,"CONVERSE, WY",10 or fewer,109
+,"PRICE, WI",10 or fewer,105
+,"WAHKIAKUM, WA",10 or fewer,107
+,"ASOTIN, WA",10 or fewer,72
+,"WASHAKIE, WY",10 or fewer,55
+,"ADAMS, WA",10 or fewer,88
+,"FLORENCE, WI",10 or fewer,81
+,"IRON, WI",10 or fewer,70
+,"JOHNSON, WY",10 or fewer,46
+,"LINCOLN, WA",10 or fewer,64
+,"PEND OREILLE, WA",10 or fewer,35
+,"HOT SPRINGS, WY",10 or fewer,37
+,"FERRY, WA",10 or fewer,33
+,"NIOBRARA, WY",10 or fewer,24
+,"COLUMBIA, WA",10 or fewer,11
+,"GARFIELD, WA",10 or fewer,10 or fewer
+,None of the above,15,18223
+,Total,891,882632
+Jan 1 – Dec 31 2022,"MILWAUKEE, WI",48,118405
+,"KING, WA",54,87174
+,"DANE, WI",31,64228
+,"CLARK, WA",47,47180
+,"BROWN, WI",21,45315
+,"SNOHOMISH, WA",10 or fewer,24332
+,"BERKELEY, WV",15,28006
+,"WAUKESHA, WI",18,20640
+,"ROCK, WI",20,24202
+,"LARAMIE, WY",17,19798
+,"RACINE, WI",16,18152
+,"SHEBOYGAN, WI",17,18666
+,"KENOSHA, WI",16,17636
+,"WALWORTH, WI",14,18133
+,"LA CROSSE, WI",13,19107
+,"SKAGIT, WA",10 or fewer,14236
+,"WOOD, WV",11,15258
+,"HARRISON, WV",10 or fewer,17355
+,"CHELAN, WA",12,15133
+,"MONONGALIA, WV",10 or fewer,11301
+,"WINNEBAGO, WI",10 or fewer,11666
+,"JEFFERSON, WV",20,12365
+,"MARION, WV",10 or fewer,13153
+,"MANITOWOC, WI",10 or fewer,10098
+,"WASHINGTON, WI",10 or fewer,8301
+,"OZAUKEE, WI",10 or fewer,8358
+,"PIERCE, WA",10 or fewer,5720
+,"MERCER, WV",10 or fewer,701
+,"KANAWHA, WV",10 or fewer,1799
+,"DOUGLAS, WI",10 or fewer,8461
+,"MARINETTE, WI",10 or fewer,7327
+,"COWLITZ, WA",10 or fewer,5817
+,"DOUGLAS, WA",10 or fewer,7978
+,"OHIO, WV",10 or fewer,8746
+,"EAU CLAIRE, WI",10 or fewer,6763
+,"OUTAGAMIE, WI",10 or fewer,6257
+,"CHIPPEWA, WI",10 or fewer,7091
+,"MARSHALL, WV",10 or fewer,7082
+,"UPSHUR, WV",10 or fewer,8435
+,"JACKSON, WV",10 or fewer,6901
+,"OCONTO, WI",10 or fewer,5073
+,"JEFFERSON, WI",10 or fewer,4432
+,"NICHOLAS, WV",12,6457
+,"MINERAL, WV",10 or fewer,5619
+,"DODGE, WI",10 or fewer,3596
+,"TREMPEALEAU, WI",10 or fewer,4546
+,"ALBANY, WY",10 or fewer,4388
+,"FOND DU LAC, WI",10 or fewer,2557
+,"COLUMBIA, WI",10 or fewer,3437
+,"PRESTON, WV",10 or fewer,2527
+,"ISLAND, WA",10 or fewer,2693
+,"GRANT, WI",10 or fewer,3593
+,"VERNON, WI",10 or fewer,3657
+,"GRANT, WA",10 or fewer,2656
+,"HAMPSHIRE, WV",10 or fewer,871
+,"MONROE, WI",10 or fewer,2461
+,"WETZEL, WV",10 or fewer,4418
+,"WHATCOM, WA",10 or fewer,1989
+,"BRAXTON, WV",10 or fewer,3667
+,"MORGAN, WV",10 or fewer,1119
+,"LEWIS, WV",10 or fewer,2674
+,"KEWAUNEE, WI",10 or fewer,2456
+,"SPOKANE, WA",10 or fewer,1420
+,"SAUK, WI",10 or fewer,1715
+,"TAYLOR, WV",10 or fewer,2217
+,"PARK, WY",10 or fewer,1120
+,"RANDOLPH, WV",10 or fewer,1905
+,"GREEN, WI",10 or fewer,1734
+,"ADAMS, WI",10 or fewer,2486
+,"THURSTON, WA",10 or fewer,1300
+,"BARBOUR, WV",10 or fewer,2014
+,"KITSAP, WA",10 or fewer,1216
+,"SHAWANO, WI",10 or fewer,1580
+,"JUNEAU, WI",10 or fewer,1755
+,"HANCOCK, WV",10 or fewer,576
+,"HARDY, WV",10 or fewer,652
+,"CAMPBELL, WY",10 or fewer,497
+,"GRANT, WV",10 or fewer,645
+,"BROOKE, WV",10 or fewer,1016
+,"RITCHIE, WV",10 or fewer,1809
+,"DOOR, WI",10 or fewer,1197
+,"FAYETTE, WV",10 or fewer,1465
+,"CALUMET, WI",10 or fewer,1318
+,"OKANOGAN, WA",10 or fewer,1029
+,"RALEIGH, WV",10 or fewer,774
+,"POLK, WI",10 or fewer,573
+,"SAINT CROIX, WI",10 or fewer,964
+,"RUSK, WI",10 or fewer,331
+,"BENTON, WA",10 or fewer,833
+,"PUTNAM, WV",10 or fewer,488
+,"YAKIMA, WA",10 or fewer,751
+,"BURNETT, WI",10 or fewer,466
+,"CLAY, WV",10 or fewer,1323
+,"LINCOLN, WY",10 or fewer,188
+,"CRAWFORD, WI",10 or fewer,1104
+,"TYLER, WV",10 or fewer,1451
+,"WEBSTER, WV",10 or fewer,1384
+,"JACKSON, WI",10 or fewer,900
+,"BUFFALO, WI",10 or fewer,1037
+,"MCDOWELL, WV",10 or fewer,232
+,"MINGO, WV",10 or fewer,916
+,"PENDLETON, WV",10 or fewer,786
+,"DODDRIDGE, WV",10 or fewer,1233
+,"MARATHON, WI",10 or fewer,651
+,"IOWA, WI",10 or fewer,831
+,"WAUSHARA, WI",10 or fewer,790
+,"DUNN, WI",10 or fewer,815
+,"CABELL, WV",10 or fewer,651
+,"PLEASANTS, WV",10 or fewer,925
+,"WIRT, WV",10 or fewer,880
+,"RICHLAND, WI",10 or fewer,730
+,"WAUPACA, WI",10 or fewer,645
+,"MARQUETTE, WI",10 or fewer,695
+,"SWEETWATER, WY",10 or fewer,451
+,"WOOD, WI",10 or fewer,537
+,"NATRONA, WY",10 or fewer,490
+,"PIERCE, WI",10 or fewer,552
+,"CARBON, WY",10 or fewer,523
+,"BARRON, WI",10 or fewer,480
+,"GREENBRIER, WV",10 or fewer,505
+,"LEWIS, WA",10 or fewer,477
+,"GREEN LAKE, WI",10 or fewer,532
+,"PORTAGE, WI",10 or fewer,462
+,"BAYFIELD, WI",10 or fewer,542
+,"SAWYER, WI",10 or fewer,369
+,"MASON, WV",10 or fewer,589
+,"TUCKER, WV",10 or fewer,347
+,"GILMER, WV",10 or fewer,614
+,"CLARK, WI",10 or fewer,498
+,"PEPIN, WI",10 or fewer,297
+,"KITTITAS, WA",10 or fewer,378
+,"UINTA, WY",10 or fewer,348
+,"ROANE, WV",10 or fewer,431
+,"FREMONT, WY",10 or fewer,311
+,"LAFAYETTE, WI",10 or fewer,328
+,"KLICKITAT, WA",10 or fewer,379
+,"CLALLAM, WA",10 or fewer,317
+,"WASHBURN, WI",10 or fewer,351
+,"GRAYS HARBOR, WA",10 or fewer,318
+,"CALHOUN, WV",10 or fewer,384
+,"BOONE, WV",10 or fewer,136
+,"MONROE, WV",10 or fewer,84
+,"PACIFIC, WA",10 or fewer,328
+,"FRANKLIN, WA",10 or fewer,260
+,"LOGAN, WV",10 or fewer,258
+,"MASON, WA",10 or fewer,280
+,"WYOMING, WV",10 or fewer,161
+,"ASHLAND, WI",10 or fewer,290
+,"LINCOLN, WV",10 or fewer,115
+,"WESTON, WY",10 or fewer,309
+,"SAN JUAN, WA",10 or fewer,236
+,"GOSHEN, WY",10 or fewer,190
+,"ONEIDA, WI",10 or fewer,237
+,"TETON, WY",10 or fewer,203
+,"WAYNE, WV",10 or fewer,286
+,"WHITMAN, WA",10 or fewer,142
+,"PLATTE, WY",10 or fewer,237
+,"SUMMERS, WV",10 or fewer,95
+,"SHERIDAN, WY",10 or fewer,228
+,"SKAMANIA, WA",10 or fewer,252
+,"WALLA WALLA, WA",10 or fewer,192
+,"BIG HORN, WY",10 or fewer,157
+,"CROOK, WY",10 or fewer,189
+,"SUBLETTE, WY",10 or fewer,93
+,"POCAHONTAS, WV",10 or fewer,221
+,"VILAS, WI",10 or fewer,188
+,"MENOMINEE, WI",10 or fewer,254
+,"LINCOLN, WI",10 or fewer,156
+,"LANGLADE, WI",10 or fewer,175
+,"JEFFERSON, WA",10 or fewer,174
+,"STEVENS, WA",10 or fewer,103
+,"TAYLOR, WI",10 or fewer,115
+,"FOREST, WI",10 or fewer,128
+,"CONVERSE, WY",10 or fewer,104
+,"PRICE, WI",10 or fewer,94
+,"WAHKIAKUM, WA",10 or fewer,113
+,"ASOTIN, WA",10 or fewer,85
+,"WASHAKIE, WY",10 or fewer,78
+,"ADAMS, WA",10 or fewer,100
+,"FLORENCE, WI",10 or fewer,67
+,"IRON, WI",10 or fewer,59
+,"JOHNSON, WY",10 or fewer,66
+,"LINCOLN, WA",10 or fewer,42
+,"PEND OREILLE, WA",10 or fewer,44
+,"HOT SPRINGS, WY",10 or fewer,42
+,"FERRY, WA",10 or fewer,31
+,"NIOBRARA, WY",10 or fewer,33
+,"COLUMBIA, WA",10 or fewer,23
+,"GARFIELD, WA",10 or fewer,11
+,None of the above,18,24878
+,Total,673,970327
+Jan 1 – Dec 31 2023,"MILWAUKEE, WI",66,121908
+,"KING, WA",51,102526
+,"DANE, WI",49,69728
+,"CLARK, WA",44,47701
+,"BROWN, WI",34,45417
+,"SNOHOMISH, WA",20,35038
+,"BERKELEY, WV",26,29740
+,"WAUKESHA, WI",15,20815
+,"ROCK, WI",22,18993
+,"LARAMIE, WY",11,19996
+,"RACINE, WI",19,20675
+,"SHEBOYGAN, WI",17,19682
+,"KENOSHA, WI",10 or fewer,18744
+,"WALWORTH, WI",10 or fewer,17483
+,"LA CROSSE, WI",28,19656
+,"SKAGIT, WA",10 or fewer,14222
+,"WOOD, WV",10 or fewer,15830
+,"HARRISON, WV",10 or fewer,17348
+,"CHELAN, WA",11,15418
+,"MONONGALIA, WV",10 or fewer,12482
+,"WINNEBAGO, WI",17,12398
+,"JEFFERSON, WV",10 or fewer,13072
+,"MARION, WV",11,12899
+,"MANITOWOC, WI",10 or fewer,10362
+,"WASHINGTON, WI",10 or fewer,8618
+,"OZAUKEE, WI",10 or fewer,8748
+,"PIERCE, WA",10 or fewer,5947
+,"MERCER, WV",10 or fewer,15222
+,"KANAWHA, WV",10 or fewer,1881
+,"DOUGLAS, WI",10 or fewer,8424
+,"MARINETTE, WI",11,7329
+,"COWLITZ, WA",10 or fewer,5507
+,"DOUGLAS, WA",10 or fewer,8307
+,"OHIO, WV",10 or fewer,10610
+,"EAU CLAIRE, WI",10 or fewer,6160
+,"OUTAGAMIE, WI",10 or fewer,6592
+,"CHIPPEWA, WI",10 or fewer,7076
+,"MARSHALL, WV",10 or fewer,7642
+,"UPSHUR, WV",10 or fewer,7468
+,"JACKSON, WV",10 or fewer,7267
+,"OCONTO, WI",10 or fewer,5262
+,"JEFFERSON, WI",10 or fewer,4452
+,"NICHOLAS, WV",10 or fewer,6643
+,"MINERAL, WV",10 or fewer,5809
+,"DODGE, WI",10 or fewer,3583
+,"TREMPEALEAU, WI",10 or fewer,4902
+,"ALBANY, WY",10 or fewer,4612
+,"FOND DU LAC, WI",10 or fewer,2613
+,"COLUMBIA, WI",10 or fewer,3660
+,"PRESTON, WV",10 or fewer,3372
+,"ISLAND, WA",10 or fewer,2931
+,"GRANT, WI",10 or fewer,3572
+,"VERNON, WI",10 or fewer,3831
+,"GRANT, WA",10 or fewer,2613
+,"HAMPSHIRE, WV",10 or fewer,2386
+,"MONROE, WI",10 or fewer,2744
+,"WETZEL, WV",10 or fewer,4532
+,"WHATCOM, WA",10 or fewer,1949
+,"BRAXTON, WV",10 or fewer,3553
+,"MORGAN, WV",10 or fewer,2123
+,"LEWIS, WV",10 or fewer,2631
+,"KEWAUNEE, WI",10 or fewer,2378
+,"SPOKANE, WA",10 or fewer,1454
+,"SAUK, WI",10 or fewer,1676
+,"TAYLOR, WV",10 or fewer,2263
+,"PARK, WY",10 or fewer,3187
+,"RANDOLPH, WV",10 or fewer,1970
+,"GREEN, WI",10 or fewer,1664
+,"ADAMS, WI",10 or fewer,2588
+,"THURSTON, WA",10 or fewer,1377
+,"BARBOUR, WV",10 or fewer,1959
+,"KITSAP, WA",10 or fewer,1254
+,"SHAWANO, WI",10 or fewer,1500
+,"JUNEAU, WI",10 or fewer,1974
+,"HANCOCK, WV",10 or fewer,628
+,"HARDY, WV",10 or fewer,1444
+,"CAMPBELL, WY",10 or fewer,486
+,"GRANT, WV",10 or fewer,1646
+,"BROOKE, WV",10 or fewer,1286
+,"RITCHIE, WV",10 or fewer,1836
+,"DOOR, WI",10 or fewer,1191
+,"FAYETTE, WV",10 or fewer,1510
+,"CALUMET, WI",10 or fewer,1368
+,"OKANOGAN, WA",10 or fewer,966
+,"RALEIGH, WV",10 or fewer,1166
+,"POLK, WI",10 or fewer,623
+,"SAINT CROIX, WI",10 or fewer,972
+,"RUSK, WI",10 or fewer,274
+,"BENTON, WA",10 or fewer,878
+,"PUTNAM, WV",10 or fewer,479
+,"YAKIMA, WA",10 or fewer,842
+,"BURNETT, WI",10 or fewer,731
+,"CLAY, WV",10 or fewer,1323
+,"LINCOLN, WY",10 or fewer,975
+,"CRAWFORD, WI",10 or fewer,1086
+,"TYLER, WV",10 or fewer,1491
+,"WEBSTER, WV",10 or fewer,1405
+,"JACKSON, WI",10 or fewer,894
+,"BUFFALO, WI",10 or fewer,1103
+,"MCDOWELL, WV",10 or fewer,1444
+,"MINGO, WV",10 or fewer,1433
+,"PENDLETON, WV",10 or fewer,991
+,"DODDRIDGE, WV",10 or fewer,1261
+,"MARATHON, WI",10 or fewer,657
+,"IOWA, WI",10 or fewer,824
+,"WAUSHARA, WI",10 or fewer,808
+,"DUNN, WI",10 or fewer,833
+,"CABELL, WV",10 or fewer,720
+,"PLEASANTS, WV",10 or fewer,945
+,"WIRT, WV",10 or fewer,926
+,"RICHLAND, WI",10 or fewer,806
+,"WAUPACA, WI",10 or fewer,643
+,"MARQUETTE, WI",10 or fewer,725
+,"SWEETWATER, WY",10 or fewer,486
+,"WOOD, WI",10 or fewer,554
+,"NATRONA, WY",10 or fewer,496
+,"PIERCE, WI",10 or fewer,625
+,"CARBON, WY",10 or fewer,528
+,"BARRON, WI",10 or fewer,457
+,"GREENBRIER, WV",10 or fewer,578
+,"LEWIS, WA",10 or fewer,429
+,"GREEN LAKE, WI",10 or fewer,540
+,"PORTAGE, WI",10 or fewer,456
+,"BAYFIELD, WI",10 or fewer,518
+,"SAWYER, WI",10 or fewer,336
+,"MASON, WV",10 or fewer,536
+,"TUCKER, WV",10 or fewer,668
+,"GILMER, WV",10 or fewer,646
+,"CLARK, WI",10 or fewer,500
+,"PEPIN, WI",10 or fewer,816
+,"KITTITAS, WA",10 or fewer,411
+,"UINTA, WY",10 or fewer,326
+,"ROANE, WV",10 or fewer,432
+,"FREMONT, WY",10 or fewer,337
+,"LAFAYETTE, WI",10 or fewer,369
+,"KLICKITAT, WA",10 or fewer,328
+,"CLALLAM, WA",10 or fewer,337
+,"WASHBURN, WI",10 or fewer,325
+,"GRAYS HARBOR, WA",10 or fewer,365
+,"CALHOUN, WV",10 or fewer,427
+,"BOONE, WV",10 or fewer,187
+,"MONROE, WV",10 or fewer,583
+,"PACIFIC, WA",10 or fewer,270
+,"FRANKLIN, WA",10 or fewer,272
+,"LOGAN, WV",10 or fewer,279
+,"MASON, WA",10 or fewer,294
+,"WYOMING, WV",10 or fewer,448
+,"ASHLAND, WI",10 or fewer,288
+,"LINCOLN, WV",10 or fewer,131
+,"WESTON, WY",10 or fewer,385
+,"SAN JUAN, WA",10 or fewer,244
+,"GOSHEN, WY",10 or fewer,203
+,"ONEIDA, WI",10 or fewer,270
+,"TETON, WY",10 or fewer,250
+,"WAYNE, WV",10 or fewer,271
+,"WHITMAN, WA",10 or fewer,154
+,"PLATTE, WY",10 or fewer,250
+,"SUMMERS, WV",10 or fewer,468
+,"SHERIDAN, WY",10 or fewer,254
+,"SKAMANIA, WA",10 or fewer,264
+,"WALLA WALLA, WA",10 or fewer,215
+,"BIG HORN, WY",10 or fewer,357
+,"CROOK, WY",10 or fewer,199
+,"SUBLETTE, WY",10 or fewer,132
+,"POCAHONTAS, WV",10 or fewer,217
+,"VILAS, WI",10 or fewer,188
+,"MENOMINEE, WI",10 or fewer,239
+,"LINCOLN, WI",10 or fewer,168
+,"LANGLADE, WI",10 or fewer,174
+,"JEFFERSON, WA",10 or fewer,159
+,"STEVENS, WA",10 or fewer,120
+,"TAYLOR, WI",10 or fewer,146
+,"FOREST, WI",10 or fewer,139
+,"CONVERSE, WY",10 or fewer,122
+,"PRICE, WI",10 or fewer,81
+,"WAHKIAKUM, WA",10 or fewer,114
+,"ASOTIN, WA",10 or fewer,92
+,"WASHAKIE, WY",10 or fewer,117
+,"ADAMS, WA",10 or fewer,75
+,"FLORENCE, WI",10 or fewer,74
+,"IRON, WI",10 or fewer,65
+,"JOHNSON, WY",10 or fewer,57
+,"LINCOLN, WA",10 or fewer,59
+,"PEND OREILLE, WA",10 or fewer,42
+,"HOT SPRINGS, WY",10 or fewer,52
+,"FERRY, WA",10 or fewer,25
+,"NIOBRARA, WY",10 or fewer,32
+,"COLUMBIA, WA",10 or fewer,12
+,"GARFIELD, WA",10 or fewer,10 or fewer
+,None of the above,17,36039
+,Total,754,1055678
+Jan 1 – Dec 31 2024,"MILWAUKEE, WI",46,126865
+,"KING, WA",78,107379
+,"DANE, WI",45,72306
+,"CLARK, WA",33,50446
+,"BROWN, WI",33,46061
+,"SNOHOMISH, WA",26,37102
+,"BERKELEY, WV",38,33416
+,"WAUKESHA, WI",18,21173
+,"ROCK, WI",22,19128
+,"LARAMIE, WY",13,20434
+,"RACINE, WI",10 or fewer,22555
+,"SHEBOYGAN, WI",23,20891
+,"KENOSHA, WI",19,19153
+,"WALWORTH, WI",16,16387
+,"LA CROSSE, WI",15,19538
+,"SKAGIT, WA",10 or fewer,15270
+,"WOOD, WV",22,15571
+,"HARRISON, WV",10 or fewer,17257
+,"CHELAN, WA",10 or fewer,15606
+,"MONONGALIA, WV",10 or fewer,13051
+,"WINNEBAGO, WI",10 or fewer,13300
+,"JEFFERSON, WV",20,13929
+,"MARION, WV",14,13221
+,"MANITOWOC, WI",10 or fewer,11264
+,"WASHINGTON, WI",10 or fewer,8988
+,"OZAUKEE, WI",11,9287
+,"PIERCE, WA",10 or fewer,5836
+,"MERCER, WV",16,17911
+,"KANAWHA, WV",22,12253
+,"DOUGLAS, WI",10 or fewer,8569
+,"MARINETTE, WI",10 or fewer,7339
+,"COWLITZ, WA",10 or fewer,5400
+,"DOUGLAS, WA",10 or fewer,8248
+,"OHIO, WV",11,10680
+,"EAU CLAIRE, WI",10 or fewer,1707
+,"OUTAGAMIE, WI",10 or fewer,6655
+,"CHIPPEWA, WI",10 or fewer,1819
+,"MARSHALL, WV",10 or fewer,7840
+,"UPSHUR, WV",12,7993
+,"JACKSON, WV",10 or fewer,7574
+,"OCONTO, WI",10 or fewer,5206
+,"JEFFERSON, WI",10 or fewer,4421
+,"NICHOLAS, WV",10 or fewer,6628
+,"MINERAL, WV",10 or fewer,6363
+,"DODGE, WI",10 or fewer,3822
+,"TREMPEALEAU, WI",10 or fewer,4724
+,"ALBANY, WY",10 or fewer,4950
+,"FOND DU LAC, WI",10 or fewer,4418
+,"COLUMBIA, WI",10 or fewer,3528
+,"PRESTON, WV",10 or fewer,3884
+,"ISLAND, WA",10 or fewer,3224
+,"GRANT, WI",10 or fewer,3782
+,"VERNON, WI",10 or fewer,3933
+,"GRANT, WA",10 or fewer,2634
+,"HAMPSHIRE, WV",12,6918
+,"MONROE, WI",10 or fewer,2651
+,"WETZEL, WV",10 or fewer,4710
+,"WHATCOM, WA",10 or fewer,1998
+,"BRAXTON, WV",10 or fewer,3870
+,"MORGAN, WV",10 or fewer,5043
+,"LEWIS, WV",10 or fewer,2661
+,"KEWAUNEE, WI",10 or fewer,2349
+,"SPOKANE, WA",10 or fewer,1520
+,"SAUK, WI",10 or fewer,1624
+,"TAYLOR, WV",10 or fewer,2347
+,"PARK, WY",10 or fewer,3604
+,"RANDOLPH, WV",10 or fewer,2380
+,"GREEN, WI",10 or fewer,1695
+,"ADAMS, WI",10 or fewer,2689
+,"THURSTON, WA",10 or fewer,1361
+,"BARBOUR, WV",10 or fewer,1998
+,"KITSAP, WA",10 or fewer,1324
+,"SHAWANO, WI",10 or fewer,1563
+,"JUNEAU, WI",10 or fewer,1886
+,"HANCOCK, WV",10 or fewer,632
+,"HARDY, WV",10 or fewer,3749
+,"CAMPBELL, WY",10 or fewer,454
+,"GRANT, WV",10 or fewer,3896
+,"BROOKE, WV",10 or fewer,1346
+,"RITCHIE, WV",10 or fewer,1715
+,"DOOR, WI",10 or fewer,1253
+,"FAYETTE, WV",10 or fewer,1593
+,"CALUMET, WI",10 or fewer,1396
+,"OKANOGAN, WA",10 or fewer,1014
+,"RALEIGH, WV",10 or fewer,1433
+,"POLK, WI",10 or fewer,1111
+,"SAINT CROIX, WI",10 or fewer,1001
+,"RUSK, WI",10 or fewer,134
+,"BENTON, WA",10 or fewer,869
+,"PUTNAM, WV",10 or fewer,1736
+,"YAKIMA, WA",10 or fewer,750
+,"BURNETT, WI",10 or fewer,1920
+,"CLAY, WV",10 or fewer,1563
+,"LINCOLN, WY",10 or fewer,1841
+,"CRAWFORD, WI",10 or fewer,1187
+,"TYLER, WV",10 or fewer,1530
+,"WEBSTER, WV",10 or fewer,1385
+,"JACKSON, WI",10 or fewer,913
+,"BUFFALO, WI",10 or fewer,910
+,"MCDOWELL, WV",10 or fewer,1823
+,"MINGO, WV",10 or fewer,1470
+,"PENDLETON, WV",10 or fewer,1685
+,"DODDRIDGE, WV",10 or fewer,1301
+,"MARATHON, WI",10 or fewer,681
+,"IOWA, WI",10 or fewer,807
+,"WAUSHARA, WI",10 or fewer,865
+,"DUNN, WI",10 or fewer,366
+,"CABELL, WV",10 or fewer,832
+,"PLEASANTS, WV",10 or fewer,926
+,"WIRT, WV",10 or fewer,960
+,"RICHLAND, WI",10 or fewer,834
+,"WAUPACA, WI",10 or fewer,622
+,"MARQUETTE, WI",10 or fewer,744
+,"SWEETWATER, WY",10 or fewer,484
+,"WOOD, WI",10 or fewer,534
+,"NATRONA, WY",10 or fewer,478
+,"PIERCE, WI",10 or fewer,615
+,"CARBON, WY",10 or fewer,608
+,"BARRON, WI",10 or fewer,262
+,"GREENBRIER, WV",10 or fewer,589
+,"LEWIS, WA",10 or fewer,412
+,"GREEN LAKE, WI",10 or fewer,531
+,"PORTAGE, WI",10 or fewer,422
+,"BAYFIELD, WI",10 or fewer,569
+,"SAWYER, WI",10 or fewer,339
+,"MASON, WV",10 or fewer,604
+,"TUCKER, WV",10 or fewer,901
+,"GILMER, WV",10 or fewer,609
+,"CLARK, WI",10 or fewer,230
+,"PEPIN, WI",10 or fewer,864
+,"KITTITAS, WA",10 or fewer,426
+,"UINTA, WY",10 or fewer,367
+,"ROANE, WV",10 or fewer,506
+,"FREMONT, WY",10 or fewer,346
+,"LAFAYETTE, WI",10 or fewer,354
+,"KLICKITAT, WA",10 or fewer,365
+,"CLALLAM, WA",10 or fewer,320
+,"WASHBURN, WI",10 or fewer,302
+,"GRAYS HARBOR, WA",10 or fewer,301
+,"CALHOUN, WV",10 or fewer,449
+,"BOONE, WV",10 or fewer,635
+,"MONROE, WV",10 or fewer,681
+,"PACIFIC, WA",10 or fewer,263
+,"FRANKLIN, WA",10 or fewer,249
+,"LOGAN, WV",10 or fewer,464
+,"MASON, WA",10 or fewer,301
+,"WYOMING, WV",10 or fewer,526
+,"ASHLAND, WI",10 or fewer,258
+,"LINCOLN, WV",10 or fewer,564
+,"WESTON, WY",10 or fewer,387
+,"SAN JUAN, WA",10 or fewer,269
+,"GOSHEN, WY",10 or fewer,298
+,"ONEIDA, WI",10 or fewer,232
+,"TETON, WY",10 or fewer,270
+,"WAYNE, WV",10 or fewer,310
+,"WHITMAN, WA",10 or fewer,391
+,"PLATTE, WY",10 or fewer,274
+,"SUMMERS, WV",10 or fewer,546
+,"SHERIDAN, WY",10 or fewer,256
+,"SKAMANIA, WA",10 or fewer,257
+,"WALLA WALLA, WA",10 or fewer,225
+,"BIG HORN, WY",10 or fewer,421
+,"CROOK, WY",10 or fewer,206
+,"SUBLETTE, WY",10 or fewer,113
+,"POCAHONTAS, WV",10 or fewer,241
+,"VILAS, WI",10 or fewer,203
+,"MENOMINEE, WI",10 or fewer,230
+,"LINCOLN, WI",10 or fewer,160
+,"LANGLADE, WI",10 or fewer,166
+,"JEFFERSON, WA",10 or fewer,150
+,"STEVENS, WA",10 or fewer,118
+,"TAYLOR, WI",10 or fewer,80
+,"FOREST, WI",10 or fewer,122
+,"CONVERSE, WY",10 or fewer,101
+,"PRICE, WI",10 or fewer,101
+,"WAHKIAKUM, WA",10 or fewer,95
+,"ASOTIN, WA",10 or fewer,117
+,"WASHAKIE, WY",10 or fewer,111
+,"ADAMS, WA",10 or fewer,90
+,"FLORENCE, WI",10 or fewer,82
+,"IRON, WI",10 or fewer,61
+,"JOHNSON, WY",10 or fewer,62
+,"LINCOLN, WA",10 or fewer,52
+,"PEND OREILLE, WA",10 or fewer,60
+,"HOT SPRINGS, WY",10 or fewer,61
+,"FERRY, WA",10 or fewer,23
+,"NIOBRARA, WY",10 or fewer,24
+,"COLUMBIA, WA",10 or fewer,12
+,"GARFIELD, WA",10 or fewer,11
+,None of the above,20,37521
+,Total,863,1115594
+Jan 1 – Dec 31 2025,"MILWAUKEE, WI",82,127626
+,"KING, WA",59,107211
+,"DANE, WI",66,74762
+,"CLARK, WA",44,50325
+,"BROWN, WI",35,53298
+,"SNOHOMISH, WA",19,39266
+,"BERKELEY, WV",58,33952
+,"WAUKESHA, WI",25,21717
+,"ROCK, WI",26,18985
+,"LARAMIE, WY",19,20790
+,"RACINE, WI",31,23531
+,"SHEBOYGAN, WI",26,22024
+,"KENOSHA, WI",20,19684
+,"WALWORTH, WI",25,16699
+,"LA CROSSE, WI",17,19868
+,"SKAGIT, WA",10 or fewer,15392
+,"WOOD, WV",18,15665
+,"HARRISON, WV",15,16916
+,"CHELAN, WA",10 or fewer,15788
+,"MONONGALIA, WV",11,13271
+,"WINNEBAGO, WI",14,14050
+,"JEFFERSON, WV",17,14228
+,"MARION, WV",15,12963
+,"MANITOWOC, WI",11,11758
+,"WASHINGTON, WI",10 or fewer,9322
+,"OZAUKEE, WI",15,9777
+,"PIERCE, WA",10 or fewer,5461
+,"MERCER, WV",25,19423
+,"KANAWHA, WV",27,17220
+,"DOUGLAS, WI",10 or fewer,8669
+,"MARINETTE, WI",14,8318
+,"COWLITZ, WA",10 or fewer,5548
+,"DOUGLAS, WA",10 or fewer,8369
+,"OHIO, WV",10 or fewer,10941
+,"EAU CLAIRE, WI",10 or fewer,548
+,"OUTAGAMIE, WI",10 or fewer,6888
+,"CHIPPEWA, WI",10 or fewer,277
+,"MARSHALL, WV",12,7904
+,"UPSHUR, WV",13,7828
+,"JACKSON, WV",10 or fewer,8119
+,"OCONTO, WI",10 or fewer,6826
+,"JEFFERSON, WI",10 or fewer,4647
+,"NICHOLAS, WV",10 or fewer,6682
+,"MINERAL, WV",10 or fewer,6588
+,"DODGE, WI",10 or fewer,4009
+,"TREMPEALEAU, WI",10 or fewer,4719
+,"ALBANY, WY",10 or fewer,5522
+,"FOND DU LAC, WI",10 or fewer,5503
+,"COLUMBIA, WI",10 or fewer,3717
+,"PRESTON, WV",10 or fewer,3977
+,"ISLAND, WA",10 or fewer,3353
+,"GRANT, WI",10 or fewer,4236
+,"VERNON, WI",10 or fewer,3822
+,"GRANT, WA",10 or fewer,2476
+,"HAMPSHIRE, WV",10 or fewer,7182
+,"MONROE, WI",10 or fewer,2601
+,"WETZEL, WV",10 or fewer,4800
+,"WHATCOM, WA",10 or fewer,1943
+,"BRAXTON, WV",10 or fewer,3768
+,"MORGAN, WV",10 or fewer,5045
+,"LEWIS, WV",10 or fewer,2647
+,"KEWAUNEE, WI",10 or fewer,2857
+,"SPOKANE, WA",10 or fewer,1598
+,"SAUK, WI",10 or fewer,1654
+,"TAYLOR, WV",10 or fewer,2415
+,"PARK, WY",10 or fewer,3884
+,"RANDOLPH, WV",10 or fewer,2361
+,"GREEN, WI",10 or fewer,1640
+,"ADAMS, WI",10 or fewer,2741
+,"THURSTON, WA",10 or fewer,1312
+,"BARBOUR, WV",10 or fewer,2105
+,"KITSAP, WA",10 or fewer,1237
+,"SHAWANO, WI",10 or fewer,1669
+,"JUNEAU, WI",10 or fewer,1860
+,"HANCOCK, WV",13,5252
+,"HARDY, WV",10 or fewer,3870
+,"CAMPBELL, WY",11,5021
+,"GRANT, WV",12,3929
+,"BROOKE, WV",10 or fewer,4547
+,"RITCHIE, WV",10 or fewer,1709
+,"DOOR, WI",10 or fewer,1444
+,"FAYETTE, WV",10 or fewer,1660
+,"CALUMET, WI",10 or fewer,1533
+,"OKANOGAN, WA",10 or fewer,979
+,"RALEIGH, WV",10 or fewer,1566
+,"POLK, WI",10 or fewer,2453
+,"SAINT CROIX, WI",10 or fewer,1055
+,"RUSK, WI",10 or fewer,72
+,"BENTON, WA",10 or fewer,866
+,"PUTNAM, WV",10 or fewer,2350
+,"YAKIMA, WA",10 or fewer,753
+,"BURNETT, WI",10 or fewer,2039
+,"CLAY, WV",10 or fewer,1594
+,"LINCOLN, WY",10 or fewer,2216
+,"CRAWFORD, WI",10 or fewer,1178
+,"TYLER, WV",10 or fewer,1677
+,"WEBSTER, WV",10 or fewer,1474
+,"JACKSON, WI",10 or fewer,853
+,"BUFFALO, WI",10 or fewer,885
+,"MCDOWELL, WV",10 or fewer,1989
+,"MINGO, WV",10 or fewer,1472
+,"PENDLETON, WV",10 or fewer,1714
+,"DODDRIDGE, WV",10 or fewer,1371
+,"MARATHON, WI",10 or fewer,606
+,"IOWA, WI",10 or fewer,789
+,"WAUSHARA, WI",10 or fewer,948
+,"DUNN, WI",10 or fewer,250
+,"CABELL, WV",10 or fewer,786
+,"PLEASANTS, WV",10 or fewer,931
+,"WIRT, WV",10 or fewer,951
+,"RICHLAND, WI",10 or fewer,880
+,"WAUPACA, WI",10 or fewer,643
+,"MARQUETTE, WI",10 or fewer,774
+,"SWEETWATER, WY",10 or fewer,622
+,"WOOD, WI",10 or fewer,458
+,"NATRONA, WY",10 or fewer,564
+,"PIERCE, WI",10 or fewer,559
+,"CARBON, WY",10 or fewer,708
+,"BARRON, WI",10 or fewer,255
+,"GREENBRIER, WV",10 or fewer,632
+,"LEWIS, WA",10 or fewer,487
+,"GREEN LAKE, WI",10 or fewer,526
+,"PORTAGE, WI",10 or fewer,401
+,"BAYFIELD, WI",10 or fewer,557
+,"SAWYER, WI",10 or fewer,292
+,"MASON, WV",10 or fewer,690
+,"TUCKER, WV",10 or fewer,961
+,"GILMER, WV",10 or fewer,653
+,"CLARK, WI",10 or fewer,194
+,"PEPIN, WI",10 or fewer,964
+,"KITTITAS, WA",10 or fewer,413
+,"UINTA, WY",10 or fewer,622
+,"ROANE, WV",10 or fewer,626
+,"FREMONT, WY",10 or fewer,396
+,"LAFAYETTE, WI",10 or fewer,437
+,"KLICKITAT, WA",10 or fewer,335
+,"CLALLAM, WA",10 or fewer,282
+,"WASHBURN, WI",10 or fewer,320
+,"GRAYS HARBOR, WA",10 or fewer,309
+,"CALHOUN, WV",10 or fewer,440
+,"BOONE, WV",10 or fewer,943
+,"MONROE, WV",10 or fewer,698
+,"PACIFIC, WA",10 or fewer,273
+,"FRANKLIN, WA",10 or fewer,300
+,"LOGAN, WV",10 or fewer,589
+,"MASON, WA",10 or fewer,285
+,"WYOMING, WV",10 or fewer,569
+,"ASHLAND, WI",10 or fewer,265
+,"LINCOLN, WV",10 or fewer,813
+,"WESTON, WY",10 or fewer,407
+,"SAN JUAN, WA",10 or fewer,320
+,"GOSHEN, WY",10 or fewer,563
+,"ONEIDA, WI",10 or fewer,249
+,"TETON, WY",10 or fewer,347
+,"WAYNE, WV",10 or fewer,257
+,"WHITMAN, WA",10 or fewer,539
+,"PLATTE, WY",10 or fewer,279
+,"SUMMERS, WV",10 or fewer,558
+,"SHERIDAN, WY",10 or fewer,272
+,"SKAMANIA, WA",10 or fewer,225
+,"WALLA WALLA, WA",10 or fewer,241
+,"BIG HORN, WY",10 or fewer,405
+,"CROOK, WY",10 or fewer,374
+,"SUBLETTE, WY",10 or fewer,726
+,"POCAHONTAS, WV",10 or fewer,246
+,"VILAS, WI",10 or fewer,187
+,"MENOMINEE, WI",10 or fewer,270
+,"LINCOLN, WI",10 or fewer,166
+,"LANGLADE, WI",10 or fewer,171
+,"JEFFERSON, WA",10 or fewer,142
+,"STEVENS, WA",10 or fewer,132
+,"TAYLOR, WI",10 or fewer,59
+,"FOREST, WI",10 or fewer,142
+,"CONVERSE, WY",10 or fewer,122
+,"PRICE, WI",10 or fewer,72
+,"WAHKIAKUM, WA",10 or fewer,103
+,"ASOTIN, WA",10 or fewer,134
+,"WASHAKIE, WY",10 or fewer,124
+,"ADAMS, WA",10 or fewer,91
+,"FLORENCE, WI",10 or fewer,91
+,"IRON, WI",10 or fewer,62
+,"JOHNSON, WY",10 or fewer,78
+,"LINCOLN, WA",10 or fewer,63
+,"PEND OREILLE, WA",10 or fewer,46
+,"HOT SPRINGS, WY",10 or fewer,51
+,"FERRY, WA",10 or fewer,35
+,"NIOBRARA, WY",10 or fewer,43
+,"COLUMBIA, WA",10 or fewer,16
+,"GARFIELD, WA",10 or fewer,14
+,None of the above,33,36135
+,Total,1120,1163851

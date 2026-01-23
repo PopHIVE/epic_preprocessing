@@ -2,7 +2,7 @@
   {
     "file": "raw/staging_resp_infections/2026_01_06_A03_FLU_EDvisits_ICD10_State_Week_Age_2025.csv",
     "md5": "c425d55f7964e669f4e988f656221d82",
-    "date_processed": "2026-01-07 14:39:14",
+    "date_processed": "2026-01-22 20:44:20",
     "standard_name": "flu",
     "Session Title": "Number of FLU ED Encounters by State and Age",
     "Session Description": "ED encounters, 3 ED diagnoses j09* j10* j11*, 53 states, 6 age groups, 2023-2025",
@@ -18,7 +18,7 @@
   {
     "file": "raw/staging_resp_infections/2026_01_06_A03_FLU_EDvisits_ICD10_State_Week_Age_2024.csv",
     "md5": "0b08148edb90a370933357a6da289ba8",
-    "date_processed": "2026-01-07 14:39:14",
+    "date_processed": "2026-01-22 20:44:20",
     "standard_name": "flu",
     "Session Title": "Number of FLU ED Encounters by State and Age",
     "Session Description": "ED encounters, 3 ED diagnoses j09* j10* j11*, 53 states, 6 age groups, 2023-2025",
@@ -34,7 +34,7 @@
   {
     "file": "raw/staging_resp_infections/2026_01_06_A03_FLU_EDvisits_ICD10_State_Week_Age_2023.csv",
     "md5": "2469cb58541262afc58e01b38bb80dcd",
-    "date_processed": "2026-01-07 14:39:14",
+    "date_processed": "2026-01-22 20:44:20",
     "standard_name": "flu",
     "Session Title": "Number of FLU ED Encounters by State and Age",
     "Session Description": "ED encounters, 3 ED diagnoses j09* j10* j11*, 53 states, 6 age groups, 2023-2025",
