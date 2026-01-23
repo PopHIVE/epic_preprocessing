@@ -2,7 +2,7 @@
   {
     "file": "raw/staging_resp_infections/A02_COVID_EDvisits_ICD10_State_Week_Age_2025-2026.csv",
     "md5": "d06c7ecba8cf3cbd6403b5c0c5b326d0",
-    "date_processed": "2026-01-22 22:26:14",
+    "date_processed": "2026-01-22 23:09:54",
     "standard_name": "covid",
     "Session Title": "COVID ICD10s in ED in 2025-2026",
     "Session ID": "2792333",
@@ -17,7 +17,7 @@
   {
     "file": "raw/staging_resp_infections/A02_COVID_EDvisits_ICD10_State_Week_Age_2023-2024.csv",
     "md5": "5fb4893f7c86bb169a29b44c009ada8e",
-    "date_processed": "2026-01-22 22:26:14",
+    "date_processed": "2026-01-22 23:09:54",
     "standard_name": "covid",
     "Session Title": "COVID ICD10s in ED in 2023-2024",
     "Session ID": "2792331",
