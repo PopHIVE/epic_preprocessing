@@ -2,7 +2,7 @@
   {
     "file": "raw/staging_resp_infections/A03_FLU_EDvisits_ICD10_State_Week_Age_2025-2026.csv",
     "md5": "2038721d574225ba174ecb20c6fbbc1b",
-    "date_processed": "2026-01-22 22:26:15",
+    "date_processed": "2026-01-22 23:09:54",
     "standard_name": "flu",
     "Session Title": "FLU ED by State Week Age 2025-2026",
     "Session ID": "2792332",
@@ -17,7 +17,7 @@
   {
     "file": "raw/staging_resp_infections/A03_FLU_EDvisits_ICD10_State_Week_Age_2023-2024.csv",
     "md5": "e48d2da6fc7638747d92b05ce6951b4d",
-    "date_processed": "2026-01-22 22:26:14",
+    "date_processed": "2026-01-22 23:09:54",
     "standard_name": "flu",
     "Session Title": "FLU ED by State Week Age 2023-2024",
     "Session ID": "2792347",

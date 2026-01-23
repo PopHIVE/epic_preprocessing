@@ -129,15 +129,107 @@ chronic_import <- function(yearset){
   return(combined)
 }
 
+# Create a more robust county FIPS lookup that handles name variations
 all_fips_county = all_fips %>%
   filter(!(geography_name %in% state.name)) %>%
-  mutate(geography_name = gsub(' County','', geography_name),
-         geography_name = gsub(' Parish','', geography_name),
-         geography_name = paste0(geography_name,', ', state),
-         geography_name = toupper(geography_name)
+  mutate(
+    # Remove suffixes - ORDER MATTERS! More specific patterns first
+    geography_name_clean = geography_name,
+    # Alaska consolidated city-boroughs MUST come before Borough removal
+    # (e.g., "Juneau City and Borough" -> "Juneau", not "Juneau City and")
+    geography_name_clean = gsub(' City and Borough$','', geography_name_clean),
+    geography_name_clean = gsub(' County$','', geography_name_clean),
+    geography_name_clean = gsub(' Parish$','', geography_name_clean),
+    geography_name_clean = gsub(' Borough$','', geography_name_clean),
+    geography_name_clean = gsub(' Census Area$','', geography_name_clean),
+    geography_name_clean = gsub(' Municipality$','', geography_name_clean),
+    # Keep " city" for VA independent cities (e.g., "Salem city" -> "SALEM CITY, VA")
+    # The crosswalk maps Epic's "SALEM, VA" to "SALEM CITY, VA" for matching
+    geography_name_clean = paste0(geography_name_clean,', ', state),
+    geography_name_clean = toupper(geography_name_clean)
   ) %>%
-  dplyr::select(geography, geography_name) %>%
-  unique()
+  dplyr::select(geography, geography_name = geography_name_clean) %>%
+  # Use distinct() to handle any duplicate geography_name entries
+  distinct(geography_name, .keep_all = TRUE)
+
+# Manual crosswalk for county names that can't be fixed with simple text transformations
+# These include Virginia independent cities, Alaska census areas, and other special cases
+county_manual_crosswalk <- tibble::tribble(
+  ~epic_name, ~fips_name,
+  # Virginia independent cities (these have their own FIPS codes as county-equivalents)
+  "SALEM, VA", "SALEM CITY, VA",
+  "RADFORD, VA", "RADFORD CITY, VA",
+  # Alaska census areas and boroughs with complex naming
+  "ANCHORAGE, AK", "ANCHORAGE, AK",
+  "FAIRBANKS NORTH STAR, AK", "FAIRBANKS NORTH STAR, AK",
+  "JUNEAU, AK", "JUNEAU, AK",
+  "KENAI PENINSULA, AK", "KENAI PENINSULA, AK",
+  "MATANUSKA SUSITNA, AK", "MATANUSKA-SUSITNA, AK",
+  "BETHEL, AK", "BETHEL, AK",
+  "NOME, AK", "NOME, AK",
+  "NORTH SLOPE, AK", "NORTH SLOPE, AK",
+  "NORTHWEST ARCTIC, AK", "NORTHWEST ARCTIC, AK",
+  "SOUTHEAST FAIRBANKS, AK", "SOUTHEAST FAIRBANKS, AK",
+  "YUKON KOYUKUK, AK", "YUKON-KOYUKUK, AK",
+  "VALDEZ CORDOVA, AK", "VALDEZ-CORDOVA, AK",  # Note: split into Chugach & Copper River in 2019
+  "KUSILVAK, AK", "KUSILVAK, AK",  # Renamed from Wade Hampton in 2015
+  "PRINCE OF WALES HYDER, AK", "PRINCE OF WALES-HYDER, AK",
+  "HOONAH ANGOON, AK", "HOONAH-ANGOON, AK",
+  "LAKE AND PENINSULA, AK", "LAKE AND PENINSULA, AK",
+  "KODIAK ISLAND, AK", "KODIAK ISLAND, AK",
+  "KETCHIKAN GATEWAY, AK", "KETCHIKAN GATEWAY, AK",
+  "ALEUTIANS EAST, AK", "ALEUTIANS EAST, AK",
+  "ALEUTIANS WEST, AK", "ALEUTIANS WEST, AK",
+  "BRISTOL BAY, AK", "BRISTOL BAY, AK",
+  "DILLINGHAM, AK", "DILLINGHAM, AK",
+  "DENALI, AK", "DENALI, AK",
+  "SITKA, AK", "SITKA, AK",
+  "WRANGELL, AK", "WRANGELL, AK",
+  "PETERSBURG, AK", "PETERSBURG, AK",
+  "HAINES, AK", "HAINES, AK",
+  "SKAGWAY, AK", "SKAGWAY, AK",
+  "YAKUTAT, AK", "YAKUTAT, AK",
+  # St./Saint variations - some may need exact matches
+  "ST JOSEPH, MI", "ST. JOSEPH, MI",
+  "ST JOSEPH, IN", "ST. JOSEPH, IN",
+  # La Salle/La Porte - some states use one-word spelling in FIPS
+  "LA SALLE, IL", "LASALLE, IL",
+  "LA PORTE, IN", "LAPORTE, IN"
+)
+
+# Function to normalize county names from Epic Cosmos data to match FIPS lookup format
+# This function is vectorized for use with dplyr::mutate()
+normalize_county_name <- function(county) {
+  county <- toupper(trimws(county))
+
+  # Mark non-county entries as NA (vectorized)
+  county <- ifelse(county %in% c("TOTAL", "NONE OF THE ABOVE", ""), NA_character_, county)
+
+  # SAINT/SAINTE → ST./STE. (order matters - SAINTE before SAINT)
+  county <- gsub("^SAINTE ", "STE. ", county)
+  county <- gsub("^SAINT ", "ST. ", county)
+  county <- gsub("^ST ", "ST. ", county)  # Add period if missing after ST
+
+  # Handle possessive names - add apostrophes
+  county <- gsub("PRINCE GEORGES,", "PRINCE GEORGE'S,", county)
+  county <- gsub("QUEEN ANNES,", "QUEEN ANNE'S,", county)
+  county <- gsub("ST\\. MARYS,", "ST. MARY'S,", county)
+  county <- gsub("OBRIEN,", "O'BRIEN,", county)
+
+  # Handle space variations in compound names
+  # Note: LA SALLE and LA PORTE are kept as-is since all_fips uses "La Salle" and "La Porte"
+  county <- gsub("^DE KALB,", "DEKALB,", county)
+
+  # Alaska borough/census areas - these need special handling
+  # Some were renamed: Valdez-Cordova split into Chugach and Copper River (2019)
+  # Wade Hampton renamed to Kusilvak (2015)
+  county <- gsub("MATANUSKA SUSITNA,", "MATANUSKA-SUSITNA,", county)
+  county <- gsub("PRINCE OF WALES HYDER,", "PRINCE OF WALES-HYDER,", county)
+  county <- gsub("YUKON KOYUKUK,", "YUKON-KOYUKUK,", county)
+  county <- gsub("HOONAH ANGOON,", "HOONAH-ANGOON,", county)
+
+  return(county)
+}
 
 chronic_import_county <- function(fileset){
   a1 <- read_csv(fileset, skip = 11) %>%
@@ -147,30 +239,41 @@ chronic_import_county <- function(fileset){
            geography_name ="County of Residence",
            age = "Age at Encounter in Years"
     ) %>%
-    tidyr::fill(geography_name, age, .direction='down') 
-  
-  
+    tidyr::fill(geography_name, age, .direction='down')
+
+
   combined <-   a1 %>%
     mutate(age = gsub("≥ ","", age),
            age = gsub(" and < ","-", age),
            age = gsub("Less than ", "<", age),
            age = gsub("65 Years or more","65+ Years", age),
            age = if_else(grepl('Total', age),'Total', age),
-           
+
            ccw = as.numeric(gsub('%','', ccw)),
            lab = as.numeric(gsub('%','', lab)),
-           
+
            n_patients_chronic = as.numeric(n_patients_chronic),
-           geography_name = gsub('Total','United States',geography_name)
-           
+           geography_name = gsub('Total','United States',geography_name),
+           # Normalize county names to match FIPS lookup format
+           geography_name_normalized = normalize_county_name(geography_name)
+
     ) %>%
-    left_join(all_fips_county, by='geography_name'
+    # Filter out non-county rows
+    filter(!is.na(geography_name_normalized)) %>%
+    # First try manual crosswalk for special cases
+    left_join(county_manual_crosswalk, by = c('geography_name_normalized' = 'epic_name')) %>%
+    mutate(
+      # Use fips_name from crosswalk if available, otherwise use normalized name
+      county_for_fips = coalesce(fips_name, geography_name_normalized)
+    ) %>%
+    # Then join to FIPS lookup (many-to-one: each county name maps to one FIPS)
+    left_join(all_fips_county, by = c('county_for_fips' = 'geography_name'), relationship = "many-to-one"
     ) %>%
     mutate(
       yearset = str_extract(fileset, "\\d{4}(?=\\.csv)"),
       time = paste0(yearset,'-01-01') ) %>%
     dplyr::select(age, geography, time, ccw, lab,n_patients_chronic) %>%
-    filter(!is.na(geography)) 
+    filter(!is.na(geography))
   return(combined)
 }
 
@@ -494,15 +597,38 @@ heat1 <- vroom::vroom('./raw/heat_related.csv.xz') %>%
     total=as.numeric(total),
     heat_suppressed = if_else(heat==5,1,0),
     heat_incidence = heat / total*100000,
-    time = paste(year,'01','01', sep='-')
+    time = paste(year,'01','01', sep='-'),
+    # Normalize county names to match FIPS lookup format
+    county_normalized = normalize_county_name(county)
   ) %>%
-  left_join(all_fips_county, by = c('county'= 'geography_name')) %>%
+  # Filter out non-county rows (Total, None of the above)
+  filter(!is.na(county_normalized)) %>%
+  # First try manual crosswalk for special cases
+  left_join(county_manual_crosswalk, by = c('county_normalized' = 'epic_name')) %>%
+  mutate(
+    # Use fips_name from crosswalk if available, otherwise use normalized name
+    county_for_fips = coalesce(fips_name, county_normalized)
+  ) %>%
+  # Then join to FIPS lookup (many-to-one: each county name maps to one FIPS)
+  left_join(all_fips_county, by = c('county_for_fips' = 'geography_name'), relationship = "many-to-one") %>%
   rename(heat_ed_patients = heat,
          total_ed_patients = total,
          heat_ed_incidence = heat_incidence
          ) %>%
-  dplyr::select(geography, time, heat_ed_patients, total_ed_patients, heat_ed_incidence, heat_suppressed,county) %>%
-  rename(geography_name = geography)
+  dplyr::select(geography, time, heat_ed_patients, total_ed_patients, heat_ed_incidence, heat_suppressed, county) %>%
+  # Rename geography to geography_name for backward compatibility with existing output format
+  rename(geography_name = county)
+
+# Report any remaining unmatched counties for debugging
+unmatched_counties <- heat1 %>%
+  filter(is.na(geography)) %>%
+  distinct(geography_name) %>%
+  pull(geography_name)
+if (length(unmatched_counties) > 0) {
+  message("Warning: ", length(unmatched_counties), " unique county names still unmatched after normalization:")
+  message(paste(head(unmatched_counties, 10), collapse = ", "))
+  if (length(unmatched_counties) > 10) message("... and ", length(unmatched_counties) - 10, " more")
+}
 
 write_csv(heat1, './standard/heat_year_county.csv')
 vroom::vroom_write(heat1, './standard/heat_year_county.csv.gz')
