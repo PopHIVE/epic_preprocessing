@@ -2,7 +2,7 @@
   {
     "file": "raw/staging_resp_infections/2026_01_06_A02_COVID_EDvisits_ICD10_State_Week_Age_2025.csv",
     "md5": "47e39c81a429793cc3017dd443bdc0e7",
-    "date_processed": "2026-01-07 14:39:14",
+    "date_processed": "2026-01-22 20:44:20",
     "standard_name": "covid",
     "Session Title": "COVID ICD10s in ED in 2023-2025",
     "Session Description": "base al ed encounters53 states of residence6 age groupslong formatstate age date",
@@ -18,7 +18,7 @@
   {
     "file": "raw/staging_resp_infections/2026_01_06_A02_COVID_EDvisits_ICD10_State_Week_Age_2024.csv",
     "md5": "5ab35c3c69eef1e65ade3624c530f9f6",
-    "date_processed": "2026-01-07 14:39:13",
+    "date_processed": "2026-01-22 20:44:19",
     "standard_name": "covid",
     "Session Title": "COVID ICD10s in ED in 2023-2025",
     "Session Description": "base al ed encounters53 states of residence6 age groupslong formatstate age date",
@@ -34,7 +34,7 @@
   {
     "file": "raw/staging_resp_infections/2026_01_06_A02_COVID_EDvisits_ICD10_State_Week_Age_2023.csv",
     "md5": "eb199e096be522e817c8e94b02c8a142",
-    "date_processed": "2026-01-07 14:39:13",
+    "date_processed": "2026-01-22 20:44:19",
     "standard_name": "covid",
     "Session Title": "COVID ICD10s in ED in 2023-2025",
     "Session Description": "base al ed encounters53 states of residence6 age groupslong formatstate age date",

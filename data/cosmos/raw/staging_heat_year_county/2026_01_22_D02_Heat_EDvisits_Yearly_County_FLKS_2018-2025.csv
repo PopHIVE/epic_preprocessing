@@ -1,0 +1,5405 @@
+﻿Session Title,Heat only Yearly by County 2018-2025 FLKS,,
+Session ID,2792484,,
+Data Model,Patients,,
+Population Base,All Patients,,
+Population Criteria Filters: These criteria are a summary and do not fully reflect the content of the exported session.,State of Residence: STATES_FL_KS,"Encounter Type: Emergency, Emergency to Inpatient",
+Session Date Range,1/1/2018 - 12/31/2025,,
+Measure,Number of Patients,,
+Export User,Stephanie Perniciaro,,
+Date of Export,1/22/2026,,
+,,,
+,,,
+,Diagnosis (Encounter),Heat,"Total: Total includes all data, including data from columns not currently displayed."
+Year,County of Residence,,
+Jan 1 – Dec 31 2018,"COOK, IL",126,177000
+,"BROWARD, FL",89,175856
+,"ORANGE, FL",14,25538
+,"LEE, FL",148,127253
+,"FULTON, GA",89,131328
+,"DUVAL, FL",58,58074
+,"HONOLULU, HI",55,127526
+,"HILLSBOROUGH, FL",40,58685
+,"MIAMI-DADE, FL",38,102288
+,"MARION, IN",100,116558
+,"COBB, GA",104,105098
+,"DEKALB, GA",47,58687
+,"ADA, ID",49,48513
+,"VOLUSIA, FL",10 or fewer,6040
+,"LAKE, FL",10 or fewer,4927
+,"OSCEOLA, FL",10 or fewer,15731
+,"POLK, IA",58,47777
+,"POLK, FL",10 or fewer,10110
+,"LAKE, IN",36,54781
+,"GWINNETT, GA",24,33442
+,"SEMINOLE, FL",10 or fewer,5518
+,"WINNEBAGO, IL",35,40635
+,"ALLEN, IN",45,44827
+,"LAKE, IL",17,11001
+,"JOHNSON, KS",37,24863
+,"DUPAGE, IL",13,12833
+,"MARION, FL",10 or fewer,9177
+,"LINN, IA",76,42146
+,"ALACHUA, FL",26,40137
+,"KANE, IL",10 or fewer,4075
+,"PINELLAS, FL",10 or fewer,7041
+,"HALL, GA",31,38571
+,"PASCO, FL",10 or fewer,6543
+,"CANYON, ID",16,22626
+,"PEORIA, IL",46,39368
+,"CHAMPAIGN, IL",50,35813
+,"SHAWNEE, KS",60,31449
+,"DOUGLAS, GA",33,33774
+,"PAULDING, GA",31,32749
+,"COLLIER, FL",10 or fewer,5695
+,"SAINT LUCIE, FL",10 or fewer,4200
+,"PALM BEACH, FL",10 or fewer,9965
+,"VANDERBURGH, IN",59,26937
+,"LOWNDES, GA",46,24639
+,"WYANDOTTE, KS",17,18536
+,"MCLEAN, IL",21,15993
+,"ROCK ISLAND, IL",45,27849
+,"SAINT CLAIR, IL",26,18173
+,"WILL, IL",10 or fewer,8164
+,"CLAYTON, GA",15,20417
+,"TAZEWELL, IL",25,19960
+,"SAINT JOHNS, FL",10 or fewer,2960
+,"MCHENRY, IL",10 or fewer,6604
+,"CLARK, IN",13,6845
+,"CHEROKEE, GA",22,16545
+,"SANGAMON, IL",28,19466
+,"CLAY, FL",10 or fewer,3783
+,"SUMTER, FL",10 or fewer,2146
+,"JOHNSON, IA",20,13081
+,"FLAGLER, FL",10 or fewer,1446
+,"HENRY, GA",10 or fewer,12818
+,"ST JOSEPH, IN",10 or fewer,2083
+,"MADISON, IL",23,12548
+,"HAWAII, HI",10 or fewer,9471
+,"LA SALLE, IL",17,15820
+,"SCOTT, IA",22,16081
+,"VERMILION, IL",44,21164
+,"MARTIN, FL",10 or fewer,1552
+,"TWIN FALLS, ID",18,15473
+,"BREVARD, FL",10 or fewer,6751
+,"TROUP, GA",39,18444
+,"NASSAU, FL",10 or fewer,5813
+,"INDIAN RIVER, FL",10 or fewer,1630
+,"BLACK HAWK, IA",14,12712
+,"JOHNSON, IN",13,12413
+,"BIBB, GA",10 or fewer,1444
+,"BARROW, GA",11,12746
+,"WOODBURY, IA",24,13262
+,"KENDALL, IL",10 or fewer,1105
+,"BARTHOLOMEW, IN",10 or fewer,846
+,"FLOYD, GA",10 or fewer,1541
+,"SPALDING, GA",24,15043
+,"MADISON, IN",10 or fewer,2460
+,"MACON, IL",25,14109
+,"HIGHLANDS, FL",10 or fewer,1600
+,"FLOYD, IN",10 or fewer,2944
+,"BANNOCK, ID",10 or fewer,613
+,"HAMILTON, IN",10 or fewer,8556
+,"DUBUQUE, IA",24,10959
+,"CITRUS, FL",10 or fewer,2380
+,"JACKSON, GA",10 or fewer,8931
+,"KAUAI, HI",10 or fewer,11560
+,"WHITFIELD, GA",10 or fewer,2240
+,"HOWARD, IN",10 or fewer,10739
+,"HERNANDO, FL",10 or fewer,1992
+,"FORSYTH, GA",10 or fewer,5553
+,"LEON, FL",10 or fewer,1364
+,"PORTER, IN",10 or fewer,7994
+,"KNOX, IL",21,9592
+,"BOONE, IL",10 or fewer,6985
+,"BARTOW, GA",10 or fewer,5252
+,"WAYNE, IN",10 or fewer,1190
+,"DEARBORN, IN",10 or fewer,5551
+,"POLK, GA",10 or fewer,2705
+,"WARRICK, IN",13,7283
+,"HOUSTON, GA",10 or fewer,1001
+,"DALLAS, IA",10 or fewer,5332
+,"KNOX, IN",26,9895
+,"LEAVENWORTH, KS",20,8248
+,"NOBLE, IN",10 or fewer,7867
+,"CARROLL, GA",10 or fewer,6725
+,"GORDON, GA",10 or fewer,1089
+,"KOSCIUSKO, IN",10 or fewer,6798
+,"HABERSHAM, GA",10 or fewer,4490
+,"MUSCATINE, IA",14,8258
+,"CLARKE, GA",10 or fewer,1466
+,"WALKER, GA",10 or fewer,5941
+,"MARSHALL, IA",10 or fewer,3005
+,"LEVY, FL",10 or fewer,5315
+,"RICHMOND, GA",10 or fewer,1162
+,"ELMORE, ID",10 or fewer,6029
+,"NEWTON, GA",10 or fewer,4528
+,"CHARLOTTE, FL",10 or fewer,3686
+,"WEBSTER, IA",12,6802
+,"HENRY, IL",12,7051
+,"COWETA, GA",10 or fewer,4021
+,"CATOOSA, GA",10 or fewer,5263
+,"HUNTINGTON, IN",10 or fewer,5917
+,"HANCOCK, IN",10 or fewer,4815
+,"LIVINGSTON, IL",11,6488
+,"BALDWIN, GA",10 or fewer,281
+,"PUTNAM, FL",10 or fewer,2889
+,"EFFINGHAM, IL",10 or fewer,464
+,"WOODFORD, IL",10 or fewer,3967
+,"WALTON, GA",10 or fewer,3611
+,"WHITLEY, IN",10 or fewer,5690
+,"BUTTS, GA",11,5521
+,"GIBSON, IN",10 or fewer,3303
+,"ROCKDALE, GA",10 or fewer,3755
+,"LUMPKIN, GA",10 or fewer,3777
+,"SARASOTA, FL",10 or fewer,2813
+,"WABASH, IN",10 or fewer,5383
+,"MANATEE, FL",10 or fewer,2463
+,"COLUMBIA, FL",10 or fewer,3377
+,"CLINTON, IL",10 or fewer,860
+,"MURRAY, GA",10 or fewer,793
+,"MARSHALL, IN",10 or fewer,443
+,"WHITE, GA",10 or fewer,4519
+,"WARREN, IA",10 or fewer,3840
+,"FAYETTE, GA",10 or fewer,3198
+,"ELKHART, IN",10 or fewer,1413
+,"LAGRANGE, IN",10 or fewer,4360
+,"PAYETTE, ID",10 or fewer,3908
+,"HARRISON, IN",10 or fewer,1157
+,"JEROME, ID",10 or fewer,4362
+,"HENDRY, FL",10 or fewer,3704
+,"BUREAU, IL",10 or fewer,1240
+,"PEACH, GA",10 or fewer,234
+,"BLAINE, ID",10 or fewer,3430
+,"CHATTOOGA, GA",10 or fewer,585
+,"OGLE, IL",10 or fewer,2615
+,"MACOUPIN, IL",10 or fewer,1670
+,"CAMDEN, GA",10 or fewer,1658
+,"FRANKLIN, GA",10 or fewer,1063
+,"GEARY, KS",10 or fewer,503
+,"DAWSON, GA",10 or fewer,2246
+,"BERRIEN, GA",10 or fewer,4433
+,"FAYETTE, IN",10 or fewer,556
+,"HENDRICKS, IN",10 or fewer,2624
+,"POSEY, IN",10 or fewer,3194
+,"HART, GA",10 or fewer,1208
+,"HARDEE, FL",10 or fewer,238
+,"MONTGOMERY, IL",10 or fewer,702
+,"DEKALB, IL",10 or fewer,1332
+,"BARTON, KS",10 or fewer,91
+,"BANKS, GA",10 or fewer,2606
+,"COLUMBIA, GA",10 or fewer,838
+,"POTTAWATTAMIE, IA",10 or fewer,2701
+,"MAUI, HI",10 or fewer,3467
+,"WARREN, IL",10 or fewer,3497
+,"CLINTON, IA",10 or fewer,1439
+,"BENTON, IA",10 or fewer,2738
+,"STEPHENS, GA",10 or fewer,1531
+,"SUWANNEE, FL",10 or fewer,1962
+,"GREENE, GA",10 or fewer,278
+,"JASPER, IA",10 or fewer,1478
+,"DELAWARE, IN",10 or fewer,735
+,"RICHLAND, IL",10 or fewer,611
+,"JONES, IA",10 or fewer,2919
+,"SCOTT, IN",10 or fewer,550
+,"FRANKLIN, KS",10 or fewer,554
+,"POWESHIEK, IA",10 or fewer,609
+,"MUSCOGEE, GA",10 or fewer,1506
+,"ESCAMBIA, FL",10 or fewer,1378
+,"MAHASKA, IA",10 or fewer,385
+,"BRADFORD, FL",10 or fewer,1978
+,"BOND, IL",10 or fewer,221
+,"STEUBEN, IN",10 or fewer,1722
+,"WASHINGTON, IN",10 or fewer,482
+,"DOUGLAS, KS",10 or fewer,1430
+,"SIOUX, IA",10 or fewer,2161
+,"LAMAR, GA",10 or fewer,2200
+,"SHELBY, IL",10 or fewer,560
+,"OSAGE, KS",10 or fewer,2096
+,"RIPLEY, IN",10 or fewer,1270
+,"JEFFERSON, IN",10 or fewer,587
+,"TAMA, IA",10 or fewer,1147
+,"DOUGLAS, IL",10 or fewer,2425
+,"CHATHAM, GA",10 or fewer,1141
+,"BAKER, FL",10 or fewer,596
+,"MORGAN, IN",10 or fewer,2040
+,"MIAMI, IN",10 or fewer,1603
+,"SEDGWICK, KS",10 or fewer,1194
+,"FULTON, IL",10 or fewer,1957
+,"COOK, GA",10 or fewer,1819
+,"PUTNAM, GA",10 or fewer,237
+,"PIKE, GA",10 or fewer,2049
+,"MIAMI, KS",10 or fewer,756
+,"LANIER, GA",10 or fewer,2623
+,"MERIWETHER, GA",10 or fewer,1944
+,"FRANKLIN, IN",10 or fewer,1812
+,"FAYETTE, IA",10 or fewer,1766
+,"OBRIEN, IA",10 or fewer,1938
+,"OKALOOSA, FL",10 or fewer,1062
+,"HARALSON, GA",10 or fewer,1430
+,"CEDAR, IA",10 or fewer,1704
+,"CHRISTIAN, IL",10 or fewer,1251
+,"GILCHRIST, FL",10 or fewer,1747
+,"CERRO GORDO, IA",10 or fewer,416
+,"MASSAC, IL",10 or fewer,2058
+,"MARSHALL, IL",10 or fewer,1777
+,"MERCER, IL",10 or fewer,2089
+,"VALLEY, ID",10 or fewer,1766
+,"LATAH, ID",10 or fewer,275
+,"MINIDOKA, ID",10 or fewer,516
+,"COLES, IL",10 or fewer,1406
+,"WASHINGTON, IA",10 or fewer,1416
+,"LAWRENCE, IL",10 or fewer,2030
+,"JENNINGS, IN",10 or fewer,157
+,"DIXIE, FL",10 or fewer,1584
+,"MADISON, GA",10 or fewer,522
+,"JACKSON, FL",10 or fewer,180
+,"GRANT, IN",10 or fewer,1066
+,"GEM, ID",10 or fewer,1194
+,"JACKSON, IN",10 or fewer,219
+,"STORY, IA",10 or fewer,1406
+,"BAY, FL",10 or fewer,987
+,"JEFFERSON, KS",10 or fewer,1435
+,"GOODING, ID",10 or fewer,1489
+,"DAVIESS, IN",10 or fewer,1478
+,"BREMER, IA",10 or fewer,1299
+,"BROOKS, GA",10 or fewer,1416
+,"SPENCER, IN",10 or fewer,1374
+,"RABUN, GA",10 or fewer,932
+,"STEPHENSON, IL",10 or fewer,1095
+,"FAYETTE, IL",10 or fewer,197
+,"PIATT, IL",10 or fewer,1568
+,"UNION, FL",10 or fewer,1410
+,"OCONEE, GA",10 or fewer,439
+,"LA PORTE, IN",10 or fewer,950
+,"PLYMOUTH, IA",10 or fewer,1313
+,"IROQUOIS, IL",10 or fewer,1416
+,"SANTA ROSA, FL",10 or fewer,850
+,"DADE, GA",10 or fewer,1538
+,"LOGAN, IL",10 or fewer,1123
+,"GADSDEN, FL",10 or fewer,186
+,"OWYHEE, ID",10 or fewer,1112
+,"MONROE, GA",10 or fewer,667
+,"BINGHAM, ID",10 or fewer,171
+,"IOWA, IA",10 or fewer,1178
+,"PICKENS, GA",10 or fewer,1003
+,"BUCHANAN, IA",10 or fewer,1128
+,"CASSIA, ID",10 or fewer,554
+,"WAPELLO, IA",10 or fewer,648
+,"KANKAKEE, IL",10 or fewer,697
+,"WHITESIDE, IL",10 or fewer,854
+,"ANDERSON, KS",10 or fewer,1333
+,"FORD, IL",10 or fewer,1492
+,"MADISON, FL",10 or fewer,737
+,"CRAWFORD, IL",10 or fewer,938
+,"WELLS, IN",10 or fewer,842
+,"LEE, IL",10 or fewer,917
+,"MONROE, FL",10 or fewer,675
+,"GLYNN, GA",10 or fewer,501
+,"JONES, GA",10 or fewer,91
+,"DUBOIS, IN",10 or fewer,522
+,"ALLEN, KS",10 or fewer,219
+,"GILMER, GA",10 or fewer,788
+,"MASON, IL",10 or fewer,915
+,"JACKSON, IA",10 or fewer,995
+,"DEKALB, IN",10 or fewer,655
+,"DES MOINES, IA",10 or fewer,948
+,"HARRIS, GA",10 or fewer,1033
+,"JACKSON, KS",10 or fewer,963
+,"JASPER, IL",10 or fewer,163
+,"UNION, IN",10 or fewer,903
+,"PIKE, IN",10 or fewer,930
+,"SHELBY, IN",10 or fewer,876
+,"OKEECHOBEE, FL",10 or fewer,333
+,"BOONE, IN",10 or fewer,798
+,"MOULTRIE, IL",10 or fewer,1125
+,"UPSON, GA",10 or fewer,877
+,"LOUISA, IA",10 or fewer,1172
+,"RANDOLPH, IN",10 or fewer,185
+,"HAMILTON, FL",10 or fewer,869
+,"WAKULLA, FL",10 or fewer,156
+,"ELBERT, GA",10 or fewer,352
+,"TIPPECANOE, IN",10 or fewer,680
+,"GRUNDY, IL",10 or fewer,574
+,"BONNEVILLE, ID",10 or fewer,484
+,"MARION, IA",10 or fewer,673
+,"JO DAVIESS, IL",10 or fewer,774
+,"HENRY, IN",10 or fewer,420
+,"ADAMS, IN",10 or fewer,678
+,"HEARD, GA",10 or fewer,1018
+,"WHITE, IL",10 or fewer,895
+,"RILEY, KS",10 or fewer,531
+,"BROWN, IN",10 or fewer,239
+,"UNION, GA",10 or fewer,616
+,"MADISON, IA",10 or fewer,799
+,"DECATUR, IN",10 or fewer,270
+,"WILKINSON, GA",10 or fewer,58
+,"FANNIN, GA",10 or fewer,660
+,"CASS, IN",10 or fewer,685
+,"CLAY, IL",10 or fewer,176
+,"STARKE, IN",10 or fewer,205
+,"HANCOCK, GA",10 or fewer,74
+,"SWITZERLAND, IN",10 or fewer,420
+,"STARK, IL",10 or fewer,1174
+,"WASHINGTON, ID",10 or fewer,617
+,"MORGAN, IL",10 or fewer,618
+,"LEE, IA",10 or fewer,756
+,"MONROE, IN",10 or fewer,560
+,"KOOTENAI, ID",10 or fewer,609
+,"MORGAN, GA",10 or fewer,285
+,"ALLAMAKEE, IA",10 or fewer,661
+,"HENRY, IA",10 or fewer,695
+,"OHIO, IN",10 or fewer,384
+,"JERSEY, IL",10 or fewer,750
+,"DOUGHERTY, GA",10 or fewer,373
+,"BUTLER, IA",10 or fewer,606
+,"CHARLTON, GA",10 or fewer,437
+,"LYON, IA",10 or fewer,1162
+,"BOISE, ID",10 or fewer,588
+,"DELAWARE, IA",10 or fewer,642
+,"LINN, KS",10 or fewer,397
+,"MCDONOUGH, IL",10 or fewer,634
+,"CALHOUN, IA",10 or fewer,764
+,"GRUNDY, IA",10 or fewer,557
+,"CRAWFORD, IN",10 or fewer,218
+,"JASPER, IN",10 or fewer,612
+,"MENARD, IL",10 or fewer,708
+,"JASPER, GA",10 or fewer,393
+,"ALEXANDER, IL",10 or fewer,916
+,"KEOKUK, IA",10 or fewer,454
+,"DESOTO, FL",10 or fewer,265
+,"BOONE, IA",10 or fewer,564
+,"FULTON, IN",10 or fewer,332
+,"OGLETHORPE, GA",10 or fewer,153
+,"TAYLOR, FL",10 or fewer,359
+,"CLAYTON, IA",10 or fewer,495
+,"ADAMS, ID",10 or fewer,742
+,"CUMBERLAND, IL",10 or fewer,174
+,"WABASH, IL",10 or fewer,455
+,"UNION, IL",10 or fewer,565
+,"POTTAWATOMIE, KS",10 or fewer,409
+,"WILLIAMSON, IL",10 or fewer,411
+,"WALTON, FL",10 or fewer,333
+,"MILLS, IA",10 or fewer,565
+,"POWER, ID",10 or fewer,49
+,"VIGO, IN",10 or fewer,480
+,"LINCOLN, ID",10 or fewer,641
+,"TIFT, GA",10 or fewer,353
+,"LIBERTY, GA",10 or fewer,360
+,"COLQUITT, GA",10 or fewer,377
+,"GUTHRIE, IA",10 or fewer,489
+,"HOLMES, FL",10 or fewer,70
+,"LYON, KS",10 or fewer,448
+,"RANDOLPH, IL",10 or fewer,399
+,"EDGAR, IL",10 or fewer,588
+,"PERRY, IN",10 or fewer,380
+,"PULASKI, IL",10 or fewer,676
+,"JOHNSON, IL",10 or fewer,619
+,"SALINE, IL",10 or fewer,392
+,"MARION, IL",10 or fewer,167
+,"APPANOOSE, IA",10 or fewer,193
+,"TIPTON, IN",10 or fewer,527
+,"PUTNAM, IL",10 or fewer,160
+,"CLINCH, GA",10 or fewer,440
+,"LAURENS, GA",10 or fewer,196
+,"TAYLOR, GA",10 or fewer,45
+,"HENDERSON, IL",10 or fewer,678
+,"EARLY, GA",10 or fewer,31
+,"WABAUNSEE, KS",10 or fewer,505
+,"HUMBOLDT, IA",10 or fewer,550
+,"CARROLL, IL",10 or fewer,304
+,"THOMAS, GA",10 or fewer,280
+,"JACKSON, IL",10 or fewer,426
+,"CASS, IL",10 or fewer,442
+,"TOWNS, GA",10 or fewer,374
+,"CHICKASAW, IA",10 or fewer,300
+,"FOUNTAIN, IN",10 or fewer,537
+,"CRAWFORD, GA",10 or fewer,56
+,"THOMAS, KS",10 or fewer,47
+,"WARE, GA",10 or fewer,240
+,"COFFEE, GA",10 or fewer,256
+,"GLADES, FL",10 or fewer,373
+,"WRIGHT, IA",10 or fewer,390
+,"JEFFERSON, IA",10 or fewer,423
+,"ATCHISON, KS",10 or fewer,372
+,"ECHOLS, GA",10 or fewer,505
+,"HAMILTON, IA",10 or fewer,376
+,"JEFFERSON, FL",10 or fewer,79
+,"WASHINGTON, IL",10 or fewer,206
+,"HARDIN, IA",10 or fewer,345
+,"DONIPHAN, KS",10 or fewer,79
+,"CLARKE, IA",10 or fewer,386
+,"WINNESHIEK, IA",10 or fewer,401
+,"DICKINSON, KS",10 or fewer,101
+,"WASHINGTON, GA",10 or fewer,68
+,"MACON, GA",10 or fewer,54
+,"DECATUR, GA",10 or fewer,105
+,"MONROE, IL",10 or fewer,284
+,"EDWARDS, IL",10 or fewer,255
+,"BURKE, GA",10 or fewer,80
+,"BULLOCH, GA",10 or fewer,174
+,"EFFINGHAM, GA",10 or fewer,207
+,"OSCEOLA, IA",10 or fewer,399
+,"WAYNE, IL",10 or fewer,210
+,"FRANKLIN, IL",10 or fewer,250
+,"GREENE, IN",10 or fewer,308
+,"UNION, IA",10 or fewer,301
+,"ORANGE, IN",10 or fewer,127
+,"ADAMS, IL",10 or fewer,255
+,"BOURBON, KS",10 or fewer,198
+,"CHEROKEE, IA",10 or fewer,298
+,"WASHINGTON, FL",10 or fewer,70
+,"BRYAN, GA",10 or fewer,189
+,"CARROLL, IN",10 or fewer,228
+,"LAFAYETTE, FL",10 or fewer,266
+,"WINNEBAGO, IA",10 or fewer,85
+,"PUTNAM, IN",10 or fewer,311
+,"COFFEY, KS",10 or fewer,227
+,"LUCAS, IA",10 or fewer,274
+,"LAWRENCE, IN",10 or fewer,185
+,"JEFFERSON, IL",10 or fewer,177
+,"BUENA VISTA, IA",10 or fewer,263
+,"IDAHO, ID",10 or fewer,304
+,"PAGE, IA",10 or fewer,225
+,"SULLIVAN, IN",10 or fewer,303
+,"FLOYD, IA",10 or fewer,157
+,"MCDUFFIE, GA",10 or fewer,76
+,"TWIGGS, GA",10 or fewer,40
+,"GREENE, IL",10 or fewer,237
+,"SEMINOLE, GA",10 or fewer,32
+,"RUSH, IN",10 or fewer,183
+,"CLARK, IL",10 or fewer,161
+,"CLINTON, IN",10 or fewer,221
+,"CASS, IA",10 or fewer,234
+,"BRANTLEY, GA",10 or fewer,130
+,"MONTGOMERY, KS",10 or fewer,203
+,"MONONA, IA",10 or fewer,282
+,"CARROLL, IA",10 or fewer,209
+,"GREENE, IA",10 or fewer,234
+,"JEFFERSON, GA",10 or fewer,64
+,"VERMILLION, IN",10 or fewer,303
+,"POCAHONTAS, IA",10 or fewer,292
+,"GALLATIN, IL",10 or fewer,210
+,"SUMTER, GA",10 or fewer,96
+,"SALINE, KS",10 or fewer,176
+,"HARRISON, IA",10 or fewer,220
+,"DODGE, GA",10 or fewer,65
+,"POPE, IL",10 or fewer,239
+,"GRADY, GA",10 or fewer,83
+,"MONTGOMERY, IN",10 or fewer,201
+,"CARIBOU, ID",10 or fewer,23
+,"BEN HILL, GA",10 or fewer,109
+,"ADAIR, IA",10 or fewer,220
+,"BROWN, KS",10 or fewer,189
+,"ATKINSON, GA",10 or fewer,169
+,"CLAY, GA",10 or fewer,11
+,"DECATUR, IA",10 or fewer,196
+,"DICKINSON, IA",10 or fewer,210
+,"NEZ PERCE, ID",10 or fewer,143
+,"CRISP, GA",10 or fewer,108
+,"HANCOCK, IL",10 or fewer,206
+,"KOSSUTH, IA",10 or fewer,137
+,"BUTLER, KS",10 or fewer,157
+,"MARTIN, IN",10 or fewer,166
+,"CRAWFORD, KS",10 or fewer,160
+,"BLECKLEY, GA",10 or fewer,31
+,"JAY, IN",10 or fewer,131
+,"LEE, GA",10 or fewer,112
+,"PIERCE, GA",10 or fewer,103
+,"EMANUEL, GA",10 or fewer,57
+,"RENO, KS",10 or fewer,147
+,"NEWTON, IN",10 or fewer,198
+,"CRAWFORD, IA",10 or fewer,157
+,"BONNER, ID",10 or fewer,139
+,"WAYNE, GA",10 or fewer,104
+,"PAWNEE, KS",10 or fewer,30
+,"MADISON, ID",10 or fewer,133
+,"TOOMBS, GA",10 or fewer,117
+,"BLACKFORD, IN",10 or fewer,130
+,"VAN BUREN, IA",10 or fewer,184
+,"PULASKI, GA",10 or fewer,52
+,"CLAY, IA",10 or fewer,201
+,"WORTH, IA",10 or fewer,56
+,"WILKES, GA",10 or fewer,62
+,"MONTGOMERY, IA",10 or fewer,169
+,"FREMONT, IA",10 or fewer,157
+,"MONROE, IA",10 or fewer,106
+,"MARSHALL, KS",10 or fewer,121
+,"NEMAHA, KS",10 or fewer,148
+,"SAC, IA",10 or fewer,131
+,"JEFFERSON, ID",10 or fewer,95
+,"SHELBY, IA",10 or fewer,160
+,"HANCOCK, IA",10 or fewer,80
+,"WARREN, IN",10 or fewer,184
+,"FRANKLIN, IA",10 or fewer,96
+,"PERRY, IL",10 or fewer,98
+,"PIKE, IL",10 or fewer,123
+,"CALHOUN, FL",10 or fewer,54
+,"PULASKI, IN",10 or fewer,114
+,"HOWARD, IA",10 or fewer,135
+,"CLAY, IN",10 or fewer,126
+,"OWEN, IN",10 or fewer,149
+,"DAVIS, IA",10 or fewer,106
+,"FRANKLIN, FL",10 or fewer,61
+,"MITCHELL, GA",10 or fewer,102
+,"FRANKLIN, ID",10 or fewer,43
+,"NEOSHO, KS",10 or fewer,99
+,"IDA, IA",10 or fewer,113
+,"DOOLY, GA",10 or fewer,38
+,"WORTH, GA",10 or fewer,71
+,"STAFFORD, KS",10 or fewer,10 or fewer
+,"TAYLOR, IA",10 or fewer,74
+,"SCHUYLER, IL",10 or fewer,113
+,"FINNEY, KS",10 or fewer,108
+,"HAMILTON, IL",10 or fewer,92
+,"ONEIDA, ID",10 or fewer,21
+,"WHITE, IN",10 or fewer,112
+,"APPLING, GA",10 or fewer,46
+,"CUSTER, ID",10 or fewer,132
+,"BENTON, IN",10 or fewer,82
+,"BEAR LAKE, ID",10 or fewer,34
+,"LIBERTY, FL",10 or fewer,29
+,"ELLIS, KS",10 or fewer,92
+,"LONG, GA",10 or fewer,74
+,"HARVEY, KS",10 or fewer,90
+,"GULF, FL",10 or fewer,86
+,"WAYNE, IA",10 or fewer,75
+,"MCINTOSH, GA",10 or fewer,72
+,"LINCOLN, GA",10 or fewer,45
+,"COWLEY, KS",10 or fewer,68
+,"TATTNALL, GA",10 or fewer,52
+,"HARDIN, IL",10 or fewer,82
+,"LABETTE, KS",10 or fewer,88
+,"MORRIS, KS",10 or fewer,64
+,"TALBOT, GA",10 or fewer,101
+,"WOODSON, KS",10 or fewer,25
+,"MCPHERSON, KS",10 or fewer,78
+,"MILLER, GA",10 or fewer,10 or fewer
+,"WILCOX, GA",10 or fewer,28
+,"IRWIN, GA",10 or fewer,52
+,"TELFAIR, GA",10 or fewer,41
+,"CLAY, KS",10 or fewer,52
+,"RICE, KS",10 or fewer,28
+,"FORD, KS",10 or fewer,71
+,"SCREVEN, GA",10 or fewer,46
+,"JEFF DAVIS, GA",10 or fewer,29
+,"SHERMAN, KS",10 or fewer,40
+,"CAMAS, ID",10 or fewer,102
+,"SEWARD, KS",10 or fewer,52
+,"TURNER, GA",10 or fewer,48
+,"CALHOUN, IL",10 or fewer,113
+,"EMMET, IA",10 or fewer,68
+,"MITCHELL, IA",10 or fewer,51
+,"PARKE, IN",10 or fewer,86
+,"RINGGOLD, IA",10 or fewer,91
+,"FREMONT, ID",10 or fewer,57
+,"CALHOUN, GA",10 or fewer,17
+,"CHEROKEE, KS",10 or fewer,62
+,"BACON, GA",10 or fewer,42
+,"PALO ALTO, IA",10 or fewer,75
+,"TETON, ID",10 or fewer,47
+,"LEMHI, ID",10 or fewer,56
+,"JENKINS, GA",10 or fewer,33
+,"AUDUBON, IA",10 or fewer,62
+,"JOHNSON, GA",10 or fewer,29
+,"BENEWAH, ID",10 or fewer,38
+,"SCOTT, IL",10 or fewer,46
+,"RUSH, KS",10 or fewer,12
+,"TALIAFERRO, GA",10 or fewer,18
+,"MARION, GA",10 or fewer,22
+,"BROWN, IL",10 or fewer,45
+,"WARREN, GA",10 or fewer,26
+,"CLEARWATER, ID",10 or fewer,47
+,"LOGAN, KS",10 or fewer,17
+,"CANDLER, GA",10 or fewer,28
+,"EVANS, GA",10 or fewer,13
+,"RANDOLPH, GA",10 or fewer,25
+,"WASHINGTON, KS",10 or fewer,38
+,"ADAMS, IA",10 or fewer,52
+,"BAKER, GA",10 or fewer,10 or fewer
+,"SUMNER, KS",10 or fewer,36
+,"MONTGOMERY, GA",10 or fewer,27
+,"TERRELL, GA",10 or fewer,23
+,"RAWLINS, KS",10 or fewer,22
+,"GREENWOOD, KS",10 or fewer,39
+,"QUITMAN, GA",10 or fewer,18
+,"TREUTLEN, GA",10 or fewer,25
+,"SHOSHONE, ID",10 or fewer,41
+,"WILSON, KS",10 or fewer,33
+,"RUSSELL, KS",10 or fewer,25
+,"BOUNDARY, ID",10 or fewer,34
+,"LEWIS, ID",10 or fewer,48
+,"ELLSWORTH, KS",10 or fewer,14
+,"BUTTE, ID",10 or fewer,26
+,"CHATTAHOOCHEE, GA",10 or fewer,24
+,"CLOUD, KS",10 or fewer,32
+,"GLASCOCK, GA",10 or fewer,10 or fewer
+,"SCHLEY, GA",10 or fewer,18
+,"DECATUR, KS",10 or fewer,29
+,"MARION, KS",10 or fewer,23
+,"SHERIDAN, KS",10 or fewer,13
+,"WHEELER, GA",10 or fewer,16
+,"PRATT, KS",10 or fewer,18
+,"MORTON, KS",10 or fewer,17
+,"NORTON, KS",10 or fewer,23
+,"EDWARDS, KS",10 or fewer,10 or fewer
+,"PHILLIPS, KS",10 or fewer,18
+,"REPUBLIC, KS",10 or fewer,22
+,"GRANT, KS",10 or fewer,21
+,"SMITH, KS",10 or fewer,23
+,"OTTAWA, KS",10 or fewer,15
+,"STEWART, GA",10 or fewer,18
+,"CHEYENNE, KS",10 or fewer,17
+,"GOVE, KS",10 or fewer,17
+,"CHASE, KS",10 or fewer,21
+,"SCOTT, KS",10 or fewer,11
+,"ROOKS, KS",10 or fewer,13
+,"KINGMAN, KS",10 or fewer,15
+,"STEVENS, KS",10 or fewer,10 or fewer
+,"MITCHELL, KS",10 or fewer,18
+,"JEWELL, KS",10 or fewer,14
+,"GRAY, KS",10 or fewer,12
+,"NESS, KS",10 or fewer,10 or fewer
+,"CHAUTAUQUA, KS",10 or fewer,16
+,"WALLACE, KS",10 or fewer,11
+,"HARPER, KS",10 or fewer,10 or fewer
+,"BARBER, KS",10 or fewer,10 or fewer
+,"MEADE, KS",10 or fewer,10 or fewer
+,"LINCOLN, KS",10 or fewer,10 or fewer
+,"KEARNY, KS",10 or fewer,10 or fewer
+,"WEBSTER, GA",10 or fewer,10 or fewer
+,"HAMILTON, KS",10 or fewer,11
+,"ELK, KS",10 or fewer,10 or fewer
+,"OSBORNE, KS",10 or fewer,10 or fewer
+,"TREGO, KS",10 or fewer,10 or fewer
+,"HASKELL, KS",10 or fewer,10 or fewer
+,"GREELEY, KS",10 or fewer,10 or fewer
+,"GRAHAM, KS",10 or fewer,10 or fewer
+,"WICHITA, KS",10 or fewer,10 or fewer
+,"STANTON, KS",10 or fewer,10 or fewer
+,"LANE, KS",10 or fewer,10 or fewer
+,"KIOWA, KS",10 or fewer,10 or fewer
+,"HODGEMAN, KS",10 or fewer,10 or fewer
+,"CLARK, KS",10 or fewer,10 or fewer
+,"COMANCHE, KS",10 or fewer,10 or fewer
+,"CLARK, ID",10 or fewer,10 or fewer
+,"KALAWAO, HI",10 or fewer,10 or fewer
+,None of the above,91,122640
+,Total,3259,3176603
+Jan 1 – Dec 31 2019,"COOK, IL",87,194348
+,"BROWARD, FL",99,176504
+,"ORANGE, FL",15,26152
+,"LEE, FL",194,132673
+,"FULTON, GA",152,136503
+,"DUVAL, FL",71,59054
+,"HONOLULU, HI",74,129457
+,"HILLSBOROUGH, FL",41,60552
+,"MIAMI-DADE, FL",39,100645
+,"MARION, IN",92,123086
+,"COBB, GA",115,106415
+,"DEKALB, GA",54,59672
+,"ADA, ID",42,49100
+,"VOLUSIA, FL",10 or fewer,6131
+,"LAKE, FL",10 or fewer,5021
+,"OSCEOLA, FL",10 or fewer,16382
+,"POLK, IA",65,49146
+,"POLK, FL",11,10417
+,"LAKE, IN",31,55186
+,"GWINNETT, GA",23,34286
+,"SEMINOLE, FL",10 or fewer,5642
+,"WINNEBAGO, IL",44,62406
+,"ALLEN, IN",30,46077
+,"LAKE, IL",12,20018
+,"JOHNSON, KS",36,29464
+,"DUPAGE, IL",10 or fewer,15991
+,"MARION, FL",10 or fewer,9069
+,"LINN, IA",60,42853
+,"ALACHUA, FL",29,39696
+,"KANE, IL",12,14084
+,"PINELLAS, FL",12,7234
+,"HALL, GA",33,39754
+,"PASCO, FL",10 or fewer,6650
+,"CANYON, ID",31,23185
+,"PEORIA, IL",62,38853
+,"CHAMPAIGN, IL",41,35505
+,"SHAWNEE, KS",65,37946
+,"DOUGLAS, GA",40,34791
+,"PAULDING, GA",46,33468
+,"COLLIER, FL",10 or fewer,6229
+,"SAINT LUCIE, FL",10 or fewer,4245
+,"PALM BEACH, FL",10 or fewer,10377
+,"VANDERBURGH, IN",40,27480
+,"LOWNDES, GA",52,26562
+,"WYANDOTTE, KS",16,20961
+,"MCLEAN, IL",15,16449
+,"ROCK ISLAND, IL",37,27431
+,"SAINT CLAIR, IL",13,20194
+,"WILL, IL",11,10072
+,"CLAYTON, GA",11,20861
+,"TAZEWELL, IL",33,24031
+,"SAINT JOHNS, FL",10 or fewer,2974
+,"MCHENRY, IL",10 or fewer,8734
+,"CLARK, IN",14,12109
+,"CHEROKEE, GA",21,16466
+,"SANGAMON, IL",32,22412
+,"CLAY, FL",11,3806
+,"SUMTER, FL",10 or fewer,2247
+,"JOHNSON, IA",17,12832
+,"FLAGLER, FL",10 or fewer,1411
+,"HENRY, GA",14,13669
+,"ST JOSEPH, IN",10 or fewer,2151
+,"MADISON, IL",27,16172
+,"HAWAII, HI",10 or fewer,9556
+,"LA SALLE, IL",26,16099
+,"SCOTT, IA",22,16049
+,"VERMILION, IL",36,22016
+,"MARTIN, FL",10 or fewer,1611
+,"TWIN FALLS, ID",20,15570
+,"BREVARD, FL",10 or fewer,5503
+,"TROUP, GA",45,20805
+,"NASSAU, FL",11,6201
+,"INDIAN RIVER, FL",10 or fewer,1631
+,"BLACK HAWK, IA",10 or fewer,12870
+,"JOHNSON, IN",14,13018
+,"BIBB, GA",10 or fewer,1547
+,"BARROW, GA",15,13458
+,"WOODBURY, IA",20,13648
+,"KENDALL, IL",10 or fewer,9044
+,"BARTHOLOMEW, IN",10 or fewer,9173
+,"FLOYD, GA",10 or fewer,1610
+,"SPALDING, GA",32,16958
+,"MADISON, IN",10 or fewer,2540
+,"MACON, IL",28,16775
+,"HIGHLANDS, FL",10 or fewer,1698
+,"FLOYD, IN",17,9851
+,"BANNOCK, ID",10 or fewer,7631
+,"HAMILTON, IN",10 or fewer,8727
+,"DUBUQUE, IA",23,11039
+,"CITRUS, FL",10 or fewer,2396
+,"JACKSON, GA",10 or fewer,9359
+,"KAUAI, HI",10 or fewer,11957
+,"WHITFIELD, GA",10 or fewer,2519
+,"HOWARD, IN",10 or fewer,11353
+,"HERNANDO, FL",10 or fewer,2137
+,"FORSYTH, GA",10 or fewer,6005
+,"LEON, FL",10 or fewer,1400
+,"PORTER, IN",10 or fewer,8065
+,"KNOX, IL",10 or fewer,9898
+,"BOONE, IL",10 or fewer,10007
+,"BARTOW, GA",10 or fewer,5166
+,"WAYNE, IN",10 or fewer,1301
+,"DEARBORN, IN",10 or fewer,5550
+,"POLK, GA",10 or fewer,2701
+,"WARRICK, IN",12,7686
+,"HOUSTON, GA",10 or fewer,1041
+,"DALLAS, IA",10 or fewer,5575
+,"KNOX, IN",21,9933
+,"LEAVENWORTH, KS",16,8619
+,"NOBLE, IN",10 or fewer,7854
+,"CARROLL, GA",15,6657
+,"GORDON, GA",10 or fewer,1176
+,"KOSCIUSKO, IN",10 or fewer,6626
+,"HABERSHAM, GA",10 or fewer,4531
+,"MUSCATINE, IA",10 or fewer,8121
+,"CLARKE, GA",10 or fewer,1556
+,"WALKER, GA",10 or fewer,5902
+,"MARSHALL, IA",10 or fewer,7087
+,"LEVY, FL",10 or fewer,6066
+,"RICHMOND, GA",10 or fewer,1244
+,"ELMORE, ID",10 or fewer,7070
+,"NEWTON, GA",10 or fewer,4481
+,"CHARLOTTE, FL",10 or fewer,3810
+,"WEBSTER, IA",12,6904
+,"HENRY, IL",16,6975
+,"COWETA, GA",10 or fewer,4323
+,"CATOOSA, GA",10 or fewer,5541
+,"HUNTINGTON, IN",10 or fewer,6104
+,"HANCOCK, IN",10 or fewer,4807
+,"LIVINGSTON, IL",16,6483
+,"BALDWIN, GA",10 or fewer,283
+,"PUTNAM, FL",10 or fewer,2837
+,"EFFINGHAM, IL",15,4340
+,"WOODFORD, IL",10 or fewer,3987
+,"WALTON, GA",10 or fewer,3625
+,"WHITLEY, IN",10 or fewer,5641
+,"BUTTS, GA",13,6290
+,"GIBSON, IN",10 or fewer,3495
+,"ROCKDALE, GA",10 or fewer,3849
+,"LUMPKIN, GA",10 or fewer,5080
+,"SARASOTA, FL",10 or fewer,2987
+,"WABASH, IN",10 or fewer,5389
+,"MANATEE, FL",10 or fewer,2628
+,"COLUMBIA, FL",10 or fewer,3498
+,"CLINTON, IL",10 or fewer,3901
+,"MURRAY, GA",10 or fewer,842
+,"MARSHALL, IN",10 or fewer,459
+,"WHITE, GA",10 or fewer,4696
+,"WARREN, IA",10 or fewer,4025
+,"FAYETTE, GA",10 or fewer,3462
+,"ELKHART, IN",10 or fewer,1458
+,"LAGRANGE, IN",10 or fewer,4436
+,"PAYETTE, ID",10 or fewer,3977
+,"HARRISON, IN",10 or fewer,3028
+,"JEROME, ID",10 or fewer,4336
+,"HENDRY, FL",12,3768
+,"BUREAU, IL",10 or fewer,1199
+,"PEACH, GA",10 or fewer,210
+,"BLAINE, ID",10 or fewer,3338
+,"CHATTOOGA, GA",10 or fewer,660
+,"OGLE, IL",10 or fewer,3875
+,"MACOUPIN, IL",10 or fewer,3412
+,"CAMDEN, GA",10 or fewer,1841
+,"FRANKLIN, GA",10 or fewer,1151
+,"GEARY, KS",10 or fewer,498
+,"DAWSON, GA",10 or fewer,2640
+,"BERRIEN, GA",12,4491
+,"FAYETTE, IN",10 or fewer,508
+,"HENDRICKS, IN",10 or fewer,2898
+,"POSEY, IN",10 or fewer,3251
+,"HART, GA",10 or fewer,1365
+,"HARDEE, FL",10 or fewer,230
+,"MONTGOMERY, IL",10 or fewer,2816
+,"DEKALB, IL",10 or fewer,2220
+,"BARTON, KS",10 or fewer,104
+,"BANKS, GA",10 or fewer,2531
+,"COLUMBIA, GA",10 or fewer,929
+,"POTTAWATTAMIE, IA",10 or fewer,2793
+,"MAUI, HI",10 or fewer,3608
+,"WARREN, IL",13,3579
+,"CLINTON, IA",10 or fewer,1445
+,"BENTON, IA",10 or fewer,2715
+,"STEPHENS, GA",10 or fewer,1705
+,"SUWANNEE, FL",10 or fewer,2094
+,"GREENE, GA",10 or fewer,271
+,"JASPER, IA",10 or fewer,1740
+,"DELAWARE, IN",10 or fewer,748
+,"RICHLAND, IL",10 or fewer,683
+,"JONES, IA",10 or fewer,2766
+,"SCOTT, IN",10 or fewer,979
+,"FRANKLIN, KS",10 or fewer,566
+,"POWESHIEK, IA",10 or fewer,1517
+,"MUSCOGEE, GA",10 or fewer,1671
+,"ESCAMBIA, FL",10 or fewer,1408
+,"MAHASKA, IA",10 or fewer,416
+,"BRADFORD, FL",10 or fewer,2044
+,"BOND, IL",10 or fewer,1299
+,"STEUBEN, IN",10 or fewer,1766
+,"WASHINGTON, IN",10 or fewer,1557
+,"DOUGLAS, KS",10 or fewer,1597
+,"SIOUX, IA",10 or fewer,2192
+,"LAMAR, GA",10 or fewer,2522
+,"SHELBY, IL",10 or fewer,1205
+,"OSAGE, KS",10 or fewer,2451
+,"RIPLEY, IN",10 or fewer,1362
+,"JEFFERSON, IN",10 or fewer,790
+,"TAMA, IA",10 or fewer,2219
+,"DOUGLAS, IL",10 or fewer,2434
+,"CHATHAM, GA",10 or fewer,1273
+,"BAKER, FL",10 or fewer,595
+,"MORGAN, IN",10 or fewer,2054
+,"MIAMI, IN",10 or fewer,1686
+,"SEDGWICK, KS",10 or fewer,1243
+,"FULTON, IL",10 or fewer,1982
+,"COOK, GA",10 or fewer,1943
+,"PUTNAM, GA",10 or fewer,223
+,"PIKE, GA",10 or fewer,2349
+,"MIAMI, KS",10 or fewer,895
+,"LANIER, GA",12,2735
+,"MERIWETHER, GA",10 or fewer,2152
+,"FRANKLIN, IN",10 or fewer,1900
+,"FAYETTE, IA",10 or fewer,1795
+,"OBRIEN, IA",10 or fewer,1821
+,"OKALOOSA, FL",10 or fewer,1113
+,"HARALSON, GA",10 or fewer,1517
+,"CEDAR, IA",10 or fewer,1602
+,"CHRISTIAN, IL",10 or fewer,1595
+,"GILCHRIST, FL",10 or fewer,1799
+,"CERRO GORDO, IA",10 or fewer,414
+,"MASSAC, IL",10 or fewer,2148
+,"MARSHALL, IL",10 or fewer,1706
+,"MERCER, IL",10 or fewer,2089
+,"VALLEY, ID",10 or fewer,1770
+,"LATAH, ID",10 or fewer,259
+,"MINIDOKA, ID",10 or fewer,564
+,"COLES, IL",10 or fewer,1574
+,"WASHINGTON, IA",10 or fewer,1379
+,"LAWRENCE, IL",10 or fewer,1807
+,"JENNINGS, IN",10 or fewer,1034
+,"DIXIE, FL",10 or fewer,1549
+,"MADISON, GA",10 or fewer,555
+,"JACKSON, FL",10 or fewer,175
+,"GRANT, IN",10 or fewer,1118
+,"GEM, ID",10 or fewer,1148
+,"JACKSON, IN",10 or fewer,801
+,"STORY, IA",10 or fewer,1423
+,"BAY, FL",10 or fewer,896
+,"JEFFERSON, KS",10 or fewer,1716
+,"GOODING, ID",10 or fewer,1572
+,"DAVIESS, IN",10 or fewer,1501
+,"BREMER, IA",10 or fewer,1284
+,"BROOKS, GA",10 or fewer,1520
+,"SPENCER, IN",10 or fewer,1435
+,"RABUN, GA",10 or fewer,1067
+,"STEPHENSON, IL",10 or fewer,1414
+,"FAYETTE, IL",10 or fewer,986
+,"PIATT, IL",10 or fewer,1594
+,"UNION, FL",10 or fewer,1305
+,"OCONEE, GA",10 or fewer,438
+,"LA PORTE, IN",10 or fewer,868
+,"PLYMOUTH, IA",10 or fewer,1371
+,"IROQUOIS, IL",10 or fewer,1507
+,"SANTA ROSA, FL",10 or fewer,862
+,"DADE, GA",10 or fewer,1586
+,"LOGAN, IL",10 or fewer,1221
+,"GADSDEN, FL",10 or fewer,186
+,"OWYHEE, ID",10 or fewer,1116
+,"MONROE, GA",10 or fewer,706
+,"BINGHAM, ID",10 or fewer,928
+,"IOWA, IA",10 or fewer,1168
+,"PICKENS, GA",10 or fewer,952
+,"BUCHANAN, IA",10 or fewer,1076
+,"CASSIA, ID",10 or fewer,577
+,"WAPELLO, IA",10 or fewer,670
+,"KANKAKEE, IL",10 or fewer,768
+,"WHITESIDE, IL",10 or fewer,854
+,"ANDERSON, KS",10 or fewer,1406
+,"FORD, IL",10 or fewer,1472
+,"MADISON, FL",10 or fewer,782
+,"CRAWFORD, IL",10 or fewer,1041
+,"WELLS, IN",10 or fewer,912
+,"LEE, IL",10 or fewer,997
+,"MONROE, FL",10 or fewer,696
+,"GLYNN, GA",10 or fewer,495
+,"JONES, GA",10 or fewer,109
+,"DUBOIS, IN",10 or fewer,575
+,"ALLEN, KS",10 or fewer,211
+,"GILMER, GA",10 or fewer,769
+,"MASON, IL",10 or fewer,1318
+,"JACKSON, IA",10 or fewer,1019
+,"DEKALB, IN",10 or fewer,662
+,"DES MOINES, IA",10 or fewer,858
+,"HARRIS, GA",10 or fewer,1210
+,"JACKSON, KS",10 or fewer,1129
+,"JASPER, IL",10 or fewer,696
+,"UNION, IN",10 or fewer,893
+,"PIKE, IN",10 or fewer,945
+,"SHELBY, IN",10 or fewer,931
+,"OKEECHOBEE, FL",10 or fewer,319
+,"BOONE, IN",10 or fewer,865
+,"MOULTRIE, IL",10 or fewer,1276
+,"UPSON, GA",10 or fewer,915
+,"LOUISA, IA",10 or fewer,1126
+,"RANDOLPH, IN",10 or fewer,205
+,"HAMILTON, FL",10 or fewer,799
+,"WAKULLA, FL",10 or fewer,167
+,"ELBERT, GA",10 or fewer,392
+,"TIPPECANOE, IN",10 or fewer,646
+,"GRUNDY, IL",10 or fewer,662
+,"BONNEVILLE, ID",10 or fewer,599
+,"MARION, IA",10 or fewer,779
+,"JO DAVIESS, IL",10 or fewer,806
+,"HENRY, IN",10 or fewer,404
+,"ADAMS, IN",10 or fewer,677
+,"HEARD, GA",10 or fewer,1152
+,"WHITE, IL",10 or fewer,905
+,"RILEY, KS",10 or fewer,620
+,"BROWN, IN",10 or fewer,627
+,"UNION, GA",10 or fewer,668
+,"MADISON, IA",10 or fewer,770
+,"DECATUR, IN",10 or fewer,529
+,"WILKINSON, GA",10 or fewer,44
+,"FANNIN, GA",10 or fewer,707
+,"CASS, IN",10 or fewer,776
+,"CLAY, IL",10 or fewer,523
+,"STARKE, IN",10 or fewer,230
+,"HANCOCK, GA",10 or fewer,69
+,"SWITZERLAND, IN",10 or fewer,422
+,"STARK, IL",10 or fewer,1106
+,"WASHINGTON, ID",10 or fewer,642
+,"MORGAN, IL",10 or fewer,757
+,"LEE, IA",10 or fewer,711
+,"MONROE, IN",10 or fewer,627
+,"KOOTENAI, ID",10 or fewer,636
+,"MORGAN, GA",10 or fewer,329
+,"ALLAMAKEE, IA",10 or fewer,784
+,"HENRY, IA",10 or fewer,730
+,"OHIO, IN",10 or fewer,380
+,"JERSEY, IL",10 or fewer,833
+,"DOUGHERTY, GA",10 or fewer,430
+,"BUTLER, IA",10 or fewer,669
+,"CHARLTON, GA",10 or fewer,430
+,"LYON, IA",10 or fewer,779
+,"BOISE, ID",10 or fewer,565
+,"DELAWARE, IA",10 or fewer,615
+,"LINN, KS",10 or fewer,476
+,"MCDONOUGH, IL",10 or fewer,643
+,"CALHOUN, IA",10 or fewer,713
+,"GRUNDY, IA",10 or fewer,641
+,"CRAWFORD, IN",10 or fewer,532
+,"JASPER, IN",10 or fewer,587
+,"MENARD, IL",10 or fewer,770
+,"JASPER, GA",10 or fewer,461
+,"ALEXANDER, IL",10 or fewer,861
+,"KEOKUK, IA",10 or fewer,448
+,"DESOTO, FL",10 or fewer,342
+,"BOONE, IA",10 or fewer,593
+,"FULTON, IN",10 or fewer,343
+,"OGLETHORPE, GA",10 or fewer,146
+,"TAYLOR, FL",10 or fewer,352
+,"CLAYTON, IA",10 or fewer,504
+,"ADAMS, ID",10 or fewer,691
+,"CUMBERLAND, IL",10 or fewer,519
+,"WABASH, IL",10 or fewer,482
+,"UNION, IL",10 or fewer,577
+,"POTTAWATOMIE, KS",10 or fewer,473
+,"WILLIAMSON, IL",10 or fewer,516
+,"WALTON, FL",10 or fewer,351
+,"MILLS, IA",10 or fewer,547
+,"POWER, ID",10 or fewer,377
+,"VIGO, IN",10 or fewer,465
+,"LINCOLN, ID",10 or fewer,665
+,"TIFT, GA",10 or fewer,370
+,"LIBERTY, GA",10 or fewer,380
+,"COLQUITT, GA",10 or fewer,357
+,"GUTHRIE, IA",10 or fewer,520
+,"HOLMES, FL",10 or fewer,66
+,"LYON, KS",10 or fewer,460
+,"RANDOLPH, IL",10 or fewer,461
+,"EDGAR, IL",10 or fewer,579
+,"PERRY, IN",10 or fewer,450
+,"PULASKI, IL",10 or fewer,637
+,"JOHNSON, IL",10 or fewer,624
+,"SALINE, IL",10 or fewer,444
+,"MARION, IL",10 or fewer,414
+,"APPANOOSE, IA",10 or fewer,197
+,"TIPTON, IN",10 or fewer,543
+,"PUTNAM, IL",10 or fewer,184
+,"CLINCH, GA",10 or fewer,464
+,"LAURENS, GA",10 or fewer,201
+,"TAYLOR, GA",10 or fewer,54
+,"HENDERSON, IL",10 or fewer,683
+,"EARLY, GA",10 or fewer,33
+,"WABAUNSEE, KS",10 or fewer,621
+,"HUMBOLDT, IA",10 or fewer,578
+,"CARROLL, IL",10 or fewer,330
+,"THOMAS, GA",10 or fewer,305
+,"JACKSON, IL",10 or fewer,485
+,"CASS, IL",10 or fewer,508
+,"TOWNS, GA",10 or fewer,409
+,"CHICKASAW, IA",10 or fewer,300
+,"FOUNTAIN, IN",10 or fewer,575
+,"CRAWFORD, GA",10 or fewer,64
+,"THOMAS, KS",10 or fewer,59
+,"WARE, GA",10 or fewer,257
+,"COFFEE, GA",10 or fewer,267
+,"GLADES, FL",10 or fewer,365
+,"WRIGHT, IA",10 or fewer,460
+,"JEFFERSON, IA",10 or fewer,413
+,"ATCHISON, KS",10 or fewer,376
+,"ECHOLS, GA",10 or fewer,544
+,"HAMILTON, IA",10 or fewer,414
+,"JEFFERSON, FL",10 or fewer,83
+,"WASHINGTON, IL",10 or fewer,367
+,"HARDIN, IA",10 or fewer,411
+,"DONIPHAN, KS",10 or fewer,89
+,"CLARKE, IA",10 or fewer,425
+,"WINNESHIEK, IA",10 or fewer,368
+,"DICKINSON, KS",10 or fewer,123
+,"WASHINGTON, GA",10 or fewer,75
+,"MACON, GA",10 or fewer,58
+,"DECATUR, GA",10 or fewer,91
+,"MONROE, IL",10 or fewer,326
+,"EDWARDS, IL",10 or fewer,282
+,"BURKE, GA",10 or fewer,77
+,"BULLOCH, GA",10 or fewer,206
+,"EFFINGHAM, GA",10 or fewer,216
+,"OSCEOLA, IA",10 or fewer,403
+,"WAYNE, IL",10 or fewer,249
+,"FRANKLIN, IL",10 or fewer,292
+,"GREENE, IN",10 or fewer,289
+,"UNION, IA",10 or fewer,307
+,"ORANGE, IN",10 or fewer,254
+,"ADAMS, IL",10 or fewer,268
+,"BOURBON, KS",10 or fewer,203
+,"CHEROKEE, IA",10 or fewer,318
+,"WASHINGTON, FL",10 or fewer,91
+,"BRYAN, GA",10 or fewer,197
+,"CARROLL, IN",10 or fewer,225
+,"LAFAYETTE, FL",10 or fewer,284
+,"WINNEBAGO, IA",10 or fewer,119
+,"PUTNAM, IN",10 or fewer,303
+,"COFFEY, KS",10 or fewer,212
+,"LUCAS, IA",10 or fewer,296
+,"LAWRENCE, IN",10 or fewer,216
+,"JEFFERSON, IL",10 or fewer,219
+,"BUENA VISTA, IA",10 or fewer,258
+,"IDAHO, ID",10 or fewer,317
+,"PAGE, IA",10 or fewer,253
+,"SULLIVAN, IN",10 or fewer,291
+,"FLOYD, IA",10 or fewer,193
+,"MCDUFFIE, GA",10 or fewer,103
+,"TWIGGS, GA",10 or fewer,34
+,"GREENE, IL",10 or fewer,234
+,"SEMINOLE, GA",10 or fewer,26
+,"RUSH, IN",10 or fewer,220
+,"CLARK, IL",10 or fewer,213
+,"CLINTON, IN",10 or fewer,254
+,"CASS, IA",10 or fewer,248
+,"BRANTLEY, GA",10 or fewer,131
+,"MONTGOMERY, KS",10 or fewer,188
+,"MONONA, IA",10 or fewer,282
+,"CARROLL, IA",10 or fewer,235
+,"GREENE, IA",10 or fewer,267
+,"JEFFERSON, GA",10 or fewer,63
+,"VERMILLION, IN",10 or fewer,315
+,"POCAHONTAS, IA",10 or fewer,258
+,"GALLATIN, IL",10 or fewer,248
+,"SUMTER, GA",10 or fewer,123
+,"SALINE, KS",10 or fewer,191
+,"HARRISON, IA",10 or fewer,249
+,"DODGE, GA",10 or fewer,76
+,"POPE, IL",10 or fewer,269
+,"GRADY, GA",10 or fewer,98
+,"MONTGOMERY, IN",10 or fewer,201
+,"CARIBOU, ID",10 or fewer,110
+,"BEN HILL, GA",10 or fewer,88
+,"ADAIR, IA",10 or fewer,232
+,"BROWN, KS",10 or fewer,197
+,"ATKINSON, GA",10 or fewer,183
+,"CLAY, GA",10 or fewer,12
+,"DECATUR, IA",10 or fewer,222
+,"DICKINSON, IA",10 or fewer,223
+,"NEZ PERCE, ID",10 or fewer,148
+,"CRISP, GA",10 or fewer,97
+,"HANCOCK, IL",10 or fewer,215
+,"KOSSUTH, IA",10 or fewer,169
+,"BUTLER, KS",10 or fewer,175
+,"MARTIN, IN",10 or fewer,164
+,"CRAWFORD, KS",10 or fewer,172
+,"BLECKLEY, GA",10 or fewer,57
+,"JAY, IN",10 or fewer,125
+,"LEE, GA",10 or fewer,127
+,"PIERCE, GA",10 or fewer,107
+,"EMANUEL, GA",10 or fewer,72
+,"RENO, KS",10 or fewer,173
+,"NEWTON, IN",10 or fewer,191
+,"CRAWFORD, IA",10 or fewer,160
+,"BONNER, ID",10 or fewer,171
+,"WAYNE, GA",10 or fewer,118
+,"PAWNEE, KS",10 or fewer,30
+,"MADISON, ID",10 or fewer,130
+,"TOOMBS, GA",10 or fewer,119
+,"BLACKFORD, IN",10 or fewer,142
+,"VAN BUREN, IA",10 or fewer,188
+,"PULASKI, GA",10 or fewer,54
+,"CLAY, IA",10 or fewer,185
+,"WORTH, IA",10 or fewer,50
+,"WILKES, GA",10 or fewer,58
+,"MONTGOMERY, IA",10 or fewer,164
+,"FREMONT, IA",10 or fewer,183
+,"MONROE, IA",10 or fewer,114
+,"MARSHALL, KS",10 or fewer,149
+,"NEMAHA, KS",10 or fewer,158
+,"SAC, IA",10 or fewer,141
+,"JEFFERSON, ID",10 or fewer,115
+,"SHELBY, IA",10 or fewer,150
+,"HANCOCK, IA",10 or fewer,84
+,"WARREN, IN",10 or fewer,187
+,"FRANKLIN, IA",10 or fewer,108
+,"PERRY, IL",10 or fewer,117
+,"PIKE, IL",10 or fewer,134
+,"CALHOUN, FL",10 or fewer,48
+,"PULASKI, IN",10 or fewer,99
+,"HOWARD, IA",10 or fewer,128
+,"CLAY, IN",10 or fewer,113
+,"OWEN, IN",10 or fewer,151
+,"DAVIS, IA",10 or fewer,113
+,"FRANKLIN, FL",10 or fewer,61
+,"MITCHELL, GA",10 or fewer,89
+,"FRANKLIN, ID",10 or fewer,61
+,"NEOSHO, KS",10 or fewer,115
+,"IDA, IA",10 or fewer,148
+,"DOOLY, GA",10 or fewer,52
+,"WORTH, GA",10 or fewer,73
+,"STAFFORD, KS",10 or fewer,21
+,"TAYLOR, IA",10 or fewer,118
+,"SCHUYLER, IL",10 or fewer,127
+,"FINNEY, KS",10 or fewer,80
+,"HAMILTON, IL",10 or fewer,127
+,"ONEIDA, ID",10 or fewer,66
+,"WHITE, IN",10 or fewer,123
+,"APPLING, GA",10 or fewer,53
+,"CUSTER, ID",10 or fewer,128
+,"BENTON, IN",10 or fewer,130
+,"BEAR LAKE, ID",10 or fewer,65
+,"LIBERTY, FL",10 or fewer,18
+,"ELLIS, KS",10 or fewer,90
+,"LONG, GA",10 or fewer,76
+,"HARVEY, KS",10 or fewer,89
+,"GULF, FL",10 or fewer,83
+,"WAYNE, IA",10 or fewer,114
+,"MCINTOSH, GA",10 or fewer,76
+,"LINCOLN, GA",10 or fewer,37
+,"COWLEY, KS",10 or fewer,80
+,"TATTNALL, GA",10 or fewer,70
+,"HARDIN, IL",10 or fewer,81
+,"LABETTE, KS",10 or fewer,89
+,"MORRIS, KS",10 or fewer,64
+,"TALBOT, GA",10 or fewer,100
+,"WOODSON, KS",10 or fewer,33
+,"MCPHERSON, KS",10 or fewer,80
+,"MILLER, GA",10 or fewer,11
+,"WILCOX, GA",10 or fewer,33
+,"IRWIN, GA",10 or fewer,54
+,"TELFAIR, GA",10 or fewer,38
+,"CLAY, KS",10 or fewer,70
+,"RICE, KS",10 or fewer,34
+,"FORD, KS",10 or fewer,72
+,"SCREVEN, GA",10 or fewer,46
+,"JEFF DAVIS, GA",10 or fewer,51
+,"SHERMAN, KS",10 or fewer,59
+,"CAMAS, ID",10 or fewer,102
+,"SEWARD, KS",10 or fewer,49
+,"TURNER, GA",10 or fewer,67
+,"CALHOUN, IL",10 or fewer,91
+,"EMMET, IA",10 or fewer,102
+,"MITCHELL, IA",10 or fewer,49
+,"PARKE, IN",10 or fewer,93
+,"RINGGOLD, IA",10 or fewer,97
+,"FREMONT, ID",10 or fewer,73
+,"CALHOUN, GA",10 or fewer,20
+,"CHEROKEE, KS",10 or fewer,81
+,"BACON, GA",10 or fewer,39
+,"PALO ALTO, IA",10 or fewer,74
+,"TETON, ID",10 or fewer,59
+,"LEMHI, ID",10 or fewer,76
+,"JENKINS, GA",10 or fewer,23
+,"AUDUBON, IA",10 or fewer,62
+,"JOHNSON, GA",10 or fewer,40
+,"BENEWAH, ID",10 or fewer,33
+,"SCOTT, IL",10 or fewer,66
+,"RUSH, KS",10 or fewer,11
+,"TALIAFERRO, GA",10 or fewer,11
+,"MARION, GA",10 or fewer,34
+,"BROWN, IL",10 or fewer,66
+,"WARREN, GA",10 or fewer,23
+,"CLEARWATER, ID",10 or fewer,50
+,"LOGAN, KS",10 or fewer,11
+,"CANDLER, GA",10 or fewer,40
+,"EVANS, GA",10 or fewer,30
+,"RANDOLPH, GA",10 or fewer,29
+,"WASHINGTON, KS",10 or fewer,46
+,"ADAMS, IA",10 or fewer,46
+,"BAKER, GA",10 or fewer,13
+,"SUMNER, KS",10 or fewer,44
+,"MONTGOMERY, GA",10 or fewer,19
+,"TERRELL, GA",10 or fewer,30
+,"RAWLINS, KS",10 or fewer,34
+,"GREENWOOD, KS",10 or fewer,43
+,"QUITMAN, GA",10 or fewer,14
+,"TREUTLEN, GA",10 or fewer,23
+,"SHOSHONE, ID",10 or fewer,48
+,"WILSON, KS",10 or fewer,44
+,"RUSSELL, KS",10 or fewer,33
+,"BOUNDARY, ID",10 or fewer,36
+,"LEWIS, ID",10 or fewer,42
+,"ELLSWORTH, KS",10 or fewer,10 or fewer
+,"BUTTE, ID",10 or fewer,45
+,"CHATTAHOOCHEE, GA",10 or fewer,29
+,"CLOUD, KS",10 or fewer,35
+,"GLASCOCK, GA",10 or fewer,11
+,"SCHLEY, GA",10 or fewer,10 or fewer
+,"DECATUR, KS",10 or fewer,23
+,"MARION, KS",10 or fewer,27
+,"SHERIDAN, KS",10 or fewer,10 or fewer
+,"WHEELER, GA",10 or fewer,18
+,"PRATT, KS",10 or fewer,23
+,"MORTON, KS",10 or fewer,26
+,"NORTON, KS",10 or fewer,24
+,"EDWARDS, KS",10 or fewer,10 or fewer
+,"PHILLIPS, KS",10 or fewer,25
+,"REPUBLIC, KS",10 or fewer,25
+,"GRANT, KS",10 or fewer,26
+,"SMITH, KS",10 or fewer,36
+,"OTTAWA, KS",10 or fewer,22
+,"STEWART, GA",10 or fewer,24
+,"CHEYENNE, KS",10 or fewer,18
+,"GOVE, KS",10 or fewer,14
+,"CHASE, KS",10 or fewer,23
+,"SCOTT, KS",10 or fewer,14
+,"ROOKS, KS",10 or fewer,13
+,"KINGMAN, KS",10 or fewer,20
+,"STEVENS, KS",10 or fewer,14
+,"MITCHELL, KS",10 or fewer,26
+,"JEWELL, KS",10 or fewer,17
+,"GRAY, KS",10 or fewer,15
+,"NESS, KS",10 or fewer,10 or fewer
+,"CHAUTAUQUA, KS",10 or fewer,14
+,"WALLACE, KS",10 or fewer,10 or fewer
+,"HARPER, KS",10 or fewer,13
+,"BARBER, KS",10 or fewer,12
+,"MEADE, KS",10 or fewer,10 or fewer
+,"LINCOLN, KS",10 or fewer,10 or fewer
+,"KEARNY, KS",10 or fewer,15
+,"WEBSTER, GA",10 or fewer,10 or fewer
+,"HAMILTON, KS",10 or fewer,10 or fewer
+,"ELK, KS",10 or fewer,10 or fewer
+,"OSBORNE, KS",10 or fewer,10 or fewer
+,"TREGO, KS",10 or fewer,10 or fewer
+,"HASKELL, KS",10 or fewer,10 or fewer
+,"GREELEY, KS",10 or fewer,10 or fewer
+,"GRAHAM, KS",10 or fewer,10 or fewer
+,"WICHITA, KS",10 or fewer,10 or fewer
+,"STANTON, KS",10 or fewer,10 or fewer
+,"LANE, KS",10 or fewer,10 or fewer
+,"KIOWA, KS",10 or fewer,10 or fewer
+,"HODGEMAN, KS",10 or fewer,10 or fewer
+,"CLARK, KS",10 or fewer,10 or fewer
+,"COMANCHE, KS",10 or fewer,10 or fewer
+,"CLARK, ID",10 or fewer,10 or fewer
+,"KALAWAO, HI",10 or fewer,10 or fewer
+,None of the above,116,133448
+,Total,3525,3416373
+Jan 1 – Dec 31 2020,"COOK, IL",82,261004
+,"BROWARD, FL",68,145751
+,"ORANGE, FL",14,18484
+,"LEE, FL",153,116499
+,"FULTON, GA",63,108774
+,"DUVAL, FL",49,50562
+,"HONOLULU, HI",32,101682
+,"HILLSBOROUGH, FL",45,55789
+,"MIAMI-DADE, FL",27,83238
+,"MARION, IN",51,106607
+,"COBB, GA",72,85857
+,"DEKALB, GA",24,44458
+,"ADA, ID",27,45196
+,"VOLUSIA, FL",10 or fewer,4407
+,"LAKE, FL",10 or fewer,3928
+,"OSCEOLA, FL",10 or fewer,11907
+,"POLK, IA",49,41113
+,"POLK, FL",10 or fewer,8296
+,"LAKE, IN",22,46180
+,"GWINNETT, GA",10 or fewer,26574
+,"SEMINOLE, FL",10 or fewer,3612
+,"WINNEBAGO, IL",45,55171
+,"ALLEN, IN",25,41811
+,"LAKE, IL",18,37613
+,"JOHNSON, KS",24,26104
+,"DUPAGE, IL",14,27710
+,"MARION, FL",10 or fewer,7776
+,"LINN, IA",81,39068
+,"ALACHUA, FL",19,33769
+,"KANE, IL",10 or fewer,19890
+,"PINELLAS, FL",10 or fewer,6266
+,"HALL, GA",22,33557
+,"PASCO, FL",10 or fewer,5937
+,"CANYON, ID",17,21560
+,"PEORIA, IL",34,33684
+,"CHAMPAIGN, IL",26,31022
+,"SHAWNEE, KS",50,33275
+,"DOUGLAS, GA",16,27394
+,"PAULDING, GA",22,27039
+,"COLLIER, FL",10 or fewer,5271
+,"SAINT LUCIE, FL",10 or fewer,3173
+,"PALM BEACH, FL",10 or fewer,8390
+,"VANDERBURGH, IN",30,24446
+,"LOWNDES, GA",24,24121
+,"WYANDOTTE, KS",15,18415
+,"MCLEAN, IL",16,14428
+,"ROCK ISLAND, IL",33,23304
+,"SAINT CLAIR, IL",10 or fewer,17751
+,"WILL, IL",10 or fewer,11035
+,"CLAYTON, GA",10 or fewer,15930
+,"TAZEWELL, IL",31,20704
+,"SAINT JOHNS, FL",10 or fewer,2383
+,"MCHENRY, IL",10 or fewer,12652
+,"CLARK, IN",12,12608
+,"CHEROKEE, GA",10 or fewer,12897
+,"SANGAMON, IL",17,19384
+,"CLAY, FL",10 or fewer,3217
+,"SUMTER, FL",10 or fewer,1845
+,"JOHNSON, IA",15,10888
+,"FLAGLER, FL",10 or fewer,1224
+,"HENRY, GA",10 or fewer,10477
+,"ST JOSEPH, IN",10 or fewer,1720
+,"MADISON, IL",27,15041
+,"HAWAII, HI",10 or fewer,8108
+,"LA SALLE, IL",12,14132
+,"SCOTT, IA",22,13617
+,"VERMILION, IL",28,19077
+,"MARTIN, FL",10 or fewer,1237
+,"TWIN FALLS, ID",11,14230
+,"BREVARD, FL",10 or fewer,4311
+,"TROUP, GA",24,17717
+,"NASSAU, FL",10 or fewer,5180
+,"INDIAN RIVER, FL",10 or fewer,1342
+,"BLACK HAWK, IA",14,12180
+,"JOHNSON, IN",10 or fewer,11546
+,"BIBB, GA",10 or fewer,1307
+,"BARROW, GA",10 or fewer,11954
+,"WOODBURY, IA",10 or fewer,11735
+,"KENDALL, IL",10 or fewer,12168
+,"BARTHOLOMEW, IN",14,13952
+,"FLOYD, GA",10 or fewer,1338
+,"SPALDING, GA",10 or fewer,14376
+,"MADISON, IN",10 or fewer,7084
+,"MACON, IL",10 or fewer,14497
+,"HIGHLANDS, FL",10 or fewer,1327
+,"FLOYD, IN",17,11627
+,"BANNOCK, ID",10 or fewer,12209
+,"HAMILTON, IN",10 or fewer,7330
+,"DUBUQUE, IA",29,9811
+,"CITRUS, FL",10 or fewer,2110
+,"JACKSON, GA",10 or fewer,8032
+,"KAUAI, HI",10 or fewer,9373
+,"WHITFIELD, GA",10 or fewer,2098
+,"HOWARD, IN",10 or fewer,9986
+,"HERNANDO, FL",10 or fewer,1868
+,"FORSYTH, GA",10 or fewer,4822
+,"LEON, FL",10 or fewer,1102
+,"PORTER, IN",10 or fewer,6913
+,"KNOX, IL",10 or fewer,8442
+,"BOONE, IL",10 or fewer,8796
+,"BARTOW, GA",10 or fewer,4169
+,"WAYNE, IN",10 or fewer,1062
+,"DEARBORN, IN",10 or fewer,4994
+,"POLK, GA",10 or fewer,2164
+,"WARRICK, IN",10 or fewer,7010
+,"HOUSTON, GA",10 or fewer,840
+,"DALLAS, IA",10 or fewer,4690
+,"KNOX, IN",10 or fewer,8560
+,"LEAVENWORTH, KS",10 or fewer,5657
+,"NOBLE, IN",10 or fewer,7363
+,"CARROLL, GA",10 or fewer,5160
+,"GORDON, GA",10 or fewer,931
+,"KOSCIUSKO, IN",10 or fewer,6040
+,"HABERSHAM, GA",10 or fewer,3690
+,"MUSCATINE, IA",12,7536
+,"CLARKE, GA",10 or fewer,1351
+,"WALKER, GA",10 or fewer,4641
+,"MARSHALL, IA",17,6578
+,"LEVY, FL",10 or fewer,5307
+,"RICHMOND, GA",10 or fewer,1056
+,"ELMORE, ID",10 or fewer,6252
+,"NEWTON, GA",10 or fewer,3462
+,"CHARLOTTE, FL",10 or fewer,3320
+,"WEBSTER, IA",16,6312
+,"HENRY, IL",10 or fewer,5792
+,"COWETA, GA",10 or fewer,3309
+,"CATOOSA, GA",10 or fewer,4515
+,"HUNTINGTON, IN",10 or fewer,5721
+,"HANCOCK, IN",10 or fewer,4108
+,"LIVINGSTON, IL",10 or fewer,5782
+,"BALDWIN, GA",10 or fewer,281
+,"PUTNAM, FL",10 or fewer,2523
+,"EFFINGHAM, IL",10 or fewer,6123
+,"WOODFORD, IL",10 or fewer,3338
+,"WALTON, GA",10 or fewer,2801
+,"WHITLEY, IN",10 or fewer,5099
+,"BUTTS, GA",10 or fewer,5395
+,"GIBSON, IN",10 or fewer,3998
+,"ROCKDALE, GA",10 or fewer,2844
+,"LUMPKIN, GA",10 or fewer,5107
+,"SARASOTA, FL",10 or fewer,2348
+,"WABASH, IN",10 or fewer,5354
+,"MANATEE, FL",10 or fewer,2207
+,"COLUMBIA, FL",10 or fewer,3077
+,"CLINTON, IL",10 or fewer,5164
+,"MURRAY, GA",10 or fewer,747
+,"MARSHALL, IN",10 or fewer,387
+,"WHITE, GA",10 or fewer,4103
+,"WARREN, IA",10 or fewer,3327
+,"FAYETTE, GA",10 or fewer,2573
+,"ELKHART, IN",10 or fewer,1252
+,"LAGRANGE, IN",10 or fewer,3958
+,"PAYETTE, ID",10 or fewer,3608
+,"HARRISON, IN",10 or fewer,3526
+,"JEROME, ID",10 or fewer,3883
+,"HENDRY, FL",10 or fewer,3095
+,"BUREAU, IL",10 or fewer,1108
+,"PEACH, GA",10 or fewer,178
+,"BLAINE, ID",10 or fewer,3123
+,"CHATTOOGA, GA",10 or fewer,524
+,"OGLE, IL",10 or fewer,3457
+,"MACOUPIN, IL",10 or fewer,3634
+,"CAMDEN, GA",10 or fewer,1706
+,"FRANKLIN, GA",10 or fewer,887
+,"GEARY, KS",10 or fewer,457
+,"DAWSON, GA",10 or fewer,2459
+,"BERRIEN, GA",10 or fewer,3928
+,"FAYETTE, IN",10 or fewer,491
+,"HENDRICKS, IN",10 or fewer,2459
+,"POSEY, IN",10 or fewer,2950
+,"HART, GA",10 or fewer,1174
+,"HARDEE, FL",10 or fewer,203
+,"MONTGOMERY, IL",10 or fewer,3452
+,"DEKALB, IL",10 or fewer,2357
+,"BARTON, KS",10 or fewer,1842
+,"BANKS, GA",10 or fewer,2228
+,"COLUMBIA, GA",10 or fewer,701
+,"POTTAWATTAMIE, IA",10 or fewer,2315
+,"MAUI, HI",10 or fewer,2770
+,"WARREN, IL",10 or fewer,3008
+,"CLINTON, IA",10 or fewer,1160
+,"BENTON, IA",10 or fewer,2476
+,"STEPHENS, GA",10 or fewer,1395
+,"SUWANNEE, FL",10 or fewer,1658
+,"GREENE, GA",10 or fewer,209
+,"JASPER, IA",10 or fewer,1680
+,"DELAWARE, IN",10 or fewer,1150
+,"RICHLAND, IL",10 or fewer,2673
+,"JONES, IA",10 or fewer,2370
+,"SCOTT, IN",10 or fewer,1083
+,"FRANKLIN, KS",10 or fewer,455
+,"POWESHIEK, IA",10 or fewer,2878
+,"MUSCOGEE, GA",10 or fewer,1372
+,"ESCAMBIA, FL",10 or fewer,1038
+,"MAHASKA, IA",10 or fewer,401
+,"BRADFORD, FL",10 or fewer,1895
+,"BOND, IL",10 or fewer,1579
+,"STEUBEN, IN",10 or fewer,1976
+,"WASHINGTON, IN",10 or fewer,1806
+,"DOUGLAS, KS",10 or fewer,1341
+,"SIOUX, IA",10 or fewer,1975
+,"LAMAR, GA",10 or fewer,2063
+,"SHELBY, IL",10 or fewer,1373
+,"OSAGE, KS",10 or fewer,2000
+,"RIPLEY, IN",10 or fewer,1104
+,"JEFFERSON, IN",10 or fewer,764
+,"TAMA, IA",10 or fewer,2202
+,"DOUGLAS, IL",10 or fewer,2111
+,"CHATHAM, GA",10 or fewer,941
+,"BAKER, FL",10 or fewer,542
+,"MORGAN, IN",10 or fewer,1734
+,"MIAMI, IN",10 or fewer,1515
+,"SEDGWICK, KS",10 or fewer,1056
+,"FULTON, IL",10 or fewer,1585
+,"COOK, GA",10 or fewer,1837
+,"PUTNAM, GA",10 or fewer,199
+,"PIKE, GA",10 or fewer,1912
+,"MIAMI, KS",10 or fewer,868
+,"LANIER, GA",10 or fewer,2496
+,"MERIWETHER, GA",10 or fewer,1865
+,"FRANKLIN, IN",10 or fewer,1571
+,"FAYETTE, IA",10 or fewer,1604
+,"OBRIEN, IA",10 or fewer,1865
+,"OKALOOSA, FL",10 or fewer,818
+,"HARALSON, GA",10 or fewer,1179
+,"CEDAR, IA",10 or fewer,1503
+,"CHRISTIAN, IL",10 or fewer,1482
+,"GILCHRIST, FL",10 or fewer,1512
+,"CERRO GORDO, IA",10 or fewer,365
+,"MASSAC, IL",10 or fewer,1886
+,"MARSHALL, IL",10 or fewer,1491
+,"MERCER, IL",10 or fewer,1707
+,"VALLEY, ID",10 or fewer,1564
+,"LATAH, ID",10 or fewer,187
+,"MINIDOKA, ID",10 or fewer,479
+,"COLES, IL",10 or fewer,1491
+,"WASHINGTON, IA",10 or fewer,1141
+,"LAWRENCE, IL",10 or fewer,1816
+,"JENNINGS, IN",10 or fewer,1621
+,"DIXIE, FL",10 or fewer,1354
+,"MADISON, GA",10 or fewer,404
+,"JACKSON, FL",10 or fewer,151
+,"GRANT, IN",10 or fewer,1101
+,"GEM, ID",10 or fewer,1018
+,"JACKSON, IN",10 or fewer,1240
+,"STORY, IA",10 or fewer,1195
+,"BAY, FL",10 or fewer,714
+,"JEFFERSON, KS",10 or fewer,1501
+,"GOODING, ID",10 or fewer,1439
+,"DAVIESS, IN",10 or fewer,1256
+,"BREMER, IA",10 or fewer,1146
+,"BROOKS, GA",10 or fewer,1487
+,"SPENCER, IN",10 or fewer,1323
+,"RABUN, GA",10 or fewer,914
+,"STEPHENSON, IL",10 or fewer,1161
+,"FAYETTE, IL",10 or fewer,1403
+,"PIATT, IL",10 or fewer,1318
+,"UNION, FL",10 or fewer,1231
+,"OCONEE, GA",10 or fewer,366
+,"LA PORTE, IN",10 or fewer,713
+,"PLYMOUTH, IA",10 or fewer,1154
+,"IROQUOIS, IL",10 or fewer,1348
+,"SANTA ROSA, FL",10 or fewer,684
+,"DADE, GA",10 or fewer,1193
+,"LOGAN, IL",10 or fewer,1036
+,"GADSDEN, FL",10 or fewer,142
+,"OWYHEE, ID",10 or fewer,1013
+,"MONROE, GA",10 or fewer,531
+,"BINGHAM, ID",10 or fewer,1386
+,"IOWA, IA",10 or fewer,1001
+,"PICKENS, GA",10 or fewer,820
+,"BUCHANAN, IA",10 or fewer,946
+,"CASSIA, ID",10 or fewer,542
+,"WAPELLO, IA",10 or fewer,594
+,"KANKAKEE, IL",10 or fewer,749
+,"WHITESIDE, IL",10 or fewer,758
+,"ANDERSON, KS",10 or fewer,1212
+,"FORD, IL",10 or fewer,1236
+,"MADISON, FL",10 or fewer,745
+,"CRAWFORD, IL",10 or fewer,941
+,"WELLS, IN",10 or fewer,870
+,"LEE, IL",10 or fewer,878
+,"MONROE, FL",10 or fewer,533
+,"GLYNN, GA",10 or fewer,456
+,"JONES, GA",10 or fewer,93
+,"DUBOIS, IN",10 or fewer,546
+,"ALLEN, KS",10 or fewer,194
+,"GILMER, GA",10 or fewer,632
+,"MASON, IL",10 or fewer,1095
+,"JACKSON, IA",10 or fewer,854
+,"DEKALB, IN",10 or fewer,1262
+,"DES MOINES, IA",10 or fewer,724
+,"HARRIS, GA",10 or fewer,952
+,"JACKSON, KS",10 or fewer,1022
+,"JASPER, IL",10 or fewer,1123
+,"UNION, IN",10 or fewer,813
+,"PIKE, IN",10 or fewer,885
+,"SHELBY, IN",10 or fewer,960
+,"OKEECHOBEE, FL",10 or fewer,250
+,"BOONE, IN",10 or fewer,673
+,"MOULTRIE, IL",10 or fewer,1113
+,"UPSON, GA",10 or fewer,704
+,"LOUISA, IA",10 or fewer,984
+,"RANDOLPH, IN",10 or fewer,197
+,"HAMILTON, FL",10 or fewer,745
+,"WAKULLA, FL",10 or fewer,154
+,"ELBERT, GA",10 or fewer,349
+,"TIPPECANOE, IN",10 or fewer,572
+,"GRUNDY, IL",10 or fewer,639
+,"BONNEVILLE, ID",10 or fewer,558
+,"MARION, IA",10 or fewer,569
+,"JO DAVIESS, IL",10 or fewer,683
+,"HENRY, IN",10 or fewer,479
+,"ADAMS, IN",10 or fewer,709
+,"HEARD, GA",10 or fewer,986
+,"WHITE, IL",10 or fewer,767
+,"RILEY, KS",10 or fewer,517
+,"BROWN, IN",10 or fewer,933
+,"UNION, GA",10 or fewer,596
+,"MADISON, IA",10 or fewer,650
+,"DECATUR, IN",10 or fewer,771
+,"WILKINSON, GA",10 or fewer,42
+,"FANNIN, GA",10 or fewer,578
+,"CASS, IN",10 or fewer,693
+,"CLAY, IL",10 or fewer,851
+,"STARKE, IN",10 or fewer,155
+,"HANCOCK, GA",10 or fewer,64
+,"SWITZERLAND, IN",10 or fewer,360
+,"STARK, IL",10 or fewer,909
+,"WASHINGTON, ID",10 or fewer,612
+,"MORGAN, IL",10 or fewer,706
+,"LEE, IA",10 or fewer,622
+,"MONROE, IN",10 or fewer,549
+,"KOOTENAI, ID",10 or fewer,447
+,"MORGAN, GA",10 or fewer,234
+,"ALLAMAKEE, IA",10 or fewer,692
+,"HENRY, IA",10 or fewer,624
+,"OHIO, IN",10 or fewer,325
+,"JERSEY, IL",10 or fewer,695
+,"DOUGHERTY, GA",10 or fewer,376
+,"BUTLER, IA",10 or fewer,590
+,"CHARLTON, GA",10 or fewer,373
+,"LYON, IA",10 or fewer,563
+,"BOISE, ID",10 or fewer,522
+,"DELAWARE, IA",10 or fewer,527
+,"LINN, KS",10 or fewer,449
+,"MCDONOUGH, IL",10 or fewer,570
+,"CALHOUN, IA",10 or fewer,639
+,"GRUNDY, IA",10 or fewer,518
+,"CRAWFORD, IN",10 or fewer,588
+,"JASPER, IN",10 or fewer,498
+,"MENARD, IL",10 or fewer,670
+,"JASPER, GA",10 or fewer,376
+,"ALEXANDER, IL",10 or fewer,788
+,"KEOKUK, IA",10 or fewer,345
+,"DESOTO, FL",10 or fewer,301
+,"BOONE, IA",10 or fewer,476
+,"FULTON, IN",10 or fewer,316
+,"OGLETHORPE, GA",10 or fewer,132
+,"TAYLOR, FL",10 or fewer,351
+,"CLAYTON, IA",10 or fewer,408
+,"ADAMS, ID",10 or fewer,630
+,"CUMBERLAND, IL",10 or fewer,683
+,"WABASH, IL",10 or fewer,455
+,"UNION, IL",10 or fewer,518
+,"POTTAWATOMIE, KS",10 or fewer,406
+,"WILLIAMSON, IL",10 or fewer,437
+,"WALTON, FL",10 or fewer,305
+,"MILLS, IA",10 or fewer,507
+,"POWER, ID",10 or fewer,628
+,"VIGO, IN",10 or fewer,431
+,"LINCOLN, ID",10 or fewer,573
+,"TIFT, GA",10 or fewer,325
+,"LIBERTY, GA",10 or fewer,325
+,"COLQUITT, GA",10 or fewer,329
+,"GUTHRIE, IA",10 or fewer,444
+,"HOLMES, FL",10 or fewer,57
+,"LYON, KS",10 or fewer,410
+,"RANDOLPH, IL",10 or fewer,439
+,"EDGAR, IL",10 or fewer,471
+,"PERRY, IN",10 or fewer,404
+,"PULASKI, IL",10 or fewer,611
+,"JOHNSON, IL",10 or fewer,492
+,"SALINE, IL",10 or fewer,422
+,"MARION, IL",10 or fewer,488
+,"APPANOOSE, IA",10 or fewer,173
+,"TIPTON, IN",10 or fewer,478
+,"PUTNAM, IL",10 or fewer,172
+,"CLINCH, GA",10 or fewer,503
+,"LAURENS, GA",10 or fewer,157
+,"TAYLOR, GA",10 or fewer,36
+,"HENDERSON, IL",10 or fewer,565
+,"EARLY, GA",10 or fewer,33
+,"WABAUNSEE, KS",10 or fewer,531
+,"HUMBOLDT, IA",10 or fewer,476
+,"CARROLL, IL",10 or fewer,273
+,"THOMAS, GA",10 or fewer,257
+,"JACKSON, IL",10 or fewer,395
+,"CASS, IL",10 or fewer,411
+,"TOWNS, GA",10 or fewer,345
+,"CHICKASAW, IA",10 or fewer,278
+,"FOUNTAIN, IN",10 or fewer,469
+,"CRAWFORD, GA",10 or fewer,45
+,"THOMAS, KS",10 or fewer,47
+,"WARE, GA",10 or fewer,261
+,"COFFEE, GA",10 or fewer,218
+,"GLADES, FL",10 or fewer,358
+,"WRIGHT, IA",10 or fewer,375
+,"JEFFERSON, IA",10 or fewer,333
+,"ATCHISON, KS",10 or fewer,271
+,"ECHOLS, GA",10 or fewer,511
+,"HAMILTON, IA",10 or fewer,356
+,"JEFFERSON, FL",10 or fewer,57
+,"WASHINGTON, IL",10 or fewer,376
+,"HARDIN, IA",10 or fewer,326
+,"DONIPHAN, KS",10 or fewer,67
+,"CLARKE, IA",10 or fewer,323
+,"WINNESHIEK, IA",10 or fewer,329
+,"DICKINSON, KS",10 or fewer,102
+,"WASHINGTON, GA",10 or fewer,62
+,"MACON, GA",10 or fewer,46
+,"DECATUR, GA",10 or fewer,109
+,"MONROE, IL",10 or fewer,308
+,"EDWARDS, IL",10 or fewer,384
+,"BURKE, GA",10 or fewer,62
+,"BULLOCH, GA",10 or fewer,148
+,"EFFINGHAM, GA",10 or fewer,175
+,"OSCEOLA, IA",10 or fewer,371
+,"WAYNE, IL",10 or fewer,263
+,"FRANKLIN, IL",10 or fewer,222
+,"GREENE, IN",10 or fewer,274
+,"UNION, IA",10 or fewer,270
+,"ORANGE, IN",10 or fewer,224
+,"ADAMS, IL",10 or fewer,199
+,"BOURBON, KS",10 or fewer,171
+,"CHEROKEE, IA",10 or fewer,259
+,"WASHINGTON, FL",10 or fewer,73
+,"BRYAN, GA",10 or fewer,165
+,"CARROLL, IN",10 or fewer,205
+,"LAFAYETTE, FL",10 or fewer,227
+,"WINNEBAGO, IA",10 or fewer,165
+,"PUTNAM, IN",10 or fewer,255
+,"COFFEY, KS",10 or fewer,208
+,"LUCAS, IA",10 or fewer,232
+,"LAWRENCE, IN",10 or fewer,212
+,"JEFFERSON, IL",10 or fewer,229
+,"BUENA VISTA, IA",10 or fewer,214
+,"IDAHO, ID",10 or fewer,276
+,"PAGE, IA",10 or fewer,209
+,"SULLIVAN, IN",10 or fewer,243
+,"FLOYD, IA",10 or fewer,134
+,"MCDUFFIE, GA",10 or fewer,62
+,"TWIGGS, GA",10 or fewer,33
+,"GREENE, IL",10 or fewer,228
+,"SEMINOLE, GA",10 or fewer,25
+,"RUSH, IN",10 or fewer,182
+,"CLARK, IL",10 or fewer,236
+,"CLINTON, IN",10 or fewer,231
+,"CASS, IA",10 or fewer,209
+,"BRANTLEY, GA",10 or fewer,104
+,"MONTGOMERY, KS",10 or fewer,183
+,"MONONA, IA",10 or fewer,200
+,"CARROLL, IA",10 or fewer,193
+,"GREENE, IA",10 or fewer,219
+,"JEFFERSON, GA",10 or fewer,41
+,"VERMILLION, IN",10 or fewer,220
+,"POCAHONTAS, IA",10 or fewer,248
+,"GALLATIN, IL",10 or fewer,244
+,"SUMTER, GA",10 or fewer,85
+,"SALINE, KS",10 or fewer,149
+,"HARRISON, IA",10 or fewer,193
+,"DODGE, GA",10 or fewer,56
+,"POPE, IL",10 or fewer,225
+,"GRADY, GA",10 or fewer,71
+,"MONTGOMERY, IN",10 or fewer,181
+,"CARIBOU, ID",10 or fewer,171
+,"BEN HILL, GA",10 or fewer,110
+,"ADAIR, IA",10 or fewer,188
+,"BROWN, KS",10 or fewer,183
+,"ATKINSON, GA",10 or fewer,163
+,"CLAY, GA",10 or fewer,10 or fewer
+,"DECATUR, IA",10 or fewer,164
+,"DICKINSON, IA",10 or fewer,202
+,"NEZ PERCE, ID",10 or fewer,116
+,"CRISP, GA",10 or fewer,83
+,"HANCOCK, IL",10 or fewer,162
+,"KOSSUTH, IA",10 or fewer,168
+,"BUTLER, KS",10 or fewer,137
+,"MARTIN, IN",10 or fewer,125
+,"CRAWFORD, KS",10 or fewer,141
+,"BLECKLEY, GA",10 or fewer,33
+,"JAY, IN",10 or fewer,155
+,"LEE, GA",10 or fewer,95
+,"PIERCE, GA",10 or fewer,81
+,"EMANUEL, GA",10 or fewer,46
+,"RENO, KS",10 or fewer,128
+,"NEWTON, IN",10 or fewer,171
+,"CRAWFORD, IA",10 or fewer,143
+,"BONNER, ID",10 or fewer,116
+,"WAYNE, GA",10 or fewer,96
+,"PAWNEE, KS",10 or fewer,98
+,"MADISON, ID",10 or fewer,130
+,"TOOMBS, GA",10 or fewer,86
+,"BLACKFORD, IN",10 or fewer,125
+,"VAN BUREN, IA",10 or fewer,142
+,"PULASKI, GA",10 or fewer,48
+,"CLAY, IA",10 or fewer,151
+,"WORTH, IA",10 or fewer,42
+,"WILKES, GA",10 or fewer,55
+,"MONTGOMERY, IA",10 or fewer,131
+,"FREMONT, IA",10 or fewer,127
+,"MONROE, IA",10 or fewer,91
+,"MARSHALL, KS",10 or fewer,113
+,"NEMAHA, KS",10 or fewer,147
+,"SAC, IA",10 or fewer,122
+,"JEFFERSON, ID",10 or fewer,116
+,"SHELBY, IA",10 or fewer,151
+,"HANCOCK, IA",10 or fewer,75
+,"WARREN, IN",10 or fewer,167
+,"FRANKLIN, IA",10 or fewer,67
+,"PERRY, IL",10 or fewer,106
+,"PIKE, IL",10 or fewer,113
+,"CALHOUN, FL",10 or fewer,53
+,"PULASKI, IN",10 or fewer,70
+,"HOWARD, IA",10 or fewer,118
+,"CLAY, IN",10 or fewer,105
+,"OWEN, IN",10 or fewer,139
+,"DAVIS, IA",10 or fewer,100
+,"FRANKLIN, FL",10 or fewer,56
+,"MITCHELL, GA",10 or fewer,67
+,"FRANKLIN, ID",10 or fewer,82
+,"NEOSHO, KS",10 or fewer,80
+,"IDA, IA",10 or fewer,105
+,"DOOLY, GA",10 or fewer,27
+,"WORTH, GA",10 or fewer,75
+,"STAFFORD, KS",10 or fewer,91
+,"TAYLOR, IA",10 or fewer,80
+,"SCHUYLER, IL",10 or fewer,99
+,"FINNEY, KS",10 or fewer,51
+,"HAMILTON, IL",10 or fewer,103
+,"ONEIDA, ID",10 or fewer,112
+,"WHITE, IN",10 or fewer,80
+,"APPLING, GA",10 or fewer,52
+,"CUSTER, ID",10 or fewer,110
+,"BENTON, IN",10 or fewer,112
+,"BEAR LAKE, ID",10 or fewer,88
+,"LIBERTY, FL",10 or fewer,19
+,"ELLIS, KS",10 or fewer,74
+,"LONG, GA",10 or fewer,59
+,"HARVEY, KS",10 or fewer,63
+,"GULF, FL",10 or fewer,63
+,"WAYNE, IA",10 or fewer,71
+,"MCINTOSH, GA",10 or fewer,66
+,"LINCOLN, GA",10 or fewer,37
+,"COWLEY, KS",10 or fewer,69
+,"TATTNALL, GA",10 or fewer,54
+,"HARDIN, IL",10 or fewer,92
+,"LABETTE, KS",10 or fewer,73
+,"MORRIS, KS",10 or fewer,45
+,"TALBOT, GA",10 or fewer,90
+,"WOODSON, KS",10 or fewer,28
+,"MCPHERSON, KS",10 or fewer,71
+,"MILLER, GA",10 or fewer,10 or fewer
+,"WILCOX, GA",10 or fewer,33
+,"IRWIN, GA",10 or fewer,45
+,"TELFAIR, GA",10 or fewer,27
+,"CLAY, KS",10 or fewer,52
+,"RICE, KS",10 or fewer,51
+,"FORD, KS",10 or fewer,47
+,"SCREVEN, GA",10 or fewer,41
+,"JEFF DAVIS, GA",10 or fewer,57
+,"SHERMAN, KS",10 or fewer,48
+,"CAMAS, ID",10 or fewer,83
+,"SEWARD, KS",10 or fewer,55
+,"TURNER, GA",10 or fewer,40
+,"CALHOUN, IL",10 or fewer,81
+,"EMMET, IA",10 or fewer,79
+,"MITCHELL, IA",10 or fewer,41
+,"PARKE, IN",10 or fewer,65
+,"RINGGOLD, IA",10 or fewer,67
+,"FREMONT, ID",10 or fewer,62
+,"CALHOUN, GA",10 or fewer,19
+,"CHEROKEE, KS",10 or fewer,62
+,"BACON, GA",10 or fewer,43
+,"PALO ALTO, IA",10 or fewer,67
+,"TETON, ID",10 or fewer,31
+,"LEMHI, ID",10 or fewer,60
+,"JENKINS, GA",10 or fewer,19
+,"AUDUBON, IA",10 or fewer,62
+,"JOHNSON, GA",10 or fewer,21
+,"BENEWAH, ID",10 or fewer,39
+,"SCOTT, IL",10 or fewer,50
+,"RUSH, KS",10 or fewer,43
+,"TALIAFERRO, GA",10 or fewer,10 or fewer
+,"MARION, GA",10 or fewer,30
+,"BROWN, IL",10 or fewer,54
+,"WARREN, GA",10 or fewer,18
+,"CLEARWATER, ID",10 or fewer,33
+,"LOGAN, KS",10 or fewer,10 or fewer
+,"CANDLER, GA",10 or fewer,29
+,"EVANS, GA",10 or fewer,29
+,"RANDOLPH, GA",10 or fewer,30
+,"WASHINGTON, KS",10 or fewer,50
+,"ADAMS, IA",10 or fewer,59
+,"BAKER, GA",10 or fewer,10 or fewer
+,"SUMNER, KS",10 or fewer,30
+,"MONTGOMERY, GA",10 or fewer,21
+,"TERRELL, GA",10 or fewer,17
+,"RAWLINS, KS",10 or fewer,21
+,"GREENWOOD, KS",10 or fewer,41
+,"QUITMAN, GA",10 or fewer,18
+,"TREUTLEN, GA",10 or fewer,26
+,"SHOSHONE, ID",10 or fewer,19
+,"WILSON, KS",10 or fewer,26
+,"RUSSELL, KS",10 or fewer,29
+,"BOUNDARY, ID",10 or fewer,28
+,"LEWIS, ID",10 or fewer,36
+,"ELLSWORTH, KS",10 or fewer,33
+,"BUTTE, ID",10 or fewer,40
+,"CHATTAHOOCHEE, GA",10 or fewer,22
+,"CLOUD, KS",10 or fewer,27
+,"GLASCOCK, GA",10 or fewer,10 or fewer
+,"SCHLEY, GA",10 or fewer,11
+,"DECATUR, KS",10 or fewer,27
+,"MARION, KS",10 or fewer,22
+,"SHERIDAN, KS",10 or fewer,16
+,"WHEELER, GA",10 or fewer,14
+,"PRATT, KS",10 or fewer,21
+,"MORTON, KS",10 or fewer,19
+,"NORTON, KS",10 or fewer,14
+,"EDWARDS, KS",10 or fewer,21
+,"PHILLIPS, KS",10 or fewer,15
+,"REPUBLIC, KS",10 or fewer,20
+,"GRANT, KS",10 or fewer,17
+,"SMITH, KS",10 or fewer,13
+,"OTTAWA, KS",10 or fewer,16
+,"STEWART, GA",10 or fewer,15
+,"CHEYENNE, KS",10 or fewer,19
+,"GOVE, KS",10 or fewer,15
+,"CHASE, KS",10 or fewer,18
+,"SCOTT, KS",10 or fewer,16
+,"ROOKS, KS",10 or fewer,17
+,"KINGMAN, KS",10 or fewer,13
+,"STEVENS, KS",10 or fewer,10 or fewer
+,"MITCHELL, KS",10 or fewer,16
+,"JEWELL, KS",10 or fewer,15
+,"GRAY, KS",10 or fewer,10 or fewer
+,"NESS, KS",10 or fewer,12
+,"CHAUTAUQUA, KS",10 or fewer,10 or fewer
+,"WALLACE, KS",10 or fewer,10 or fewer
+,"HARPER, KS",10 or fewer,10 or fewer
+,"BARBER, KS",10 or fewer,10 or fewer
+,"MEADE, KS",10 or fewer,10 or fewer
+,"LINCOLN, KS",10 or fewer,12
+,"KEARNY, KS",10 or fewer,10 or fewer
+,"WEBSTER, GA",10 or fewer,10 or fewer
+,"HAMILTON, KS",10 or fewer,10 or fewer
+,"ELK, KS",10 or fewer,10 or fewer
+,"OSBORNE, KS",10 or fewer,10 or fewer
+,"TREGO, KS",10 or fewer,10 or fewer
+,"HASKELL, KS",10 or fewer,10 or fewer
+,"GREELEY, KS",10 or fewer,10 or fewer
+,"GRAHAM, KS",10 or fewer,10 or fewer
+,"WICHITA, KS",10 or fewer,10 or fewer
+,"STANTON, KS",10 or fewer,10 or fewer
+,"LANE, KS",10 or fewer,10 or fewer
+,"KIOWA, KS",10 or fewer,10 or fewer
+,"HODGEMAN, KS",10 or fewer,10 or fewer
+,"CLARK, KS",10 or fewer,10 or fewer
+,"COMANCHE, KS",10 or fewer,10 or fewer
+,"CLARK, ID",10 or fewer,10 or fewer
+,"KALAWAO, HI",10 or fewer,10 or fewer
+,None of the above,76,135440
+,Total,2384,3110220
+Jan 1 – Dec 31 2021,"COOK, IL",167,380807
+,"BROWARD, FL",92,168338
+,"ORANGE, FL",74,131334
+,"LEE, FL",144,138522
+,"FULTON, GA",55,122134
+,"DUVAL, FL",38,55507
+,"HONOLULU, HI",23,104953
+,"HILLSBOROUGH, FL",33,65468
+,"MIAMI-DADE, FL",30,94451
+,"MARION, IN",59,119435
+,"COBB, GA",42,98220
+,"DEKALB, GA",25,52175
+,"ADA, ID",52,50458
+,"VOLUSIA, FL",10 or fewer,9095
+,"LAKE, FL",27,39889
+,"OSCEOLA, FL",21,40299
+,"POLK, IA",64,46507
+,"POLK, FL",15,20150
+,"LAKE, IN",23,52026
+,"GWINNETT, GA",18,33923
+,"SEMINOLE, FL",14,25866
+,"WINNEBAGO, IL",37,58037
+,"ALLEN, IN",33,52219
+,"LAKE, IL",37,42716
+,"JOHNSON, KS",27,27285
+,"DUPAGE, IL",12,33529
+,"MARION, FL",10 or fewer,10088
+,"LINN, IA",72,44519
+,"ALACHUA, FL",19,38015
+,"KANE, IL",22,39560
+,"PINELLAS, FL",12,19302
+,"HALL, GA",27,36688
+,"PASCO, FL",10 or fewer,7459
+,"CANYON, ID",25,24573
+,"PEORIA, IL",40,37395
+,"CHAMPAIGN, IL",28,34782
+,"SHAWNEE, KS",56,35178
+,"DOUGLAS, GA",18,30996
+,"PAULDING, GA",19,30521
+,"COLLIER, FL",10 or fewer,6686
+,"SAINT LUCIE, FL",10 or fewer,3846
+,"PALM BEACH, FL",11,10496
+,"VANDERBURGH, IN",38,27030
+,"LOWNDES, GA",19,28923
+,"WYANDOTTE, KS",21,20656
+,"MCLEAN, IL",29,24626
+,"ROCK ISLAND, IL",31,25502
+,"SAINT CLAIR, IL",26,19859
+,"WILL, IL",12,13993
+,"CLAYTON, GA",10 or fewer,18581
+,"TAZEWELL, IL",39,24301
+,"SAINT JOHNS, FL",10 or fewer,2988
+,"MCHENRY, IL",14,18362
+,"CLARK, IN",19,14905
+,"CHEROKEE, GA",10 or fewer,15095
+,"SANGAMON, IL",18,21062
+,"CLAY, FL",10 or fewer,3644
+,"SUMTER, FL",10 or fewer,4268
+,"JOHNSON, IA",20,12065
+,"FLAGLER, FL",10 or fewer,1631
+,"HENRY, GA",10 or fewer,13144
+,"ST JOSEPH, IN",10 or fewer,8521
+,"MADISON, IL",20,16944
+,"HAWAII, HI",10 or fewer,8915
+,"LA SALLE, IL",16,15770
+,"SCOTT, IA",25,15236
+,"VERMILION, IL",25,20958
+,"MARTIN, FL",10 or fewer,1524
+,"TWIN FALLS, ID",30,16436
+,"BREVARD, FL",10 or fewer,7141
+,"TROUP, GA",22,19742
+,"NASSAU, FL",10 or fewer,5944
+,"INDIAN RIVER, FL",10 or fewer,1733
+,"BLACK HAWK, IA",13,13964
+,"JOHNSON, IN",10 or fewer,13338
+,"BIBB, GA",16,9589
+,"BARROW, GA",11,14160
+,"WOODBURY, IA",18,13263
+,"KENDALL, IL",10 or fewer,14060
+,"BARTHOLOMEW, IN",14,16069
+,"FLOYD, GA",10 or fewer,1535
+,"SPALDING, GA",10 or fewer,14880
+,"MADISON, IN",10 or fewer,15401
+,"MACON, IL",19,14951
+,"HIGHLANDS, FL",10 or fewer,1674
+,"FLOYD, IN",15,13037
+,"BANNOCK, ID",16,13645
+,"HAMILTON, IN",10 or fewer,8156
+,"DUBUQUE, IA",25,10761
+,"CITRUS, FL",10 or fewer,2720
+,"JACKSON, GA",10 or fewer,9746
+,"KAUAI, HI",10 or fewer,9988
+,"WHITFIELD, GA",10 or fewer,2567
+,"HOWARD, IN",10 or fewer,11458
+,"HERNANDO, FL",10 or fewer,2547
+,"FORSYTH, GA",10 or fewer,6408
+,"LEON, FL",10 or fewer,1589
+,"PORTER, IN",10 or fewer,7539
+,"KNOX, IL",10 or fewer,9710
+,"BOONE, IL",10 or fewer,9789
+,"BARTOW, GA",10 or fewer,4542
+,"WAYNE, IN",10 or fewer,10956
+,"DEARBORN, IN",18,10744
+,"POLK, GA",10 or fewer,2359
+,"WARRICK, IN",14,7849
+,"HOUSTON, GA",10 or fewer,3731
+,"DALLAS, IA",10 or fewer,5453
+,"KNOX, IN",15,9611
+,"LEAVENWORTH, KS",10 or fewer,3643
+,"NOBLE, IN",10 or fewer,9078
+,"CARROLL, GA",10 or fewer,5898
+,"GORDON, GA",10 or fewer,1081
+,"KOSCIUSKO, IN",10 or fewer,7539
+,"HABERSHAM, GA",10 or fewer,3895
+,"MUSCATINE, IA",10 or fewer,8055
+,"CLARKE, GA",10 or fewer,1505
+,"WALKER, GA",10 or fewer,5139
+,"MARSHALL, IA",16,7056
+,"LEVY, FL",10 or fewer,5888
+,"RICHMOND, GA",10 or fewer,1423
+,"ELMORE, ID",10 or fewer,6904
+,"NEWTON, GA",10 or fewer,4380
+,"CHARLOTTE, FL",10 or fewer,4212
+,"WEBSTER, IA",14,7199
+,"HENRY, IL",10 or fewer,6433
+,"COWETA, GA",10 or fewer,4370
+,"CATOOSA, GA",10 or fewer,5037
+,"HUNTINGTON, IN",11,7138
+,"HANCOCK, IN",10 or fewer,4838
+,"LIVINGSTON, IL",10 or fewer,6689
+,"BALDWIN, GA",10 or fewer,4300
+,"PUTNAM, FL",10 or fewer,2962
+,"EFFINGHAM, IL",10 or fewer,6777
+,"WOODFORD, IL",10 or fewer,6009
+,"WALTON, GA",10 or fewer,3550
+,"WHITLEY, IN",10 or fewer,6367
+,"BUTTS, GA",10 or fewer,5937
+,"GIBSON, IN",22,6661
+,"ROCKDALE, GA",10 or fewer,3595
+,"LUMPKIN, GA",10 or fewer,6060
+,"SARASOTA, FL",10 or fewer,3160
+,"WABASH, IN",10 or fewer,6463
+,"MANATEE, FL",10 or fewer,2892
+,"COLUMBIA, FL",10 or fewer,3886
+,"CLINTON, IL",10 or fewer,5731
+,"MURRAY, GA",10 or fewer,847
+,"MARSHALL, IN",10 or fewer,2500
+,"WHITE, GA",10 or fewer,4313
+,"WARREN, IA",10 or fewer,3894
+,"FAYETTE, GA",10 or fewer,3198
+,"ELKHART, IN",10 or fewer,2494
+,"LAGRANGE, IN",10 or fewer,4747
+,"PAYETTE, ID",10 or fewer,4004
+,"HARRISON, IN",10 or fewer,4200
+,"JEROME, ID",10 or fewer,4626
+,"HENDRY, FL",10 or fewer,3975
+,"BUREAU, IL",10 or fewer,1905
+,"PEACH, GA",10 or fewer,2678
+,"BLAINE, ID",10 or fewer,3528
+,"CHATTOOGA, GA",10 or fewer,553
+,"OGLE, IL",10 or fewer,3659
+,"MACOUPIN, IL",10 or fewer,4036
+,"CAMDEN, GA",10 or fewer,1899
+,"FRANKLIN, GA",10 or fewer,975
+,"GEARY, KS",10 or fewer,550
+,"DAWSON, GA",10 or fewer,3004
+,"BERRIEN, GA",10 or fewer,4813
+,"FAYETTE, IN",10 or fewer,4754
+,"HENDRICKS, IN",10 or fewer,2766
+,"POSEY, IN",10 or fewer,3383
+,"HART, GA",10 or fewer,1248
+,"HARDEE, FL",10 or fewer,269
+,"MONTGOMERY, IL",10 or fewer,3868
+,"DEKALB, IL",10 or fewer,2907
+,"BARTON, KS",10 or fewer,4239
+,"BANKS, GA",10 or fewer,2530
+,"COLUMBIA, GA",10 or fewer,958
+,"POTTAWATTAMIE, IA",10 or fewer,2486
+,"MAUI, HI",10 or fewer,2807
+,"WARREN, IL",10 or fewer,3577
+,"CLINTON, IA",10 or fewer,1282
+,"BENTON, IA",10 or fewer,2843
+,"STEPHENS, GA",10 or fewer,1510
+,"SUWANNEE, FL",10 or fewer,2099
+,"GREENE, GA",10 or fewer,320
+,"JASPER, IA",10 or fewer,1913
+,"DELAWARE, IN",10 or fewer,2355
+,"RICHLAND, IL",10 or fewer,3599
+,"JONES, IA",10 or fewer,2739
+,"SCOTT, IN",10 or fewer,1265
+,"FRANKLIN, KS",10 or fewer,550
+,"POWESHIEK, IA",10 or fewer,3224
+,"MUSCOGEE, GA",10 or fewer,1701
+,"ESCAMBIA, FL",10 or fewer,1487
+,"MAHASKA, IA",10 or fewer,3057
+,"BRADFORD, FL",10 or fewer,2041
+,"BOND, IL",10 or fewer,1788
+,"STEUBEN, IN",10 or fewer,2528
+,"WASHINGTON, IN",10 or fewer,2114
+,"DOUGLAS, KS",10 or fewer,1403
+,"SIOUX, IA",10 or fewer,2172
+,"LAMAR, GA",10 or fewer,2169
+,"SHELBY, IL",10 or fewer,1490
+,"OSAGE, KS",10 or fewer,2158
+,"RIPLEY, IN",10 or fewer,2360
+,"JEFFERSON, IN",10 or fewer,1029
+,"TAMA, IA",10 or fewer,2349
+,"DOUGLAS, IL",10 or fewer,2273
+,"CHATHAM, GA",10 or fewer,1327
+,"BAKER, FL",10 or fewer,662
+,"MORGAN, IN",10 or fewer,1905
+,"MIAMI, IN",10 or fewer,1924
+,"SEDGWICK, KS",10 or fewer,1292
+,"FULTON, IL",10 or fewer,1902
+,"COOK, GA",10 or fewer,2233
+,"PUTNAM, GA",10 or fewer,558
+,"PIKE, GA",10 or fewer,1846
+,"MIAMI, KS",10 or fewer,797
+,"LANIER, GA",10 or fewer,3137
+,"MERIWETHER, GA",10 or fewer,2130
+,"FRANKLIN, IN",10 or fewer,2136
+,"FAYETTE, IA",10 or fewer,1829
+,"OBRIEN, IA",10 or fewer,2013
+,"OKALOOSA, FL",10 or fewer,1141
+,"HARALSON, GA",10 or fewer,1362
+,"CEDAR, IA",10 or fewer,1749
+,"CHRISTIAN, IL",10 or fewer,1638
+,"GILCHRIST, FL",10 or fewer,1709
+,"CERRO GORDO, IA",10 or fewer,360
+,"MASSAC, IL",10 or fewer,2028
+,"MARSHALL, IL",10 or fewer,1843
+,"MERCER, IL",10 or fewer,1918
+,"VALLEY, ID",10 or fewer,1828
+,"LATAH, ID",10 or fewer,191
+,"MINIDOKA, ID",10 or fewer,509
+,"COLES, IL",10 or fewer,1520
+,"WASHINGTON, IA",10 or fewer,1261
+,"LAWRENCE, IL",10 or fewer,2040
+,"JENNINGS, IN",10 or fewer,1897
+,"DIXIE, FL",10 or fewer,1586
+,"MADISON, GA",10 or fewer,505
+,"JACKSON, FL",10 or fewer,1514
+,"GRANT, IN",10 or fewer,1536
+,"GEM, ID",10 or fewer,1185
+,"JACKSON, IN",10 or fewer,1458
+,"STORY, IA",10 or fewer,1369
+,"BAY, FL",10 or fewer,1019
+,"JEFFERSON, KS",10 or fewer,1651
+,"GOODING, ID",10 or fewer,1523
+,"DAVIESS, IN",10 or fewer,1425
+,"BREMER, IA",10 or fewer,1384
+,"BROOKS, GA",10 or fewer,1728
+,"SPENCER, IN",10 or fewer,1525
+,"RABUN, GA",10 or fewer,903
+,"STEPHENSON, IL",10 or fewer,1345
+,"FAYETTE, IL",10 or fewer,1556
+,"PIATT, IL",10 or fewer,1412
+,"UNION, FL",10 or fewer,1333
+,"OCONEE, GA",10 or fewer,459
+,"LA PORTE, IN",10 or fewer,1035
+,"PLYMOUTH, IA",10 or fewer,1296
+,"IROQUOIS, IL",10 or fewer,1517
+,"SANTA ROSA, FL",10 or fewer,872
+,"DADE, GA",10 or fewer,1334
+,"LOGAN, IL",10 or fewer,1311
+,"GADSDEN, FL",10 or fewer,210
+,"OWYHEE, ID",10 or fewer,1136
+,"MONROE, GA",10 or fewer,997
+,"BINGHAM, ID",10 or fewer,1450
+,"IOWA, IA",10 or fewer,1064
+,"PICKENS, GA",10 or fewer,968
+,"BUCHANAN, IA",10 or fewer,1057
+,"CASSIA, ID",10 or fewer,612
+,"WAPELLO, IA",10 or fewer,997
+,"KANKAKEE, IL",10 or fewer,1045
+,"WHITESIDE, IL",10 or fewer,949
+,"ANDERSON, KS",10 or fewer,1341
+,"FORD, IL",10 or fewer,1334
+,"MADISON, FL",10 or fewer,977
+,"CRAWFORD, IL",10 or fewer,1122
+,"WELLS, IN",10 or fewer,1195
+,"LEE, IL",10 or fewer,1026
+,"MONROE, FL",10 or fewer,711
+,"GLYNN, GA",10 or fewer,622
+,"JONES, GA",10 or fewer,751
+,"DUBOIS, IN",10 or fewer,651
+,"ALLEN, KS",10 or fewer,228
+,"GILMER, GA",10 or fewer,737
+,"MASON, IL",10 or fewer,1262
+,"JACKSON, IA",10 or fewer,923
+,"DEKALB, IN",10 or fewer,1627
+,"DES MOINES, IA",10 or fewer,853
+,"HARRIS, GA",10 or fewer,1108
+,"JACKSON, KS",10 or fewer,1027
+,"JASPER, IL",10 or fewer,1351
+,"UNION, IN",10 or fewer,1449
+,"PIKE, IN",10 or fewer,1097
+,"SHELBY, IN",10 or fewer,1098
+,"OKEECHOBEE, FL",10 or fewer,311
+,"BOONE, IN",10 or fewer,794
+,"MOULTRIE, IL",10 or fewer,1164
+,"UPSON, GA",10 or fewer,789
+,"LOUISA, IA",10 or fewer,1064
+,"RANDOLPH, IN",10 or fewer,1031
+,"HAMILTON, FL",10 or fewer,894
+,"WAKULLA, FL",10 or fewer,203
+,"ELBERT, GA",10 or fewer,387
+,"TIPPECANOE, IN",10 or fewer,739
+,"GRUNDY, IL",10 or fewer,781
+,"BONNEVILLE, ID",10 or fewer,754
+,"MARION, IA",10 or fewer,766
+,"JO DAVIESS, IL",10 or fewer,786
+,"HENRY, IN",10 or fewer,935
+,"ADAMS, IN",10 or fewer,939
+,"HEARD, GA",10 or fewer,1118
+,"WHITE, IL",10 or fewer,888
+,"RILEY, KS",10 or fewer,545
+,"BROWN, IN",10 or fewer,1053
+,"UNION, GA",10 or fewer,676
+,"MADISON, IA",10 or fewer,831
+,"DECATUR, IN",10 or fewer,931
+,"WILKINSON, GA",10 or fewer,683
+,"FANNIN, GA",10 or fewer,580
+,"CASS, IN",10 or fewer,788
+,"CLAY, IL",10 or fewer,1049
+,"STARKE, IN",10 or fewer,531
+,"HANCOCK, GA",10 or fewer,524
+,"SWITZERLAND, IN",10 or fewer,1053
+,"STARK, IL",10 or fewer,1071
+,"WASHINGTON, ID",10 or fewer,633
+,"MORGAN, IL",10 or fewer,761
+,"LEE, IA",10 or fewer,683
+,"MONROE, IN",10 or fewer,655
+,"KOOTENAI, ID",10 or fewer,505
+,"MORGAN, GA",10 or fewer,325
+,"ALLAMAKEE, IA",10 or fewer,773
+,"HENRY, IA",10 or fewer,635
+,"OHIO, IN",10 or fewer,1136
+,"JERSEY, IL",10 or fewer,794
+,"DOUGHERTY, GA",10 or fewer,492
+,"BUTLER, IA",10 or fewer,653
+,"CHARLTON, GA",10 or fewer,362
+,"LYON, IA",10 or fewer,653
+,"BOISE, ID",10 or fewer,619
+,"DELAWARE, IA",10 or fewer,623
+,"LINN, KS",10 or fewer,460
+,"MCDONOUGH, IL",10 or fewer,691
+,"CALHOUN, IA",10 or fewer,780
+,"GRUNDY, IA",10 or fewer,584
+,"CRAWFORD, IN",10 or fewer,745
+,"JASPER, IN",10 or fewer,628
+,"MENARD, IL",10 or fewer,731
+,"JASPER, GA",10 or fewer,488
+,"ALEXANDER, IL",10 or fewer,860
+,"KEOKUK, IA",10 or fewer,597
+,"DESOTO, FL",10 or fewer,455
+,"BOONE, IA",10 or fewer,546
+,"FULTON, IN",10 or fewer,547
+,"OGLETHORPE, GA",10 or fewer,138
+,"TAYLOR, FL",10 or fewer,409
+,"CLAYTON, IA",10 or fewer,462
+,"ADAMS, ID",10 or fewer,724
+,"CUMBERLAND, IL",10 or fewer,758
+,"WABASH, IL",10 or fewer,638
+,"UNION, IL",10 or fewer,559
+,"POTTAWATOMIE, KS",10 or fewer,512
+,"WILLIAMSON, IL",10 or fewer,450
+,"WALTON, FL",10 or fewer,401
+,"MILLS, IA",10 or fewer,540
+,"POWER, ID",10 or fewer,696
+,"VIGO, IN",10 or fewer,463
+,"LINCOLN, ID",10 or fewer,615
+,"TIFT, GA",10 or fewer,428
+,"LIBERTY, GA",10 or fewer,422
+,"COLQUITT, GA",10 or fewer,444
+,"GUTHRIE, IA",10 or fewer,474
+,"HOLMES, FL",10 or fewer,538
+,"LYON, KS",10 or fewer,485
+,"RANDOLPH, IL",10 or fewer,421
+,"EDGAR, IL",10 or fewer,528
+,"PERRY, IN",10 or fewer,479
+,"PULASKI, IL",10 or fewer,610
+,"JOHNSON, IL",10 or fewer,582
+,"SALINE, IL",10 or fewer,466
+,"MARION, IL",10 or fewer,533
+,"APPANOOSE, IA",10 or fewer,193
+,"TIPTON, IN",10 or fewer,573
+,"PUTNAM, IL",10 or fewer,206
+,"CLINCH, GA",10 or fewer,667
+,"LAURENS, GA",10 or fewer,354
+,"TAYLOR, GA",10 or fewer,358
+,"HENDERSON, IL",10 or fewer,683
+,"EARLY, GA",10 or fewer,600
+,"WABAUNSEE, KS",10 or fewer,604
+,"HUMBOLDT, IA",10 or fewer,551
+,"CARROLL, IL",10 or fewer,351
+,"THOMAS, GA",10 or fewer,359
+,"JACKSON, IL",10 or fewer,471
+,"CASS, IL",10 or fewer,502
+,"TOWNS, GA",10 or fewer,356
+,"CHICKASAW, IA",10 or fewer,264
+,"FOUNTAIN, IN",10 or fewer,518
+,"CRAWFORD, GA",10 or fewer,368
+,"THOMAS, KS",10 or fewer,50
+,"WARE, GA",10 or fewer,292
+,"COFFEE, GA",10 or fewer,331
+,"GLADES, FL",10 or fewer,413
+,"WRIGHT, IA",10 or fewer,381
+,"JEFFERSON, IA",10 or fewer,360
+,"ATCHISON, KS",10 or fewer,262
+,"ECHOLS, GA",10 or fewer,611
+,"HAMILTON, IA",10 or fewer,405
+,"JEFFERSON, FL",10 or fewer,98
+,"WASHINGTON, IL",10 or fewer,382
+,"HARDIN, IA",10 or fewer,382
+,"DONIPHAN, KS",10 or fewer,79
+,"CLARKE, IA",10 or fewer,363
+,"WINNESHIEK, IA",10 or fewer,418
+,"DICKINSON, KS",10 or fewer,112
+,"WASHINGTON, GA",10 or fewer,215
+,"MACON, GA",10 or fewer,308
+,"DECATUR, GA",10 or fewer,247
+,"MONROE, IL",10 or fewer,346
+,"EDWARDS, IL",10 or fewer,498
+,"BURKE, GA",10 or fewer,90
+,"BULLOCH, GA",10 or fewer,217
+,"EFFINGHAM, GA",10 or fewer,254
+,"OSCEOLA, IA",10 or fewer,428
+,"WAYNE, IL",10 or fewer,355
+,"FRANKLIN, IL",10 or fewer,265
+,"GREENE, IN",10 or fewer,285
+,"UNION, IA",10 or fewer,294
+,"ORANGE, IN",10 or fewer,277
+,"ADAMS, IL",10 or fewer,259
+,"BOURBON, KS",10 or fewer,180
+,"CHEROKEE, IA",10 or fewer,326
+,"WASHINGTON, FL",10 or fewer,256
+,"BRYAN, GA",10 or fewer,204
+,"CARROLL, IN",10 or fewer,219
+,"LAFAYETTE, FL",10 or fewer,275
+,"WINNEBAGO, IA",10 or fewer,190
+,"PUTNAM, IN",10 or fewer,271
+,"COFFEY, KS",10 or fewer,205
+,"LUCAS, IA",10 or fewer,275
+,"LAWRENCE, IN",10 or fewer,260
+,"JEFFERSON, IL",10 or fewer,249
+,"BUENA VISTA, IA",10 or fewer,249
+,"IDAHO, ID",10 or fewer,286
+,"PAGE, IA",10 or fewer,249
+,"SULLIVAN, IN",10 or fewer,291
+,"FLOYD, IA",10 or fewer,167
+,"MCDUFFIE, GA",10 or fewer,90
+,"TWIGGS, GA",10 or fewer,198
+,"GREENE, IL",10 or fewer,262
+,"SEMINOLE, GA",10 or fewer,273
+,"RUSH, IN",10 or fewer,295
+,"CLARK, IL",10 or fewer,275
+,"CLINTON, IN",10 or fewer,245
+,"CASS, IA",10 or fewer,260
+,"BRANTLEY, GA",10 or fewer,147
+,"MONTGOMERY, KS",10 or fewer,199
+,"MONONA, IA",10 or fewer,226
+,"CARROLL, IA",10 or fewer,204
+,"GREENE, IA",10 or fewer,248
+,"JEFFERSON, GA",10 or fewer,66
+,"VERMILLION, IN",10 or fewer,256
+,"POCAHONTAS, IA",10 or fewer,224
+,"GALLATIN, IL",10 or fewer,259
+,"SUMTER, GA",10 or fewer,170
+,"SALINE, KS",10 or fewer,175
+,"HARRISON, IA",10 or fewer,191
+,"DODGE, GA",10 or fewer,153
+,"POPE, IL",10 or fewer,280
+,"GRADY, GA",10 or fewer,90
+,"MONTGOMERY, IN",10 or fewer,209
+,"CARIBOU, ID",10 or fewer,247
+,"BEN HILL, GA",10 or fewer,173
+,"ADAIR, IA",10 or fewer,210
+,"BROWN, KS",10 or fewer,169
+,"ATKINSON, GA",10 or fewer,235
+,"CLAY, GA",10 or fewer,320
+,"DECATUR, IA",10 or fewer,200
+,"DICKINSON, IA",10 or fewer,214
+,"NEZ PERCE, ID",10 or fewer,113
+,"CRISP, GA",10 or fewer,152
+,"HANCOCK, IL",10 or fewer,186
+,"KOSSUTH, IA",10 or fewer,197
+,"BUTLER, KS",10 or fewer,158
+,"MARTIN, IN",10 or fewer,159
+,"CRAWFORD, KS",10 or fewer,184
+,"BLECKLEY, GA",10 or fewer,145
+,"JAY, IN",10 or fewer,195
+,"LEE, GA",10 or fewer,148
+,"PIERCE, GA",10 or fewer,117
+,"EMANUEL, GA",10 or fewer,93
+,"RENO, KS",10 or fewer,165
+,"NEWTON, IN",10 or fewer,196
+,"CRAWFORD, IA",10 or fewer,164
+,"BONNER, ID",10 or fewer,136
+,"WAYNE, GA",10 or fewer,131
+,"PAWNEE, KS",10 or fewer,228
+,"MADISON, ID",10 or fewer,137
+,"TOOMBS, GA",10 or fewer,138
+,"BLACKFORD, IN",10 or fewer,192
+,"VAN BUREN, IA",10 or fewer,153
+,"PULASKI, GA",10 or fewer,106
+,"CLAY, IA",10 or fewer,183
+,"WORTH, IA",10 or fewer,41
+,"WILKES, GA",10 or fewer,65
+,"MONTGOMERY, IA",10 or fewer,146
+,"FREMONT, IA",10 or fewer,168
+,"MONROE, IA",10 or fewer,166
+,"MARSHALL, KS",10 or fewer,145
+,"NEMAHA, KS",10 or fewer,148
+,"SAC, IA",10 or fewer,161
+,"JEFFERSON, ID",10 or fewer,127
+,"SHELBY, IA",10 or fewer,160
+,"HANCOCK, IA",10 or fewer,88
+,"WARREN, IN",10 or fewer,193
+,"FRANKLIN, IA",10 or fewer,79
+,"PERRY, IL",10 or fewer,165
+,"PIKE, IL",10 or fewer,143
+,"CALHOUN, FL",10 or fewer,109
+,"PULASKI, IN",10 or fewer,135
+,"HOWARD, IA",10 or fewer,126
+,"CLAY, IN",10 or fewer,145
+,"OWEN, IN",10 or fewer,169
+,"DAVIS, IA",10 or fewer,114
+,"FRANKLIN, FL",10 or fewer,70
+,"MITCHELL, GA",10 or fewer,101
+,"FRANKLIN, ID",10 or fewer,102
+,"NEOSHO, KS",10 or fewer,78
+,"IDA, IA",10 or fewer,127
+,"DOOLY, GA",10 or fewer,73
+,"WORTH, GA",10 or fewer,116
+,"STAFFORD, KS",10 or fewer,205
+,"TAYLOR, IA",10 or fewer,99
+,"SCHUYLER, IL",10 or fewer,107
+,"FINNEY, KS",10 or fewer,90
+,"HAMILTON, IL",10 or fewer,125
+,"ONEIDA, ID",10 or fewer,124
+,"WHITE, IN",10 or fewer,113
+,"APPLING, GA",10 or fewer,86
+,"CUSTER, ID",10 or fewer,125
+,"BENTON, IN",10 or fewer,130
+,"BEAR LAKE, ID",10 or fewer,103
+,"LIBERTY, FL",10 or fewer,27
+,"ELLIS, KS",10 or fewer,109
+,"LONG, GA",10 or fewer,90
+,"HARVEY, KS",10 or fewer,89
+,"GULF, FL",10 or fewer,89
+,"WAYNE, IA",10 or fewer,99
+,"MCINTOSH, GA",10 or fewer,70
+,"LINCOLN, GA",10 or fewer,63
+,"COWLEY, KS",10 or fewer,89
+,"TATTNALL, GA",10 or fewer,67
+,"HARDIN, IL",10 or fewer,104
+,"LABETTE, KS",10 or fewer,103
+,"MORRIS, KS",10 or fewer,60
+,"TALBOT, GA",10 or fewer,113
+,"WOODSON, KS",10 or fewer,32
+,"MCPHERSON, KS",10 or fewer,100
+,"MILLER, GA",10 or fewer,112
+,"WILCOX, GA",10 or fewer,67
+,"IRWIN, GA",10 or fewer,93
+,"TELFAIR, GA",10 or fewer,80
+,"CLAY, KS",10 or fewer,59
+,"RICE, KS",10 or fewer,102
+,"FORD, KS",10 or fewer,69
+,"SCREVEN, GA",10 or fewer,59
+,"JEFF DAVIS, GA",10 or fewer,70
+,"SHERMAN, KS",10 or fewer,57
+,"CAMAS, ID",10 or fewer,86
+,"SEWARD, KS",10 or fewer,69
+,"TURNER, GA",10 or fewer,68
+,"CALHOUN, IL",10 or fewer,97
+,"EMMET, IA",10 or fewer,86
+,"MITCHELL, IA",10 or fewer,60
+,"PARKE, IN",10 or fewer,81
+,"RINGGOLD, IA",10 or fewer,78
+,"FREMONT, ID",10 or fewer,78
+,"CALHOUN, GA",10 or fewer,88
+,"CHEROKEE, KS",10 or fewer,71
+,"BACON, GA",10 or fewer,62
+,"PALO ALTO, IA",10 or fewer,70
+,"TETON, ID",10 or fewer,73
+,"LEMHI, ID",10 or fewer,60
+,"JENKINS, GA",10 or fewer,31
+,"AUDUBON, IA",10 or fewer,86
+,"JOHNSON, GA",10 or fewer,40
+,"BENEWAH, ID",10 or fewer,38
+,"SCOTT, IL",10 or fewer,76
+,"RUSH, KS",10 or fewer,94
+,"TALIAFERRO, GA",10 or fewer,16
+,"MARION, GA",10 or fewer,62
+,"BROWN, IL",10 or fewer,49
+,"WARREN, GA",10 or fewer,31
+,"CLEARWATER, ID",10 or fewer,32
+,"LOGAN, KS",10 or fewer,21
+,"CANDLER, GA",10 or fewer,28
+,"EVANS, GA",10 or fewer,47
+,"RANDOLPH, GA",10 or fewer,48
+,"WASHINGTON, KS",10 or fewer,58
+,"ADAMS, IA",10 or fewer,56
+,"BAKER, GA",10 or fewer,75
+,"SUMNER, KS",10 or fewer,43
+,"MONTGOMERY, GA",10 or fewer,40
+,"TERRELL, GA",10 or fewer,36
+,"RAWLINS, KS",10 or fewer,17
+,"GREENWOOD, KS",10 or fewer,54
+,"QUITMAN, GA",10 or fewer,52
+,"TREUTLEN, GA",10 or fewer,39
+,"SHOSHONE, ID",10 or fewer,35
+,"WILSON, KS",10 or fewer,37
+,"RUSSELL, KS",10 or fewer,56
+,"BOUNDARY, ID",10 or fewer,43
+,"LEWIS, ID",10 or fewer,25
+,"ELLSWORTH, KS",10 or fewer,54
+,"BUTTE, ID",10 or fewer,54
+,"CHATTAHOOCHEE, GA",10 or fewer,44
+,"CLOUD, KS",10 or fewer,33
+,"GLASCOCK, GA",10 or fewer,17
+,"SCHLEY, GA",10 or fewer,31
+,"DECATUR, KS",10 or fewer,24
+,"MARION, KS",10 or fewer,16
+,"SHERIDAN, KS",10 or fewer,14
+,"WHEELER, GA",10 or fewer,21
+,"PRATT, KS",10 or fewer,38
+,"MORTON, KS",10 or fewer,19
+,"NORTON, KS",10 or fewer,25
+,"EDWARDS, KS",10 or fewer,36
+,"PHILLIPS, KS",10 or fewer,19
+,"REPUBLIC, KS",10 or fewer,25
+,"GRANT, KS",10 or fewer,33
+,"SMITH, KS",10 or fewer,27
+,"OTTAWA, KS",10 or fewer,10 or fewer
+,"STEWART, GA",10 or fewer,18
+,"CHEYENNE, KS",10 or fewer,23
+,"GOVE, KS",10 or fewer,15
+,"CHASE, KS",10 or fewer,27
+,"SCOTT, KS",10 or fewer,25
+,"ROOKS, KS",10 or fewer,21
+,"KINGMAN, KS",10 or fewer,25
+,"STEVENS, KS",10 or fewer,11
+,"MITCHELL, KS",10 or fewer,17
+,"JEWELL, KS",10 or fewer,14
+,"GRAY, KS",10 or fewer,13
+,"NESS, KS",10 or fewer,21
+,"CHAUTAUQUA, KS",10 or fewer,10 or fewer
+,"WALLACE, KS",10 or fewer,10 or fewer
+,"HARPER, KS",10 or fewer,11
+,"BARBER, KS",10 or fewer,15
+,"MEADE, KS",10 or fewer,10 or fewer
+,"LINCOLN, KS",10 or fewer,14
+,"KEARNY, KS",10 or fewer,12
+,"WEBSTER, GA",10 or fewer,10 or fewer
+,"HAMILTON, KS",10 or fewer,10 or fewer
+,"ELK, KS",10 or fewer,10 or fewer
+,"OSBORNE, KS",10 or fewer,10 or fewer
+,"TREGO, KS",10 or fewer,10 or fewer
+,"HASKELL, KS",10 or fewer,10 or fewer
+,"GREELEY, KS",10 or fewer,10 or fewer
+,"GRAHAM, KS",10 or fewer,10 or fewer
+,"WICHITA, KS",10 or fewer,10 or fewer
+,"STANTON, KS",10 or fewer,10 or fewer
+,"LANE, KS",10 or fewer,10 or fewer
+,"KIOWA, KS",10 or fewer,10 or fewer
+,"HODGEMAN, KS",10 or fewer,10 or fewer
+,"CLARK, KS",10 or fewer,10 or fewer
+,"COMANCHE, KS",10 or fewer,10 or fewer
+,"CLARK, ID",10 or fewer,10 or fewer
+,"KALAWAO, HI",10 or fewer,10 or fewer
+,None of the above,109,174735
+,Total,3074,3979750
+Jan 1 – Dec 31 2022,"COOK, IL",178,401839
+,"BROWARD, FL",94,191971
+,"ORANGE, FL",179,233822
+,"LEE, FL",170,149892
+,"FULTON, GA",58,128673
+,"DUVAL, FL",74,120746
+,"HONOLULU, HI",44,122171
+,"HILLSBOROUGH, FL",68,76816
+,"MIAMI-DADE, FL",27,107279
+,"MARION, IN",77,124861
+,"COBB, GA",91,107341
+,"DEKALB, GA",33,74510
+,"ADA, ID",103,77800
+,"VOLUSIA, FL",108,94337
+,"LAKE, FL",118,86396
+,"OSCEOLA, FL",41,75734
+,"POLK, IA",52,50629
+,"POLK, FL",61,60164
+,"LAKE, IN",29,54048
+,"GWINNETT, GA",20,42439
+,"SEMINOLE, FL",48,55762
+,"WINNEBAGO, IL",48,58259
+,"ALLEN, IN",35,54075
+,"LAKE, IL",43,45615
+,"JOHNSON, KS",29,28919
+,"DUPAGE, IL",24,35299
+,"MARION, FL",12,21244
+,"LINN, IA",81,48455
+,"ALACHUA, FL",21,42190
+,"KANE, IL",26,43466
+,"PINELLAS, FL",28,34685
+,"HALL, GA",38,39765
+,"PASCO, FL",10 or fewer,13863
+,"CANYON, ID",44,43798
+,"PEORIA, IL",57,38787
+,"CHAMPAIGN, IL",33,37558
+,"SHAWNEE, KS",75,36908
+,"DOUGLAS, GA",29,32900
+,"PAULDING, GA",31,32175
+,"COLLIER, FL",24,28198
+,"SAINT LUCIE, FL",10 or fewer,4926
+,"PALM BEACH, FL",10 or fewer,12464
+,"VANDERBURGH, IN",53,28432
+,"LOWNDES, GA",29,28408
+,"WYANDOTTE, KS",20,23813
+,"MCLEAN, IL",37,27923
+,"ROCK ISLAND, IL",36,26530
+,"SAINT CLAIR, IL",21,21423
+,"WILL, IL",10 or fewer,14371
+,"CLAYTON, GA",15,19266
+,"TAZEWELL, IL",59,25829
+,"SAINT JOHNS, FL",10 or fewer,13334
+,"MCHENRY, IL",23,19299
+,"CLARK, IN",23,20895
+,"CHEROKEE, GA",10 or fewer,15995
+,"SANGAMON, IL",21,21937
+,"CLAY, FL",14,16464
+,"SUMTER, FL",48,18926
+,"JOHNSON, IA",21,12989
+,"FLAGLER, FL",24,20976
+,"HENRY, GA",10 or fewer,14885
+,"ST JOSEPH, IN",38,22949
+,"MADISON, IL",31,18755
+,"HAWAII, HI",10 or fewer,10710
+,"LA SALLE, IL",23,17493
+,"SCOTT, IA",22,15730
+,"VERMILION, IL",28,21660
+,"MARTIN, FL",10 or fewer,1807
+,"TWIN FALLS, ID",23,17183
+,"BREVARD, FL",10 or fewer,10230
+,"TROUP, GA",45,20466
+,"NASSAU, FL",17,14332
+,"INDIAN RIVER, FL",10 or fewer,7395
+,"BLACK HAWK, IA",22,15128
+,"JOHNSON, IN",11,13636
+,"BIBB, GA",35,17960
+,"BARROW, GA",13,16106
+,"WOODBURY, IA",23,14436
+,"KENDALL, IL",13,15343
+,"BARTHOLOMEW, IN",21,17568
+,"FLOYD, GA",10 or fewer,9285
+,"SPALDING, GA",22,14934
+,"MADISON, IN",14,16580
+,"MACON, IL",10 or fewer,14676
+,"HIGHLANDS, FL",10 or fewer,4296
+,"FLOYD, IN",20,14519
+,"BANNOCK, ID",10 or fewer,13974
+,"HAMILTON, IN",10 or fewer,9188
+,"DUBUQUE, IA",34,10980
+,"CITRUS, FL",10 or fewer,3747
+,"JACKSON, GA",10 or fewer,10556
+,"KAUAI, HI",12,11891
+,"WHITFIELD, GA",10 or fewer,2814
+,"HOWARD, IN",10 or fewer,12345
+,"HERNANDO, FL",10 or fewer,3258
+,"FORSYTH, GA",10 or fewer,7499
+,"LEON, FL",10 or fewer,2025
+,"PORTER, IN",10 or fewer,7661
+,"KNOX, IL",16,12854
+,"BOONE, IL",10 or fewer,10578
+,"BARTOW, GA",10 or fewer,5873
+,"WAYNE, IN",10 or fewer,14206
+,"DEARBORN, IN",17,11345
+,"POLK, GA",10 or fewer,8708
+,"WARRICK, IN",18,8052
+,"HOUSTON, GA",17,7200
+,"DALLAS, IA",10 or fewer,6276
+,"KNOX, IN",24,10059
+,"LEAVENWORTH, KS",10 or fewer,4173
+,"NOBLE, IN",10 or fewer,9059
+,"CARROLL, GA",10 or fewer,6075
+,"GORDON, GA",10 or fewer,1662
+,"KOSCIUSKO, IN",10 or fewer,7892
+,"HABERSHAM, GA",10 or fewer,4190
+,"MUSCATINE, IA",15,8386
+,"CLARKE, GA",10 or fewer,4331
+,"WALKER, GA",10 or fewer,5624
+,"MARSHALL, IA",15,8098
+,"LEVY, FL",10 or fewer,6785
+,"RICHMOND, GA",10 or fewer,1537
+,"ELMORE, ID",20,7525
+,"NEWTON, GA",10 or fewer,5185
+,"CHARLOTTE, FL",10 or fewer,4830
+,"WEBSTER, IA",14,7398
+,"HENRY, IL",17,7176
+,"COWETA, GA",10 or fewer,4611
+,"CATOOSA, GA",10 or fewer,5224
+,"HUNTINGTON, IN",10 or fewer,7137
+,"HANCOCK, IN",10 or fewer,5490
+,"LIVINGSTON, IL",14,7082
+,"BALDWIN, GA",10 or fewer,8509
+,"PUTNAM, FL",10 or fewer,4887
+,"EFFINGHAM, IL",10 or fewer,7084
+,"WOODFORD, IL",16,6644
+,"WALTON, GA",10 or fewer,4288
+,"WHITLEY, IN",10 or fewer,6425
+,"BUTTS, GA",10 or fewer,6466
+,"GIBSON, IN",18,7255
+,"ROCKDALE, GA",10 or fewer,4373
+,"LUMPKIN, GA",10 or fewer,6258
+,"SARASOTA, FL",10 or fewer,3518
+,"WABASH, IN",10 or fewer,6085
+,"MANATEE, FL",10 or fewer,3507
+,"COLUMBIA, FL",10 or fewer,4119
+,"CLINTON, IL",10 or fewer,6183
+,"MURRAY, GA",10 or fewer,840
+,"MARSHALL, IN",11,7748
+,"WHITE, GA",10 or fewer,4555
+,"WARREN, IA",10 or fewer,4111
+,"FAYETTE, GA",10 or fewer,3556
+,"ELKHART, IN",10 or fewer,4813
+,"LAGRANGE, IN",10 or fewer,4965
+,"PAYETTE, ID",10 or fewer,5373
+,"HARRISON, IN",10 or fewer,4521
+,"JEROME, ID",10 or fewer,4901
+,"HENDRY, FL",10 or fewer,4212
+,"BUREAU, IL",11,4587
+,"PEACH, GA",10 or fewer,5455
+,"BLAINE, ID",10 or fewer,4037
+,"CHATTOOGA, GA",10 or fewer,2164
+,"OGLE, IL",10 or fewer,3571
+,"MACOUPIN, IL",10 or fewer,4246
+,"CAMDEN, GA",10 or fewer,2922
+,"FRANKLIN, GA",10 or fewer,2382
+,"GEARY, KS",10 or fewer,650
+,"DAWSON, GA",10 or fewer,3286
+,"BERRIEN, GA",10 or fewer,5171
+,"FAYETTE, IN",10 or fewer,6028
+,"HENDRICKS, IN",10 or fewer,2887
+,"POSEY, IN",10 or fewer,3498
+,"HART, GA",10 or fewer,2421
+,"HARDEE, FL",10 or fewer,1146
+,"MONTGOMERY, IL",10 or fewer,4188
+,"DEKALB, IL",10 or fewer,2985
+,"BARTON, KS",10 or fewer,4302
+,"BANKS, GA",10 or fewer,2907
+,"COLUMBIA, GA",10 or fewer,1112
+,"POTTAWATTAMIE, IA",10 or fewer,2426
+,"MAUI, HI",10 or fewer,3282
+,"WARREN, IL",10 or fewer,4089
+,"CLINTON, IA",10 or fewer,1355
+,"BENTON, IA",10 or fewer,2961
+,"STEPHENS, GA",10 or fewer,1951
+,"SUWANNEE, FL",10 or fewer,2129
+,"GREENE, GA",10 or fewer,1632
+,"JASPER, IA",10 or fewer,1977
+,"DELAWARE, IN",10 or fewer,2579
+,"RICHLAND, IL",10 or fewer,3739
+,"JONES, IA",10 or fewer,3032
+,"SCOTT, IN",10 or fewer,1483
+,"FRANKLIN, KS",10 or fewer,617
+,"POWESHIEK, IA",10 or fewer,3328
+,"MUSCOGEE, GA",10 or fewer,1870
+,"ESCAMBIA, FL",10 or fewer,1738
+,"MAHASKA, IA",10 or fewer,3372
+,"BRADFORD, FL",10 or fewer,2150
+,"BOND, IL",10 or fewer,3898
+,"STEUBEN, IN",10 or fewer,2385
+,"WASHINGTON, IN",10 or fewer,2312
+,"DOUGLAS, KS",10 or fewer,1475
+,"SIOUX, IA",10 or fewer,2270
+,"LAMAR, GA",10 or fewer,2238
+,"SHELBY, IL",10 or fewer,3325
+,"OSAGE, KS",10 or fewer,2232
+,"RIPLEY, IN",10 or fewer,2445
+,"JEFFERSON, IN",10 or fewer,1158
+,"TAMA, IA",10 or fewer,2807
+,"DOUGLAS, IL",10 or fewer,2348
+,"CHATHAM, GA",10 or fewer,1520
+,"BAKER, FL",10 or fewer,1747
+,"MORGAN, IN",10 or fewer,1724
+,"MIAMI, IN",10 or fewer,2012
+,"SEDGWICK, KS",10 or fewer,1359
+,"FULTON, IL",10 or fewer,1915
+,"COOK, GA",10 or fewer,2422
+,"PUTNAM, GA",10 or fewer,1561
+,"PIKE, GA",10 or fewer,1846
+,"MIAMI, KS",10 or fewer,833
+,"LANIER, GA",10 or fewer,3247
+,"MERIWETHER, GA",10 or fewer,2315
+,"FRANKLIN, IN",10 or fewer,2448
+,"FAYETTE, IA",10 or fewer,1849
+,"OBRIEN, IA",10 or fewer,2195
+,"OKALOOSA, FL",10 or fewer,1327
+,"HARALSON, GA",10 or fewer,1663
+,"CEDAR, IA",10 or fewer,1836
+,"CHRISTIAN, IL",10 or fewer,1865
+,"GILCHRIST, FL",10 or fewer,1858
+,"CERRO GORDO, IA",10 or fewer,395
+,"MASSAC, IL",10 or fewer,2090
+,"MARSHALL, IL",10 or fewer,2226
+,"MERCER, IL",10 or fewer,2092
+,"VALLEY, ID",10 or fewer,2085
+,"LATAH, ID",10 or fewer,218
+,"MINIDOKA, ID",10 or fewer,590
+,"COLES, IL",10 or fewer,1522
+,"WASHINGTON, IA",10 or fewer,1394
+,"LAWRENCE, IL",10 or fewer,2139
+,"JENNINGS, IN",10 or fewer,1921
+,"DIXIE, FL",10 or fewer,1650
+,"MADISON, GA",10 or fewer,1039
+,"JACKSON, FL",10 or fewer,1696
+,"GRANT, IN",10 or fewer,1524
+,"GEM, ID",10 or fewer,1747
+,"JACKSON, IN",10 or fewer,1602
+,"STORY, IA",10 or fewer,1302
+,"BAY, FL",10 or fewer,1153
+,"JEFFERSON, KS",10 or fewer,1707
+,"GOODING, ID",10 or fewer,1732
+,"DAVIESS, IN",10 or fewer,1484
+,"BREMER, IA",10 or fewer,1410
+,"BROOKS, GA",10 or fewer,1617
+,"SPENCER, IN",10 or fewer,1498
+,"RABUN, GA",10 or fewer,1013
+,"STEPHENSON, IL",10 or fewer,1245
+,"FAYETTE, IL",10 or fewer,1918
+,"PIATT, IL",10 or fewer,1479
+,"UNION, FL",10 or fewer,1346
+,"OCONEE, GA",10 or fewer,948
+,"LA PORTE, IN",10 or fewer,1272
+,"PLYMOUTH, IA",10 or fewer,1337
+,"IROQUOIS, IL",10 or fewer,1582
+,"SANTA ROSA, FL",10 or fewer,1030
+,"DADE, GA",10 or fewer,1387
+,"LOGAN, IL",10 or fewer,1320
+,"GADSDEN, FL",10 or fewer,308
+,"OWYHEE, ID",10 or fewer,1686
+,"MONROE, GA",10 or fewer,1344
+,"BINGHAM, ID",10 or fewer,1456
+,"IOWA, IA",10 or fewer,1112
+,"PICKENS, GA",10 or fewer,994
+,"BUCHANAN, IA",10 or fewer,1145
+,"CASSIA, ID",10 or fewer,651
+,"WAPELLO, IA",10 or fewer,1111
+,"KANKAKEE, IL",10 or fewer,1103
+,"WHITESIDE, IL",10 or fewer,951
+,"ANDERSON, KS",10 or fewer,1530
+,"FORD, IL",10 or fewer,1327
+,"MADISON, FL",10 or fewer,990
+,"CRAWFORD, IL",10 or fewer,1195
+,"WELLS, IN",10 or fewer,1147
+,"LEE, IL",10 or fewer,1047
+,"MONROE, FL",10 or fewer,799
+,"GLYNN, GA",10 or fewer,786
+,"JONES, GA",10 or fewer,1456
+,"DUBOIS, IN",10 or fewer,657
+,"ALLEN, KS",10 or fewer,943
+,"GILMER, GA",10 or fewer,766
+,"MASON, IL",10 or fewer,1312
+,"JACKSON, IA",10 or fewer,863
+,"DEKALB, IN",10 or fewer,1651
+,"DES MOINES, IA",10 or fewer,821
+,"HARRIS, GA",10 or fewer,1214
+,"JACKSON, KS",10 or fewer,1105
+,"JASPER, IL",10 or fewer,1498
+,"UNION, IN",10 or fewer,1694
+,"PIKE, IN",10 or fewer,1161
+,"SHELBY, IN",10 or fewer,930
+,"OKEECHOBEE, FL",10 or fewer,425
+,"BOONE, IN",10 or fewer,814
+,"MOULTRIE, IL",10 or fewer,1159
+,"UPSON, GA",10 or fewer,854
+,"LOUISA, IA",10 or fewer,1103
+,"RANDOLPH, IN",10 or fewer,1335
+,"HAMILTON, FL",10 or fewer,865
+,"WAKULLA, FL",10 or fewer,231
+,"ELBERT, GA",10 or fewer,654
+,"TIPPECANOE, IN",10 or fewer,748
+,"GRUNDY, IL",10 or fewer,788
+,"BONNEVILLE, ID",10 or fewer,705
+,"MARION, IA",10 or fewer,770
+,"JO DAVIESS, IL",10 or fewer,805
+,"HENRY, IN",10 or fewer,1105
+,"ADAMS, IN",10 or fewer,877
+,"HEARD, GA",10 or fewer,1123
+,"WHITE, IL",10 or fewer,884
+,"RILEY, KS",10 or fewer,600
+,"BROWN, IN",10 or fewer,1144
+,"UNION, GA",10 or fewer,625
+,"MADISON, IA",10 or fewer,804
+,"DECATUR, IN",10 or fewer,1025
+,"WILKINSON, GA",10 or fewer,1352
+,"FANNIN, GA",10 or fewer,610
+,"CASS, IN",10 or fewer,859
+,"CLAY, IL",10 or fewer,1081
+,"STARKE, IN",10 or fewer,1299
+,"HANCOCK, GA",10 or fewer,1156
+,"SWITZERLAND, IN",10 or fewer,1233
+,"STARK, IL",10 or fewer,1229
+,"WASHINGTON, ID",10 or fewer,945
+,"MORGAN, IL",10 or fewer,844
+,"LEE, IA",10 or fewer,640
+,"MONROE, IN",10 or fewer,665
+,"KOOTENAI, ID",10 or fewer,587
+,"MORGAN, GA",10 or fewer,537
+,"ALLAMAKEE, IA",10 or fewer,733
+,"HENRY, IA",10 or fewer,595
+,"OHIO, IN",10 or fewer,1289
+,"JERSEY, IL",10 or fewer,844
+,"DOUGHERTY, GA",10 or fewer,554
+,"BUTLER, IA",10 or fewer,706
+,"CHARLTON, GA",10 or fewer,642
+,"LYON, IA",10 or fewer,599
+,"BOISE, ID",10 or fewer,930
+,"DELAWARE, IA",10 or fewer,639
+,"LINN, KS",10 or fewer,439
+,"MCDONOUGH, IL",10 or fewer,780
+,"CALHOUN, IA",10 or fewer,766
+,"GRUNDY, IA",10 or fewer,722
+,"CRAWFORD, IN",10 or fewer,742
+,"JASPER, IN",10 or fewer,567
+,"MENARD, IL",10 or fewer,766
+,"JASPER, GA",10 or fewer,657
+,"ALEXANDER, IL",10 or fewer,881
+,"KEOKUK, IA",10 or fewer,700
+,"DESOTO, FL",10 or fewer,539
+,"BOONE, IA",10 or fewer,543
+,"FULTON, IN",10 or fewer,854
+,"OGLETHORPE, GA",10 or fewer,408
+,"TAYLOR, FL",10 or fewer,395
+,"CLAYTON, IA",10 or fewer,476
+,"ADAMS, ID",10 or fewer,835
+,"CUMBERLAND, IL",10 or fewer,761
+,"WABASH, IL",10 or fewer,700
+,"UNION, IL",10 or fewer,582
+,"POTTAWATOMIE, KS",10 or fewer,560
+,"WILLIAMSON, IL",10 or fewer,512
+,"WALTON, FL",10 or fewer,447
+,"MILLS, IA",10 or fewer,621
+,"POWER, ID",10 or fewer,673
+,"VIGO, IN",10 or fewer,514
+,"LINCOLN, ID",10 or fewer,672
+,"TIFT, GA",10 or fewer,506
+,"LIBERTY, GA",10 or fewer,526
+,"COLQUITT, GA",10 or fewer,430
+,"GUTHRIE, IA",10 or fewer,524
+,"HOLMES, FL",10 or fewer,664
+,"LYON, KS",10 or fewer,481
+,"RANDOLPH, IL",10 or fewer,458
+,"EDGAR, IL",10 or fewer,546
+,"PERRY, IN",10 or fewer,452
+,"PULASKI, IL",10 or fewer,681
+,"JOHNSON, IL",10 or fewer,542
+,"SALINE, IL",10 or fewer,438
+,"MARION, IL",10 or fewer,516
+,"APPANOOSE, IA",10 or fewer,198
+,"TIPTON, IN",10 or fewer,565
+,"PUTNAM, IL",10 or fewer,330
+,"CLINCH, GA",10 or fewer,571
+,"LAURENS, GA",10 or fewer,478
+,"TAYLOR, GA",10 or fewer,788
+,"HENDERSON, IL",10 or fewer,706
+,"EARLY, GA",10 or fewer,734
+,"WABAUNSEE, KS",10 or fewer,603
+,"HUMBOLDT, IA",10 or fewer,508
+,"CARROLL, IL",10 or fewer,288
+,"THOMAS, GA",10 or fewer,392
+,"JACKSON, IL",10 or fewer,465
+,"CASS, IL",10 or fewer,499
+,"TOWNS, GA",10 or fewer,428
+,"CHICKASAW, IA",10 or fewer,280
+,"FOUNTAIN, IN",10 or fewer,543
+,"CRAWFORD, GA",10 or fewer,704
+,"THOMAS, KS",10 or fewer,50
+,"WARE, GA",10 or fewer,404
+,"COFFEE, GA",10 or fewer,367
+,"GLADES, FL",10 or fewer,486
+,"WRIGHT, IA",10 or fewer,386
+,"JEFFERSON, IA",10 or fewer,343
+,"ATCHISON, KS",10 or fewer,264
+,"ECHOLS, GA",10 or fewer,637
+,"HAMILTON, IA",10 or fewer,428
+,"JEFFERSON, FL",10 or fewer,103
+,"WASHINGTON, IL",10 or fewer,434
+,"HARDIN, IA",10 or fewer,381
+,"DONIPHAN, KS",10 or fewer,61
+,"CLARKE, IA",10 or fewer,300
+,"WINNESHIEK, IA",10 or fewer,396
+,"DICKINSON, KS",10 or fewer,136
+,"WASHINGTON, GA",10 or fewer,415
+,"MACON, GA",10 or fewer,555
+,"DECATUR, GA",10 or fewer,271
+,"MONROE, IL",10 or fewer,345
+,"EDWARDS, IL",10 or fewer,487
+,"BURKE, GA",10 or fewer,109
+,"BULLOCH, GA",10 or fewer,283
+,"EFFINGHAM, GA",10 or fewer,268
+,"OSCEOLA, IA",10 or fewer,448
+,"WAYNE, IL",10 or fewer,317
+,"FRANKLIN, IL",10 or fewer,305
+,"GREENE, IN",10 or fewer,316
+,"UNION, IA",10 or fewer,223
+,"ORANGE, IN",10 or fewer,271
+,"ADAMS, IL",10 or fewer,264
+,"BOURBON, KS",10 or fewer,215
+,"CHEROKEE, IA",10 or fewer,294
+,"WASHINGTON, FL",10 or fewer,333
+,"BRYAN, GA",10 or fewer,259
+,"CARROLL, IN",10 or fewer,316
+,"LAFAYETTE, FL",10 or fewer,270
+,"WINNEBAGO, IA",10 or fewer,175
+,"PUTNAM, IN",10 or fewer,261
+,"COFFEY, KS",10 or fewer,214
+,"LUCAS, IA",10 or fewer,277
+,"LAWRENCE, IN",10 or fewer,275
+,"JEFFERSON, IL",10 or fewer,263
+,"BUENA VISTA, IA",10 or fewer,272
+,"IDAHO, ID",10 or fewer,342
+,"PAGE, IA",10 or fewer,234
+,"SULLIVAN, IN",10 or fewer,301
+,"FLOYD, IA",10 or fewer,151
+,"MCDUFFIE, GA",10 or fewer,109
+,"TWIGGS, GA",10 or fewer,436
+,"GREENE, IL",10 or fewer,252
+,"SEMINOLE, GA",10 or fewer,357
+,"RUSH, IN",10 or fewer,354
+,"CLARK, IL",10 or fewer,261
+,"CLINTON, IN",10 or fewer,261
+,"CASS, IA",10 or fewer,222
+,"BRANTLEY, GA",10 or fewer,197
+,"MONTGOMERY, KS",10 or fewer,224
+,"MONONA, IA",10 or fewer,243
+,"CARROLL, IA",10 or fewer,195
+,"GREENE, IA",10 or fewer,227
+,"JEFFERSON, GA",10 or fewer,95
+,"VERMILLION, IN",10 or fewer,302
+,"POCAHONTAS, IA",10 or fewer,218
+,"GALLATIN, IL",10 or fewer,230
+,"SUMTER, GA",10 or fewer,239
+,"SALINE, KS",10 or fewer,179
+,"HARRISON, IA",10 or fewer,224
+,"DODGE, GA",10 or fewer,226
+,"POPE, IL",10 or fewer,275
+,"GRADY, GA",10 or fewer,124
+,"MONTGOMERY, IN",10 or fewer,215
+,"CARIBOU, ID",10 or fewer,247
+,"BEN HILL, GA",10 or fewer,184
+,"ADAIR, IA",10 or fewer,195
+,"BROWN, KS",10 or fewer,192
+,"ATKINSON, GA",10 or fewer,225
+,"CLAY, GA",10 or fewer,361
+,"DECATUR, IA",10 or fewer,194
+,"DICKINSON, IA",10 or fewer,198
+,"NEZ PERCE, ID",10 or fewer,158
+,"CRISP, GA",10 or fewer,244
+,"HANCOCK, IL",10 or fewer,190
+,"KOSSUTH, IA",10 or fewer,210
+,"BUTLER, KS",10 or fewer,169
+,"MARTIN, IN",10 or fewer,151
+,"CRAWFORD, KS",10 or fewer,166
+,"BLECKLEY, GA",10 or fewer,217
+,"JAY, IN",10 or fewer,188
+,"LEE, GA",10 or fewer,190
+,"PIERCE, GA",10 or fewer,149
+,"EMANUEL, GA",10 or fewer,102
+,"RENO, KS",10 or fewer,168
+,"NEWTON, IN",10 or fewer,196
+,"CRAWFORD, IA",10 or fewer,181
+,"BONNER, ID",10 or fewer,167
+,"WAYNE, GA",10 or fewer,163
+,"PAWNEE, KS",10 or fewer,253
+,"MADISON, ID",10 or fewer,153
+,"TOOMBS, GA",10 or fewer,166
+,"BLACKFORD, IN",10 or fewer,180
+,"VAN BUREN, IA",10 or fewer,142
+,"PULASKI, GA",10 or fewer,169
+,"CLAY, IA",10 or fewer,151
+,"WORTH, IA",10 or fewer,46
+,"WILKES, GA",10 or fewer,111
+,"MONTGOMERY, IA",10 or fewer,153
+,"FREMONT, IA",10 or fewer,151
+,"MONROE, IA",10 or fewer,158
+,"MARSHALL, KS",10 or fewer,127
+,"NEMAHA, KS",10 or fewer,134
+,"SAC, IA",10 or fewer,154
+,"JEFFERSON, ID",10 or fewer,128
+,"SHELBY, IA",10 or fewer,141
+,"HANCOCK, IA",10 or fewer,95
+,"WARREN, IN",10 or fewer,213
+,"FRANKLIN, IA",10 or fewer,100
+,"PERRY, IL",10 or fewer,178
+,"PIKE, IL",10 or fewer,145
+,"CALHOUN, FL",10 or fewer,135
+,"PULASKI, IN",10 or fewer,179
+,"HOWARD, IA",10 or fewer,136
+,"CLAY, IN",10 or fewer,138
+,"OWEN, IN",10 or fewer,119
+,"DAVIS, IA",10 or fewer,112
+,"FRANKLIN, FL",10 or fewer,72
+,"MITCHELL, GA",10 or fewer,137
+,"FRANKLIN, ID",10 or fewer,108
+,"NEOSHO, KS",10 or fewer,116
+,"IDA, IA",10 or fewer,116
+,"DOOLY, GA",10 or fewer,142
+,"WORTH, GA",10 or fewer,139
+,"STAFFORD, KS",10 or fewer,212
+,"TAYLOR, IA",10 or fewer,88
+,"SCHUYLER, IL",10 or fewer,125
+,"FINNEY, KS",10 or fewer,117
+,"HAMILTON, IL",10 or fewer,144
+,"ONEIDA, ID",10 or fewer,135
+,"WHITE, IN",10 or fewer,121
+,"APPLING, GA",10 or fewer,112
+,"CUSTER, ID",10 or fewer,121
+,"BENTON, IN",10 or fewer,123
+,"BEAR LAKE, ID",10 or fewer,122
+,"LIBERTY, FL",10 or fewer,35
+,"ELLIS, KS",10 or fewer,99
+,"LONG, GA",10 or fewer,123
+,"HARVEY, KS",10 or fewer,89
+,"GULF, FL",10 or fewer,83
+,"WAYNE, IA",10 or fewer,103
+,"MCINTOSH, GA",10 or fewer,99
+,"LINCOLN, GA",10 or fewer,52
+,"COWLEY, KS",10 or fewer,95
+,"TATTNALL, GA",10 or fewer,79
+,"HARDIN, IL",10 or fewer,119
+,"LABETTE, KS",10 or fewer,91
+,"MORRIS, KS",10 or fewer,52
+,"TALBOT, GA",10 or fewer,114
+,"WOODSON, KS",10 or fewer,108
+,"MCPHERSON, KS",10 or fewer,86
+,"MILLER, GA",10 or fewer,140
+,"WILCOX, GA",10 or fewer,103
+,"IRWIN, GA",10 or fewer,102
+,"TELFAIR, GA",10 or fewer,89
+,"CLAY, KS",10 or fewer,46
+,"RICE, KS",10 or fewer,131
+,"FORD, KS",10 or fewer,74
+,"SCREVEN, GA",10 or fewer,65
+,"JEFF DAVIS, GA",10 or fewer,81
+,"SHERMAN, KS",10 or fewer,52
+,"CAMAS, ID",10 or fewer,112
+,"SEWARD, KS",10 or fewer,70
+,"TURNER, GA",10 or fewer,87
+,"CALHOUN, IL",10 or fewer,95
+,"EMMET, IA",10 or fewer,69
+,"MITCHELL, IA",10 or fewer,58
+,"PARKE, IN",10 or fewer,80
+,"RINGGOLD, IA",10 or fewer,71
+,"FREMONT, ID",10 or fewer,80
+,"CALHOUN, GA",10 or fewer,111
+,"CHEROKEE, KS",10 or fewer,69
+,"BACON, GA",10 or fewer,79
+,"PALO ALTO, IA",10 or fewer,67
+,"TETON, ID",10 or fewer,78
+,"LEMHI, ID",10 or fewer,84
+,"JENKINS, GA",10 or fewer,39
+,"AUDUBON, IA",10 or fewer,78
+,"JOHNSON, GA",10 or fewer,53
+,"BENEWAH, ID",10 or fewer,39
+,"SCOTT, IL",10 or fewer,72
+,"RUSH, KS",10 or fewer,84
+,"TALIAFERRO, GA",10 or fewer,44
+,"MARION, GA",10 or fewer,76
+,"BROWN, IL",10 or fewer,42
+,"WARREN, GA",10 or fewer,30
+,"CLEARWATER, ID",10 or fewer,42
+,"LOGAN, KS",10 or fewer,14
+,"CANDLER, GA",10 or fewer,40
+,"EVANS, GA",10 or fewer,51
+,"RANDOLPH, GA",10 or fewer,73
+,"WASHINGTON, KS",10 or fewer,44
+,"ADAMS, IA",10 or fewer,58
+,"BAKER, GA",10 or fewer,66
+,"SUMNER, KS",10 or fewer,47
+,"MONTGOMERY, GA",10 or fewer,42
+,"TERRELL, GA",10 or fewer,41
+,"RAWLINS, KS",10 or fewer,26
+,"GREENWOOD, KS",10 or fewer,45
+,"QUITMAN, GA",10 or fewer,67
+,"TREUTLEN, GA",10 or fewer,42
+,"SHOSHONE, ID",10 or fewer,43
+,"WILSON, KS",10 or fewer,36
+,"RUSSELL, KS",10 or fewer,36
+,"BOUNDARY, ID",10 or fewer,35
+,"LEWIS, ID",10 or fewer,44
+,"ELLSWORTH, KS",10 or fewer,35
+,"BUTTE, ID",10 or fewer,29
+,"CHATTAHOOCHEE, GA",10 or fewer,37
+,"CLOUD, KS",10 or fewer,31
+,"GLASCOCK, GA",10 or fewer,28
+,"SCHLEY, GA",10 or fewer,45
+,"DECATUR, KS",10 or fewer,26
+,"MARION, KS",10 or fewer,33
+,"SHERIDAN, KS",10 or fewer,13
+,"WHEELER, GA",10 or fewer,31
+,"PRATT, KS",10 or fewer,29
+,"MORTON, KS",10 or fewer,24
+,"NORTON, KS",10 or fewer,23
+,"EDWARDS, KS",10 or fewer,40
+,"PHILLIPS, KS",10 or fewer,30
+,"REPUBLIC, KS",10 or fewer,18
+,"GRANT, KS",10 or fewer,15
+,"SMITH, KS",10 or fewer,27
+,"OTTAWA, KS",10 or fewer,27
+,"STEWART, GA",10 or fewer,24
+,"CHEYENNE, KS",10 or fewer,16
+,"GOVE, KS",10 or fewer,10 or fewer
+,"CHASE, KS",10 or fewer,17
+,"SCOTT, KS",10 or fewer,14
+,"ROOKS, KS",10 or fewer,18
+,"KINGMAN, KS",10 or fewer,14
+,"STEVENS, KS",10 or fewer,16
+,"MITCHELL, KS",10 or fewer,15
+,"JEWELL, KS",10 or fewer,16
+,"GRAY, KS",10 or fewer,18
+,"NESS, KS",10 or fewer,21
+,"CHAUTAUQUA, KS",10 or fewer,10 or fewer
+,"WALLACE, KS",10 or fewer,10 or fewer
+,"HARPER, KS",10 or fewer,14
+,"BARBER, KS",10 or fewer,18
+,"MEADE, KS",10 or fewer,13
+,"LINCOLN, KS",10 or fewer,11
+,"KEARNY, KS",10 or fewer,10 or fewer
+,"WEBSTER, GA",10 or fewer,16
+,"HAMILTON, KS",10 or fewer,10 or fewer
+,"ELK, KS",10 or fewer,10 or fewer
+,"OSBORNE, KS",10 or fewer,10 or fewer
+,"TREGO, KS",10 or fewer,10 or fewer
+,"HASKELL, KS",10 or fewer,10 or fewer
+,"GREELEY, KS",10 or fewer,10 or fewer
+,"GRAHAM, KS",10 or fewer,10 or fewer
+,"WICHITA, KS",10 or fewer,10 or fewer
+,"STANTON, KS",10 or fewer,10 or fewer
+,"LANE, KS",10 or fewer,10 or fewer
+,"KIOWA, KS",10 or fewer,10 or fewer
+,"HODGEMAN, KS",10 or fewer,10 or fewer
+,"CLARK, KS",10 or fewer,10 or fewer
+,"COMANCHE, KS",10 or fewer,10 or fewer
+,"CLARK, ID",10 or fewer,10 or fewer
+,"KALAWAO, HI",10 or fewer,10 or fewer
+,None of the above,187,249913
+,Total,4554,5014024
+Jan 1 – Dec 31 2023,"COOK, IL",160,424074
+,"BROWARD, FL",184,222292
+,"ORANGE, FL",303,316651
+,"LEE, FL",248,159457
+,"FULTON, GA",117,147534
+,"DUVAL, FL",254,198556
+,"HONOLULU, HI",48,131085
+,"HILLSBOROUGH, FL",197,149880
+,"MIAMI-DADE, FL",62,116627
+,"MARION, IN",84,131789
+,"COBB, GA",83,116943
+,"DEKALB, GA",88,117881
+,"ADA, ID",91,82109
+,"VOLUSIA, FL",165,115403
+,"LAKE, FL",166,107094
+,"OSCEOLA, FL",113,102669
+,"POLK, IA",64,52710
+,"POLK, FL",110,78965
+,"LAKE, IN",42,56858
+,"GWINNETT, GA",40,52692
+,"SEMINOLE, FL",107,82682
+,"WINNEBAGO, IL",42,58724
+,"ALLEN, IN",47,53521
+,"LAKE, IL",20,49252
+,"JOHNSON, KS",80,47976
+,"DUPAGE, IL",17,39216
+,"MARION, FL",121,66979
+,"LINN, IA",98,48937
+,"ALACHUA, FL",48,43883
+,"KANE, IL",24,46024
+,"PINELLAS, FL",90,47530
+,"HALL, GA",37,41226
+,"PASCO, FL",96,58302
+,"CANYON, ID",42,46160
+,"PEORIA, IL",63,39675
+,"CHAMPAIGN, IL",58,38717
+,"SHAWNEE, KS",80,36779
+,"DOUGLAS, GA",35,34787
+,"PAULDING, GA",32,34355
+,"COLLIER, FL",50,43287
+,"SAINT LUCIE, FL",64,38373
+,"PALM BEACH, FL",19,15471
+,"VANDERBURGH, IN",38,28500
+,"LOWNDES, GA",47,33164
+,"WYANDOTTE, KS",47,30055
+,"MCLEAN, IL",32,28330
+,"ROCK ISLAND, IL",40,25998
+,"SAINT CLAIR, IL",16,21803
+,"WILL, IL",10 or fewer,17073
+,"CLAYTON, GA",21,22267
+,"TAZEWELL, IL",47,26705
+,"SAINT JOHNS, FL",31,25255
+,"MCHENRY, IL",18,21598
+,"CLARK, IN",25,28022
+,"CHEROKEE, GA",16,17766
+,"SANGAMON, IL",34,21879
+,"CLAY, FL",34,30073
+,"SUMTER, FL",71,27737
+,"JOHNSON, IA",21,13800
+,"FLAGLER, FL",34,27792
+,"HENRY, GA",18,16977
+,"ST JOSEPH, IN",26,23405
+,"MADISON, IL",26,18190
+,"HAWAII, HI",10 or fewer,18904
+,"LA SALLE, IL",25,20729
+,"SCOTT, IA",25,14834
+,"VERMILION, IL",38,21227
+,"MARTIN, FL",48,22114
+,"TWIN FALLS, ID",28,16861
+,"BREVARD, FL",27,13196
+,"TROUP, GA",32,21559
+,"NASSAU, FL",45,23475
+,"INDIAN RIVER, FL",45,24840
+,"BLACK HAWK, IA",20,15554
+,"JOHNSON, IN",10 or fewer,14063
+,"BIBB, GA",45,19695
+,"BARROW, GA",15,17660
+,"WOODBURY, IA",21,14801
+,"KENDALL, IL",12,15846
+,"BARTHOLOMEW, IN",23,17718
+,"FLOYD, GA",43,24737
+,"SPALDING, GA",18,15363
+,"MADISON, IN",10 or fewer,17419
+,"MACON, IL",10 or fewer,12045
+,"HIGHLANDS, FL",58,22563
+,"FLOYD, IN",17,15762
+,"BANNOCK, ID",17,13809
+,"HAMILTON, IN",12,9514
+,"DUBUQUE, IA",28,11123
+,"CITRUS, FL",12,6907
+,"JACKSON, GA",10 or fewer,12388
+,"KAUAI, HI",10 or fewer,12242
+,"WHITFIELD, GA",10 or fewer,8093
+,"HOWARD, IN",10 or fewer,12853
+,"HERNANDO, FL",18,6063
+,"FORSYTH, GA",14,9754
+,"LEON, FL",10 or fewer,2448
+,"PORTER, IN",10 or fewer,7978
+,"KNOX, IL",27,12400
+,"BOONE, IL",10 or fewer,10978
+,"BARTOW, GA",14,10556
+,"WAYNE, IN",10 or fewer,13740
+,"DEARBORN, IN",10 or fewer,11731
+,"POLK, GA",33,15281
+,"WARRICK, IN",10 or fewer,8033
+,"HOUSTON, GA",18,8813
+,"DALLAS, IA",10 or fewer,6531
+,"KNOX, IN",15,10211
+,"LEAVENWORTH, KS",12,5451
+,"NOBLE, IN",10 or fewer,8755
+,"CARROLL, GA",10 or fewer,6317
+,"GORDON, GA",18,12368
+,"KOSCIUSKO, IN",10 or fewer,7895
+,"HABERSHAM, GA",10 or fewer,8823
+,"MUSCATINE, IA",13,8126
+,"CLARKE, GA",16,11994
+,"WALKER, GA",10 or fewer,6203
+,"MARSHALL, IA",19,7973
+,"LEVY, FL",10 or fewer,7569
+,"RICHMOND, GA",10 or fewer,1717
+,"ELMORE, ID",10 or fewer,7182
+,"NEWTON, GA",10 or fewer,6340
+,"CHARLOTTE, FL",16,5214
+,"WEBSTER, IA",10 or fewer,7127
+,"HENRY, IL",15,7084
+,"COWETA, GA",10 or fewer,5058
+,"CATOOSA, GA",10 or fewer,5474
+,"HUNTINGTON, IN",10 or fewer,6999
+,"HANCOCK, IN",10 or fewer,5762
+,"LIVINGSTON, IL",17,7112
+,"BALDWIN, GA",16,9308
+,"PUTNAM, FL",10 or fewer,6090
+,"EFFINGHAM, IL",10 or fewer,7245
+,"WOODFORD, IL",10 or fewer,7124
+,"WALTON, GA",10 or fewer,5511
+,"WHITLEY, IN",10 or fewer,6257
+,"BUTTS, GA",10 or fewer,6873
+,"GIBSON, IN",15,7255
+,"ROCKDALE, GA",10 or fewer,5835
+,"LUMPKIN, GA",10 or fewer,6468
+,"SARASOTA, FL",10 or fewer,4073
+,"WABASH, IN",10 or fewer,6041
+,"MANATEE, FL",13,4186
+,"COLUMBIA, FL",10 or fewer,4569
+,"CLINTON, IL",10 or fewer,5980
+,"MURRAY, GA",15,7791
+,"MARSHALL, IN",10 or fewer,7341
+,"WHITE, GA",10 or fewer,5594
+,"WARREN, IA",10 or fewer,4285
+,"FAYETTE, GA",10 or fewer,3907
+,"ELKHART, IN",10 or fewer,4717
+,"LAGRANGE, IN",10 or fewer,4819
+,"PAYETTE, ID",10 or fewer,5423
+,"HARRISON, IN",10 or fewer,4676
+,"JEROME, ID",10 or fewer,4913
+,"HENDRY, FL",10 or fewer,4708
+,"BUREAU, IL",10 or fewer,6282
+,"PEACH, GA",10 or fewer,6415
+,"BLAINE, ID",10 or fewer,4380
+,"CHATTOOGA, GA",13,6552
+,"OGLE, IL",10 or fewer,3642
+,"MACOUPIN, IL",10 or fewer,4130
+,"CAMDEN, GA",10 or fewer,4102
+,"FRANKLIN, GA",10 or fewer,6571
+,"GEARY, KS",23,6106
+,"DAWSON, GA",10 or fewer,3462
+,"BERRIEN, GA",11,5170
+,"FAYETTE, IN",10 or fewer,5879
+,"HENDRICKS, IN",10 or fewer,2948
+,"POSEY, IN",10 or fewer,3621
+,"HART, GA",10 or fewer,5425
+,"HARDEE, FL",11,6811
+,"MONTGOMERY, IL",10 or fewer,4189
+,"DEKALB, IL",10 or fewer,2942
+,"BARTON, KS",10 or fewer,4454
+,"BANKS, GA",10 or fewer,3942
+,"COLUMBIA, GA",10 or fewer,1252
+,"POTTAWATTAMIE, IA",10 or fewer,2469
+,"MAUI, HI",10 or fewer,3605
+,"WARREN, IL",10 or fewer,3882
+,"CLINTON, IA",10 or fewer,1219
+,"BENTON, IA",10 or fewer,2872
+,"STEPHENS, GA",10 or fewer,3623
+,"SUWANNEE, FL",10 or fewer,2276
+,"GREENE, GA",10 or fewer,5488
+,"JASPER, IA",10 or fewer,1948
+,"DELAWARE, IN",10 or fewer,2875
+,"RICHLAND, IL",10 or fewer,3856
+,"JONES, IA",10 or fewer,3066
+,"SCOTT, IN",10 or fewer,1738
+,"FRANKLIN, KS",22,4317
+,"POWESHIEK, IA",10 or fewer,3211
+,"MUSCOGEE, GA",10 or fewer,2083
+,"ESCAMBIA, FL",14,1871
+,"MAHASKA, IA",10 or fewer,3342
+,"BRADFORD, FL",10 or fewer,2431
+,"BOND, IL",10 or fewer,3750
+,"STEUBEN, IN",10 or fewer,2230
+,"WASHINGTON, IN",10 or fewer,2552
+,"DOUGLAS, KS",10 or fewer,2001
+,"SIOUX, IA",10 or fewer,2142
+,"LAMAR, GA",10 or fewer,2288
+,"SHELBY, IL",10 or fewer,3273
+,"OSAGE, KS",10 or fewer,2645
+,"RIPLEY, IN",10 or fewer,2520
+,"JEFFERSON, IN",10 or fewer,1161
+,"TAMA, IA",10 or fewer,2749
+,"DOUGLAS, IL",10 or fewer,2418
+,"CHATHAM, GA",10 or fewer,1747
+,"BAKER, FL",10 or fewer,3186
+,"MORGAN, IN",10 or fewer,1613
+,"MIAMI, IN",10 or fewer,2155
+,"SEDGWICK, KS",10 or fewer,1520
+,"FULTON, IL",10 or fewer,1887
+,"COOK, GA",10 or fewer,2568
+,"PUTNAM, GA",10 or fewer,3574
+,"PIKE, GA",10 or fewer,1748
+,"MIAMI, KS",10 or fewer,1681
+,"LANIER, GA",10 or fewer,3306
+,"MERIWETHER, GA",10 or fewer,2405
+,"FRANKLIN, IN",10 or fewer,2477
+,"FAYETTE, IA",10 or fewer,1928
+,"OBRIEN, IA",10 or fewer,2143
+,"OKALOOSA, FL",10 or fewer,1531
+,"HARALSON, GA",10 or fewer,2223
+,"CEDAR, IA",10 or fewer,1930
+,"CHRISTIAN, IL",10 or fewer,1712
+,"GILCHRIST, FL",10 or fewer,2004
+,"CERRO GORDO, IA",10 or fewer,393
+,"MASSAC, IL",10 or fewer,2062
+,"MARSHALL, IL",10 or fewer,2498
+,"MERCER, IL",10 or fewer,2024
+,"VALLEY, ID",10 or fewer,2006
+,"LATAH, ID",10 or fewer,239
+,"MINIDOKA, ID",10 or fewer,2116
+,"COLES, IL",10 or fewer,1472
+,"WASHINGTON, IA",10 or fewer,1357
+,"LAWRENCE, IL",10 or fewer,1979
+,"JENNINGS, IN",10 or fewer,1982
+,"DIXIE, FL",10 or fewer,1798
+,"MADISON, GA",10 or fewer,2743
+,"JACKSON, FL",10 or fewer,1954
+,"GRANT, IN",10 or fewer,1672
+,"GEM, ID",10 or fewer,1765
+,"JACKSON, IN",10 or fewer,1633
+,"STORY, IA",10 or fewer,1262
+,"BAY, FL",10 or fewer,1310
+,"JEFFERSON, KS",10 or fewer,1690
+,"GOODING, ID",10 or fewer,1733
+,"DAVIESS, IN",10 or fewer,1548
+,"BREMER, IA",10 or fewer,1427
+,"BROOKS, GA",10 or fewer,1950
+,"SPENCER, IN",10 or fewer,1515
+,"RABUN, GA",10 or fewer,1603
+,"STEPHENSON, IL",10 or fewer,1291
+,"FAYETTE, IL",10 or fewer,1895
+,"PIATT, IL",10 or fewer,1405
+,"UNION, FL",10 or fewer,1472
+,"OCONEE, GA",10 or fewer,2255
+,"LA PORTE, IN",10 or fewer,1263
+,"PLYMOUTH, IA",10 or fewer,1323
+,"IROQUOIS, IL",10 or fewer,1597
+,"SANTA ROSA, FL",10 or fewer,1155
+,"DADE, GA",10 or fewer,1394
+,"LOGAN, IL",10 or fewer,1322
+,"GADSDEN, FL",10 or fewer,362
+,"OWYHEE, ID",10 or fewer,1681
+,"MONROE, GA",10 or fewer,1573
+,"BINGHAM, ID",10 or fewer,1351
+,"IOWA, IA",10 or fewer,1114
+,"PICKENS, GA",10 or fewer,1173
+,"BUCHANAN, IA",10 or fewer,1191
+,"CASSIA, ID",10 or fewer,983
+,"WAPELLO, IA",10 or fewer,1187
+,"KANKAKEE, IL",10 or fewer,1024
+,"WHITESIDE, IL",10 or fewer,896
+,"ANDERSON, KS",10 or fewer,1804
+,"FORD, IL",10 or fewer,1371
+,"MADISON, FL",10 or fewer,1148
+,"CRAWFORD, IL",10 or fewer,1224
+,"WELLS, IN",10 or fewer,1179
+,"LEE, IL",10 or fewer,1092
+,"MONROE, FL",10 or fewer,925
+,"GLYNN, GA",10 or fewer,1084
+,"JONES, GA",10 or fewer,1609
+,"DUBOIS, IN",10 or fewer,756
+,"ALLEN, KS",10 or fewer,2239
+,"GILMER, GA",10 or fewer,995
+,"MASON, IL",10 or fewer,1366
+,"JACKSON, IA",10 or fewer,947
+,"DEKALB, IN",10 or fewer,1677
+,"DES MOINES, IA",10 or fewer,750
+,"HARRIS, GA",10 or fewer,1247
+,"JACKSON, KS",10 or fewer,1076
+,"JASPER, IL",10 or fewer,1356
+,"UNION, IN",10 or fewer,1695
+,"PIKE, IN",10 or fewer,1171
+,"SHELBY, IN",10 or fewer,938
+,"OKEECHOBEE, FL",10 or fewer,1298
+,"BOONE, IN",10 or fewer,835
+,"MOULTRIE, IL",10 or fewer,993
+,"UPSON, GA",10 or fewer,918
+,"LOUISA, IA",10 or fewer,992
+,"RANDOLPH, IN",10 or fewer,1311
+,"HAMILTON, FL",10 or fewer,976
+,"WAKULLA, FL",10 or fewer,294
+,"ELBERT, GA",10 or fewer,1610
+,"TIPPECANOE, IN",10 or fewer,745
+,"GRUNDY, IL",10 or fewer,833
+,"BONNEVILLE, ID",10 or fewer,713
+,"MARION, IA",10 or fewer,772
+,"JO DAVIESS, IL",10 or fewer,798
+,"HENRY, IN",10 or fewer,1051
+,"ADAMS, IN",10 or fewer,891
+,"HEARD, GA",10 or fewer,1184
+,"WHITE, IL",10 or fewer,837
+,"RILEY, KS",10 or fewer,906
+,"BROWN, IN",10 or fewer,1162
+,"UNION, GA",10 or fewer,810
+,"MADISON, IA",10 or fewer,803
+,"DECATUR, IN",10 or fewer,1006
+,"WILKINSON, GA",10 or fewer,1502
+,"FANNIN, GA",10 or fewer,681
+,"CASS, IN",10 or fewer,912
+,"CLAY, IL",10 or fewer,1024
+,"STARKE, IN",10 or fewer,1201
+,"HANCOCK, GA",10 or fewer,1646
+,"SWITZERLAND, IN",10 or fewer,1227
+,"STARK, IL",10 or fewer,1224
+,"WASHINGTON, ID",10 or fewer,1009
+,"MORGAN, IL",10 or fewer,770
+,"LEE, IA",10 or fewer,608
+,"MONROE, IN",10 or fewer,647
+,"KOOTENAI, ID",10 or fewer,592
+,"MORGAN, GA",10 or fewer,1290
+,"ALLAMAKEE, IA",10 or fewer,695
+,"HENRY, IA",10 or fewer,660
+,"OHIO, IN",10 or fewer,1287
+,"JERSEY, IL",10 or fewer,842
+,"DOUGHERTY, GA",10 or fewer,729
+,"BUTLER, IA",10 or fewer,686
+,"CHARLTON, GA",10 or fewer,1041
+,"LYON, IA",10 or fewer,613
+,"BOISE, ID",10 or fewer,964
+,"DELAWARE, IA",10 or fewer,626
+,"LINN, KS",10 or fewer,667
+,"MCDONOUGH, IL",10 or fewer,714
+,"CALHOUN, IA",10 or fewer,712
+,"GRUNDY, IA",10 or fewer,648
+,"CRAWFORD, IN",10 or fewer,743
+,"JASPER, IN",10 or fewer,649
+,"MENARD, IL",10 or fewer,778
+,"JASPER, GA",10 or fewer,830
+,"ALEXANDER, IL",10 or fewer,861
+,"KEOKUK, IA",10 or fewer,680
+,"DESOTO, FL",10 or fewer,798
+,"BOONE, IA",10 or fewer,538
+,"FULTON, IN",10 or fewer,842
+,"OGLETHORPE, GA",10 or fewer,1252
+,"TAYLOR, FL",10 or fewer,443
+,"CLAYTON, IA",10 or fewer,453
+,"ADAMS, ID",10 or fewer,878
+,"CUMBERLAND, IL",10 or fewer,715
+,"WABASH, IL",10 or fewer,698
+,"UNION, IL",10 or fewer,625
+,"POTTAWATOMIE, KS",10 or fewer,589
+,"WILLIAMSON, IL",10 or fewer,475
+,"WALTON, FL",10 or fewer,522
+,"MILLS, IA",10 or fewer,596
+,"POWER, ID",10 or fewer,728
+,"VIGO, IN",10 or fewer,469
+,"LINCOLN, ID",10 or fewer,667
+,"TIFT, GA",10 or fewer,535
+,"LIBERTY, GA",10 or fewer,536
+,"COLQUITT, GA",10 or fewer,483
+,"GUTHRIE, IA",10 or fewer,503
+,"HOLMES, FL",10 or fewer,626
+,"LYON, KS",10 or fewer,537
+,"RANDOLPH, IL",10 or fewer,522
+,"EDGAR, IL",10 or fewer,493
+,"PERRY, IN",10 or fewer,526
+,"PULASKI, IL",10 or fewer,671
+,"JOHNSON, IL",10 or fewer,574
+,"SALINE, IL",10 or fewer,469
+,"MARION, IL",10 or fewer,545
+,"APPANOOSE, IA",10 or fewer,199
+,"TIPTON, IN",10 or fewer,594
+,"PUTNAM, IL",10 or fewer,894
+,"CLINCH, GA",10 or fewer,631
+,"LAURENS, GA",10 or fewer,603
+,"TAYLOR, GA",10 or fewer,894
+,"HENDERSON, IL",10 or fewer,733
+,"EARLY, GA",10 or fewer,780
+,"WABAUNSEE, KS",10 or fewer,616
+,"HUMBOLDT, IA",10 or fewer,439
+,"CARROLL, IL",10 or fewer,317
+,"THOMAS, GA",10 or fewer,418
+,"JACKSON, IL",10 or fewer,463
+,"CASS, IL",10 or fewer,536
+,"TOWNS, GA",10 or fewer,451
+,"CHICKASAW, IA",10 or fewer,293
+,"FOUNTAIN, IN",10 or fewer,494
+,"CRAWFORD, GA",10 or fewer,837
+,"THOMAS, KS",10 or fewer,51
+,"WARE, GA",10 or fewer,503
+,"COFFEE, GA",10 or fewer,433
+,"GLADES, FL",10 or fewer,611
+,"WRIGHT, IA",10 or fewer,423
+,"JEFFERSON, IA",10 or fewer,349
+,"ATCHISON, KS",10 or fewer,511
+,"ECHOLS, GA",10 or fewer,756
+,"HAMILTON, IA",10 or fewer,354
+,"JEFFERSON, FL",10 or fewer,118
+,"WASHINGTON, IL",10 or fewer,477
+,"HARDIN, IA",10 or fewer,409
+,"DONIPHAN, KS",10 or fewer,827
+,"CLARKE, IA",10 or fewer,309
+,"WINNESHIEK, IA",10 or fewer,336
+,"DICKINSON, KS",10 or fewer,631
+,"WASHINGTON, GA",10 or fewer,423
+,"MACON, GA",10 or fewer,679
+,"DECATUR, GA",10 or fewer,297
+,"MONROE, IL",10 or fewer,388
+,"EDWARDS, IL",10 or fewer,490
+,"BURKE, GA",10 or fewer,140
+,"BULLOCH, GA",10 or fewer,334
+,"EFFINGHAM, GA",10 or fewer,342
+,"OSCEOLA, IA",10 or fewer,444
+,"WAYNE, IL",10 or fewer,298
+,"FRANKLIN, IL",10 or fewer,309
+,"GREENE, IN",10 or fewer,332
+,"UNION, IA",10 or fewer,260
+,"ORANGE, IN",10 or fewer,315
+,"ADAMS, IL",10 or fewer,305
+,"BOURBON, KS",10 or fewer,367
+,"CHEROKEE, IA",10 or fewer,309
+,"WASHINGTON, FL",10 or fewer,370
+,"BRYAN, GA",10 or fewer,280
+,"CARROLL, IN",10 or fewer,351
+,"LAFAYETTE, FL",10 or fewer,300
+,"WINNEBAGO, IA",10 or fewer,190
+,"PUTNAM, IN",10 or fewer,248
+,"COFFEY, KS",10 or fewer,374
+,"LUCAS, IA",10 or fewer,224
+,"LAWRENCE, IN",10 or fewer,269
+,"JEFFERSON, IL",10 or fewer,309
+,"BUENA VISTA, IA",10 or fewer,243
+,"IDAHO, ID",10 or fewer,363
+,"PAGE, IA",10 or fewer,264
+,"SULLIVAN, IN",10 or fewer,349
+,"FLOYD, IA",10 or fewer,148
+,"MCDUFFIE, GA",10 or fewer,129
+,"TWIGGS, GA",10 or fewer,460
+,"GREENE, IL",10 or fewer,267
+,"SEMINOLE, GA",10 or fewer,435
+,"RUSH, IN",10 or fewer,306
+,"CLARK, IL",10 or fewer,258
+,"CLINTON, IN",10 or fewer,242
+,"CASS, IA",10 or fewer,226
+,"BRANTLEY, GA",10 or fewer,339
+,"MONTGOMERY, KS",10 or fewer,223
+,"MONONA, IA",10 or fewer,238
+,"CARROLL, IA",10 or fewer,194
+,"GREENE, IA",10 or fewer,222
+,"JEFFERSON, GA",10 or fewer,109
+,"VERMILLION, IN",10 or fewer,261
+,"POCAHONTAS, IA",10 or fewer,207
+,"GALLATIN, IL",10 or fewer,254
+,"SUMTER, GA",10 or fewer,255
+,"SALINE, KS",10 or fewer,219
+,"HARRISON, IA",10 or fewer,220
+,"DODGE, GA",10 or fewer,271
+,"POPE, IL",10 or fewer,280
+,"GRADY, GA",10 or fewer,180
+,"MONTGOMERY, IN",10 or fewer,201
+,"CARIBOU, ID",10 or fewer,288
+,"BEN HILL, GA",10 or fewer,265
+,"ADAIR, IA",10 or fewer,206
+,"BROWN, KS",10 or fewer,244
+,"ATKINSON, GA",10 or fewer,264
+,"CLAY, GA",10 or fewer,329
+,"DECATUR, IA",10 or fewer,209
+,"DICKINSON, IA",10 or fewer,191
+,"NEZ PERCE, ID",10 or fewer,151
+,"CRISP, GA",10 or fewer,229
+,"HANCOCK, IL",10 or fewer,197
+,"KOSSUTH, IA",10 or fewer,193
+,"BUTLER, KS",10 or fewer,177
+,"MARTIN, IN",10 or fewer,177
+,"CRAWFORD, KS",10 or fewer,200
+,"BLECKLEY, GA",10 or fewer,283
+,"JAY, IN",10 or fewer,185
+,"LEE, GA",10 or fewer,199
+,"PIERCE, GA",10 or fewer,235
+,"EMANUEL, GA",10 or fewer,130
+,"RENO, KS",10 or fewer,183
+,"NEWTON, IN",10 or fewer,205
+,"CRAWFORD, IA",10 or fewer,187
+,"BONNER, ID",10 or fewer,180
+,"WAYNE, GA",10 or fewer,202
+,"PAWNEE, KS",10 or fewer,246
+,"MADISON, ID",10 or fewer,134
+,"TOOMBS, GA",10 or fewer,142
+,"BLACKFORD, IN",10 or fewer,239
+,"VAN BUREN, IA",10 or fewer,153
+,"PULASKI, GA",10 or fewer,207
+,"CLAY, IA",10 or fewer,154
+,"WORTH, IA",10 or fewer,43
+,"WILKES, GA",10 or fewer,205
+,"MONTGOMERY, IA",10 or fewer,138
+,"FREMONT, IA",10 or fewer,192
+,"MONROE, IA",10 or fewer,158
+,"MARSHALL, KS",10 or fewer,163
+,"NEMAHA, KS",10 or fewer,153
+,"SAC, IA",10 or fewer,136
+,"JEFFERSON, ID",10 or fewer,115
+,"SHELBY, IA",10 or fewer,165
+,"HANCOCK, IA",10 or fewer,93
+,"WARREN, IN",10 or fewer,142
+,"FRANKLIN, IA",10 or fewer,86
+,"PERRY, IL",10 or fewer,160
+,"PIKE, IL",10 or fewer,136
+,"CALHOUN, FL",10 or fewer,114
+,"PULASKI, IN",10 or fewer,185
+,"HOWARD, IA",10 or fewer,134
+,"CLAY, IN",10 or fewer,136
+,"OWEN, IN",10 or fewer,155
+,"DAVIS, IA",10 or fewer,139
+,"FRANKLIN, FL",10 or fewer,96
+,"MITCHELL, GA",10 or fewer,132
+,"FRANKLIN, ID",10 or fewer,110
+,"NEOSHO, KS",10 or fewer,186
+,"IDA, IA",10 or fewer,122
+,"DOOLY, GA",10 or fewer,188
+,"WORTH, GA",10 or fewer,149
+,"STAFFORD, KS",10 or fewer,211
+,"TAYLOR, IA",10 or fewer,156
+,"SCHUYLER, IL",10 or fewer,146
+,"FINNEY, KS",10 or fewer,131
+,"HAMILTON, IL",10 or fewer,142
+,"ONEIDA, ID",10 or fewer,139
+,"WHITE, IN",10 or fewer,109
+,"APPLING, GA",10 or fewer,124
+,"CUSTER, ID",10 or fewer,116
+,"BENTON, IN",10 or fewer,154
+,"BEAR LAKE, ID",10 or fewer,121
+,"LIBERTY, FL",10 or fewer,49
+,"ELLIS, KS",10 or fewer,91
+,"LONG, GA",10 or fewer,130
+,"HARVEY, KS",10 or fewer,95
+,"GULF, FL",10 or fewer,97
+,"WAYNE, IA",10 or fewer,102
+,"MCINTOSH, GA",10 or fewer,114
+,"LINCOLN, GA",10 or fewer,69
+,"COWLEY, KS",10 or fewer,118
+,"TATTNALL, GA",10 or fewer,91
+,"HARDIN, IL",10 or fewer,114
+,"LABETTE, KS",10 or fewer,118
+,"MORRIS, KS",10 or fewer,148
+,"TALBOT, GA",10 or fewer,125
+,"WOODSON, KS",10 or fewer,203
+,"MCPHERSON, KS",10 or fewer,78
+,"MILLER, GA",10 or fewer,150
+,"WILCOX, GA",10 or fewer,113
+,"IRWIN, GA",10 or fewer,103
+,"TELFAIR, GA",10 or fewer,112
+,"CLAY, KS",10 or fewer,135
+,"RICE, KS",10 or fewer,110
+,"FORD, KS",10 or fewer,103
+,"SCREVEN, GA",10 or fewer,79
+,"JEFF DAVIS, GA",10 or fewer,82
+,"SHERMAN, KS",10 or fewer,51
+,"CAMAS, ID",10 or fewer,108
+,"SEWARD, KS",10 or fewer,90
+,"TURNER, GA",10 or fewer,92
+,"CALHOUN, IL",10 or fewer,79
+,"EMMET, IA",10 or fewer,69
+,"MITCHELL, IA",10 or fewer,62
+,"PARKE, IN",10 or fewer,96
+,"RINGGOLD, IA",10 or fewer,59
+,"FREMONT, ID",10 or fewer,85
+,"CALHOUN, GA",10 or fewer,121
+,"CHEROKEE, KS",10 or fewer,81
+,"BACON, GA",10 or fewer,84
+,"PALO ALTO, IA",10 or fewer,80
+,"TETON, ID",10 or fewer,66
+,"LEMHI, ID",10 or fewer,63
+,"JENKINS, GA",10 or fewer,40
+,"AUDUBON, IA",10 or fewer,73
+,"JOHNSON, GA",10 or fewer,78
+,"BENEWAH, ID",10 or fewer,39
+,"SCOTT, IL",10 or fewer,59
+,"RUSH, KS",10 or fewer,86
+,"TALIAFERRO, GA",10 or fewer,138
+,"MARION, GA",10 or fewer,86
+,"BROWN, IL",10 or fewer,65
+,"WARREN, GA",10 or fewer,43
+,"CLEARWATER, ID",10 or fewer,49
+,"LOGAN, KS",10 or fewer,21
+,"CANDLER, GA",10 or fewer,60
+,"EVANS, GA",10 or fewer,47
+,"RANDOLPH, GA",10 or fewer,79
+,"WASHINGTON, KS",10 or fewer,57
+,"ADAMS, IA",10 or fewer,54
+,"BAKER, GA",10 or fewer,61
+,"SUMNER, KS",10 or fewer,53
+,"MONTGOMERY, GA",10 or fewer,54
+,"TERRELL, GA",10 or fewer,63
+,"RAWLINS, KS",10 or fewer,22
+,"GREENWOOD, KS",10 or fewer,54
+,"QUITMAN, GA",10 or fewer,62
+,"TREUTLEN, GA",10 or fewer,48
+,"SHOSHONE, ID",10 or fewer,28
+,"WILSON, KS",10 or fewer,54
+,"RUSSELL, KS",10 or fewer,47
+,"BOUNDARY, ID",10 or fewer,42
+,"LEWIS, ID",10 or fewer,33
+,"ELLSWORTH, KS",10 or fewer,65
+,"BUTTE, ID",10 or fewer,41
+,"CHATTAHOOCHEE, GA",10 or fewer,53
+,"CLOUD, KS",10 or fewer,40
+,"GLASCOCK, GA",10 or fewer,38
+,"SCHLEY, GA",10 or fewer,62
+,"DECATUR, KS",10 or fewer,24
+,"MARION, KS",10 or fewer,41
+,"SHERIDAN, KS",10 or fewer,10 or fewer
+,"WHEELER, GA",10 or fewer,34
+,"PRATT, KS",10 or fewer,43
+,"MORTON, KS",10 or fewer,39
+,"NORTON, KS",10 or fewer,20
+,"EDWARDS, KS",10 or fewer,52
+,"PHILLIPS, KS",10 or fewer,25
+,"REPUBLIC, KS",10 or fewer,36
+,"GRANT, KS",10 or fewer,22
+,"SMITH, KS",10 or fewer,29
+,"OTTAWA, KS",10 or fewer,29
+,"STEWART, GA",10 or fewer,28
+,"CHEYENNE, KS",10 or fewer,24
+,"GOVE, KS",10 or fewer,20
+,"CHASE, KS",10 or fewer,22
+,"SCOTT, KS",10 or fewer,29
+,"ROOKS, KS",10 or fewer,23
+,"KINGMAN, KS",10 or fewer,20
+,"STEVENS, KS",10 or fewer,11
+,"MITCHELL, KS",10 or fewer,21
+,"JEWELL, KS",10 or fewer,20
+,"GRAY, KS",10 or fewer,19
+,"NESS, KS",10 or fewer,22
+,"CHAUTAUQUA, KS",10 or fewer,15
+,"WALLACE, KS",10 or fewer,13
+,"HARPER, KS",10 or fewer,18
+,"BARBER, KS",10 or fewer,16
+,"MEADE, KS",10 or fewer,16
+,"LINCOLN, KS",10 or fewer,17
+,"KEARNY, KS",10 or fewer,15
+,"WEBSTER, GA",10 or fewer,13
+,"HAMILTON, KS",10 or fewer,10 or fewer
+,"ELK, KS",10 or fewer,16
+,"OSBORNE, KS",10 or fewer,15
+,"TREGO, KS",10 or fewer,12
+,"HASKELL, KS",10 or fewer,11
+,"GREELEY, KS",10 or fewer,13
+,"GRAHAM, KS",10 or fewer,10 or fewer
+,"WICHITA, KS",10 or fewer,10 or fewer
+,"STANTON, KS",10 or fewer,12
+,"LANE, KS",10 or fewer,10 or fewer
+,"KIOWA, KS",10 or fewer,11
+,"HODGEMAN, KS",10 or fewer,10 or fewer
+,"CLARK, KS",10 or fewer,10 or fewer
+,"COMANCHE, KS",10 or fewer,10 or fewer
+,"CLARK, ID",10 or fewer,10 or fewer
+,"KALAWAO, HI",10 or fewer,10 or fewer
+,None of the above,288,304533
+,Total,6866,6104193
+Jan 1 – Dec 31 2024,"COOK, IL",219,455466
+,"BROWARD, FL",186,248134
+,"ORANGE, FL",355,324061
+,"LEE, FL",200,163611
+,"FULTON, GA",175,152971
+,"DUVAL, FL",240,216097
+,"HONOLULU, HI",66,139601
+,"HILLSBOROUGH, FL",182,159830
+,"MIAMI-DADE, FL",64,115142
+,"MARION, IN",79,137338
+,"COBB, GA",127,121864
+,"DEKALB, GA",106,122039
+,"ADA, ID",117,88558
+,"VOLUSIA, FL",175,118573
+,"LAKE, FL",192,112509
+,"OSCEOLA, FL",102,102032
+,"POLK, IA",59,53130
+,"POLK, FL",120,82738
+,"LAKE, IN",43,58312
+,"GWINNETT, GA",23,53229
+,"SEMINOLE, FL",126,83688
+,"WINNEBAGO, IL",56,60140
+,"ALLEN, IN",40,59013
+,"LAKE, IL",34,53838
+,"JOHNSON, KS",69,54729
+,"DUPAGE, IL",35,54598
+,"MARION, FL",120,70648
+,"LINN, IA",58,51167
+,"ALACHUA, FL",42,44949
+,"KANE, IL",27,47422
+,"PINELLAS, FL",83,50383
+,"HALL, GA",40,42251
+,"PASCO, FL",108,61007
+,"CANYON, ID",54,50582
+,"PEORIA, IL",48,42077
+,"CHAMPAIGN, IL",56,39566
+,"SHAWNEE, KS",66,37049
+,"DOUGLAS, GA",25,35504
+,"PAULDING, GA",36,34865
+,"COLLIER, FL",57,44378
+,"SAINT LUCIE, FL",65,49929
+,"PALM BEACH, FL",37,25830
+,"VANDERBURGH, IN",53,28923
+,"LOWNDES, GA",83,34126
+,"WYANDOTTE, KS",43,33622
+,"MCLEAN, IL",34,29257
+,"ROCK ISLAND, IL",36,25945
+,"SAINT CLAIR, IL",21,22801
+,"WILL, IL",16,28330
+,"CLAYTON, GA",20,22559
+,"TAZEWELL, IL",36,27303
+,"SAINT JOHNS, FL",32,30059
+,"MCHENRY, IL",16,24565
+,"CLARK, IN",30,30154
+,"CHEROKEE, GA",20,18326
+,"SANGAMON, IL",13,22858
+,"CLAY, FL",52,32320
+,"SUMTER, FL",68,29288
+,"JOHNSON, IA",18,20120
+,"FLAGLER, FL",39,31482
+,"HENRY, GA",19,17499
+,"ST JOSEPH, IN",39,23956
+,"MADISON, IL",35,18728
+,"HAWAII, HI",13,23813
+,"LA SALLE, IL",29,22999
+,"SCOTT, IA",25,14886
+,"VERMILION, IL",31,21272
+,"MARTIN, FL",54,29877
+,"TWIN FALLS, ID",34,16991
+,"BREVARD, FL",18,13241
+,"TROUP, GA",27,21782
+,"NASSAU, FL",62,24988
+,"INDIAN RIVER, FL",55,24553
+,"BLACK HAWK, IA",27,16142
+,"JOHNSON, IN",14,14414
+,"BIBB, GA",40,20955
+,"BARROW, GA",20,17803
+,"WOODBURY, IA",22,15686
+,"KENDALL, IL",10 or fewer,16338
+,"BARTHOLOMEW, IN",20,18550
+,"FLOYD, GA",33,26594
+,"SPALDING, GA",25,16410
+,"MADISON, IN",15,17739
+,"MACON, IL",19,11658
+,"HIGHLANDS, FL",52,22383
+,"FLOYD, IN",19,16575
+,"BANNOCK, ID",10 or fewer,14463
+,"HAMILTON, IN",13,9306
+,"DUBUQUE, IA",20,11314
+,"CITRUS, FL",15,11804
+,"JACKSON, GA",10 or fewer,12178
+,"KAUAI, HI",11,12251
+,"WHITFIELD, GA",31,23646
+,"HOWARD, IN",10 or fewer,13786
+,"HERNANDO, FL",18,10941
+,"FORSYTH, GA",10 or fewer,10410
+,"LEON, FL",10 or fewer,2498
+,"PORTER, IN",10 or fewer,8865
+,"KNOX, IL",10 or fewer,12505
+,"BOONE, IL",10 or fewer,11394
+,"BARTOW, GA",13,11309
+,"WAYNE, IN",10 or fewer,14946
+,"DEARBORN, IN",15,11629
+,"POLK, GA",31,15822
+,"WARRICK, IN",12,8189
+,"HOUSTON, GA",14,10686
+,"DALLAS, IA",10 or fewer,6738
+,"KNOX, IN",17,10170
+,"LEAVENWORTH, KS",10 or fewer,6000
+,"NOBLE, IN",10 or fewer,8825
+,"CARROLL, GA",13,6380
+,"GORDON, GA",29,14449
+,"KOSCIUSKO, IN",10 or fewer,8303
+,"HABERSHAM, GA",13,11832
+,"MUSCATINE, IA",20,8684
+,"CLARKE, GA",10 or fewer,11552
+,"WALKER, GA",10 or fewer,7867
+,"MARSHALL, IA",13,8070
+,"LEVY, FL",14,7818
+,"RICHMOND, GA",10 or fewer,5894
+,"ELMORE, ID",10 or fewer,7159
+,"NEWTON, GA",10 or fewer,6341
+,"CHARLOTTE, FL",11,5543
+,"WEBSTER, IA",10 or fewer,7364
+,"HENRY, IL",14,7315
+,"COWETA, GA",10 or fewer,5280
+,"CATOOSA, GA",10 or fewer,6160
+,"HUNTINGTON, IN",16,7075
+,"HANCOCK, IN",10 or fewer,5890
+,"LIVINGSTON, IL",18,7355
+,"BALDWIN, GA",23,10149
+,"PUTNAM, FL",10 or fewer,6513
+,"EFFINGHAM, IL",10 or fewer,7389
+,"WOODFORD, IL",11,7320
+,"WALTON, GA",10 or fewer,5366
+,"WHITLEY, IN",10 or fewer,6607
+,"BUTTS, GA",12,6920
+,"GIBSON, IN",17,7009
+,"ROCKDALE, GA",10 or fewer,5908
+,"LUMPKIN, GA",10 or fewer,7116
+,"SARASOTA, FL",10 or fewer,4199
+,"WABASH, IN",10 or fewer,5928
+,"MANATEE, FL",10 or fewer,4411
+,"COLUMBIA, FL",10 or fewer,4617
+,"CLINTON, IL",10 or fewer,6067
+,"MURRAY, GA",20,11092
+,"MARSHALL, IN",12,7156
+,"WHITE, GA",10 or fewer,6520
+,"WARREN, IA",10 or fewer,4417
+,"FAYETTE, GA",10 or fewer,4085
+,"ELKHART, IN",10 or fewer,4769
+,"LAGRANGE, IN",10 or fewer,4789
+,"PAYETTE, ID",15,5740
+,"HARRISON, IN",10 or fewer,4996
+,"JEROME, ID",10 or fewer,4880
+,"HENDRY, FL",10 or fewer,4516
+,"BUREAU, IL",13,7330
+,"PEACH, GA",10 or fewer,6915
+,"BLAINE, ID",10 or fewer,4401
+,"CHATTOOGA, GA",16,9028
+,"OGLE, IL",10 or fewer,3603
+,"MACOUPIN, IL",10 or fewer,4031
+,"CAMDEN, GA",10 or fewer,4452
+,"FRANKLIN, GA",15,6705
+,"GEARY, KS",10 or fewer,6606
+,"DAWSON, GA",10 or fewer,4266
+,"BERRIEN, GA",10 or fewer,5202
+,"FAYETTE, IN",10 or fewer,6251
+,"HENDRICKS, IN",10 or fewer,2896
+,"POSEY, IN",10 or fewer,3666
+,"HART, GA",12,5743
+,"HARDEE, FL",17,6705
+,"MONTGOMERY, IL",10 or fewer,3989
+,"DEKALB, IL",10 or fewer,2847
+,"BARTON, KS",12,4576
+,"BANKS, GA",10 or fewer,4342
+,"COLUMBIA, GA",10 or fewer,2595
+,"POTTAWATTAMIE, IA",10 or fewer,2472
+,"MAUI, HI",10 or fewer,3684
+,"WARREN, IL",10 or fewer,4240
+,"CLINTON, IA",10 or fewer,1248
+,"BENTON, IA",10 or fewer,2868
+,"STEPHENS, GA",10 or fewer,3946
+,"SUWANNEE, FL",10 or fewer,2360
+,"GREENE, GA",10 or fewer,5494
+,"JASPER, IA",10 or fewer,1961
+,"DELAWARE, IN",10 or fewer,3079
+,"RICHLAND, IL",12,4088
+,"JONES, IA",10 or fewer,3112
+,"SCOTT, IN",10 or fewer,4808
+,"FRANKLIN, KS",10 or fewer,4796
+,"POWESHIEK, IA",10 or fewer,3368
+,"MUSCOGEE, GA",10 or fewer,2144
+,"ESCAMBIA, FL",10 or fewer,1927
+,"MAHASKA, IA",10 or fewer,3392
+,"BRADFORD, FL",10 or fewer,2506
+,"BOND, IL",11,3826
+,"STEUBEN, IN",10 or fewer,2007
+,"WASHINGTON, IN",10 or fewer,2934
+,"DOUGLAS, KS",10 or fewer,2271
+,"SIOUX, IA",10 or fewer,2189
+,"LAMAR, GA",10 or fewer,2358
+,"SHELBY, IL",10 or fewer,3278
+,"OSAGE, KS",10 or fewer,2708
+,"RIPLEY, IN",10 or fewer,2539
+,"JEFFERSON, IN",10 or fewer,1548
+,"TAMA, IA",10 or fewer,2893
+,"DOUGLAS, IL",10 or fewer,2433
+,"CHATHAM, GA",10 or fewer,1791
+,"BAKER, FL",10 or fewer,3293
+,"MORGAN, IN",10 or fewer,1614
+,"MIAMI, IN",10 or fewer,2396
+,"SEDGWICK, KS",10 or fewer,1583
+,"FULTON, IL",10 or fewer,1989
+,"COOK, GA",10 or fewer,2506
+,"PUTNAM, GA",10 or fewer,3797
+,"PIKE, GA",10 or fewer,1903
+,"MIAMI, KS",10 or fewer,1869
+,"LANIER, GA",10 or fewer,3198
+,"MERIWETHER, GA",10 or fewer,2442
+,"FRANKLIN, IN",10 or fewer,2496
+,"FAYETTE, IA",10 or fewer,2017
+,"OBRIEN, IA",10 or fewer,2357
+,"OKALOOSA, FL",10 or fewer,1564
+,"HARALSON, GA",10 or fewer,2206
+,"CEDAR, IA",10 or fewer,2358
+,"CHRISTIAN, IL",10 or fewer,1631
+,"GILCHRIST, FL",10 or fewer,2038
+,"CERRO GORDO, IA",10 or fewer,373
+,"MASSAC, IL",10 or fewer,2099
+,"MARSHALL, IL",10 or fewer,2641
+,"MERCER, IL",10 or fewer,1929
+,"VALLEY, ID",10 or fewer,1873
+,"LATAH, ID",10 or fewer,3103
+,"MINIDOKA, ID",10 or fewer,3010
+,"COLES, IL",10 or fewer,1435
+,"WASHINGTON, IA",10 or fewer,1922
+,"LAWRENCE, IL",10 or fewer,2039
+,"JENNINGS, IN",10 or fewer,2130
+,"DIXIE, FL",10 or fewer,1866
+,"MADISON, GA",10 or fewer,2798
+,"JACKSON, FL",10 or fewer,1975
+,"GRANT, IN",10 or fewer,1776
+,"GEM, ID",10 or fewer,1995
+,"JACKSON, IN",10 or fewer,2000
+,"STORY, IA",10 or fewer,1226
+,"BAY, FL",10 or fewer,1354
+,"JEFFERSON, KS",10 or fewer,1755
+,"GOODING, ID",10 or fewer,1655
+,"DAVIESS, IN",10 or fewer,1673
+,"BREMER, IA",10 or fewer,1479
+,"BROOKS, GA",10 or fewer,2021
+,"SPENCER, IN",10 or fewer,1607
+,"RABUN, GA",10 or fewer,1991
+,"STEPHENSON, IL",10 or fewer,1327
+,"FAYETTE, IL",10 or fewer,1854
+,"PIATT, IL",10 or fewer,1430
+,"UNION, FL",10 or fewer,1433
+,"OCONEE, GA",10 or fewer,2224
+,"LA PORTE, IN",10 or fewer,1292
+,"PLYMOUTH, IA",10 or fewer,1440
+,"IROQUOIS, IL",10 or fewer,1586
+,"SANTA ROSA, FL",10 or fewer,1166
+,"DADE, GA",10 or fewer,1532
+,"LOGAN, IL",10 or fewer,1348
+,"GADSDEN, FL",10 or fewer,365
+,"OWYHEE, ID",10 or fewer,1797
+,"MONROE, GA",10 or fewer,1760
+,"BINGHAM, ID",10 or fewer,1388
+,"IOWA, IA",10 or fewer,1385
+,"PICKENS, GA",10 or fewer,1218
+,"BUCHANAN, IA",10 or fewer,1173
+,"CASSIA, ID",10 or fewer,1398
+,"WAPELLO, IA",10 or fewer,1338
+,"KANKAKEE, IL",10 or fewer,1185
+,"WHITESIDE, IL",10 or fewer,904
+,"ANDERSON, KS",10 or fewer,1816
+,"FORD, IL",10 or fewer,1368
+,"MADISON, FL",10 or fewer,1181
+,"CRAWFORD, IL",10 or fewer,1161
+,"WELLS, IN",10 or fewer,1282
+,"LEE, IL",10 or fewer,1131
+,"MONROE, FL",10 or fewer,998
+,"GLYNN, GA",10 or fewer,1187
+,"JONES, GA",10 or fewer,1735
+,"DUBOIS, IN",10 or fewer,728
+,"ALLEN, KS",10 or fewer,2194
+,"GILMER, GA",10 or fewer,1027
+,"MASON, IL",10 or fewer,1344
+,"JACKSON, IA",10 or fewer,956
+,"DEKALB, IN",10 or fewer,1733
+,"DES MOINES, IA",10 or fewer,816
+,"HARRIS, GA",10 or fewer,1269
+,"JACKSON, KS",10 or fewer,1021
+,"JASPER, IL",10 or fewer,1532
+,"UNION, IN",10 or fewer,1661
+,"PIKE, IN",10 or fewer,1162
+,"SHELBY, IN",10 or fewer,929
+,"OKEECHOBEE, FL",10 or fewer,1524
+,"BOONE, IN",10 or fewer,913
+,"MOULTRIE, IL",10 or fewer,913
+,"UPSON, GA",10 or fewer,945
+,"LOUISA, IA",10 or fewer,1202
+,"RANDOLPH, IN",10 or fewer,1502
+,"HAMILTON, FL",10 or fewer,1018
+,"WAKULLA, FL",10 or fewer,274
+,"ELBERT, GA",10 or fewer,1530
+,"TIPPECANOE, IN",10 or fewer,781
+,"GRUNDY, IL",10 or fewer,928
+,"BONNEVILLE, ID",10 or fewer,735
+,"MARION, IA",10 or fewer,790
+,"JO DAVIESS, IL",10 or fewer,855
+,"HENRY, IN",10 or fewer,1011
+,"ADAMS, IN",10 or fewer,886
+,"HEARD, GA",10 or fewer,1232
+,"WHITE, IL",10 or fewer,872
+,"RILEY, KS",10 or fewer,985
+,"BROWN, IN",10 or fewer,1160
+,"UNION, GA",10 or fewer,838
+,"MADISON, IA",10 or fewer,753
+,"DECATUR, IN",10 or fewer,992
+,"WILKINSON, GA",10 or fewer,1646
+,"FANNIN, GA",10 or fewer,709
+,"CASS, IN",10 or fewer,993
+,"CLAY, IL",10 or fewer,1077
+,"STARKE, IN",10 or fewer,1209
+,"HANCOCK, GA",10 or fewer,1771
+,"SWITZERLAND, IN",10 or fewer,1244
+,"STARK, IL",10 or fewer,1283
+,"WASHINGTON, ID",10 or fewer,1161
+,"MORGAN, IL",10 or fewer,752
+,"LEE, IA",10 or fewer,588
+,"MONROE, IN",10 or fewer,633
+,"KOOTENAI, ID",10 or fewer,675
+,"MORGAN, GA",10 or fewer,1147
+,"ALLAMAKEE, IA",10 or fewer,793
+,"HENRY, IA",10 or fewer,688
+,"OHIO, IN",10 or fewer,1357
+,"JERSEY, IL",10 or fewer,832
+,"DOUGHERTY, GA",10 or fewer,744
+,"BUTLER, IA",10 or fewer,712
+,"CHARLTON, GA",10 or fewer,1198
+,"LYON, IA",10 or fewer,635
+,"BOISE, ID",10 or fewer,999
+,"DELAWARE, IA",10 or fewer,644
+,"LINN, KS",10 or fewer,757
+,"MCDONOUGH, IL",10 or fewer,641
+,"CALHOUN, IA",10 or fewer,786
+,"GRUNDY, IA",10 or fewer,656
+,"CRAWFORD, IN",10 or fewer,809
+,"JASPER, IN",10 or fewer,557
+,"MENARD, IL",10 or fewer,825
+,"JASPER, GA",10 or fewer,839
+,"ALEXANDER, IL",10 or fewer,900
+,"KEOKUK, IA",10 or fewer,754
+,"DESOTO, FL",10 or fewer,721
+,"BOONE, IA",10 or fewer,541
+,"FULTON, IN",10 or fewer,753
+,"OGLETHORPE, GA",10 or fewer,1223
+,"TAYLOR, FL",10 or fewer,479
+,"CLAYTON, IA",10 or fewer,472
+,"ADAMS, ID",10 or fewer,779
+,"CUMBERLAND, IL",10 or fewer,759
+,"WABASH, IL",10 or fewer,723
+,"UNION, IL",10 or fewer,678
+,"POTTAWATOMIE, KS",10 or fewer,628
+,"WILLIAMSON, IL",10 or fewer,502
+,"WALTON, FL",10 or fewer,558
+,"MILLS, IA",10 or fewer,615
+,"POWER, ID",10 or fewer,759
+,"VIGO, IN",10 or fewer,454
+,"LINCOLN, ID",10 or fewer,666
+,"TIFT, GA",10 or fewer,590
+,"LIBERTY, GA",10 or fewer,554
+,"COLQUITT, GA",10 or fewer,505
+,"GUTHRIE, IA",10 or fewer,521
+,"HOLMES, FL",10 or fewer,736
+,"LYON, KS",10 or fewer,442
+,"RANDOLPH, IL",10 or fewer,492
+,"EDGAR, IL",10 or fewer,510
+,"PERRY, IN",10 or fewer,509
+,"PULASKI, IL",10 or fewer,636
+,"JOHNSON, IL",10 or fewer,615
+,"SALINE, IL",10 or fewer,501
+,"MARION, IL",10 or fewer,520
+,"APPANOOSE, IA",10 or fewer,204
+,"TIPTON, IN",10 or fewer,567
+,"PUTNAM, IL",10 or fewer,1156
+,"CLINCH, GA",10 or fewer,635
+,"LAURENS, GA",10 or fewer,649
+,"TAYLOR, GA",10 or fewer,1021
+,"HENDERSON, IL",10 or fewer,766
+,"EARLY, GA",10 or fewer,804
+,"WABAUNSEE, KS",10 or fewer,614
+,"HUMBOLDT, IA",10 or fewer,459
+,"CARROLL, IL",10 or fewer,320
+,"THOMAS, GA",10 or fewer,424
+,"JACKSON, IL",10 or fewer,454
+,"CASS, IL",10 or fewer,512
+,"TOWNS, GA",10 or fewer,450
+,"CHICKASAW, IA",10 or fewer,353
+,"FOUNTAIN, IN",10 or fewer,467
+,"CRAWFORD, GA",10 or fewer,873
+,"THOMAS, KS",10 or fewer,1235
+,"WARE, GA",10 or fewer,502
+,"COFFEE, GA",10 or fewer,473
+,"GLADES, FL",10 or fewer,626
+,"WRIGHT, IA",10 or fewer,435
+,"JEFFERSON, IA",10 or fewer,414
+,"ATCHISON, KS",10 or fewer,589
+,"ECHOLS, GA",10 or fewer,789
+,"HAMILTON, IA",10 or fewer,371
+,"JEFFERSON, FL",10 or fewer,137
+,"WASHINGTON, IL",10 or fewer,521
+,"HARDIN, IA",10 or fewer,366
+,"DONIPHAN, KS",10 or fewer,933
+,"CLARKE, IA",10 or fewer,343
+,"WINNESHIEK, IA",10 or fewer,367
+,"DICKINSON, KS",10 or fewer,782
+,"WASHINGTON, GA",10 or fewer,502
+,"MACON, GA",10 or fewer,700
+,"DECATUR, GA",10 or fewer,351
+,"MONROE, IL",10 or fewer,403
+,"EDWARDS, IL",10 or fewer,463
+,"BURKE, GA",10 or fewer,443
+,"BULLOCH, GA",10 or fewer,423
+,"EFFINGHAM, GA",10 or fewer,375
+,"OSCEOLA, IA",10 or fewer,461
+,"WAYNE, IL",10 or fewer,364
+,"FRANKLIN, IL",10 or fewer,308
+,"GREENE, IN",10 or fewer,317
+,"UNION, IA",10 or fewer,281
+,"ORANGE, IN",10 or fewer,301
+,"ADAMS, IL",10 or fewer,296
+,"BOURBON, KS",10 or fewer,473
+,"CHEROKEE, IA",10 or fewer,298
+,"WASHINGTON, FL",10 or fewer,393
+,"BRYAN, GA",10 or fewer,286
+,"CARROLL, IN",10 or fewer,388
+,"LAFAYETTE, FL",10 or fewer,286
+,"WINNEBAGO, IA",10 or fewer,201
+,"PUTNAM, IN",10 or fewer,244
+,"COFFEY, KS",10 or fewer,403
+,"LUCAS, IA",10 or fewer,243
+,"LAWRENCE, IN",10 or fewer,314
+,"JEFFERSON, IL",10 or fewer,283
+,"BUENA VISTA, IA",10 or fewer,242
+,"IDAHO, ID",10 or fewer,371
+,"PAGE, IA",10 or fewer,231
+,"SULLIVAN, IN",10 or fewer,333
+,"FLOYD, IA",10 or fewer,152
+,"MCDUFFIE, GA",10 or fewer,300
+,"TWIGGS, GA",10 or fewer,482
+,"GREENE, IL",10 or fewer,268
+,"SEMINOLE, GA",10 or fewer,402
+,"RUSH, IN",10 or fewer,277
+,"CLARK, IL",10 or fewer,258
+,"CLINTON, IN",10 or fewer,262
+,"CASS, IA",10 or fewer,191
+,"BRANTLEY, GA",10 or fewer,316
+,"MONTGOMERY, KS",10 or fewer,230
+,"MONONA, IA",10 or fewer,235
+,"CARROLL, IA",10 or fewer,222
+,"GREENE, IA",10 or fewer,223
+,"JEFFERSON, GA",10 or fewer,307
+,"VERMILLION, IN",10 or fewer,253
+,"POCAHONTAS, IA",10 or fewer,220
+,"GALLATIN, IL",10 or fewer,261
+,"SUMTER, GA",10 or fewer,285
+,"SALINE, KS",10 or fewer,223
+,"HARRISON, IA",10 or fewer,231
+,"DODGE, GA",10 or fewer,298
+,"POPE, IL",10 or fewer,307
+,"GRADY, GA",10 or fewer,198
+,"MONTGOMERY, IN",10 or fewer,195
+,"CARIBOU, ID",10 or fewer,288
+,"BEN HILL, GA",10 or fewer,285
+,"ADAIR, IA",10 or fewer,236
+,"BROWN, KS",10 or fewer,257
+,"ATKINSON, GA",10 or fewer,317
+,"CLAY, GA",10 or fewer,350
+,"DECATUR, IA",10 or fewer,181
+,"DICKINSON, IA",10 or fewer,215
+,"NEZ PERCE, ID",10 or fewer,268
+,"CRISP, GA",10 or fewer,254
+,"HANCOCK, IL",10 or fewer,202
+,"KOSSUTH, IA",10 or fewer,201
+,"BUTLER, KS",10 or fewer,193
+,"MARTIN, IN",10 or fewer,174
+,"CRAWFORD, KS",10 or fewer,215
+,"BLECKLEY, GA",10 or fewer,321
+,"JAY, IN",10 or fewer,221
+,"LEE, GA",10 or fewer,247
+,"PIERCE, GA",10 or fewer,237
+,"EMANUEL, GA",10 or fewer,221
+,"RENO, KS",10 or fewer,182
+,"NEWTON, IN",10 or fewer,193
+,"CRAWFORD, IA",10 or fewer,174
+,"BONNER, ID",10 or fewer,190
+,"WAYNE, GA",10 or fewer,211
+,"PAWNEE, KS",10 or fewer,282
+,"MADISON, ID",10 or fewer,164
+,"TOOMBS, GA",10 or fewer,231
+,"BLACKFORD, IN",10 or fewer,233
+,"VAN BUREN, IA",10 or fewer,139
+,"PULASKI, GA",10 or fewer,271
+,"CLAY, IA",10 or fewer,170
+,"WORTH, IA",10 or fewer,42
+,"WILKES, GA",10 or fewer,252
+,"MONTGOMERY, IA",10 or fewer,157
+,"FREMONT, IA",10 or fewer,162
+,"MONROE, IA",10 or fewer,174
+,"MARSHALL, KS",10 or fewer,166
+,"NEMAHA, KS",10 or fewer,156
+,"SAC, IA",10 or fewer,144
+,"JEFFERSON, ID",10 or fewer,160
+,"SHELBY, IA",10 or fewer,145
+,"HANCOCK, IA",10 or fewer,83
+,"WARREN, IN",10 or fewer,169
+,"FRANKLIN, IA",10 or fewer,90
+,"PERRY, IL",10 or fewer,177
+,"PIKE, IL",10 or fewer,118
+,"CALHOUN, FL",10 or fewer,136
+,"PULASKI, IN",10 or fewer,175
+,"HOWARD, IA",10 or fewer,133
+,"CLAY, IN",10 or fewer,169
+,"OWEN, IN",10 or fewer,154
+,"DAVIS, IA",10 or fewer,131
+,"FRANKLIN, FL",10 or fewer,74
+,"MITCHELL, GA",10 or fewer,141
+,"FRANKLIN, ID",10 or fewer,122
+,"NEOSHO, KS",10 or fewer,192
+,"IDA, IA",10 or fewer,158
+,"DOOLY, GA",10 or fewer,228
+,"WORTH, GA",10 or fewer,155
+,"STAFFORD, KS",10 or fewer,199
+,"TAYLOR, IA",10 or fewer,187
+,"SCHUYLER, IL",10 or fewer,118
+,"FINNEY, KS",10 or fewer,156
+,"HAMILTON, IL",10 or fewer,128
+,"ONEIDA, ID",10 or fewer,148
+,"WHITE, IN",10 or fewer,127
+,"APPLING, GA",10 or fewer,142
+,"CUSTER, ID",10 or fewer,138
+,"BENTON, IN",10 or fewer,139
+,"BEAR LAKE, ID",10 or fewer,151
+,"LIBERTY, FL",10 or fewer,50
+,"ELLIS, KS",10 or fewer,126
+,"LONG, GA",10 or fewer,135
+,"HARVEY, KS",10 or fewer,127
+,"GULF, FL",10 or fewer,122
+,"WAYNE, IA",10 or fewer,113
+,"MCINTOSH, GA",10 or fewer,133
+,"LINCOLN, GA",10 or fewer,118
+,"COWLEY, KS",10 or fewer,132
+,"TATTNALL, GA",10 or fewer,113
+,"HARDIN, IL",10 or fewer,98
+,"LABETTE, KS",10 or fewer,123
+,"MORRIS, KS",10 or fewer,177
+,"TALBOT, GA",10 or fewer,141
+,"WOODSON, KS",10 or fewer,198
+,"MCPHERSON, KS",10 or fewer,109
+,"MILLER, GA",10 or fewer,123
+,"WILCOX, GA",10 or fewer,149
+,"IRWIN, GA",10 or fewer,110
+,"TELFAIR, GA",10 or fewer,107
+,"CLAY, KS",10 or fewer,140
+,"RICE, KS",10 or fewer,113
+,"FORD, KS",10 or fewer,95
+,"SCREVEN, GA",10 or fewer,105
+,"JEFF DAVIS, GA",10 or fewer,98
+,"SHERMAN, KS",10 or fewer,160
+,"CAMAS, ID",10 or fewer,121
+,"SEWARD, KS",10 or fewer,93
+,"TURNER, GA",10 or fewer,100
+,"CALHOUN, IL",10 or fewer,106
+,"EMMET, IA",10 or fewer,86
+,"MITCHELL, IA",10 or fewer,56
+,"PARKE, IN",10 or fewer,105
+,"RINGGOLD, IA",10 or fewer,65
+,"FREMONT, ID",10 or fewer,76
+,"CALHOUN, GA",10 or fewer,127
+,"CHEROKEE, KS",10 or fewer,76
+,"BACON, GA",10 or fewer,93
+,"PALO ALTO, IA",10 or fewer,79
+,"TETON, ID",10 or fewer,75
+,"LEMHI, ID",10 or fewer,74
+,"JENKINS, GA",10 or fewer,87
+,"AUDUBON, IA",10 or fewer,60
+,"JOHNSON, GA",10 or fewer,94
+,"BENEWAH, ID",10 or fewer,111
+,"SCOTT, IL",10 or fewer,67
+,"RUSH, KS",10 or fewer,108
+,"TALIAFERRO, GA",10 or fewer,155
+,"MARION, GA",10 or fewer,96
+,"BROWN, IL",10 or fewer,62
+,"WARREN, GA",10 or fewer,86
+,"CLEARWATER, ID",10 or fewer,94
+,"LOGAN, KS",10 or fewer,149
+,"CANDLER, GA",10 or fewer,56
+,"EVANS, GA",10 or fewer,71
+,"RANDOLPH, GA",10 or fewer,77
+,"WASHINGTON, KS",10 or fewer,55
+,"ADAMS, IA",10 or fewer,40
+,"BAKER, GA",10 or fewer,67
+,"SUMNER, KS",10 or fewer,59
+,"MONTGOMERY, GA",10 or fewer,70
+,"TERRELL, GA",10 or fewer,60
+,"RAWLINS, KS",10 or fewer,90
+,"GREENWOOD, KS",10 or fewer,48
+,"QUITMAN, GA",10 or fewer,84
+,"TREUTLEN, GA",10 or fewer,55
+,"SHOSHONE, ID",10 or fewer,50
+,"WILSON, KS",10 or fewer,52
+,"RUSSELL, KS",10 or fewer,45
+,"BOUNDARY, ID",10 or fewer,39
+,"LEWIS, ID",10 or fewer,49
+,"ELLSWORTH, KS",10 or fewer,45
+,"BUTTE, ID",10 or fewer,44
+,"CHATTAHOOCHEE, GA",10 or fewer,47
+,"CLOUD, KS",10 or fewer,40
+,"GLASCOCK, GA",10 or fewer,50
+,"SCHLEY, GA",10 or fewer,65
+,"DECATUR, KS",10 or fewer,56
+,"MARION, KS",10 or fewer,43
+,"SHERIDAN, KS",10 or fewer,73
+,"WHEELER, GA",10 or fewer,51
+,"PRATT, KS",10 or fewer,27
+,"MORTON, KS",10 or fewer,46
+,"NORTON, KS",10 or fewer,41
+,"EDWARDS, KS",10 or fewer,37
+,"PHILLIPS, KS",10 or fewer,41
+,"REPUBLIC, KS",10 or fewer,27
+,"GRANT, KS",10 or fewer,30
+,"SMITH, KS",10 or fewer,25
+,"OTTAWA, KS",10 or fewer,33
+,"STEWART, GA",10 or fewer,32
+,"CHEYENNE, KS",10 or fewer,35
+,"GOVE, KS",10 or fewer,40
+,"CHASE, KS",10 or fewer,16
+,"SCOTT, KS",10 or fewer,23
+,"ROOKS, KS",10 or fewer,26
+,"KINGMAN, KS",10 or fewer,25
+,"STEVENS, KS",10 or fewer,29
+,"MITCHELL, KS",10 or fewer,21
+,"JEWELL, KS",10 or fewer,20
+,"GRAY, KS",10 or fewer,23
+,"NESS, KS",10 or fewer,21
+,"CHAUTAUQUA, KS",10 or fewer,26
+,"WALLACE, KS",10 or fewer,28
+,"HARPER, KS",10 or fewer,19
+,"BARBER, KS",10 or fewer,14
+,"MEADE, KS",10 or fewer,18
+,"LINCOLN, KS",10 or fewer,18
+,"KEARNY, KS",10 or fewer,15
+,"WEBSTER, GA",10 or fewer,17
+,"HAMILTON, KS",10 or fewer,10 or fewer
+,"ELK, KS",10 or fewer,19
+,"OSBORNE, KS",10 or fewer,16
+,"TREGO, KS",10 or fewer,18
+,"HASKELL, KS",10 or fewer,10 or fewer
+,"GREELEY, KS",10 or fewer,10 or fewer
+,"GRAHAM, KS",10 or fewer,10 or fewer
+,"WICHITA, KS",10 or fewer,10 or fewer
+,"STANTON, KS",10 or fewer,13
+,"LANE, KS",10 or fewer,13
+,"KIOWA, KS",10 or fewer,13
+,"HODGEMAN, KS",10 or fewer,11
+,"CLARK, KS",10 or fewer,15
+,"COMANCHE, KS",10 or fewer,10 or fewer
+,"CLARK, ID",10 or fewer,10 or fewer
+,"KALAWAO, HI",10 or fewer,10 or fewer
+,None of the above,276,291842
+,Total,7187,6475861
+Jan 1 – Dec 31 2025,"COOK, IL",335,468884
+,"BROWARD, FL",330,328609
+,"ORANGE, FL",452,327153
+,"LEE, FL",225,162778
+,"FULTON, GA",152,155253
+,"DUVAL, FL",285,219500
+,"HONOLULU, HI",87,145719
+,"HILLSBOROUGH, FL",215,168718
+,"MIAMI-DADE, FL",62,114316
+,"MARION, IN",126,133700
+,"COBB, GA",160,118196
+,"DEKALB, GA",103,125959
+,"ADA, ID",100,92296
+,"VOLUSIA, FL",178,120666
+,"LAKE, FL",203,122101
+,"OSCEOLA, FL",109,104528
+,"POLK, IA",104,69024
+,"POLK, FL",154,91961
+,"LAKE, IN",44,57179
+,"GWINNETT, GA",51,54573
+,"SEMINOLE, FL",113,85460
+,"WINNEBAGO, IL",43,60434
+,"ALLEN, IN",64,58623
+,"LAKE, IL",43,57315
+,"JOHNSON, KS",103,68394
+,"DUPAGE, IL",50,56707
+,"MARION, FL",103,76187
+,"LINN, IA",98,54719
+,"ALACHUA, FL",42,43343
+,"KANE, IL",43,48248
+,"PINELLAS, FL",80,51263
+,"HALL, GA",52,42929
+,"PASCO, FL",101,66779
+,"CANYON, ID",52,51139
+,"PEORIA, IL",89,42633
+,"CHAMPAIGN, IL",62,39912
+,"SHAWNEE, KS",54,36009
+,"DOUGLAS, GA",37,33813
+,"PAULDING, GA",35,33438
+,"COLLIER, FL",58,42861
+,"SAINT LUCIE, FL",53,49726
+,"PALM BEACH, FL",77,43369
+,"VANDERBURGH, IN",76,28150
+,"LOWNDES, GA",43,33560
+,"WYANDOTTE, KS",44,33496
+,"MCLEAN, IL",49,30538
+,"ROCK ISLAND, IL",42,25482
+,"SAINT CLAIR, IL",24,22581
+,"WILL, IL",33,28886
+,"CLAYTON, GA",17,22419
+,"TAZEWELL, IL",67,27315
+,"SAINT JOHNS, FL",57,41876
+,"MCHENRY, IL",20,25251
+,"CLARK, IN",82,40239
+,"CHEROKEE, GA",18,17549
+,"SANGAMON, IL",36,21463
+,"CLAY, FL",40,32694
+,"SUMTER, FL",70,31214
+,"JOHNSON, IA",30,25166
+,"FLAGLER, FL",53,33417
+,"HENRY, GA",11,17112
+,"ST JOSEPH, IN",40,23530
+,"MADISON, IL",42,17864
+,"HAWAII, HI",22,23732
+,"LA SALLE, IL",47,22883
+,"SCOTT, IA",29,14828
+,"VERMILION, IL",58,20807
+,"MARTIN, FL",51,30865
+,"TWIN FALLS, ID",18,17160
+,"BREVARD, FL",36,23114
+,"TROUP, GA",23,19952
+,"NASSAU, FL",56,26459
+,"INDIAN RIVER, FL",43,27583
+,"BLACK HAWK, IA",55,23590
+,"JOHNSON, IN",15,14511
+,"BIBB, GA",53,21536
+,"BARROW, GA",13,18147
+,"WOODBURY, IA",38,17044
+,"KENDALL, IL",16,16858
+,"BARTHOLOMEW, IN",40,18079
+,"FLOYD, GA",46,26307
+,"SPALDING, GA",27,15530
+,"MADISON, IN",16,17660
+,"MACON, IL",20,11489
+,"HIGHLANDS, FL",47,23296
+,"FLOYD, IN",24,17954
+,"BANNOCK, ID",10 or fewer,14123
+,"HAMILTON, IN",11,8968
+,"DUBUQUE, IA",39,17522
+,"CITRUS, FL",43,28005
+,"JACKSON, GA",18,12813
+,"KAUAI, HI",10 or fewer,12288
+,"WHITFIELD, GA",48,23110
+,"HOWARD, IN",10 or fewer,13285
+,"HERNANDO, FL",38,28480
+,"FORSYTH, GA",10 or fewer,10834
+,"LEON, FL",38,34765
+,"PORTER, IN",16,13761
+,"KNOX, IL",18,12012
+,"BOONE, IL",10 or fewer,11475
+,"BARTOW, GA",16,11107
+,"WAYNE, IN",19,14700
+,"DEARBORN, IN",14,11680
+,"POLK, GA",32,15248
+,"WARRICK, IN",18,8078
+,"HOUSTON, GA",13,11587
+,"DALLAS, IA",18,9797
+,"KNOX, IN",32,10029
+,"LEAVENWORTH, KS",10 or fewer,6531
+,"NOBLE, IN",10 or fewer,8722
+,"CARROLL, GA",10 or fewer,5953
+,"GORDON, GA",36,14539
+,"KOSCIUSKO, IN",10 or fewer,8338
+,"HABERSHAM, GA",12,11950
+,"MUSCATINE, IA",22,9117
+,"CLARKE, GA",14,11304
+,"WALKER, GA",14,8166
+,"MARSHALL, IA",13,8517
+,"LEVY, FL",10 or fewer,8712
+,"RICHMOND, GA",38,18256
+,"ELMORE, ID",10 or fewer,7398
+,"NEWTON, GA",10 or fewer,6197
+,"CHARLOTTE, FL",10 or fewer,7000
+,"WEBSTER, IA",11,7675
+,"HENRY, IL",19,7251
+,"COWETA, GA",10 or fewer,5134
+,"CATOOSA, GA",10 or fewer,6097
+,"HUNTINGTON, IN",10 or fewer,7083
+,"HANCOCK, IN",10 or fewer,5638
+,"LIVINGSTON, IL",11,7263
+,"BALDWIN, GA",24,10338
+,"PUTNAM, FL",10 or fewer,7751
+,"EFFINGHAM, IL",22,7182
+,"WOODFORD, IL",24,7497
+,"WALTON, GA",10 or fewer,5198
+,"WHITLEY, IN",12,6555
+,"BUTTS, GA",10 or fewer,6400
+,"GIBSON, IN",28,7134
+,"ROCKDALE, GA",10 or fewer,6020
+,"LUMPKIN, GA",16,7400
+,"SARASOTA, FL",10 or fewer,4373
+,"WABASH, IN",10 or fewer,5996
+,"MANATEE, FL",10 or fewer,4541
+,"COLUMBIA, FL",10 or fewer,4775
+,"CLINTON, IL",13,6185
+,"MURRAY, GA",25,10799
+,"MARSHALL, IN",20,6912
+,"WHITE, GA",12,6774
+,"WARREN, IA",14,6138
+,"FAYETTE, GA",10 or fewer,3932
+,"ELKHART, IN",10 or fewer,4634
+,"LAGRANGE, IN",10 or fewer,4897
+,"PAYETTE, ID",10 or fewer,5927
+,"HARRISON, IN",12,5496
+,"JEROME, ID",10 or fewer,5074
+,"HENDRY, FL",10 or fewer,4764
+,"BUREAU, IL",21,7267
+,"PEACH, GA",10 or fewer,7103
+,"BLAINE, ID",10 or fewer,4636
+,"CHATTOOGA, GA",22,8921
+,"OGLE, IL",10 or fewer,3472
+,"MACOUPIN, IL",12,3890
+,"CAMDEN, GA",10 or fewer,5214
+,"FRANKLIN, GA",13,6649
+,"GEARY, KS",13,6840
+,"DAWSON, GA",11,4769
+,"BERRIEN, GA",20,5179
+,"FAYETTE, IN",11,6271
+,"HENDRICKS, IN",10 or fewer,2576
+,"POSEY, IN",10 or fewer,3494
+,"HART, GA",12,5801
+,"HARDEE, FL",11,6989
+,"MONTGOMERY, IL",10 or fewer,3924
+,"DEKALB, IL",10 or fewer,2870
+,"BARTON, KS",10 or fewer,4594
+,"BANKS, GA",10 or fewer,4267
+,"COLUMBIA, GA",11,7117
+,"POTTAWATTAMIE, IA",10 or fewer,2369
+,"MAUI, HI",10 or fewer,3873
+,"WARREN, IL",11,4156
+,"CLINTON, IA",19,6839
+,"BENTON, IA",10 or fewer,3177
+,"STEPHENS, GA",10 or fewer,3839
+,"SUWANNEE, FL",10 or fewer,2256
+,"GREENE, GA",10 or fewer,5473
+,"JASPER, IA",20,5103
+,"DELAWARE, IN",10 or fewer,3340
+,"RICHLAND, IL",10 or fewer,4011
+,"JONES, IA",10 or fewer,3349
+,"SCOTT, IN",10 or fewer,6129
+,"FRANKLIN, KS",10 or fewer,5394
+,"POWESHIEK, IA",10 or fewer,3440
+,"MUSCOGEE, GA",10 or fewer,2026
+,"ESCAMBIA, FL",10 or fewer,1923
+,"MAHASKA, IA",10 or fewer,3442
+,"BRADFORD, FL",10 or fewer,2448
+,"BOND, IL",15,3622
+,"STEUBEN, IN",10 or fewer,2018
+,"WASHINGTON, IN",10 or fewer,3072
+,"DOUGLAS, KS",10 or fewer,2553
+,"SIOUX, IA",10 or fewer,2225
+,"LAMAR, GA",10 or fewer,2268
+,"SHELBY, IL",10 or fewer,3360
+,"OSAGE, KS",10 or fewer,2590
+,"RIPLEY, IN",10 or fewer,2897
+,"JEFFERSON, IN",18,6436
+,"TAMA, IA",10 or fewer,3154
+,"DOUGLAS, IL",10 or fewer,2350
+,"CHATHAM, GA",10 or fewer,1975
+,"BAKER, FL",10 or fewer,3214
+,"MORGAN, IN",10 or fewer,1582
+,"MIAMI, IN",10 or fewer,2424
+,"SEDGWICK, KS",10 or fewer,1552
+,"FULTON, IL",10 or fewer,1935
+,"COOK, GA",10 or fewer,2803
+,"PUTNAM, GA",10 or fewer,3725
+,"PIKE, GA",10 or fewer,1809
+,"MIAMI, KS",11,4938
+,"LANIER, GA",10 or fewer,3123
+,"MERIWETHER, GA",10 or fewer,2319
+,"FRANKLIN, IN",10 or fewer,2543
+,"FAYETTE, IA",10 or fewer,2932
+,"OBRIEN, IA",10 or fewer,2387
+,"OKALOOSA, FL",10 or fewer,1717
+,"HARALSON, GA",10 or fewer,2189
+,"CEDAR, IA",10 or fewer,2697
+,"CHRISTIAN, IL",10 or fewer,1588
+,"GILCHRIST, FL",10 or fewer,1987
+,"CERRO GORDO, IA",12,6638
+,"MASSAC, IL",10 or fewer,2104
+,"MARSHALL, IL",10 or fewer,2558
+,"MERCER, IL",10 or fewer,1848
+,"VALLEY, ID",10 or fewer,2081
+,"LATAH, ID",10 or fewer,5177
+,"MINIDOKA, ID",10 or fewer,3720
+,"COLES, IL",10 or fewer,1414
+,"WASHINGTON, IA",10 or fewer,2190
+,"LAWRENCE, IL",10 or fewer,2076
+,"JENNINGS, IN",10 or fewer,2182
+,"DIXIE, FL",10 or fewer,1947
+,"MADISON, GA",10 or fewer,2948
+,"JACKSON, FL",10 or fewer,2347
+,"GRANT, IN",10 or fewer,1598
+,"GEM, ID",10 or fewer,2066
+,"JACKSON, IN",10 or fewer,2156
+,"STORY, IA",10 or fewer,1462
+,"BAY, FL",10 or fewer,1523
+,"JEFFERSON, KS",10 or fewer,1719
+,"GOODING, ID",10 or fewer,1742
+,"DAVIESS, IN",10 or fewer,1756
+,"BREMER, IA",10 or fewer,1800
+,"BROOKS, GA",10 or fewer,2103
+,"SPENCER, IN",10 or fewer,1837
+,"RABUN, GA",10 or fewer,2103
+,"STEPHENSON, IL",10 or fewer,1301
+,"FAYETTE, IL",10 or fewer,1775
+,"PIATT, IL",10 or fewer,1505
+,"UNION, FL",10 or fewer,1506
+,"OCONEE, GA",10 or fewer,2104
+,"LA PORTE, IN",10 or fewer,1649
+,"PLYMOUTH, IA",10 or fewer,1476
+,"IROQUOIS, IL",10 or fewer,1616
+,"SANTA ROSA, FL",10 or fewer,1272
+,"DADE, GA",10 or fewer,1397
+,"LOGAN, IL",10 or fewer,1301
+,"GADSDEN, FL",10 or fewer,5010
+,"OWYHEE, ID",10 or fewer,1861
+,"MONROE, GA",10 or fewer,1776
+,"BINGHAM, ID",10 or fewer,1451
+,"IOWA, IA",10 or fewer,1538
+,"PICKENS, GA",10 or fewer,1114
+,"BUCHANAN, IA",10 or fewer,1621
+,"CASSIA, ID",10 or fewer,2879
+,"WAPELLO, IA",10 or fewer,1582
+,"KANKAKEE, IL",10 or fewer,1158
+,"WHITESIDE, IL",10 or fewer,1628
+,"ANDERSON, KS",10 or fewer,1867
+,"FORD, IL",10 or fewer,1385
+,"MADISON, FL",10 or fewer,1729
+,"CRAWFORD, IL",10 or fewer,1129
+,"WELLS, IN",10 or fewer,1276
+,"LEE, IL",10 or fewer,1140
+,"MONROE, FL",10 or fewer,1100
+,"GLYNN, GA",10 or fewer,1192
+,"JONES, GA",10 or fewer,1798
+,"DUBOIS, IN",10 or fewer,2188
+,"ALLEN, KS",10 or fewer,2168
+,"GILMER, GA",10 or fewer,1012
+,"MASON, IL",10 or fewer,1268
+,"JACKSON, IA",10 or fewer,1538
+,"DEKALB, IN",10 or fewer,2031
+,"DES MOINES, IA",10 or fewer,875
+,"HARRIS, GA",10 or fewer,1210
+,"JACKSON, KS",10 or fewer,1001
+,"JASPER, IL",10 or fewer,1524
+,"UNION, IN",10 or fewer,1721
+,"PIKE, IN",10 or fewer,1408
+,"SHELBY, IN",10 or fewer,920
+,"OKEECHOBEE, FL",10 or fewer,1716
+,"BOONE, IN",10 or fewer,867
+,"MOULTRIE, IL",10 or fewer,831
+,"UPSON, GA",10 or fewer,946
+,"LOUISA, IA",10 or fewer,1212
+,"RANDOLPH, IN",10 or fewer,1651
+,"HAMILTON, FL",10 or fewer,994
+,"WAKULLA, FL",10 or fewer,3575
+,"ELBERT, GA",10 or fewer,1542
+,"TIPPECANOE, IN",10 or fewer,802
+,"GRUNDY, IL",10 or fewer,955
+,"BONNEVILLE, ID",10 or fewer,871
+,"MARION, IA",10 or fewer,1091
+,"JO DAVIESS, IL",10 or fewer,1447
+,"HENRY, IN",10 or fewer,995
+,"ADAMS, IN",10 or fewer,817
+,"HEARD, GA",10 or fewer,1136
+,"WHITE, IL",10 or fewer,759
+,"RILEY, KS",10 or fewer,863
+,"BROWN, IN",10 or fewer,1240
+,"UNION, GA",10 or fewer,911
+,"MADISON, IA",10 or fewer,1153
+,"DECATUR, IN",10 or fewer,1005
+,"WILKINSON, GA",10 or fewer,1754
+,"FANNIN, GA",10 or fewer,698
+,"CASS, IN",10 or fewer,970
+,"CLAY, IL",10 or fewer,965
+,"STARKE, IN",10 or fewer,1309
+,"HANCOCK, GA",10 or fewer,1823
+,"SWITZERLAND, IN",10 or fewer,1693
+,"STARK, IL",10 or fewer,1296
+,"WASHINGTON, ID",10 or fewer,1207
+,"MORGAN, IL",10 or fewer,700
+,"LEE, IA",10 or fewer,591
+,"MONROE, IN",10 or fewer,703
+,"KOOTENAI, ID",10 or fewer,704
+,"MORGAN, GA",10 or fewer,1152
+,"ALLAMAKEE, IA",10 or fewer,1066
+,"HENRY, IA",10 or fewer,682
+,"OHIO, IN",10 or fewer,1368
+,"JERSEY, IL",10 or fewer,757
+,"DOUGHERTY, GA",10 or fewer,796
+,"BUTLER, IA",10 or fewer,1020
+,"CHARLTON, GA",10 or fewer,1355
+,"LYON, IA",10 or fewer,643
+,"BOISE, ID",10 or fewer,1114
+,"DELAWARE, IA",10 or fewer,882
+,"LINN, KS",10 or fewer,1502
+,"MCDONOUGH, IL",10 or fewer,624
+,"CALHOUN, IA",10 or fewer,775
+,"GRUNDY, IA",10 or fewer,873
+,"CRAWFORD, IN",10 or fewer,1029
+,"JASPER, IN",10 or fewer,772
+,"MENARD, IL",10 or fewer,736
+,"JASPER, GA",10 or fewer,803
+,"ALEXANDER, IL",10 or fewer,908
+,"KEOKUK, IA",10 or fewer,798
+,"DESOTO, FL",10 or fewer,926
+,"BOONE, IA",10 or fewer,741
+,"FULTON, IN",10 or fewer,784
+,"OGLETHORPE, GA",10 or fewer,1245
+,"TAYLOR, FL",10 or fewer,1261
+,"CLAYTON, IA",10 or fewer,996
+,"ADAMS, ID",10 or fewer,812
+,"CUMBERLAND, IL",10 or fewer,730
+,"WABASH, IL",10 or fewer,614
+,"UNION, IL",10 or fewer,676
+,"POTTAWATOMIE, KS",10 or fewer,604
+,"WILLIAMSON, IL",10 or fewer,433
+,"WALTON, FL",10 or fewer,582
+,"MILLS, IA",10 or fewer,602
+,"POWER, ID",10 or fewer,757
+,"VIGO, IN",10 or fewer,469
+,"LINCOLN, ID",10 or fewer,710
+,"TIFT, GA",10 or fewer,719
+,"LIBERTY, GA",10 or fewer,592
+,"COLQUITT, GA",10 or fewer,654
+,"GUTHRIE, IA",10 or fewer,695
+,"HOLMES, FL",10 or fewer,777
+,"LYON, KS",10 or fewer,437
+,"RANDOLPH, IL",10 or fewer,512
+,"EDGAR, IL",10 or fewer,461
+,"PERRY, IN",10 or fewer,543
+,"PULASKI, IL",10 or fewer,649
+,"JOHNSON, IL",10 or fewer,574
+,"SALINE, IL",10 or fewer,390
+,"MARION, IL",10 or fewer,538
+,"APPANOOSE, IA",10 or fewer,1857
+,"TIPTON, IN",10 or fewer,554
+,"PUTNAM, IL",10 or fewer,1148
+,"CLINCH, GA",10 or fewer,698
+,"LAURENS, GA",10 or fewer,695
+,"TAYLOR, GA",10 or fewer,1061
+,"HENDERSON, IL",10 or fewer,786
+,"EARLY, GA",10 or fewer,837
+,"WABAUNSEE, KS",10 or fewer,615
+,"HUMBOLDT, IA",10 or fewer,465
+,"CARROLL, IL",10 or fewer,1071
+,"THOMAS, GA",10 or fewer,844
+,"JACKSON, IL",10 or fewer,378
+,"CASS, IL",10 or fewer,431
+,"TOWNS, GA",10 or fewer,507
+,"CHICKASAW, IA",10 or fewer,1223
+,"FOUNTAIN, IN",10 or fewer,408
+,"CRAWFORD, GA",10 or fewer,1004
+,"THOMAS, KS",10 or fewer,1376
+,"WARE, GA",10 or fewer,514
+,"COFFEE, GA",10 or fewer,531
+,"GLADES, FL",10 or fewer,705
+,"WRIGHT, IA",10 or fewer,543
+,"JEFFERSON, IA",10 or fewer,381
+,"ATCHISON, KS",10 or fewer,608
+,"ECHOLS, GA",10 or fewer,736
+,"HAMILTON, IA",10 or fewer,417
+,"JEFFERSON, FL",10 or fewer,1742
+,"WASHINGTON, IL",10 or fewer,550
+,"HARDIN, IA",10 or fewer,487
+,"DONIPHAN, KS",10 or fewer,950
+,"CLARKE, IA",10 or fewer,450
+,"WINNESHIEK, IA",10 or fewer,390
+,"DICKINSON, KS",10 or fewer,764
+,"WASHINGTON, GA",10 or fewer,898
+,"MACON, GA",10 or fewer,644
+,"DECATUR, GA",10 or fewer,945
+,"MONROE, IL",10 or fewer,339
+,"EDWARDS, IL",10 or fewer,479
+,"BURKE, GA",10 or fewer,1286
+,"BULLOCH, GA",10 or fewer,494
+,"EFFINGHAM, GA",10 or fewer,423
+,"OSCEOLA, IA",10 or fewer,419
+,"WAYNE, IL",10 or fewer,311
+,"FRANKLIN, IL",10 or fewer,228
+,"GREENE, IN",10 or fewer,294
+,"UNION, IA",10 or fewer,266
+,"ORANGE, IN",10 or fewer,458
+,"ADAMS, IL",10 or fewer,277
+,"BOURBON, KS",10 or fewer,530
+,"CHEROKEE, IA",10 or fewer,332
+,"WASHINGTON, FL",10 or fewer,428
+,"BRYAN, GA",10 or fewer,344
+,"CARROLL, IN",10 or fewer,361
+,"LAFAYETTE, FL",10 or fewer,305
+,"WINNEBAGO, IA",10 or fewer,937
+,"PUTNAM, IN",10 or fewer,244
+,"COFFEY, KS",10 or fewer,409
+,"LUCAS, IA",10 or fewer,325
+,"LAWRENCE, IN",10 or fewer,326
+,"JEFFERSON, IL",10 or fewer,256
+,"BUENA VISTA, IA",10 or fewer,273
+,"IDAHO, ID",10 or fewer,347
+,"PAGE, IA",10 or fewer,264
+,"SULLIVAN, IN",10 or fewer,287
+,"FLOYD, IA",10 or fewer,695
+,"MCDUFFIE, GA",10 or fewer,895
+,"TWIGGS, GA",10 or fewer,510
+,"GREENE, IL",10 or fewer,266
+,"SEMINOLE, GA",10 or fewer,509
+,"RUSH, IN",10 or fewer,293
+,"CLARK, IL",10 or fewer,259
+,"CLINTON, IN",10 or fewer,211
+,"CASS, IA",10 or fewer,212
+,"BRANTLEY, GA",10 or fewer,361
+,"MONTGOMERY, KS",10 or fewer,256
+,"MONONA, IA",10 or fewer,258
+,"CARROLL, IA",10 or fewer,252
+,"GREENE, IA",10 or fewer,219
+,"JEFFERSON, GA",10 or fewer,817
+,"VERMILLION, IN",10 or fewer,222
+,"POCAHONTAS, IA",10 or fewer,226
+,"GALLATIN, IL",10 or fewer,226
+,"SUMTER, GA",10 or fewer,302
+,"SALINE, KS",10 or fewer,249
+,"HARRISON, IA",10 or fewer,222
+,"DODGE, GA",10 or fewer,392
+,"POPE, IL",10 or fewer,288
+,"GRADY, GA",10 or fewer,610
+,"MONTGOMERY, IN",10 or fewer,186
+,"CARIBOU, ID",10 or fewer,242
+,"BEN HILL, GA",10 or fewer,299
+,"ADAIR, IA",10 or fewer,295
+,"BROWN, KS",10 or fewer,271
+,"ATKINSON, GA",10 or fewer,311
+,"CLAY, GA",10 or fewer,327
+,"DECATUR, IA",10 or fewer,252
+,"DICKINSON, IA",10 or fewer,208
+,"NEZ PERCE, ID",10 or fewer,308
+,"CRISP, GA",10 or fewer,294
+,"HANCOCK, IL",10 or fewer,186
+,"KOSSUTH, IA",10 or fewer,345
+,"BUTLER, KS",10 or fewer,186
+,"MARTIN, IN",10 or fewer,401
+,"CRAWFORD, KS",10 or fewer,195
+,"BLECKLEY, GA",10 or fewer,300
+,"JAY, IN",10 or fewer,253
+,"LEE, GA",10 or fewer,246
+,"PIERCE, GA",10 or fewer,271
+,"EMANUEL, GA",10 or fewer,536
+,"RENO, KS",10 or fewer,194
+,"NEWTON, IN",10 or fewer,181
+,"CRAWFORD, IA",10 or fewer,180
+,"BONNER, ID",10 or fewer,199
+,"WAYNE, GA",10 or fewer,239
+,"PAWNEE, KS",10 or fewer,274
+,"MADISON, ID",10 or fewer,230
+,"TOOMBS, GA",10 or fewer,249
+,"BLACKFORD, IN",10 or fewer,205
+,"VAN BUREN, IA",10 or fewer,169
+,"PULASKI, GA",10 or fewer,315
+,"CLAY, IA",10 or fewer,149
+,"WORTH, IA",10 or fewer,758
+,"WILKES, GA",10 or fewer,443
+,"MONTGOMERY, IA",10 or fewer,145
+,"FREMONT, IA",10 or fewer,165
+,"MONROE, IA",10 or fewer,247
+,"MARSHALL, KS",10 or fewer,182
+,"NEMAHA, KS",10 or fewer,164
+,"SAC, IA",10 or fewer,164
+,"JEFFERSON, ID",10 or fewer,179
+,"SHELBY, IA",10 or fewer,136
+,"HANCOCK, IA",10 or fewer,487
+,"WARREN, IN",10 or fewer,162
+,"FRANKLIN, IA",10 or fewer,436
+,"PERRY, IL",10 or fewer,148
+,"PIKE, IL",10 or fewer,114
+,"CALHOUN, FL",10 or fewer,366
+,"PULASKI, IN",10 or fewer,242
+,"HOWARD, IA",10 or fewer,196
+,"CLAY, IN",10 or fewer,155
+,"OWEN, IN",10 or fewer,142
+,"DAVIS, IA",10 or fewer,195
+,"FRANKLIN, FL",10 or fewer,482
+,"MITCHELL, GA",10 or fewer,230
+,"FRANKLIN, ID",10 or fewer,319
+,"NEOSHO, KS",10 or fewer,197
+,"IDA, IA",10 or fewer,185
+,"DOOLY, GA",10 or fewer,260
+,"WORTH, GA",10 or fewer,184
+,"STAFFORD, KS",10 or fewer,198
+,"TAYLOR, IA",10 or fewer,221
+,"SCHUYLER, IL",10 or fewer,121
+,"FINNEY, KS",10 or fewer,120
+,"HAMILTON, IL",10 or fewer,109
+,"ONEIDA, ID",10 or fewer,221
+,"WHITE, IN",10 or fewer,117
+,"APPLING, GA",10 or fewer,204
+,"CUSTER, ID",10 or fewer,142
+,"BENTON, IN",10 or fewer,139
+,"BEAR LAKE, ID",10 or fewer,181
+,"LIBERTY, FL",10 or fewer,518
+,"ELLIS, KS",10 or fewer,127
+,"LONG, GA",10 or fewer,155
+,"HARVEY, KS",10 or fewer,127
+,"GULF, FL",10 or fewer,163
+,"WAYNE, IA",10 or fewer,192
+,"MCINTOSH, GA",10 or fewer,138
+,"LINCOLN, GA",10 or fewer,315
+,"COWLEY, KS",10 or fewer,110
+,"TATTNALL, GA",10 or fewer,196
+,"HARDIN, IL",10 or fewer,116
+,"LABETTE, KS",10 or fewer,97
+,"MORRIS, KS",10 or fewer,172
+,"TALBOT, GA",10 or fewer,148
+,"WOODSON, KS",10 or fewer,208
+,"MCPHERSON, KS",10 or fewer,104
+,"MILLER, GA",10 or fewer,197
+,"WILCOX, GA",10 or fewer,144
+,"IRWIN, GA",10 or fewer,135
+,"TELFAIR, GA",10 or fewer,157
+,"CLAY, KS",10 or fewer,132
+,"RICE, KS",10 or fewer,109
+,"FORD, KS",10 or fewer,92
+,"SCREVEN, GA",10 or fewer,182
+,"JEFF DAVIS, GA",10 or fewer,109
+,"SHERMAN, KS",10 or fewer,175
+,"CAMAS, ID",10 or fewer,132
+,"SEWARD, KS",10 or fewer,106
+,"TURNER, GA",10 or fewer,149
+,"CALHOUN, IL",10 or fewer,90
+,"EMMET, IA",10 or fewer,106
+,"MITCHELL, IA",10 or fewer,208
+,"PARKE, IN",10 or fewer,73
+,"RINGGOLD, IA",10 or fewer,96
+,"FREMONT, ID",10 or fewer,92
+,"CALHOUN, GA",10 or fewer,134
+,"CHEROKEE, KS",10 or fewer,84
+,"BACON, GA",10 or fewer,93
+,"PALO ALTO, IA",10 or fewer,92
+,"TETON, ID",10 or fewer,92
+,"LEMHI, ID",10 or fewer,89
+,"JENKINS, GA",10 or fewer,269
+,"AUDUBON, IA",10 or fewer,86
+,"JOHNSON, GA",10 or fewer,153
+,"BENEWAH, ID",10 or fewer,147
+,"SCOTT, IL",10 or fewer,58
+,"RUSH, KS",10 or fewer,99
+,"TALIAFERRO, GA",10 or fewer,201
+,"MARION, GA",10 or fewer,108
+,"BROWN, IL",10 or fewer,56
+,"WARREN, GA",10 or fewer,201
+,"CLEARWATER, ID",10 or fewer,109
+,"LOGAN, KS",10 or fewer,167
+,"CANDLER, GA",10 or fewer,133
+,"EVANS, GA",10 or fewer,129
+,"RANDOLPH, GA",10 or fewer,63
+,"WASHINGTON, KS",10 or fewer,63
+,"ADAMS, IA",10 or fewer,55
+,"BAKER, GA",10 or fewer,83
+,"SUMNER, KS",10 or fewer,56
+,"MONTGOMERY, GA",10 or fewer,71
+,"TERRELL, GA",10 or fewer,56
+,"RAWLINS, KS",10 or fewer,92
+,"GREENWOOD, KS",10 or fewer,41
+,"QUITMAN, GA",10 or fewer,74
+,"TREUTLEN, GA",10 or fewer,67
+,"SHOSHONE, ID",10 or fewer,47
+,"WILSON, KS",10 or fewer,44
+,"RUSSELL, KS",10 or fewer,45
+,"BOUNDARY, ID",10 or fewer,43
+,"LEWIS, ID",10 or fewer,45
+,"ELLSWORTH, KS",10 or fewer,58
+,"BUTTE, ID",10 or fewer,42
+,"CHATTAHOOCHEE, GA",10 or fewer,57
+,"CLOUD, KS",10 or fewer,38
+,"GLASCOCK, GA",10 or fewer,143
+,"SCHLEY, GA",10 or fewer,56
+,"DECATUR, KS",10 or fewer,63
+,"MARION, KS",10 or fewer,40
+,"SHERIDAN, KS",10 or fewer,82
+,"WHEELER, GA",10 or fewer,64
+,"PRATT, KS",10 or fewer,33
+,"MORTON, KS",10 or fewer,51
+,"NORTON, KS",10 or fewer,51
+,"EDWARDS, KS",10 or fewer,39
+,"PHILLIPS, KS",10 or fewer,42
+,"REPUBLIC, KS",10 or fewer,34
+,"GRANT, KS",10 or fewer,32
+,"SMITH, KS",10 or fewer,26
+,"OTTAWA, KS",10 or fewer,42
+,"STEWART, GA",10 or fewer,47
+,"CHEYENNE, KS",10 or fewer,34
+,"GOVE, KS",10 or fewer,50
+,"CHASE, KS",10 or fewer,20
+,"SCOTT, KS",10 or fewer,30
+,"ROOKS, KS",10 or fewer,22
+,"KINGMAN, KS",10 or fewer,24
+,"STEVENS, KS",10 or fewer,46
+,"MITCHELL, KS",10 or fewer,21
+,"JEWELL, KS",10 or fewer,25
+,"GRAY, KS",10 or fewer,27
+,"NESS, KS",10 or fewer,19
+,"CHAUTAUQUA, KS",10 or fewer,29
+,"WALLACE, KS",10 or fewer,38
+,"HARPER, KS",10 or fewer,12
+,"BARBER, KS",10 or fewer,17
+,"MEADE, KS",10 or fewer,23
+,"LINCOLN, KS",10 or fewer,10 or fewer
+,"KEARNY, KS",10 or fewer,10 or fewer
+,"WEBSTER, GA",10 or fewer,13
+,"HAMILTON, KS",10 or fewer,18
+,"ELK, KS",10 or fewer,10 or fewer
+,"OSBORNE, KS",10 or fewer,10 or fewer
+,"TREGO, KS",10 or fewer,10 or fewer
+,"HASKELL, KS",10 or fewer,13
+,"GREELEY, KS",10 or fewer,12
+,"GRAHAM, KS",10 or fewer,13
+,"WICHITA, KS",10 or fewer,14
+,"STANTON, KS",10 or fewer,13
+,"LANE, KS",10 or fewer,10 or fewer
+,"KIOWA, KS",10 or fewer,10 or fewer
+,"HODGEMAN, KS",10 or fewer,10 or fewer
+,"CLARK, KS",10 or fewer,10 or fewer
+,"COMANCHE, KS",10 or fewer,10 or fewer
+,"CLARK, ID",10 or fewer,10 or fewer
+,"KALAWAO, HI",10 or fewer,10 or fewer
+,None of the above,304,275396
+,Total,8944,6891665

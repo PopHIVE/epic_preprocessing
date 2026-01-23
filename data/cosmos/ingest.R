@@ -16,6 +16,17 @@ raw2 <- dcf::dcf_process_epic_staging(cleanup=F, staging_dir = "raw/staging_inju
   firearms = "firearms initial"
 )
 )
+
+
+raw2a <- dcf::dcf_process_epic_staging(cleanup=F, staging_dir = "raw/staging_heat_year_county",
+                                      standard_names = c(
+                                        opioid_od="OPIOID OD",
+                                        heat_related ="Heat",
+                                        firearms = "firearms initial"
+                                      )
+)
+
+
 list.files( "./raw/staging_chronic")
 raw3 <- dcf::dcf_process_epic_staging(cleanup=F, staging_dir = "raw/staging_chronic")
 
@@ -468,6 +479,33 @@ vroom::vroom_write(
 )
 vroom::vroom_write(data$obesity_county, "standard/county_no_time.csv.gz", ",")
 vroom::vroom_write(data$rsv_tests, "standard/no_geo.csv.gz", ",")
+
+
+
+#############
+##Heat related annual rate by county
+#############
+
+heat1 <- vroom::vroom('./raw/heat_related.csv.xz') %>%
+  mutate(
+    year = sub(".*(\\d{4})$", "\\1", year),
+    heat = if_else(heat=='10 or fewer', '5', heat),
+    heat = as.numeric(heat),
+    total=as.numeric(total),
+    heat_suppressed = if_else(heat==5,1,0),
+    heat_incidence = heat / total*100000,
+    time = paste(year,'01','01', sep='-')
+  ) %>%
+  left_join(all_fips_county, by = c('county'= 'geography_name')) %>%
+  rename(heat_ed_patients = heat,
+         total_ed_patients = total,
+         heat_ed_incidence = heat_incidence
+         ) %>%
+  dplyr::select(geography, time, heat_ed_patients, total_ed_patients, heat_ed_incidence, heat_suppressed,county) %>%
+  rename(geography_name = geography)
+
+write_csv(heat1, './standard/heat_year_county.csv')
+vroom::vroom_write(heat1, './standard/heat_year_county.csv.gz')
 
 #vroom::vroom_write(data$vaccine_mmr, "standard/children.csv.gz", ",")
 
