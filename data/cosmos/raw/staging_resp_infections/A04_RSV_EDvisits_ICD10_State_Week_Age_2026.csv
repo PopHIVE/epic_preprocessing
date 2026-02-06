@@ -1,0 +1,2213 @@
+﻿Session Title,A04. RSV ED visits State Week Age 2026,,,
+Session ID,2795724,,,
+Data Model,ED Encounters,,,
+Population Base,All ED Encounters,,,
+Population Criteria Filters: These criteria are a summary and do not fully reflect the content of the exported session.,"ED Diagnoses: Respiratory syncytial virus pneumonia( ICD-10-CM: J12.1 ), Respiratory syncytial virus as the cause of diseases classified elsewhere( ICD-10-CM: B97.4 ), Acute bronchitis due to respiratory syncytial virus( ICD-10-CM: J20.5 ), Acute bronchiolitis due to respiratory syncytial virus( ICD-10-CM: J21.0 )",,,
+Session Date Range,12/28/2025 - 1/27/2026 (Based On Arrival Date),,,
+Measure,Number of ED Encounters,,,
+Export User,Stephanie Perniciaro,,,
+Date of Export,2/6/2026,,,
+,,,,
+,,,,
+,,,,Number of ED Encounters
+State of Residence,Age at Time of Visit,Year,Week,
+Texas,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,376
+,,2026,Jan 4 – Jan 10,265
+,,,Jan 11 – Jan 17,191
+,,,Jan 18 – Jan 24,169
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,429
+,,2026,Jan 4 – Jan 10,268
+,,,Jan 11 – Jan 17,297
+,,,Jan 18 – Jan 24,267
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,52
+,,2026,Jan 4 – Jan 10,26
+,,,Jan 11 – Jan 17,31
+,,,Jan 18 – Jan 24,50
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,76
+,,2026,Jan 4 – Jan 10,56
+,,,Jan 11 – Jan 17,52
+,,,Jan 18 – Jan 24,49
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,40
+,,2026,Jan 4 – Jan 10,36
+,,,Jan 11 – Jan 17,33
+,,,Jan 18 – Jan 24,22
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,101
+,,2026,Jan 4 – Jan 10,85
+,,,Jan 11 – Jan 17,65
+,,,Jan 18 – Jan 24,30
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,1074
+,,2026,Jan 4 – Jan 10,736
+,,,Jan 11 – Jan 17,669
+,,,Jan 18 – Jan 24,587
+,,,Jan 25 – Jan 27,10 or fewer
+Florida,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,175
+,,2026,Jan 4 – Jan 10,132
+,,,Jan 11 – Jan 17,86
+,,,Jan 18 – Jan 24,68
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,190
+,,2026,Jan 4 – Jan 10,131
+,,,Jan 11 – Jan 17,146
+,,,Jan 18 – Jan 24,86
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,22
+,,2026,Jan 4 – Jan 10,19
+,,,Jan 11 – Jan 17,20
+,,,Jan 18 – Jan 24,26
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,78
+,,2026,Jan 4 – Jan 10,62
+,,,Jan 11 – Jan 17,52
+,,,Jan 18 – Jan 24,26
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,38
+,,2026,Jan 4 – Jan 10,57
+,,,Jan 11 – Jan 17,32
+,,,Jan 18 – Jan 24,20
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,119
+,,2026,Jan 4 – Jan 10,107
+,,,Jan 11 – Jan 17,106
+,,,Jan 18 – Jan 24,48
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,622
+,,2026,Jan 4 – Jan 10,508
+,,,Jan 11 – Jan 17,442
+,,,Jan 18 – Jan 24,274
+,,,Jan 25 – Jan 27,10 or fewer
+North Carolina,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,149
+,,2026,Jan 4 – Jan 10,106
+,,,Jan 11 – Jan 17,96
+,,,Jan 18 – Jan 24,82
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,202
+,,2026,Jan 4 – Jan 10,128
+,,,Jan 11 – Jan 17,155
+,,,Jan 18 – Jan 24,166
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,30
+,,2026,Jan 4 – Jan 10,16
+,,,Jan 11 – Jan 17,23
+,,,Jan 18 – Jan 24,29
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,39
+,,2026,Jan 4 – Jan 10,50
+,,,Jan 11 – Jan 17,31
+,,,Jan 18 – Jan 24,19
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,33
+,,2026,Jan 4 – Jan 10,37
+,,,Jan 11 – Jan 17,27
+,,,Jan 18 – Jan 24,14
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,69
+,,2026,Jan 4 – Jan 10,63
+,,,Jan 11 – Jan 17,42
+,,,Jan 18 – Jan 24,28
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,522
+,,2026,Jan 4 – Jan 10,400
+,,,Jan 11 – Jan 17,374
+,,,Jan 18 – Jan 24,338
+,,,Jan 25 – Jan 27,10 or fewer
+Ohio,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,84
+,,2026,Jan 4 – Jan 10,70
+,,,Jan 11 – Jan 17,68
+,,,Jan 18 – Jan 24,68
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,128
+,,2026,Jan 4 – Jan 10,96
+,,,Jan 11 – Jan 17,107
+,,,Jan 18 – Jan 24,131
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,26
+,,2026,Jan 4 – Jan 10,15
+,,,Jan 11 – Jan 17,23
+,,,Jan 18 – Jan 24,45
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,52
+,,2026,Jan 4 – Jan 10,62
+,,,Jan 11 – Jan 17,60
+,,,Jan 18 – Jan 24,47
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,42
+,,2026,Jan 4 – Jan 10,53
+,,,Jan 11 – Jan 17,39
+,,,Jan 18 – Jan 24,25
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,74
+,,2026,Jan 4 – Jan 10,81
+,,,Jan 11 – Jan 17,65
+,,,Jan 18 – Jan 24,25
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,406
+,,2026,Jan 4 – Jan 10,377
+,,,Jan 11 – Jan 17,362
+,,,Jan 18 – Jan 24,341
+,,,Jan 25 – Jan 27,10 or fewer
+Georgia,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,148
+,,2026,Jan 4 – Jan 10,117
+,,,Jan 11 – Jan 17,99
+,,,Jan 18 – Jan 24,59
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,193
+,,2026,Jan 4 – Jan 10,131
+,,,Jan 11 – Jan 17,122
+,,,Jan 18 – Jan 24,97
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,17
+,,2026,Jan 4 – Jan 10,18
+,,,Jan 11 – Jan 17,19
+,,,Jan 18 – Jan 24,16
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,55
+,,2026,Jan 4 – Jan 10,54
+,,,Jan 11 – Jan 17,37
+,,,Jan 18 – Jan 24,23
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,32
+,,2026,Jan 4 – Jan 10,20
+,,,Jan 11 – Jan 17,28
+,,,Jan 18 – Jan 24,13
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,55
+,,2026,Jan 4 – Jan 10,54
+,,,Jan 11 – Jan 17,36
+,,,Jan 18 – Jan 24,22
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,500
+,,2026,Jan 4 – Jan 10,394
+,,,Jan 11 – Jan 17,341
+,,,Jan 18 – Jan 24,230
+,,,Jan 25 – Jan 27,12
+Pennsylvania,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,109
+,,2026,Jan 4 – Jan 10,83
+,,,Jan 11 – Jan 17,84
+,,,Jan 18 – Jan 24,68
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,158
+,,2026,Jan 4 – Jan 10,126
+,,,Jan 11 – Jan 17,155
+,,,Jan 18 – Jan 24,134
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,16
+,,2026,Jan 4 – Jan 10,16
+,,,Jan 11 – Jan 17,19
+,,,Jan 18 – Jan 24,24
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,25
+,,2026,Jan 4 – Jan 10,21
+,,,Jan 11 – Jan 17,23
+,,,Jan 18 – Jan 24,30
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,21
+,,2026,Jan 4 – Jan 10,23
+,,,Jan 11 – Jan 17,17
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,53
+,,2026,Jan 4 – Jan 10,64
+,,,Jan 11 – Jan 17,43
+,,,Jan 18 – Jan 24,34
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,382
+,,2026,Jan 4 – Jan 10,333
+,,,Jan 11 – Jan 17,341
+,,,Jan 18 – Jan 24,298
+,,,Jan 25 – Jan 27,10 or fewer
+Illinois,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,92
+,,2026,Jan 4 – Jan 10,78
+,,,Jan 11 – Jan 17,60
+,,,Jan 18 – Jan 24,68
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,151
+,,2026,Jan 4 – Jan 10,127
+,,,Jan 11 – Jan 17,171
+,,,Jan 18 – Jan 24,138
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,19
+,,2026,Jan 4 – Jan 10,20
+,,,Jan 11 – Jan 17,19
+,,,Jan 18 – Jan 24,16
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,23
+,,2026,Jan 4 – Jan 10,32
+,,,Jan 11 – Jan 17,33
+,,,Jan 18 – Jan 24,16
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,13
+,,2026,Jan 4 – Jan 10,13
+,,,Jan 11 – Jan 17,17
+,,,Jan 18 – Jan 24,13
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,45
+,,2026,Jan 4 – Jan 10,44
+,,,Jan 11 – Jan 17,32
+,,,Jan 18 – Jan 24,20
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,343
+,,2026,Jan 4 – Jan 10,314
+,,,Jan 11 – Jan 17,332
+,,,Jan 18 – Jan 24,271
+,,,Jan 25 – Jan 27,10 or fewer
+Virginia,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,89
+,,2026,Jan 4 – Jan 10,74
+,,,Jan 11 – Jan 17,56
+,,,Jan 18 – Jan 24,40
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,124
+,,2026,Jan 4 – Jan 10,63
+,,,Jan 11 – Jan 17,79
+,,,Jan 18 – Jan 24,58
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,14
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,18
+,,,Jan 18 – Jan 24,15
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,37
+,,2026,Jan 4 – Jan 10,21
+,,,Jan 11 – Jan 17,14
+,,,Jan 18 – Jan 24,16
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,25
+,,2026,Jan 4 – Jan 10,16
+,,,Jan 11 – Jan 17,17
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,58
+,,2026,Jan 4 – Jan 10,51
+,,,Jan 11 – Jan 17,35
+,,,Jan 18 – Jan 24,16
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,347
+,,2026,Jan 4 – Jan 10,230
+,,,Jan 11 – Jan 17,219
+,,,Jan 18 – Jan 24,155
+,,,Jan 25 – Jan 27,10 or fewer
+South Carolina,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,116
+,,2026,Jan 4 – Jan 10,38
+,,,Jan 11 – Jan 17,39
+,,,Jan 18 – Jan 24,25
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,120
+,,2026,Jan 4 – Jan 10,78
+,,,Jan 11 – Jan 17,69
+,,,Jan 18 – Jan 24,51
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,26
+,,2026,Jan 4 – Jan 10,12
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,16
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,47
+,,2026,Jan 4 – Jan 10,42
+,,,Jan 11 – Jan 17,19
+,,,Jan 18 – Jan 24,15
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,29
+,,2026,Jan 4 – Jan 10,22
+,,,Jan 11 – Jan 17,17
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,46
+,,2026,Jan 4 – Jan 10,39
+,,,Jan 11 – Jan 17,30
+,,,Jan 18 – Jan 24,16
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,384
+,,2026,Jan 4 – Jan 10,231
+,,,Jan 11 – Jan 17,182
+,,,Jan 18 – Jan 24,129
+,,,Jan 25 – Jan 27,10 or fewer
+Louisiana,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,97
+,,2026,Jan 4 – Jan 10,73
+,,,Jan 11 – Jan 17,57
+,,,Jan 18 – Jan 24,42
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,97
+,,2026,Jan 4 – Jan 10,82
+,,,Jan 11 – Jan 17,93
+,,,Jan 18 – Jan 24,91
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,14
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,18
+,,,Jan 18 – Jan 24,12
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,11
+,,2026,Jan 4 – Jan 10,18
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,19
+,,2026,Jan 4 – Jan 10,16
+,,,Jan 11 – Jan 17,14
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,245
+,,2026,Jan 4 – Jan 10,198
+,,,Jan 11 – Jan 17,196
+,,,Jan 18 – Jan 24,170
+,,,Jan 25 – Jan 27,10 or fewer
+Kentucky,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,52
+,,2026,Jan 4 – Jan 10,55
+,,,Jan 11 – Jan 17,41
+,,,Jan 18 – Jan 24,38
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,109
+,,2026,Jan 4 – Jan 10,74
+,,,Jan 11 – Jan 17,78
+,,,Jan 18 – Jan 24,71
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,13
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,17
+,,2026,Jan 4 – Jan 10,18
+,,,Jan 11 – Jan 17,19
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,12
+,,2026,Jan 4 – Jan 10,12
+,,,Jan 11 – Jan 17,11
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,23
+,,2026,Jan 4 – Jan 10,28
+,,,Jan 11 – Jan 17,24
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,221
+,,2026,Jan 4 – Jan 10,200
+,,,Jan 11 – Jan 17,182
+,,,Jan 18 – Jan 24,132
+,,,Jan 25 – Jan 27,10 or fewer
+New York,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,38
+,,2026,Jan 4 – Jan 10,34
+,,,Jan 11 – Jan 17,34
+,,,Jan 18 – Jan 24,18
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,69
+,,2026,Jan 4 – Jan 10,40
+,,,Jan 11 – Jan 17,61
+,,,Jan 18 – Jan 24,58
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,11
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,12
+,,,Jan 18 – Jan 24,11
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,23
+,,2026,Jan 4 – Jan 10,19
+,,,Jan 11 – Jan 17,22
+,,,Jan 18 – Jan 24,16
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,24
+,,2026,Jan 4 – Jan 10,23
+,,,Jan 11 – Jan 17,17
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,44
+,,2026,Jan 4 – Jan 10,48
+,,,Jan 11 – Jan 17,48
+,,,Jan 18 – Jan 24,14
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,209
+,,2026,Jan 4 – Jan 10,172
+,,,Jan 11 – Jan 17,194
+,,,Jan 18 – Jan 24,126
+,,,Jan 25 – Jan 27,10 or fewer
+Mississippi,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,64
+,,2026,Jan 4 – Jan 10,47
+,,,Jan 11 – Jan 17,44
+,,,Jan 18 – Jan 24,51
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,84
+,,2026,Jan 4 – Jan 10,76
+,,,Jan 11 – Jan 17,85
+,,,Jan 18 – Jan 24,84
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,13
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,13
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,13
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,12
+,,,Jan 11 – Jan 17,12
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,190
+,,2026,Jan 4 – Jan 10,157
+,,,Jan 11 – Jan 17,165
+,,,Jan 18 – Jan 24,160
+,,,Jan 25 – Jan 27,10 or fewer
+New Jersey,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,50
+,,2026,Jan 4 – Jan 10,39
+,,,Jan 11 – Jan 17,33
+,,,Jan 18 – Jan 24,22
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,64
+,,2026,Jan 4 – Jan 10,48
+,,,Jan 11 – Jan 17,76
+,,,Jan 18 – Jan 24,64
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,15
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,27
+,,2026,Jan 4 – Jan 10,18
+,,,Jan 11 – Jan 17,11
+,,,Jan 18 – Jan 24,12
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,12
+,,2026,Jan 4 – Jan 10,15
+,,,Jan 11 – Jan 17,11
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,33
+,,2026,Jan 4 – Jan 10,37
+,,,Jan 11 – Jan 17,37
+,,,Jan 18 – Jan 24,16
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,193
+,,2026,Jan 4 – Jan 10,164
+,,,Jan 11 – Jan 17,177
+,,,Jan 18 – Jan 24,137
+,,,Jan 25 – Jan 27,10 or fewer
+Tennessee,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,64
+,,2026,Jan 4 – Jan 10,53
+,,,Jan 11 – Jan 17,44
+,,,Jan 18 – Jan 24,55
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,78
+,,2026,Jan 4 – Jan 10,51
+,,,Jan 11 – Jan 17,74
+,,,Jan 18 – Jan 24,74
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,17
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,12
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,13
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,14
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,172
+,,2026,Jan 4 – Jan 10,134
+,,,Jan 11 – Jan 17,161
+,,,Jan 18 – Jan 24,162
+,,,Jan 25 – Jan 27,10 or fewer
+Indiana,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,48
+,,2026,Jan 4 – Jan 10,35
+,,,Jan 11 – Jan 17,27
+,,,Jan 18 – Jan 24,31
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,54
+,,2026,Jan 4 – Jan 10,66
+,,,Jan 11 – Jan 17,49
+,,,Jan 18 – Jan 24,48
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,11
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,14
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,18
+,,2026,Jan 4 – Jan 10,21
+,,,Jan 11 – Jan 17,19
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,11
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,15
+,,2026,Jan 4 – Jan 10,22
+,,,Jan 11 – Jan 17,19
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,157
+,,2026,Jan 4 – Jan 10,158
+,,,Jan 11 – Jan 17,129
+,,,Jan 18 – Jan 24,109
+,,,Jan 25 – Jan 27,10 or fewer
+Arkansas,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,71
+,,2026,Jan 4 – Jan 10,38
+,,,Jan 11 – Jan 17,51
+,,,Jan 18 – Jan 24,43
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,49
+,,2026,Jan 4 – Jan 10,69
+,,,Jan 11 – Jan 17,61
+,,,Jan 18 – Jan 24,56
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,146
+,,2026,Jan 4 – Jan 10,130
+,,,Jan 11 – Jan 17,134
+,,,Jan 18 – Jan 24,121
+,,,Jan 25 – Jan 27,10 or fewer
+Maryland,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,43
+,,2026,Jan 4 – Jan 10,23
+,,,Jan 11 – Jan 17,28
+,,,Jan 18 – Jan 24,18
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,52
+,,2026,Jan 4 – Jan 10,46
+,,,Jan 11 – Jan 17,39
+,,,Jan 18 – Jan 24,40
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,12
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,21
+,,2026,Jan 4 – Jan 10,26
+,,,Jan 11 – Jan 17,15
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,15
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,28
+,,2026,Jan 4 – Jan 10,20
+,,,Jan 11 – Jan 17,26
+,,,Jan 18 – Jan 24,15
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,165
+,,2026,Jan 4 – Jan 10,131
+,,,Jan 11 – Jan 17,132
+,,,Jan 18 – Jan 24,92
+,,,Jan 25 – Jan 27,10 or fewer
+Michigan,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,40
+,,2026,Jan 4 – Jan 10,37
+,,,Jan 11 – Jan 17,24
+,,,Jan 18 – Jan 24,30
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,53
+,,2026,Jan 4 – Jan 10,44
+,,,Jan 11 – Jan 17,39
+,,,Jan 18 – Jan 24,43
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,13
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,13
+,,2026,Jan 4 – Jan 10,20
+,,,Jan 11 – Jan 17,13
+,,,Jan 18 – Jan 24,21
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,11
+,,2026,Jan 4 – Jan 10,12
+,,,Jan 11 – Jan 17,13
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,21
+,,2026,Jan 4 – Jan 10,25
+,,,Jan 11 – Jan 17,15
+,,,Jan 18 – Jan 24,15
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,145
+,,2026,Jan 4 – Jan 10,143
+,,,Jan 11 – Jan 17,105
+,,,Jan 18 – Jan 24,126
+,,,Jan 25 – Jan 27,10 or fewer
+Massachusetts,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,35
+,,2026,Jan 4 – Jan 10,17
+,,,Jan 11 – Jan 17,32
+,,,Jan 18 – Jan 24,27
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,44
+,,2026,Jan 4 – Jan 10,39
+,,,Jan 11 – Jan 17,80
+,,,Jan 18 – Jan 24,65
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,11
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,14
+,,2026,Jan 4 – Jan 10,13
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,13
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,22
+,,2026,Jan 4 – Jan 10,26
+,,,Jan 11 – Jan 17,22
+,,,Jan 18 – Jan 24,15
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,122
+,,2026,Jan 4 – Jan 10,111
+,,,Jan 11 – Jan 17,154
+,,,Jan 18 – Jan 24,127
+,,,Jan 25 – Jan 27,10 or fewer
+California,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,41
+,,2026,Jan 4 – Jan 10,26
+,,,Jan 11 – Jan 17,37
+,,,Jan 18 – Jan 24,13
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,53
+,,2026,Jan 4 – Jan 10,33
+,,,Jan 11 – Jan 17,71
+,,,Jan 18 – Jan 24,34
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,11
+,,2026,Jan 4 – Jan 10,14
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,18
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,27
+,,2026,Jan 4 – Jan 10,25
+,,,Jan 11 – Jan 17,14
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,157
+,,2026,Jan 4 – Jan 10,112
+,,,Jan 11 – Jan 17,142
+,,,Jan 18 – Jan 24,84
+,,,Jan 25 – Jan 27,10 or fewer
+Connecticut,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,31
+,,2026,Jan 4 – Jan 10,20
+,,,Jan 11 – Jan 17,22
+,,,Jan 18 – Jan 24,19
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,44
+,,2026,Jan 4 – Jan 10,34
+,,,Jan 11 – Jan 17,54
+,,,Jan 18 – Jan 24,38
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,17
+,,2026,Jan 4 – Jan 10,25
+,,,Jan 11 – Jan 17,18
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,109
+,,2026,Jan 4 – Jan 10,98
+,,,Jan 11 – Jan 17,112
+,,,Jan 18 – Jan 24,83
+,,,Jan 25 – Jan 27,10 or fewer
+Colorado,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,19
+,,2026,Jan 4 – Jan 10,17
+,,,Jan 11 – Jan 17,23
+,,,Jan 18 – Jan 24,19
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,34
+,,2026,Jan 4 – Jan 10,40
+,,,Jan 11 – Jan 17,65
+,,,Jan 18 – Jan 24,57
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,11
+,,2026,Jan 4 – Jan 10,15
+,,,Jan 11 – Jan 17,14
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,74
+,,2026,Jan 4 – Jan 10,94
+,,,Jan 11 – Jan 17,116
+,,,Jan 18 – Jan 24,100
+,,,Jan 25 – Jan 27,10 or fewer
+Iowa,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,36
+,,2026,Jan 4 – Jan 10,30
+,,,Jan 11 – Jan 17,32
+,,,Jan 18 – Jan 24,26
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,35
+,,2026,Jan 4 – Jan 10,27
+,,,Jan 11 – Jan 17,43
+,,,Jan 18 – Jan 24,42
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,12
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,86
+,,2026,Jan 4 – Jan 10,73
+,,,Jan 11 – Jan 17,106
+,,,Jan 18 – Jan 24,83
+,,,Jan 25 – Jan 27,10 or fewer
+Alabama,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,44
+,,2026,Jan 4 – Jan 10,20
+,,,Jan 11 – Jan 17,29
+,,,Jan 18 – Jan 24,16
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,42
+,,2026,Jan 4 – Jan 10,16
+,,,Jan 11 – Jan 17,16
+,,,Jan 18 – Jan 24,28
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,112
+,,2026,Jan 4 – Jan 10,57
+,,,Jan 11 – Jan 17,62
+,,,Jan 18 – Jan 24,55
+,,,Jan 25 – Jan 27,10 or fewer
+Oklahoma,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,32
+,,2026,Jan 4 – Jan 10,34
+,,,Jan 11 – Jan 17,22
+,,,Jan 18 – Jan 24,18
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,31
+,,2026,Jan 4 – Jan 10,26
+,,,Jan 11 – Jan 17,29
+,,,Jan 18 – Jan 24,47
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,72
+,,2026,Jan 4 – Jan 10,76
+,,,Jan 11 – Jan 17,57
+,,,Jan 18 – Jan 24,78
+,,,Jan 25 – Jan 27,10 or fewer
+Wisconsin,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,16
+,,2026,Jan 4 – Jan 10,11
+,,,Jan 11 – Jan 17,12
+,,,Jan 18 – Jan 24,20
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,17
+,,2026,Jan 4 – Jan 10,24
+,,,Jan 11 – Jan 17,39
+,,,Jan 18 – Jan 24,39
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,12
+,,,Jan 11 – Jan 17,21
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,48
+,,2026,Jan 4 – Jan 10,66
+,,,Jan 11 – Jan 17,86
+,,,Jan 18 – Jan 24,82
+,,,Jan 25 – Jan 27,10 or fewer
+Minnesota,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,23
+,,2026,Jan 4 – Jan 10,22
+,,,Jan 11 – Jan 17,15
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,24
+,,2026,Jan 4 – Jan 10,24
+,,,Jan 11 – Jan 17,23
+,,,Jan 18 – Jan 24,30
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,18
+,,2026,Jan 4 – Jan 10,18
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,76
+,,2026,Jan 4 – Jan 10,80
+,,,Jan 11 – Jan 17,63
+,,,Jan 18 – Jan 24,56
+,,,Jan 25 – Jan 27,10 or fewer
+Delaware,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,15
+,,2026,Jan 4 – Jan 10,15
+,,,Jan 11 – Jan 17,15
+,,,Jan 18 – Jan 24,17
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,41
+,,2026,Jan 4 – Jan 10,25
+,,,Jan 11 – Jan 17,40
+,,,Jan 18 – Jan 24,21
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,13
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,82
+,,2026,Jan 4 – Jan 10,57
+,,,Jan 11 – Jan 17,73
+,,,Jan 18 – Jan 24,45
+,,,Jan 25 – Jan 27,10 or fewer
+West Virginia,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,14
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,12
+,,,Jan 18 – Jan 24,18
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,20
+,,2026,Jan 4 – Jan 10,18
+,,,Jan 11 – Jan 17,12
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,20
+,,2026,Jan 4 – Jan 10,19
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,68
+,,2026,Jan 4 – Jan 10,68
+,,,Jan 11 – Jan 17,51
+,,,Jan 18 – Jan 24,50
+,,,Jan 25 – Jan 27,10 or fewer
+Oregon,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,12
+,,2026,Jan 4 – Jan 10,11
+,,,Jan 11 – Jan 17,14
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,13
+,,2026,Jan 4 – Jan 10,14
+,,,Jan 11 – Jan 17,12
+,,,Jan 18 – Jan 24,17
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,44
+,,2026,Jan 4 – Jan 10,49
+,,,Jan 11 – Jan 17,47
+,,,Jan 18 – Jan 24,41
+,,,Jan 25 – Jan 27,10 or fewer
+Washington,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,15
+,,2026,Jan 4 – Jan 10,11
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,17
+,,2026,Jan 4 – Jan 10,13
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,18
+,,,Jan 11 – Jan 17,12
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,50
+,,2026,Jan 4 – Jan 10,55
+,,,Jan 11 – Jan 17,39
+,,,Jan 18 – Jan 24,26
+,,,Jan 25 – Jan 27,10 or fewer
+Utah,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,18
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,22
+,,2026,Jan 4 – Jan 10,11
+,,,Jan 11 – Jan 17,20
+,,,Jan 18 – Jan 24,27
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,33
+,,2026,Jan 4 – Jan 10,39
+,,,Jan 11 – Jan 17,35
+,,,Jan 18 – Jan 24,41
+,,,Jan 25 – Jan 27,10 or fewer
+Hawaii,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,13
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,13
+,,,Jan 11 – Jan 17,15
+,,,Jan 18 – Jan 24,15
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,32
+,,2026,Jan 4 – Jan 10,35
+,,,Jan 11 – Jan 17,30
+,,,Jan 18 – Jan 24,21
+,,,Jan 25 – Jan 27,10 or fewer
+Kansas,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,11
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,13
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,25
+,,2026,Jan 4 – Jan 10,21
+,,,Jan 11 – Jan 17,24
+,,,Jan 18 – Jan 24,27
+,,,Jan 25 – Jan 27,10 or fewer
+Rhode Island,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,12
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,16
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,31
+,,2026,Jan 4 – Jan 10,11
+,,,Jan 11 – Jan 17,28
+,,,Jan 18 – Jan 24,17
+,,,Jan 25 – Jan 27,10 or fewer
+Nevada,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,11
+,,,Jan 18 – Jan 24,13
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,16
+,,2026,Jan 4 – Jan 10,20
+,,,Jan 11 – Jan 17,23
+,,,Jan 18 – Jan 24,24
+,,,Jan 25 – Jan 27,10 or fewer
+Idaho,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,13
+,,,Jan 18 – Jan 24,13
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,15
+,,2026,Jan 4 – Jan 10,19
+,,,Jan 11 – Jan 17,20
+,,,Jan 18 – Jan 24,24
+,,,Jan 25 – Jan 27,10 or fewer
+Missouri,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,18
+,,2026,Jan 4 – Jan 10,19
+,,,Jan 11 – Jan 17,19
+,,,Jan 18 – Jan 24,14
+,,,Jan 25 – Jan 27,10 or fewer
+Arizona,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,11
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,13
+,,2026,Jan 4 – Jan 10,13
+,,,Jan 11 – Jan 17,24
+,,,Jan 18 – Jan 24,18
+,,,Jan 25 – Jan 27,10 or fewer
+Nebraska,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,11
+,,2026,Jan 4 – Jan 10,13
+,,,Jan 11 – Jan 17,12
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+New Hampshire,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+North Dakota,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,11
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+South Dakota,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+Wyoming,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+Maine,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+Vermont,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+Montana,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+Ontario,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+District of Columbia,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+Puerto Rico,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+New Mexico,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+Alaska,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+None of the above,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,22
+,,2026,Jan 4 – Jan 10,21
+,,,Jan 11 – Jan 17,19
+,,,Jan 18 – Jan 24,11
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,24
+,,2026,Jan 4 – Jan 10,18
+,,,Jan 11 – Jan 17,19
+,,,Jan 18 – Jan 24,13
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,62
+,,2026,Jan 4 – Jan 10,56
+,,,Jan 11 – Jan 17,53
+,,,Jan 18 – Jan 24,33
+,,,Jan 25 – Jan 27,10 or fewer
+Total,Less than 1 Years,2025 – 2026,Dec 28 – Jan 3,2325
+,,2026,Jan 4 – Jan 10,1726
+,,,Jan 11 – Jan 17,1518
+,,,Jan 18 – Jan 24,1274
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 1 and < 5 Years,2025 – 2026,Dec 28 – Jan 3,2941
+,,2026,Jan 4 – Jan 10,2180
+,,,Jan 11 – Jan 17,2591
+,,,Jan 18 – Jan 24,2335
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 5 and < 18 Years,2025 – 2026,Dec 28 – Jan 3,373
+,,2026,Jan 4 – Jan 10,262
+,,,Jan 11 – Jan 17,348
+,,,Jan 18 – Jan 24,429
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 18 and < 50 Years,2025 – 2026,Dec 28 – Jan 3,696
+,,2026,Jan 4 – Jan 10,702
+,,,Jan 11 – Jan 17,540
+,,,Jan 18 – Jan 24,417
+,,,Jan 25 – Jan 27,10 or fewer
+,≥ 50 and < 65 Years,2025 – 2026,Dec 28 – Jan 3,449
+,,2026,Jan 4 – Jan 10,474
+,,,Jan 11 – Jan 17,401
+,,,Jan 18 – Jan 24,237
+,,,Jan 25 – Jan 27,10 or fewer
+,65 Years or more,2025 – 2026,Dec 28 – Jan 3,1039
+,,2026,Jan 4 – Jan 10,1041
+,,,Jan 11 – Jan 17,862
+,,,Jan 18 – Jan 24,440
+,,,Jan 25 – Jan 27,10 or fewer
+,No value,2025 – 2026,Dec 28 – Jan 3,10 or fewer
+,,2026,Jan 4 – Jan 10,10 or fewer
+,,,Jan 11 – Jan 17,10 or fewer
+,,,Jan 18 – Jan 24,10 or fewer
+,,,Jan 25 – Jan 27,10 or fewer
+,Total,2025 – 2026,Dec 28 – Jan 3,7823
+,,2026,Jan 4 – Jan 10,6385
+,,,Jan 11 – Jan 17,6260
+,,,Jan 18 – Jan 24,5132
+,,,Jan 25 – Jan 27,17
