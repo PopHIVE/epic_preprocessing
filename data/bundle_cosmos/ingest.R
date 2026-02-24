@@ -71,6 +71,15 @@ sub_measure_info_files <- c(
 merged_measure_info <- lapply(sub_measure_info_files, jsonlite::read_json) |>
   Reduce(function(a, b) modifyList(a, b), x = _)
 
+# Preserve "sources" as JSON arrays — auto_unbox would collapse
+# [{"id": "x"}] into {"id": "x"} without I()
+for (key in names(merged_measure_info)) {
+  if (key == "_sources") next
+  if (!is.null(merged_measure_info[[key]]$sources)) {
+    merged_measure_info[[key]]$sources <- I(merged_measure_info[[key]]$sources)
+  }
+}
+
 jsonlite::write_json(
   merged_measure_info,
   "measure_info.json",
