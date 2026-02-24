@@ -330,6 +330,8 @@ if (!identical(process$raw_state, raw_state)) {
 
 ## measure_info.json Template
 
+**IMPORTANT**: Source information uses an ID-reference pattern. Each measure references sources by ID, and the full source details are defined once in a `_sources` block at the bottom of the file. Do NOT put inline `restrictions`, `name`, or `url` in each measure's `sources` array — only use `{ "id": "source_id" }`.
+
 ```json
 {
   "variable_name": {
@@ -343,19 +345,25 @@ if (!identical(process$raw_state, raw_state)) {
     "measure_type": "Incidence|Prevalence|Rate|Percent|Count",
     "unit": "Cases per 100,000|Percent|Count",
     "time_resolution": "Week|Month|Year",
-    "restrictions": "Non-commercial purposes|Attribution required|None",
-    "sources": [
-      {
-        "name": "Source organization",
-        "url": "https://data.source.url"
-      }
-    ],
+    "sources": [{ "id": "source_id" }],
     "citations": [
       {
         "title": "Publication title",
         "url": "https://doi.org/..."
       }
     ]
+  },
+
+  "_sources": {
+    "source_id": {
+      "name": "Source organization",
+      "url": "https://data.source.url",
+      "date_accessed": 2025,
+      "organization": "Organization name",
+      "organization_url": "https://org.url",
+      "description": "Description of the data source.",
+      "restrictions": "Attribution and usage restrictions."
+    }
   }
 }
 ```
@@ -374,16 +382,26 @@ data <- vroom::vroom("raw/kvib-3txy.csv.xz")
 
 ### Epic Cosmos Source Metadata
 
-All `measure_info.json` entries for Epic Cosmos data **must** use the following canonical source and restrictions — do not invent restrictions or use "Non-commercial" language:
+All `measure_info.json` entries for Epic Cosmos data **must** use the `_sources` ID-reference pattern. Each measure references the source by ID only, and the full source details (including restrictions) are defined once in the `_sources` block at the bottom of the file.
 
+**Per-measure source reference** (do NOT put inline name/url/restrictions):
 ```json
-"restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-"sources": [
-  {
+"sources": [{ "id": "epic_cosmos" }]
+```
+
+**`_sources` block** (include once at the bottom of the file):
+```json
+"_sources": {
+  "epic_cosmos": {
     "name": "Epic Cosmos",
-    "url": "https://cosmos.epic.com/"
+    "url": "https://cosmos.epic.com/",
+    "date_accessed": 2025,
+    "organization": "Epic Systems",
+    "organization_url": "https://www.epic.com/",
+    "description": "Epic Cosmos is a collaborative research platform containing de-identified patient data from over 300 million patients across more than 1,600 hospitals and health systems using Epic electronic health record systems. Data is accessed via SlicerDicer, a self-service analytics tool. The dataset includes emergency department visits, diagnoses, immunizations, laboratory results, and other clinical data. Due to privacy protections, counts fewer than 10 are suppressed and imputed. Coverage extends across all U.S. states and territories. Note that county-level and city-level stratifications could differ markedly in total sample size due to high levels of missingness of county data in some states.",
+    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'"
   }
-]
+}
 ```
 
 Additional context (for `long_description` or documentation):

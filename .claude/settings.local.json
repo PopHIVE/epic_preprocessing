@@ -4,7 +4,8 @@
       "Bash(Rscript:*)",
       "Bash(ls:*)",
       "Bash(gunzip:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(gh api repos/PopHIVE/Ingest/contents/data/epic/measure_info.json --jq '.content')"
     ]
   }
 }
