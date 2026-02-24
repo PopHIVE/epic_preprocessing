@@ -8,13 +8,7 @@
     "measure_type": "integer",
     "unit": "years",
     "time_resolution": "year",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
 
   "n_patients": {
@@ -26,13 +20,7 @@
     "measure_type": "integer",
     "unit": "count",
     "time_resolution": "Week",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
 
   "epic_suppressed_flag_{variant}": {
@@ -48,13 +36,7 @@
       "flu": { "default": "flu", "short_name": "Influenza", "category": "respiratory" },
       "rsv": { "default": "rsv", "short_name": "RSV", "category": "respiratory" }
     },
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
 
   "n_rsv_tests": {
@@ -66,13 +48,7 @@
     "measure_type": "integer",
     "unit": "encounter",
     "time_resolution": "Month",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
 
   "epic_positive_rsv_tests_percent": {
@@ -84,13 +60,7 @@
     "measure_type": "percent",
     "unit": "%",
     "time_resolution": "Month",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
 
   "epic_n_{variant}": {
@@ -108,13 +78,7 @@
       "rsv": { "default": "rsv", "short_name": "RSV", "category": "respiratory" },
       "ed_j12_j18": { "default": "ed_j12_j18", "short_name": "Pneumonia (J12-J18)", "category": "respiratory" }
     },
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
 
   "epic_pct_{variant}": {
@@ -133,13 +97,7 @@
       "rsv_pos_tests": { "default": "rsv_pos_tests", "short_name": "RSV Positive Tests", "long_name": "Percent of tests among pneumonia patients in the ED (J12-J18) that are positive for RSV", "category": "respiratory" },
       "j12_j18_tested_rsv": { "default": "j12_j18_tested_rsv", "short_name": "J12-J18 Tested RSV", "long_name": "Percent of pneumonia patients in the ED (J12-J18) that are tested for RSV", "category": "respiratory" }
     },
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
 
   "epic_pct_rsv_pos_tests": {
@@ -151,13 +109,7 @@
     "measure_type": "percent",
     "unit": "%",
     "time_resolution": "Month",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
 
   "epic_pct_j12_j18_tested_rsv": {
@@ -169,12 +121,18 @@
     "measure_type": "percent",
     "unit": "%",
     "time_resolution": "Month",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "_sources": {
+    "epic_cosmos": {
+      "name": "Epic Cosmos",
+      "url": "https://cosmos.epic.com/",
+      "date_accessed": 2025,
+      "organization": "Epic Systems",
+      "organization_url": "https://www.epic.com/",
+      "description": "Epic Cosmos is a collaborative research platform containing de-identified patient data from over 300 million patients across more than 1,600 hospitals and health systems using Epic electronic health record systems. Data is accessed via SlicerDicer, a self-service analytics tool. The dataset includes emergency department visits, diagnoses, immunizations, laboratory results, and other clinical data. Due to privacy protections, counts fewer than 10 are suppressed and imputed. Coverage extends across all U.S. states and territories. Note that county-level and city-level stratifications could differ markedly in total sample size due to high levels of missingness of county data in some states.",
+      "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'"
+    }
   }
 }

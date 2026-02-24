@@ -8,13 +8,7 @@
     "measure_type": "integer",
     "unit": "years",
     "time_resolution": "year",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "n_patients": {
     "id": "n_patients",
@@ -25,13 +19,7 @@
     "measure_type": "integer",
     "unit": "count",
     "time_resolution": "Week",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "epic_suppressed_flag_{variant}": {
     "id": "epic_suppressed_flag_{variant}",
@@ -58,13 +46,7 @@
         "category": "respiratory"
       }
     },
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "n_rsv_tests": {
     "id": "n_rsv_tests",
@@ -75,13 +57,7 @@
     "measure_type": "integer",
     "unit": "encounter",
     "time_resolution": "Month",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "epic_positive_rsv_tests_percent": {
     "id": "epic_positive_rsv_tests_percent",
@@ -92,13 +68,7 @@
     "measure_type": "percent",
     "unit": "%",
     "time_resolution": "Month",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "epic_n_{variant}": {
     "id": "epic_n_{variant}",
@@ -135,13 +105,7 @@
         "category": "respiratory"
       }
     },
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "epic_pct_{variant}": {
     "id": "epic_pct_{variant}",
@@ -185,13 +149,7 @@
         "category": "respiratory"
       }
     },
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "epic_pct_rsv_pos_tests": {
     "id": "epic_pct_rsv_pos_tests",
@@ -202,13 +160,7 @@
     "measure_type": "percent",
     "unit": "%",
     "time_resolution": "Month",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "epic_pct_j12_j18_tested_rsv": {
     "id": "epic_pct_j12_j18_tested_rsv",
@@ -219,13 +171,7 @@
     "measure_type": "percent",
     "unit": "%",
     "time_resolution": "Month",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "epic_n_ed_opioid": {
     "id": "epic_n_ed_opioid",
@@ -236,13 +182,7 @@
     "measure_type": "Count",
     "unit": "patient",
     "time_resolution": "Month",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "epic_rate_ed_opioid": {
     "id": "epic_rate_ed_opioid",
@@ -253,13 +193,7 @@
     "measure_type": "Rate",
     "unit": "Cases per 100,000",
     "time_resolution": "Month",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "n_obesity_county": {
     "id": "n_obesity_county",
@@ -270,13 +204,7 @@
     "measure_type": "integer",
     "unit": "patient",
     "time_resolution": "Year",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "obesity_bmi": {
     "id": "obesity_bmi",
@@ -287,13 +215,7 @@
     "measure_type": "percent",
     "unit": "%",
     "time_resolution": "Year",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "obesity_dx_ccw": {
     "id": "obesity_dx_ccw",
@@ -304,13 +226,7 @@
     "measure_type": "percent",
     "unit": "%",
     "time_resolution": "Year",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "diabetes_a1c_6_5": {
     "id": "diabetes_a1c_6_5",
@@ -321,13 +237,7 @@
     "measure_type": "percent",
     "unit": "%",
     "time_resolution": "Year",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "diabetes_dx_ccw": {
     "id": "diabetes_dx_ccw",
@@ -338,13 +248,7 @@
     "measure_type": "percent",
     "unit": "%",
     "time_resolution": "Year",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "hemoglobin_a1c_7": {
     "id": "hemoglobin_a1c_7",
@@ -355,13 +259,7 @@
     "measure_type": "percent",
     "unit": "%",
     "time_resolution": "Year",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "bmi_30_49_8": {
     "id": "bmi_30_49_8",
@@ -372,13 +270,7 @@
     "measure_type": "percent",
     "unit": "%",
     "time_resolution": "Year",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
   },
   "percentage_with_base_patient_followed_by_hemoglobin_a1c_6_5_or_more_within_10_years": {
     "id": "percentage_with_base_patient_followed_by_hemoglobin_a1c_6_5_or_more_within_10_years",
@@ -389,12 +281,18 @@
     "measure_type": "percent",
     "unit": "%",
     "time_resolution": "Year",
-    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
-    "sources": [
-      {
-        "name": "Epic Cosmos",
-        "url": "https://cosmos.epic.com/"
-      }
-    ]
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "_sources": {
+    "epic_cosmos": {
+      "name": "Epic Cosmos",
+      "url": "https://cosmos.epic.com/",
+      "date_accessed": 2025,
+      "organization": "Epic Systems",
+      "organization_url": "https://www.epic.com/",
+      "description": "Epic Cosmos is a collaborative research platform containing de-identified patient data from over 300 million patients across more than 1,600 hospitals and health systems using Epic electronic health record systems. Data is accessed via SlicerDicer, a self-service analytics tool. The dataset includes emergency department visits, diagnoses, immunizations, laboratory results, and other clinical data. Due to privacy protections, counts fewer than 10 are suppressed and imputed. Coverage extends across all U.S. states and territories. Note that county-level and city-level stratifications could differ markedly in total sample size due to high levels of missingness of county data in some states.",
+      "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'"
+    }
   }
 }
