@@ -372,20 +372,98 @@ raw_state <- dcf::dcf_download_cdc("kvib-3txy", "raw", process$raw_state)
 data <- vroom::vroom("raw/kvib-3txy.csv.xz")
 ```
 
+### Epic Cosmos Source Metadata
+
+All `measure_info.json` entries for Epic Cosmos data **must** use the following canonical source and restrictions — do not invent restrictions or use "Non-commercial" language:
+
+```json
+"restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
+"sources": [
+  {
+    "name": "Epic Cosmos",
+    "url": "https://cosmos.epic.com/"
+  }
+]
+```
+
+Additional context (for `long_description` or documentation):
+- Epic Cosmos contains de-identified data from 300M+ patients across 1,600+ hospitals
+- Data accessed via SlicerDicer self-service analytics tool
+- Counts fewer than 10 are suppressed and imputed as 5
+- County-level data may have high missingness in some states
+
+---
+
 ### Epic Cosmos SlicerDicer Exports
 
-Epic data requires special handling for suppression:
+#### Raw File Structure
+
+SlicerDicer CSV exports have a multi-row header block before the actual data:
+
+```
+Row 1:  Session Title, <title>, ...
+Row 2:  Session ID, <id>, ...
+Row 3:  Data Model, ...
+Row 4:  Population Base, ...
+Row 5:  Population Criteria Filters, ...
+Row 6:  Session Date Range, ...
+Row 7:  Export User, ...
+Row 8:  Date of Export, ...
+Row 9:  (blank)
+Row 10: (blank)
+Row 11: (sub-header: column group labels, e.g. ",,Measures,Number of Patients,Percentage...")
+Row 12: (column names, e.g. "Year,Month,State of Residence,,")
+Row 13+: data rows
+```
+
+**Key parsing notes:**
+- Skip 12 rows (`skip = 12, header = FALSE`) and assign column names manually — the true column names are split across rows 11 and 12, making `header = TRUE` unreliable
+- **Merged cells**: grouping columns (Year, Month, State, etc.) are only filled in on the first row of each group; use `tidyr::fill(..., .direction = "down")` after converting blank strings to NA
+- **Suppression**: counts ≤ 10 appear as `"10 or fewer"`; percentages for suppressed rows appear as `"-"` — treat `"-"` as NA
+- **Non-US rows**: exports include foreign states/provinces (Canadian provinces, Mexican states, US territories) and catch-all rows like `"None of the above"` and `"Total"` — filter to `c(state.name, "District of Columbia", "Total")` for US-only data; `"Total"` maps to geography `"00"`
+- **Non-UTF-8 characters**: Raw exports may contain non-UTF-8 byte sequences (especially in `month` and `state_name` columns); apply `iconv(column, to = "UTF-8", sub = "")` **before** `trimws()` / `na_if()` to strip invalid bytes — failure to do this can cause silent parsing errors or garbled strings
+- **Time format**: Always call `format()` explicitly on Date objects before writing — do not rely on vroom's implicit Date serialization. Use `format(date, "%Y-%m-%d")` for ISO 8601 or `format(date, "%m-%d-%Y")` for the legacy project standard. Verify the written output matches the expected format.
+
 ```r
-data <- data %>%
+# Standard reading pattern for SlicerDicer state/month exports
+data_raw <- read.csv(
+  raw_file,
+  skip = 12,
+  header = FALSE,
+  col.names = c("year", "month", "state_name", "n_patients", "pct_var"),
+  stringsAsFactors = FALSE,
+  check.names = FALSE
+)
+
+data_clean <- data_raw %>%
   mutate(
-    suppressed_flag = if_else(count < 10, 1, 0),
-    # Impute suppressed values as halfway between 0 and minimum
-    value = if_else(
-      suppressed_flag == 1,
-      min(value[suppressed_flag == 0], na.rm = TRUE) / 2,
-      value
-    )
+    # Strip non-UTF-8 bytes before trimws/na_if (common in SlicerDicer exports)
+    month      = iconv(month,      to = "UTF-8", sub = ""),
+    state_name = iconv(state_name, to = "UTF-8", sub = ""),
+    year  = na_if(trimws(year), ""),
+    month = na_if(trimws(month), "")
+  ) %>%
+  tidyr::fill(year, month, .direction = "down") %>%
+  filter(trimws(state_name) %in% c(state.name, "District of Columbia", "Total")) %>%
+  mutate(
+    suppressed_flag = if_else(n_patients == "10 or fewer", 1L, 0L),
+    n_patients      = as.numeric(if_else(n_patients == "10 or fewer", "5", n_patients)),
+    value           = as.numeric(na_if(gsub("%", "", pct_var), "-")),
+    # Map geography: "Total" -> "00", states -> FIPS via state_fips_lookup join
+    geography_name_join = if_else(state_name == "Total", "United States", state_name)
   )
+```
+
+#### Month/Year Time Formatting
+
+For monthly data with abbreviated month names (Jan, Feb, ..., Dec):
+
+```r
+mutate(
+  date = as.Date(paste(year, month, "01"), format = "%Y %b %d"),
+  date = lubridate::ceiling_date(date, "month") - lubridate::days(1),  # last day of month
+  time = format(date, "%m-%d-%Y")
+)
 ```
 
 ### Google Health Trends API
