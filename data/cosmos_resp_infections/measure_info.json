@@ -8,33 +8,53 @@
     "measure_type": "integer",
     "unit": "years",
     "time_resolution": "year",
-    "sources": [{ "id": "epic_cosmos" }]
+    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
+    "sources": [
+      {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/"
+      }
+    ]
   },
 
   "n_patients": {
     "id": "n_patients",
     "short_name": "Number of Patients in the ED",
     "long_name": "Number of Patients in the ED, any cause",
-    "short_description": "Number of patients.",
+    "short_description": "Number of patients presenting to the emergency department for any cause.",
+    "long_description": "Total number of patients presenting to the emergency department for any cause. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
     "measure_type": "integer",
     "unit": "count",
-    "sources": [{ "id": "epic_cosmos" }]
+    "time_resolution": "Week",
+    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
+    "sources": [
+      {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/"
+      }
+    ]
   },
 
   "epic_suppressed_flag_{variant}": {
     "id": "epic_suppressed_flag_{variant}",
     "short_name": "Fewer than 10 cases in the strata?",
-    "long_name": "Fewer than 10 cases in the strata?",
-    "short_description": "Binary indicator for low counts",
-    "long_description": "Binary indicator: true if fewer than 10 cases in the strata",
+    "long_name": "Suppression flag: fewer than 10 cases in the strata",
+    "short_description": "Binary indicator for low counts.",
+    "long_description": "Binary indicator: 1 if fewer than 10 cases in the strata, 0 otherwise. When suppressed, the corresponding count is imputed as 5.",
     "measure_type": "binary",
     "unit": "",
     "variants": {
-      "covid": { "default": "covid", "short_name": "COVID", "category": "rsv" },
-      "flu": { "default": "flu", "short_name": "FLU", "category": "rsv" },
-      "rsv": { "default": "rsv", "short_name": "RSV", "category": "rsv" }
+      "covid": { "default": "covid", "short_name": "COVID", "category": "respiratory" },
+      "flu": { "default": "flu", "short_name": "Influenza", "category": "respiratory" },
+      "rsv": { "default": "rsv", "short_name": "RSV", "category": "respiratory" }
     },
-    "sources": [{ "id": "epic_cosmos" }]
+    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
+    "sources": [
+      {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/"
+      }
+    ]
   },
 
   "n_rsv_tests": {
@@ -42,9 +62,17 @@
     "short_name": "RSV Tests: Positive",
     "long_name": "Emergency Room (ER) Encounters with Positive Respiratory Syncytial Virus (RSV) Tests",
     "short_description": "Number of ER encounters with positive RSV tests.",
+    "long_description": "Number of emergency room encounters with positive RSV tests among pneumonia admissions (ICD-10: J12-J18). Data accessed via Epic Cosmos SlicerDicer. Counts fewer than 10 are suppressed and imputed as 5.",
     "measure_type": "integer",
     "unit": "encounter",
-    "sources": [{ "id": "epic_cosmos" }]
+    "time_resolution": "Month",
+    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
+    "sources": [
+      {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/"
+      }
+    ]
   },
 
   "epic_positive_rsv_tests_percent": {
@@ -52,73 +80,101 @@
     "short_name": "RSV Tests: Positive (%)",
     "long_name": "Percent of Emergency Room (ER) Visits with Positive RSV Tests",
     "short_description": "Percent of ER encounters with positive RSV tests.",
+    "long_description": "Percentage of emergency room encounters with positive RSV tests among pneumonia admissions (ICD-10: J12-J18).",
     "measure_type": "percent",
-    "unit": "percent",
-    "sources": [{ "id": "epic_cosmos" }]
+    "unit": "%",
+    "time_resolution": "Month",
+    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
+    "sources": [
+      {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/"
+      }
+    ]
   },
 
   "epic_n_{variant}": {
     "id": "epic_n_{variant}",
     "short_name": "{variant.short_name} Patients",
     "long_name": "{variant.short_name} Emergency Room (ER) Encounters",
-    "short_description": "Number of {variant.short_name} patients",
-    "long_description": "Number of emergency room (ER) encounters with {variant.short_name} ICD-10-CM codes.",
+    "short_description": "Number of {variant.short_name} patients.",
+    "long_description": "Number of emergency room (ER) encounters with {variant.short_name} ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
     "measure_type": "integer",
     "unit": "encounters",
     "variants": {
       "all_encounters": { "default": "all", "short_name": "All encounters", "category": "general" },
-      "covid": { "default": "covid", "short_name": "COVID", "category": "rsv" },
-      "flu": { "default": "flu", "short_name": "FLU", "category": "rsv" },
-      "rsv": { "default": "rsv", "short_name": "RSV", "category": "rsv" },
-      "ed_j12_j18": { "default": "ed_j12_j18", "short_name": "J12_J18", "category": "rsv" }
+      "covid": { "default": "covid", "short_name": "COVID", "category": "respiratory" },
+      "flu": { "default": "flu", "short_name": "Influenza", "category": "respiratory" },
+      "rsv": { "default": "rsv", "short_name": "RSV", "category": "respiratory" },
+      "ed_j12_j18": { "default": "ed_j12_j18", "short_name": "Pneumonia (J12-J18)", "category": "respiratory" }
     },
-    "sources": [{ "id": "epic_cosmos" }]
+    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
+    "sources": [
+      {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/"
+      }
+    ]
   },
 
   "epic_pct_{variant}": {
     "id": "epic_pct_{variant}",
     "short_name": "{variant.short_name} Patients (%)",
     "long_name": "{variant.short_name} Emergency Room (ER) Encounters (%)",
-    "short_description": "Percentage of {variant.short_name} patients",
+    "short_description": "Percentage of {variant.short_name} patients among all ER encounters.",
+    "long_description": "Percentage of emergency room encounters attributable to {variant.short_name} ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
     "measure_type": "percent",
     "unit": "%",
     "variants": {
       "all_encounters": { "default": "all", "short_name": "All encounters", "category": "general" },
-      "covid": { "default": "covid", "short_name": "COVID", "category": "rsv" },
-      "flu": { "default": "flu", "short_name": "FLU", "category": "rsv" },
-      "rsv": { "default": "rsv", "short_name": "RSV", "category": "rsv" },
-      "rsv_pos_tests": { "default": "rsv_pos_tests", "short_name": "rsv_pos_tests","long_name": "Percent of tests among pneumonia patients in the ED (J12-J18) that are positive for RSV", "category": "rsv" },
-      "j12_j18_tested_rsv": { "default": "j12_j18_tested_rsv", "short_name": "j12_j18_tested_rsv","long_name": "Percent of pneumonia patients in the ED (J12-J18) that are tested for RSV", "category": "rsv" }
+      "covid": { "default": "covid", "short_name": "COVID", "category": "respiratory" },
+      "flu": { "default": "flu", "short_name": "Influenza", "category": "respiratory" },
+      "rsv": { "default": "rsv", "short_name": "RSV", "category": "respiratory" },
+      "rsv_pos_tests": { "default": "rsv_pos_tests", "short_name": "RSV Positive Tests", "long_name": "Percent of tests among pneumonia patients in the ED (J12-J18) that are positive for RSV", "category": "respiratory" },
+      "j12_j18_tested_rsv": { "default": "j12_j18_tested_rsv", "short_name": "J12-J18 Tested RSV", "long_name": "Percent of pneumonia patients in the ED (J12-J18) that are tested for RSV", "category": "respiratory" }
     },
-    "sources": [{ "id": "epic_cosmos" }]
+    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
+    "sources": [
+      {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/"
+      }
+    ]
   },
 
   "epic_pct_rsv_pos_tests": {
     "id": "epic_pct_rsv_pos_tests",
     "short_name": "Percent positive",
-    "long_name": "Percent of tests among hospitalized pneumonia admissions (ICD10: J12-J18) that are positive for RSV",
-    "short_description": "Percent of tests among pneumonia admissions (ICD10: J12-J18) that are positive for RSV. This is among hospital admissions, including those that started in the emergency department",
+    "long_name": "Percent of tests among hospitalized pneumonia admissions (ICD-10: J12-J18) that are positive for RSV",
+    "short_description": "Percent of tests among pneumonia admissions (ICD-10: J12-J18) that are positive for RSV.",
+    "long_description": "Percent of RSV tests among hospitalized pneumonia admissions (ICD-10: J12-J18) that are positive for RSV. This is among hospital admissions, including those that started in the emergency department. Data accessed via Epic Cosmos SlicerDicer.",
     "measure_type": "percent",
     "unit": "%",
-    "sources": [{ "id": "epic_cosmos" }]
+    "time_resolution": "Month",
+    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
+    "sources": [
+      {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/"
+      }
+    ]
   },
+
   "epic_pct_j12_j18_tested_rsv": {
     "id": "epic_pct_j12_j18_tested_rsv",
     "short_name": "Percent tested",
-    "long_name": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV. This is among hospital admissions, including those that started in the emergency department",
-    "short_description": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV",
+    "long_name": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV",
+    "short_description": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV.",
+    "long_description": "Percent of hospitalized pneumonia admissions (ICD-10: J12-J18) receiving a test for RSV. This is among hospital admissions, including those that started in the emergency department. Data accessed via Epic Cosmos SlicerDicer.",
     "measure_type": "percent",
     "unit": "%",
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
-  "_sources": {
-    "epic_cosmos": {
-      "name": "Epic Cosmos",
-      "url": "https://cosmos.epic.com/",
-      "date_accessed": 2025,
-      "organization": "Epic Systems",
-      "organization_url": "https://cosmos.epic.com/"
-    }
+    "time_resolution": "Month",
+    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
+    "sources": [
+      {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/"
+      }
+    ]
   }
 }

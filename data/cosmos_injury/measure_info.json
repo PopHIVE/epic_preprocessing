@@ -8,36 +8,48 @@
     "measure_type": "integer",
     "unit": "years",
     "time_resolution": "year",
-    "sources": [{ "id": "epic_cosmos" }]
+    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
+    "sources": [
+      {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/"
+      }
+    ]
   },
 
   "epic_n_ed_opioid": {
     "id": "epic_n_ed_opioid",
-    "short_name": "Number of Patients in the ED for opioid overdose",
-    "long_name": "Number of Patients in the ED for opioid overdose",
-    "short_description": "Number of patients.",
-    "measure_type": "integer",
+    "short_name": "ED opioid overdose patients",
+    "long_name": "Number of patients in the ED for opioid overdose",
+    "short_description": "Number of patients presenting to the emergency department for opioid overdose.",
+    "long_description": "Number of patients presenting to the emergency department with an opioid overdose diagnosis. Data from Epic Cosmos. Counts fewer than 10 are suppressed and imputed as 5.",
+    "measure_type": "Count",
     "unit": "patient",
-    "sources": [{ "id": "epic_cosmos" }]
+    "time_resolution": "Month",
+    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
+    "sources": [
+      {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/"
+      }
+    ]
   },
 
   "epic_rate_ed_opioid": {
     "id": "epic_rate_ed_opioid",
-    "short_name": "Number of people with an opioid overdose per 100,000 ED patients",
-    "long_name": "Number of people with an opioid overdose per 100,000 ED patients",
-    "short_description": "Number of overdoses per 100,000 ED patients.",
+    "short_name": "ED opioid overdose rate",
+    "long_name": "Opioid overdose rate per 100,000 ED patients",
+    "short_description": "Number of opioid overdoses per 100,000 ED patients.",
+    "long_description": "Rate of opioid overdose ED encounters per 100,000 all-cause ED encounters. Data from Epic Cosmos. Counts fewer than 10 are suppressed and imputed as 5.",
     "measure_type": "Rate",
     "unit": "Cases per 100,000",
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
-  "_sources": {
-    "epic_cosmos": {
-      "name": "Epic Cosmos",
-      "url": "https://cosmos.epic.com/",
-      "date_accessed": 2025,
-      "organization": "Epic Systems",
-      "organization_url": "https://cosmos.epic.com/"
-    }
+    "time_resolution": "Month",
+    "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'",
+    "sources": [
+      {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/"
+      }
+    ]
   }
 }

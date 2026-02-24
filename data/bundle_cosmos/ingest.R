@@ -14,8 +14,8 @@
 # =============================================================================
 
 if (!exists("run_resp_infections")) run_resp_infections <- TRUE
-if (!exists("run_injury"))          run_injury          <- FALSE
-if (!exists("run_chronic"))         run_chronic         <- FALSE
+if (!exists("run_injury"))          run_injury          <- TRUE
+if (!exists("run_chronic"))         run_chronic         <- TRUE
 
 old_wd <- getwd()
 
