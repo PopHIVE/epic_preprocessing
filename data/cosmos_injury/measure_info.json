@@ -1,0 +1,43 @@
+{
+  "age": {
+    "id": "age",
+    "short_name": "Age",
+    "long_name": "Age group",
+    "short_description": "Age group.",
+    "long_description": "Age group, based on age in current years.",
+    "measure_type": "integer",
+    "unit": "years",
+    "time_resolution": "year",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_n_ed_opioid": {
+    "id": "epic_n_ed_opioid",
+    "short_name": "Number of Patients in the ED for opioid overdose",
+    "long_name": "Number of Patients in the ED for opioid overdose",
+    "short_description": "Number of patients.",
+    "measure_type": "integer",
+    "unit": "patient",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_rate_ed_opioid": {
+    "id": "epic_rate_ed_opioid",
+    "short_name": "Number of people with an opioid overdose per 100,000 ED patients",
+    "long_name": "Number of people with an opioid overdose per 100,000 ED patients",
+    "short_description": "Number of overdoses per 100,000 ED patients.",
+    "measure_type": "Rate",
+    "unit": "Cases per 100,000",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "_sources": {
+    "epic_cosmos": {
+      "name": "Epic Cosmos",
+      "url": "https://cosmos.epic.com/",
+      "date_accessed": 2025,
+      "organization": "Epic Systems",
+      "organization_url": "https://cosmos.epic.com/"
+    }
+  }
+}

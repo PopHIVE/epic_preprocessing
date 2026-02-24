@@ -11,58 +11,6 @@
     "sources": [{ "id": "epic_cosmos" }]
   },
 
-  "n_vaccine_mmr": {
-    "id": "n_vaccine_mmr",
-    "short_name": "Immunizations for MMR",
-    "long_name": "Immunizations for Measles, Mumps, and Rubella (MMR)",
-    "short_description": "Number with Immunizations: Measles, Mumps, and Rubella (MMR) receipt",
-    "long_description": "Number with Immunizations: Measles, Mumps, and Rubella (MMR) receipt by Age and State of Residence.",
-    "measure_type": "integer",
-    "unit": "patient",
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
-  "mmr_receipt": {
-    "id": "mmr_receipt",
-    "short_name": "Immunizations for MMR: Percent",
-    "long_name": "Immunizations for Measles, Mumps, and Rubella (MMR): Percent",
-    "short_description": "Percentage with Immunizations: Measles, Mumps, and Rubella (MMR) receipt",
-    "measure_type": "percent",
-    "unit": "percent of sample",
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
-  "n_obesity_county": {
-    "id": "n_obesity_county",
-    "short_name": "Number of Patients (Chronic, County)",
-    "long_name": "Number of Patients (Chronic, County)",
-    "short_description": "Total number of patients.",
-    "long_description": "Total number of patients within the county-level obesity sample.",
-    "measure_type": "integer",
-    "unit": "patient",
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
-  "epic_n_ed_opioid": {
-    "id": "epic_n_ed_opioid",
-    "short_name": "Number of Patients in the ED for opioid overdose",
-    "long_name": "Number of Patients in the ED for opioid overdose",
-    "short_description": "Number of patients.",
-    "measure_type": "integer",
-    "unit": "patient",
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
-  "epic_rate_ed_opioid": {
-    "id": "epic_rate_ed_opioid",
-    "short_name": "Number of people with an opioid overdose per 100,000 ED patients",
-    "long_name": "Number of people with an opioid overdose per 100,000 ED patients",
-    "short_description": "Number of overdoses per 100,000 ED patients.",
-    "measure_type": "Rate",
-    "unit": "Cases per 100,000",
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
   "n_patients": {
     "id": "n_patients",
     "short_name": "Number of Patients in the ED",
@@ -86,67 +34,6 @@
       "flu": { "default": "flu", "short_name": "FLU", "category": "rsv" },
       "rsv": { "default": "rsv", "short_name": "RSV", "category": "rsv" }
     },
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
-  "hemoglobin_a1c_7": {
-    "id": "hemoglobin_a1c_7",
-    "short_name": "HA1C >= 7%",
-    "long_name": "HA1C 7% Or More",
-    "short_description": "Percent of sample with Hemoglobin A1C test results of 7% or more.",
-    "measure_type": "percent",
-    "unit": "percent of sample",
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
-  "bmi_30_49_8": {
-    "id": "bmi_30_49_8",
-    "short_name": "BMI between 30 and 49.8",
-    "long_name": "Body Mass Index (BMI) between 30 and 49.8",
-    "short_description": "Percent of sample with a BMI between 30 and 49.8.",
-    "measure_type": "percent",
-    "unit": "percent of sample",
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
-
-  "obesity_bmi": {
-    "id": "obesity_bmi",
-    "short_name": "BMI between 30 and 49.8",
-    "long_name": "Body Mass Index (BMI) between 30 and 49.8",
-    "short_description": "Percent of sample with a BMI between 30 and 49.8 in the past 2 years.",
-    "measure_type": "percent",
-    "unit": "%",
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
-   "obesity_dx_cdw": {
-    "id": "obesity_dx_cdw",
-    "short_name": "Obesity CCW definition",
-    "long_name": "Obesity based on the CCW definition",
-    "long_description": "Percent of sample with a diagnostic code for obesity on an encounter in the past 2 years, similar to the CCW definition: https://www2.ccwdata.org/web/guest/condition-categories-other.",
-    "measure_type": "percent",
-    "unit": "%",
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
-   "diabetes_a1c_6_5": {
-    "id": "diabetes_a1c_6_5",
-    "short_name": "Elevated hemoglobbin A1c > 6.5%",
-    "long_name": "Prevalence of diabetes based on elevated Hemoglobin A1c in the previous 2 years",
-    "long_description": "Percent of sample with a measurement of Hemoglobin A1c greater than 6.5% in the past 2 years.",
-    "measure_type": "percent",
-    "unit": "%",
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
-     "diabetes_dx_ccw": {
-    "id": "diabetes_dx_ccw",
-    "short_name": "Diabetes CCW definition",
-    "long_name": "Diabetes based on the CCW definition",
-    "long_description": "Percent of sample with a diagnostic code for diabetes on an encounter in the past 2 years, similar to the CCW definition: https://www2.ccwdata.org/web/guest/condition-categories-chronic.",
-    "measure_type": "percent",
-    "unit": "%",
     "sources": [{ "id": "epic_cosmos" }]
   },
 
@@ -180,12 +67,10 @@
     "unit": "encounters",
     "variants": {
       "all_encounters": { "default": "all", "short_name": "All encounters", "category": "general" },
-      "self_harm": { "default": "self_harm", "short_name": "Self-Harm", "category": "injury" },
       "covid": { "default": "covid", "short_name": "COVID", "category": "rsv" },
       "flu": { "default": "flu", "short_name": "FLU", "category": "rsv" },
       "rsv": { "default": "rsv", "short_name": "RSV", "category": "rsv" },
       "ed_j12_j18": { "default": "ed_j12_j18", "short_name": "J12_J18", "category": "rsv" }
-
     },
     "sources": [{ "id": "epic_cosmos" }]
   },
@@ -199,7 +84,6 @@
     "unit": "%",
     "variants": {
       "all_encounters": { "default": "all", "short_name": "All encounters", "category": "general" },
-      "self_harm": { "default": "self_harm", "short_name": "Self-Harm", "category": "injury" },
       "covid": { "default": "covid", "short_name": "COVID", "category": "rsv" },
       "flu": { "default": "flu", "short_name": "FLU", "category": "rsv" },
       "rsv": { "default": "rsv", "short_name": "RSV", "category": "rsv" },
@@ -225,16 +109,6 @@
     "short_description": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV",
     "measure_type": "percent",
     "unit": "%",
-    "sources": [{ "id": "epic_cosmos" }]
-  },
-
-  "percentage_with_base_patient_followed_by_hemoglobin_a1c_6_5_or_more_within_10_years": {
-    "id": "percentage_with_base_patient_followed_by_hemoglobin_a1c_6_5_or_more_within_10_years",
-    "short_name": "HA1C >= 6.5%",
-    "long_name": "HA1C 6.5% Or More",
-    "short_description": "Percent of sample with Hemoglobin A1C test results of 6.5% or more.",
-    "measure_type": "percent",
-    "unit": "percent of sample",
     "sources": [{ "id": "epic_cosmos" }]
   },
 

@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(Rscript:*)"
+      "Bash(Rscript:*)",
+      "Bash(ls:*)",
+      "Bash(gunzip:*)",
+      "Bash(find:*)"
     ]
   }
 }
