@@ -2,7 +2,7 @@
   {
     "file": "raw/staging_resp_infections/A03_FLU_EDvisits_ICD10_State_Week_Age_2026.csv",
     "md5": "db4b9fba07b83aee193f0b06335254ab",
-    "date_processed": "2026-02-24 13:25:50",
+    "date_processed": "2026-02-24 13:57:01",
     "standard_name": "flu",
     "Session Title": "A03 FLU ED Encounters by State and Age 2026",
     "Session ID": "2795686",
@@ -17,7 +17,7 @@
   {
     "file": "raw/staging_resp_infections/A03_FLU_EDvisits_ICD10_State_Week_Age_2025.csv",
     "md5": "c4641b45932c15a88fa2f3d8e87a9e36",
-    "date_processed": "2026-02-24 13:25:49",
+    "date_processed": "2026-02-24 13:57:01",
     "standard_name": "flu",
     "Session Title": "A03 FLU ED Encounters by State and Age 2025",
     "Session ID": "2795695",
@@ -32,7 +32,7 @@
   {
     "file": "raw/staging_resp_infections/A03_FLU_EDvisits_ICD10_State_Week_Age_2024.csv",
     "md5": "e78c4a0ef1f0f9fab5f7c8deb8eab21f",
-    "date_processed": "2026-02-24 13:25:49",
+    "date_processed": "2026-02-24 13:57:01",
     "standard_name": "flu",
     "Session Title": "A03 FLU ED Encounters by State and Age 2024",
     "Session ID": "2795689",
@@ -47,7 +47,7 @@
   {
     "file": "raw/staging_resp_infections/A03_FLU_EDvisits_ICD10_State_Week_Age_2023.csv",
     "md5": "5a242915349bab5b5a5a0b9be1834fc0",
-    "date_processed": "2026-02-24 13:25:49",
+    "date_processed": "2026-02-24 13:57:01",
     "standard_name": "flu",
     "Session Title": "A03 FLU ED Encounters by State and Age 2023",
     "Session ID": "2795692",
