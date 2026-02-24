@@ -1,0 +1,124 @@
+{
+  "age": {
+    "id": "age",
+    "short_name": "Age",
+    "long_name": "Age group",
+    "short_description": "Age group.",
+    "long_description": "Age group, based on age in current years.",
+    "measure_type": "integer",
+    "unit": "years",
+    "time_resolution": "year",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "n_patients": {
+    "id": "n_patients",
+    "short_name": "Number of Patients in the ED",
+    "long_name": "Number of Patients in the ED, any cause",
+    "short_description": "Number of patients.",
+    "measure_type": "integer",
+    "unit": "count",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_suppressed_flag_{variant}": {
+    "id": "epic_suppressed_flag_{variant}",
+    "short_name": "Fewer than 10 cases in the strata?",
+    "long_name": "Fewer than 10 cases in the strata?",
+    "short_description": "Binary indicator for low counts",
+    "long_description": "Binary indicator: true if fewer than 10 cases in the strata",
+    "measure_type": "binary",
+    "unit": "",
+    "variants": {
+      "covid": { "default": "covid", "short_name": "COVID", "category": "rsv" },
+      "flu": { "default": "flu", "short_name": "FLU", "category": "rsv" },
+      "rsv": { "default": "rsv", "short_name": "RSV", "category": "rsv" }
+    },
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "n_rsv_tests": {
+    "id": "n_rsv_tests",
+    "short_name": "RSV Tests: Positive",
+    "long_name": "Emergency Room (ER) Encounters with Positive Respiratory Syncytial Virus (RSV) Tests",
+    "short_description": "Number of ER encounters with positive RSV tests.",
+    "measure_type": "integer",
+    "unit": "encounter",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_positive_rsv_tests_percent": {
+    "id": "epic_positive_rsv_tests_percent",
+    "short_name": "RSV Tests: Positive (%)",
+    "long_name": "Percent of Emergency Room (ER) Visits with Positive RSV Tests",
+    "short_description": "Percent of ER encounters with positive RSV tests.",
+    "measure_type": "percent",
+    "unit": "percent",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_n_{variant}": {
+    "id": "epic_n_{variant}",
+    "short_name": "{variant.short_name} Patients",
+    "long_name": "{variant.short_name} Emergency Room (ER) Encounters",
+    "short_description": "Number of {variant.short_name} patients",
+    "long_description": "Number of emergency room (ER) encounters with {variant.short_name} ICD-10-CM codes.",
+    "measure_type": "integer",
+    "unit": "encounters",
+    "variants": {
+      "all_encounters": { "default": "all", "short_name": "All encounters", "category": "general" },
+      "covid": { "default": "covid", "short_name": "COVID", "category": "rsv" },
+      "flu": { "default": "flu", "short_name": "FLU", "category": "rsv" },
+      "rsv": { "default": "rsv", "short_name": "RSV", "category": "rsv" },
+      "ed_j12_j18": { "default": "ed_j12_j18", "short_name": "J12_J18", "category": "rsv" }
+    },
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_pct_{variant}": {
+    "id": "epic_pct_{variant}",
+    "short_name": "{variant.short_name} Patients (%)",
+    "long_name": "{variant.short_name} Emergency Room (ER) Encounters (%)",
+    "short_description": "Percentage of {variant.short_name} patients",
+    "measure_type": "percent",
+    "unit": "%",
+    "variants": {
+      "all_encounters": { "default": "all", "short_name": "All encounters", "category": "general" },
+      "covid": { "default": "covid", "short_name": "COVID", "category": "rsv" },
+      "flu": { "default": "flu", "short_name": "FLU", "category": "rsv" },
+      "rsv": { "default": "rsv", "short_name": "RSV", "category": "rsv" },
+      "rsv_pos_tests": { "default": "rsv_pos_tests", "short_name": "rsv_pos_tests","long_name": "Percent of tests among pneumonia patients in the ED (J12-J18) that are positive for RSV", "category": "rsv" },
+      "j12_j18_tested_rsv": { "default": "j12_j18_tested_rsv", "short_name": "j12_j18_tested_rsv","long_name": "Percent of pneumonia patients in the ED (J12-J18) that are tested for RSV", "category": "rsv" }
+    },
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_pct_rsv_pos_tests": {
+    "id": "epic_pct_rsv_pos_tests",
+    "short_name": "Percent positive",
+    "long_name": "Percent of tests among hospitalized pneumonia admissions (ICD10: J12-J18) that are positive for RSV",
+    "short_description": "Percent of tests among pneumonia admissions (ICD10: J12-J18) that are positive for RSV. This is among hospital admissions, including those that started in the emergency department",
+    "measure_type": "percent",
+    "unit": "%",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+  "epic_pct_j12_j18_tested_rsv": {
+    "id": "epic_pct_j12_j18_tested_rsv",
+    "short_name": "Percent tested",
+    "long_name": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV. This is among hospital admissions, including those that started in the emergency department",
+    "short_description": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV",
+    "measure_type": "percent",
+    "unit": "%",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "_sources": {
+    "epic_cosmos": {
+      "name": "Epic Cosmos",
+      "url": "https://cosmos.epic.com/",
+      "date_accessed": 2025,
+      "organization": "Epic Systems",
+      "organization_url": "https://cosmos.epic.com/"
+    }
+  }
+}

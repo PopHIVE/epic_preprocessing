@@ -2,7 +2,7 @@
   {
     "file": "raw/staging_resp_infections/A01_allED_State_Week_Age_2026.csv",
     "md5": "44ce8c163114b123dc9dacd1a1a09a73",
-    "date_processed": "2026-02-23 08:36:16",
+    "date_processed": "2026-02-24 13:25:48",
     "standard_name": "all_encounters_weekly",
     "Session Title": "A01. All ED Encounters by State Week Age 2026",
     "Session ID": "2795187",
@@ -17,7 +17,7 @@
   {
     "file": "raw/staging_resp_infections/A01_allED_State_Week_Age_2025.csv",
     "md5": "eca3ef69bcee2f8fe3a409cbd297a11f",
-    "date_processed": "2026-02-23 08:36:16",
+    "date_processed": "2026-02-24 13:25:48",
     "standard_name": "all_encounters_weekly",
     "Session Title": "A01. All ED Encounters by State Week Age 2025",
     "Session ID": "2795156",
@@ -32,7 +32,7 @@
   {
     "file": "raw/staging_resp_infections/A01_allED_State_Week_Age_2024.csv",
     "md5": "8c102f69efd4a45e7526d7efe2bdd0ad",
-    "date_processed": "2026-02-23 08:36:16",
+    "date_processed": "2026-02-24 13:25:48",
     "standard_name": "all_encounters_weekly",
     "Session Title": "A01. All ED Encounters by State Week Age 2024",
     "Session ID": "2795144",
@@ -47,7 +47,7 @@
   {
     "file": "raw/staging_resp_infections/A01_allED_State_Week_Age_2023.csv",
     "md5": "7793df51e2f7c3406140381a66bfce5f",
-    "date_processed": "2026-02-23 08:36:15",
+    "date_processed": "2026-02-24 13:25:48",
     "standard_name": "all_encounters_weekly",
     "Session Title": "A01. All ED Encounters by State Week Age 2023",
     "Session ID": "2795151",
