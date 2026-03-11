@@ -6,6 +6,19 @@
 
 library(tidyverse)
 library(dcf)
+library(openxlsx2)
+
+# Check that msoffcrypto-tool is available (required for decrypting password-protected xlsx files)
+msoffcrypto_check <- system(
+  paste(Sys.which("python"), "-c \"import msoffcrypto\""),
+  ignore.stdout = TRUE, ignore.stderr = TRUE
+)
+if (msoffcrypto_check != 0) {
+  stop(
+    "Python package 'msoffcrypto-tool' is required but not installed.\n",
+    "Install it with: python -m pip install msoffcrypto-tool"
+  )
+}
 
 # Load FIPS lookup
 all_fips <- vroom::vroom('https://github.com/PopHIVE/Ingest/raw/refs/heads/main/resources/all_fips.csv.gz')

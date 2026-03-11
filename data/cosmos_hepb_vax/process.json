@@ -14,9 +14,20 @@
       }
     }
   ],
-  "checked": "",
-  "check_results": [],
+  "checked": "2026-03-11 09:27:30",
+  "check_results": {
+    "data/cosmos_hepb_vax/raw/HepB_state_month.csv": {
+      "data": "not_compressed"
+    },
+    "data/cosmos_hepb_vax/standard/data.csv.gz": {
+      "measures": "missing_info: suppressed_flag"
+    }
+  },
   "raw_state": {
     "hash": "12e583a700502e37a1aa634c4387d51a"
+  },
+  "standard_state": {
+    "./data/cosmos_hepb_vax/measure_info.json": "f7122364a33ccf85dd017bbac2a8da94",
+    "./data/cosmos_hepb_vax/standard/data.csv.gz": "6db700ba2af8601f877633e67bec05e2"
   }
 }
