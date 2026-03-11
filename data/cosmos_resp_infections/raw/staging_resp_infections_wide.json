@@ -1,0 +1,41 @@
+[
+  {
+    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-03-10T20_03_42.xlsx",
+    "md5": "3721abba504ba95e5901b134e943fc20",
+    "date_processed": "2026-03-10 22:20:01.538078",
+    "Session Title": "Number of ED Encounters by ED Diagnoses and State of Residence and Age at Time of Visit Range",
+    "Session ID": "2803459",
+    "Data Model": "ED Encounters",
+    "Population Base": "All ED Encounters",
+    "Population Criteria Filters": "Country of Residence: United States of America",
+    "Session Date Range": "12/29/2024 - 2/24/2026 (Based On Arrival Date)",
+    "Export User": "Number of ED Encounters",
+    "Date of Export": "Daniel Weinberger"
+  },
+  {
+    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-03-10T20_14_28.xlsx",
+    "md5": "eed023e99698d63d59ae737933bfba3e",
+    "date_processed": "2026-03-10 22:20:03.612456",
+    "Session Title": "Number of ED Encounters by ED Diagnoses and State of Residence and Age at Time of Visit Range",
+    "Session ID": "2803481",
+    "Data Model": "ED Encounters",
+    "Population Base": "All ED Encounters",
+    "Population Criteria Filters": "Country of Residence: United States of America",
+    "Session Date Range": "12/27/2021 - 12/28/2024 (Based On Arrival Date)",
+    "Export User": "Number of ED Encounters",
+    "Date of Export": "Daniel Weinberger"
+  },
+  {
+    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-03-10T20_25_43.xlsx",
+    "md5": "0eaaf4908da5ffc898ac162686f20864",
+    "date_processed": "2026-03-10 22:20:06.933502",
+    "Session Title": "Number of ED Encounters by ED Diagnoses and State of Residence and Age at Time of Visit Range",
+    "Session ID": "2803475",
+    "Data Model": "ED Encounters",
+    "Population Base": "All ED Encounters",
+    "Population Criteria Filters": "Country of Residence: United States of America",
+    "Session Date Range": "1/1/2018 - 12/26/2021 (Based On Arrival Date)",
+    "Export User": "Number of ED Encounters",
+    "Date of Export": "Daniel Weinberger"
+  }
+]
