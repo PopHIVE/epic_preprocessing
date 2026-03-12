@@ -370,8 +370,11 @@ merged_weekly <- merged_weekly %>%
     starts_with("epic_n"),
     starts_with("epic_pct"),
     starts_with("epic_suppressed")
-  )
-
+  )%>%
+  mutate(dow = weekdays(time),
+         time = if_else(dow=='Sunday', time+6, time)) %>% #week end date in the case of Sunday
+  filter(dow %in% c('Sunday', 'Saturday')) %>% #removes partial weeks
+  dplyr::select(-dow)
 
 vroom::vroom_write(
   merged_weekly,
