@@ -11,13 +11,25 @@
     {
       "bytes": 159282,
       "encoding": "ISO-8859-1",
-      "md5": "068a44c5071aec0f7cfa36a84656dff0",
+      "md5": "8bf27dd399ebc63f01bc7ce0976e23c6",
       "format": "csv",
       "name": "monthly_tests.csv",
       "filename": "monthly_tests.csv.gz",
-      "versions": {},
+      "versions": {
+        "hash": [
+          "db28a77504a7541bc8b2ec7dde346e6ef1762ab0"
+        ],
+        "author": [
+          "danweinberger <daniel.weinberger@yale.edu>"
+        ],
+        "date": [
+          "Tue Feb 24 13:54:12 2026 -0500"
+        ],
+        "message": [
+          "reorganize the directory structure into distinct data projects for cosmos"
+        ]
+      },
       "source": [],
-      "data_format": "wide",
       "ids": [
         {
           "variable": "geography"
@@ -26,8 +38,8 @@
       "id_length": 0,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-03-12 10:21:08.104193",
-      "last_modified": "2026-02-24 13:26:37.971329",
+      "created": "2026-03-20 03:55:44.904766",
+      "last_modified": "2026-03-20 03:55:44.904766",
       "vintage": {},
       "row_count": 19296,
       "entity_count": 54,
@@ -36,7 +48,6 @@
           {
             "name": "time",
             "duplicates": 19260,
-            "info": [],
             "time_range": [0, 34],
             "type": "string",
             "missing": 536,
@@ -81,7 +92,6 @@
           {
             "name": "geography",
             "duplicates": 19242,
-            "info": [],
             "time_range": [35, 35],
             "type": "integer",
             "missing": 0,
@@ -112,8 +122,6 @@
             "type": "string",
             "missing": 0,
             "table": {
-              "<1 Years": 1908,
-              "<5 Years": 1944,
               "1-4 Years": 1908,
               "18-39 Years": 1944,
               "18-49 Years": 1908,
@@ -121,6 +129,8 @@
               "5-17 Years": 1944,
               "50-64 Years": 1908,
               "65+ Years": 1944,
+              "<1 Years": 1908,
+              "<5 Years": 1944,
               "Total": 1944
             }
           },
@@ -229,402 +239,30 @@
           }
         ]
       },
-      "measure_info": {
-        "age": {
-          "id": "age",
-          "short_name": "Age",
-          "long_name": "Age group",
-          "short_description": "Age group.",
-          "long_description": "Age group, based on age in current years.",
-          "measure_type": "integer",
-          "unit": "years",
-          "time_resolution": "year",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "n_patients": {
-          "id": "n_patients",
-          "short_name": "Number of Patients in the ED",
-          "long_name": "Number of Patients in the ED, any cause",
-          "short_description": "Number of patients presenting to the emergency department for any cause.",
-          "long_description": "Total number of patients presenting to the emergency department for any cause. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "count",
-          "time_resolution": "Week",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_suppressed_flag_covid": {
-          "id": "epic_suppressed_flag_covid",
-          "short_name": "Fewer than 10 cases in the strata?",
-          "long_name": "Suppression flag: fewer than 10 cases in the strata",
-          "short_description": "Binary indicator for low counts.",
-          "long_description": "Binary indicator: 1 if fewer than 10 cases in the strata, 0 otherwise. When suppressed, the corresponding count is imputed as 5.",
-          "measure_type": "binary",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_suppressed_flag_flu": {
-          "id": "epic_suppressed_flag_flu",
-          "short_name": "Fewer than 10 cases in the strata?",
-          "long_name": "Suppression flag: fewer than 10 cases in the strata",
-          "short_description": "Binary indicator for low counts.",
-          "long_description": "Binary indicator: 1 if fewer than 10 cases in the strata, 0 otherwise. When suppressed, the corresponding count is imputed as 5.",
-          "measure_type": "binary",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_suppressed_flag_rsv": {
-          "id": "epic_suppressed_flag_rsv",
-          "short_name": "Fewer than 10 cases in the strata?",
-          "long_name": "Suppression flag: fewer than 10 cases in the strata",
-          "short_description": "Binary indicator for low counts.",
-          "long_description": "Binary indicator: 1 if fewer than 10 cases in the strata, 0 otherwise. When suppressed, the corresponding count is imputed as 5.",
-          "measure_type": "binary",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "n_rsv_tests": {
-          "id": "n_rsv_tests",
-          "short_name": "RSV Tests: Positive",
-          "long_name": "Emergency Room (ER) Encounters with Positive Respiratory Syncytial Virus (RSV) Tests",
-          "short_description": "Number of ER encounters with positive RSV tests.",
-          "long_description": "Number of emergency room encounters with positive RSV tests among pneumonia admissions (ICD-10: J12-J18). Data accessed via Epic Cosmos SlicerDicer. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounter",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_positive_rsv_tests_percent": {
-          "id": "epic_positive_rsv_tests_percent",
-          "short_name": "RSV Tests: Positive (%)",
-          "long_name": "Percent of Emergency Room (ER) Visits with Positive RSV Tests",
-          "short_description": "Percent of ER encounters with positive RSV tests.",
-          "long_description": "Percentage of emergency room encounters with positive RSV tests among pneumonia admissions (ICD-10: J12-J18).",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_n_all": {
-          "id": "epic_n_all",
-          "short_name": "All encounters Patients",
-          "long_name": "All encounters Emergency Room (ER) Encounters",
-          "short_description": "Number of All encounters patients.",
-          "long_description": "Number of emergency room (ER) encounters with All encounters ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "general"
-        },
-        "epic_n_covid": {
-          "id": "epic_n_covid",
-          "short_name": "COVID Patients",
-          "long_name": "COVID Emergency Room (ER) Encounters",
-          "short_description": "Number of COVID patients.",
-          "long_description": "Number of emergency room (ER) encounters with COVID ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_n_flu": {
-          "id": "epic_n_flu",
-          "short_name": "Influenza Patients",
-          "long_name": "Influenza Emergency Room (ER) Encounters",
-          "short_description": "Number of Influenza patients.",
-          "long_description": "Number of emergency room (ER) encounters with Influenza ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_n_rsv": {
-          "id": "epic_n_rsv",
-          "short_name": "RSV Patients",
-          "long_name": "RSV Emergency Room (ER) Encounters",
-          "short_description": "Number of RSV patients.",
-          "long_description": "Number of emergency room (ER) encounters with RSV ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_n_ed_j12_j18": {
-          "id": "epic_n_ed_j12_j18",
-          "short_name": "Pneumonia (J12-J18) Patients",
-          "long_name": "Pneumonia (J12-J18) Emergency Room (ER) Encounters",
-          "short_description": "Number of Pneumonia (J12-J18) patients.",
-          "long_description": "Number of emergency room (ER) encounters with Pneumonia (J12-J18) ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_all": {
-          "id": "epic_pct_all",
-          "short_name": "All encounters Patients (%)",
-          "long_name": "All encounters Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of All encounters patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to All encounters ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "general"
-        },
-        "epic_pct_covid": {
-          "id": "epic_pct_covid",
-          "short_name": "COVID Patients (%)",
-          "long_name": "COVID Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of COVID patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to COVID ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_flu": {
-          "id": "epic_pct_flu",
-          "short_name": "Influenza Patients (%)",
-          "long_name": "Influenza Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of Influenza patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to Influenza ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_rsv": {
-          "id": "epic_pct_rsv",
-          "short_name": "RSV Patients (%)",
-          "long_name": "RSV Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of RSV patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to RSV ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_rsv_pos_tests": {
-          "id": "epic_pct_rsv_pos_tests",
-          "short_name": "RSV Positive Tests Patients (%)",
-          "long_name": "RSV Positive Tests Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of RSV Positive Tests patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to RSV Positive Tests ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_j12_j18_tested_rsv": {
-          "id": "epic_pct_j12_j18_tested_rsv",
-          "short_name": "J12-J18 Tested RSV Patients (%)",
-          "long_name": "J12-J18 Tested RSV Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of J12-J18 Tested RSV patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to J12-J18 Tested RSV ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_rsv_pos_tests.1": {
-          "id": "epic_pct_rsv_pos_tests",
-          "short_name": "Percent positive",
-          "long_name": "Percent of tests among hospitalized pneumonia admissions (ICD-10: J12-J18) that are positive for RSV",
-          "short_description": "Percent of tests among pneumonia admissions (ICD-10: J12-J18) that are positive for RSV.",
-          "long_description": "Percent of RSV tests among hospitalized pneumonia admissions (ICD-10: J12-J18) that are positive for RSV. This is among hospital admissions, including those that started in the emergency department. Data accessed via Epic Cosmos SlicerDicer.",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "suppressed_rsv_test": {
-          "id": "suppressed_rsv_test",
-          "short_name": "RSV Test Count Suppressed?",
-          "long_name": "Suppression flag for RSV test encounter count",
-          "short_description": "Binary indicator: 1 if the RSV test encounter count was suppressed (fewer than 10), 0 otherwise.",
-          "long_description": "Binary indicator: 1 if the count of J12-J18 pneumonia encounters with RSV testing (epic_n_ed_j12_j18) was suppressed due to fewer than 10 cases, in which case the count is imputed as 5. Otherwise 0.",
-          "measure_type": "binary",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "positive_rsv_tests_(%)": {
-          "id": "positive_rsv_tests_(%)",
-          "short_name": "RSV Positive Test Rate (%) [raw]",
-          "long_name": "Percent of RSV Tests Positive Among Pneumonia Admissions (raw, no geography)",
-          "short_description": "Raw export column: percent of RSV tests positive among J12-J18 pneumonia admissions.",
-          "long_description": "Raw column from Epic Cosmos SlicerDicer export. Represents the percentage of RSV tests that returned positive among hospitalized pneumonia admissions (ICD-10: J12-J18). This is the unprocessed version stored in no_geo.csv.gz before renaming to epic_pct_rsv_pos_tests.",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "rsv_tests": {
-          "id": "rsv_tests",
-          "short_name": "RSV Test Rate (%) [raw]",
-          "long_name": "Percent of Pneumonia Admissions Tested for RSV (raw, no geography)",
-          "short_description": "Raw export column: percent of J12-J18 pneumonia admissions receiving an RSV test.",
-          "long_description": "Raw column from Epic Cosmos SlicerDicer export. Represents the percentage of hospitalized pneumonia admissions (ICD-10: J12-J18) that received an RSV test. This is the unprocessed version stored in no_geo.csv.gz before renaming to epic_pct_j12_j18_tested_rsv.",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_n_all_encounters_weekly": {
-          "id": "epic_n_all_encounters_weekly",
-          "short_name": "All-Cause ED Encounters (Weekly)",
-          "long_name": "Total Weekly Emergency Department Encounters (All Causes)",
-          "short_description": "Total number of weekly emergency department encounters for any cause.",
-          "long_description": "Total count of weekly emergency department encounters for any cause, used as the denominator for respiratory illness percentages. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "time_resolution": "Week",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_suppressed_flag_all_encounters_weekly": {
-          "id": "epic_suppressed_flag_all_encounters_weekly",
-          "short_name": "All Encounters Count Suppressed? (Weekly)",
-          "long_name": "Suppression flag: fewer than 10 all-cause weekly ED encounters in the strata",
-          "short_description": "Binary indicator: 1 if the all-cause weekly ED encounter count was suppressed, 0 otherwise.",
-          "long_description": "Binary indicator: 1 if fewer than 10 all-cause weekly emergency department encounters in the strata, 0 otherwise. When suppressed, the corresponding count (epic_n_all_encounters_weekly) is imputed as 5.",
-          "measure_type": "binary",
-          "time_resolution": "Week",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_pct_j12_j18_tested_rsv.1": {
-          "id": "epic_pct_j12_j18_tested_rsv",
-          "short_name": "Percent tested",
-          "long_name": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV",
-          "short_description": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV.",
-          "long_description": "Percent of hospitalized pneumonia admissions (ICD-10: J12-J18) receiving a test for RSV. This is among hospital admissions, including those that started in the emergency department. Data accessed via Epic Cosmos SlicerDicer.",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "_sources": {
-          "epic_cosmos": {
-            "name": "Epic Cosmos",
-            "url": "https://cosmos.epic.com/",
-            "date_accessed": 2025,
-            "organization": "Epic Systems",
-            "organization_url": "https://www.epic.com/",
-            "description": "Epic Cosmos is a collaborative research platform containing de-identified patient data from over 300 million patients across more than 1,600 hospitals and health systems using Epic electronic health record systems. Data is accessed via SlicerDicer, a self-service analytics tool. The dataset includes emergency department visits, diagnoses, immunizations, laboratory results, and other clinical data. Due to privacy protections, counts fewer than 10 are suppressed and imputed. Coverage extends across all U.S. states and territories. Note that county-level and city-level stratifications could differ markedly in total sample size due to high levels of missingness of county data in some states.",
-            "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'"
-          },
-          "id": "_sources"
-        }
-      },
-      "sha512": "-"
+      "sha512": "c6eadb3e8cd379a70a0f2df05baf1fa0d2279b98dee3e1a0c16ef5ae51aecb032349810be2db8cb78b2daeaf63eabc6815dd08d2fa81837740e3a21ecf95c959"
     },
     {
       "bytes": 169987,
       "encoding": "ISO-8859-1",
-      "md5": "f00b2216800dca74a31cf3564819e705",
+      "md5": "343d89b54a7b2e7058eaaf280a7de963",
       "format": "csv",
       "name": "no_geo.csv",
       "filename": "no_geo.csv.gz",
-      "versions": {},
+      "versions": {
+        "hash": [
+          "db28a77504a7541bc8b2ec7dde346e6ef1762ab0"
+        ],
+        "author": [
+          "danweinberger <daniel.weinberger@yale.edu>"
+        ],
+        "date": [
+          "Tue Feb 24 13:54:12 2026 -0500"
+        ],
+        "message": [
+          "reorganize the directory structure into distinct data projects for cosmos"
+        ]
+      },
       "source": [],
-      "data_format": "wide",
       "ids": [
         {
           "variable": "geography"
@@ -633,8 +271,8 @@
       "id_length": 0,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-03-12 10:21:08.453318",
-      "last_modified": "2026-02-24 13:26:40.75477",
+      "created": "2026-03-20 03:55:45.001337",
+      "last_modified": "2026-03-20 03:55:45.001337",
       "vintage": "2025-12-18",
       "row_count": 21240,
       "entity_count": 54,
@@ -643,7 +281,6 @@
           {
             "name": "time",
             "duplicates": 21204,
-            "info": [],
             "time_range": [0, 34],
             "type": "string",
             "missing": 590,
@@ -707,8 +344,6 @@
             "type": "string",
             "missing": 0,
             "table": {
-              "<1 Years": 1908,
-              "<5 Years": 1944,
               "1-4 Years": 1908,
               "18-39 Years": 1944,
               "18-49 Years": 1908,
@@ -716,6 +351,8 @@
               "5-17 Years": 1944,
               "50-64 Years": 1908,
               "65+ Years": 1944,
+              "<1 Years": 1908,
+              "<5 Years": 1944,
               "NA": 1944,
               "Total": 1944
             }
@@ -723,7 +360,6 @@
           {
             "name": "geography",
             "duplicates": 21186,
-            "info": [],
             "time_range": [35, 35],
             "type": "integer",
             "missing": 0,
@@ -2504,402 +2140,46 @@
           }
         ]
       },
-      "measure_info": {
-        "age": {
-          "id": "age",
-          "short_name": "Age",
-          "long_name": "Age group",
-          "short_description": "Age group.",
-          "long_description": "Age group, based on age in current years.",
-          "measure_type": "integer",
-          "unit": "years",
-          "time_resolution": "year",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "n_patients": {
-          "id": "n_patients",
-          "short_name": "Number of Patients in the ED",
-          "long_name": "Number of Patients in the ED, any cause",
-          "short_description": "Number of patients presenting to the emergency department for any cause.",
-          "long_description": "Total number of patients presenting to the emergency department for any cause. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "count",
-          "time_resolution": "Week",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_suppressed_flag_covid": {
-          "id": "epic_suppressed_flag_covid",
-          "short_name": "Fewer than 10 cases in the strata?",
-          "long_name": "Suppression flag: fewer than 10 cases in the strata",
-          "short_description": "Binary indicator for low counts.",
-          "long_description": "Binary indicator: 1 if fewer than 10 cases in the strata, 0 otherwise. When suppressed, the corresponding count is imputed as 5.",
-          "measure_type": "binary",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_suppressed_flag_flu": {
-          "id": "epic_suppressed_flag_flu",
-          "short_name": "Fewer than 10 cases in the strata?",
-          "long_name": "Suppression flag: fewer than 10 cases in the strata",
-          "short_description": "Binary indicator for low counts.",
-          "long_description": "Binary indicator: 1 if fewer than 10 cases in the strata, 0 otherwise. When suppressed, the corresponding count is imputed as 5.",
-          "measure_type": "binary",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_suppressed_flag_rsv": {
-          "id": "epic_suppressed_flag_rsv",
-          "short_name": "Fewer than 10 cases in the strata?",
-          "long_name": "Suppression flag: fewer than 10 cases in the strata",
-          "short_description": "Binary indicator for low counts.",
-          "long_description": "Binary indicator: 1 if fewer than 10 cases in the strata, 0 otherwise. When suppressed, the corresponding count is imputed as 5.",
-          "measure_type": "binary",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "n_rsv_tests": {
-          "id": "n_rsv_tests",
-          "short_name": "RSV Tests: Positive",
-          "long_name": "Emergency Room (ER) Encounters with Positive Respiratory Syncytial Virus (RSV) Tests",
-          "short_description": "Number of ER encounters with positive RSV tests.",
-          "long_description": "Number of emergency room encounters with positive RSV tests among pneumonia admissions (ICD-10: J12-J18). Data accessed via Epic Cosmos SlicerDicer. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounter",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_positive_rsv_tests_percent": {
-          "id": "epic_positive_rsv_tests_percent",
-          "short_name": "RSV Tests: Positive (%)",
-          "long_name": "Percent of Emergency Room (ER) Visits with Positive RSV Tests",
-          "short_description": "Percent of ER encounters with positive RSV tests.",
-          "long_description": "Percentage of emergency room encounters with positive RSV tests among pneumonia admissions (ICD-10: J12-J18).",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_n_all": {
-          "id": "epic_n_all",
-          "short_name": "All encounters Patients",
-          "long_name": "All encounters Emergency Room (ER) Encounters",
-          "short_description": "Number of All encounters patients.",
-          "long_description": "Number of emergency room (ER) encounters with All encounters ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "general"
-        },
-        "epic_n_covid": {
-          "id": "epic_n_covid",
-          "short_name": "COVID Patients",
-          "long_name": "COVID Emergency Room (ER) Encounters",
-          "short_description": "Number of COVID patients.",
-          "long_description": "Number of emergency room (ER) encounters with COVID ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_n_flu": {
-          "id": "epic_n_flu",
-          "short_name": "Influenza Patients",
-          "long_name": "Influenza Emergency Room (ER) Encounters",
-          "short_description": "Number of Influenza patients.",
-          "long_description": "Number of emergency room (ER) encounters with Influenza ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_n_rsv": {
-          "id": "epic_n_rsv",
-          "short_name": "RSV Patients",
-          "long_name": "RSV Emergency Room (ER) Encounters",
-          "short_description": "Number of RSV patients.",
-          "long_description": "Number of emergency room (ER) encounters with RSV ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_n_ed_j12_j18": {
-          "id": "epic_n_ed_j12_j18",
-          "short_name": "Pneumonia (J12-J18) Patients",
-          "long_name": "Pneumonia (J12-J18) Emergency Room (ER) Encounters",
-          "short_description": "Number of Pneumonia (J12-J18) patients.",
-          "long_description": "Number of emergency room (ER) encounters with Pneumonia (J12-J18) ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_all": {
-          "id": "epic_pct_all",
-          "short_name": "All encounters Patients (%)",
-          "long_name": "All encounters Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of All encounters patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to All encounters ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "general"
-        },
-        "epic_pct_covid": {
-          "id": "epic_pct_covid",
-          "short_name": "COVID Patients (%)",
-          "long_name": "COVID Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of COVID patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to COVID ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_flu": {
-          "id": "epic_pct_flu",
-          "short_name": "Influenza Patients (%)",
-          "long_name": "Influenza Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of Influenza patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to Influenza ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_rsv": {
-          "id": "epic_pct_rsv",
-          "short_name": "RSV Patients (%)",
-          "long_name": "RSV Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of RSV patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to RSV ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_rsv_pos_tests": {
-          "id": "epic_pct_rsv_pos_tests",
-          "short_name": "RSV Positive Tests Patients (%)",
-          "long_name": "RSV Positive Tests Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of RSV Positive Tests patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to RSV Positive Tests ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_j12_j18_tested_rsv": {
-          "id": "epic_pct_j12_j18_tested_rsv",
-          "short_name": "J12-J18 Tested RSV Patients (%)",
-          "long_name": "J12-J18 Tested RSV Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of J12-J18 Tested RSV patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to J12-J18 Tested RSV ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_rsv_pos_tests.1": {
-          "id": "epic_pct_rsv_pos_tests",
-          "short_name": "Percent positive",
-          "long_name": "Percent of tests among hospitalized pneumonia admissions (ICD-10: J12-J18) that are positive for RSV",
-          "short_description": "Percent of tests among pneumonia admissions (ICD-10: J12-J18) that are positive for RSV.",
-          "long_description": "Percent of RSV tests among hospitalized pneumonia admissions (ICD-10: J12-J18) that are positive for RSV. This is among hospital admissions, including those that started in the emergency department. Data accessed via Epic Cosmos SlicerDicer.",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "suppressed_rsv_test": {
-          "id": "suppressed_rsv_test",
-          "short_name": "RSV Test Count Suppressed?",
-          "long_name": "Suppression flag for RSV test encounter count",
-          "short_description": "Binary indicator: 1 if the RSV test encounter count was suppressed (fewer than 10), 0 otherwise.",
-          "long_description": "Binary indicator: 1 if the count of J12-J18 pneumonia encounters with RSV testing (epic_n_ed_j12_j18) was suppressed due to fewer than 10 cases, in which case the count is imputed as 5. Otherwise 0.",
-          "measure_type": "binary",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "positive_rsv_tests_(%)": {
-          "id": "positive_rsv_tests_(%)",
-          "short_name": "RSV Positive Test Rate (%) [raw]",
-          "long_name": "Percent of RSV Tests Positive Among Pneumonia Admissions (raw, no geography)",
-          "short_description": "Raw export column: percent of RSV tests positive among J12-J18 pneumonia admissions.",
-          "long_description": "Raw column from Epic Cosmos SlicerDicer export. Represents the percentage of RSV tests that returned positive among hospitalized pneumonia admissions (ICD-10: J12-J18). This is the unprocessed version stored in no_geo.csv.gz before renaming to epic_pct_rsv_pos_tests.",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "rsv_tests": {
-          "id": "rsv_tests",
-          "short_name": "RSV Test Rate (%) [raw]",
-          "long_name": "Percent of Pneumonia Admissions Tested for RSV (raw, no geography)",
-          "short_description": "Raw export column: percent of J12-J18 pneumonia admissions receiving an RSV test.",
-          "long_description": "Raw column from Epic Cosmos SlicerDicer export. Represents the percentage of hospitalized pneumonia admissions (ICD-10: J12-J18) that received an RSV test. This is the unprocessed version stored in no_geo.csv.gz before renaming to epic_pct_j12_j18_tested_rsv.",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_n_all_encounters_weekly": {
-          "id": "epic_n_all_encounters_weekly",
-          "short_name": "All-Cause ED Encounters (Weekly)",
-          "long_name": "Total Weekly Emergency Department Encounters (All Causes)",
-          "short_description": "Total number of weekly emergency department encounters for any cause.",
-          "long_description": "Total count of weekly emergency department encounters for any cause, used as the denominator for respiratory illness percentages. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "time_resolution": "Week",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_suppressed_flag_all_encounters_weekly": {
-          "id": "epic_suppressed_flag_all_encounters_weekly",
-          "short_name": "All Encounters Count Suppressed? (Weekly)",
-          "long_name": "Suppression flag: fewer than 10 all-cause weekly ED encounters in the strata",
-          "short_description": "Binary indicator: 1 if the all-cause weekly ED encounter count was suppressed, 0 otherwise.",
-          "long_description": "Binary indicator: 1 if fewer than 10 all-cause weekly emergency department encounters in the strata, 0 otherwise. When suppressed, the corresponding count (epic_n_all_encounters_weekly) is imputed as 5.",
-          "measure_type": "binary",
-          "time_resolution": "Week",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_pct_j12_j18_tested_rsv.1": {
-          "id": "epic_pct_j12_j18_tested_rsv",
-          "short_name": "Percent tested",
-          "long_name": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV",
-          "short_description": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV.",
-          "long_description": "Percent of hospitalized pneumonia admissions (ICD-10: J12-J18) receiving a test for RSV. This is among hospital admissions, including those that started in the emergency department. Data accessed via Epic Cosmos SlicerDicer.",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "_sources": {
-          "epic_cosmos": {
-            "name": "Epic Cosmos",
-            "url": "https://cosmos.epic.com/",
-            "date_accessed": 2025,
-            "organization": "Epic Systems",
-            "organization_url": "https://www.epic.com/",
-            "description": "Epic Cosmos is a collaborative research platform containing de-identified patient data from over 300 million patients across more than 1,600 hospitals and health systems using Epic electronic health record systems. Data is accessed via SlicerDicer, a self-service analytics tool. The dataset includes emergency department visits, diagnoses, immunizations, laboratory results, and other clinical data. Due to privacy protections, counts fewer than 10 are suppressed and imputed. Coverage extends across all U.S. states and territories. Note that county-level and city-level stratifications could differ markedly in total sample size due to high levels of missingness of county data in some states.",
-            "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'"
-          },
-          "id": "_sources"
-        }
-      },
-      "sha512": "-"
+      "sha512": "3b45b7bb9d6df602ec9cb80e06b4deeb94895f3139702269be7f8e3bacbea09fc1550c0ebea3d5a0336f25c14e2daa62f60736959773ab97e2e9489afa88ff11"
     },
     {
-      "bytes": 5187461,
+      "bytes": 3783987,
       "encoding": "ISO-8859-1",
-      "md5": "636d844204d0fc67c832e6e908ccabc0",
+      "md5": "13084fcaa4141981e43c07b5312085fe",
       "format": "csv",
       "name": "weekly.csv",
       "filename": "weekly.csv.gz",
-      "versions": {},
+      "versions": {
+        "hash": [
+          "f51b0546e0b5b285fa9b3195b296b63437726ea0",
+          "47437419cf130d4e565eb07eade171a224a8731a",
+          "2c613c6d91b4f136ba0b31624e327f9e566880bc",
+          "e3edbf2a2e741062796effcf27df3a90254c9066",
+          "db28a77504a7541bc8b2ec7dde346e6ef1762ab0"
+        ],
+        "author": [
+          "weinbergerlab <dweinber@gmail.com>",
+          "danweinberger <daniel.weinberger@yale.edu>",
+          "danweinberger <daniel.weinberger@yale.edu>",
+          "danweinberger <daniel.weinberger@yale.edu>",
+          "danweinberger <daniel.weinberger@yale.edu>"
+        ],
+        "date": [
+          "Thu Mar 12 10:22:02 2026 -0400",
+          "Wed Mar 11 23:30:45 2026 -0400",
+          "Wed Mar 11 22:55:34 2026 -0400",
+          "Tue Mar 10 22:22:48 2026 -0400",
+          "Tue Feb 24 13:54:12 2026 -0500"
+        ],
+        "message": [
+          "fixes date boundary issues on respiratory data",
+          "fixes issues with date alignments",
+          "fix flu def on epic resp",
+          "update ingest to use new wide format of standard files, adds data back to 2018",
+          "reorganize the directory structure into distinct data projects for cosmos"
+        ]
+      },
       "source": [],
-      "data_format": "wide",
       "ids": [
         {
           "variable": "geography"
@@ -2908,28 +2188,27 @@
       "id_length": 0,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-03-12 10:20:55.037596",
-      "last_modified": "2026-02-24 13:26:37.966345",
+      "created": "2026-03-20 03:55:28.214498",
+      "last_modified": "2026-03-20 03:55:28.214498",
       "vintage": "2026-02-19",
-      "row_count": 230048,
+      "row_count": 153538,
       "entity_count": 52,
       "schema": {
         "fields": [
           {
             "name": "geography",
-            "duplicates": 229996,
-            "info": [],
-            "time_range": [0, 423],
+            "duplicates": 153486,
+            "time_range": [0, 424],
             "type": "integer",
             "missing": 0,
-            "mean": 28.403846,
-            "sd": 16.026767,
+            "mean": 28.686149,
+            "sd": 15.852837,
             "min": 0,
             "max": 56
           },
           {
             "name": "age",
-            "duplicates": 230041,
+            "duplicates": 153531,
             "info": {
               "id": "age",
               "short_name": "Age",
@@ -2945,456 +2224,456 @@
                 }
               ]
             },
-            "time_range": [0, 423],
+            "time_range": [0, 424],
             "type": "string",
             "missing": 0,
             "table": {
-              "<1 Years": 32864,
-              "1-4 Years": 32864,
-              "18-49 Years": 32864,
-              "5-17 Years": 32864,
-              "50-64 Years": 32864,
-              "65+ Years": 32864,
-              "Total": 32864
+              "1-4 Years": 21934,
+              "18-49 Years": 21934,
+              "5-17 Years": 21934,
+              "50-64 Years": 21934,
+              "65+ Years": 21934,
+              "<1 Years": 21934,
+              "Total": 21934
             }
           },
           {
             "name": "time",
-            "duplicates": 229624,
-            "info": [],
-            "time_range": [0, 423],
+            "duplicates": 153113,
+            "time_range": [0, 424],
             "type": "string",
             "missing": 0,
             "table": {
-              "2018-01-13": 728,
-              "2018-01-20": 728,
-              "2018-01-27": 728,
-              "2018-02-03": 728,
-              "2018-02-10": 728,
-              "2018-02-17": 728,
-              "2018-02-24": 728,
-              "2018-03-03": 728,
-              "2018-03-10": 728,
-              "2018-03-17": 728,
-              "2018-03-24": 728,
-              "2018-03-31": 728,
-              "2018-04-07": 728,
-              "2018-04-14": 728,
-              "2018-04-21": 728,
-              "2018-04-28": 728,
-              "2018-05-05": 728,
-              "2018-05-12": 728,
-              "2018-05-19": 728,
-              "2018-05-26": 728,
-              "2018-06-02": 728,
-              "2018-06-09": 728,
-              "2018-06-16": 728,
-              "2018-06-23": 728,
-              "2018-06-30": 728,
-              "2018-07-07": 728,
-              "2018-07-14": 728,
-              "2018-07-21": 728,
-              "2018-07-28": 728,
-              "2018-08-04": 728,
-              "2018-08-11": 728,
-              "2018-08-18": 728,
-              "2018-08-25": 728,
-              "2018-09-01": 728,
-              "2018-09-08": 728,
-              "2018-09-15": 728,
-              "2018-09-22": 728,
-              "2018-09-29": 728,
-              "2018-10-06": 728,
-              "2018-10-13": 728,
-              "2018-10-20": 728,
-              "2018-10-27": 728,
-              "2018-11-03": 728,
-              "2018-11-10": 728,
-              "2018-11-17": 728,
-              "2018-11-24": 728,
-              "2018-12-01": 728,
-              "2018-12-08": 728,
-              "2018-12-15": 728,
-              "2018-12-22": 728,
-              "2018-12-29": 728,
-              "2019-01-05": 728,
-              "2019-01-12": 728,
-              "2019-01-19": 728,
-              "2019-01-26": 728,
-              "2019-02-02": 728,
-              "2019-02-09": 728,
-              "2019-02-16": 728,
-              "2019-02-23": 728,
-              "2019-03-02": 728,
-              "2019-03-09": 728,
-              "2019-03-16": 728,
-              "2019-03-23": 728,
-              "2019-03-30": 728,
-              "2019-04-06": 728,
-              "2019-04-13": 728,
-              "2019-04-20": 728,
-              "2019-04-27": 728,
-              "2019-05-04": 728,
-              "2019-05-11": 728,
-              "2019-05-18": 728,
-              "2019-05-25": 728,
-              "2019-06-01": 728,
-              "2019-06-08": 728,
-              "2019-06-15": 728,
-              "2019-06-22": 728,
-              "2019-06-29": 728,
-              "2019-07-06": 728,
-              "2019-07-13": 728,
-              "2019-07-20": 728,
-              "2019-07-27": 728,
-              "2019-08-03": 728,
-              "2019-08-10": 728,
-              "2019-08-17": 728,
-              "2019-08-24": 728,
-              "2019-08-31": 728,
-              "2019-09-07": 728,
-              "2019-09-14": 728,
-              "2019-09-21": 728,
-              "2019-09-28": 728,
-              "2019-10-05": 728,
-              "2019-10-12": 728,
-              "2019-10-19": 728,
-              "2019-10-26": 728,
-              "2019-11-02": 728,
-              "2019-11-09": 728,
-              "2019-11-16": 728,
-              "2019-11-23": 728,
-              "2019-11-30": 728,
-              "2019-12-07": 728,
-              "2019-12-14": 728,
-              "2019-12-21": 728,
-              "2019-12-28": 728,
-              "2020-01-04": 728,
-              "2020-01-11": 728,
-              "2020-01-18": 728,
-              "2020-01-25": 728,
-              "2020-02-01": 728,
-              "2020-02-08": 728,
-              "2020-02-15": 728,
-              "2020-02-22": 728,
-              "2020-02-29": 728,
-              "2020-03-07": 728,
-              "2020-03-14": 728,
-              "2020-03-21": 728,
-              "2020-03-28": 728,
-              "2020-04-04": 728,
-              "2020-04-11": 728,
-              "2020-04-18": 728,
-              "2020-04-25": 728,
-              "2020-05-02": 728,
-              "2020-05-09": 728,
-              "2020-05-16": 728,
-              "2020-05-23": 728,
-              "2020-05-30": 728,
-              "2020-06-06": 728,
-              "2020-06-13": 728,
-              "2020-06-20": 728,
-              "2020-06-27": 728,
-              "2020-07-04": 728,
-              "2020-07-11": 728,
-              "2020-07-18": 728,
-              "2020-07-25": 728,
-              "2020-08-01": 728,
-              "2020-08-08": 728,
-              "2020-08-15": 728,
-              "2020-08-22": 728,
-              "2020-08-29": 728,
-              "2020-09-05": 728,
-              "2020-09-12": 728,
-              "2020-09-19": 728,
-              "2020-09-26": 728,
-              "2020-10-03": 728,
-              "2020-10-10": 728,
-              "2020-10-17": 728,
-              "2020-10-24": 728,
-              "2020-10-31": 728,
-              "2020-11-07": 728,
-              "2020-11-14": 728,
-              "2020-11-21": 728,
-              "2020-11-28": 728,
-              "2020-12-05": 728,
-              "2020-12-12": 728,
-              "2020-12-19": 728,
-              "2020-12-26": 728,
-              "2021-01-02": 728,
-              "2021-01-09": 728,
-              "2021-01-16": 728,
-              "2021-01-23": 728,
-              "2021-01-30": 728,
-              "2021-02-06": 728,
-              "2021-02-13": 728,
-              "2021-02-20": 728,
-              "2021-02-27": 728,
-              "2021-03-06": 728,
-              "2021-03-13": 728,
-              "2021-03-20": 728,
-              "2021-03-27": 728,
-              "2021-04-03": 728,
-              "2021-04-10": 728,
-              "2021-04-17": 728,
-              "2021-04-24": 728,
-              "2021-05-01": 728,
-              "2021-05-08": 728,
-              "2021-05-15": 728,
-              "2021-05-22": 728,
-              "2021-05-29": 728,
-              "2021-06-05": 728,
-              "2021-06-12": 728,
-              "2021-06-19": 728,
-              "2021-06-26": 728,
-              "2021-07-03": 728,
-              "2021-07-10": 728,
-              "2021-07-17": 728,
-              "2021-07-24": 728,
-              "2021-07-31": 728,
-              "2021-08-07": 728,
-              "2021-08-14": 728,
-              "2021-08-21": 728,
-              "2021-08-28": 728,
-              "2021-09-04": 728,
-              "2021-09-11": 728,
-              "2021-09-18": 728,
-              "2021-09-25": 728,
-              "2021-10-02": 728,
-              "2021-10-09": 728,
-              "2021-10-16": 728,
-              "2021-10-23": 728,
-              "2021-10-30": 728,
-              "2021-11-06": 728,
-              "2021-11-13": 728,
-              "2021-11-20": 728,
-              "2021-11-27": 728,
-              "2021-12-04": 728,
-              "2021-12-11": 728,
-              "2021-12-18": 728,
-              "2021-12-25": 728,
-              "2022-01-01": 728,
-              "2022-01-08": 364,
-              "2022-01-15": 364,
-              "2022-01-22": 364,
-              "2022-01-29": 364,
-              "2022-02-05": 364,
-              "2022-02-12": 364,
-              "2022-02-19": 364,
-              "2022-02-26": 364,
-              "2022-03-05": 364,
-              "2022-03-12": 364,
-              "2022-03-19": 364,
-              "2022-03-26": 364,
-              "2022-04-02": 364,
-              "2022-04-09": 364,
-              "2022-04-16": 364,
-              "2022-04-23": 364,
-              "2022-04-30": 364,
-              "2022-05-07": 364,
-              "2022-05-14": 364,
-              "2022-05-21": 364,
-              "2022-05-28": 364,
-              "2022-06-04": 364,
-              "2022-06-11": 364,
-              "2022-06-18": 364,
-              "2022-06-25": 364,
-              "2022-07-02": 364,
-              "2022-07-09": 364,
-              "2022-07-16": 364,
-              "2022-07-23": 364,
-              "2022-07-30": 364,
-              "2022-08-06": 364,
-              "2022-08-13": 364,
-              "2022-08-20": 364,
-              "2022-08-27": 364,
-              "2022-09-03": 364,
-              "2022-09-10": 364,
-              "2022-09-17": 364,
-              "2022-09-24": 364,
-              "2022-10-01": 364,
-              "2022-10-08": 364,
-              "2022-10-15": 364,
-              "2022-10-22": 364,
-              "2022-10-29": 364,
-              "2022-11-05": 364,
-              "2022-11-12": 364,
-              "2022-11-19": 364,
-              "2022-11-26": 364,
-              "2022-12-03": 364,
-              "2022-12-10": 364,
-              "2022-12-17": 364,
-              "2022-12-24": 364,
-              "2022-12-31": 364,
-              "2023-01-07": 364,
-              "2023-01-14": 364,
-              "2023-01-21": 364,
-              "2023-01-28": 364,
-              "2023-02-04": 364,
-              "2023-02-11": 364,
-              "2023-02-18": 364,
-              "2023-02-25": 364,
-              "2023-03-04": 364,
-              "2023-03-11": 364,
-              "2023-03-18": 364,
-              "2023-03-25": 364,
-              "2023-04-01": 364,
-              "2023-04-08": 364,
-              "2023-04-15": 364,
-              "2023-04-22": 364,
-              "2023-04-29": 364,
-              "2023-05-06": 364,
-              "2023-05-13": 364,
-              "2023-05-20": 364,
-              "2023-05-27": 364,
-              "2023-06-03": 364,
-              "2023-06-10": 364,
-              "2023-06-17": 364,
-              "2023-06-24": 364,
-              "2023-07-01": 364,
-              "2023-07-08": 364,
-              "2023-07-15": 364,
-              "2023-07-22": 364,
-              "2023-07-29": 364,
-              "2023-08-05": 364,
-              "2023-08-12": 364,
-              "2023-08-19": 364,
-              "2023-08-26": 364,
-              "2023-09-02": 364,
-              "2023-09-09": 364,
-              "2023-09-16": 364,
-              "2023-09-23": 364,
-              "2023-09-30": 364,
-              "2023-10-07": 364,
-              "2023-10-14": 364,
-              "2023-10-21": 364,
-              "2023-10-28": 364,
-              "2023-11-04": 364,
-              "2023-11-11": 364,
-              "2023-11-18": 364,
-              "2023-11-25": 364,
-              "2023-12-02": 364,
-              "2023-12-09": 364,
-              "2023-12-16": 364,
-              "2023-12-23": 364,
-              "2023-12-30": 364,
-              "2024-01-06": 364,
-              "2024-01-13": 364,
-              "2024-01-20": 364,
-              "2024-01-27": 364,
-              "2024-02-03": 364,
-              "2024-02-10": 364,
-              "2024-02-17": 364,
-              "2024-02-24": 364,
-              "2024-03-02": 364,
-              "2024-03-09": 364,
-              "2024-03-16": 364,
-              "2024-03-23": 364,
-              "2024-03-30": 364,
-              "2024-04-06": 364,
-              "2024-04-13": 364,
-              "2024-04-20": 364,
-              "2024-04-27": 364,
-              "2024-05-04": 364,
-              "2024-05-11": 364,
-              "2024-05-18": 364,
-              "2024-05-25": 364,
-              "2024-06-01": 364,
-              "2024-06-08": 364,
-              "2024-06-15": 364,
-              "2024-06-22": 364,
-              "2024-06-29": 364,
-              "2024-07-06": 364,
-              "2024-07-13": 364,
-              "2024-07-20": 364,
-              "2024-07-27": 364,
-              "2024-08-03": 364,
-              "2024-08-10": 364,
-              "2024-08-17": 364,
-              "2024-08-24": 364,
-              "2024-08-31": 364,
-              "2024-09-07": 364,
-              "2024-09-14": 364,
-              "2024-09-21": 364,
-              "2024-09-28": 364,
-              "2024-10-05": 364,
-              "2024-10-12": 364,
-              "2024-10-19": 364,
-              "2024-10-26": 364,
-              "2024-11-02": 364,
-              "2024-11-09": 364,
-              "2024-11-16": 364,
-              "2024-11-23": 364,
-              "2024-11-30": 364,
-              "2024-12-07": 364,
-              "2024-12-14": 364,
-              "2024-12-21": 364,
-              "2024-12-28": 364,
-              "2025-01-04": 364,
-              "2025-01-11": 364,
-              "2025-01-18": 364,
-              "2025-01-25": 364,
-              "2025-02-01": 364,
-              "2025-02-08": 364,
-              "2025-02-15": 364,
-              "2025-02-22": 364,
-              "2025-03-01": 364,
-              "2025-03-08": 364,
-              "2025-03-15": 364,
-              "2025-03-22": 364,
-              "2025-03-29": 364,
-              "2025-04-05": 364,
-              "2025-04-12": 364,
-              "2025-04-19": 364,
-              "2025-04-26": 364,
-              "2025-05-03": 364,
-              "2025-05-10": 364,
-              "2025-05-17": 364,
-              "2025-05-24": 364,
-              "2025-05-31": 364,
-              "2025-06-07": 364,
-              "2025-06-14": 364,
-              "2025-06-21": 364,
-              "2025-06-28": 364,
-              "2025-07-05": 364,
-              "2025-07-12": 364,
-              "2025-07-19": 364,
-              "2025-07-26": 364,
-              "2025-08-02": 364,
-              "2025-08-09": 364,
-              "2025-08-16": 364,
-              "2025-08-23": 364,
-              "2025-08-30": 364,
-              "2025-09-06": 364,
-              "2025-09-13": 364,
-              "2025-09-20": 364,
-              "2025-09-27": 364,
-              "2025-10-04": 364,
-              "2025-10-11": 364,
-              "2025-10-18": 364,
-              "2025-10-25": 364,
-              "2025-11-01": 364,
-              "2025-11-08": 364,
-              "2025-11-15": 364,
-              "2025-11-22": 364,
-              "2025-11-29": 364,
-              "2025-12-06": 364,
-              "2025-12-13": 364,
-              "2025-12-20": 364,
-              "2025-12-27": 364,
-              "2026-01-03": 364,
-              "2026-01-10": 364,
-              "2026-01-17": 364,
-              "2026-01-24": 364,
-              "2026-01-31": 364,
-              "2026-02-07": 364,
-              "2026-02-14": 364,
-              "2026-02-21": 364
+              "2018-01-13": 364,
+              "2018-01-20": 364,
+              "2018-01-27": 364,
+              "2018-02-03": 364,
+              "2018-02-10": 364,
+              "2018-02-17": 364,
+              "2018-02-24": 364,
+              "2018-03-03": 364,
+              "2018-03-10": 364,
+              "2018-03-17": 364,
+              "2018-03-24": 364,
+              "2018-03-31": 364,
+              "2018-04-07": 364,
+              "2018-04-14": 364,
+              "2018-04-21": 364,
+              "2018-04-28": 364,
+              "2018-05-05": 364,
+              "2018-05-12": 364,
+              "2018-05-19": 364,
+              "2018-05-26": 364,
+              "2018-06-02": 364,
+              "2018-06-09": 364,
+              "2018-06-16": 364,
+              "2018-06-23": 364,
+              "2018-06-30": 364,
+              "2018-07-07": 364,
+              "2018-07-14": 364,
+              "2018-07-21": 364,
+              "2018-07-28": 364,
+              "2018-08-04": 364,
+              "2018-08-11": 364,
+              "2018-08-18": 364,
+              "2018-08-25": 364,
+              "2018-09-01": 364,
+              "2018-09-08": 364,
+              "2018-09-15": 364,
+              "2018-09-22": 364,
+              "2018-09-29": 364,
+              "2018-10-06": 364,
+              "2018-10-13": 364,
+              "2018-10-20": 364,
+              "2018-10-27": 364,
+              "2018-11-03": 364,
+              "2018-11-10": 364,
+              "2018-11-17": 364,
+              "2018-11-24": 364,
+              "2018-12-01": 364,
+              "2018-12-08": 364,
+              "2018-12-15": 364,
+              "2018-12-22": 364,
+              "2018-12-29": 364,
+              "2019-01-05": 364,
+              "2019-01-12": 364,
+              "2019-01-19": 364,
+              "2019-01-26": 364,
+              "2019-02-02": 364,
+              "2019-02-09": 364,
+              "2019-02-16": 364,
+              "2019-02-23": 364,
+              "2019-03-02": 364,
+              "2019-03-09": 364,
+              "2019-03-16": 364,
+              "2019-03-23": 364,
+              "2019-03-30": 364,
+              "2019-04-06": 364,
+              "2019-04-13": 364,
+              "2019-04-20": 364,
+              "2019-04-27": 364,
+              "2019-05-04": 364,
+              "2019-05-11": 364,
+              "2019-05-18": 364,
+              "2019-05-25": 364,
+              "2019-06-01": 364,
+              "2019-06-08": 364,
+              "2019-06-15": 364,
+              "2019-06-22": 364,
+              "2019-06-29": 364,
+              "2019-07-06": 364,
+              "2019-07-13": 364,
+              "2019-07-20": 364,
+              "2019-07-27": 364,
+              "2019-08-03": 364,
+              "2019-08-10": 364,
+              "2019-08-17": 364,
+              "2019-08-24": 364,
+              "2019-08-31": 364,
+              "2019-09-07": 364,
+              "2019-09-14": 364,
+              "2019-09-21": 364,
+              "2019-09-28": 364,
+              "2019-10-05": 364,
+              "2019-10-12": 364,
+              "2019-10-19": 364,
+              "2019-10-26": 364,
+              "2019-11-02": 364,
+              "2019-11-09": 364,
+              "2019-11-16": 364,
+              "2019-11-23": 364,
+              "2019-11-30": 364,
+              "2019-12-07": 364,
+              "2019-12-14": 364,
+              "2019-12-21": 364,
+              "2019-12-28": 364,
+              "2020-01-04": 364,
+              "2020-01-11": 364,
+              "2020-01-18": 364,
+              "2020-01-25": 364,
+              "2020-02-01": 364,
+              "2020-02-08": 364,
+              "2020-02-15": 364,
+              "2020-02-22": 364,
+              "2020-02-29": 364,
+              "2020-03-07": 364,
+              "2020-03-14": 364,
+              "2020-03-21": 364,
+              "2020-03-28": 364,
+              "2020-04-04": 364,
+              "2020-04-11": 364,
+              "2020-04-18": 364,
+              "2020-04-25": 364,
+              "2020-05-02": 364,
+              "2020-05-09": 364,
+              "2020-05-16": 364,
+              "2020-05-23": 364,
+              "2020-05-30": 364,
+              "2020-06-06": 364,
+              "2020-06-13": 364,
+              "2020-06-20": 364,
+              "2020-06-27": 364,
+              "2020-07-04": 364,
+              "2020-07-11": 364,
+              "2020-07-18": 364,
+              "2020-07-25": 364,
+              "2020-08-01": 364,
+              "2020-08-08": 364,
+              "2020-08-15": 364,
+              "2020-08-22": 364,
+              "2020-08-29": 364,
+              "2020-09-05": 364,
+              "2020-09-12": 364,
+              "2020-09-19": 364,
+              "2020-09-26": 364,
+              "2020-10-03": 364,
+              "2020-10-10": 364,
+              "2020-10-17": 364,
+              "2020-10-24": 364,
+              "2020-10-31": 364,
+              "2020-11-07": 364,
+              "2020-11-14": 364,
+              "2020-11-21": 364,
+              "2020-11-28": 364,
+              "2020-12-05": 364,
+              "2020-12-12": 364,
+              "2020-12-19": 364,
+              "2020-12-26": 364,
+              "2021-01-02": 364,
+              "2021-01-09": 364,
+              "2021-01-16": 364,
+              "2021-01-23": 364,
+              "2021-01-30": 364,
+              "2021-02-06": 364,
+              "2021-02-13": 364,
+              "2021-02-20": 364,
+              "2021-02-27": 364,
+              "2021-03-06": 364,
+              "2021-03-13": 364,
+              "2021-03-20": 364,
+              "2021-03-27": 364,
+              "2021-04-03": 364,
+              "2021-04-10": 364,
+              "2021-04-17": 364,
+              "2021-04-24": 364,
+              "2021-05-01": 364,
+              "2021-05-08": 364,
+              "2021-05-15": 364,
+              "2021-05-22": 364,
+              "2021-05-29": 364,
+              "2021-06-05": 364,
+              "2021-06-12": 364,
+              "2021-06-19": 364,
+              "2021-06-26": 364,
+              "2021-07-03": 364,
+              "2021-07-10": 364,
+              "2021-07-17": 364,
+              "2021-07-24": 364,
+              "2021-07-31": 364,
+              "2021-08-07": 364,
+              "2021-08-14": 364,
+              "2021-08-21": 364,
+              "2021-08-28": 364,
+              "2021-09-04": 364,
+              "2021-09-11": 364,
+              "2021-09-18": 364,
+              "2021-09-25": 364,
+              "2021-10-02": 364,
+              "2021-10-09": 364,
+              "2021-10-16": 364,
+              "2021-10-23": 364,
+              "2021-10-30": 364,
+              "2021-11-06": 364,
+              "2021-11-13": 364,
+              "2021-11-20": 364,
+              "2021-11-27": 364,
+              "2021-12-04": 364,
+              "2021-12-11": 364,
+              "2021-12-18": 364,
+              "2021-12-25": 364,
+              "2022-01-01": 721,
+              "2022-01-08": 357,
+              "2022-01-15": 357,
+              "2022-01-22": 357,
+              "2022-01-29": 357,
+              "2022-02-05": 357,
+              "2022-02-12": 357,
+              "2022-02-19": 357,
+              "2022-02-26": 357,
+              "2022-03-05": 357,
+              "2022-03-12": 357,
+              "2022-03-19": 357,
+              "2022-03-26": 357,
+              "2022-04-02": 357,
+              "2022-04-09": 357,
+              "2022-04-16": 357,
+              "2022-04-23": 357,
+              "2022-04-30": 357,
+              "2022-05-07": 357,
+              "2022-05-14": 357,
+              "2022-05-21": 357,
+              "2022-05-28": 357,
+              "2022-06-04": 357,
+              "2022-06-11": 357,
+              "2022-06-18": 357,
+              "2022-06-25": 357,
+              "2022-07-02": 357,
+              "2022-07-09": 357,
+              "2022-07-16": 357,
+              "2022-07-23": 357,
+              "2022-07-30": 357,
+              "2022-08-06": 357,
+              "2022-08-13": 357,
+              "2022-08-20": 357,
+              "2022-08-27": 357,
+              "2022-09-03": 357,
+              "2022-09-10": 357,
+              "2022-09-17": 357,
+              "2022-09-24": 357,
+              "2022-10-01": 357,
+              "2022-10-08": 357,
+              "2022-10-15": 357,
+              "2022-10-22": 357,
+              "2022-10-29": 357,
+              "2022-11-05": 357,
+              "2022-11-12": 357,
+              "2022-11-19": 357,
+              "2022-11-26": 357,
+              "2022-12-03": 357,
+              "2022-12-10": 357,
+              "2022-12-17": 357,
+              "2022-12-24": 357,
+              "2022-12-31": 357,
+              "2023-01-07": 357,
+              "2023-01-14": 357,
+              "2023-01-21": 357,
+              "2023-01-28": 357,
+              "2023-02-04": 357,
+              "2023-02-11": 357,
+              "2023-02-18": 357,
+              "2023-02-25": 357,
+              "2023-03-04": 357,
+              "2023-03-11": 357,
+              "2023-03-18": 357,
+              "2023-03-25": 357,
+              "2023-04-01": 357,
+              "2023-04-08": 357,
+              "2023-04-15": 357,
+              "2023-04-22": 357,
+              "2023-04-29": 357,
+              "2023-05-06": 357,
+              "2023-05-13": 357,
+              "2023-05-20": 357,
+              "2023-05-27": 357,
+              "2023-06-03": 357,
+              "2023-06-10": 357,
+              "2023-06-17": 357,
+              "2023-06-24": 357,
+              "2023-07-01": 357,
+              "2023-07-08": 357,
+              "2023-07-15": 357,
+              "2023-07-22": 357,
+              "2023-07-29": 357,
+              "2023-08-05": 357,
+              "2023-08-12": 357,
+              "2023-08-19": 357,
+              "2023-08-26": 357,
+              "2023-09-02": 357,
+              "2023-09-09": 357,
+              "2023-09-16": 357,
+              "2023-09-23": 357,
+              "2023-09-30": 357,
+              "2023-10-07": 357,
+              "2023-10-14": 357,
+              "2023-10-21": 357,
+              "2023-10-28": 357,
+              "2023-11-04": 357,
+              "2023-11-11": 357,
+              "2023-11-18": 357,
+              "2023-11-25": 357,
+              "2023-12-02": 357,
+              "2023-12-09": 357,
+              "2023-12-16": 357,
+              "2023-12-23": 357,
+              "2023-12-30": 357,
+              "2024-01-06": 357,
+              "2024-01-13": 357,
+              "2024-01-20": 357,
+              "2024-01-27": 357,
+              "2024-02-03": 357,
+              "2024-02-10": 357,
+              "2024-02-17": 357,
+              "2024-02-24": 357,
+              "2024-03-02": 357,
+              "2024-03-09": 357,
+              "2024-03-16": 357,
+              "2024-03-23": 357,
+              "2024-03-30": 357,
+              "2024-04-06": 357,
+              "2024-04-13": 357,
+              "2024-04-20": 357,
+              "2024-04-27": 357,
+              "2024-05-04": 357,
+              "2024-05-11": 357,
+              "2024-05-18": 357,
+              "2024-05-25": 357,
+              "2024-06-01": 357,
+              "2024-06-08": 357,
+              "2024-06-15": 357,
+              "2024-06-22": 357,
+              "2024-06-29": 357,
+              "2024-07-06": 357,
+              "2024-07-13": 357,
+              "2024-07-20": 357,
+              "2024-07-27": 357,
+              "2024-08-03": 357,
+              "2024-08-10": 357,
+              "2024-08-17": 357,
+              "2024-08-24": 357,
+              "2024-08-31": 357,
+              "2024-09-07": 357,
+              "2024-09-14": 357,
+              "2024-09-21": 357,
+              "2024-09-28": 357,
+              "2024-10-05": 357,
+              "2024-10-12": 357,
+              "2024-10-19": 357,
+              "2024-10-26": 357,
+              "2024-11-02": 357,
+              "2024-11-09": 357,
+              "2024-11-16": 357,
+              "2024-11-23": 357,
+              "2024-11-30": 357,
+              "2024-12-07": 357,
+              "2024-12-14": 357,
+              "2024-12-21": 357,
+              "2024-12-28": 357,
+              "2025-01-04": 357,
+              "2025-01-11": 357,
+              "2025-01-18": 357,
+              "2025-01-25": 357,
+              "2025-02-01": 357,
+              "2025-02-08": 357,
+              "2025-02-15": 357,
+              "2025-02-22": 357,
+              "2025-03-01": 357,
+              "2025-03-08": 357,
+              "2025-03-15": 357,
+              "2025-03-22": 357,
+              "2025-03-29": 357,
+              "2025-04-05": 357,
+              "2025-04-12": 357,
+              "2025-04-19": 357,
+              "2025-04-26": 357,
+              "2025-05-03": 357,
+              "2025-05-10": 357,
+              "2025-05-17": 357,
+              "2025-05-24": 357,
+              "2025-05-31": 357,
+              "2025-06-07": 357,
+              "2025-06-14": 357,
+              "2025-06-21": 357,
+              "2025-06-28": 357,
+              "2025-07-05": 357,
+              "2025-07-12": 357,
+              "2025-07-19": 357,
+              "2025-07-26": 357,
+              "2025-08-02": 357,
+              "2025-08-09": 357,
+              "2025-08-16": 357,
+              "2025-08-23": 357,
+              "2025-08-30": 357,
+              "2025-09-06": 357,
+              "2025-09-13": 357,
+              "2025-09-20": 357,
+              "2025-09-27": 357,
+              "2025-10-04": 357,
+              "2025-10-11": 357,
+              "2025-10-18": 357,
+              "2025-10-25": 357,
+              "2025-11-01": 357,
+              "2025-11-08": 357,
+              "2025-11-15": 357,
+              "2025-11-22": 357,
+              "2025-11-29": 357,
+              "2025-12-06": 357,
+              "2025-12-13": 357,
+              "2025-12-20": 357,
+              "2025-12-27": 357,
+              "2026-01-03": 357,
+              "2026-01-10": 357,
+              "2026-01-17": 357,
+              "2026-01-24": 357,
+              "2026-01-31": 357,
+              "2026-02-07": 357,
+              "2026-02-14": 357,
+              "2026-02-21": 357,
+              "2026-02-28": 357
             }
           },
           {
             "name": "epic_n_rsv",
-            "duplicates": 228725,
+            "duplicates": 152711,
             "info": {
               "id": "epic_n_rsv",
               "short_name": "RSV Patients",
@@ -3410,17 +2689,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 423],
+            "time_range": [0, 424],
             "type": "integer",
             "missing": 0,
-            "mean": 20.393383,
-            "sd": 174.319997,
+            "mean": 16.146628,
+            "sd": 80.338107,
             "min": 5,
-            "max": 14344
+            "max": 5516
           },
           {
             "name": "epic_n_covid",
-            "duplicates": 226230,
+            "duplicates": 150982,
             "info": {
               "id": "epic_n_covid",
               "short_name": "COVID Patients",
@@ -3436,17 +2715,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 423],
+            "time_range": [0, 424],
             "type": "integer",
             "missing": 0,
-            "mean": 142.705275,
-            "sd": 1287.80015,
+            "mean": 107.457418,
+            "sd": 860.593383,
             "min": 5,
-            "max": 126871
+            "max": 85249
           },
           {
             "name": "epic_n_flu",
-            "duplicates": 226758,
+            "duplicates": 151085,
             "info": {
               "id": "epic_n_flu",
               "short_name": "Influenza Patients",
@@ -3462,17 +2741,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 423],
+            "time_range": [0, 424],
             "type": "integer",
             "missing": 0,
-            "mean": 107.036492,
-            "sd": 1194.230054,
+            "mean": 81.592974,
+            "sd": 611.885028,
             "min": 5,
-            "max": 126100
+            "max": 49638
           },
           {
             "name": "epic_n_all_encounters_weekly",
-            "duplicates": 199490,
+            "duplicates": 128873,
             "info": {
               "id": "epic_n_all_encounters_weekly",
               "short_name": "All-Cause ED Encounters (Weekly)",
@@ -3488,17 +2767,17 @@
                 }
               ]
             },
-            "time_range": [0, 423],
+            "time_range": [0, 424],
             "type": "integer",
             "missing": 0,
-            "mean": 8693.939969,
-            "sd": 48441.698412,
+            "mean": 6554.6792,
+            "sd": 29247.264391,
             "min": 5,
-            "max": 1266932
+            "max": 835735
           },
           {
             "name": "epic_pct_rsv",
-            "duplicates": 179591,
+            "duplicates": 113970,
             "info": {
               "id": "epic_pct_rsv",
               "short_name": "RSV Patients (%)",
@@ -3514,17 +2793,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 423],
+            "time_range": [0, 424],
             "type": "float",
             "missing": 0,
-            "mean": 4.317369,
-            "sd": 14.857305,
+            "mean": 4.115209,
+            "sd": 14.301196,
             "min": 0.000794,
             "max": 100
           },
           {
             "name": "epic_pct_flu",
-            "duplicates": 153401,
+            "duplicates": 95063,
             "info": {
               "id": "epic_pct_flu",
               "short_name": "Influenza Patients (%)",
@@ -3540,17 +2819,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 423],
+            "time_range": [0, 424],
             "type": "float",
             "missing": 0,
-            "mean": 4.983126,
-            "sd": 14.864087,
-            "min": 0.002858,
+            "mean": 4.845141,
+            "sd": 14.319636,
+            "min": 0.002857,
             "max": 100
           },
           {
             "name": "epic_pct_covid",
-            "duplicates": 142623,
+            "duplicates": 86020,
             "info": {
               "id": "epic_pct_covid",
               "short_name": "COVID Patients (%)",
@@ -3566,17 +2845,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 423],
+            "time_range": [0, 424],
             "type": "float",
             "missing": 0,
-            "mean": 5.033665,
-            "sd": 14.763302,
+            "mean": 4.875958,
+            "sd": 14.198282,
             "min": 0.000631,
             "max": 100
           },
           {
             "name": "epic_suppressed_flag_rsv",
-            "duplicates": 230046,
+            "duplicates": 153536,
             "info": {
               "id": "epic_suppressed_flag_rsv",
               "short_name": "Fewer than 10 cases in the strata?",
@@ -3591,17 +2870,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 423],
+            "time_range": [0, 424],
             "type": "integer",
             "missing": 0,
-            "mean": 0.856795,
-            "sd": 0.350282,
+            "mean": 0.844918,
+            "sd": 0.361984,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_covid",
-            "duplicates": 230046,
+            "duplicates": 153536,
             "info": {
               "id": "epic_suppressed_flag_covid",
               "short_name": "Fewer than 10 cases in the strata?",
@@ -3616,17 +2895,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 423],
+            "time_range": [0, 424],
             "type": "integer",
             "missing": 0,
-            "mean": 0.624113,
-            "sd": 0.484352,
+            "mean": 0.565117,
+            "sd": 0.495743,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_flu",
-            "duplicates": 230046,
+            "duplicates": 153536,
             "info": {
               "id": "epic_suppressed_flag_flu",
               "short_name": "Fewer than 10 cases in the strata?",
@@ -3641,17 +2920,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 423],
+            "time_range": [0, 424],
             "type": "integer",
             "missing": 0,
-            "mean": 0.692373,
-            "sd": 0.461512,
+            "mean": 0.662781,
+            "sd": 0.472762,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_all_encounters_weekly",
-            "duplicates": 230046,
+            "duplicates": 153536,
             "info": {
               "id": "epic_suppressed_flag_all_encounters_weekly",
               "short_name": "All Encounters Count Suppressed? (Weekly)",
@@ -3666,401 +2945,17 @@
                 }
               ]
             },
-            "time_range": [0, 423],
+            "time_range": [0, 424],
             "type": "integer",
             "missing": 0,
-            "mean": 0.020583,
-            "sd": 0.141983,
+            "mean": 0.018914,
+            "sd": 0.136221,
             "min": 0,
             "max": 1
           }
         ]
       },
-      "measure_info": {
-        "age": {
-          "id": "age",
-          "short_name": "Age",
-          "long_name": "Age group",
-          "short_description": "Age group.",
-          "long_description": "Age group, based on age in current years.",
-          "measure_type": "integer",
-          "unit": "years",
-          "time_resolution": "year",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "n_patients": {
-          "id": "n_patients",
-          "short_name": "Number of Patients in the ED",
-          "long_name": "Number of Patients in the ED, any cause",
-          "short_description": "Number of patients presenting to the emergency department for any cause.",
-          "long_description": "Total number of patients presenting to the emergency department for any cause. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "count",
-          "time_resolution": "Week",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_suppressed_flag_covid": {
-          "id": "epic_suppressed_flag_covid",
-          "short_name": "Fewer than 10 cases in the strata?",
-          "long_name": "Suppression flag: fewer than 10 cases in the strata",
-          "short_description": "Binary indicator for low counts.",
-          "long_description": "Binary indicator: 1 if fewer than 10 cases in the strata, 0 otherwise. When suppressed, the corresponding count is imputed as 5.",
-          "measure_type": "binary",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_suppressed_flag_flu": {
-          "id": "epic_suppressed_flag_flu",
-          "short_name": "Fewer than 10 cases in the strata?",
-          "long_name": "Suppression flag: fewer than 10 cases in the strata",
-          "short_description": "Binary indicator for low counts.",
-          "long_description": "Binary indicator: 1 if fewer than 10 cases in the strata, 0 otherwise. When suppressed, the corresponding count is imputed as 5.",
-          "measure_type": "binary",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_suppressed_flag_rsv": {
-          "id": "epic_suppressed_flag_rsv",
-          "short_name": "Fewer than 10 cases in the strata?",
-          "long_name": "Suppression flag: fewer than 10 cases in the strata",
-          "short_description": "Binary indicator for low counts.",
-          "long_description": "Binary indicator: 1 if fewer than 10 cases in the strata, 0 otherwise. When suppressed, the corresponding count is imputed as 5.",
-          "measure_type": "binary",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "n_rsv_tests": {
-          "id": "n_rsv_tests",
-          "short_name": "RSV Tests: Positive",
-          "long_name": "Emergency Room (ER) Encounters with Positive Respiratory Syncytial Virus (RSV) Tests",
-          "short_description": "Number of ER encounters with positive RSV tests.",
-          "long_description": "Number of emergency room encounters with positive RSV tests among pneumonia admissions (ICD-10: J12-J18). Data accessed via Epic Cosmos SlicerDicer. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounter",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_positive_rsv_tests_percent": {
-          "id": "epic_positive_rsv_tests_percent",
-          "short_name": "RSV Tests: Positive (%)",
-          "long_name": "Percent of Emergency Room (ER) Visits with Positive RSV Tests",
-          "short_description": "Percent of ER encounters with positive RSV tests.",
-          "long_description": "Percentage of emergency room encounters with positive RSV tests among pneumonia admissions (ICD-10: J12-J18).",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_n_all": {
-          "id": "epic_n_all",
-          "short_name": "All encounters Patients",
-          "long_name": "All encounters Emergency Room (ER) Encounters",
-          "short_description": "Number of All encounters patients.",
-          "long_description": "Number of emergency room (ER) encounters with All encounters ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "general"
-        },
-        "epic_n_covid": {
-          "id": "epic_n_covid",
-          "short_name": "COVID Patients",
-          "long_name": "COVID Emergency Room (ER) Encounters",
-          "short_description": "Number of COVID patients.",
-          "long_description": "Number of emergency room (ER) encounters with COVID ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_n_flu": {
-          "id": "epic_n_flu",
-          "short_name": "Influenza Patients",
-          "long_name": "Influenza Emergency Room (ER) Encounters",
-          "short_description": "Number of Influenza patients.",
-          "long_description": "Number of emergency room (ER) encounters with Influenza ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_n_rsv": {
-          "id": "epic_n_rsv",
-          "short_name": "RSV Patients",
-          "long_name": "RSV Emergency Room (ER) Encounters",
-          "short_description": "Number of RSV patients.",
-          "long_description": "Number of emergency room (ER) encounters with RSV ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_n_ed_j12_j18": {
-          "id": "epic_n_ed_j12_j18",
-          "short_name": "Pneumonia (J12-J18) Patients",
-          "long_name": "Pneumonia (J12-J18) Emergency Room (ER) Encounters",
-          "short_description": "Number of Pneumonia (J12-J18) patients.",
-          "long_description": "Number of emergency room (ER) encounters with Pneumonia (J12-J18) ICD-10-CM codes. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_all": {
-          "id": "epic_pct_all",
-          "short_name": "All encounters Patients (%)",
-          "long_name": "All encounters Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of All encounters patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to All encounters ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "general"
-        },
-        "epic_pct_covid": {
-          "id": "epic_pct_covid",
-          "short_name": "COVID Patients (%)",
-          "long_name": "COVID Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of COVID patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to COVID ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_flu": {
-          "id": "epic_pct_flu",
-          "short_name": "Influenza Patients (%)",
-          "long_name": "Influenza Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of Influenza patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to Influenza ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_rsv": {
-          "id": "epic_pct_rsv",
-          "short_name": "RSV Patients (%)",
-          "long_name": "RSV Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of RSV patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to RSV ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_rsv_pos_tests": {
-          "id": "epic_pct_rsv_pos_tests",
-          "short_name": "RSV Positive Tests Patients (%)",
-          "long_name": "RSV Positive Tests Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of RSV Positive Tests patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to RSV Positive Tests ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_j12_j18_tested_rsv": {
-          "id": "epic_pct_j12_j18_tested_rsv",
-          "short_name": "J12-J18 Tested RSV Patients (%)",
-          "long_name": "J12-J18 Tested RSV Emergency Room (ER) Encounters (%)",
-          "short_description": "Percentage of J12-J18 Tested RSV patients among all ER encounters.",
-          "long_description": "Percentage of emergency room encounters attributable to J12-J18 Tested RSV ICD-10-CM codes, calculated as the count divided by total all-cause ER encounters.",
-          "measure_type": "percent",
-          "unit": "%",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ],
-          "category": "respiratory"
-        },
-        "epic_pct_rsv_pos_tests.1": {
-          "id": "epic_pct_rsv_pos_tests",
-          "short_name": "Percent positive",
-          "long_name": "Percent of tests among hospitalized pneumonia admissions (ICD-10: J12-J18) that are positive for RSV",
-          "short_description": "Percent of tests among pneumonia admissions (ICD-10: J12-J18) that are positive for RSV.",
-          "long_description": "Percent of RSV tests among hospitalized pneumonia admissions (ICD-10: J12-J18) that are positive for RSV. This is among hospital admissions, including those that started in the emergency department. Data accessed via Epic Cosmos SlicerDicer.",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "suppressed_rsv_test": {
-          "id": "suppressed_rsv_test",
-          "short_name": "RSV Test Count Suppressed?",
-          "long_name": "Suppression flag for RSV test encounter count",
-          "short_description": "Binary indicator: 1 if the RSV test encounter count was suppressed (fewer than 10), 0 otherwise.",
-          "long_description": "Binary indicator: 1 if the count of J12-J18 pneumonia encounters with RSV testing (epic_n_ed_j12_j18) was suppressed due to fewer than 10 cases, in which case the count is imputed as 5. Otherwise 0.",
-          "measure_type": "binary",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "positive_rsv_tests_(%)": {
-          "id": "positive_rsv_tests_(%)",
-          "short_name": "RSV Positive Test Rate (%) [raw]",
-          "long_name": "Percent of RSV Tests Positive Among Pneumonia Admissions (raw, no geography)",
-          "short_description": "Raw export column: percent of RSV tests positive among J12-J18 pneumonia admissions.",
-          "long_description": "Raw column from Epic Cosmos SlicerDicer export. Represents the percentage of RSV tests that returned positive among hospitalized pneumonia admissions (ICD-10: J12-J18). This is the unprocessed version stored in no_geo.csv.gz before renaming to epic_pct_rsv_pos_tests.",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "rsv_tests": {
-          "id": "rsv_tests",
-          "short_name": "RSV Test Rate (%) [raw]",
-          "long_name": "Percent of Pneumonia Admissions Tested for RSV (raw, no geography)",
-          "short_description": "Raw export column: percent of J12-J18 pneumonia admissions receiving an RSV test.",
-          "long_description": "Raw column from Epic Cosmos SlicerDicer export. Represents the percentage of hospitalized pneumonia admissions (ICD-10: J12-J18) that received an RSV test. This is the unprocessed version stored in no_geo.csv.gz before renaming to epic_pct_j12_j18_tested_rsv.",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_n_all_encounters_weekly": {
-          "id": "epic_n_all_encounters_weekly",
-          "short_name": "All-Cause ED Encounters (Weekly)",
-          "long_name": "Total Weekly Emergency Department Encounters (All Causes)",
-          "short_description": "Total number of weekly emergency department encounters for any cause.",
-          "long_description": "Total count of weekly emergency department encounters for any cause, used as the denominator for respiratory illness percentages. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
-          "measure_type": "integer",
-          "unit": "encounters",
-          "time_resolution": "Week",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_suppressed_flag_all_encounters_weekly": {
-          "id": "epic_suppressed_flag_all_encounters_weekly",
-          "short_name": "All Encounters Count Suppressed? (Weekly)",
-          "long_name": "Suppression flag: fewer than 10 all-cause weekly ED encounters in the strata",
-          "short_description": "Binary indicator: 1 if the all-cause weekly ED encounter count was suppressed, 0 otherwise.",
-          "long_description": "Binary indicator: 1 if fewer than 10 all-cause weekly emergency department encounters in the strata, 0 otherwise. When suppressed, the corresponding count (epic_n_all_encounters_weekly) is imputed as 5.",
-          "measure_type": "binary",
-          "time_resolution": "Week",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "epic_pct_j12_j18_tested_rsv.1": {
-          "id": "epic_pct_j12_j18_tested_rsv",
-          "short_name": "Percent tested",
-          "long_name": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV",
-          "short_description": "Percent of hospitalized pneumonia admissions (J12-J18) receiving a test for RSV.",
-          "long_description": "Percent of hospitalized pneumonia admissions (ICD-10: J12-J18) receiving a test for RSV. This is among hospital admissions, including those that started in the emergency department. Data accessed via Epic Cosmos SlicerDicer.",
-          "measure_type": "percent",
-          "unit": "%",
-          "time_resolution": "Month",
-          "sources": [
-            {
-              "id": "epic_cosmos"
-            }
-          ]
-        },
-        "_sources": {
-          "epic_cosmos": {
-            "name": "Epic Cosmos",
-            "url": "https://cosmos.epic.com/",
-            "date_accessed": 2025,
-            "organization": "Epic Systems",
-            "organization_url": "https://www.epic.com/",
-            "description": "Epic Cosmos is a collaborative research platform containing de-identified patient data from over 300 million patients across more than 1,600 hospitals and health systems using Epic electronic health record systems. Data is accessed via SlicerDicer, a self-service analytics tool. The dataset includes emergency department visits, diagnoses, immunizations, laboratory results, and other clinical data. Due to privacy protections, counts fewer than 10 are suppressed and imputed. Coverage extends across all U.S. states and territories. Note that county-level and city-level stratifications could differ markedly in total sample size due to high levels of missingness of county data in some states.",
-            "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'"
-          },
-          "id": "_sources"
-        }
-      },
-      "sha512": "-"
+      "sha512": "7f69c5d58ae784fc3d0e0d9a278fb2418a06b0e8f70a5133106dbf471a64ae357d9138b15fe8a6a86a276198774efe30675cf9cff873e9d3790207c857871393"
     }
   ]
 }
