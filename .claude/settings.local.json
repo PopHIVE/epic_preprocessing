@@ -36,7 +36,17 @@
       "Bash(python -m pip install msoffcrypto-tool)",
       "Bash(\"C:/Program Files/R/R-4.4.2/bin/Rscript.exe\" -e \":*)",
       "Bash(\"/c/Program Files/R/R-4.3.0/bin/Rscript.exe\" -e \":*)",
-      "Bash(python3 -c \":*)"
+      "Bash(python3 -c \":*)",
+      "Bash(python -:*)",
+      "Read(//c/Users/DMW63/**)",
+      "Read(//c/Users/DMW63/Documents/**)",
+      "Bash(\"/c/Program Files/R/R-4.3.0/bin/Rscript\" --no-site-file -e \"cat\\(nzchar\\(Sys.getenv\\(''EPIC_XLSX_PASSWORD''\\)\\)\\)\")",
+      "Bash(\"/c/Program Files/R/R-4.3.0/bin/Rscript\" -e \"cat\\(path.expand\\(''~''\\)\\)\")",
+      "Bash(\"/c/Program Files/R/R-4.3.0/bin/Rscript\" -e \"readRenviron\\(''~/.Renviron''\\); cat\\(nzchar\\(Sys.getenv\\(''EPIC_XLSX_PASSWORD''\\)\\)\\)\")",
+      "Bash(\"/c/Program Files/R/R-4.3.0/bin/Rscript\" -e \"cat\\(usethis:::scoped_path_r\\(''user'', ''.Renviron'', envvar = ''R_ENVIRON_USER''\\)\\)\")",
+      "Bash(powershell.exe -Command \"Get-ChildItem -Path ''C:\\\\Users\\\\DMW63\\\\'' -Force -Filter ''.Renviron'' | Select-Object FullName\")",
+      "Bash(powershell.exe -Command \"Get-ChildItem -Path ''C:\\\\Users\\\\DMW63\\\\'' -Force | Where-Object { $_.Name -like ''*environ*'' -or $_.Name -like ''*Renv*'' } | Select-Object FullName, Name\")",
+      "Bash(powershell.exe -Command \"[System.Environment]::GetEnvironmentVariable\\(''EPIC_XLSX_PASSWORD'', ''User''\\) -ne $null\")"
     ]
   }
 }
