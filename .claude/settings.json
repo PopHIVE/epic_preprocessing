@@ -9,7 +9,17 @@
       "Read(//c/Users/DMW63/OneDrive - Yale University/Desktop/R_Projects/POPHIVE PROJECT/epic_preprocessing/data/cosmos_resp_infections/**)",
       "Read(//c/Users/DMW63/OneDrive - Yale University/Desktop/R_Projects/POPHIVE PROJECT/epic_preprocessing/data/cosmos_resp_infections/$1==\"\"\"\"\"\"\"\"00\"\"\"\"\"\"\"\" {print $2\"\"\"\"\"\"\"\"/**)",
       "Bash(\"/c/Program Files/R/R-4.4.1/bin/Rscript.exe\" ingest.R)",
-      "Read(//c/Users/DMW63/OneDrive - Yale University/Desktop/R_Projects/POPHIVE PROJECT/epic_preprocessing/data/cosmos_resp_infections/{print $2\"\"\"\"\"\"\"\"/**)"
+      "Read(//c/Users/DMW63/OneDrive - Yale University/Desktop/R_Projects/POPHIVE PROJECT/epic_preprocessing/data/cosmos_resp_infections/{print $2\"\"\"\"\"\"\"\"/**)",
+      "Bash(Rscript -e \":*)",
+      "Bash(cmd /c '\"\"C:\\\\Program Files\\\\R\\\\R-4.4.1\\\\bin\\\\Rscript.exe\"\" inspect_county.R')",
+      "Bash(powershell -Command \"cd ''c:\\\\Users\\\\DMW63\\\\OneDrive - Yale University\\\\Desktop\\\\R_Projects\\\\POPHIVE PROJECT\\\\epic_preprocessing\\\\data\\\\cosmos_immunization''; & ''C:\\\\Program Files\\\\R\\\\R-4.4.1\\\\bin\\\\Rscript.exe'' inspect_county.R 2>&1\")",
+      "Bash(powershell -Command \"cd ''c:\\\\Users\\\\DMW63\\\\OneDrive - Yale University\\\\Desktop\\\\R_Projects\\\\POPHIVE PROJECT\\\\epic_preprocessing\\\\data\\\\cosmos_immunization''; & ''C:\\\\Program Files\\\\R\\\\R-4.4.1\\\\bin\\\\Rscript.exe'' -e ''cat\\(readLines\\(\"\"process.json\"\"\\), sep=\"\"\\\\n\"\"\\)'' 2>&1\")",
+      "Bash(powershell -Command \":*)",
+      "Bash(powershell -File \"c:\\\\Users\\\\DMW63\\\\OneDrive - Yale University\\\\Desktop\\\\R_Projects\\\\POPHIVE PROJECT\\\\epic_preprocessing\\\\data\\\\cosmos_immunization\\\\rename_standard.ps1\")",
+      "Bash(cmd /c \"cd /d \"\"c:\\\\Users\\\\DMW63\\\\OneDrive - Yale University\\\\Desktop\\\\R_Projects\\\\POPHIVE PROJECT\\\\epic_preprocessing\\\\data\\\\cosmos_immunization\"\" && \"\"C:\\\\Program Files\\\\R\\\\R-4.4.1\\\\bin\\\\Rscript.exe\"\" rename_standard.R\")",
+      "Bash(cmd /c \"dir \"\"c:\\\\Users\\\\DMW63\\\\OneDrive - Yale University\\\\Desktop\\\\R_Projects\\\\POPHIVE PROJECT\\\\epic_preprocessing\\\\data\\\\cosmos_immunization\\\\standard\"\"\")",
+      "Bash(\"C:/Program Files/R/R-4.4.1/bin/Rscript.exe\" \"c:/Users/DMW63/OneDrive - Yale University/Desktop/R_Projects/POPHIVE PROJECT/epic_preprocessing/data/cosmos_immunization/run_ingest.R\")",
+      "Bash(\"C:/Program Files/R/R-4.4.1/bin/Rscript.exe\" \"c:/Users/DMW63/OneDrive - Yale University/Desktop/R_Projects/POPHIVE PROJECT/epic_preprocessing/data/cosmos_immunization/check_county.R\")"
     ]
   }
 }
