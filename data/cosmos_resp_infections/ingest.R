@@ -182,8 +182,17 @@ process_wide_epic_file <- function(file, password = NULL) {
   year2 <- as.integer(stringr::str_extract(years_raw, "\\d{4}$"))
   is_cross_year <- year1 != year2
 
-  # --- Parse end date from week ranges ---
-  # Extract the LAST "Mon DD" pattern: "Dec 29 – Jan 4" -> "Jan" + "4"
+  # --- Parse start and end dates from week ranges ---
+  # Extract the FIRST "Mon DD" pattern for start date
+  start_match <- stringr::str_match(
+    weeks_raw,
+    "^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\\s+(\\d+)"
+  )
+  start_month_str <- start_match[, 2]
+  start_day <- as.integer(start_match[, 3])
+  start_month_num <- match(start_month_str, month.abb)
+
+  # Extract the LAST "Mon DD" pattern for end date: "Dec 29 – Jan 4" -> "Jan" + "4"
   # This avoids needing to handle the en-dash character encoding
   end_match <- stringr::str_match(
     weeks_raw,
@@ -193,15 +202,21 @@ process_wide_epic_file <- function(file, password = NULL) {
   end_day <- as.integer(end_match[, 3])
   end_month_num <- match(end_month_str, month.abb)
 
-  # Determine year: for cross-year seasons, Dec end dates -> year1, else -> year2
-  end_year <- ifelse(is_cross_year & end_month_num == 12, year1, year2)
-  end_date <- as.Date(paste(end_year, end_month_num, end_day, sep = "-"))
+  # Determine year: for cross-year seasons, Dec dates -> year1, else -> year2
+  start_year <- ifelse(is_cross_year & start_month_num == 12, year1, year2)
+  end_year   <- ifelse(is_cross_year & end_month_num == 12, year1, year2)
+  start_date <- as.Date(paste(start_year, start_month_num, start_day, sep = "-"))
+  end_date   <- as.Date(paste(end_year, end_month_num, end_day, sep = "-"))
+
+  # Number of days in the week range (7 = complete week)
+  n_days <- as.integer(end_date - start_date) + 1L
 
   # Build column metadata
   col_meta <- data.frame(
     col_idx = seq_len(n_cols),
     outcome = outcome_std,
     end_date = end_date,
+    n_days = n_days,
     stringsAsFactors = FALSE
   )
 
@@ -236,7 +251,7 @@ process_wide_epic_file <- function(file, password = NULL) {
     ) %>%
     mutate(col_idx = as.integer(sub("d", "", col_name))) %>%
     left_join(col_meta, by = "col_idx") %>%
-    filter(!is.na(outcome), !is.na(end_date)) %>%
+    filter(!is.na(outcome), !is.na(end_date), n_days >= 7) %>%
     mutate(
       val = trimws(val),
       suppressed = val == "10 or fewer",
@@ -276,7 +291,7 @@ valid_states <- c(state.name, "District of Columbia")
 wide_combined <- wide_combined %>%
   mutate(
     # National total rows: state starts with "Total:" (no "bucket" = not per-state subtotal)
-    is_national = grepl("^Total:", state_name),
+    is_national = grepl("^Total", state_name),
     # Per-state age subtotal: age starts with "Total:"
     is_age_total = grepl("^Total:", age),
     # Clean state name
@@ -354,17 +369,7 @@ merged_weekly <- merged_weekly %>%
     .cols = -c(geography, time, age)
   ) %>%
   arrange(geography, age, time) %>%
-  group_by(geography, age) %>%
-  mutate(
-    time = as.Date(time),
-    epic_n_all_encounters_lag1 = lag(epic_n_all_encounters_weekly, 1),
-    remove = if_else(
-      epic_n_all_encounters_weekly / epic_n_all_encounters_lag1 < 0.5 &
-        time == max(time, na.rm = TRUE), 1, 0
-    )
-  ) %>%
-  filter(remove != 1) %>%
-  dplyr::select(-remove, -epic_n_all_encounters_lag1) %>%
+  mutate(time = as.Date(time)) %>%
   dplyr::select(
     geography, age, time,
     starts_with("epic_n"),

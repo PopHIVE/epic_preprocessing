@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"C:/Program Files/R/R-4.4.2/bin/Rscript.exe\" -e \":*)",
+      "Read(//c/Program Files//**)",
+      "Bash(\"/c/Program Files/R/R-4.4.1/bin/Rscript.exe\" -e \":*)",
+      "Bash(\"/c/Program Files/R/R-4.4.1/bin/Rscript.exe\" -e \"d <- read.csv\\(gzfile\\(''standard/weekly.csv.gz''\\)\\); sub <- d[d$geography==''00'',]; cat\\(levels\\(factor\\(sub$age\\)\\), ''\\\\n''\\); tapply\\(sub$time, sub$age, max\\)\")",
+      "Bash(cd \"c:/Users/DMW63/OneDrive - Yale University/Desktop/R_Projects/POPHIVE PROJECT/epic_preprocessing/data/cosmos_resp_infections\" zcat standard/weekly.csv.gz)",
+      "Read(//c/Users/DMW63/OneDrive - Yale University/Desktop/R_Projects/POPHIVE PROJECT/epic_preprocessing/data/cosmos_resp_infections/**)",
+      "Read(//c/Users/DMW63/OneDrive - Yale University/Desktop/R_Projects/POPHIVE PROJECT/epic_preprocessing/data/cosmos_resp_infections/$1==\"\"\"\"\"\"\"\"00\"\"\"\"\"\"\"\" {print $2\"\"\"\"\"\"\"\"/**)",
+      "Bash(\"/c/Program Files/R/R-4.4.1/bin/Rscript.exe\" ingest.R)",
+      "Read(//c/Users/DMW63/OneDrive - Yale University/Desktop/R_Projects/POPHIVE PROJECT/epic_preprocessing/data/cosmos_resp_infections/{print $2\"\"\"\"\"\"\"\"/**)"
+    ]
+  }
+}
