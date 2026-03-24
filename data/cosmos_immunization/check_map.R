@@ -1,8 +1,9 @@
 # =============================================================================
 # check_map.R
 # PCV vaccination coverage choropleths
-#   Part 1: ZIP code level  (standard/data_zip.csv.gz)
-#   Part 2: County level    (standard/data_county.csv.gz)
+#   Part 1: ZIP code level       (standard/data_zip.csv.gz)
+#   Part 2: County level         (standard/data_county.csv.gz)
+#   Part 3: County base-pt level (standard/data_county_base_pt.csv.gz)
 # One PNG per state, faceted by age group with independent color scales
 # Run from: data/cosmos_immunization/
 # =============================================================================
@@ -154,6 +155,45 @@ for (state in states_county) {
                              "County", time_label_county)
   out_file <- file.path(
     "maps", paste0("pcv_", gsub(" ", "_", tolower(state)), "_county.png")
+  )
+  ggsave(out_file, p, width = 15, height = 10, dpi = 150)
+  message("Saved: ", out_file)
+}
+
+# =============================================================================
+# PART 3: County base-pt maps
+# =============================================================================
+
+message("--- County base-pt maps ---")
+
+data_county_base_pt <- vroom::vroom(
+  "standard/data_county_base_pt.csv.gz", show_col_types = FALSE
+) %>%
+  filter(!is.na(pct_pcv))
+
+time_label_cbp    <- unique(data_county_base_pt$time)[1]
+fips_in_data_cbp  <- unique(data_county_base_pt$geography)
+
+message("Fetching county shapefiles for base-pt data...")
+counties_sf_cbp <- tigris::counties(cb = TRUE, year = 2020) %>%
+  mutate(fips = paste0(STATEFP, COUNTYFP)) %>%
+  filter(fips %in% fips_in_data_cbp) %>%
+  select(geography = fips, state_fips = STATEFP, geometry) %>%
+  st_transform(4326) %>%
+  left_join(state_fips_names, by = "state_fips")
+
+map_data_cbp   <- counties_sf_cbp %>% left_join(data_county_base_pt, by = "geography")
+states_cbp     <- sort(unique(na.omit(map_data_cbp$state_name)))
+age_groups_cbp <- unique(na.omit(map_data_cbp$age))
+
+message("County base-pt states: ",     paste(states_cbp,     collapse = ", "))
+message("County base-pt age groups: ", paste(age_groups_cbp, collapse = ", "))
+
+for (state in states_cbp) {
+  p        <- make_state_map(map_data_cbp, age_groups_cbp, state,
+                             "County (base-pt)", time_label_cbp)
+  out_file <- file.path(
+    "maps", paste0("pcv_", gsub(" ", "_", tolower(state)), "_county_base_pt.png")
   )
   ggsave(out_file, p, width = 15, height = 10, dpi = 150)
   message("Saved: ", out_file)
