@@ -46,7 +46,11 @@
       "Bash(\"/c/Program Files/R/R-4.3.0/bin/Rscript\" -e \"cat\\(usethis:::scoped_path_r\\(''user'', ''.Renviron'', envvar = ''R_ENVIRON_USER''\\)\\)\")",
       "Bash(powershell.exe -Command \"Get-ChildItem -Path ''C:\\\\Users\\\\DMW63\\\\'' -Force -Filter ''.Renviron'' | Select-Object FullName\")",
       "Bash(powershell.exe -Command \"Get-ChildItem -Path ''C:\\\\Users\\\\DMW63\\\\'' -Force | Where-Object { $_.Name -like ''*environ*'' -or $_.Name -like ''*Renv*'' } | Select-Object FullName, Name\")",
-      "Bash(powershell.exe -Command \"[System.Environment]::GetEnvironmentVariable\\(''EPIC_XLSX_PASSWORD'', ''User''\\) -ne $null\")"
+      "Bash(powershell.exe -Command \"[System.Environment]::GetEnvironmentVariable\\(''EPIC_XLSX_PASSWORD'', ''User''\\) -ne $null\")",
+      "Bash(\"C:/Program Files/R/R-4.4.3/bin/Rscript.exe\" -e \":*)",
+      "Bash(\"/C/Program Files/R/R-4.3.0/bin/Rscript.exe\" -e \":*)",
+      "Bash(\"/c/Program Files/R/R-4.4.2/bin/Rscript.exe\" -e \":*)",
+      "Bash(cmd.exe /c \"\"\"C:\\\\Program Files\\\\R\\\\R-4.3.0\\\\bin\\\\Rscript.exe\"\" -e \"\"suppressMessages\\(library\\(vroom\\)\\); d <- vroom::vroom\\(''data/cosmos_immunization/standard/data_county.csv.gz'', show_col_types=FALSE\\); cat\\(''Age groups:'', paste\\(sort\\(unique\\(d$age\\)\\), collapse='' | ''\\), ''\\\\n''\\)\"\"\")"
     ]
   }
 }

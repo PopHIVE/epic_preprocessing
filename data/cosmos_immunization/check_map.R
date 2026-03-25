@@ -19,6 +19,15 @@ options(tigris_use_cache = TRUE)
 
 if (!dir.exists("maps")) dir.create("maps")
 
+# Shorten Epic Cosmos age-group strings to compact panel titles
+shorten_age <- function(ag) {
+  ag <- sub("^Total:.*",                         "All Ages",  ag)
+  ag <- sub("^Less than (\\d+) Years?$",         "< \\1 yr",  ag)
+  ag <- sub("^\u2265 (\\d+) and < (\\d+) Years?$", "\\1\u2013\\2 yr", ag)
+  ag <- sub("^(\\d+) Years? or more$",           "\\1+ yr",   ag)
+  ag
+}
+
 # Shared plot helper: one panel per age group, assembled into a state PNG
 make_state_map <- function(map_data, age_groups, state, geo_label, time_label) {
 
@@ -36,9 +45,10 @@ make_state_map <- function(map_data, age_groups, state, geo_label, time_label) {
         option   = "plasma",
         na.value = "grey85",
         limits   = val_range,
+        breaks   = scales::breaks_pretty(n = 4),
         labels   = scales::label_number(accuracy = 1)
       ) +
-      labs(title = ag) +
+      labs(title = shorten_age(ag)) +
       theme_void(base_size = 10) +
       theme(
         plot.title       = element_text(face = "bold", size = 10, hjust = 0.5),
@@ -116,49 +126,6 @@ for (state in states_zip) {
   message("Saved: ", out_file)
 }
 
-# =============================================================================
-# PART 2: County maps
-# =============================================================================
-
-message("--- County maps ---")
-
-data_county <- vroom::vroom("standard/data_county.csv.gz", show_col_types = FALSE) %>%
-  filter(!is.na(pct_pcv))
-
-time_label_county <- unique(data_county$time)[1]
-fips_in_data      <- unique(data_county$geography)
-
-message("Fetching county shapefiles...")
-counties_sf <- tigris::counties(cb = TRUE, year = 2020) %>%
-  mutate(fips = paste0(STATEFP, COUNTYFP)) %>%
-  filter(fips %in% fips_in_data) %>%
-  select(geography = fips, state_fips = STATEFP, geometry) %>%
-  st_transform(4326)
-
-# Join state names via STATEFP
-state_fips_names <- tigris::states(cb = TRUE, year = 2020) %>%
-  st_drop_geometry() %>%
-  select(state_fips = STATEFP, state_name = NAME)
-
-counties_sf <- counties_sf %>%
-  left_join(state_fips_names, by = "state_fips")
-
-map_data_county   <- counties_sf %>% left_join(data_county, by = "geography")
-states_county     <- sort(unique(na.omit(map_data_county$state_name)))
-age_groups_county <- unique(na.omit(map_data_county$age))
-
-message("County states: ",     paste(states_county,     collapse = ", "))
-message("County age groups: ", paste(age_groups_county, collapse = ", "))
-
-for (state in states_county) {
-  p        <- make_state_map(map_data_county, age_groups_county, state,
-                             "County", time_label_county)
-  out_file <- file.path(
-    "maps", paste0("pcv_", gsub(" ", "_", tolower(state)), "_county.png")
-  )
-  ggsave(out_file, p, width = 15, height = 10, dpi = 150)
-  message("Saved: ", out_file)
-}
 
 # =============================================================================
 # PART 3: County base-pt maps

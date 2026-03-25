@@ -4,9 +4,8 @@
 #         "rsv and Percentage with Has Any Encounters?
 #          preceded by Immunizations"
 # Geography:
-#   raw/staging/                -> standard/data_zip.csv.gz            (ZIP code)
-#   raw/staging_county/         -> standard/data_county.csv.gz         (county FIPS)
-#   raw/staging_county_base_pt/ -> standard/data_county_base_pt.csv.gz (county FIPS, base-pt pop)
+#   raw/staging/       -> standard/data_zip.csv.gz     (ZIP code)
+#   raw/staging_county -> standard/data_county.csv.gz  (county FIPS)
 # Dimensions: Age at Encounter x geography
 # Columns — ZIP export (staging/):
 #   col 1: Age at Encounter in Years
@@ -16,11 +15,11 @@
 #   col 5: Percentage ... Zoster within 4 years (%)
 #   col 6: Number of Patients
 #   col 7: influenza (%)
-# Columns — county exports (staging_county/, staging_county_base_pt/):
-#   col 1: Age at Encounter in Years
+# Columns — county export (staging_county/):
+#   col 1: Age at Encounter
 #   col 2: County of Residence
-#   col 3: Number of Patients
-#   col 4: Percentage ... PCV within 5 years (%)
+#   col 3: Percentage with Has Any Encounters? preceded by Immunizations: pneumoc within 5 years (%)
+#   col 4: Number of Patients
 # =============================================================================
 
 library(dplyr)
@@ -42,11 +41,7 @@ if (msoffcrypto_check != 0) {
 
 # Initialize process record
 if (!file.exists("process.json")) {
-  process <- list(
-    raw_state              = NULL,
-    raw_state_county       = NULL,
-    raw_state_county_base_pt = NULL
-  )
+  process <- list(raw_state = NULL, raw_state_county = NULL)
 } else {
   process <- dcf::dcf_process_record()
 }
@@ -142,10 +137,10 @@ parse_count <- function(x) {
 }
 
 # ---------------------------------------------------------------------------
-# Helper: assemble the standard value columns from a parsed data.frame.
+# Helper: assemble the standard value columns from a parsed data.frame
 # Only processes measure columns that are actually present in df, so the
 # same function works for both ZIP exports (rsv/pcv/zoster/flu/n_patients)
-# and county exports that only contain a subset (n_patients/pct_pcv).
+# and county exports that may only contain a subset (e.g. pcv/n_patients).
 # ---------------------------------------------------------------------------
 assemble_standard <- function(df, geography_col, time_val) {
   out <- df |>
@@ -160,11 +155,11 @@ assemble_standard <- function(df, geography_col, time_val) {
   pct_measures <- c("pct_rsv", "pct_pcv", "pct_zoster", "pct_flu")
   for (col in pct_measures) {
     if (col %in% names(df)) {
-      parsed          <- parse_pct(df[[col]])
-      flag_col        <- paste0("suppressed_flag_", col)
-      out[[col]]      <- parsed$value
+      parsed        <- parse_pct(df[[col]])
+      flag_col      <- paste0("suppressed_flag_", col)
+      out[[col]]    <- parsed$value
       out[[flag_col]] <- parsed$suppressed
-      keep_cols       <- c(keep_cols, col, flag_col)
+      keep_cols     <- c(keep_cols, col, flag_col)
     }
   }
 
@@ -226,31 +221,8 @@ if (!identical(process$raw_state, zip_hashes)) {
 # BLOCK 2: County-level data  (raw/staging_county/ -> standard/data_county.csv.gz)
 # =============================================================================
 
-# ---------------------------------------------------------------------------
-# Helper: normalize county names to uppercase with suffix stripped for joining.
-# Apply fixes for apostrophes/prefixes that differ between Epic and FIPS.
-# ---------------------------------------------------------------------------
-normalize_county <- function(x) {
-  x <- toupper(trimws(x))
-  x <- sub(
-    " (COUNTY|PARISH|BOROUGH|CENSUS AREA|MUNICIPALITY|CITY AND BOROUGH)$",
-    "", x
-  )
-  x <- gsub("^SAINTE ", "STE. ", x)
-  x <- gsub("^SAINT ",  "ST. ",  x)
-  # Add period after ST if missing (e.g. "ST JOHN" -> "ST. JOHN")
-  x <- gsub("^ST ([^.].*)$", "ST. \\1", x)
-  x <- gsub("PRINCE GEORGES",  "PRINCE GEORGE'S", x)
-  x <- gsub("QUEEN ANNES",     "QUEEN ANNE'S",    x)
-  x <- gsub("ST\\. MARYS",     "ST. MARY'S",      x)
-  x <- gsub("^OBRIEN$",        "O'BRIEN",         x)
-  x <- gsub("^LA SALLE$",      "LASALLE",         x)
-  x <- gsub("^LA PORTE$",      "LAPORTE",         x)
-  x
-}
-
 county_col_names <- c(
-  "age", "county_state", "n_patients", "pct_pcv"
+  "age", "county_state", "pct_pcv", "n_patients"
 )
 
 raw_files_county <- list.files(
@@ -271,6 +243,27 @@ if (length(raw_files_county) > 0) {
       "../../resources/all_fips.csv.gz",
       show_col_types = FALSE
     )
+
+    # Normalize county names to uppercase with suffix stripped for joining.
+    # Apply fixes for apostrophes/prefixes that differ between Epic and FIPS.
+    normalize_county <- function(x) {
+      x <- toupper(trimws(x))
+      x <- sub(
+        " (COUNTY|PARISH|BOROUGH|CENSUS AREA|MUNICIPALITY|CITY AND BOROUGH)$",
+        "", x
+      )
+      x <- gsub("^SAINTE ", "STE. ", x)
+      x <- gsub("^SAINT ",  "ST. ",  x)
+      # Add period after ST if missing (e.g. "ST JOHN" -> "ST. JOHN")
+      x <- gsub("^ST ([^.].*)$", "ST. \\1", x)
+      x <- gsub("PRINCE GEORGES",  "PRINCE GEORGE'S", x)
+      x <- gsub("QUEEN ANNES",     "QUEEN ANNE'S",    x)
+      x <- gsub("ST\\. MARYS",     "ST. MARY'S",      x)
+      x <- gsub("^OBRIEN$",        "O'BRIEN",         x)
+      x <- gsub("^LA SALLE$",      "LASALLE",         x)
+      x <- gsub("^LA PORTE$",      "LAPORTE",         x)
+      x
+    }
 
     all_fips_county <- all_fips |>
       filter(nchar(geography) == 5) |>
@@ -336,93 +329,6 @@ if (length(raw_files_county) > 0) {
     )
 
     process$raw_state_county <- county_hashes
-    dcf::dcf_process_record(updated = process)
-  }
-}
-
-# =============================================================================
-# BLOCK 3: County base-pt data  (raw/staging_county_base_pt/ -> standard/data_county_base_pt.csv.gz)
-# =============================================================================
-
-raw_files_county_base_pt <- list.files(
-  "raw/staging_county_base_pt", pattern = "\\.xlsx$", full.names = TRUE
-)
-
-if (length(raw_files_county_base_pt) > 0) {
-
-  county_base_pt_hashes <- as.list(tools::md5sum(raw_files_county_base_pt))
-  names(county_base_pt_hashes) <- basename(raw_files_county_base_pt)
-
-  if (!identical(process$raw_state_county_base_pt, county_base_pt_hashes)) {
-
-    # -------------------------------------------------------------------------
-    # Load FIPS lookup (reuse all_fips if already in environment, else reload)
-    # -------------------------------------------------------------------------
-    if (!exists("all_fips_county")) {
-      all_fips <- vroom::vroom(
-        "../../resources/all_fips.csv.gz",
-        show_col_types = FALSE
-      )
-      all_fips_county <- all_fips |>
-        filter(nchar(geography) == 5) |>
-        select(geography, geography_name, state) |>
-        mutate(county_key = normalize_county(geography_name))
-    }
-
-    # -------------------------------------------------------------------------
-    # Parse county_base_pt xlsx files
-    # -------------------------------------------------------------------------
-    data_raw_county_base_pt <- bind_rows(
-      lapply(raw_files_county_base_pt, parse_one_file,
-        password  = xlsx_password,
-        col_names = county_col_names
-      )
-    )
-
-    time_val_county_base_pt <- max(data_raw_county_base_pt$time_val)
-    data_raw_county_base_pt <- data_raw_county_base_pt |> select(-time_val)
-
-    data_raw_county_base_pt <- data_raw_county_base_pt |>
-      filter(grepl(",", trimws(county_state))) |>
-      distinct(county_state, age, .keep_all = TRUE)
-
-    data_raw_county_base_pt <- data_raw_county_base_pt |>
-      mutate(
-        county_raw = trimws(sub(",.*$", "", county_state)),
-        state_abbr = trimws(sub("^.*,", "", county_state)),
-        county_key = normalize_county(county_raw)
-      )
-
-    data_raw_county_base_pt <- data_raw_county_base_pt |>
-      left_join(
-        all_fips_county,
-        by = c("county_key" = "county_key", "state_abbr" = "state")
-      )
-
-    n_unmatched_base_pt <- sum(is.na(data_raw_county_base_pt$geography))
-    if (n_unmatched_base_pt > 0) {
-      unmatched_names_base_pt <- unique(
-        data_raw_county_base_pt$county_state[is.na(data_raw_county_base_pt$geography)]
-      )
-      warning(
-        n_unmatched_base_pt, " rows could not be matched to a FIPS code.\n",
-        "Unmatched county names: ",
-        paste(head(unmatched_names_base_pt, 20), collapse = ", ")
-      )
-    }
-
-    data_raw_county_base_pt <- data_raw_county_base_pt |>
-      filter(!is.na(geography))
-
-    data_county_base_pt <- assemble_standard(
-      data_raw_county_base_pt, "geography", time_val_county_base_pt
-    )
-
-    vroom::vroom_write(
-      data_county_base_pt, "standard/data_county_base_pt.csv.gz", delim = ","
-    )
-
-    process$raw_state_county_base_pt <- county_base_pt_hashes
     dcf::dcf_process_record(updated = process)
   }
 }
