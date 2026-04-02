@@ -1,0 +1,73 @@
+{
+  "n_strep_throat": {
+    "id": "n_strep_throat",
+    "short_name": "Strep Throat ED Encounters",
+    "long_name": "Emergency Department Encounters with Strep Throat Diagnosis",
+    "category": "respiratory",
+    "short_description": "Quarterly count of ED encounters with a strep throat diagnosis (J02.0, J03.00, J03.01).",
+    "long_description": "Quarterly count of emergency department encounters with a strep throat diagnosis code, including streptococcal pharyngitis (J02.0), acute streptococcal tonsillitis, unspecified (J03.00), and acute recurrent streptococcal tonsillitis (J03.01). Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
+    "statement": "In {location}, {value} ED encounters with a strep throat diagnosis were recorded.",
+    "measure_type": "Count",
+    "unit": "encounters",
+    "time_resolution": "Quarter",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+
+  "n_patients": {
+    "id": "n_patients",
+    "short_name": "Total ED Patients",
+    "long_name": "Total Emergency Department Patients (Denominator)",
+    "category": "respiratory",
+    "short_description": "Quarterly total ED patient count used as denominator for strep throat rate.",
+    "long_description": "Quarterly total count of emergency department patients, used as the denominator for computing the strep throat rate per 100,000. Data from Epic Cosmos SlicerDicer.",
+    "statement": "",
+    "measure_type": "Count",
+    "unit": "patients",
+    "time_resolution": "Quarter",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+
+  "rate_strep_throat": {
+    "id": "rate_strep_throat",
+    "short_name": "Strep Throat Rate",
+    "long_name": "Strep Throat ED Encounter Rate per 100,000 Patients",
+    "category": "respiratory",
+    "short_description": "Quarterly rate of strep throat ED encounters per 100,000 patients (J02.0, J03.00, J03.01).",
+    "long_description": "Quarterly rate of emergency department encounters with a strep throat diagnosis per 100,000 total ED patients. Computed as n_strep_throat / n_patients * 100,000. Diagnosis codes include streptococcal pharyngitis (J02.0), acute streptococcal tonsillitis, unspecified (J03.00), and acute recurrent streptococcal tonsillitis (J03.01). Data from Epic Cosmos SlicerDicer.",
+    "statement": "In {location}, the strep throat ED encounter rate was {value} per 100,000 patients.",
+    "measure_type": "Rate",
+    "unit": "per 100,000 patients",
+    "time_resolution": "Quarter",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+
+  "suppressed_flag": {
+    "id": "suppressed_flag",
+    "short_name": "Strep Throat Count Suppressed?",
+    "long_name": "Suppression flag for strep throat ED encounter count",
+    "category": "respiratory",
+    "short_description": "Binary indicator: 1 if the strep throat encounter count was suppressed (fewer than 10), 0 otherwise.",
+    "long_description": "Binary indicator: 1 if the count of ED encounters with a strep throat diagnosis (n_strep_throat) was suppressed due to fewer than 10 cases, in which case the count is imputed as 5. Otherwise 0.",
+    "statement": "",
+    "measure_type": "binary",
+    "unit": "",
+    "time_resolution": "Quarter",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+
+  "_sources": {
+    "epic_cosmos": {
+      "name": "Epic Cosmos",
+      "url": "https://cosmos.epic.com/",
+      "date_accessed": 2026,
+      "organization": "Epic Systems",
+      "organization_url": "https://www.epic.com/",
+      "description": "Epic Cosmos is a collaborative research platform containing de-identified patient data from over 300 million patients across more than 1,600 hospitals and health systems using Epic electronic health record systems. Data is accessed via SlicerDicer, a self-service analytics tool. The dataset includes emergency department visits, diagnoses, immunizations, laboratory results, and other clinical data. Due to privacy protections, counts fewer than 10 are suppressed and imputed. Coverage extends across all U.S. states and territories. Note that county-level and city-level stratifications could differ markedly in total sample size due to high levels of missingness of county data in some states.",
+      "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'"
+    }
+  }
+}

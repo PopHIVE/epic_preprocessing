@@ -8,19 +8,14 @@
 #   raw/staging_county/         -> standard/data_county.csv.gz         (county FIPS)
 #   raw/staging_county_base_pt/ -> standard/data_county_base_pt.csv.gz (county FIPS, base-pt pop)
 # Dimensions: Age at Encounter x geography
-# Columns — ZIP export (staging/):
+# Columns (rows 11-12 of export):
 #   col 1: Age at Encounter in Years
-#   col 2: Postal Code
+#   col 2: Postal Code / County of Residence
 #   col 3: rsv (%)
 #   col 4: Percentage ... PCV within 4 years (%)
 #   col 5: Percentage ... Zoster within 4 years (%)
 #   col 6: Number of Patients
 #   col 7: influenza (%)
-# Columns — county exports (staging_county/, staging_county_base_pt/):
-#   col 1: Age at Encounter in Years
-#   col 2: County of Residence
-#   col 3: Number of Patients
-#   col 4: Percentage ... PCV within 5 years (%)
 # =============================================================================
 
 library(dplyr)
@@ -142,40 +137,40 @@ parse_count <- function(x) {
 }
 
 # ---------------------------------------------------------------------------
-# Helper: assemble the standard value columns from a parsed data.frame.
-# Only processes measure columns that are actually present in df, so the
-# same function works for both ZIP exports (rsv/pcv/zoster/flu/n_patients)
-# and county exports that only contain a subset (n_patients/pct_pcv).
+# Helper: assemble the standard value columns from a parsed data.frame
 # ---------------------------------------------------------------------------
 assemble_standard <- function(df, geography_col, time_val) {
-  out <- df |>
+  rsv    <- parse_pct(df$pct_rsv)
+  pcv    <- parse_pct(df$pct_pcv)
+  zoster <- parse_pct(df$pct_zoster)
+  flu    <- parse_pct(df$pct_flu)
+  npt    <- parse_count(df$n_patients)
+
+  df |>
     mutate(
-      geography = .data[[geography_col]],
-      time      = time_val,
-      age       = trimws(age)
-    )
-
-  keep_cols <- c("geography", "time", "age")
-
-  pct_measures <- c("pct_rsv", "pct_pcv", "pct_zoster", "pct_flu")
-  for (col in pct_measures) {
-    if (col %in% names(df)) {
-      parsed          <- parse_pct(df[[col]])
-      flag_col        <- paste0("suppressed_flag_", col)
-      out[[col]]      <- parsed$value
-      out[[flag_col]] <- parsed$suppressed
-      keep_cols       <- c(keep_cols, col, flag_col)
-    }
-  }
-
-  if ("n_patients" %in% names(df)) {
-    npt                            <- parse_count(df$n_patients)
-    out$n_patients                 <- npt$value
-    out$suppressed_flag_n_patients <- npt$suppressed
-    keep_cols <- c(keep_cols, "n_patients", "suppressed_flag_n_patients")
-  }
-
-  out |> select(all_of(keep_cols)) |> arrange(geography, age)
+      geography                  = .data[[geography_col]],
+      time                       = time_val,
+      age                        = trimws(age),
+      pct_rsv                    = rsv$value,
+      suppressed_flag_pct_rsv    = rsv$suppressed,
+      pct_pcv                    = pcv$value,
+      suppressed_flag_pct_pcv    = pcv$suppressed,
+      pct_zoster                 = zoster$value,
+      suppressed_flag_pct_zoster = zoster$suppressed,
+      pct_flu                    = flu$value,
+      suppressed_flag_pct_flu    = flu$suppressed,
+      n_patients                 = npt$value,
+      suppressed_flag_n_patients = npt$suppressed
+    ) |>
+    select(
+      geography, time, age,
+      pct_rsv,    suppressed_flag_pct_rsv,
+      pct_pcv,    suppressed_flag_pct_pcv,
+      pct_zoster, suppressed_flag_pct_zoster,
+      pct_flu,    suppressed_flag_pct_flu,
+      n_patients, suppressed_flag_n_patients
+    ) |>
+    arrange(geography, age)
 }
 
 # =============================================================================
@@ -250,7 +245,8 @@ normalize_county <- function(x) {
 }
 
 county_col_names <- c(
-  "age", "county_state", "n_patients", "pct_pcv"
+  "age", "county_state", "pct_rsv", "pct_pcv",
+  "pct_zoster", "n_patients", "pct_flu"
 )
 
 raw_files_county <- list.files(
