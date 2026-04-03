@@ -138,11 +138,29 @@ data_clean <- data_raw %>%
     # Strip non-UTF-8 bytes (common in SlicerDicer exports)
     quarter    = iconv(quarter,    to = "UTF-8", sub = ""),
     state_name = iconv(state_name, to = "UTF-8", sub = ""),
+    state_name = if_else(state_name=='',NA_character_,state_name),
+    state_name = if_else(grepl('Total',state_name), 'Total', state_name),
     year       = na_if(trimws(year),    ""),
-    quarter    = na_if(trimws(quarter), "")
+    quarter    = na_if(trimws(quarter), ""),
+    age    = na_if(trimws(age), "")
+
+
   ) %>%
-  tidyr::fill(year, quarter, .direction = "down") %>%
-  filter(trimws(state_name) %in% c(valid_states, "Total")) %>%
+  tidyr::fill(year, quarter, age, state_name, .direction = "down") %>%
+  #filter(trimws(state_name) %in% c(valid_states, "Total")) %>%
+  mutate(
+    # Standardize age group labels
+    age = trimws(age),
+    age = stringr::str_replace(age, "^Less than\\s+(\\d+).*$", "<\\1 Years"),
+    age = stringr::str_replace(age, "^(\\d+)\\s+Years or more$", "\\1+ Years"),
+    age = {
+      m <- stringr::str_match(age, "^[^0-9]*?(\\d+)\\s+and\\s+<\\s*(\\d+)\\s*Years?$")
+      lower <- m[, 2]
+      upper <- as.character(as.integer(m[, 3]) - 1L)
+      ifelse(!is.na(lower), paste0(lower, "-", upper, " Years"), age)
+    },
+    age = if_else(grepl("^Total", age, ignore.case = TRUE), "Total", age)
+  ) %>%
   mutate(
     # Suppression: counts <= 10 reported as "10 or fewer"
     suppressed_flag = if_else(trimws(n_strep_throat) == "10 or fewer", 1L, 0L),
@@ -168,8 +186,8 @@ data_clean <- data_raw %>%
   select(-quarter_start_month, -quarter_start_day) %>%
   left_join(state_fips_lookup, by = "geography_name") %>%
   filter(!is.na(geography)) %>%
-  select(geography, time, n_strep_throat, n_patients, rate_strep_throat, suppressed_flag) %>%
-  arrange(geography, time)
+  select(geography,age, time, state_name, n_strep_throat, n_patients, rate_strep_throat, suppressed_flag) %>%
+  arrange(geography,age,  time)
 
 # =============================================================================
 # 3. Write standardized output
