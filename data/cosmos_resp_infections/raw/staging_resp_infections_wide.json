@@ -1,8 +1,8 @@
 [
   {
-    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-04-09T09_53_18.xlsx",
-    "md5": "b3a5a008aea1e14354613b65a5e92109",
-    "date_processed": "2026-04-09 12:47:59.89647",
+    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-04-28T14_01_43.xlsx",
+    "md5": "e3c8517de13eab91f199e11a81f9fbb0",
+    "date_processed": "2026-04-28 16:40:11.804275",
     "Session Title": "Number of ED Encounters by ED Diagnoses and State of Residence and Age at Time of Visit Range",
     "Session ID": "2804049",
     "Data Model": "ED Encounters",
@@ -13,28 +13,28 @@
     "Date of Export": "Daniel Weinberger"
   },
   {
-    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-04-09T10_19_48.xlsx",
-    "md5": "934339202ca528005adc849c97d9478f",
-    "date_processed": "2026-04-09 12:48:04.277461",
+    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-04-28T15_14_01.xlsx",
+    "md5": "b1dd0c6b64ad75f9cd62a535844debf2",
+    "date_processed": "2026-04-28 16:40:14.826337",
     "Session Title": "Number of ED Encounters by ED Diagnoses and State of Residence and Age at Time of Visit Range",
     "Session ID": "2804037",
     "Data Model": "ED Encounters",
     "Population Base": "All ED Encounters",
-    "Population Criteria Filters": "",
+    "Population Criteria Filters": "Country of Residence: United States of America",
     "Session Date Range": "12/26/2021 - 12/28/2024 (Based On Arrival Date)",
     "Export User": "Number of ED Encounters",
     "Date of Export": "Daniel Weinberger"
   },
   {
-    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-04-09T10_42_57.xlsx",
-    "md5": "1e89d2c0a5f8915695e53adceee77c3b",
-    "date_processed": "2026-04-09 12:48:06.918739",
+    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-04-28T15_29_55.xlsx",
+    "md5": "fce3d3ff0370ea26e76a728d39d902cf",
+    "date_processed": "2026-04-28 16:40:17.067303",
     "Session Title": "Number of ED Encounters by ED Diagnoses and State of Residence and Age at Time of Visit Range",
     "Session ID": "2804031",
     "Data Model": "ED Encounters",
     "Population Base": "All ED Encounters",
-    "Population Criteria Filters": "",
-    "Session Date Range": "12/29/2024 - 3/30/2026 (Based On Arrival Date)",
+    "Population Criteria Filters": "Country of Residence: United States of America",
+    "Session Date Range": "12/29/2024 - 4/7/2026 (Based On Arrival Date)",
     "Export User": "Number of ED Encounters",
     "Date of Export": "Daniel Weinberger"
   }
