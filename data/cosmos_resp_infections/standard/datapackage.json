@@ -16,10 +16,26 @@
       "name": "monthly_tests.csv",
       "filename": "monthly_tests.csv.gz",
       "versions": {
-        "hash": ["9c75115330e34199aabf0bc0bb2a152d442f1d75", "2ee0009832c971f3c7318486b9e60b61757b31c3", "db28a77504a7541bc8b2ec7dde346e6ef1762ab0"],
-        "author": ["danweinberger <daniel.weinberger@yale.edu>", "shoamoosavi <shoa.moosavi@yale.edu>", "danweinberger <daniel.weinberger@yale.edu>"],
-        "date": ["Sun Mar 22 22:43:01 2026 -0400", "Fri Mar 20 03:58:43 2026 -0400", "Tue Feb 24 13:54:12 2026 -0500"],
-        "message": ["corrects bug on import that was leading to nationallevel data being dropped  from standard file after 2021", "Claude Sonnet 4.6 <noreply@anthropic.com>", "reorganize the directory structure into distinct data projects for cosmos"]
+        "hash": [
+          "9c75115330e34199aabf0bc0bb2a152d442f1d75",
+          "2ee0009832c971f3c7318486b9e60b61757b31c3",
+          "db28a77504a7541bc8b2ec7dde346e6ef1762ab0"
+        ],
+        "author": [
+          "danweinberger <daniel.weinberger@yale.edu>",
+          "shoamoosavi <shoa.moosavi@yale.edu>",
+          "danweinberger <daniel.weinberger@yale.edu>"
+        ],
+        "date": [
+          "Sun Mar 22 22:43:01 2026 -0400",
+          "Fri Mar 20 03:58:43 2026 -0400",
+          "Tue Feb 24 13:54:12 2026 -0500"
+        ],
+        "message": [
+          "corrects bug on import that was leading to nationallevel data being dropped  from standard file after 2021",
+          "Claude Sonnet 4.6 <noreply@anthropic.com>",
+          "reorganize the directory structure into distinct data projects for cosmos"
+        ]
       },
       "source": [],
       "data_format": "wide",
@@ -31,7 +47,7 @@
       "id_length": 0,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-04-28 16:40:47.179367",
+      "created": "2026-06-04 12:31:05.262836",
       "last_modified": "2026-02-24 13:26:37.971329",
       "vintage": {},
       "row_count": 19296,
@@ -628,10 +644,26 @@
       "name": "no_geo.csv",
       "filename": "no_geo.csv.gz",
       "versions": {
-        "hash": ["9c75115330e34199aabf0bc0bb2a152d442f1d75", "2ee0009832c971f3c7318486b9e60b61757b31c3", "db28a77504a7541bc8b2ec7dde346e6ef1762ab0"],
-        "author": ["danweinberger <daniel.weinberger@yale.edu>", "shoamoosavi <shoa.moosavi@yale.edu>", "danweinberger <daniel.weinberger@yale.edu>"],
-        "date": ["Sun Mar 22 22:43:01 2026 -0400", "Fri Mar 20 03:58:43 2026 -0400", "Tue Feb 24 13:54:12 2026 -0500"],
-        "message": ["corrects bug on import that was leading to nationallevel data being dropped  from standard file after 2021", "Claude Sonnet 4.6 <noreply@anthropic.com>", "reorganize the directory structure into distinct data projects for cosmos"]
+        "hash": [
+          "9c75115330e34199aabf0bc0bb2a152d442f1d75",
+          "2ee0009832c971f3c7318486b9e60b61757b31c3",
+          "db28a77504a7541bc8b2ec7dde346e6ef1762ab0"
+        ],
+        "author": [
+          "danweinberger <daniel.weinberger@yale.edu>",
+          "shoamoosavi <shoa.moosavi@yale.edu>",
+          "danweinberger <daniel.weinberger@yale.edu>"
+        ],
+        "date": [
+          "Sun Mar 22 22:43:01 2026 -0400",
+          "Fri Mar 20 03:58:43 2026 -0400",
+          "Tue Feb 24 13:54:12 2026 -0500"
+        ],
+        "message": [
+          "corrects bug on import that was leading to nationallevel data being dropped  from standard file after 2021",
+          "Claude Sonnet 4.6 <noreply@anthropic.com>",
+          "reorganize the directory structure into distinct data projects for cosmos"
+        ]
       },
       "source": [],
       "data_format": "wide",
@@ -643,7 +675,7 @@
       "id_length": 0,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-04-28 16:40:47.82107",
+      "created": "2026-06-04 12:31:05.624327",
       "last_modified": "2026-02-24 13:26:40.75477",
       "vintage": "2025-12-18",
       "row_count": 21240,
@@ -2901,17 +2933,57 @@
       "sha512": "c5e973dc182e317b0efa1fefd727dafee94bb53c7d448fa15b05fb264d1f6870d24a3be2ee97e60d463271221e8fcc5cc088eaf7ea6f49b01fa364c7499867db"
     },
     {
-      "bytes": 3932496,
+      "bytes": 3983557,
       "encoding": "ISO-8859-1",
-      "md5": "f0ee35e79eec1a480a6fa9d4065ff204",
+      "md5": "f5034c795ccb0f53d4dd181fed73be00",
       "format": "csv",
       "name": "weekly.csv",
       "filename": "weekly.csv.gz",
       "versions": {
-        "hash": ["0d062bc4792392a4668287cd7803adc1f5b0b5a1", "9c75115330e34199aabf0bc0bb2a152d442f1d75", "2ee0009832c971f3c7318486b9e60b61757b31c3", "f51b0546e0b5b285fa9b3195b296b63437726ea0", "47437419cf130d4e565eb07eade171a224a8731a", "2c613c6d91b4f136ba0b31624e327f9e566880bc", "e3edbf2a2e741062796effcf27df3a90254c9066", "db28a77504a7541bc8b2ec7dde346e6ef1762ab0"],
-        "author": ["weinbergerlab <dweinber@gmail.com>", "danweinberger <daniel.weinberger@yale.edu>", "shoamoosavi <shoa.moosavi@yale.edu>", "weinbergerlab <dweinber@gmail.com>", "danweinberger <daniel.weinberger@yale.edu>", "danweinberger <daniel.weinberger@yale.edu>", "danweinberger <daniel.weinberger@yale.edu>", "danweinberger <daniel.weinberger@yale.edu>"],
-        "date": ["Thu Apr 9 12:55:40 2026 -0400", "Sun Mar 22 22:43:01 2026 -0400", "Fri Mar 20 03:58:43 2026 -0400", "Thu Mar 12 10:22:02 2026 -0400", "Wed Mar 11 23:30:45 2026 -0400", "Wed Mar 11 22:55:34 2026 -0400", "Tue Mar 10 22:22:48 2026 -0400", "Tue Feb 24 13:54:12 2026 -0500"],
-        "message": ["update epic cosmos data", "corrects bug on import that was leading to nationallevel data being dropped  from standard file after 2021", "Claude Sonnet 4.6 <noreply@anthropic.com>", "fixes date boundary issues on respiratory data", "fixes issues with date alignments", "fix flu def on epic resp", "update ingest to use new wide format of standard files, adds data back to 2018", "reorganize the directory structure into distinct data projects for cosmos"]
+        "hash": [
+          "aef4c9b78b2770653458cc228ce44cea07723209",
+          "0d062bc4792392a4668287cd7803adc1f5b0b5a1",
+          "9c75115330e34199aabf0bc0bb2a152d442f1d75",
+          "2ee0009832c971f3c7318486b9e60b61757b31c3",
+          "f51b0546e0b5b285fa9b3195b296b63437726ea0",
+          "47437419cf130d4e565eb07eade171a224a8731a",
+          "2c613c6d91b4f136ba0b31624e327f9e566880bc",
+          "e3edbf2a2e741062796effcf27df3a90254c9066",
+          "db28a77504a7541bc8b2ec7dde346e6ef1762ab0"
+        ],
+        "author": [
+          "weinbergerlab <dweinber@gmail.com>",
+          "weinbergerlab <dweinber@gmail.com>",
+          "danweinberger <daniel.weinberger@yale.edu>",
+          "shoamoosavi <shoa.moosavi@yale.edu>",
+          "weinbergerlab <dweinber@gmail.com>",
+          "danweinberger <daniel.weinberger@yale.edu>",
+          "danweinberger <daniel.weinberger@yale.edu>",
+          "danweinberger <daniel.weinberger@yale.edu>",
+          "danweinberger <daniel.weinberger@yale.edu>"
+        ],
+        "date": [
+          "Tue Apr 28 16:41:09 2026 -0400",
+          "Thu Apr 9 12:55:40 2026 -0400",
+          "Sun Mar 22 22:43:01 2026 -0400",
+          "Fri Mar 20 03:58:43 2026 -0400",
+          "Thu Mar 12 10:22:02 2026 -0400",
+          "Wed Mar 11 23:30:45 2026 -0400",
+          "Wed Mar 11 22:55:34 2026 -0400",
+          "Tue Mar 10 22:22:48 2026 -0400",
+          "Tue Feb 24 13:54:12 2026 -0500"
+        ],
+        "message": [
+          "update epic data",
+          "update epic cosmos data",
+          "corrects bug on import that was leading to nationallevel data being dropped  from standard file after 2021",
+          "Claude Sonnet 4.6 <noreply@anthropic.com>",
+          "fixes date boundary issues on respiratory data",
+          "fixes issues with date alignments",
+          "fix flu def on epic resp",
+          "update ingest to use new wide format of standard files, adds data back to 2018",
+          "reorganize the directory structure into distinct data projects for cosmos"
+        ]
       },
       "source": [],
       "data_format": "wide",
@@ -2923,18 +2995,18 @@
       "id_length": 0,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-04-28 16:40:28.299549",
+      "created": "2026-06-04 12:30:52.623346",
       "last_modified": "2026-02-24 13:26:37.966345",
       "vintage": "2026-02-19",
-      "row_count": 156520,
+      "row_count": 158340,
       "entity_count": 52,
       "schema": {
         "fields": [
           {
             "name": "geography",
-            "duplicates": 156468,
+            "duplicates": 158288,
             "info": [],
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "integer",
             "missing": 0,
             "mean": 28.403846,
@@ -2944,7 +3016,7 @@
           },
           {
             "name": "age",
-            "duplicates": 156513,
+            "duplicates": 158333,
             "info": {
               "id": "age",
               "short_name": "Age",
@@ -2960,24 +3032,24 @@
                 }
               ]
             },
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "string",
             "missing": 0,
             "table": {
-              "<1 Years": 22360,
-              "1-4 Years": 22360,
-              "18-49 Years": 22360,
-              "5-17 Years": 22360,
-              "50-64 Years": 22360,
-              "65+ Years": 22360,
-              "Total": 22360
+              "<1 Years": 22620,
+              "1-4 Years": 22620,
+              "18-49 Years": 22620,
+              "5-17 Years": 22620,
+              "50-64 Years": 22620,
+              "65+ Years": 22620,
+              "Total": 22620
             }
           },
           {
             "name": "time",
-            "duplicates": 156090,
+            "duplicates": 157905,
             "info": [],
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "string",
             "missing": 0,
             "table": {
@@ -3410,12 +3482,17 @@
               "2026-03-14": 364,
               "2026-03-21": 364,
               "2026-03-28": 364,
-              "2026-04-04": 364
+              "2026-04-04": 364,
+              "2026-04-11": 364,
+              "2026-04-18": 364,
+              "2026-04-25": 364,
+              "2026-05-02": 364,
+              "2026-05-09": 364
             }
           },
           {
             "name": "epic_n_rsv",
-            "duplicates": 155321,
+            "duplicates": 157148,
             "info": {
               "id": "epic_n_rsv",
               "short_name": "RSV Patients",
@@ -3431,17 +3508,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "integer",
             "missing": 0,
-            "mean": 24.452498,
-            "sd": 208.667286,
+            "mean": 24.634369,
+            "sd": 209.715314,
             "min": 5,
-            "max": 14495
+            "max": 14587
           },
           {
             "name": "epic_n_covid",
-            "duplicates": 153195,
+            "duplicates": 155022,
             "info": {
               "id": "epic_n_covid",
               "short_name": "COVID Patients",
@@ -3457,17 +3534,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "integer",
             "missing": 0,
-            "mean": 158.612535,
-            "sd": 1364.441639,
+            "mean": 158.533024,
+            "sd": 1369.800495,
             "min": 5,
-            "max": 130291
+            "max": 131816
           },
           {
             "name": "epic_n_flu",
-            "duplicates": 153513,
+            "duplicates": 155319,
             "info": {
               "id": "epic_n_flu",
               "short_name": "Influenza Patients",
@@ -3483,17 +3560,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "integer",
             "missing": 0,
-            "mean": 130.821818,
-            "sd": 1397.332976,
+            "mean": 130.980618,
+            "sd": 1401.040357,
             "min": 5,
-            "max": 129451
+            "max": 130787
           },
           {
             "name": "epic_n_all_encounters_weekly",
-            "duplicates": 129927,
+            "duplicates": 131463,
             "info": {
               "id": "epic_n_all_encounters_weekly",
               "short_name": "All-Cause ED Encounters (Weekly)",
@@ -3509,17 +3586,17 @@
                 }
               ]
             },
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "integer",
             "missing": 0,
-            "mean": 9746.994397,
-            "sd": 54300.761425,
+            "mean": 9898.863957,
+            "sd": 55195.190459,
             "min": 5,
-            "max": 1299453
+            "max": 1313916
           },
           {
             "name": "epic_pct_rsv",
-            "duplicates": 114187,
+            "duplicates": 115216,
             "info": {
               "id": "epic_pct_rsv",
               "short_name": "RSV Patients (%)",
@@ -3535,17 +3612,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "float",
             "missing": 0,
-            "mean": 3.877663,
-            "sd": 13.831415,
-            "min": 0.000757,
+            "mean": 3.797521,
+            "sd": 13.615397,
+            "min": 0.000746,
             "max": 100
           },
           {
             "name": "epic_pct_flu",
-            "duplicates": 94717,
+            "duplicates": 95737,
             "info": {
               "id": "epic_pct_flu",
               "short_name": "Influenza Patients (%)",
@@ -3561,17 +3638,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "float",
             "missing": 0,
-            "mean": 4.625981,
-            "sd": 13.861415,
-            "min": 0.003478,
+            "mean": 4.535922,
+            "sd": 13.64869,
+            "min": 0.003412,
             "max": 100
           },
           {
             "name": "epic_pct_covid",
-            "duplicates": 85819,
+            "duplicates": 86736,
             "info": {
               "id": "epic_pct_covid",
               "short_name": "COVID Patients (%)",
@@ -3587,17 +3664,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "float",
             "missing": 0,
-            "mean": 4.639709,
-            "sd": 13.736741,
-            "min": 0.000598,
+            "mean": 4.547045,
+            "sd": 13.52545,
+            "min": 0.00059,
             "max": 100
           },
           {
             "name": "epic_suppressed_flag_rsv",
-            "duplicates": 156518,
+            "duplicates": 158338,
             "info": {
               "id": "epic_suppressed_flag_rsv",
               "short_name": "Fewer than 10 cases in the strata?",
@@ -3612,17 +3689,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "integer",
             "missing": 0,
-            "mean": 0.830948,
-            "sd": 0.374799,
+            "mean": 0.828243,
+            "sd": 0.37717,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_covid",
-            "duplicates": 156518,
+            "duplicates": 158338,
             "info": {
               "id": "epic_suppressed_flag_covid",
               "short_name": "Fewer than 10 cases in the strata?",
@@ -3637,17 +3714,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "integer",
             "missing": 0,
-            "mean": 0.551527,
-            "sd": 0.497339,
+            "mean": 0.552476,
+            "sd": 0.49724,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_flu",
-            "duplicates": 156518,
+            "duplicates": 158338,
             "info": {
               "id": "epic_suppressed_flag_flu",
               "short_name": "Fewer than 10 cases in the strata?",
@@ -3662,17 +3739,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "integer",
             "missing": 0,
-            "mean": 0.645796,
-            "sd": 0.478273,
+            "mean": 0.643571,
+            "sd": 0.478946,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_all_encounters_weekly",
-            "duplicates": 156518,
+            "duplicates": 158338,
             "info": {
               "id": "epic_suppressed_flag_all_encounters_weekly",
               "short_name": "All Encounters Count Suppressed? (Weekly)",
@@ -3687,11 +3764,11 @@
                 }
               ]
             },
-            "time_range": [0, 429],
+            "time_range": [0, 434],
             "type": "integer",
             "missing": 0,
-            "mean": 0.017723,
-            "sd": 0.131943,
+            "mean": 0.017166,
+            "sd": 0.129889,
             "min": 0,
             "max": 1
           }
@@ -4081,7 +4158,7 @@
           "id": "_sources"
         }
       },
-      "sha512": "a8633c103f65e6e4f9991bf844ce1355361164938d2158e41906d9829d97ce40b5691d1a7b927eb37a95aa996581518e0bd6c140d41d876f73e813a26b9fe81a"
+      "sha512": "2b6a11a5fed7bca5d88014f2e97691060ef40c934ba7edeadfd8dbe197c92d1289ff267a8fd4be2b8e5ad137521b310adbc9f69b95012ead03ae9784b99b2f26"
     }
   ]
 }
