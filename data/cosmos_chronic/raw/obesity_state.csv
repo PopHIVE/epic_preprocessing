@@ -1,0 +1,513 @@
+age	state	bmi_30_49.8	dm_(%)	n_obesity_state	Year
+<18 Years	Mississippi	8.76%	NA	262401	1/1/2025 - 11/12/2025
+<18 Years	Alabama	8.07%	NA	44433	1/1/2025 - 11/12/2025
+<18 Years	West Virginia	8.47%	NA	180711	1/1/2025 - 11/12/2025
+<18 Years	Kentucky	8.33%	NA	443594	1/1/2025 - 11/12/2025
+<18 Years	Nebraska	6.70%	NA	74516	1/1/2025 - 11/12/2025
+<18 Years	Indiana	7.01%	NA	442894	1/1/2025 - 11/12/2025
+<18 Years	Ohio	6.52%	NA	1320691	1/1/2025 - 11/12/2025
+<18 Years	Maryland	6.68%	NA	165735	1/1/2025 - 11/12/2025
+<18 Years	Kansas	6.60%	NA	109807	1/1/2025 - 11/12/2025
+<18 Years	Missouri	6.82%	NA	129977	1/1/2025 - 11/12/2025
+<18 Years	Louisiana	7.51%	NA	355614	1/1/2025 - 11/12/2025
+<18 Years	South Carolina	7.53%	NA	503373	1/1/2025 - 11/12/2025
+<18 Years	Tennessee	7.77%	NA	199744	1/1/2025 - 11/12/2025
+<18 Years	Iowa	6.82%	NA	371469	1/1/2025 - 11/12/2025
+<18 Years	Oklahoma	8.21%	NA	221923	1/1/2025 - 11/12/2025
+<18 Years	North Carolina	6.68%	NA	886899	1/1/2025 - 11/12/2025
+<18 Years	Virginia	6.69%	NA	507178	1/1/2025 - 11/12/2025
+<18 Years	Michigan	6.45%	NA	778356	1/1/2025 - 11/12/2025
+<18 Years	Puerto Rico	9.67%	NA	17164	1/1/2025 - 11/12/2025
+<18 Years	Illinois	6.76%	NA	940680	1/1/2025 - 11/12/2025
+<18 Years	Delaware	7.81%	NA	115030	1/1/2025 - 11/12/2025
+<18 Years	Arkansas	7.66%	NA	200730	1/1/2025 - 11/12/2025
+<18 Years	Pennsylvania	5.83%	NA	1112364	1/1/2025 - 11/12/2025
+<18 Years	Wisconsin	5.98%	NA	628447	1/1/2025 - 11/12/2025
+<18 Years	New Jersey	6.66%	NA	378408	1/1/2025 - 11/12/2025
+<18 Years	Minnesota	5.52%	NA	399266	1/1/2025 - 11/12/2025
+<18 Years	Connecticut	6.98%	NA	345385	1/1/2025 - 11/12/2025
+<18 Years	North Dakota	5.21%	NA	127315	1/1/2025 - 11/12/2025
+<18 Years	Georgia	6.21%	NA	584723	1/1/2025 - 11/12/2025
+<18 Years	New York	7.02%	NA	726720	1/1/2025 - 11/12/2025
+<18 Years	Texas	6.38%	NA	2418857	1/1/2025 - 11/12/2025
+<18 Years	Maine	6.76%	NA	99328	1/1/2025 - 11/12/2025
+<18 Years	New Mexico	7.67%	NA	19534	1/1/2025 - 11/12/2025
+<18 Years	Florida	6.38%	NA	1197888	1/1/2025 - 11/12/2025
+<18 Years	Wyoming	4.96%	NA	26991	1/1/2025 - 11/12/2025
+<18 Years	Idaho	5.29%	NA	160701	1/1/2025 - 11/12/2025
+<18 Years	New Hampshire	5.76%	NA	83524	1/1/2025 - 11/12/2025
+<18 Years	Montana	4.77%	NA	54295	1/1/2025 - 11/12/2025
+<18 Years	Arizona	5.40%	NA	193719	1/1/2025 - 11/12/2025
+<18 Years	Massachusetts	6.29%	NA	526942	1/1/2025 - 11/12/2025
+<18 Years	South Dakota	4.78%	NA	84259	1/1/2025 - 11/12/2025
+<18 Years	District of Columbia	5.20%	NA	2058	1/1/2025 - 11/12/2025
+<18 Years	Oregon	6.10%	NA	359392	1/1/2025 - 11/12/2025
+<18 Years	Vermont	6.09%	NA	43674	1/1/2025 - 11/12/2025
+<18 Years	Alaska	4.34%	NA	1450	1/1/2025 - 11/12/2025
+<18 Years	California	6.11%	NA	1434082	1/1/2025 - 11/12/2025
+<18 Years	Colorado	4.35%	NA	487323	1/1/2025 - 11/12/2025
+<18 Years	Hawaii	5.59%	NA	84215	1/1/2025 - 11/12/2025
+<18 Years	Nevada	6.01%	NA	120597	1/1/2025 - 11/12/2025
+<18 Years	Rhode Island	5.72%	NA	109351	1/1/2025 - 11/12/2025
+<18 Years	Utah	2.96%	NA	147803	1/1/2025 - 11/12/2025
+<18 Years	Washington	5.20%	NA	207209	1/1/2025 - 11/12/2025
+<18 Years	None of the above	5.27%	NA	214881	1/1/2025 - 11/12/2025
+<18 Years	Total	6.46%	NA	20653620	1/1/2025 - 11/12/2025
+18-24 Years	Mississippi	37.01%	NA	103559	1/1/2025 - 11/12/2025
+18-24 Years	Alabama	34.45%	NA	22722	1/1/2025 - 11/12/2025
+18-24 Years	West Virginia	36.85%	NA	63616	1/1/2025 - 11/12/2025
+18-24 Years	Kentucky	35.17%	NA	171567	1/1/2025 - 11/12/2025
+18-24 Years	Nebraska	27.58%	NA	57738	1/1/2025 - 11/12/2025
+18-24 Years	Indiana	32.70%	NA	170158	1/1/2025 - 11/12/2025
+18-24 Years	Ohio	30.45%	NA	578442	1/1/2025 - 11/12/2025
+18-24 Years	Maryland	28.34%	NA	96772	1/1/2025 - 11/12/2025
+18-24 Years	Kansas	28.62%	NA	56714	1/1/2025 - 11/12/2025
+18-24 Years	Missouri	30.89%	NA	63323	1/1/2025 - 11/12/2025
+18-24 Years	Louisiana	31.80%	NA	150671	1/1/2025 - 11/12/2025
+18-24 Years	South Carolina	31.00%	NA	203272	1/1/2025 - 11/12/2025
+18-24 Years	Tennessee	34.05%	NA	79396	1/1/2025 - 11/12/2025
+18-24 Years	Iowa	30.47%	NA	129486	1/1/2025 - 11/12/2025
+18-24 Years	Oklahoma	34.93%	NA	70409	1/1/2025 - 11/12/2025
+18-24 Years	North Carolina	30.08%	NA	374265	1/1/2025 - 11/12/2025
+18-24 Years	Virginia	28.34%	NA	246316	1/1/2025 - 11/12/2025
+18-24 Years	Michigan	27.77%	NA	333780	1/1/2025 - 11/12/2025
+18-24 Years	Puerto Rico	32.14%	NA	6310	1/1/2025 - 11/12/2025
+18-24 Years	Illinois	29.02%	NA	343543	1/1/2025 - 11/12/2025
+18-24 Years	Delaware	33.31%	NA	28106	1/1/2025 - 11/12/2025
+18-24 Years	Arkansas	35.62%	NA	54654	1/1/2025 - 11/12/2025
+18-24 Years	Pennsylvania	26.66%	NA	453860	1/1/2025 - 11/12/2025
+18-24 Years	Wisconsin	26.42%	NA	210598	1/1/2025 - 11/12/2025
+18-24 Years	New Jersey	25.95%	NA	175495	1/1/2025 - 11/12/2025
+18-24 Years	Minnesota	25.50%	NA	154626	1/1/2025 - 11/12/2025
+18-24 Years	Connecticut	24.31%	NA	159000	1/1/2025 - 11/12/2025
+18-24 Years	North Dakota	25.89%	NA	45736	1/1/2025 - 11/12/2025
+18-24 Years	Georgia	28.61%	NA	188405	1/1/2025 - 11/12/2025
+18-24 Years	New York	25.70%	NA	372003	1/1/2025 - 11/12/2025
+18-24 Years	Texas	31.42%	NA	642414	1/1/2025 - 11/12/2025
+18-24 Years	Maine	25.84%	NA	38732	1/1/2025 - 11/12/2025
+18-24 Years	New Mexico	29.08%	NA	12169	1/1/2025 - 11/12/2025
+18-24 Years	Florida	27.18%	NA	455196	1/1/2025 - 11/12/2025
+18-24 Years	Wyoming	26.11%	NA	9801	1/1/2025 - 11/12/2025
+18-24 Years	Idaho	26.33%	NA	60664	1/1/2025 - 11/12/2025
+18-24 Years	New Hampshire	23.06%	NA	31863	1/1/2025 - 11/12/2025
+18-24 Years	Montana	22.28%	NA	26472	1/1/2025 - 11/12/2025
+18-24 Years	Arizona	23.87%	NA	94106	1/1/2025 - 11/12/2025
+18-24 Years	Massachusetts	22.54%	NA	225130	1/1/2025 - 11/12/2025
+18-24 Years	South Dakota	23.58%	NA	30623	1/1/2025 - 11/12/2025
+18-24 Years	District of Columbia	20.81%	NA	6637	1/1/2025 - 11/12/2025
+18-24 Years	Oregon	24.50%	NA	128361	1/1/2025 - 11/12/2025
+18-24 Years	Vermont	20.42%	NA	20846	1/1/2025 - 11/12/2025
+18-24 Years	Alaska	16.06%	NA	1233	1/1/2025 - 11/12/2025
+18-24 Years	California	23.69%	NA	552384	1/1/2025 - 11/12/2025
+18-24 Years	Colorado	22.17%	NA	174985	1/1/2025 - 11/12/2025
+18-24 Years	Hawaii	23.79%	NA	30965	1/1/2025 - 11/12/2025
+18-24 Years	Nevada	24.10%	NA	56564	1/1/2025 - 11/12/2025
+18-24 Years	Rhode Island	19.18%	NA	42171	1/1/2025 - 11/12/2025
+18-24 Years	Utah	17.13%	NA	63616	1/1/2025 - 11/12/2025
+18-24 Years	Washington	20.98%	NA	93578	1/1/2025 - 11/12/2025
+18-24 Years	None of the above	24.11%	NA	103600	1/1/2025 - 11/12/2025
+18-24 Years	Total	27.93%	NA	8066652	1/1/2025 - 11/12/2025
+25-34 Years	Mississippi	53.85%	NA	150924	1/1/2025 - 11/12/2025
+25-34 Years	Alabama	50.89%	NA	38541	1/1/2025 - 11/12/2025
+25-34 Years	West Virginia	53.83%	NA	91687	1/1/2025 - 11/12/2025
+25-34 Years	Kentucky	51.74%	NA	263720	1/1/2025 - 11/12/2025
+25-34 Years	Nebraska	45.64%	NA	82932	1/1/2025 - 11/12/2025
+25-34 Years	Indiana	50.29%	NA	263419	1/1/2025 - 11/12/2025
+25-34 Years	Ohio	47.86%	NA	891285	1/1/2025 - 11/12/2025
+25-34 Years	Maryland	44.78%	NA	172761	1/1/2025 - 11/12/2025
+25-34 Years	Kansas	44.68%	NA	88500	1/1/2025 - 11/12/2025
+25-34 Years	Missouri	45.66%	NA	102525	1/1/2025 - 11/12/2025
+25-34 Years	Louisiana	48.61%	NA	215894	1/1/2025 - 11/12/2025
+25-34 Years	South Carolina	46.86%	NA	314999	1/1/2025 - 11/12/2025
+25-34 Years	Tennessee	47.83%	NA	128984	1/1/2025 - 11/12/2025
+25-34 Years	Iowa	49.11%	NA	178055	1/1/2025 - 11/12/2025
+25-34 Years	Oklahoma	50.53%	NA	104034	1/1/2025 - 11/12/2025
+25-34 Years	North Carolina	46.51%	NA	579598	1/1/2025 - 11/12/2025
+25-34 Years	Virginia	44.04%	NA	415006	1/1/2025 - 11/12/2025
+25-34 Years	Michigan	44.26%	NA	539917	1/1/2025 - 11/12/2025
+25-34 Years	Puerto Rico	45.07%	NA	8933	1/1/2025 - 11/12/2025
+25-34 Years	Illinois	45.65%	NA	515925	1/1/2025 - 11/12/2025
+25-34 Years	Delaware	51.78%	NA	33186	1/1/2025 - 11/12/2025
+25-34 Years	Arkansas	52.04%	NA	77709	1/1/2025 - 11/12/2025
+25-34 Years	Pennsylvania	42.59%	NA	717443	1/1/2025 - 11/12/2025
+25-34 Years	Wisconsin	43.61%	NA	304648	1/1/2025 - 11/12/2025
+25-34 Years	New Jersey	41.28%	NA	294827	1/1/2025 - 11/12/2025
+25-34 Years	Minnesota	41.76%	NA	228809	1/1/2025 - 11/12/2025
+25-34 Years	Connecticut	40.37%	NA	248253	1/1/2025 - 11/12/2025
+25-34 Years	North Dakota	43.13%	NA	71742	1/1/2025 - 11/12/2025
+25-34 Years	Georgia	44.41%	NA	282231	1/1/2025 - 11/12/2025
+25-34 Years	New York	39.03%	NA	635595	1/1/2025 - 11/12/2025
+25-34 Years	Texas	47.27%	NA	1048850	1/1/2025 - 11/12/2025
+25-34 Years	Maine	40.48%	NA	59722	1/1/2025 - 11/12/2025
+25-34 Years	New Mexico	41.98%	NA	22682	1/1/2025 - 11/12/2025
+25-34 Years	Florida	43.12%	NA	716230	1/1/2025 - 11/12/2025
+25-34 Years	Wyoming	42.99%	NA	14274	1/1/2025 - 11/12/2025
+25-34 Years	Idaho	41.82%	NA	87212	1/1/2025 - 11/12/2025
+25-34 Years	New Hampshire	39.50%	NA	44808	1/1/2025 - 11/12/2025
+25-34 Years	Montana	37.64%	NA	40908	1/1/2025 - 11/12/2025
+25-34 Years	Arizona	37.83%	NA	157666	1/1/2025 - 11/12/2025
+25-34 Years	Massachusetts	35.06%	NA	359946	1/1/2025 - 11/12/2025
+25-34 Years	South Dakota	39.07%	NA	42314	1/1/2025 - 11/12/2025
+25-34 Years	District of Columbia	27.24%	NA	24405	1/1/2025 - 11/12/2025
+25-34 Years	Oregon	35.91%	NA	207464	1/1/2025 - 11/12/2025
+25-34 Years	Vermont	33.13%	NA	32749	1/1/2025 - 11/12/2025
+25-34 Years	Alaska	31.31%	NA	1418	1/1/2025 - 11/12/2025
+25-34 Years	California	33.69%	NA	915653	1/1/2025 - 11/12/2025
+25-34 Years	Colorado	32.92%	NA	322014	1/1/2025 - 11/12/2025
+25-34 Years	Hawaii	36.79%	NA	51811	1/1/2025 - 11/12/2025
+25-34 Years	Nevada	35.55%	NA	102821	1/1/2025 - 11/12/2025
+25-34 Years	Rhode Island	31.66%	NA	62262	1/1/2025 - 11/12/2025
+25-34 Years	Utah	28.38%	NA	101422	1/1/2025 - 11/12/2025
+25-34 Years	Washington	30.83%	NA	181587	1/1/2025 - 11/12/2025
+25-34 Years	None of the above	34.90%	NA	195626	1/1/2025 - 11/12/2025
+25-34 Years	Total	42.86%	NA	12835926	1/1/2025 - 11/12/2025
+35-44 Years	Mississippi	58.12%	NA	168897	1/1/2025 - 11/12/2025
+35-44 Years	Alabama	53.81%	NA	48650	1/1/2025 - 11/12/2025
+35-44 Years	West Virginia	57.13%	NA	99144	1/1/2025 - 11/12/2025
+35-44 Years	Kentucky	55.03%	NA	283086	1/1/2025 - 11/12/2025
+35-44 Years	Nebraska	50.32%	NA	87049	1/1/2025 - 11/12/2025
+35-44 Years	Indiana	54.39%	NA	282959	1/1/2025 - 11/12/2025
+35-44 Years	Ohio	52.20%	NA	963902	1/1/2025 - 11/12/2025
+35-44 Years	Maryland	49.77%	NA	197022	1/1/2025 - 11/12/2025
+35-44 Years	Kansas	48.22%	NA	102372	1/1/2025 - 11/12/2025
+35-44 Years	Missouri	49.92%	NA	108068	1/1/2025 - 11/12/2025
+35-44 Years	Louisiana	52.80%	NA	247428	1/1/2025 - 11/12/2025
+35-44 Years	South Carolina	51.88%	NA	345615	1/1/2025 - 11/12/2025
+35-44 Years	Tennessee	51.67%	NA	138473	1/1/2025 - 11/12/2025
+35-44 Years	Iowa	53.66%	NA	193897	1/1/2025 - 11/12/2025
+35-44 Years	Oklahoma	53.13%	NA	117681	1/1/2025 - 11/12/2025
+35-44 Years	North Carolina	50.54%	NA	629156	1/1/2025 - 11/12/2025
+35-44 Years	Virginia	47.94%	NA	494029	1/1/2025 - 11/12/2025
+35-44 Years	Michigan	48.53%	NA	567562	1/1/2025 - 11/12/2025
+35-44 Years	Puerto Rico	54.17%	NA	8274	1/1/2025 - 11/12/2025
+35-44 Years	Illinois	50.85%	NA	550180	1/1/2025 - 11/12/2025
+35-44 Years	Delaware	57.00%	NA	37069	1/1/2025 - 11/12/2025
+35-44 Years	Arkansas	55.04%	NA	86049	1/1/2025 - 11/12/2025
+35-44 Years	Pennsylvania	46.83%	NA	802644	1/1/2025 - 11/12/2025
+35-44 Years	Wisconsin	49.16%	NA	328397	1/1/2025 - 11/12/2025
+35-44 Years	New Jersey	46.16%	NA	332830	1/1/2025 - 11/12/2025
+35-44 Years	Minnesota	47.03%	NA	261765	1/1/2025 - 11/12/2025
+35-44 Years	Connecticut	45.02%	NA	285353	1/1/2025 - 11/12/2025
+35-44 Years	North Dakota	47.09%	NA	77349	1/1/2025 - 11/12/2025
+35-44 Years	Georgia	49.15%	NA	320182	1/1/2025 - 11/12/2025
+35-44 Years	New York	44.28%	NA	674897	1/1/2025 - 11/12/2025
+35-44 Years	Texas	50.58%	NA	1200246	1/1/2025 - 11/12/2025
+35-44 Years	Maine	43.68%	NA	72130	1/1/2025 - 11/12/2025
+35-44 Years	New Mexico	44.77%	NA	25667	1/1/2025 - 11/12/2025
+35-44 Years	Florida	47.21%	NA	808062	1/1/2025 - 11/12/2025
+35-44 Years	Wyoming	45.02%	NA	16702	1/1/2025 - 11/12/2025
+35-44 Years	Idaho	44.10%	NA	95103	1/1/2025 - 11/12/2025
+35-44 Years	New Hampshire	43.88%	NA	51975	1/1/2025 - 11/12/2025
+35-44 Years	Montana	40.53%	NA	43930	1/1/2025 - 11/12/2025
+35-44 Years	Arizona	42.67%	NA	161033	1/1/2025 - 11/12/2025
+35-44 Years	Massachusetts	41.41%	NA	377551	1/1/2025 - 11/12/2025
+35-44 Years	South Dakota	42.41%	NA	45168	1/1/2025 - 11/12/2025
+35-44 Years	District of Columbia	34.14%	NA	20352	1/1/2025 - 11/12/2025
+35-44 Years	Oregon	38.95%	NA	224507	1/1/2025 - 11/12/2025
+35-44 Years	Vermont	35.16%	NA	42298	1/1/2025 - 11/12/2025
+35-44 Years	Alaska	39.50%	NA	1167	1/1/2025 - 11/12/2025
+35-44 Years	California	36.63%	NA	961373	1/1/2025 - 11/12/2025
+35-44 Years	Colorado	36.37%	NA	329231	1/1/2025 - 11/12/2025
+35-44 Years	Hawaii	38.00%	NA	62279	1/1/2025 - 11/12/2025
+35-44 Years	Nevada	38.70%	NA	106651	1/1/2025 - 11/12/2025
+35-44 Years	Rhode Island	36.27%	NA	67012	1/1/2025 - 11/12/2025
+35-44 Years	Utah	32.36%	NA	99253	1/1/2025 - 11/12/2025
+35-44 Years	Washington	35.39%	NA	198575	1/1/2025 - 11/12/2025
+35-44 Years	None of the above	40.41%	NA	172466	1/1/2025 - 11/12/2025
+35-44 Years	Total	47.17%	NA	14022710	1/1/2025 - 11/12/2025
+45-54 Years	Mississippi	60.91%	NA	197006	1/1/2025 - 11/12/2025
+45-54 Years	Alabama	56.27%	NA	62361	1/1/2025 - 11/12/2025
+45-54 Years	West Virginia	60.85%	NA	116123	1/1/2025 - 11/12/2025
+45-54 Years	Kentucky	58.81%	NA	303760	1/1/2025 - 11/12/2025
+45-54 Years	Nebraska	54.14%	NA	83037	1/1/2025 - 11/12/2025
+45-54 Years	Indiana	58.00%	NA	291835	1/1/2025 - 11/12/2025
+45-54 Years	Ohio	56.29%	NA	979730	1/1/2025 - 11/12/2025
+45-54 Years	Maryland	53.24%	NA	188303	1/1/2025 - 11/12/2025
+45-54 Years	Kansas	52.29%	NA	103261	1/1/2025 - 11/12/2025
+45-54 Years	Missouri	54.55%	NA	107125	1/1/2025 - 11/12/2025
+45-54 Years	Louisiana	55.88%	NA	246609	1/1/2025 - 11/12/2025
+45-54 Years	South Carolina	55.70%	NA	361761	1/1/2025 - 11/12/2025
+45-54 Years	Tennessee	54.42%	NA	160551	1/1/2025 - 11/12/2025
+45-54 Years	Iowa	57.65%	NA	188225	1/1/2025 - 11/12/2025
+45-54 Years	Oklahoma	55.40%	NA	124899	1/1/2025 - 11/12/2025
+45-54 Years	North Carolina	53.46%	NA	676019	1/1/2025 - 11/12/2025
+45-54 Years	Virginia	50.37%	NA	513778	1/1/2025 - 11/12/2025
+45-54 Years	Michigan	52.30%	NA	571797	1/1/2025 - 11/12/2025
+45-54 Years	Puerto Rico	58.63%	NA	9274	1/1/2025 - 11/12/2025
+45-54 Years	Illinois	53.86%	NA	581364	1/1/2025 - 11/12/2025
+45-54 Years	Delaware	59.17%	NA	37766	1/1/2025 - 11/12/2025
+45-54 Years	Arkansas	56.25%	NA	98320	1/1/2025 - 11/12/2025
+45-54 Years	Pennsylvania	50.60%	NA	787542	1/1/2025 - 11/12/2025
+45-54 Years	Wisconsin	53.84%	NA	314148	1/1/2025 - 11/12/2025
+45-54 Years	New Jersey	47.65%	NA	358707	1/1/2025 - 11/12/2025
+45-54 Years	Minnesota	52.00%	NA	242703	1/1/2025 - 11/12/2025
+45-54 Years	Connecticut	47.71%	NA	285444	1/1/2025 - 11/12/2025
+45-54 Years	North Dakota	53.65%	NA	63460	1/1/2025 - 11/12/2025
+45-54 Years	Georgia	52.15%	NA	362775	1/1/2025 - 11/12/2025
+45-54 Years	New York	47.11%	NA	677196	1/1/2025 - 11/12/2025
+45-54 Years	Texas	52.98%	NA	1227166	1/1/2025 - 11/12/2025
+45-54 Years	Maine	48.23%	NA	74467	1/1/2025 - 11/12/2025
+45-54 Years	New Mexico	48.10%	NA	26428	1/1/2025 - 11/12/2025
+45-54 Years	Florida	48.60%	NA	854198	1/1/2025 - 11/12/2025
+45-54 Years	Wyoming	49.33%	NA	17023	1/1/2025 - 11/12/2025
+45-54 Years	Idaho	47.19%	NA	99268	1/1/2025 - 11/12/2025
+45-54 Years	New Hampshire	48.05%	NA	55713	1/1/2025 - 11/12/2025
+45-54 Years	Montana	45.38%	NA	41570	1/1/2025 - 11/12/2025
+45-54 Years	Arizona	45.39%	NA	160011	1/1/2025 - 11/12/2025
+45-54 Years	Massachusetts	43.90%	NA	375992	1/1/2025 - 11/12/2025
+45-54 Years	South Dakota	47.44%	NA	41247	1/1/2025 - 11/12/2025
+45-54 Years	District of Columbia	40.46%	NA	14027	1/1/2025 - 11/12/2025
+45-54 Years	Oregon	43.23%	NA	208000	1/1/2025 - 11/12/2025
+45-54 Years	Vermont	38.27%	NA	43613	1/1/2025 - 11/12/2025
+45-54 Years	Alaska	42.45%	NA	994	1/1/2025 - 11/12/2025
+45-54 Years	California	38.89%	NA	912852	1/1/2025 - 11/12/2025
+45-54 Years	Colorado	39.66%	NA	292489	1/1/2025 - 11/12/2025
+45-54 Years	Hawaii	36.80%	NA	67639	1/1/2025 - 11/12/2025
+45-54 Years	Nevada	41.30%	NA	96516	1/1/2025 - 11/12/2025
+45-54 Years	Rhode Island	39.29%	NA	66116	1/1/2025 - 11/12/2025
+45-54 Years	Utah	34.65%	NA	94551	1/1/2025 - 11/12/2025
+45-54 Years	Washington	39.74%	NA	174405	1/1/2025 - 11/12/2025
+45-54 Years	None of the above	45.46%	NA	149881	1/1/2025 - 11/12/2025
+45-54 Years	Total	50.48%	NA	14189045	1/1/2025 - 11/12/2025
+55-64 Years	Mississippi	57.33%	NA	227206	1/1/2025 - 11/12/2025
+55-64 Years	Alabama	52.57%	NA	76895	1/1/2025 - 11/12/2025
+55-64 Years	West Virginia	58.30%	NA	136149	1/1/2025 - 11/12/2025
+55-64 Years	Kentucky	56.58%	NA	340426	1/1/2025 - 11/12/2025
+55-64 Years	Nebraska	53.13%	NA	93363	1/1/2025 - 11/12/2025
+55-64 Years	Indiana	55.80%	NA	321301	1/1/2025 - 11/12/2025
+55-64 Years	Ohio	54.53%	NA	1125825	1/1/2025 - 11/12/2025
+55-64 Years	Maryland	51.30%	NA	233459	1/1/2025 - 11/12/2025
+55-64 Years	Kansas	52.36%	NA	117380	1/1/2025 - 11/12/2025
+55-64 Years	Missouri	53.44%	NA	123553	1/1/2025 - 11/12/2025
+55-64 Years	Louisiana	53.55%	NA	278769	1/1/2025 - 11/12/2025
+55-64 Years	South Carolina	53.20%	NA	430334	1/1/2025 - 11/12/2025
+55-64 Years	Tennessee	51.17%	NA	194804	1/1/2025 - 11/12/2025
+55-64 Years	Iowa	56.09%	NA	207659	1/1/2025 - 11/12/2025
+55-64 Years	Oklahoma	53.26%	NA	141068	1/1/2025 - 11/12/2025
+55-64 Years	North Carolina	52.01%	NA	765845	1/1/2025 - 11/12/2025
+55-64 Years	Virginia	49.86%	NA	599802	1/1/2025 - 11/12/2025
+55-64 Years	Michigan	49.90%	NA	675864	1/1/2025 - 11/12/2025
+55-64 Years	Puerto Rico	53.90%	NA	10811	1/1/2025 - 11/12/2025
+55-64 Years	Illinois	51.90%	NA	650581	1/1/2025 - 11/12/2025
+55-64 Years	Delaware	56.35%	NA	51409	1/1/2025 - 11/12/2025
+55-64 Years	Arkansas	52.54%	NA	113981	1/1/2025 - 11/12/2025
+55-64 Years	Pennsylvania	49.77%	NA	949560	1/1/2025 - 11/12/2025
+55-64 Years	Wisconsin	52.56%	NA	368294	1/1/2025 - 11/12/2025
+55-64 Years	New Jersey	46.82%	NA	445753	1/1/2025 - 11/12/2025
+55-64 Years	Minnesota	51.53%	NA	280136	1/1/2025 - 11/12/2025
+55-64 Years	Connecticut	47.37%	NA	360657	1/1/2025 - 11/12/2025
+55-64 Years	North Dakota	52.47%	NA	66654	1/1/2025 - 11/12/2025
+55-64 Years	Georgia	50.22%	NA	408390	1/1/2025 - 11/12/2025
+55-64 Years	New York	46.51%	NA	875156	1/1/2025 - 11/12/2025
+55-64 Years	Texas	51.13%	NA	1259574	1/1/2025 - 11/12/2025
+55-64 Years	Maine	47.52%	NA	99160	1/1/2025 - 11/12/2025
+55-64 Years	New Mexico	44.43%	NA	34263	1/1/2025 - 11/12/2025
+55-64 Years	Florida	46.46%	NA	1045151	1/1/2025 - 11/12/2025
+55-64 Years	Wyoming	47.16%	NA	20721	1/1/2025 - 11/12/2025
+55-64 Years	Idaho	46.24%	NA	105725	1/1/2025 - 11/12/2025
+55-64 Years	New Hampshire	45.93%	NA	80075	1/1/2025 - 11/12/2025
+55-64 Years	Montana	44.85%	NA	46385	1/1/2025 - 11/12/2025
+55-64 Years	Arizona	43.50%	NA	181360	1/1/2025 - 11/12/2025
+55-64 Years	Massachusetts	43.36%	NA	453625	1/1/2025 - 11/12/2025
+55-64 Years	South Dakota	46.86%	NA	44513	1/1/2025 - 11/12/2025
+55-64 Years	District of Columbia	41.78%	NA	13369	1/1/2025 - 11/12/2025
+55-64 Years	Oregon	43.99%	NA	207008	1/1/2025 - 11/12/2025
+55-64 Years	Vermont	38.73%	NA	56292	1/1/2025 - 11/12/2025
+55-64 Years	Alaska	40.31%	NA	1290	1/1/2025 - 11/12/2025
+55-64 Years	California	37.63%	NA	969295	1/1/2025 - 11/12/2025
+55-64 Years	Colorado	38.92%	NA	295461	1/1/2025 - 11/12/2025
+55-64 Years	Hawaii	34.27%	NA	78835	1/1/2025 - 11/12/2025
+55-64 Years	Nevada	39.26%	NA	107084	1/1/2025 - 11/12/2025
+55-64 Years	Rhode Island	38.63%	NA	86573	1/1/2025 - 11/12/2025
+55-64 Years	Utah	33.40%	NA	86898	1/1/2025 - 11/12/2025
+55-64 Years	Washington	39.91%	NA	182314	1/1/2025 - 11/12/2025
+55-64 Years	None of the above	45.06%	NA	160510	1/1/2025 - 11/12/2025
+55-64 Years	Total	49.04%	NA	16286565	1/1/2025 - 11/12/2025
+65+ Years	Mississippi	45.50%	NA	394921	1/1/2025 - 11/12/2025
+65+ Years	Alabama	41.75%	NA	140374	1/1/2025 - 11/12/2025
+65+ Years	West Virginia	47.77%	NA	247869	1/1/2025 - 11/12/2025
+65+ Years	Kentucky	46.77%	NA	540499	1/1/2025 - 11/12/2025
+65+ Years	Nebraska	45.70%	NA	186233	1/1/2025 - 11/12/2025
+65+ Years	Indiana	47.90%	NA	540328	1/1/2025 - 11/12/2025
+65+ Years	Ohio	46.72%	NA	1934168	1/1/2025 - 11/12/2025
+65+ Years	Maryland	41.63%	NA	396690	1/1/2025 - 11/12/2025
+65+ Years	Kansas	45.72%	NA	225067	1/1/2025 - 11/12/2025
+65+ Years	Missouri	44.83%	NA	228701	1/1/2025 - 11/12/2025
+65+ Years	Louisiana	44.65%	NA	467787	1/1/2025 - 11/12/2025
+65+ Years	South Carolina	43.04%	NA	766097	1/1/2025 - 11/12/2025
+65+ Years	Tennessee	40.13%	NA	346899	1/1/2025 - 11/12/2025
+65+ Years	Iowa	48.18%	NA	377494	1/1/2025 - 11/12/2025
+65+ Years	Oklahoma	44.02%	NA	247500	1/1/2025 - 11/12/2025
+65+ Years	North Carolina	42.44%	NA	1317392	1/1/2025 - 11/12/2025
+65+ Years	Virginia	41.16%	NA	1026212	1/1/2025 - 11/12/2025
+65+ Years	Michigan	43.86%	NA	1151984	1/1/2025 - 11/12/2025
+65+ Years	Puerto Rico	39.20%	NA	12321	1/1/2025 - 11/12/2025
+65+ Years	Illinois	43.97%	NA	1140588	1/1/2025 - 11/12/2025
+65+ Years	Delaware	48.64%	NA	99719	1/1/2025 - 11/12/2025
+65+ Years	Arkansas	41.05%	NA	202776	1/1/2025 - 11/12/2025
+65+ Years	Pennsylvania	42.72%	NA	1656813	1/1/2025 - 11/12/2025
+65+ Years	Wisconsin	46.79%	NA	607238	1/1/2025 - 11/12/2025
+65+ Years	New Jersey	38.91%	NA	750052	1/1/2025 - 11/12/2025
+65+ Years	Minnesota	45.23%	NA	514264	1/1/2025 - 11/12/2025
+65+ Years	Connecticut	40.96%	NA	590606	1/1/2025 - 11/12/2025
+65+ Years	North Dakota	47.59%	NA	116546	1/1/2025 - 11/12/2025
+65+ Years	Georgia	40.39%	NA	674999	1/1/2025 - 11/12/2025
+65+ Years	New York	39.18%	NA	1541489	1/1/2025 - 11/12/2025
+65+ Years	Texas	41.55%	NA	2016512	1/1/2025 - 11/12/2025
+65+ Years	Maine	39.63%	NA	201199	1/1/2025 - 11/12/2025
+65+ Years	New Mexico	32.95%	NA	72046	1/1/2025 - 11/12/2025
+65+ Years	Florida	36.93%	NA	1916466	1/1/2025 - 11/12/2025
+65+ Years	Wyoming	38.73%	NA	45838	1/1/2025 - 11/12/2025
+65+ Years	Idaho	41.80%	NA	203227	1/1/2025 - 11/12/2025
+65+ Years	New Hampshire	38.19%	NA	145739	1/1/2025 - 11/12/2025
+65+ Years	Montana	38.76%	NA	91785	1/1/2025 - 11/12/2025
+65+ Years	Arizona	34.65%	NA	335622	1/1/2025 - 11/12/2025
+65+ Years	Massachusetts	37.30%	NA	739524	1/1/2025 - 11/12/2025
+65+ Years	South Dakota	41.03%	NA	78346	1/1/2025 - 11/12/2025
+65+ Years	District of Columbia	29.67%	NA	20375	1/1/2025 - 11/12/2025
+65+ Years	Oregon	38.22%	NA	394712	1/1/2025 - 11/12/2025
+65+ Years	Vermont	33.05%	NA	108621	1/1/2025 - 11/12/2025
+65+ Years	Alaska	32.69%	NA	2964	1/1/2025 - 11/12/2025
+65+ Years	California	28.92%	NA	1576240	1/1/2025 - 11/12/2025
+65+ Years	Colorado	32.61%	NA	524334	1/1/2025 - 11/12/2025
+65+ Years	Hawaii	24.17%	NA	153498	1/1/2025 - 11/12/2025
+65+ Years	Nevada	30.34%	NA	181709	1/1/2025 - 11/12/2025
+65+ Years	Rhode Island	34.79%	NA	149426	1/1/2025 - 11/12/2025
+65+ Years	Utah	26.52%	NA	169497	1/1/2025 - 11/12/2025
+65+ Years	Washington	34.49%	NA	325795	1/1/2025 - 11/12/2025
+65+ Years	None of the above	37.71%	NA	227545	1/1/2025 - 11/12/2025
+65+ Years	Total	40.84%	NA	28124646	1/1/2025 - 11/12/2025
+Total	Mississippi	43.97%	NA	1474962	1/1/2025 - 11/12/2025
+Total	Alabama	43.72%	NA	424338	1/1/2025 - 11/12/2025
+Total	West Virginia	43.70%	NA	908690	1/1/2025 - 11/12/2025
+Total	Kentucky	42.64%	NA	2273711	1/1/2025 - 11/12/2025
+Total	Nebraska	42.09%	NA	643955	1/1/2025 - 11/12/2025
+Total	Indiana	41.80%	NA	2293648	1/1/2025 - 11/12/2025
+Total	Ohio	41.33%	NA	7597501	1/1/2025 - 11/12/2025
+Total	Maryland	40.91%	NA	1419527	1/1/2025 - 11/12/2025
+Total	Kansas	40.87%	NA	783835	1/1/2025 - 11/12/2025
+Total	Missouri	40.83%	NA	839389	1/1/2025 - 11/12/2025
+Total	Louisiana	40.64%	NA	1903074	1/1/2025 - 11/12/2025
+Total	South Carolina	40.17%	NA	2831593	1/1/2025 - 11/12/2025
+Total	Tennessee	39.71%	NA	1221096	1/1/2025 - 11/12/2025
+Total	Iowa	39.70%	NA	1616329	1/1/2025 - 11/12/2025
+Total	Oklahoma	39.57%	NA	1008017	1/1/2025 - 11/12/2025
+Total	North Carolina	39.29%	NA	5097487	1/1/2025 - 11/12/2025
+Total	Virginia	38.99%	NA	3739893	1/1/2025 - 11/12/2025
+Total	Michigan	38.52%	NA	4476158	1/1/2025 - 11/12/2025
+Total	Puerto Rico	38.37%	NA	70943	1/1/2025 - 11/12/2025
+Total	Illinois	38.30%	NA	4620100	1/1/2025 - 11/12/2025
+Total	Delaware	38.22%	NA	413024	1/1/2025 - 11/12/2025
+Total	Arkansas	37.98%	NA	813584	1/1/2025 - 11/12/2025
+Total	Pennsylvania	37.32%	NA	6281631	1/1/2025 - 11/12/2025
+Total	Wisconsin	36.89%	NA	2739703	1/1/2025 - 11/12/2025
+Total	New Jersey	36.79%	NA	2665959	1/1/2025 - 11/12/2025
+Total	Minnesota	36.60%	NA	2144846	1/1/2025 - 11/12/2025
+Total	Connecticut	36.55%	NA	2206858	1/1/2025 - 11/12/2025
+Total	North Dakota	36.50%	NA	550263	1/1/2025 - 11/12/2025
+Total	Georgia	36.42%	NA	2753644	1/1/2025 - 11/12/2025
+Total	New York	36.28%	NA	5364643	1/1/2025 - 11/12/2025
+Total	Texas	36.14%	NA	9700871	1/1/2025 - 11/12/2025
+Total	Maine	36.09%	NA	624732	1/1/2025 - 11/12/2025
+Total	New Mexico	36.08%	NA	215067	1/1/2025 - 11/12/2025
+Total	Florida	35.35%	NA	6868167	1/1/2025 - 11/12/2025
+Total	Wyoming	34.89%	NA	148177	1/1/2025 - 11/12/2025
+Total	Idaho	34.56%	NA	792351	1/1/2025 - 11/12/2025
+Total	New Hampshire	34.38%	NA	480398	1/1/2025 - 11/12/2025
+Total	Montana	33.43%	NA	335432	1/1/2025 - 11/12/2025
+Total	Arizona	33.30%	NA	1303465	1/1/2025 - 11/12/2025
+Total	Massachusetts	32.44%	NA	2979127	1/1/2025 - 11/12/2025
+Total	South Dakota	32.17%	NA	355856	1/1/2025 - 11/12/2025
+Total	District of Columbia	31.66%	NA	98829	1/1/2025 - 11/12/2025
+Total	Oregon	31.28%	NA	1691023	1/1/2025 - 11/12/2025
+Total	Vermont	30.48%	NA	339598	1/1/2025 - 11/12/2025
+Total	Alaska	28.89%	NA	10463	1/1/2025 - 11/12/2025
+Total	California	27.70%	NA	7158790	1/1/2025 - 11/12/2025
+Total	Colorado	27.93%	NA	2368854	1/1/2025 - 11/12/2025
+Total	Hawaii	26.85%	NA	518344	1/1/2025 - 11/12/2025
+Total	Nevada	30.24%	NA	753906	1/1/2025 - 11/12/2025
+Total	Rhode Island	28.79%	NA	572144	1/1/2025 - 11/12/2025
+Total	Utah	23.67%	NA	747498	1/1/2025 - 11/12/2025
+Total	Washington	29.83%	NA	1332292	1/1/2025 - 11/12/2025
+Total	None of the above	32.32%	NA	1201982	1/1/2025 - 11/12/2025
+Total	Total	36.62%	NA	111775767	1/1/2025 - 11/12/2025
+<18 Years	American Samoa, South Pacific	NA	NA	17	1/1/2022 - 12/31/2022
+<18 Years	Federated States of Micronesia	NA	NA	5	1/1/2022 - 12/31/2022
+<18 Years	Northern Mariana Islands	NA	NA	5	1/1/2022 - 12/31/2022
+<18 Years	Guam	NA	NA	47	1/1/2022 - 12/31/2022
+<18 Years	Marshall Islands	NA	NA	5	1/1/2022 - 12/31/2022
+<18 Years	Armed Forces Africa	NA	NA	151	1/1/2022 - 12/31/2022
+<18 Years	Palau	NA	NA	5	1/1/2022 - 12/31/2022
+<18 Years	Virgin Islands	NA	NA	106	1/1/2022 - 12/31/2022
+<18 Years	Armed Forces America	NA	NA	19	1/1/2022 - 12/31/2022
+18-24 Years	American Samoa, South Pacific	NA	NA	5	1/1/2022 - 12/31/2022
+18-24 Years	Federated States of Micronesia	NA	NA	5	1/1/2022 - 12/31/2022
+18-24 Years	Northern Mariana Islands	NA	NA	5	1/1/2022 - 12/31/2022
+18-24 Years	Guam	NA	NA	20	1/1/2022 - 12/31/2022
+18-24 Years	Marshall Islands	NA	NA	5	1/1/2022 - 12/31/2022
+18-24 Years	Armed Forces Africa	NA	NA	47	1/1/2022 - 12/31/2022
+18-24 Years	Palau	NA	NA	5	1/1/2022 - 12/31/2022
+18-24 Years	Virgin Islands	NA	NA	67	1/1/2022 - 12/31/2022
+18-24 Years	Armed Forces America	NA	NA	5	1/1/2022 - 12/31/2022
+25-34 Years	American Samoa, South Pacific	NA	NA	5	1/1/2022 - 12/31/2022
+25-34 Years	Federated States of Micronesia	NA	NA	5	1/1/2022 - 12/31/2022
+25-34 Years	Northern Mariana Islands	NA	NA	5	1/1/2022 - 12/31/2022
+25-34 Years	Guam	43.75%	NA	48	1/1/2022 - 12/31/2022
+25-34 Years	Marshall Islands	NA	NA	5	1/1/2022 - 12/31/2022
+25-34 Years	Armed Forces Africa	23.53%	11.76%	102	1/1/2022 - 12/31/2022
+25-34 Years	Palau	NA	NA	5	1/1/2022 - 12/31/2022
+25-34 Years	Virgin Islands	20.49%	19.67%	122	1/1/2022 - 12/31/2022
+25-34 Years	Armed Forces America	NA	NA	5	1/1/2022 - 12/31/2022
+35-44 Years	American Samoa, South Pacific	60.00%	NA	20	1/1/2022 - 12/31/2022
+35-44 Years	Federated States of Micronesia	NA	NA	5	1/1/2022 - 12/31/2022
+35-44 Years	Northern Mariana Islands	NA	NA	5	1/1/2022 - 12/31/2022
+35-44 Years	Guam	29.79%	NA	47	1/1/2022 - 12/31/2022
+35-44 Years	Marshall Islands	NA	NA	5	1/1/2022 - 12/31/2022
+35-44 Years	Armed Forces Africa	29.92%	12.70%	244	1/1/2022 - 12/31/2022
+35-44 Years	Palau	NA	NA	5	1/1/2022 - 12/31/2022
+35-44 Years	Virgin Islands	21.32%	22.79%	272	1/1/2022 - 12/31/2022
+35-44 Years	Armed Forces America	NA	NA	34	1/1/2022 - 12/31/2022
+45-54 Years	American Samoa, South Pacific	58.62%	NA	29	1/1/2022 - 12/31/2022
+45-54 Years	Federated States of Micronesia	NA	NA	5	1/1/2022 - 12/31/2022
+45-54 Years	Northern Mariana Islands	NA	NA	15	1/1/2022 - 12/31/2022
+45-54 Years	Guam	45.45%	18.18%	66	1/1/2022 - 12/31/2022
+45-54 Years	Marshall Islands	NA	NA	5	1/1/2022 - 12/31/2022
+45-54 Years	Armed Forces Africa	34.87%	21.07%	261	1/1/2022 - 12/31/2022
+45-54 Years	Palau	NA	NA	5	1/1/2022 - 12/31/2022
+45-54 Years	Virgin Islands	32.66%	27.71%	646	1/1/2022 - 12/31/2022
+45-54 Years	Armed Forces America	NA	NA	36	1/1/2022 - 12/31/2022
+55-64 Years	American Samoa, South Pacific	62.22%	NA	45	1/1/2022 - 12/31/2022
+55-64 Years	Federated States of Micronesia	NA	NA	18	1/1/2022 - 12/31/2022
+55-64 Years	Northern Mariana Islands	NA	NA	17	1/1/2022 - 12/31/2022
+55-64 Years	Guam	37.38%	16.82%	107	1/1/2022 - 12/31/2022
+55-64 Years	Marshall Islands	NA	NA	5	1/1/2022 - 12/31/2022
+55-64 Years	Armed Forces Africa	35.51%	15.22%	138	1/1/2022 - 12/31/2022
+55-64 Years	Palau	NA	NA	5	1/1/2022 - 12/31/2022
+55-64 Years	Virgin Islands	28.46%	23.55%	794	1/1/2022 - 12/31/2022
+55-64 Years	Armed Forces America	NA	NA	5	1/1/2022 - 12/31/2022
+65+ Years	American Samoa, South Pacific	54.74%	25.26%	95	1/1/2022 - 12/31/2022
+65+ Years	Federated States of Micronesia	NA	NA	17	1/1/2022 - 12/31/2022
+65+ Years	Northern Mariana Islands	NA	NA	38	1/1/2022 - 12/31/2022
+65+ Years	Guam	27.51%	10.58%	189	1/1/2022 - 12/31/2022
+65+ Years	Marshall Islands	NA	NA	20	1/1/2022 - 12/31/2022
+65+ Years	Armed Forces Africa	32.35%	NA	34	1/1/2022 - 12/31/2022
+65+ Years	Palau	NA	NA	5	1/1/2022 - 12/31/2022
+65+ Years	Virgin Islands	19.13%	14.94%	1432	1/1/2022 - 12/31/2022
+65+ Years	Armed Forces America	NA	NA	5	1/1/2022 - 12/31/2022
+Total	American Samoa, South Pacific	55.61%	26.17%	214	1/1/2022 - 12/31/2022
+Total	Federated States of Micronesia	49.15%	28.81%	59	1/1/2022 - 12/31/2022
+Total	Northern Mariana Islands	32.58%	13.48%	89	1/1/2022 - 12/31/2022
+Total	Guam	31.39%	13.91%	532	1/1/2022 - 12/31/2022
+Total	Marshall Islands	30.56%	NA	36	1/1/2022 - 12/31/2022
+Total	Armed Forces Africa	25.88%	12.84%	997	1/1/2022 - 12/31/2022
+Total	Palau	NA	NA	5	1/1/2022 - 12/31/2022
+Total	Virgin Islands	23.35%	19.20%	3401	1/1/2022 - 12/31/2022
+Total	Armed Forces America	23.14%	9.09%	121	1/1/2022 - 12/31/2022
+<18 Years	Armed Forces Pacific	NA	NA	116	1/1/2021 - 12/31/2021
+18-24 Years	Armed Forces Pacific	NA	NA	24	1/1/2021 - 12/31/2021
+25-34 Years	Armed Forces Pacific	27.94%	NA	68	1/1/2021 - 12/31/2021
+35-44 Years	Armed Forces Pacific	28.79%	12.88%	132	1/1/2021 - 12/31/2021
+45-54 Years	Armed Forces Pacific	38.94%	16.81%	113	1/1/2021 - 12/31/2021
+55-64 Years	Armed Forces Pacific	25.35%	18.31%	71	1/1/2021 - 12/31/2021
+65+ Years	Armed Forces Pacific	NA	NA	18	1/1/2021 - 12/31/2021
+Total	Armed Forces Pacific	22.99%	11.31%	548	1/1/2021 - 12/31/2021

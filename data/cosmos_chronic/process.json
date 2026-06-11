@@ -839,13 +839,22 @@
   "checked": "2026-03-11 09:27:30",
   "check_results": {
     "data/cosmos_chronic/standard/county_no_time.csv.gz": {
-      "measures": ["missing_info: bmi_30_49.8", "missing_info: obesity_(%)", "missing_info: Year"]
+      "measures": [
+        "missing_info: bmi_30_49.8",
+        "missing_info: obesity_(%)",
+        "missing_info: Year"
+      ]
     },
     "data/cosmos_chronic/standard/county_year.csv.gz": {
       "measures": "missing_info: n_patients_chronic"
     },
     "data/cosmos_chronic/standard/state_no_time.csv.gz": {
-      "measures": ["missing_info: bmi_30_49.8", "missing_info: dm_(%)", "missing_info: n_patients", "missing_info: Year"]
+      "measures": [
+        "missing_info: bmi_30_49.8",
+        "missing_info: dm_(%)",
+        "missing_info: n_patients",
+        "missing_info: Year"
+      ]
     },
     "data/cosmos_chronic/standard/state_year.csv.gz": {
       "measures": "missing_info: n_patients_chronic"
@@ -857,5 +866,8 @@
     "./data/cosmos_chronic/standard/county_year.csv.gz": "01d618c95789bdd4cc74d5fe99d7f61d",
     "./data/cosmos_chronic/standard/state_no_time.csv.gz": "d760c310b7fcb339cbb08db51f7571b4",
     "./data/cosmos_chronic/standard/state_year.csv.gz": "273c618f440e71bd6fcb07b7356cfd55"
+  },
+  "raw_state": {
+    "hashes": ["370f5243fcc10fd96ae9472cd2bc2741", "7b4e7fbcdfcfd3375c0c799a7b8f1f0a", "28c64164c9c54c51328b5c44f38a9bed", "e78a928d64264a190f26d2ba5af9a12e", "7b21adb8742b800b68ef21bf94d18acf", "f1207af6c4bfbed23d5210c9d9b60da0", "a29dd082278cec0175d8b36b663bb0b4", "990fae6e2c78c394bfc981340f19a937", "77b086721108169e77b239dcf94acd3c", "dfdeba704bae251349442faa8db197e3", "17a947684d3aadf93bc8b777a8c28338", "51cc6d7a9394488b44f3f1afc85c4200", "dd2c88d83b4785a96142e9792c2c02f8", "2e170ebf12103151fa0deaae28678bd4", "60ec7993ca80aaccee71e304103eab9f", "e512edf3a408e314d3a4f39b7d9d50b6", "44af4b50d13b80e6660bef0d453c615d", "2acd966cf756707f1778bbbf3d0149bc", "a11e07edb60f31d4892747e940ab015e", "68ae4a6856ac306da97ab7152e9010ba", "e8a2640533b366da0eaa4886a717d042", "acc9eef7f643839a0502e9510a618cd5", "59cf5abd5af904dcb0682a96e1d829b9", "1e040905ef2f82bf4a1208f3ff680ee2", "f56cddfc075d75ac0e56781e9657870d", "29b1fb502fdc37a0fd9ba97de2ce20f6", "951df74135f2e058ddb6514c863d98d4", "dafa7e3b041daabc3aff723105585362", "329d957f0cb655e623e0ec454dbde5bb", "b5a00461ece76d05d11d421343bf6ce7"]
   }
 }
