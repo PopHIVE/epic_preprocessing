@@ -71,6 +71,18 @@
     "sources": [{ "id": "epic_cosmos" }]
   },
 
+  "suppressed_flag": {
+    "id": "suppressed_flag",
+    "short_name": "Suppressed flag",
+    "long_name": "Suppression flag for imputed counts",
+    "short_description": "Indicates whether the value was suppressed and imputed.",
+    "long_description": "Flag indicating whether the original count was suppressed due to privacy protections (counts fewer than 10) and imputed as 5. A value of 1 indicates the count was suppressed and imputed; 0 indicates the reported value is exact.",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Year",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
   "diabetes_dx_ccw": {
     "id": "diabetes_dx_ccw",
     "short_name": "Diabetes CCW definition",
