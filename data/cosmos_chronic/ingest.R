@@ -308,6 +308,7 @@ if (!identical(process$raw_state, current_state)) {
                n_patients_chronic, n_patients_ob),
              ~ replace(.x, is.na(.x), 0))
     ) %>%
+    filter(!startsWith(time, "2026")) %>%
     arrange(geography, age, time)
 
   vroom::vroom_write(combined_state, "standard/state_year.csv.gz", ",")
@@ -402,6 +403,7 @@ tmp <- combined_state %>% select(diabetes_a1c_6_5, suppressed_diabetes_a1c_6_5,
                n_patients_chronic, n_patients_ob_county),
              ~ replace(.x, is.na(.x), 0))
     ) |>
+    filter(!startsWith(time, "2026")) |>
     arrange(geography, age, time)
 
   vroom::vroom_write(combined_county, "standard/county_year.csv.gz", ",")
