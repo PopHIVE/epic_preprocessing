@@ -304,22 +304,24 @@ if (!identical(process$raw_state, current_state)) {
       suppressed_obesity_dx_ccw      = as.integer(is.na(obesity_dx_ccw)),
       suppressed_n_patients_chronic  = as.integer(is.na(n_patients_chronic)),
       suppressed_n_patients_ob       = as.integer(is.na(n_patients_ob)),
-      across(c(diabetes_a1c_6_5, diabetes_dx_ccw, obesity_bmi, obesity_dx_ccw,
-               n_patients_chronic, n_patients_ob),
-             ~ replace(.x, is.na(.x), 0))
+      across(c(n_patients_chronic, n_patients_ob), ~ replace(.x, is.na(.x), 5)),
+      diabetes_a1c_6_5 = if_else(is.na(diabetes_a1c_6_5), 5 / n_patients_chronic * 100, diabetes_a1c_6_5),
+      diabetes_dx_ccw  = if_else(is.na(diabetes_dx_ccw),  5 / n_patients_chronic * 100, diabetes_dx_ccw),
+      obesity_bmi      = if_else(is.na(obesity_bmi),      5 / n_patients_ob * 100,       obesity_bmi),
+      obesity_dx_ccw   = if_else(is.na(obesity_dx_ccw),   5 / n_patients_ob * 100,       obesity_dx_ccw)
     ) %>%
     filter(!startsWith(time, "2026")) %>%
     arrange(geography, age, time)
 
   vroom::vroom_write(combined_state, "standard/state_year.csv.gz", ",")
 
-tmp <- combined_state %>% select(diabetes_a1c_6_5, suppressed_diabetes_a1c_6_5, 
-                                diabetes_dx_ccw, suppressed_diabetes_dx_ccw, 
-                                obesity_bmi, suppressed_obesity_bmi,
-                                obesity_dx_ccw, suppressed_obesity_dx_ccw,
-                                n_patients_chronic, suppressed_n_patients_chronic,
-                                n_patients_ob, suppressed_n_patients_ob
-)
+# tmp <- combined_state %>% select(diabetes_a1c_6_5, suppressed_diabetes_a1c_6_5, 
+#                                 diabetes_dx_ccw, suppressed_diabetes_dx_ccw, 
+#                                 obesity_bmi, suppressed_obesity_bmi,
+#                                 obesity_dx_ccw, suppressed_obesity_dx_ccw,
+#                                 n_patients_chronic, suppressed_n_patients_chronic,
+#                                 n_patients_ob, suppressed_n_patients_ob
+# )
 
   # ---------------------------------------------------------------------------
   # 6. County-level import function (CSV files from staging_chronic)
@@ -399,9 +401,11 @@ tmp <- combined_state %>% select(diabetes_a1c_6_5, suppressed_diabetes_a1c_6_5,
       suppressed_obesity_dx_ccw        = as.integer(is.na(obesity_dx_ccw)),
       suppressed_n_patients_chronic    = as.integer(is.na(n_patients_chronic)),
       suppressed_n_patients_ob_county  = as.integer(is.na(n_patients_ob_county)),
-      across(c(diabetes_a1c_6_5, diabetes_dx_ccw, obesity_bmi, obesity_dx_ccw,
-               n_patients_chronic, n_patients_ob_county),
-             ~ replace(.x, is.na(.x), 0))
+      across(c(n_patients_chronic, n_patients_ob_county), ~ replace(.x, is.na(.x), 5)),
+      diabetes_a1c_6_5 = if_else(is.na(diabetes_a1c_6_5), 5 / n_patients_chronic * 100,   diabetes_a1c_6_5),
+      diabetes_dx_ccw  = if_else(is.na(diabetes_dx_ccw),  5 / n_patients_chronic * 100,   diabetes_dx_ccw),
+      obesity_bmi      = if_else(is.na(obesity_bmi),      5 / n_patients_ob_county * 100,  obesity_bmi),
+      obesity_dx_ccw   = if_else(is.na(obesity_dx_ccw),   5 / n_patients_ob_county * 100,  obesity_dx_ccw)
     ) |>
     filter(!startsWith(time, "2026")) |>
     arrange(geography, age, time)
