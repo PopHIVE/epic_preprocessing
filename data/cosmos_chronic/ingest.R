@@ -228,6 +228,7 @@ if (!identical(process$raw_state, current_state)) {
       ) %>%
       mutate(
         age            = if_else(grepl("Total\\*", state_name), "Total", age),
+        age            = if_else(grepl("Total", age), "Total", age),
         age            = clean_age(age),
         age            = case_when(
           age == "1-5 Years"   ~ "1-4 Years",
@@ -254,9 +255,9 @@ if (!identical(process$raw_state, current_state)) {
       mutate(
         yr_num          = as.integer(sub("yr", "", yr_idx)),
         time            = year_dates[yr_num],
-        suppressed_flag = as.integer(
-          trimws(as.character(.data[[measure_names[3]]])) == "10 or fewer"
-        )
+        # suppressed_flag = as.integer(
+        #   trimws(as.character(.data[[measure_names[3]]])) == "10 or fewer"
+        # )
       ) %>%
       mutate(across(
         all_of(measure_names),
@@ -266,7 +267,7 @@ if (!identical(process$raw_state, current_state)) {
           as.numeric(gsub("%", "", v))
         }
       )) %>%
-      select(age, geography, time, all_of(measure_names), suppressed_flag)
+      select(age, geography, time, all_of(measure_names))
   }
 
   # ---------------------------------------------------------------------------
@@ -287,19 +288,37 @@ if (!identical(process$raw_state, current_state)) {
     ob_csv,
     skip_rows     = 14,
     measure_names = c("obesity_dx_ccw", "obesity_bmi", "n_patients_ob")
-  ) %>%
-    select(-n_patients_ob)
+  ) # %>%
+    # rename(suppressed_flag_ob = suppressed_flag)
 
   # ---------------------------------------------------------------------------
   # 5. Combine state data and write
   # ---------------------------------------------------------------------------
   combined_state <- full_join(dm, ob, by = c("age", "geography", "time")) %>%
     select(age, geography, time, diabetes_a1c_6_5, diabetes_dx_ccw,
-           obesity_bmi, obesity_dx_ccw, n_patients_chronic,
-           suppressed_flag) %>%
+           obesity_bmi, obesity_dx_ccw, n_patients_chronic, n_patients_ob) %>%
+    mutate(
+      suppressed_diabetes_a1c_6_5    = as.integer(is.na(diabetes_a1c_6_5)),
+      suppressed_diabetes_dx_ccw     = as.integer(is.na(diabetes_dx_ccw)),
+      suppressed_obesity_bmi         = as.integer(is.na(obesity_bmi)),
+      suppressed_obesity_dx_ccw      = as.integer(is.na(obesity_dx_ccw)),
+      suppressed_n_patients_chronic  = as.integer(is.na(n_patients_chronic)),
+      suppressed_n_patients_ob       = as.integer(is.na(n_patients_ob)),
+      across(c(diabetes_a1c_6_5, diabetes_dx_ccw, obesity_bmi, obesity_dx_ccw,
+               n_patients_chronic, n_patients_ob),
+             ~ replace(.x, is.na(.x), 0))
+    ) %>%
     arrange(geography, age, time)
 
   vroom::vroom_write(combined_state, "standard/state_year.csv.gz", ",")
+
+tmp <- combined_state %>% select(diabetes_a1c_6_5, suppressed_diabetes_a1c_6_5, 
+                                diabetes_dx_ccw, suppressed_diabetes_dx_ccw, 
+                                obesity_bmi, suppressed_obesity_bmi,
+                                obesity_dx_ccw, suppressed_obesity_dx_ccw,
+                                n_patients_chronic, suppressed_n_patients_chronic,
+                                n_patients_ob, suppressed_n_patients_ob
+)
 
   # ---------------------------------------------------------------------------
   # 6. County-level import function (CSV files from staging_chronic)
@@ -325,9 +344,9 @@ if (!identical(process$raw_state, current_state)) {
         age = gsub("65 Years or more", "65+ Years", age),
         age = if_else(grepl("Total", age), "Total", age),
 
-        suppressed_flag    = as.integer(
-          trimws(n_patients_chronic) == "10 or fewer"
-        ),
+       # suppressed_flag    = as.integer(
+       #  trimws(n_patients_chronic) == "10 or fewer"
+       #),
         ccw                = as.numeric(na_if(gsub("%", "", ccw), "-")),
         lab                = as.numeric(na_if(gsub("%", "", lab), "-")),
         n_patients_chronic = as.numeric(if_else(
@@ -348,7 +367,7 @@ if (!identical(process$raw_state, current_state)) {
         time    = paste0(yearset, "-01-01")
       ) %>%
       dplyr::select(age, geography, time, ccw, lab,
-                    n_patients_chronic, suppressed_flag) %>%
+                    n_patients_chronic) %>% #, suppressed_flag
       filter(!is.na(geography))
   }
 
@@ -360,18 +379,29 @@ if (!identical(process$raw_state, current_state)) {
     rename(diabetes_a1c_6_5 = lab,
            diabetes_dx_ccw  = ccw)
 
-  all_obesity_county <- lapply(stage_obesity_county, chronic_import_county) %>%
-    bind_rows() %>%
-    rename(obesity_bmi    = lab,
-           obesity_dx_ccw = ccw) %>%
+  all_obesity_county <- lapply(stage_obesity_county, chronic_import_county) |>
+    bind_rows() |>
+    rename(obesity_bmi          = lab,
+           obesity_dx_ccw       = ccw,
+           n_patients_ob_county = n_patients_chronic) |> #,           suppressed_flag_ob   = suppressed_flag
     unique()
 
-  combined_county <- all_obesity_county %>%
-    dplyr::select(-n_patients_chronic, -suppressed_flag) %>%
-    full_join(all_diabetes_county, by = c("geography", "time", "age")) %>%
+  combined_county <- all_obesity_county |>
+    full_join(all_diabetes_county, by = c("geography", "time", "age")) |>
     select(age, geography, time, diabetes_a1c_6_5, diabetes_dx_ccw,
            obesity_bmi, obesity_dx_ccw, n_patients_chronic,
-           suppressed_flag) %>%
+           n_patients_ob_county) |>
+    mutate(
+      suppressed_diabetes_a1c_6_5      = as.integer(is.na(diabetes_a1c_6_5)),
+      suppressed_diabetes_dx_ccw       = as.integer(is.na(diabetes_dx_ccw)),
+      suppressed_obesity_bmi           = as.integer(is.na(obesity_bmi)),
+      suppressed_obesity_dx_ccw        = as.integer(is.na(obesity_dx_ccw)),
+      suppressed_n_patients_chronic    = as.integer(is.na(n_patients_chronic)),
+      suppressed_n_patients_ob_county  = as.integer(is.na(n_patients_ob_county)),
+      across(c(diabetes_a1c_6_5, diabetes_dx_ccw, obesity_bmi, obesity_dx_ccw,
+               n_patients_chronic, n_patients_ob_county),
+             ~ replace(.x, is.na(.x), 0))
+    ) |>
     arrange(geography, age, time)
 
   vroom::vroom_write(combined_county, "standard/county_year.csv.gz", ",")
