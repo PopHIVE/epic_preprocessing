@@ -228,6 +228,7 @@ if (!identical(process$raw_state, current_state)) {
       ) %>%
       mutate(
         age            = if_else(grepl("Total\\*", state_name), "Total", age),
+        age            = if_else(grepl("Total", age), "Total", age),
         age            = clean_age(age),
         age            = case_when(
           age == "1-5 Years"   ~ "1-4 Years",
