@@ -395,6 +395,18 @@ if (!identical(process$raw_state, current_state)) {
            obesity_bmi, obesity_dx_ccw, n_patients_chronic,
            n_patients_ob_county) |>
     mutate(
+      age = case_when(
+        age == "1-5 Years"   ~ "1-4 Years",
+        age == "5-18 Years"  ~ "5-17 Years",
+        age == "18-25 Years" ~ "18-24 Years",
+        age == "18-50 Years" ~ "18-49 Years",
+        age == "25-35 Years" ~ "25-34 Years",
+        age == "35-45 Years" ~ "35-44 Years",
+        age == "45-55 Years" ~ "45-54 Years",
+        age == "50-65 Years" ~ "50-64 Years",
+        age == "55-65 Years" ~ "55-64 Years",
+        TRUE                 ~ age
+      ),
       suppressed_diabetes_a1c_6_5      = as.integer(is.na(diabetes_a1c_6_5)),
       suppressed_diabetes_dx_ccw       = as.integer(is.na(diabetes_dx_ccw)),
       suppressed_obesity_bmi           = as.integer(is.na(obesity_bmi)),
