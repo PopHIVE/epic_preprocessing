@@ -1,8 +1,8 @@
 [
   {
-    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-06-18T10_06_58.xlsx",
-    "md5": "416cbb8e1e32cd3c1bc9bef73c45485c",
-    "date_processed": "2026-06-18 11:19:53.187251",
+    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-07-13T09_19_50.xlsx",
+    "md5": "f5e1a75304feaf9653c378c03c8f9849",
+    "date_processed": "2026-07-13 11:06:39.125748",
     "Session Title": "Number of ED Encounters by ED Diagnoses and State of Residence and Age at Time of Visit Range",
     "Session ID": "2804049",
     "Data Model": "ED Encounters",
@@ -10,32 +10,32 @@
     "Population Criteria Filters": "",
     "Session Date Range": "1/7/2018 - 12/25/2021 (Based On Arrival Date)",
     "Export User": "Number of ED Encounters",
-    "Date of Export": "Daniel Weinberger"
+    "Date of Export": "Anne Shapiro"
   },
   {
-    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-06-18T10_13_42.xlsx",
-    "md5": "2b4b44683a951c3e3556df9ce9ef5a4f",
-    "date_processed": "2026-06-18 11:19:56.008459",
+    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-07-13T09_42_15.xlsx",
+    "md5": "fe0a48377fa5c68a2d834623a8344f88",
+    "date_processed": "2026-07-13 11:06:41.45081",
     "Session Title": "Number of ED Encounters by ED Diagnoses and State of Residence and Age at Time of Visit Range",
-    "Session ID": "2804037",
+    "Session ID": "2842158",
     "Data Model": "ED Encounters",
     "Population Base": "All ED Encounters",
     "Population Criteria Filters": "Country of Residence: United States of America",
     "Session Date Range": "12/26/2021 - 12/28/2024 (Based On Arrival Date)",
     "Export User": "Number of ED Encounters",
-    "Date of Export": "Daniel Weinberger"
+    "Date of Export": "Anne Shapiro"
   },
   {
-    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-06-18T10_17_58.xlsx",
-    "md5": "c20c433d88a8e2134392e7ec5f81ca27",
-    "date_processed": "2026-06-18 11:19:59.603203",
+    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-07-13T09_49_52.xlsx",
+    "md5": "7bafc1ac7c6a5cc19d57762d29acb406",
+    "date_processed": "2026-07-13 11:06:43.417177",
     "Session Title": "Number of ED Encounters by ED Diagnoses and State of Residence and Age at Time of Visit Range",
-    "Session ID": "2804031",
+    "Session ID": "2842162",
     "Data Model": "ED Encounters",
     "Population Base": "All ED Encounters",
     "Population Criteria Filters": "Country of Residence: United States of America",
-    "Session Date Range": "12/29/2024 - 6/1/2026 (Based On Arrival Date)",
+    "Session Date Range": "12/23/2024 - 6/22/2026 (Based On Arrival Date)",
     "Export User": "Number of ED Encounters",
-    "Date of Export": "Daniel Weinberger"
+    "Date of Export": "Anne Shapiro"
   }
 ]
