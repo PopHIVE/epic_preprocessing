@@ -74,6 +74,102 @@
     "sources": [{ "id": "epic_cosmos" }]
   },
 
+  "epic_n_cyclospora_positive": {
+    "id": "epic_n_cyclospora_positive",
+    "short_name": "Cyclospora Positive Encounters",
+    "long_name": "Encounters with an Abnormal (Positive) Cyclospora Lab Result",
+    "short_description": "Number of encounters with an abnormal (positive) cyclospora lab result.",
+    "long_description": "Number of encounters with an abnormal (positive) cyclospora lab test result, by state and month. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5. Note: this measure has no age breakdown and is not restricted to emergency department encounters.",
+    "measure_type": "Count",
+    "unit": "encounters",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_n_cyclospora_tested": {
+    "id": "epic_n_cyclospora_tested",
+    "short_name": "Cyclospora Tests Performed",
+    "long_name": "Encounters with a Cyclospora Lab Test Performed",
+    "short_description": "Number of encounters with a cyclospora lab test performed, regardless of result.",
+    "long_description": "Number of encounters with a cyclospora lab test performed (any result), by state and month. Used as the denominator for the percent-positive measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5. Note: this measure has no age breakdown and is not restricted to emergency department encounters.",
+    "measure_type": "Count",
+    "unit": "encounters",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_n_encounters_total": {
+    "id": "epic_n_encounters_total",
+    "short_name": "All Encounters (Any Reason)",
+    "long_name": "Total Encounters for Any Reason",
+    "short_description": "Total number of encounters for any reason, by state and month.",
+    "long_description": "Total count of encounters for any reason (not restricted to the emergency department), used as the population denominator for the cyclospora testing rate. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts fewer than 10 are suppressed and imputed as 5.",
+    "measure_type": "Count",
+    "unit": "encounters",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_pct_cyclospora_positive": {
+    "id": "epic_pct_cyclospora_positive",
+    "short_name": "Cyclospora Percent Positive",
+    "long_name": "Percent of Cyclospora Lab Tests that were Positive",
+    "short_description": "Percent of cyclospora lab tests with an abnormal (positive) result.",
+    "long_description": "Percentage of cyclospora lab tests returning an abnormal (positive) result, calculated as epic_n_cyclospora_positive divided by epic_n_cyclospora_tested for the same geography and month.",
+    "measure_type": "Percent",
+    "unit": "%",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_pct_cyclospora_tested": {
+    "id": "epic_pct_cyclospora_tested",
+    "short_name": "Percent Tested for Cyclospora",
+    "long_name": "Percent of All Encounters with a Cyclospora Lab Test Performed",
+    "short_description": "Percent of all encounters that included a cyclospora lab test.",
+    "long_description": "Percentage of all encounters (any reason) that included a cyclospora lab test, calculated as epic_n_cyclospora_tested divided by epic_n_encounters_total for the same geography and month.",
+    "measure_type": "Percent",
+    "unit": "%",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_suppressed_flag_cyclospora_positive": {
+    "id": "epic_suppressed_flag_cyclospora_positive",
+    "short_name": "Cyclospora Positive Count Suppressed?",
+    "long_name": "Suppression flag: fewer than 10 cyclospora-positive encounters in the strata",
+    "short_description": "Binary indicator: 1 if the cyclospora-positive encounter count was suppressed, 0 otherwise.",
+    "long_description": "Binary indicator: 1 if fewer than 10 cyclospora-positive encounters in the strata, 0 otherwise. When suppressed, the corresponding count (epic_n_cyclospora_positive) is imputed as 5.",
+    "measure_type": "binary",
+    "unit": "",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_suppressed_flag_cyclospora_tested": {
+    "id": "epic_suppressed_flag_cyclospora_tested",
+    "short_name": "Cyclospora Tested Count Suppressed?",
+    "long_name": "Suppression flag: fewer than 10 cyclospora-tested encounters in the strata",
+    "short_description": "Binary indicator: 1 if the cyclospora-tested encounter count was suppressed, 0 otherwise.",
+    "long_description": "Binary indicator: 1 if fewer than 10 encounters with a cyclospora lab test in the strata, 0 otherwise. When suppressed, the corresponding count (epic_n_cyclospora_tested) is imputed as 5.",
+    "measure_type": "binary",
+    "unit": "",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
+  "epic_suppressed_flag_encounters_total": {
+    "id": "epic_suppressed_flag_encounters_total",
+    "short_name": "Total Encounters Count Suppressed?",
+    "long_name": "Suppression flag: fewer than 10 total encounters in the strata",
+    "short_description": "Binary indicator: 1 if the total encounter count was suppressed, 0 otherwise.",
+    "long_description": "Binary indicator: 1 if fewer than 10 total encounters (any reason) in the strata, 0 otherwise. When suppressed, the corresponding count (epic_n_encounters_total) is imputed as 5.",
+    "measure_type": "binary",
+    "unit": "",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }]
+  },
+
   "_sources": {
     "epic_cosmos": {
       "name": "Epic Cosmos",

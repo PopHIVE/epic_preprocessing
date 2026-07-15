@@ -19,6 +19,7 @@
   "standalone": false,
   "vintages": {
     "weekly.csv.gz": "7/15/2026",
-    "monthly.csv.gz": "7/15/2026"
+    "monthly.csv.gz": "7/15/2026",
+    "monthly_cyclospora.csv.gz": "7/15/2026"
   }
 }
