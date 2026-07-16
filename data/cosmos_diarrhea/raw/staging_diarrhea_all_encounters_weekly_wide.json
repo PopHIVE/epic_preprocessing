@@ -1,10 +1,10 @@
 [
   {
-    "file": "raw/staging_cyclospora_weekly_wide/Encounters_Crosstab_2026-07-16T07_53_39.xlsx",
-    "md5": "78d4f1b928b07c62cfd42f192f84e17c",
-    "date_processed": "2026-07-16 12:41:56.18223",
-    "Session Title": "Number of Encounters by (All) Lab Components and (Abnormal) Lab Components and State of Residence",
-    "Session ID": "2842605",
+    "file": "raw/staging_diarrhea_all_encounters_weekly_wide/Encounters_Crosstab_2026-07-16T11_19_50.xlsx",
+    "md5": "aadb7a3cba9a79a8703bb798213c2adf",
+    "date_processed": "2026-07-16 12:41:51.891934",
+    "Session Title": "Number of Encounters by State of Residence and Diagnosis (All) and Age in Years Range",
+    "Session ID": "2842875",
     "Data Model": "Encounters",
     "Population Base": "All Encounters",
     "Population Criteria Filters": "Country of Residence: United States of America",
