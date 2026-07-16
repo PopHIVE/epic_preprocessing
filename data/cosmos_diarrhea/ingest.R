@@ -322,8 +322,229 @@ build_standard_table <- function(data_long, suffix) {
 weekly_standard <- build_standard_table(weekly_long, "weekly")
 monthly_standard <- build_standard_table(monthly_long, "monthly")
 
-vroom::vroom_write(weekly_standard, "standard/weekly.csv.gz", ",")
 vroom::vroom_write(monthly_standard, "standard/monthly.csv.gz", ",")
+
+# =============================================================================
+# 2b. Merge the state x age x week "all encounters" (non-ED) diarrhea
+#     crosstab into weekly.csv.gz, labeling the original ED measure "ed_" and
+#     the new one "all_". Only weeks present in BOTH sources are kept, since
+#     this new export starts a year later (2023-06-23) than the ED export
+#     (2022-06-23).
+# =============================================================================
+
+process_diarrhea_all_encounters_weekly_wide <- function(file, password = NULL) {
+  message("Processing diarrhea all-encounters (state x age) weekly file: ", basename(file))
+
+  decrypted_file <- tempfile(fileext = ".xlsx")
+  cmd <- sprintf(
+    'python -m msoffcrypto -p "%s" "%s" "%s"',
+    password, normalizePath(file, winslash = "/"), decrypted_file
+  )
+  status <- system(cmd)
+  if (status != 0) stop("Failed to decrypt: ", file)
+
+  wb <- openxlsx2::wb_load(decrypted_file)
+  all_rows <- openxlsx2::wb_to_df(
+    wb, sheet = 1, col_names = FALSE,
+    skip_empty_rows = FALSE, skip_empty_cols = FALSE
+  )
+  if (file.exists(decrypted_file)) unlink(decrypted_file)
+
+  all_rows <- as.data.frame(
+    lapply(all_rows, function(x) {
+      x <- as.character(x)
+      x[is.na(x)] <- ""
+      x
+    }),
+    stringsAsFactors = FALSE
+  )
+
+  meta_fields <- c(
+    "Session Title", "Session ID", "Data Model", "Population Base",
+    "Population Criteria Filters", "Session Date Range", "Measure",
+    "Export User", "Date of Export"
+  )
+  meta <- list(
+    file = file,
+    md5 = unname(tools::md5sum(file)),
+    date_processed = as.character(Sys.time())
+  )
+  for (i in seq_along(meta_fields)) {
+    meta[[meta_fields[i]]] <- trimws(as.character(all_rows[i, 2]))
+  }
+
+  row12 <- as.character(all_rows[12, ])
+  row13 <- as.character(all_rows[13, ])
+
+  n_cols <- ncol(all_rows)
+  id_cols <- 3L  # Year, Week, State of Residence (note: different column
+                 # order than the ED crosstab's State, Year, Week)
+
+  # Three outcome blocks: diarrhea, "None of the above" (dropped -- fully
+  # redundant with Total - diarrhea), Total (all-cause, any reason).
+  outcome_raw <- row12[(id_cols + 1):n_cols]
+  outcome_raw[outcome_raw == ""] <- NA
+  outcome_raw <- zoo::na.locf(outcome_raw, na.rm = FALSE)
+  outcome_std <- case_when(
+    grepl("^Total", outcome_raw) ~ "encounters_total_weekly",
+    grepl("^diarrhea", outcome_raw) ~ "all_diarrhea",
+    TRUE ~ NA_character_
+  )
+
+  age_raw <- trimws(row13[(id_cols + 1):n_cols])
+
+  col_meta <- data.frame(
+    col_idx = (id_cols + 1):n_cols,
+    outcome = outcome_std,
+    age_raw = age_raw,
+    stringsAsFactors = FALSE
+  )
+
+  data_raw <- all_rows[15:nrow(all_rows), , drop = FALSE]
+  colnames(data_raw) <- c("year_raw", "week_raw", "state_name", paste0("v", (id_cols + 1):n_cols))
+  rownames(data_raw) <- NULL
+
+  data_raw$year_raw[data_raw$year_raw == ""] <- NA
+  data_raw$week_raw[data_raw$week_raw == ""] <- NA
+  data_raw$state_name[data_raw$state_name == ""] <- NA
+  data_raw <- tidyr::fill(data_raw, year_raw, week_raw, state_name, .direction = "down")
+
+  data_long <- data_raw %>%
+    tidyr::pivot_longer(
+      cols = starts_with("v"),
+      names_to = "col_name",
+      values_to = "val"
+    ) %>%
+    mutate(col_idx = as.integer(sub("v", "", col_name))) %>%
+    left_join(col_meta, by = "col_idx") %>%
+    filter(!is.na(outcome))  # drop "None of the above" block
+
+  # Thu-Wed 7-day weekly buckets, same as the other weekly crosstabs -- map
+  # to the Saturday within each complete week.
+  parsed <- parse_week_range(data_long$week_raw, data_long$year_raw)
+  data_long <- data_long %>%
+    mutate(start_date = parsed$start_date, n_days = parsed$n_days) %>%
+    filter(n_days == 7) %>%
+    mutate(
+      sat_offset = (6 - as.integer(format(start_date, "%u"))) %% 7,
+      time = start_date + sat_offset
+    ) %>%
+    select(-n_days, -sat_offset, -start_date)
+
+  data_long <- data_long %>%
+    mutate(
+      val = trimws(val),
+      suppressed = val == "10 or fewer",
+      value = suppressWarnings(as.numeric(ifelse(suppressed, "5", val))),
+      age = trimws(age_raw)
+    ) %>%
+    # "No value" = encounters with undocumented age; no equivalent bucket in
+    # the ED crosstab, so dropped rather than merged as a fabricated group.
+    filter(age != "No value") %>%
+    mutate(
+      age = stringr::str_replace(age, "^Less than\\s+(\\d+)(?:\\s+Years?)?$", "<\\1 Years"),
+      age = stringr::str_replace(age, "^(\\d+)\\s+(?:Years\\s+)?or more$", "\\1+ Years"),
+      age = {
+        m <- stringr::str_match(age, "^[^0-9]*?(\\d+)\\s+and\\s+<\\s*(\\d+)(?:\\s*Years?)?$")
+        lower <- m[, 2]
+        upper <- as.character(as.integer(m[, 3]) - 1L)
+        ifelse(!is.na(lower), paste0(lower, "-", upper, " Years"), age)
+      }
+    ) %>%
+    select(state_name, age, outcome, time, value, suppressed)
+
+  return(list(data = data_long, metadata = meta))
+}
+
+standardize_all_encounters_geo <- function(data_long) {
+  valid_states <- c(state.name, "District of Columbia")
+
+  data_long %>%
+    mutate(
+      is_national = grepl("^Total", state_name),
+      state_clean = case_when(
+        is_national ~ "Total",
+        state_name %in% valid_states ~ state_name,
+        TRUE ~ NA_character_
+      )
+    ) %>%
+    filter(!is.na(state_clean)) %>%
+    mutate(geography_name = ifelse(state_clean == "Total", "United States", state_clean)) %>%
+    left_join(state_fips_lookup, by = "geography_name") %>%
+    filter(!is.na(geography)) %>%
+    select(geography, age, outcome, time, value, suppressed)
+}
+
+build_all_encounters_weekly_table <- function(data_long) {
+  value_wide <- data_long %>%
+    select(geography, age, time, outcome, value) %>%
+    pivot_wider(names_from = outcome, values_from = value, values_fn = sum)
+
+  suppressed_wide <- data_long %>%
+    mutate(
+      supp_col = paste0("suppressed_flag_", outcome),
+      suppressed = as.integer(suppressed)
+    ) %>%
+    select(geography, age, time, supp_col, suppressed) %>%
+    pivot_wider(names_from = supp_col, values_from = suppressed, values_fn = max)
+
+  value_wide %>%
+    left_join(suppressed_wide, by = c("geography", "age", "time")) %>%
+    filter(!is.na(age)) %>%
+    rename(
+      n_all_diarrhea = all_diarrhea,
+      n_encounters_total_weekly = encounters_total_weekly
+    ) %>%
+    mutate(pct_all_diarrhea = 100 * n_all_diarrhea / n_encounters_total_weekly) %>%
+    rename_with(~ paste0("epic_", .x), .cols = -c(geography, time, age)) %>%
+    arrange(geography, age, time) %>%
+    select(
+      geography, age, time,
+      starts_with("epic_n"),
+      starts_with("epic_pct"),
+      starts_with("epic_suppressed")
+    )
+}
+
+all_encounters_weekly_files <- list.files(
+  "raw/staging_diarrhea_all_encounters_weekly_wide", "\\.xlsx$", full.names = TRUE
+)
+all_encounters_weekly_results <- lapply(
+  all_encounters_weekly_files, process_diarrhea_all_encounters_weekly_wide, password = xlsx_password
+)
+
+jsonlite::write_json(
+  lapply(all_encounters_weekly_results, `[[`, "metadata"),
+  "raw/staging_diarrhea_all_encounters_weekly_wide.json",
+  auto_unbox = TRUE, pretty = TRUE
+)
+
+all_encounters_weekly_long <- standardize_all_encounters_geo(
+  bind_rows(lapply(all_encounters_weekly_results, `[[`, "data"))
+)
+all_encounters_weekly_standard <- build_all_encounters_weekly_table(all_encounters_weekly_long)
+
+weekly_standard_ed <- weekly_standard %>%
+  rename(
+    epic_n_ed_diarrhea = epic_n_diarrhea,
+    epic_n_ed_encounters_weekly = epic_n_all_encounters_weekly,
+    epic_pct_ed_diarrhea = epic_pct_diarrhea,
+    epic_suppressed_flag_ed_diarrhea = epic_suppressed_flag_diarrhea,
+    epic_suppressed_flag_ed_encounters_weekly = epic_suppressed_flag_all_encounters_weekly
+  )
+
+# Keep only weeks present in both sources (the all-encounters export starts
+# a year later than the ED export).
+shared_weeks <- intersect(weekly_standard_ed$time, all_encounters_weekly_standard$time)
+
+weekly_combined <- inner_join(
+  weekly_standard_ed %>% filter(time %in% shared_weeks),
+  all_encounters_weekly_standard %>% filter(time %in% shared_weeks),
+  by = c("geography", "age", "time")
+) %>%
+  arrange(geography, age, time)
+
+vroom::vroom_write(weekly_combined, "standard/weekly.csv.gz", ",")
 
 # =============================================================================
 # 3. Process cyclospora lab test crosstab from raw/staging_cyclospora_wide/
@@ -824,7 +1045,10 @@ vroom::vroom_write(weekly_tests_standard, "standard/weekly_tests.csv.gz", ",")
 
 process <- dcf::dcf_process_record()
 process$vintages <- list(
-  weekly.csv.gz = wide_metadata[[which(granularities == "week")]][["Date of Export"]],
+  weekly.csv.gz = max(
+    as.Date(wide_metadata[[which(granularities == "week")]][["Date of Export"]], "%m/%d/%Y"),
+    as.Date(all_encounters_weekly_results[[1]]$metadata[["Date of Export"]], "%m/%d/%Y")
+  ) |> format("%m/%d/%Y"),
   monthly.csv.gz = wide_metadata[[which(granularities == "month")]][["Date of Export"]],
   monthly_cyclospora.csv.gz = cyclospora_metadata[[1]][["Date of Export"]],
   weekly_tests.csv.gz = cyclospora_weekly_results[[1]]$metadata[["Date of Export"]]
