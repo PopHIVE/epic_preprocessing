@@ -1,16 +1,16 @@
 [
   {
-    "file": "raw/staging_cyclospora_wide/Encounters_Crosstab_2026-07-15T14_12_54.xlsx",
-    "md5": "972ea4dfc98b97d848e127564d1f8178",
-    "date_processed": "2026-07-16 11:33:33.054703",
+    "file": "raw/staging_cyclospora_weekly_wide/Encounters_Crosstab_2026-07-16T07_53_39.xlsx",
+    "md5": "78d4f1b928b07c62cfd42f192f84e17c",
+    "date_processed": "2026-07-16 11:33:38.023728",
     "Session Title": "Number of Encounters by (All) Lab Components and (Abnormal) Lab Components and State of Residence",
-    "Session ID": "2842667",
+    "Session ID": "2842605",
     "Data Model": "Encounters",
     "Population Base": "All Encounters",
     "Population Criteria Filters": "Country of Residence: United States of America",
     "Session Date Range": "6/23/2023 - 6/22/2026 (Based On Encounter Start Date)",
     "Measure": "Number of Encounters",
     "Export User": "Anne Shapiro",
-    "Date of Export": "7/15/2026"
+    "Date of Export": "7/16/2026"
   }
 ]
