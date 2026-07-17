@@ -325,11 +325,17 @@ monthly_standard <- build_standard_table(monthly_long, "monthly")
 vroom::vroom_write(monthly_standard, "standard/monthly.csv.gz", ",")
 
 # =============================================================================
-# 2b. Merge the state x age x week "all encounters" (non-ED) diarrhea
-#     crosstab into weekly.csv.gz, labeling the original ED measure "ed_" and
-#     the new one "all_". Only weeks present in BOTH sources are kept, since
-#     this new export starts a year later (2023-06-23) than the ED export
-#     (2022-06-23).
+# 2b. Process the state x age x week "all encounters" (non-ED) diarrhea
+#     crosstab and merge it with the ED weekly measure into one standard file,
+#     standard/data_weekly.csv.gz. The two sources use different SlicerDicer
+#     weekly bucket anchors (the ED export's buckets run Thu-Wed; the
+#     all-encounters export's run Fri-Thu -- both are 7-day spans anchored to
+#     their own export date, not CDC epiweeks), so their most recent
+#     *complete* week can land on different Saturdays depending on when each
+#     was exported. A full join on (geography, age, time) merges them without
+#     truncating either source to the other's max date -- weeks present in
+#     only one source get NA for the other source's columns rather than
+#     being silently dropped.
 # =============================================================================
 
 process_diarrhea_all_encounters_weekly_wide <- function(file, password = NULL) {
@@ -387,7 +393,7 @@ process_diarrhea_all_encounters_weekly_wide <- function(file, password = NULL) {
   outcome_raw <- zoo::na.locf(outcome_raw, na.rm = FALSE)
   outcome_std <- case_when(
     grepl("^Total", outcome_raw) ~ "encounters_total_weekly",
-    grepl("^diarrhea", outcome_raw) ~ "all_diarrhea",
+    grepl("^diarrhea", outcome_raw, ignore.case = TRUE) ~ "all_diarrhea",
     TRUE ~ NA_character_
   )
 
@@ -531,20 +537,16 @@ weekly_standard_ed <- weekly_standard %>%
     epic_pct_ed_diarrhea = epic_pct_diarrhea,
     epic_suppressed_flag_ed_diarrhea = epic_suppressed_flag_diarrhea,
     epic_suppressed_flag_ed_encounters_weekly = epic_suppressed_flag_all_encounters_weekly
-  )
+  ) %>%
+  arrange(geography, age, time)
 
-# Keep only weeks present in both sources (the all-encounters export starts
-# a year later than the ED export).
-shared_weeks <- intersect(weekly_standard_ed$time, all_encounters_weekly_standard$time)
-
-weekly_combined <- inner_join(
-  weekly_standard_ed %>% filter(time %in% shared_weeks),
-  all_encounters_weekly_standard %>% filter(time %in% shared_weeks),
+data_weekly <- full_join(
+  weekly_standard_ed, all_encounters_weekly_standard,
   by = c("geography", "age", "time")
 ) %>%
   arrange(geography, age, time)
 
-vroom::vroom_write(weekly_combined, "standard/weekly.csv.gz", ",")
+vroom::vroom_write(data_weekly, "standard/data_weekly.csv.gz", ",")
 
 # =============================================================================
 # 3. Process cyclospora lab test crosstab from raw/staging_cyclospora_wide/
@@ -1045,10 +1047,10 @@ vroom::vroom_write(weekly_tests_standard, "standard/weekly_tests.csv.gz", ",")
 
 process <- dcf::dcf_process_record()
 process$vintages <- list(
-  weekly.csv.gz = max(
-    as.Date(wide_metadata[[which(granularities == "week")]][["Date of Export"]], "%m/%d/%Y"),
-    as.Date(all_encounters_weekly_results[[1]]$metadata[["Date of Export"]], "%m/%d/%Y")
-  ) |> format("%m/%d/%Y"),
+  data_weekly.csv.gz = list(
+    ed = wide_metadata[[which(granularities == "week")]][["Date of Export"]],
+    all_encounters = all_encounters_weekly_results[[1]]$metadata[["Date of Export"]]
+  ),
   monthly.csv.gz = wide_metadata[[which(granularities == "month")]][["Date of Export"]],
   monthly_cyclospora.csv.gz = cyclospora_metadata[[1]][["Date of Export"]],
   weekly_tests.csv.gz = cyclospora_weekly_results[[1]]$metadata[["Date of Export"]]

@@ -18,7 +18,10 @@
   "check_results": [],
   "standalone": false,
   "vintages": {
-    "weekly.csv.gz": "07/16/2026",
+    "data_weekly.csv.gz": {
+      "ed": "7/16/2026",
+      "all_encounters": "7/17/2026"
+    },
     "monthly.csv.gz": "7/15/2026",
     "monthly_cyclospora.csv.gz": "7/15/2026",
     "weekly_tests.csv.gz": "7/16/2026"

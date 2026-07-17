@@ -1,22 +1,8 @@
 {
-  "raw/staging_diarrhea_wide/ED Encounters_Crosstab_2026-07-15T12_13_16.xlsx": {
-    "file": "raw/staging_diarrhea_wide/ED Encounters_Crosstab_2026-07-15T12_13_16.xlsx",
-    "md5": "44221535854633b8c344cb95ec68d52b",
-    "date_processed": "2026-07-16 12:41:47.11296",
-    "Session Title": "Number of ED Encounters by ED Diagnoses and Age at Time of Visit Range and State of Residence",
-    "Session ID": "2842602",
-    "Data Model": "ED Encounters",
-    "Population Base": "All ED Encounters",
-    "Population Criteria Filters": "Country of Residence: United States of America",
-    "Session Date Range": "6/23/2022 - 6/29/2026 (Based On Arrival Date)",
-    "Measure": "Number of ED Encounters",
-    "Export User": "Anne Shapiro",
-    "Date of Export": "7/15/2026"
-  },
   "raw/staging_diarrhea_wide/ED Encounters_Crosstab_2026-07-15T12_41_41.xlsx": {
     "file": "raw/staging_diarrhea_wide/ED Encounters_Crosstab_2026-07-15T12_41_41.xlsx",
     "md5": "96fc77ef90890add4207e986f8f10b70",
-    "date_processed": "2026-07-16 12:41:49.708459",
+    "date_processed": "2026-07-17 08:53:29.535357",
     "Session Title": "Number of ED Encounters by ED Diagnoses and Age at Time of Visit Range and State of Residence",
     "Session ID": "2842665",
     "Data Model": "ED Encounters",
@@ -26,5 +12,19 @@
     "Measure": "Number of ED Encounters",
     "Export User": "Anne Shapiro",
     "Date of Export": "7/15/2026"
+  },
+  "raw/staging_diarrhea_wide/ED Encounters_Crosstab_2026-07-16T19_34_23.xlsx": {
+    "file": "raw/staging_diarrhea_wide/ED Encounters_Crosstab_2026-07-16T19_34_23.xlsx",
+    "md5": "ad0f81e24a73a798c03aa2c4ba50629a",
+    "date_processed": "2026-07-17 08:53:30.540935",
+    "Session Title": "Number of ED Encounters by ED Diagnoses and Age at Time of Visit Range and State of Residence",
+    "Session ID": "2843060",
+    "Data Model": "ED Encounters",
+    "Population Base": "All ED Encounters",
+    "Population Criteria Filters": "Country of Residence: United States of America",
+    "Session Date Range": "6/30/2022 - 6/29/2026 (Based On Arrival Date)",
+    "Measure": "Number of ED Encounters",
+    "Export User": "Anne Shapiro",
+    "Date of Export": "7/16/2026"
   }
 }
