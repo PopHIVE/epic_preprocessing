@@ -1,7 +1,7 @@
 # =============================================================================
 # Epic Cosmos Diarrhea Data Ingestion
 # Source: Epic SlicerDicer exports - ED visits for all-cause diarrhea
-#         (ICD-10: A00-09, R19.7), weekly and monthly, by state and age
+#         (ICD-10: A00-09, R19.7), weekly, by state and age
 # =============================================================================
 
 library(tidyverse)
@@ -195,31 +195,8 @@ xlsx_password <- Sys.getenv("EPIC_XLSX_PASSWORD")  # add password to environment
 
 wide_files <- list.files("raw/staging_diarrhea_wide", "\\.xlsx$", full.names = TRUE)
 
-# Weekly export has a "Week" id column; monthly export has "Month". Detect by
-# reading row 14 (id column headers) directly rather than hardcoding filenames.
-detect_granularity <- function(file, password) {
-  decrypted_file <- tempfile(fileext = ".xlsx")
-  cmd <- sprintf(
-    'python -m msoffcrypto -p "%s" "%s" "%s"',
-    password, normalizePath(file, winslash = "/"), decrypted_file
-  )
-  system(cmd)
-  wb <- openxlsx2::wb_load(decrypted_file)
-  row14 <- openxlsx2::wb_to_df(
-    wb, sheet = 1, rows = 14, col_names = FALSE,
-    skip_empty_rows = FALSE, skip_empty_cols = FALSE
-  )
-  unlink(decrypted_file)
-  header <- trimws(as.character(row14[1, 3]))
-  if (grepl("Week", header, ignore.case = TRUE)) "week" else "month"
-}
-
-granularities <- sapply(wide_files, detect_granularity, password = xlsx_password)
-
-wide_results <- Map(
-  function(file, granularity) process_diarrhea_wide(file, granularity, password = xlsx_password),
-  wide_files, granularities
-)
+# Only the weekly export is retained in this folder now (monthly removed).
+wide_results <- lapply(wide_files, process_diarrhea_wide, granularity = "week", password = xlsx_password)
 
 # Save metadata from wide-format file headers to JSON
 wide_metadata <- lapply(wide_results, `[[`, "metadata")
@@ -273,8 +250,7 @@ standardize_diarrhea_data <- function(data_long) {
   data_long
 }
 
-weekly_long <- standardize_diarrhea_data(wide_results[[which(granularities == "week")]]$data)
-monthly_long <- standardize_diarrhea_data(wide_results[[which(granularities == "month")]]$data)
+weekly_long <- standardize_diarrhea_data(wide_results[[1]]$data)
 
 # =============================================================================
 # 2. Pivot to wide standard format and compute percentages
@@ -320,9 +296,6 @@ build_standard_table <- function(data_long, suffix) {
 }
 
 weekly_standard <- build_standard_table(weekly_long, "weekly")
-monthly_standard <- build_standard_table(monthly_long, "monthly")
-
-vroom::vroom_write(monthly_standard, "standard/monthly.csv.gz", ",")
 
 # =============================================================================
 # 2b. Process the state x age x week "all encounters" (non-ED) diarrhea
@@ -563,9 +536,9 @@ vroom::vroom_write(data_weekly, "standard/data_weekly.csv.gz", ",")
 #     cyclospora test performed (any result), and "Total" gives all
 #     encounters for any reason -- the population denominator. Note this
 #     denominator is NOT ED-specific (Population Base: "All Encounters"),
-#     unlike epic_n_all_encounters_weekly/monthly above.
+#     unlike epic_n_ed_encounters_weekly in data_weekly.csv.gz above.
 # Because this file has no age breakdown, it is kept as its own standardized
-# output (state x month grain) rather than merged into monthly.csv.gz.
+# output (state x month grain) rather than merged into data_weekly.csv.gz.
 # =============================================================================
 
 process_cyclospora_wide <- function(file, password = NULL) {
@@ -1048,10 +1021,9 @@ vroom::vroom_write(weekly_tests_standard, "standard/weekly_tests.csv.gz", ",")
 process <- dcf::dcf_process_record()
 process$vintages <- list(
   data_weekly.csv.gz = list(
-    ed = wide_metadata[[which(granularities == "week")]][["Date of Export"]],
+    ed = wide_metadata[[1]][["Date of Export"]],
     all_encounters = all_encounters_weekly_results[[1]]$metadata[["Date of Export"]]
   ),
-  monthly.csv.gz = wide_metadata[[which(granularities == "month")]][["Date of Export"]],
   monthly_cyclospora.csv.gz = cyclospora_metadata[[1]][["Date of Export"]],
   weekly_tests.csv.gz = cyclospora_weekly_results[[1]]$metadata[["Date of Export"]]
 )
