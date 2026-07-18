@@ -174,9 +174,8 @@ extract_measure <- function(data, val_col, measure_name) {
     select(state_name, time, measure, value, suppressed)
 }
 
-# Cyclospora crosstabs (monthly and weekly) share the same abnormal-lab
-# layout: "Cyclospora abnormal" gives positives, "Total" gives both tests
-# performed (v_tested) and the population denominator (v_total).
+# Cyclospora crosstab: "Cyclospora abnormal" gives positives, "Total" gives
+# both tests performed (v_tested) and the population denominator (v_total).
 extract_cyclospora_measures <- function(data_raw, total_measure_name) {
   bind_rows(
     data_raw %>% filter(abn_lab == "Cyclospora abnormal") %>%
@@ -481,145 +480,27 @@ data_weekly <- full_join(
 
 vroom::vroom_write(data_weekly, "standard/data_weekly.csv.gz", ",")
 
-# =============================================================================
-# 3. Process cyclospora lab test crosstab from raw/staging_cyclospora_wide/
-# =============================================================================
-# This export has a different layout and grain than the ED diarrhea crosstab
-# above: id columns are Year, Month, "(Abnormal) Lab Components", State of
-# Residence (no age breakdown), with two value columns nested under "(All)
-# Lab Components": "cyclospora lab tests" and "Total". The row-level
-# abnormal-lab dimension has two categories:
-#   - "Cyclospora abnormal": encounters with an abnormal (positive) cyclospora
-#     lab result. Both value columns collapse to the same count here.
-#   - "Total" (all abnormal lab types, i.e. the unfiltered population): the
-#     "cyclospora lab tests" column gives the number of encounters with a
-#     cyclospora test performed (any result), and "Total" gives all
-#     encounters for any reason -- the population denominator. Note this
-#     denominator is NOT ED-specific (Population Base: "All Encounters"),
-#     unlike epic_n_ed_encounters_weekly in data_weekly.csv.gz above.
-# Because this file has no age breakdown, it is kept as its own standardized
-# output (state x month grain) rather than merged into data_weekly.csv.gz.
-# =============================================================================
-
-process_cyclospora_wide <- function(file, password = NULL) {
-  message("Processing cyclospora file: ", basename(file))
-
-  loaded <- load_slicerdicer_xlsx(file, password)
-  all_rows <- loaded$all_rows
-  meta <- loaded$meta
-
-  # Row 13 id headers span cols 1-4 (Year, Month, Abnormal Lab Components,
-  # State of Residence); value columns are 5 (cyclospora lab tests) and 6 (Total)
-  data_raw <- all_rows[14:nrow(all_rows), , drop = FALSE]
-  colnames(data_raw) <- c("year_raw", "month_raw", "abn_lab_raw", "state_name", "v_tested", "v_total")
-  rownames(data_raw) <- NULL
-
-  data_raw$year_raw[data_raw$year_raw == ""] <- NA
-  data_raw$month_raw[data_raw$month_raw == ""] <- NA
-  data_raw$abn_lab_raw[data_raw$abn_lab_raw == ""] <- NA
-  data_raw <- tidyr::fill(data_raw, year_raw, month_raw, abn_lab_raw, .direction = "down")
-
-  data_raw <- data_raw %>%
-    mutate(abn_lab = if_else(grepl("^Total:", abn_lab_raw), "Total", abn_lab_raw)) %>%
-    # Keep only complete calendar months (partial start/end months use day
-    # numbers/ranges instead of a 3-letter abbreviation)
-    filter(month_raw %in% month.abb) %>%
-    mutate(
-      month_num = match(month_raw, month.abb),
-      year_num = as.integer(year_raw),
-      time = lubridate::ceiling_date(
-        as.Date(paste(year_num, month_num, "01", sep = "-")), "month"
-      ) - lubridate::days(1)
-    )
-
-  data_long <- extract_cyclospora_measures(data_raw, "encounters_total")
-
-  return(list(data = data_long, metadata = meta))
-}
-
 standardize_measure_geo <- function(data_long) {
   map_state_to_geography(data_long) %>%
     select(geography, measure, time, value, suppressed)
 }
 
-build_cyclospora_table <- function(data_long) {
-  pivot_epic_measures(data_long, c("geography", "time"), "measure") %>%
-    rename(
-      n_cyclospora_positive = cyclospora_positive,
-      n_cyclospora_tested = cyclospora_tested,
-      n_encounters_total = encounters_total
-    ) %>%
-    mutate(
-      pct_cyclospora_positive = 100 * n_cyclospora_positive / n_cyclospora_tested,
-      pct_cyclospora_tested = 100 * n_cyclospora_tested / n_encounters_total
-    ) %>%
-    rename_with(~ paste0("epic_", .x), .cols = -c(geography, time)) %>%
-    arrange(geography, time) %>%
-    select(
-      geography, time,
-      starts_with("epic_n"),
-      starts_with("epic_pct"),
-      starts_with("epic_suppressed")
-    )
-}
-
-cyclospora_files <- list.files("raw/staging_cyclospora_wide", "\\.xlsx$", full.names = TRUE)
-cyclospora_results <- lapply(cyclospora_files, process_cyclospora_wide, password = xlsx_password)
-write_metadata_json(cyclospora_results, "raw/staging_cyclospora_wide.json")
-
-cyclospora_long <- standardize_measure_geo(bind_rows(lapply(cyclospora_results, `[[`, "data")))
-cyclospora_standard <- build_cyclospora_table(cyclospora_long)
-
-vroom::vroom_write(cyclospora_standard, "standard/monthly_cyclospora.csv.gz", ",")
-
 # =============================================================================
-# 4. Process weekly cyclospora + state-level "all encounters" diarrhea
-#    crosstabs into standard/weekly_tests.csv.gz
+# 3. Combine weekly cyclospora lab tests with the state-level "all
+#    encounters" diarrhea totals into standard/weekly_tests.csv.gz
 # =============================================================================
-# Two new weekly exports, population base "All Encounters" (not ED-specific),
-# kept fully separate from the parsing/output above:
-#   - raw/staging_cyclospora_weekly_wide/: the same Cyclospora lab-test
-#     crosstab as monthly_cyclospora.csv.gz above, but at weekly grain, with
-#     a state breakdown (no age).
-#   - raw/staging_diarrhea_by_state_wide/: Diagnosis (All) x State of
-#     Residence crosstab (no age breakdown) -- diarrhea across ALL encounter
-#     types (not ED-specific), by state and week.
-# Both report the same "Total encounters, any reason" denominator per state
-# per week (verified to match exactly), so they are combined into one file,
-# standard/weekly_tests.csv.gz, keyed by (geography, time). No age dimension
-# exists in either source.
+# raw/staging_diarrhea_all_encounters_weekly_wide/ (section 2b above) already
+# contains an age == "Total" row per state/week/outcome -- the all-ages
+# diarrhea and total-encounters counts -- so those two measures are reused
+# from all_encounters_weekly_long below rather than re-parsed from a separate
+# by-state-only crosstab (confirmed identical, aside from +/-1 noise between
+# export snapshots, against raw/staging_diarrhea_by_state_wide/ before it was
+# dropped). raw/staging_cyclospora_weekly_wide/ has no age dimension and no
+# equivalent elsewhere, so it's still parsed directly. Both sources report
+# the same "Total encounters, any reason" denominator per state per week, so
+# they are combined into one file, standard/weekly_tests.csv.gz, keyed by
+# (geography, time).
 # =============================================================================
-
-process_diarrhea_by_state_wide <- function(file, password = NULL) {
-  message("Processing diarrhea-by-state weekly file: ", basename(file))
-
-  loaded <- load_slicerdicer_xlsx(file, password)
-  all_rows <- loaded$all_rows
-  meta <- loaded$meta
-
-  # Row 12 cols 4-6 label each value column directly (diarrhea, None of the
-  # above, Total) -- no age nesting; row 13 cols 1-3 are the id headers
-  # (Year, Week, State of Residence). The "None of the above" column
-  # (non-diarrhea encounters) is dropped: it's fully redundant with
-  # Total - diarrhea and adds no information.
-  data_raw <- all_rows[14:nrow(all_rows), , drop = FALSE]
-  colnames(data_raw) <- c("year_raw", "week_raw", "state_name", "v_diarrhea", "v_none", "v_total")
-  rownames(data_raw) <- NULL
-
-  data_raw$year_raw[data_raw$year_raw == ""] <- NA
-  data_raw$week_raw[data_raw$week_raw == ""] <- NA
-  data_raw$state_name[data_raw$state_name == ""] <- NA
-  data_raw <- tidyr::fill(data_raw, year_raw, week_raw, .direction = "down")
-
-  data_raw <- filter_full_weeks(data_raw, "week_raw", "year_raw")
-
-  data_long <- bind_rows(
-    extract_measure(data_raw, "v_diarrhea", "all_diarrhea"),
-    extract_measure(data_raw, "v_total", "encounters_total_weekly")
-  )
-
-  return(list(data = data_long, metadata = meta))
-}
 
 process_cyclospora_weekly_wide <- function(file, password = NULL) {
   message("Processing cyclospora weekly file: ", basename(file))
@@ -628,10 +509,8 @@ process_cyclospora_weekly_wide <- function(file, password = NULL) {
   all_rows <- loaded$all_rows
   meta <- loaded$meta
 
-  # Same layout as the monthly cyclospora crosstab (id cols: Year, Week,
-  # Abnormal Lab Components, State of Residence; value cols: cyclospora lab
-  # tests, Total) -- kept as its own function rather than generalizing
-  # process_cyclospora_wide(), so the existing monthly output is untouched.
+  # id cols: Year, Week, Abnormal Lab Components, State of Residence; value
+  # cols: cyclospora lab tests, Total
   data_raw <- all_rows[14:nrow(all_rows), , drop = FALSE]
   colnames(data_raw) <- c("year_raw", "week_raw", "abn_lab_raw", "state_name", "v_tested", "v_total")
   rownames(data_raw) <- NULL
@@ -652,10 +531,10 @@ process_cyclospora_weekly_wide <- function(file, password = NULL) {
 }
 
 build_weekly_tests_table <- function(data_long) {
-  # The cyclospora and diarrhea-by-state sources report the same "Total
-  # encounters, any reason" value at (geography, time) -- values_fn = max
-  # reconciles the duplicate key without double-counting since the two
-  # sources agree exactly where they overlap.
+  # The cyclospora and all-encounters (age == "Total") sources report the
+  # same "Total encounters, any reason" value at (geography, time) --
+  # values_fn = max reconciles the duplicate key without double-counting
+  # since the two sources agree exactly where they overlap.
   pivot_epic_measures(data_long, c("geography", "time"), "measure", value_fn = max) %>%
     rename(
       n_cyclospora_positive = cyclospora_positive,
@@ -678,27 +557,26 @@ build_weekly_tests_table <- function(data_long) {
     )
 }
 
-diarrhea_by_state_files <- list.files("raw/staging_diarrhea_by_state_wide", "\\.xlsx$", full.names = TRUE)
-diarrhea_by_state_results <- lapply(diarrhea_by_state_files, process_diarrhea_by_state_wide, password = xlsx_password)
-
 cyclospora_weekly_files <- list.files("raw/staging_cyclospora_weekly_wide", "\\.xlsx$", full.names = TRUE)
 cyclospora_weekly_results <- lapply(cyclospora_weekly_files, process_cyclospora_weekly_wide, password = xlsx_password)
-
-write_metadata_json(diarrhea_by_state_results, "raw/staging_diarrhea_by_state_wide.json")
 write_metadata_json(cyclospora_weekly_results, "raw/staging_cyclospora_weekly_wide.json")
 
-weekly_tests_long <- standardize_measure_geo(
-  bind_rows(
-    lapply(diarrhea_by_state_results, `[[`, "data"),
-    lapply(cyclospora_weekly_results, `[[`, "data")
-  )
+# All-ages diarrhea/total-encounters rows already computed in section 2b --
+# reused here instead of parsing a duplicate by-state-only crosstab.
+all_encounters_total_age_long <- all_encounters_weekly_long %>%
+  filter(age == "Total") %>%
+  select(geography, measure = outcome, time, value, suppressed)
+
+weekly_tests_long <- bind_rows(
+  all_encounters_total_age_long,
+  standardize_measure_geo(bind_rows(lapply(cyclospora_weekly_results, `[[`, "data")))
 )
 weekly_tests_standard <- build_weekly_tests_table(weekly_tests_long)
 
 vroom::vroom_write(weekly_tests_standard, "standard/weekly_tests.csv.gz", ",")
 
 # =============================================================================
-# 5. Record processed state
+# 4. Record processed state
 # =============================================================================
 
 process <- dcf::dcf_process_record()
@@ -707,7 +585,9 @@ process$vintages <- list(
     ed = wide_results[[1]]$metadata[["Date of Export"]],
     all_encounters = all_encounters_weekly_results[[1]]$metadata[["Date of Export"]]
   ),
-  monthly_cyclospora.csv.gz = cyclospora_results[[1]]$metadata[["Date of Export"]],
-  weekly_tests.csv.gz = cyclospora_weekly_results[[1]]$metadata[["Date of Export"]]
+  weekly_tests.csv.gz = list(
+    all_encounters = all_encounters_weekly_results[[1]]$metadata[["Date of Export"]],
+    cyclospora = cyclospora_weekly_results[[1]]$metadata[["Date of Export"]]
+  )
 )
 dcf::dcf_process_record(updated = process)
