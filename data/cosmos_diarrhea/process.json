@@ -22,7 +22,9 @@
       "ed": "7/17/2026",
       "all_encounters": "7/17/2026"
     },
-    "monthly_cyclospora.csv.gz": "7/15/2026",
-    "weekly_tests.csv.gz": "7/16/2026"
+    "weekly_tests.csv.gz": {
+      "all_encounters": "7/17/2026",
+      "cyclospora": "7/17/2026"
+    }
   }
 }
