@@ -1,0 +1,122 @@
+{
+  "epic_pct_rsv_immunization": {
+    "id": "epic_pct_rsv_immunization",
+    "short_name": "RSV immunization after birth",
+    "long_name": "Percentage of infants receiving RSV immunization after birth",
+    "category": "immunization",
+    "short_description": "Percent of patients in the newborn birth cohort who received an RSV immunization (nirsevimab) after birth.",
+    "long_description": "Among Epic Cosmos patients with a newborn or birth-hospitalization billed procedure (CPT 99460-99465, 99468, 99477), the percentage who received an RSV immunization (nirsevimab, a monoclonal antibody administered to infants for RSV prevention) after birth. Data are stratified by state of residence and calendar month of the birth encounter. Percentages are computed by Epic Cosmos over the patient count in each cell (epic_n_patients). Where the numerator is 10 or fewer, Epic suppresses the percentage; those cells are flagged in epic_pct_rsv_immunization_suppressed_flag and the numerator is imputed as 5, giving a value of 5 / epic_n_patients * 100. Bounded values reported as '<0.01%' are imputed at half the bound (0.005%). IMPORTANT: this measure is right-censored for recent birth months. Because nirsevimab is administered seasonally (roughly October through March), infants born in the most recent months have not yet reached their first RSV season, so the last two to three months of the series are systematically low and will rise as later data accrue. In the source export this measure is labeled 'Immunization after birth (%)'.",
+    "statement": "In {location}, {value}% of infants received an RSV immunization after birth.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+  "epic_pct_hepb_vaccination": {
+    "id": "epic_pct_hepb_vaccination",
+    "short_name": "HepB vaccination",
+    "long_name": "Percentage of infants with hepatitis B vaccination",
+    "category": "immunization",
+    "short_description": "Percent of patients in the newborn birth cohort with a recorded hepatitis B vaccine dose.",
+    "long_description": "Among Epic Cosmos patients with a newborn or birth-hospitalization billed procedure (CPT 99460-99465, 99468, 99477), the percentage with at least one recorded hepatitis B (HepB) vaccine dose. Data are stratified by state of residence and calendar month of the birth encounter. Percentages are computed by Epic Cosmos over the patient count in each cell (epic_n_patients). Where the numerator is 10 or fewer, Epic suppresses the percentage; those cells are flagged in epic_pct_hepb_vaccination_suppressed_flag and the numerator is imputed as 5, giving a value of 5 / epic_n_patients * 100. Unlike the RSV and PCV measures, this one is not materially right-censored, because the HepB birth dose is given during the birth hospitalization. This measure covers the same construct as the cosmos_hepb_vax source but uses a billed-procedure newborn population base rather than a liveborn-infant diagnosis (ICD-10-CM Z38.*) base, so values are not directly comparable between the two.",
+    "statement": "In {location}, {value}% of infants had a recorded HepB vaccine dose.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+  "epic_pct_pcv_182d": {
+    "id": "epic_pct_pcv_182d",
+    "short_name": "PCV within 182 days of birth",
+    "long_name": "Percentage of infants receiving any pneumococcal conjugate vaccine within 1 to 182 days of birth",
+    "category": "immunization",
+    "short_description": "Percent of patients in the newborn birth cohort who received any pneumococcal conjugate vaccine (PCV) within 1 to 182 days after the birth encounter.",
+    "long_description": "Among Epic Cosmos patients with a newborn or birth-hospitalization billed procedure (CPT 99460-99465, 99468, 99477), the percentage who received any pneumococcal conjugate vaccine (PCV) between 1 and 182 days after that birth procedure. Data are stratified by state of residence and calendar month of the birth encounter. Percentages are computed by Epic Cosmos over the patient count in each cell (epic_n_patients). Where the numerator is 10 or fewer, Epic suppresses the percentage; those cells are flagged in epic_pct_pcv_182d_suppressed_flag and the numerator is imputed as 5, giving a value of 5 / epic_n_patients * 100. IMPORTANT: this measure is strongly right-censored at the recent end of the series. The 182-day follow-up window cannot be fully observed for infants born within roughly six months of the export's data cutoff, so the final months are progressively and severely understated and will rise as later data accrue. Only birth months at least six months before the export date should be treated as complete.",
+    "statement": "In {location}, {value}% of infants received a PCV dose within 182 days of birth.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+  "epic_n_patients": {
+    "id": "epic_n_patients",
+    "short_name": "Newborn cohort patients",
+    "long_name": "Number of newborn cohort patients at Epic Cosmos network sites",
+    "category": "immunization",
+    "short_description": "Count of patients in the Epic Cosmos newborn birth cohort, used as the denominator for the vaccination percentages.",
+    "long_description": "Monthly count of Epic Cosmos patients with a newborn or birth-hospitalization billed procedure (CPT 99460-99465, 99468, 99477), stratified by state of residence. Counts of 10 or fewer are suppressed and imputed as 5 (see suppressed_flag). Coverage varies substantially by state, reflecting Epic's footprint among birthing facilities rather than the underlying birth count; state-level counts should not be read as birth counts.",
+    "statement": "In {location}, {value} newborn cohort patients were recorded at Epic Cosmos network sites.",
+    "measure_type": "Count",
+    "unit": "Count",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+  "epic_n_patients_suppressed_flag": {
+    "id": "epic_n_patients_suppressed_flag",
+    "short_name": "Suppressed flag: patient count",
+    "long_name": "Suppression flag for the newborn cohort patient count",
+    "category": "immunization",
+    "short_description": "Indicates whether the patient count was suppressed and imputed.",
+    "long_description": "Due to privacy protections, Epic Cosmos suppresses counts of 10 or fewer patients, reporting them as '10 or fewer'. This flag is 1 when epic_n_patients was suppressed and imputed as 5, and 0 otherwise. Where this flag is 1, all three percentage measures are also suppressed and are left missing rather than imputed, because the imputed denominator of 5 would force a meaningless 100%.",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+  "epic_pct_rsv_immunization_suppressed_flag": {
+    "id": "epic_pct_rsv_immunization_suppressed_flag",
+    "short_name": "Suppressed flag: RSV immunization",
+    "long_name": "Suppression flag for the RSV immunization percentage",
+    "category": "immunization",
+    "short_description": "Indicates whether the RSV immunization percentage was suppressed and imputed.",
+    "long_description": "This flag is 1 when Epic Cosmos suppressed the RSV immunization percentage because its numerator was 10 or fewer, and 0 otherwise. Where the flag is 1 and epic_n_patients was observed, the numerator is imputed as 5 and the value is set to 5 / epic_n_patients * 100. Where epic_n_patients was itself suppressed, the value is left missing. Values with a flag of 1 are imputed rather than reported and should be excluded from precise estimates.",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+  "epic_pct_hepb_vaccination_suppressed_flag": {
+    "id": "epic_pct_hepb_vaccination_suppressed_flag",
+    "short_name": "Suppressed flag: HepB vaccination",
+    "long_name": "Suppression flag for the hepatitis B vaccination percentage",
+    "category": "immunization",
+    "short_description": "Indicates whether the hepatitis B vaccination percentage was suppressed and imputed.",
+    "long_description": "This flag is 1 when Epic Cosmos suppressed the hepatitis B vaccination percentage because its numerator was 10 or fewer, and 0 otherwise. Where the flag is 1 and epic_n_patients was observed, the numerator is imputed as 5 and the value is set to 5 / epic_n_patients * 100. Where epic_n_patients was itself suppressed, the value is left missing. Values with a flag of 1 are imputed rather than reported and should be excluded from precise estimates.",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+  "epic_pct_pcv_182d_suppressed_flag": {
+    "id": "epic_pct_pcv_182d_suppressed_flag",
+    "short_name": "Suppressed flag: PCV within 182 days",
+    "long_name": "Suppression flag for the PCV within 182 days percentage",
+    "category": "immunization",
+    "short_description": "Indicates whether the PCV percentage was suppressed and imputed.",
+    "long_description": "This flag is 1 when Epic Cosmos suppressed the PCV percentage because its numerator was 10 or fewer, and 0 otherwise. Where the flag is 1 and epic_n_patients was observed, the numerator is imputed as 5 and the value is set to 5 / epic_n_patients * 100. Where epic_n_patients was itself suppressed, the value is left missing. Values with a flag of 1 are imputed rather than reported and should be excluded from precise estimates.",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+
+  "_sources": {
+    "epic_cosmos": {
+      "name": "Epic Cosmos",
+      "url": "https://cosmos.epic.com/",
+      "date_accessed": 2026,
+      "organization": "Epic Systems",
+      "organization_url": "https://www.epic.com/",
+      "description": "Epic Cosmos is a collaborative research platform containing de-identified patient data from over 300 million patients across more than 1,600 hospitals and health systems using Epic electronic health record systems. Data is accessed via SlicerDicer, a self-service analytics tool. The dataset includes emergency department visits, diagnoses, immunizations, laboratory results, and other clinical data. Due to privacy protections, counts fewer than 10 are suppressed and imputed. Coverage extends across all U.S. states and territories. Note that county-level and city-level stratifications could differ markedly in total sample size due to high levels of missingness of county data in some states.",
+      "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'"
+    }
+  }
+}

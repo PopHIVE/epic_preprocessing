@@ -1,0 +1,28 @@
+{
+  "name": "cosmos_vaccines",
+  "type": "source",
+  "scripts": [
+    {
+      "path": "ingest.R",
+      "manual": false,
+      "last_run": "2026-07-30 16:44:33",
+      "frequency": 0,
+      "run_time": 0.45,
+      "last_status": {
+        "log": ["", "Attaching package: 'dplyr'", "", "The following objects are masked from 'package:stats':", "", "    filter, lag", "", "The following objects are masked from 'package:base':", "", "    intersect, setdiff, setequal, union", "", "", "Attaching package: 'lubridate'", "", "The following objects are masked from 'package:base':", "", "    date, intersect, setdiff, union", ""],
+        "success": true
+      }
+    }
+  ],
+  "checked": "",
+  "check_results": [],
+  "standalone": false,
+  "standard_state": {
+    "./data/cosmos_vaccines/measure_info.json": "aad891738bc27ace02281c9527d1e084",
+    "./data/cosmos_vaccines/standard/data.csv.gz": "a7f8b54bc5567a75cfd88b350cf2fd05"
+  },
+  "raw_state": {
+    "files": "raw/staging/Patients_Crosstab_2026-07-30T15_10_47.xlsx",
+    "hashes": "492720f1dcae5ec340178a4cd51293b8"
+  }
+}
