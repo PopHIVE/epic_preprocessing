@@ -215,6 +215,24 @@ if (!identical(process$raw_state, current_state)) {
 Reuse `read_slicerdicer_grid()` and `extract_staging_data()` verbatim from an existing
 source rather than reinventing them.
 
+**A new source follows the same output conventions as every existing one** — these are
+not optional and not negotiable per source:
+
+- [PopHIVE wide format](#pophive-wide-format): index columns `geography`, `time`
+  (+ `age` / `sex` / `race_ethnicity` when present), then one `epic_`-prefixed column
+  per measure, each immediately followed by its own `_suppressed_flag`
+- `time` formatted `YYYY-mm-dd` — monthly = last day of month, weekly = Saturday,
+  annual = `YYYY-12-31`
+- `geography` as FIPS strings resolved through `../../resources/all_fips.csv.gz`;
+  national `"00"`
+- [Suppression and imputation](#suppression-and-imputation-both-paths) — the blank-count
+  → 5 and missing-percent → `5 / denominator` rules, with a flag per variable
+- Output written as `standard/data.csv.gz` via `vroom::vroom_write(..., delim = ",")`
+
+If a new source cannot follow one of these (say the measure is a mean, which has no
+denominator to impute from), say so explicitly in the README and
+`measure_info.json` — do not diverge silently.
+
 ## A5. Write `measure_info.json`
 
 One entry for **every column** in the standardized output except the index columns —
@@ -354,6 +372,15 @@ Check all four of these — a clean run alone is not sufficient evidence.
 4. **Diff the index columns.** A stratification added or dropped (e.g. an age split)
    changes the grain of the file, which is a structure change even if every measure
    column is identical.
+5. **Check every measure still has its own flag.** A measure column without a matching
+   `<measure>_suppressed_flag` means the
+   [suppression rules](#suppression-and-imputation-both-paths) were not applied to it —
+   treat that as a structure change to fix, on either path:
+   ```r
+   m <- setdiff(names(new), c("geography","time","age","sex","race_ethnicity"))
+   m <- m[!grepl("_suppressed_flag$", m)]
+   setdiff(m, sub("_suppressed_flag$", "", grep("_suppressed_flag$", names(new), value = TRUE)))
+   ```
 
 Report the verdict to the user in one line before proceeding — "structure unchanged,
 refreshing data only" or "structure changed: <what>, updating the ingest folder".
@@ -384,6 +411,23 @@ inner_join(old, new, by = intersect(names(old), c("geography","time","age","sex"
   summarize(across(ends_with("_new"), ~ NA)) # -> compare each measure old vs new
 ```
 
+Suppression must behave the same way it did before — the new export brings new small
+cells, so check that they were imputed rather than left blank:
+
+```r
+# Every measure keeps its flag, and no imputed cell was left missing
+for (mc in setdiff(names(new), grep("_suppressed_flag$", names(new), value = TRUE))) {
+  fl <- paste0(mc, "_suppressed_flag")
+  if (!fl %in% names(new)) next
+  cat(mc, "flagged:", sum(new[[fl]]), " still NA:", sum(is.na(new[[mc]])), "\n")
+}
+```
+
+A count column should have **no** remaining `NA` (blanks become 5) and a percent column
+should have `NA` only where the rules deliberately leave it — see the two documented
+cases in [Suppression and imputation](#suppression-and-imputation-both-paths). Anything
+else means a new suppression marker slipped through the parser.
+
 Flag to the user: any dropped geography, any period that lost data, any measure whose
 overlapping values moved materially, and the suppression counts. If a regression check
 fails, stop and investigate — do not commit a quietly degraded file.
@@ -396,7 +440,12 @@ Make the smallest correct change, in this order:
    - Renamed measure → widen the regex in `MEASURE_PATTERNS` to the stable part of the
      label (keep the old wording matching too, so historical exports still parse)
    - New measure → new `MEASURE_PATTERNS` entry, added to the measure/pct column vectors
-     and to the validation blocks
+     and to the validation blocks. It must get the same treatment as its siblings: an
+     `epic_`-prefixed name, its own `_suppressed_flag`, and the
+     [suppression rules](#suppression-and-imputation-both-paths) — a missing count filled
+     with 5, a missing percent filled with `5 / denominator * 100`. A new percent measure
+     needs its denominator identified; if the export carries none, say so in
+     `measure_info.json` rather than leaving the cells silently `NA`
    - New stratification → new `DIM_LABELS` entry, plus handling in the transform and in
      `index_cols` (the existing scripts already build `index_cols` with `intersect()`,
      so a new dimension needs its own normalization, e.g. the age-label cleanup)
@@ -476,6 +525,66 @@ vroom::vroom_write(data_standard, "standard/data.csv.gz", delim = ",")
 
 ---
 
+# Suppression and imputation (both paths)
+
+Epic Cosmos suppresses small cells. Every source in this repo handles that the same way,
+and **suppression is per variable** — each measure gets its own flag, never one shared
+flag for the row.
+
+**Rule 1 — a missing count is filled with 5.** A count cell that is blank, or reported
+as `"10 or fewer"`, means 10 or fewer patients. Set the value to **5** and set that
+variable's flag to **1**. Observed counts keep their value and get flag **0**.
+
+**Rule 2 — a missing percent is filled with `5 / denominator`.** A percent cell that is
+blank or `"-"` means its numerator was suppressed (an explicit `0%` is never emitted, so
+a blank covers 0-10). Impute the numerator as 5 and re-express it on the percentage
+scale: **`5 / <population denominator> * 100`**. Flag it **1**, exactly as for a count.
+The denominator is the source's own patient-count column for that cell
+(e.g. `epic_n_patients`).
+
+**Flags are computed before imputation**, so they record what the source actually
+withheld rather than what the script wrote. One flag column per measure, named
+`<measure>_suppressed_flag`, emitted immediately after its measure, `0`/`1` integer.
+
+```r
+# --- Rule 1: counts ---------------------------------------------------------
+epic_n_patients_suppressed_flag = if_else(
+  is.na(epic_n_patients) | epic_n_patients == "10 or fewer", 1L, 0L, missing = 1L
+),
+epic_n_patients = if_else(
+  epic_n_patients_suppressed_flag == 1L, 5, as.numeric(gsub(",", "", epic_n_patients))
+),
+
+# --- Rule 2: percents -------------------------------------------------------
+# Flag first (pct_cols already parsed to numeric, with "-" and blanks -> NA)
+across(all_of(pct_cols), ~ as.integer(is.na(.x)), .names = "{.col}_suppressed_flag"),
+
+# Then impute the suppressed numerator as 5, on the percentage scale
+across(all_of(pct_cols), ~ if_else(is.na(.x), 5 / epic_n_patients * 100, .x)),
+```
+
+Two cases where the rules need a stated decision rather than blind application — handle
+them explicitly and document the choice in `measure_info.json` and the README:
+
+- **The denominator was itself suppressed.** It has already been imputed to 5, so
+  `5 / 5 * 100` asserts a meaningless 100%. `cosmos_vaccines` keeps the flag at 1 but
+  leaves the percent `NA` there. Either follow that precedent or, if the user wants the
+  literal `5 / denominator` everywhere, apply it — but say in the `long_description`
+  that those cells are 100% by construction, not by observation.
+- **The measure is a mean, not a count or percent** (e.g. average ED length of stay in
+  `cosmos_mental_health`). There is no denominator to impute from, so leave the value
+  `NA` with the flag set to 1.
+
+Bounded values such as `"<0.01%"` are imputed at half the bound (`0.005`), the same
+half-the-bound logic as `"10 or fewer"` → 5.
+
+Every flag must satisfy: a flag of `1` never sits on a value the source actually
+reported, and an imputed value always carries a flag of `1`. Assert this in the
+validation block of `ingest.R` so a future export cannot break it quietly, and
+`message()` the imputed-cell count per measure at the end of the run.
+
+---
+
 # Epic Cosmos SlicerDicer specifics
 
 **Encrypted exports.** SlicerDicer `.xlsx` files are password protected. Decrypt with
@@ -496,13 +605,12 @@ Convert blanks to `NA`, then `tidyr::fill(..., .direction = "down")`.
 **Two-level crosstabs.** The outer group label appears only on the first column of each
 group; carry it forward across the columns it spans (see `cosmos_mental_health`).
 
-**Suppression.** Counts of 10 or fewer arrive as `"10 or fewer"` → impute 5, flag 1.
-Percentages for suppressed cells arrive as `"-"` or blank → flag 1; impute the numerator
-as 5 and set `5 / n * 100` when the denominator was observed, otherwise leave `NA`
-(an imputed denominator of 5 would force a meaningless 100%). Bounded values like
-`"<0.01%"` → half the bound. Means (e.g. length of stay) have no denominator to impute
-from — leave `NA` with the flag set. Compute flags **before** imputation so they record
-the source state.
+**Suppression markers in the raw grid.** Counts of 10 or fewer arrive as `"10 or fewer"`
+or as a blank cell; percentages for suppressed cells arrive as `"-"` or blank; bounded
+values arrive as `"<0.01%"`. Parse `"-"` and `""` to `NA` before anything else, then
+apply the rules in [Suppression and imputation](#suppression-and-imputation-both-paths):
+missing count → 5, missing percent → `5 / denominator * 100`, one flag per variable,
+flags computed before imputation.
 
 **Rows to drop, with a message saying what was dropped:**
 - Partial leading/trailing periods (`"Jun 1 - Jun 22"`, `"Jul 1 - Jul 15"`) — not
@@ -550,7 +658,12 @@ user asks for it.
 - [ ] `time` is `YYYY-mm-dd`; monthly = last day of month, weekly = Saturday
 - [ ] No duplicate rows per index combination (the script `stop()`s on this)
 - [ ] Every value column is `epic_`-prefixed and has its own `_suppressed_flag`
-- [ ] Flags computed before imputation; a flag of 1 never sits on a source-reported value
+- [ ] Missing/`"10 or fewer"` counts filled with **5**, flag set to 1
+- [ ] Missing percents filled with **`5 / denominator * 100`**, flag set to 1; any cell
+      deliberately left `NA` (suppressed denominator, mean-valued measure) documented
+- [ ] Flags computed before imputation; a flag of 1 never sits on a source-reported value,
+      and every imputed value carries a flag of 1
+- [ ] Imputed-cell counts per measure reported via `message()` at the end of the run
 - [ ] Values within plausible range (percentages in [0, 100]; durations positive)
 - [ ] Dropped rows reported via `message()`, not silently discarded
 - [ ] `measure_info.json` has an entry for every non-index column, `sources` by ID only,
