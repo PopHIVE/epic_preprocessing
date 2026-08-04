@@ -20,5 +20,9 @@
   "raw_state": {
     "files": "raw/staging/Patients_Crosstab_2026-04-01T23_05_27.xlsx",
     "hashes": "3eafa3b4699866571783abd00380f922"
+  },
+  "standard_state": {
+    "./data/cosmos_gas/measure_info.json": "1f84414b88d3b36c98e0094708e199a0",
+    "./data/cosmos_gas/standard/data.csv.gz": "a8bfa9886c2b5b93d067621fa45b3568"
   }
 }
