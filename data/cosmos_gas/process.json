@@ -22,7 +22,7 @@
     "hashes": "3eafa3b4699866571783abd00380f922"
   },
   "standard_state": {
-    "./data/cosmos_gas/measure_info.json": "1f84414b88d3b36c98e0094708e199a0",
-    "./data/cosmos_gas/standard/data.csv.gz": "a8bfa9886c2b5b93d067621fa45b3568"
+    "./data/cosmos_gas/measure_info.json": "01b900905fc77d51e1114e7fb95f29b2",
+    "./data/cosmos_gas/standard/data.csv.gz": "e4c628211a213d25b38fc561d40d4563"
   }
 }

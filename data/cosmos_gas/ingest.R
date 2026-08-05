@@ -18,8 +18,11 @@
 #
 # Output (PopHIVE wide format, standard/data.csv.gz):
 #   index   : geography (FIPS string, "00" = national), time, age
-#   measures: epic_n_strep_throat, epic_n_patients, epic_pct_strep_throat
-#             each immediately followed by its own *_suppressed_flag
+#   measures: epic_n_strep_throat, epic_pct_strep_throat
+#               -> epic_strep_throat_suppressed_flag (covers both; the percent is
+#                  derived from the same numerator cell)
+#             epic_n_patients
+#               -> epic_n_patients_suppressed_flag
 #
 # Conventions applied here:
 #   - time is the LAST day of the quarter, formatted YYYY-mm-dd; partial
@@ -316,14 +319,23 @@ if (length(dropped_states) > 0) {
   )
 }
 
-# --- Measures + per-measure suppression --------------------------------------
+# --- Measures + suppression flags --------------------------------------------
 # Flags are computed BEFORE imputation, so they record what Epic withheld.
+#
+# There are two independently suppressible cells per row, so two flags:
+#   epic_strep_throat_suppressed_flag - the strep throat numerator. Covers BOTH
+#     epic_n_strep_throat and epic_pct_strep_throat, since the percentage is
+#     derived from that same cell.
+#   epic_n_patients_suppressed_flag   - the denominator.
+# A separate percent flag would be exactly the OR of these two, so it is not
+# emitted: a reader wanting "was the percentage affected at all?" takes
+# epic_strep_throat_suppressed_flag | epic_n_patients_suppressed_flag.
 data_measures <- data_geo %>%
   mutate(
     age = standardize_age_labels(age),
 
-    epic_n_strep_throat_suppressed_flag = as.integer(is_suppressed_count(n_strep_throat)),
-    epic_n_patients_suppressed_flag     = as.integer(is_suppressed_count(n_patients)),
+    epic_strep_throat_suppressed_flag = as.integer(is_suppressed_count(n_strep_throat)),
+    epic_n_patients_suppressed_flag   = as.integer(is_suppressed_count(n_patients)),
 
     epic_n_strep_throat = unsuppress_count(n_strep_throat),
     epic_n_patients     = unsuppress_count(n_patients),
@@ -331,10 +343,7 @@ data_measures <- data_geo %>%
     # Percent of patients with a strep throat diagnosis (NOT per 100,000).
     # When the denominator itself was suppressed it has been imputed to 5, so
     # 5 / 5 * 100 would assert a meaningless 100% - leave those cells NA, as in
-    # cosmos_vaccines, and keep the flag at 1.
-    epic_pct_strep_throat_suppressed_flag = as.integer(
-      epic_n_strep_throat_suppressed_flag == 1L | epic_n_patients_suppressed_flag == 1L
-    ),
+    # cosmos_vaccines; epic_n_patients_suppressed_flag marks them.
     epic_pct_strep_throat = if_else(
       epic_n_patients_suppressed_flag == 1L | epic_n_patients == 0,
       NA_real_,
@@ -345,9 +354,8 @@ data_measures <- data_geo %>%
 data_clean <- data_measures %>%
   select(
     geography, time, age,
-    epic_n_strep_throat, epic_n_strep_throat_suppressed_flag,
-    epic_n_patients, epic_n_patients_suppressed_flag,
-    epic_pct_strep_throat, epic_pct_strep_throat_suppressed_flag
+    epic_n_strep_throat, epic_pct_strep_throat, epic_strep_throat_suppressed_flag,
+    epic_n_patients, epic_n_patients_suppressed_flag
   ) %>%
   arrange(geography, age, time)
 
@@ -383,12 +391,15 @@ stopifnot(
   all(data_clean$epic_pct_strep_throat >= 0 & data_clean$epic_pct_strep_throat <= 100,
       na.rm = TRUE),
   # Flags are 0/1, and every imputed value carries a flag of 1
-  all(data_clean$epic_n_strep_throat_suppressed_flag %in% c(0L, 1L)),
+  all(data_clean$epic_strep_throat_suppressed_flag %in% c(0L, 1L)),
   all(data_clean$epic_n_patients_suppressed_flag %in% c(0L, 1L)),
-  all(data_clean$epic_pct_strep_throat_suppressed_flag %in% c(0L, 1L)),
-  all(data_clean$epic_n_strep_throat[data_clean$epic_n_strep_throat_suppressed_flag == 1L] == 5),
+  all(data_clean$epic_n_strep_throat[data_clean$epic_strep_throat_suppressed_flag == 1L] == 5),
   all(data_clean$epic_n_patients[data_clean$epic_n_patients_suppressed_flag == 1L] == 5),
-  all(is.na(data_clean$epic_pct_strep_throat[data_clean$epic_pct_strep_throat_suppressed_flag == 0L]) == FALSE)
+  # The percent is missing exactly where the denominator was suppressed
+  identical(
+    is.na(data_clean$epic_pct_strep_throat),
+    data_clean$epic_n_patients_suppressed_flag == 1L
+  )
 )
 
 message(
@@ -396,12 +407,16 @@ message(
   length(unique(data_clean$geography)), " geographies | ",
   min(data_clean$time), " to ", max(data_clean$time)
 )
-for (m in c("epic_n_strep_throat", "epic_n_patients", "epic_pct_strep_throat")) {
-  message(
-    "  ", m, ": ", sum(data_clean[[paste0(m, "_suppressed_flag")]]), " suppressed/imputed",
-    ", ", sum(is.na(data_clean[[m]])), " left NA"
-  )
-}
+message(
+  "  epic_strep_throat_suppressed_flag: ",
+  sum(data_clean$epic_strep_throat_suppressed_flag),
+  " suppressed/imputed (covers epic_n_strep_throat and epic_pct_strep_throat)"
+)
+message(
+  "  epic_n_patients_suppressed_flag:   ",
+  sum(data_clean$epic_n_patients_suppressed_flag), " suppressed/imputed, ",
+  sum(is.na(data_clean$epic_pct_strep_throat)), " percent cells left NA"
+)
 
 # =============================================================================
 # 5. Write standardized output

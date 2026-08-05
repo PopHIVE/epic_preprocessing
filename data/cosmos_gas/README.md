@@ -23,9 +23,11 @@ This is a dcf data source project, initialized with `dcf::dcf_add_source`.
 | `geography` | FIPS string; `"00"` is national (the SlicerDicer `Total` row) |
 | `time` | `YYYY-mm-dd`, the **last day of the quarter** (e.g. `2025-03-31`) |
 | `age` | `<1 Years`, `1-4 Years`, `5-17 Years`, `18-49 Years`, `50-64 Years`, `65+ Years`, `Total` |
-| `epic_n_strep_throat` (+ `_suppressed_flag`) | Count of patients with a strep throat diagnosis |
-| `epic_n_patients` (+ `_suppressed_flag`) | Total patients (denominator) |
-| `epic_pct_strep_throat` (+ `_suppressed_flag`) | **Percent** of patients, `n / denominator * 100` |
+| `epic_n_strep_throat` | Count of patients with a strep throat diagnosis |
+| `epic_pct_strep_throat` | **Percent** of patients, `n / denominator * 100` |
+| `epic_strep_throat_suppressed_flag` | Suppression flag for the numerator — covers **both** measures above |
+| `epic_n_patients` | Total patients (denominator) |
+| `epic_n_patients_suppressed_flag` | Suppression flag for the denominator |
 
 The measure is a percentage, not a rate per 100,000. The raw `State of Residence`
 label is used only to resolve `geography` and is dropped from the output.
@@ -65,10 +67,17 @@ label is used only to resolve `geography` and is dropped from the output.
 - **Dropped rows**: non-US geographies (Canadian provinces, Mexican states,
   territories) and `None of the above` are dropped, with a `message()` reporting the
   count and labels.
-- **Suppression** is per measure. A count of 10 or fewer arrives as `"10 or fewer"` or
-  as a blank cell; it is imputed as 5 and its own flag set to 1. Flags are computed
-  before imputation. Where the *denominator* was suppressed, `epic_pct_strep_throat`
-  is left `NA` (rather than the meaningless `5 / 5 * 100`) with its flag set to 1 —
-  the same precedent as `cosmos_vaccines`.
+- **Suppression**: a count of 10 or fewer arrives as `"10 or fewer"` or as a blank
+  cell; it is imputed as 5 and the corresponding flag set to 1. Flags are computed
+  before imputation, so they record what Epic withheld rather than what the ingest
+  wrote. There are two independently suppressible cells per row, so two flags:
+  `epic_strep_throat_suppressed_flag` for the numerator (covering
+  `epic_n_strep_throat` **and** `epic_pct_strep_throat`, since the percent is derived
+  from that same cell) and `epic_n_patients_suppressed_flag` for the denominator. No
+  separate percent flag is emitted — it would be exactly the OR of those two, so take
+  the OR if you need "was the percentage affected at all?".
+- Where the *denominator* was suppressed, `epic_pct_strep_throat` is left `NA` rather
+  than the meaningless `5 / 5 * 100`, following the `cosmos_vaccines` precedent. The
+  script asserts that the percent is missing exactly where the denominator flag is 1.
 - The script validates geography, time, duplicate index rows, percentage range, and
   the flag invariants before writing, and reports per-measure imputation counts.
