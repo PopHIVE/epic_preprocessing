@@ -1,16 +1,16 @@
 [
   {
-    "file": "raw/staging_diarrhea_all_encounters_weekly_wide/Encounters_Crosstab_2026-07-31T07_00_41.xlsx",
-    "md5": "468faf4b3899ad71aa0812dfddbe380a",
-    "date_processed": "2026-07-31 08:17:31.579412",
+    "file": "raw/staging_diarrhea_all_encounters_weekly_wide/Encounters_Crosstab_2026-08-13T07_23_52.xlsx",
+    "md5": "290a80275b87960091a957c41ff9fb16",
+    "date_processed": "2026-08-13 08:46:44.313363",
     "Session Title": "Number of Encounters by State of Residence and Diagnosis (All) and Age in Years Range",
-    "Session ID": "2845888",
+    "Session ID": "2849250",
     "Data Model": "Encounters",
     "Population Base": "All Encounters",
     "Population Criteria Filters": "Country of Residence: United States of America",
-    "Session Date Range": "6/26/2022 - 7/19/2026 (Based On Encounter Start Date)",
+    "Session Date Range": "6/26/2022 - 8/1/2026 (Based On Encounter Start Date)",
     "Measure": "Number of Encounters",
     "Export User": "Anne Shapiro",
-    "Date of Export": "7/31/2026"
+    "Date of Export": "8/13/2026"
   }
 ]
