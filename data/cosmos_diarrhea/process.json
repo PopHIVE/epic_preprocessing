@@ -19,12 +19,12 @@
   "standalone": false,
   "vintages": {
     "data_weekly.csv.gz": {
-      "ed": "7/31/2026",
-      "all_encounters": "7/31/2026"
+      "ed": "8/13/2026",
+      "all_encounters": "8/13/2026"
     },
     "weekly_tests.csv.gz": {
-      "all_encounters": "7/31/2026",
-      "cyclospora": "7/31/2026"
+      "all_encounters": "8/13/2026",
+      "cyclospora": "8/13/2026"
     }
   }
 }
