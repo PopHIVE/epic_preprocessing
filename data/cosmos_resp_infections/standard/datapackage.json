@@ -17,21 +17,25 @@
       "filename": "monthly_tests.csv.gz",
       "versions": {
         "hash": [
+          "f343ff92108f8093a06f9d52368abfb738ef0dc8",
           "9c75115330e34199aabf0bc0bb2a152d442f1d75",
           "2ee0009832c971f3c7318486b9e60b61757b31c3",
           "db28a77504a7541bc8b2ec7dde346e6ef1762ab0"
         ],
         "author": [
+          "Callie Annas <callie.annas@yale.edu>",
           "danweinberger <daniel.weinberger@yale.edu>",
           "shoamoosavi <shoa.moosavi@yale.edu>",
           "danweinberger <daniel.weinberger@yale.edu>"
         ],
         "date": [
+          "Fri Aug 14 09:06:19 2026 -0400",
           "Sun Mar 22 22:43:01 2026 -0400",
           "Fri Mar 20 03:58:43 2026 -0400",
           "Tue Feb 24 13:54:12 2026 -0500"
         ],
         "message": [
+          "addressing merge conflicts",
           "corrects bug on import that was leading to nationallevel data being dropped  from standard file after 2021",
           "Claude Sonnet 4.6 <noreply@anthropic.com>",
           "reorganize the directory structure into distinct data projects for cosmos"
@@ -47,8 +51,8 @@
       "id_length": 2,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-08-14 09:00:37.05646",
-      "last_modified": "2026-08-14 09:00:37.05646",
+      "created": "2026-08-14 09:43:50.750668",
+      "last_modified": "2026-08-14 09:43:50.750668",
       "vintage": {},
       "row_count": 19296,
       "entity_count": 54,
@@ -697,10 +701,30 @@
       "name": "no_geo.csv",
       "filename": "no_geo.csv.gz",
       "versions": {
-        "hash": ["9abd3009fdfdc116c9da28729693a3619884aa3c", "9c75115330e34199aabf0bc0bb2a152d442f1d75", "2ee0009832c971f3c7318486b9e60b61757b31c3", "db28a77504a7541bc8b2ec7dde346e6ef1762ab0"],
-        "author": ["anshap32 <73296024+anshap32@users.noreply.github.com>", "danweinberger <daniel.weinberger@yale.edu>", "shoamoosavi <shoa.moosavi@yale.edu>", "danweinberger <daniel.weinberger@yale.edu>"],
-        "date": ["Wed Aug 12 13:49:55 2026 -0400", "Sun Mar 22 22:43:01 2026 -0400", "Fri Mar 20 03:58:43 2026 -0400", "Tue Feb 24 13:54:12 2026 -0500"],
-        "message": ["Delete data/cosmos_resp_infections/standard/no_geo.csv.gz", "corrects bug on import that was leading to nationallevel data being dropped  from standard file after 2021", "Claude Sonnet 4.6 <noreply@anthropic.com>", "reorganize the directory structure into distinct data projects for cosmos"]
+        "hash": [
+          "9abd3009fdfdc116c9da28729693a3619884aa3c",
+          "9c75115330e34199aabf0bc0bb2a152d442f1d75",
+          "2ee0009832c971f3c7318486b9e60b61757b31c3",
+          "db28a77504a7541bc8b2ec7dde346e6ef1762ab0"
+        ],
+        "author": [
+          "anshap32 <73296024+anshap32@users.noreply.github.com>",
+          "danweinberger <daniel.weinberger@yale.edu>",
+          "shoamoosavi <shoa.moosavi@yale.edu>",
+          "danweinberger <daniel.weinberger@yale.edu>"
+        ],
+        "date": [
+          "Wed Aug 12 13:49:55 2026 -0400",
+          "Sun Mar 22 22:43:01 2026 -0400",
+          "Fri Mar 20 03:58:43 2026 -0400",
+          "Tue Feb 24 13:54:12 2026 -0500"
+        ],
+        "message": [
+          "Delete data/cosmos_resp_infections/standard/no_geo.csv.gz",
+          "corrects bug on import that was leading to nationallevel data being dropped  from standard file after 2021",
+          "Claude Sonnet 4.6 <noreply@anthropic.com>",
+          "reorganize the directory structure into distinct data projects for cosmos"
+        ]
       },
       "source": [],
       "data_format": "wide",
@@ -712,8 +736,8 @@
       "id_length": 2,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-08-14 09:00:37.115072",
-      "last_modified": "2026-08-14 09:00:37.22193",
+      "created": "2026-08-14 09:43:50.805403",
+      "last_modified": "2026-08-14 09:43:50.84734",
       "vintage": "2025-12-18",
       "row_count": 21240,
       "entity_count": 54,
@@ -3023,14 +3047,15 @@
       "sha512": "3b45b7bb9d6df602ec9cb80e06b4deeb94895f3139702269be7f8e3bacbea09fc1550c0ebea3d5a0336f25c14e2daa62f60736959773ab97e2e9489afa88ff11"
     },
     {
-      "bytes": 3353933,
+      "bytes": 4185708,
       "encoding": "ISO-8859-1",
-      "md5": "11fc4cba220e2cda7a488259dc832ce8",
+      "md5": "202f7a38f139e47e88751af78485cef1",
       "format": "csv",
       "name": "weekly.csv",
       "filename": "weekly.csv.gz",
       "versions": {
         "hash": [
+          "f343ff92108f8093a06f9d52368abfb738ef0dc8",
           "136f09a78b55fe37b19580f80773a83241dfbdfc",
           "31fef4ba67140f9275cba6fbf1a478c0ecd2336f",
           "e428ac75c9d50c2f8f96de34674d4ef8d5734d7a",
@@ -3047,6 +3072,7 @@
           "db28a77504a7541bc8b2ec7dde346e6ef1762ab0"
         ],
         "author": [
+          "Callie Annas <callie.annas@yale.edu>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
@@ -3063,6 +3089,7 @@
           "danweinberger <daniel.weinberger@yale.edu>"
         ],
         "date": [
+          "Fri Aug 14 09:06:19 2026 -0400",
           "Mon Aug 10 11:23:36 2026 -0400",
           "Fri Jul 31 11:01:58 2026 -0400",
           "Mon Jul 13 11:15:46 2026 -0400",
@@ -3079,6 +3106,7 @@
           "Tue Feb 24 13:54:12 2026 -0500"
         ],
         "message": [
+          "addressing merge conflicts",
           "added process to remove new data that are not yet complete",
           "update respiratory",
           "updated epic resp",
@@ -3105,78 +3133,78 @@
       "id_length": 2,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-08-14 09:00:21.181465",
-      "last_modified": "2026-08-14 09:00:28.770127",
+      "created": "2026-08-14 09:43:42.618397",
+      "last_modified": "2026-08-14 09:43:49.654187",
       "vintage": "2026-02-19",
-      "row_count": 132496,
+      "row_count": 162703,
       "entity_count": 52,
       "schema": {
         "fields": [
           {
             "name": "geography",
-            "duplicates": 132444,
+            "duplicates": 162651,
             "info": [],
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "string",
             "missing": 0,
             "table": {
-              "00": 2548,
-              "01": 2548,
-              "02": 2548,
-              "04": 2548,
-              "05": 2548,
-              "06": 2548,
-              "08": 2548,
-              "09": 2548,
-              "10": 2548,
-              "11": 2548,
-              "12": 2548,
-              "13": 2548,
-              "15": 2548,
-              "16": 2548,
-              "17": 2548,
-              "18": 2548,
-              "19": 2548,
-              "20": 2548,
-              "21": 2548,
-              "22": 2548,
-              "23": 2548,
-              "24": 2548,
-              "25": 2548,
-              "26": 2548,
-              "27": 2548,
-              "28": 2548,
-              "29": 2548,
-              "30": 2548,
-              "31": 2548,
-              "32": 2548,
-              "33": 2548,
-              "34": 2548,
-              "35": 2548,
-              "36": 2548,
-              "37": 2548,
-              "38": 2548,
-              "39": 2548,
-              "40": 2548,
-              "41": 2548,
-              "42": 2548,
-              "44": 2548,
-              "45": 2548,
-              "46": 2548,
-              "47": 2548,
-              "48": 2548,
-              "49": 2548,
-              "50": 2548,
-              "51": 2548,
-              "53": 2548,
-              "54": 2548,
-              "55": 2548,
-              "56": 2548
+              "00": 3129,
+              "01": 3129,
+              "02": 3129,
+              "04": 3129,
+              "05": 3129,
+              "06": 3129,
+              "08": 3129,
+              "09": 3129,
+              "10": 3129,
+              "11": 3128,
+              "12": 3129,
+              "13": 3129,
+              "15": 3129,
+              "16": 3129,
+              "17": 3129,
+              "18": 3129,
+              "19": 3129,
+              "20": 3129,
+              "21": 3129,
+              "22": 3129,
+              "23": 3128,
+              "24": 3129,
+              "25": 3129,
+              "26": 3129,
+              "27": 3129,
+              "28": 3129,
+              "29": 3129,
+              "30": 3129,
+              "31": 3129,
+              "32": 3128,
+              "33": 3129,
+              "34": 3129,
+              "35": 3129,
+              "36": 3129,
+              "37": 3129,
+              "38": 3129,
+              "39": 3129,
+              "40": 3129,
+              "41": 3129,
+              "42": 3129,
+              "44": 3129,
+              "45": 3129,
+              "46": 3129,
+              "47": 3129,
+              "48": 3129,
+              "49": 3129,
+              "50": 3128,
+              "51": 3129,
+              "53": 3129,
+              "54": 3128,
+              "55": 3129,
+              "56": 3129
             }
           },
           {
             "name": "age",
-            "duplicates": 132489,
+            "duplicates": 162696,
             "info": {
               "id": "age",
               "short_name": "Age",
@@ -3192,24 +3220,24 @@
                 }
               ]
             },
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "string",
             "missing": 0,
             "table": {
-              "<1 Years": 18928,
-              "1-4 Years": 18928,
-              "18-49 Years": 18928,
-              "5-17 Years": 18928,
-              "50-64 Years": 18928,
-              "65+ Years": 18928,
-              "Total": 18928
+              "<1 Years": 23242,
+              "1-4 Years": 23241,
+              "18-49 Years": 23244,
+              "5-17 Years": 23244,
+              "50-64 Years": 23244,
+              "65+ Years": 23244,
+              "Total": 23244
             }
           },
           {
             "name": "time",
-            "duplicates": 132132,
+            "duplicates": 162256,
             "info": [],
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "string",
             "missing": 0,
             "table": {
@@ -3576,12 +3604,95 @@
               "2024-12-07": 364,
               "2024-12-14": 364,
               "2024-12-21": 364,
-              "2024-12-28": 364
+              "2024-12-28": 364,
+              "2025-01-04": 364,
+              "2025-01-11": 364,
+              "2025-01-18": 364,
+              "2025-01-25": 364,
+              "2025-02-01": 364,
+              "2025-02-08": 364,
+              "2025-02-15": 364,
+              "2025-02-22": 364,
+              "2025-03-01": 364,
+              "2025-03-08": 364,
+              "2025-03-15": 364,
+              "2025-03-22": 364,
+              "2025-03-29": 364,
+              "2025-04-05": 364,
+              "2025-04-12": 364,
+              "2025-04-19": 364,
+              "2025-04-26": 364,
+              "2025-05-03": 364,
+              "2025-05-10": 364,
+              "2025-05-17": 364,
+              "2025-05-24": 364,
+              "2025-05-31": 364,
+              "2025-06-07": 364,
+              "2025-06-14": 364,
+              "2025-06-21": 364,
+              "2025-06-28": 364,
+              "2025-07-05": 364,
+              "2025-07-12": 364,
+              "2025-07-19": 364,
+              "2025-07-26": 364,
+              "2025-08-02": 364,
+              "2025-08-09": 364,
+              "2025-08-16": 364,
+              "2025-08-23": 364,
+              "2025-08-30": 364,
+              "2025-09-06": 364,
+              "2025-09-13": 364,
+              "2025-09-20": 364,
+              "2025-09-27": 364,
+              "2025-10-04": 364,
+              "2025-10-11": 364,
+              "2025-10-18": 364,
+              "2025-10-25": 364,
+              "2025-11-01": 364,
+              "2025-11-08": 364,
+              "2025-11-15": 364,
+              "2025-11-22": 364,
+              "2025-11-29": 364,
+              "2025-12-06": 364,
+              "2025-12-13": 364,
+              "2025-12-20": 364,
+              "2025-12-27": 364,
+              "2026-01-03": 364,
+              "2026-01-10": 364,
+              "2026-01-17": 364,
+              "2026-01-24": 364,
+              "2026-01-31": 364,
+              "2026-02-07": 364,
+              "2026-02-14": 364,
+              "2026-02-21": 364,
+              "2026-02-28": 364,
+              "2026-03-07": 364,
+              "2026-03-14": 364,
+              "2026-03-21": 364,
+              "2026-03-28": 364,
+              "2026-04-04": 364,
+              "2026-04-11": 364,
+              "2026-04-18": 364,
+              "2026-04-25": 364,
+              "2026-05-02": 364,
+              "2026-05-09": 364,
+              "2026-05-16": 364,
+              "2026-05-23": 364,
+              "2026-05-30": 364,
+              "2026-06-06": 364,
+              "2026-06-13": 364,
+              "2026-06-20": 364,
+              "2026-06-27": 364,
+              "2026-07-04": 364,
+              "2026-07-11": 364,
+              "2026-07-18": 364,
+              "2026-07-25": 364,
+              "2026-08-01": 359
             }
           },
           {
             "name": "epic_n_rsv",
-            "duplicates": 131442,
+            "duplicates": 161471,
             "info": {
               "id": "epic_n_rsv",
               "short_name": "RSV Patients",
@@ -3597,17 +3708,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "integer",
             "missing": 0,
-            "mean": 23.062289,
-            "sd": 207.936583,
+            "mean": 25.638439,
+            "sd": 221.529095,
             "min": 5,
-            "max": 15253
+            "max": 15467
           },
           {
             "name": "epic_n_covid",
-            "duplicates": 129218,
+            "duplicates": 159237,
             "info": {
               "id": "epic_n_covid",
               "short_name": "COVID Patients",
@@ -3623,17 +3734,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "integer",
             "missing": 0,
-            "mean": 185.15679,
-            "sd": 1594.812313,
+            "mean": 167.330947,
+            "sd": 1460.736114,
             "min": 5,
             "max": 142689
           },
           {
             "name": "epic_n_flu",
-            "duplicates": 129986,
+            "duplicates": 159594,
             "info": {
               "id": "epic_n_flu",
               "short_name": "Influenza Patients",
@@ -3649,17 +3760,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "integer",
             "missing": 0,
-            "mean": 105.506476,
-            "sd": 1115.203694,
+            "mean": 135.640326,
+            "sd": 1467.264265,
             "min": 5,
-            "max": 85188
+            "max": 136861
           },
           {
             "name": "epic_n_all_encounters_weekly",
-            "duplicates": 107840,
+            "duplicates": 134170,
             "info": {
               "id": "epic_n_all_encounters_weekly",
               "short_name": "All-Cause ED Encounters (Weekly)",
@@ -3675,17 +3786,17 @@
                 }
               ]
             },
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "integer",
             "missing": 0,
-            "mean": 9907.85672,
-            "sd": 55015.286541,
+            "mean": 10755.191687,
+            "sd": 60011.706364,
             "min": 5,
-            "max": 1347301
+            "max": 1420243
           },
           {
             "name": "epic_pct_rsv",
-            "duplicates": 95647,
+            "duplicates": 116810,
             "info": {
               "id": "epic_pct_rsv",
               "short_name": "RSV Patients (%)",
@@ -3701,17 +3812,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "float",
             "missing": 0,
-            "mean": 2.796068,
-            "sd": 10.094259,
+            "mean": 2.629644,
+            "sd": 9.581897,
             "min": 0.000685,
             "max": 100
           },
           {
             "name": "epic_pct_flu",
-            "duplicates": 80347,
+            "duplicates": 96565,
             "info": {
               "id": "epic_pct_flu",
               "short_name": "Influenza Patients (%)",
@@ -3727,17 +3838,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "float",
             "missing": 0,
-            "mean": 3.339815,
-            "sd": 10.136554,
+            "mean": 3.359406,
+            "sd": 9.716568,
             "min": 0.003112,
             "max": 100
           },
           {
             "name": "epic_pct_covid",
-            "duplicates": 69882,
+            "duplicates": 87315,
             "info": {
               "id": "epic_pct_covid",
               "short_name": "COVID Patients (%)",
@@ -3753,17 +3864,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "float",
             "missing": 0,
-            "mean": 3.726695,
-            "sd": 10.051573,
+            "mean": 3.385559,
+            "sd": 9.545326,
             "min": 0.000549,
             "max": 100
           },
           {
             "name": "epic_suppressed_flag_rsv",
-            "duplicates": 132494,
+            "duplicates": 162701,
             "info": {
               "id": "epic_suppressed_flag_rsv",
               "short_name": "Fewer than 10 cases in the strata?",
@@ -3778,17 +3889,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "integer",
             "missing": 0,
-            "mean": 0.844071,
-            "sd": 0.36279,
+            "mean": 0.820569,
+            "sd": 0.383714,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_covid",
-            "duplicates": 132494,
+            "duplicates": 162701,
             "info": {
               "id": "epic_suppressed_flag_covid",
               "short_name": "Fewer than 10 cases in the strata?",
@@ -3803,17 +3914,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "integer",
             "missing": 0,
-            "mean": 0.553096,
-            "sd": 0.497175,
+            "mean": 0.54184,
+            "sd": 0.498248,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_flu",
-            "duplicates": 132494,
+            "duplicates": 162701,
             "info": {
               "id": "epic_suppressed_flag_flu",
               "short_name": "Fewer than 10 cases in the strata?",
@@ -3828,17 +3939,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "integer",
             "missing": 0,
-            "mean": 0.667877,
-            "sd": 0.470977,
+            "mean": 0.634592,
+            "sd": 0.481546,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_all_encounters_weekly",
-            "duplicates": 132494,
+            "duplicates": 162701,
             "info": {
               "id": "epic_suppressed_flag_all_encounters_weekly",
               "short_name": "All Encounters Count Suppressed? (Weekly)",
@@ -3853,11 +3964,11 @@
                 }
               ]
             },
-            "time_range": [0, 363],
+            "time_range": [0, 446],
             "type": "integer",
             "missing": 0,
-            "mean": 0.008506,
-            "sd": 0.091835,
+            "mean": 0.007609,
+            "sd": 0.086897,
             "min": 0,
             "max": 1
           }
@@ -4247,51 +4358,15 @@
           "id": "_sources"
         }
       },
-      "sha512": "51837846e559436b6f8427d4b7a0e6c5b34ff766e34e26bf3621dce4b149a3255709b1e4bdb7d006b6beced9ee27b9920d40a8df1e5350112170f594990adf70"
+      "sha512": "b43693bb3ff039876ebc5941198b61f54316c77964f7fd5bf8394d901f0e3f20b24023619929bcc1164bd9ef3ab2f1d75fc3b30fe64f622968d89ed1af8213a9"
     }
   ],
   "change_report": {
     "monthly_tests.csv.gz": {
-      "state": "changed",
-      "variables": {
-        "time": {
-          "status": "present",
-          "same_type": true,
-          "added_levels": [],
-          "dropped_levels": []
-        },
-        "geography": {
-          "status": "present",
-          "same_type": true,
-          "added_levels": [],
-          "dropped_levels": []
-        },
-        "age": {
-          "status": "present",
-          "same_type": true,
-          "added_levels": [],
-          "dropped_levels": []
-        },
-        "epic_pct_rsv_pos_tests": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_pct_j12_j18_tested_rsv": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_ed_j12_j18": {
-          "status": "present",
-          "same_type": true
-        },
-        "suppressed_rsv_test": {
-          "status": "present",
-          "same_type": true
-        }
-      }
+      "state": "unchanged"
     },
     "no_geo.csv.gz": {
-      "state": "new file"
+      "state": "unchanged"
     },
     "weekly.csv.gz": {
       "state": "changed",
@@ -4311,8 +4386,8 @@
         "time": {
           "status": "present",
           "same_type": true,
-          "added_levels": [],
-          "dropped_levels": ["2025-01-04", "2025-01-11", "2025-01-18", "2025-01-25", "2025-02-01", "2025-02-08", "2025-02-15", "2025-02-22", "2025-03-01", "2025-03-08", "2025-03-15", "2025-03-22", "2025-03-29", "2025-04-05", "2025-04-12", "2025-04-19", "2025-04-26", "2025-05-03", "2025-05-10", "2025-05-17", "2025-05-24", "2025-05-31", "2025-06-07", "2025-06-14", "2025-06-21", "2025-06-28", "2025-07-05", "2025-07-12", "2025-07-19", "2025-07-26", "2025-08-02", "2025-08-09", "2025-08-16", "2025-08-23", "2025-08-30", "2025-09-06", "2025-09-13", "2025-09-20", "2025-09-27", "2025-10-04", "2025-10-11", "2025-10-18", "2025-10-25", "2025-11-01", "2025-11-08", "2025-11-15", "2025-11-22", "2025-11-29", "2025-12-06", "2025-12-13", "2025-12-20", "2025-12-27", "2026-01-03", "2026-01-10", "2026-01-17", "2026-01-24", "2026-01-31", "2026-02-07", "2026-02-14", "2026-02-21", "2026-02-28", "2026-03-07", "2026-03-14", "2026-03-21", "2026-03-28", "2026-04-04", "2026-04-11", "2026-04-18", "2026-04-25", "2026-05-02", "2026-05-09", "2026-05-16", "2026-05-23", "2026-05-30", "2026-06-06", "2026-06-13", "2026-06-20", "2026-06-27", "2026-07-04", "2026-07-11", "2026-07-18"]
+          "added_levels": ["2025-01-04", "2025-01-11", "2025-01-18", "2025-01-25", "2025-02-01", "2025-02-08", "2025-02-15", "2025-02-22", "2025-03-01", "2025-03-08", "2025-03-15", "2025-03-22", "2025-03-29", "2025-04-05", "2025-04-12", "2025-04-19", "2025-04-26", "2025-05-03", "2025-05-10", "2025-05-17", "2025-05-24", "2025-05-31", "2025-06-07", "2025-06-14", "2025-06-21", "2025-06-28", "2025-07-05", "2025-07-12", "2025-07-19", "2025-07-26", "2025-08-02", "2025-08-09", "2025-08-16", "2025-08-23", "2025-08-30", "2025-09-06", "2025-09-13", "2025-09-20", "2025-09-27", "2025-10-04", "2025-10-11", "2025-10-18", "2025-10-25", "2025-11-01", "2025-11-08", "2025-11-15", "2025-11-22", "2025-11-29", "2025-12-06", "2025-12-13", "2025-12-20", "2025-12-27", "2026-01-03", "2026-01-10", "2026-01-17", "2026-01-24", "2026-01-31", "2026-02-07", "2026-02-14", "2026-02-21", "2026-02-28", "2026-03-07", "2026-03-14", "2026-03-21", "2026-03-28", "2026-04-04", "2026-04-11", "2026-04-18", "2026-04-25", "2026-05-02", "2026-05-09", "2026-05-16", "2026-05-23", "2026-05-30", "2026-06-06", "2026-06-13", "2026-06-20", "2026-06-27", "2026-07-04", "2026-07-11", "2026-07-18", "2026-07-25", "2026-08-01"],
+          "dropped_levels": []
         },
         "epic_n_rsv": {
           "status": "present",
