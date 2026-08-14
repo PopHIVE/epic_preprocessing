@@ -1,10 +1,10 @@
 [
   {
-    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-07-31T08_46_18.xlsx",
-    "md5": "c0fa691feb97fe4e2cf4733b6a38a433",
-    "date_processed": "2026-08-10 11:15:02.122617",
+    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-08-13T12_20_47.xlsx",
+    "md5": "b7e9cba6e613bca81ce1a65610886feb",
+    "date_processed": "2026-08-14 09:00:14.209056",
     "Session Title": "Number of ED Encounters by ED Diagnoses and State of Residence and Age at Time of Visit Range",
-    "Session ID": "2845894",
+    "Session ID": "2849336",
     "Data Model": "ED Encounters",
     "Population Base": "All ED Encounters",
     "Population Criteria Filters": "",
@@ -13,11 +13,11 @@
     "Date of Export": "Anne Shapiro"
   },
   {
-    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-07-31T08_53_14.xlsx",
-    "md5": "ff4c5681bbe30a8350c4bef5642eb6f2",
-    "date_processed": "2026-08-10 11:15:03.531958",
+    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-08-13T12_25_16.xlsx",
+    "md5": "e28ecd3ca7e8e87e43c03f424ebbf5d4",
+    "date_processed": "2026-08-14 09:00:15.759059",
     "Session Title": "Number of ED Encounters by ED Diagnoses and State of Residence and Age at Time of Visit Range",
-    "Session ID": "2845895",
+    "Session ID": "2849337",
     "Data Model": "ED Encounters",
     "Population Base": "All ED Encounters",
     "Population Criteria Filters": "Country of Residence: United States of America",
@@ -26,15 +26,15 @@
     "Date of Export": "Anne Shapiro"
   },
   {
-    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-07-31T09_07_41.xlsx",
-    "md5": "5ec7fcf440057bbeb0ce770477fe8427",
-    "date_processed": "2026-08-10 11:15:04.187398",
+    "file": "raw/staging_resp_infections_wide/ED Encounters_Crosstab_2026-08-13T12_26_25.xlsx",
+    "md5": "3bcede17109d59d54ca6d99e7e6c297b",
+    "date_processed": "2026-08-14 09:00:16.480534",
     "Session Title": "Number of ED Encounters by ED Diagnoses and State of Residence and Age at Time of Visit Range",
-    "Session ID": "2845947",
+    "Session ID": "2849338",
     "Data Model": "ED Encounters",
     "Population Base": "All ED Encounters",
     "Population Criteria Filters": "Country of Residence: United States of America",
-    "Session Date Range": "12/29/2024 - 7/18/2026 (Based On Arrival Date)",
+    "Session Date Range": "1/29/2025 - 7/31/2026 (Based On Arrival Date)",
     "Export User": "Number of ED Encounters",
     "Date of Export": "Anne Shapiro"
   }
