@@ -314,6 +314,24 @@ Then work the [validation checklist](#validation-checklist) and report: source p
 output columns, geographies, time range, row count, suppression counts, and what to do
 next (add to a bundle, commit).
 
+## A8. Render the validation report
+
+Run [`scripts/validate_dataset.Rmd`](#validation-report-scriptsvalidate_datasetrmd)
+against the new standard file before reporting the source done. Render to a **temp
+file, never into the repo** — this report is a review aid, not a deliverable — and open
+it straight in the browser:
+
+```powershell
+Rscript -e "out <- tempfile(fileext = '.html'); rmarkdown::render('scripts/validate_dataset.Rmd', output_file = out, params = list(data_file = 'data/<source_name>/standard/data.csv.gz'), envir = new.env(), quiet = TRUE); browseURL(out)"
+```
+
+This is a first-time source, so there is no previous committed version to diff against —
+`git_compare` (on by default) will find none and the comparison sections will say so;
+that is expected, not a failure. Read the rendered report for anything the
+[validation checklist](#validation-checklist) only catches visually — unexpected
+demographic categories, suppression-imputation FAILs, implausible trends, geographic
+coverage gaps in the maps — and report anything odd to the user before moving on.
+
 ---
 
 # Path B — Update of an existing source
@@ -466,6 +484,22 @@ Make the smallest correct change, in this order:
 Never hand-edit `process.json` on this path either — and if the source directory turns
 out to be missing `process.json` altogether, it was not created by
 `dcf::dcf_add_source()`: go to A1 and initialize it properly instead of writing the file.
+
+## B6. Render the validation report
+
+Once the B4 regression checks (or the B5 re-run) pass, render the same validation
+report so the refreshed data gets an actual visual check, not just column-diff
+assertions. Render to a **temp file, never into the repo**, and open it directly:
+
+```powershell
+Rscript -e "out <- tempfile(fileext = '.html'); rmarkdown::render('scripts/validate_dataset.Rmd', output_file = out, params = list(data_file = 'data/<source_name>/standard/data.csv.gz'), envir = new.env(), quiet = TRUE); browseURL(out)"
+```
+
+Leave `old_data_file` blank — `git_compare` (default `TRUE`) automatically diffs
+against the previously committed version of this same file, which is exactly the
+comparison an update needs (category diff in section 2, trend overlay and change map in
+section 6). Review section 3 (suppression) and section 6 (old vs previous) especially
+closely, and report anything unexpected before committing.
 
 ---
 
@@ -650,6 +684,29 @@ user asks for it.
 
 ---
 
+# Validation report: `scripts/validate_dataset.Rmd`
+
+An R Markdown report that gives the [validation checklist](#validation-checklist) a
+visual pass: overview and format checks, demographic categories (diffed against a prior
+version), suppression-imputation checks, national time series, choropleth maps, and an
+old-vs-new comparison. It takes one required param, `data_file` (the standard file's
+path relative to `project_root`, default `".."`), and otherwise defaults to comparing
+against the file's previous committed git version (`git_compare: true`) — pass
+`old_data_file` explicitly only when the comparison target isn't the git history (e.g.
+comparing two non-committed files).
+
+**Always render it to a temp file and open it in the browser — never render it into the
+repo.** It is a review aid consumed once during ingestion, not a build artifact:
+
+```powershell
+Rscript -e "out <- tempfile(fileext = '.html'); rmarkdown::render('scripts/validate_dataset.Rmd', output_file = out, params = list(data_file = 'data/<source_name>/standard/data.csv.gz'), envir = new.env(), quiet = TRUE); browseURL(out)"
+```
+
+Used in [A8](#a8-render-the-validation-report) (new source) and
+[B6](#b6-render-the-validation-report) (update).
+
+---
+
 # Validation checklist
 
 - [ ] `process.json` exists, is dcf-generated, `type: "source"`, `scripts: ["ingest.R"]`
@@ -672,6 +729,8 @@ user asks for it.
 - [ ] README documents the session ID, the update procedure, and the caveats
 - [ ] On an update: column set, index grain, geography count, and time range all checked
       against the previous standard file
+- [ ] [`scripts/validate_dataset.Rmd`](#validation-report-scriptsvalidate_datasetrmd)
+      rendered to a temp HTML file and reviewed (never rendered into the repo)
 
 ---
 
@@ -687,7 +746,8 @@ User: `/ingest-source cosmos_asthma Epic Cosmos ED visits for asthma by state an
 4. Write `ingest.R` with `DIM_LABELS` / `MEASURE_PATTERNS`, producing
    `epic_pct_ed_visits_asthma` (+ flag) indexed by `geography`, `time`
 5. Write `measure_info.json` (measures + flags + `_sources`) and `README.md`
-6. Run `dcf::dcf_process('cosmos_asthma')`, work the checklist, report
+6. Run `dcf::dcf_process('cosmos_asthma')`, work the checklist
+7. Render `validate_dataset.Rmd` to a temp HTML file, open it, review, report
 
 # Example — update
 
@@ -703,3 +763,5 @@ User: "here's the new mental health export"
    Structure changed (say a new `Anxiety` diagnosis bucket) → add it to `DX_PATTERNS`
    and the expected measure columns, add its two `measure_info.json` entries, note it in
    the README, re-run, and report the column diff.
+5. Render `validate_dataset.Rmd` to a temp HTML file (git_compare picks up the
+   previously committed version automatically), open it, review, report
