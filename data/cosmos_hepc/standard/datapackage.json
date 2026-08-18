@@ -1,0 +1,706 @@
+{
+  "name": "cosmos_hepc",
+  "title": "Cosmos Hepc",
+  "licenses": [],
+  "resources": [
+    {
+      "bytes": 74450,
+      "encoding": "windows-1252",
+      "md5": "498fe8382b04ba484438b4bad674423d",
+      "format": "csv",
+      "name": "data.csv",
+      "filename": "data.csv.gz",
+      "versions": {},
+      "source": [],
+      "data_format": "wide",
+      "ids": [
+        {
+          "variable": "geography"
+        }
+      ],
+      "id_length": 2,
+      "time": "time",
+      "profile": "data-resource",
+      "created": "2026-08-18 08:43:34.873533",
+      "last_modified": "2026-08-18 12:25:31.746616",
+      "vintage": {},
+      "row_count": 3640,
+      "entity_count": 52,
+      "schema": {
+        "fields": [
+          {
+            "name": "geography",
+            "duplicates": 3588,
+            "info": [],
+            "time_range": [0, 9],
+            "type": "string",
+            "missing": 0,
+            "table": {
+              "00": 70,
+              "01": 70,
+              "02": 70,
+              "04": 70,
+              "05": 70,
+              "06": 70,
+              "08": 70,
+              "09": 70,
+              "10": 70,
+              "11": 70,
+              "12": 70,
+              "13": 70,
+              "15": 70,
+              "16": 70,
+              "17": 70,
+              "18": 70,
+              "19": 70,
+              "20": 70,
+              "21": 70,
+              "22": 70,
+              "23": 70,
+              "24": 70,
+              "25": 70,
+              "26": 70,
+              "27": 70,
+              "28": 70,
+              "29": 70,
+              "30": 70,
+              "31": 70,
+              "32": 70,
+              "33": 70,
+              "34": 70,
+              "35": 70,
+              "36": 70,
+              "37": 70,
+              "38": 70,
+              "39": 70,
+              "40": 70,
+              "41": 70,
+              "42": 70,
+              "44": 70,
+              "45": 70,
+              "46": 70,
+              "47": 70,
+              "48": 70,
+              "49": 70,
+              "50": 70,
+              "51": 70,
+              "53": 70,
+              "54": 70,
+              "55": 70,
+              "56": 70
+            }
+          },
+          {
+            "name": "time",
+            "duplicates": 3630,
+            "info": [],
+            "time_range": [0, 9],
+            "type": "string",
+            "missing": 0,
+            "table": {
+              "2018-12-31": 364,
+              "2019-12-31": 364,
+              "2020-12-31": 364,
+              "2021-12-31": 364,
+              "2022-12-31": 364,
+              "2023-12-31": 364,
+              "2024-12-31": 364,
+              "2025-12-31": 364,
+              "2026-06-30": 364,
+              "2026-07-28": 364
+            }
+          },
+          {
+            "name": "age",
+            "duplicates": 3633,
+            "info": [],
+            "time_range": [0, 9],
+            "type": "string",
+            "missing": 0,
+            "table": {
+              "<5 Years": 520,
+              "18-24 Years": 520,
+              "25-44 Years": 520,
+              "45-64 Years": 520,
+              "5-17 Years": 520,
+              "65+ Years": 520,
+              "Total": 520
+            }
+          },
+          {
+            "name": "epic_n_patients_hepc",
+            "duplicates": 2134,
+            "info": {
+              "id": "epic_n_patients_hepc",
+              "short_name": "Hepatitis C patients",
+              "long_name": "Number of patients with a viral hepatitis C diagnosis",
+              "category": "chronic",
+              "short_description": "Annual count of patients with a viral hepatitis C diagnosis.",
+              "long_description": "Count of distinct Epic Cosmos patients with at least one encounter in the calendar year who carry a viral hepatitis C diagnosis, by state of residence and age at encounter. The population base is all patients with any encounter and Country of Care = United States of America; no diagnosis filter is applied to the population, and the diagnosis restriction is applied as a row-level bucket so that the all-patients denominator (epic_n_patients) is reported alongside it. The diagnosis bucket was defined in SlicerDicer as ICD-10-CM B18.2 (chronic viral hepatitis C), B19.2 (unspecified viral hepatitis C), B17.1 (acute hepatitis C), and B17.2 (acute hepatitis E). B17.2 is not a hepatitis C code and was included by the session as built, so these counts contain a small number of acute hepatitis E patients; the bucket definition should be corrected and the session re-exported. Counts of 10 or fewer are suppressed by Epic Cosmos and imputed as 5 here, flagged by epic_n_patients_hepc_suppressed_flag. The age value \"Total\" is the source's own overall-age total and includes patients whose age at encounter is unknown, so it exceeds the sum of the six age buckets by 1 to 2.5 percent; use the \"Total\" row for overall figures rather than summing the buckets. The most recent period may be a partial year, identifiable because its time value is not December 31 (currently 2026-07-28, covering January 1 to July 28 only). Counts for a partial period are NOT comparable to a full year - the 2026 partial count is about 19 percent below the 2025 full-year count purely because of the shorter window. Use epic_pct_hepc for trend comparisons that include a partial period. NOTE: the SlicerDicer session backing this measure (2850163) covers 2020-2025 plus the 2026 partial only; a predecessor session (2850139) covered back to 2018 but lacked the age \"Total\" row, so 2018 and 2019 currently have NA here despite being present for epic_n_patients_hepc_medication.",
+              "statement": "In {location}, {value} patients had a viral hepatitis C diagnosis in {time}.",
+              "measure_type": "Count",
+              "unit": "Patients",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [2, 9],
+            "type": "integer",
+            "missing": 1092,
+            "mean": 5771.158163,
+            "sd": 32494.647396,
+            "min": 5,
+            "max": 570589
+          },
+          {
+            "name": "epic_n_patients_hepc_suppressed_flag",
+            "duplicates": 3637,
+            "info": {
+              "id": "epic_n_patients_hepc_suppressed_flag",
+              "short_name": "Suppressed flag: hepatitis C patients",
+              "long_name": "Suppression flag for the number of patients with a viral hepatitis C diagnosis",
+              "category": "chronic",
+              "short_description": "Indicates whether the hepatitis C patient count was suppressed and imputed.",
+              "long_description": "1 when Epic Cosmos suppressed the cell (a count of 10 or fewer, reported as \"10 or fewer\") and the value was imputed as 5; 0 otherwise. The flag is computed before imputation, so it records what the source withheld rather than what the ingest wrote. A flag of 1 always accompanies the imputed value 5, and no source-reported value carries a flag of 1.",
+              "statement": "In {location}, the hepatitis C patient count for {time} was suppressed and imputed ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [2, 9],
+            "type": "integer",
+            "missing": 1092,
+            "mean": 0.067504,
+            "sd": 0.250942,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_n_patients",
+            "duplicates": 1096,
+            "info": {
+              "id": "epic_n_patients",
+              "short_name": "All patients",
+              "long_name": "Number of patients with any encounter (denominator)",
+              "category": "chronic",
+              "short_description": "Annual count of all patients with any encounter, used as the hepatitis C denominator.",
+              "long_description": "Count of distinct Epic Cosmos patients with at least one encounter in the calendar year, regardless of diagnosis, by state of residence and age at encounter. Taken from the per-state \"Total\" row of the diagnosis dimension in the SlicerDicer export, which includes all data under that state bucket. This is the denominator for epic_pct_hepc. Because it counts the full Epic Cosmos patient population rather than a census population, it reflects Epic's market share in each state and is not a general population count; state-to-state comparisons of the count itself are therefore not meaningful, though the derived percentage is comparable. The age value \"Total\" is the source's own overall-age total and includes patients of unknown age, so it exceeds the sum of the six buckets. Like the numerator, a count for a partial trailing period (time not ending December 31) covers only part of the year and is not comparable to a full year. Counts of 10 or fewer would be suppressed and imputed as 5; no denominator cell was suppressed in the current export.",
+              "statement": "In {location}, {value} patients had at least one encounter in {time}.",
+              "measure_type": "Count",
+              "unit": "Patients",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [2, 9],
+            "type": "integer",
+            "missing": 1092,
+            "mean": 1572301.527865,
+            "sd": 8393083.821638,
+            "min": 1094,
+            "max": 163742076
+          },
+          {
+            "name": "epic_n_patients_suppressed_flag",
+            "duplicates": 3638,
+            "info": {
+              "id": "epic_n_patients_suppressed_flag",
+              "short_name": "Suppressed flag: all patients",
+              "long_name": "Suppression flag for the number of patients with any encounter",
+              "category": "chronic",
+              "short_description": "Indicates whether the all-patients denominator was suppressed and imputed.",
+              "long_description": "1 when Epic Cosmos suppressed the denominator cell (a count of 10 or fewer) and the value was imputed as 5; 0 otherwise. Computed before imputation. Where this flag is 1, epic_pct_hepc is deliberately left missing rather than asserting the meaningless 5 / 5 = 100% that the imputed denominator would produce.",
+              "statement": "In {location}, the all-patients denominator for {time} was suppressed and imputed ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [2, 9],
+            "type": "integer",
+            "missing": 1092,
+            "mean": 0,
+            "sd": 0,
+            "min": 0,
+            "max": 0
+          },
+          {
+            "name": "epic_pct_hepc",
+            "duplicates": 1091,
+            "info": {
+              "id": "epic_pct_hepc",
+              "short_name": "Percent with hepatitis C",
+              "long_name": "Percent of patients with a viral hepatitis C diagnosis",
+              "category": "chronic",
+              "short_description": "Percent of patients with any encounter who have a viral hepatitis C diagnosis.",
+              "long_description": "Derived as epic_n_patients_hepc / epic_n_patients * 100 within each geography, year, and age group. Because both numerator and denominator come from the same Epic Cosmos patient population, this percentage is comparable across states and years in a way the raw counts are not. It measures diagnosed hepatitis C among patients who sought care, not population prevalence, and so is sensitive to testing and care-seeking patterns as well as to Epic's coverage in each state. Where the numerator was suppressed (10 or fewer), the imputed numerator of 5 carries through, which is equivalent to the 5 / denominator * 100 imputation rule; those cells are flagged by epic_pct_hepc_suppressed_flag. Where the denominator was suppressed, the value is left missing instead of computing 5 / 5 = 100%. Because numerator and denominator cover the same window, this measure is far more robust to a partial trailing period than the raw counts are: the 2026-07-28 partial value of 0.32 percent sits on the 2020-2025 declining trend (0.42, 0.39, 0.38, 0.37, 0.36, 0.34), whereas the underlying count drops about 19 percent purely from the shorter window. It is still not strictly comparable, since a shorter observation window gives each patient fewer opportunities for a diagnosis to be recorded. The underlying diagnosis bucket also includes ICD-10-CM B17.2 (acute hepatitis E) in error - see epic_n_patients_hepc.",
+              "statement": "In {location}, {value}% of patients with an encounter in {time} had a viral hepatitis C diagnosis.",
+              "measure_type": "Percent",
+              "unit": "Percent",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [2, 9],
+            "type": "float",
+            "missing": 1092,
+            "mean": 0.274796,
+            "sd": 0.259517,
+            "min": 0.002457,
+            "max": 1.884396
+          },
+          {
+            "name": "epic_pct_hepc_suppressed_flag",
+            "duplicates": 3637,
+            "info": {
+              "id": "epic_pct_hepc_suppressed_flag",
+              "short_name": "Suppressed flag: percent with hepatitis C",
+              "long_name": "Suppression flag for the percent of patients with a viral hepatitis C diagnosis",
+              "category": "chronic",
+              "short_description": "Indicates whether the hepatitis C percentage rests on a suppressed and imputed value.",
+              "long_description": "1 when either the numerator or the denominator of epic_pct_hepc was suppressed by Epic Cosmos; 0 otherwise. Computed before imputation. When only the numerator was suppressed, the percentage is reported using the imputed numerator of 5, matching the 5 / denominator * 100 rule. When the denominator was suppressed, epic_pct_hepc is left missing while this flag remains 1.",
+              "statement": "In {location}, the hepatitis C percentage for {time} rests on a suppressed value ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [2, 9],
+            "type": "integer",
+            "missing": 1092,
+            "mean": 0.067504,
+            "sd": 0.250942,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_n_patients_hepc_medication",
+            "duplicates": 2700,
+            "info": {
+              "id": "epic_n_patients_hepc_medication",
+              "short_name": "HCV medication patients meeting the measure",
+              "long_name": "Number of patients with an HCV medication on record who meet the hcv medication measure (derived)",
+              "category": "chronic",
+              "short_description": "Annual count of patients with an HCV medication on record who meet the hcv medication measure.",
+              "long_description": "DERIVED, not directly reported by the source: computed as round(epic_n_patients_hepc_medication_pop * epic_pct_hepc_medication / 100). The source export gives this population's size (epic_n_patients_hepc_medication_pop) and its own rate for a named Epic Cosmos measure, \"hcv medication measure (%)\", but not a numerator count, so this column reconstructs it from those two. The underlying population is patients meeting the same viral hepatitis C diagnosis criteria as epic_n_patients_hepc who ALSO have an HCV medication on record (SlicerDicer's \"has HCV medication\" bucket of the \"All Medications\" row dimension) -- a smaller, more specific population than \"all HCV-diagnosed patients\"; do not confuse it with epic_n_patients_hepc. The diagnosis criteria include ICD-10-CM B17.2 (acute hepatitis E), which is not a hepatitis C code, so this population contains a small number of acute hepatitis E patients - the same error present in epic_n_patients_hepc's bucket definition (see its long_description). This measure comes from a separate SlicerDicer session (2850012) from epic_n_patients_hepc (2850163) with an independently set date range. Suppressed cells (source population of 10 or fewer, or a blank rate even when the population itself was shown) are imputed to 5, flagged by epic_n_patients_hepc_medication_suppressed_flag. The age value \"Total\" is the source's own overall-age total. The most recent period may be a partial year, identifiable because its time value is not December 31 (currently 2026-06-30, covering January 1 to June 30 only -- narrower than epic_n_patients_hepc's own 2026-07-28 partial period). Use epic_pct_hepc_medication for trend comparisons that include a partial period.",
+              "statement": "In {location}, {value} patients with an HCV medication on record met the hcv medication measure in {time}.",
+              "measure_type": "Count",
+              "unit": "Patients",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 364,
+            "mean": 600.990842,
+            "sd": 3400.114993,
+            "min": 5,
+            "max": 63170
+          },
+          {
+            "name": "epic_n_patients_hepc_medication_suppressed_flag",
+            "duplicates": 3637,
+            "info": {
+              "id": "epic_n_patients_hepc_medication_suppressed_flag",
+              "short_name": "Suppressed flag: HCV medication patients meeting the measure",
+              "long_name": "Suppression flag for the derived count of HCV medication patients meeting the measure",
+              "category": "chronic",
+              "short_description": "Indicates whether the underlying rate used to derive this count was suppressed and imputed.",
+              "long_description": "1 when Epic Cosmos suppressed the underlying cell (the population itself was 10 or fewer, or the population was shown but its rate was blank because the count meeting the measure was small enough to withhold on its own) and this derived value was imputed as 5; 0 otherwise. The flag is computed before imputation, so it records what the source withheld rather than what the ingest wrote. A flag of 1 always accompanies the imputed value 5, and no source-reported value carries a flag of 1. This flag is identical to epic_pct_hepc_medication_suppressed_flag, since both are derived from the same underlying rate.",
+              "statement": "In {location}, the HCV medication measure count for {time} was suppressed and imputed ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 364,
+            "mean": 0.363858,
+            "sd": 0.481182,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_n_patients_hepc_medication_pop",
+            "duplicates": 2629,
+            "info": {
+              "id": "epic_n_patients_hepc_medication_pop",
+              "short_name": "Patients with an HCV medication on record",
+              "long_name": "Number of patients with an HCV medication on record (denominator for the hcv medication measure)",
+              "category": "chronic",
+              "short_description": "Annual count of patients with an HCV medication on record, used as the epic_pct_hepc_medication denominator.",
+              "long_description": "Taken directly from the medication crosstab's \"has HCV medication\" bucket (All Medications row dimension) -- \"Number of Patients\" for that bucket -- this is the count of patients, among those meeting the same viral hepatitis C diagnosis criteria as epic_n_patients_hepc, who ALSO have an HCV medication on record, by state of residence and age at encounter. It is the denominator for epic_pct_hepc_medication and for the derived epic_n_patients_hepc_medication. Do NOT confuse this with \"all HCV-diagnosed patients\": the crosstab's separate \"Total\" bucket (unused in this repo) is the one confirmed to match epic_n_patients_hepc exactly; this \"has HCV medication\" population is smaller and more specific, restricted to patients who already have an HCV medication documented. The diagnosis criteria include ICD-10-CM B17.2 (acute hepatitis E), which is not a hepatitis C code, so this population contains a small number of acute hepatitis E patients - the same error present in epic_n_patients_hepc's bucket definition (see its long_description). Counts of 10 or fewer are suppressed and imputed as 5, flagged by epic_n_patients_hepc_medication_pop_suppressed_flag. A count for a partial trailing period (time not ending December 31) covers only part of the year and is not comparable to a full year.",
+              "statement": "In {location}, {value} patients had an HCV medication on record in {time}.",
+              "measure_type": "Count",
+              "unit": "Patients",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 364,
+            "mean": 732.84768,
+            "sd": 4140.131039,
+            "min": 5,
+            "max": 76943
+          },
+          {
+            "name": "epic_n_patients_hepc_medication_pop_suppressed_flag",
+            "duplicates": 3637,
+            "info": {
+              "id": "epic_n_patients_hepc_medication_pop_suppressed_flag",
+              "short_name": "Suppressed flag: patients with an HCV medication on record",
+              "long_name": "Suppression flag for the HCV-medication population denominator",
+              "category": "chronic",
+              "short_description": "Indicates whether the population denominator was suppressed and imputed.",
+              "long_description": "1 when Epic Cosmos suppressed the denominator cell (a count of 10 or fewer) and the value was imputed as 5; 0 otherwise. Computed before imputation. Where this flag is 1, epic_pct_hepc_medication is deliberately left missing rather than asserting the meaningless 5 / 5 = 100% that the imputed denominator would produce.",
+              "statement": "In {location}, the HCV-medication population denominator for {time} was suppressed and imputed ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 364,
+            "mean": 0.34707,
+            "sd": 0.476111,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_pct_hepc_medication",
+            "duplicates": 2540,
+            "info": {
+              "id": "epic_pct_hepc_medication",
+              "short_name": "HCV medication measure rate",
+              "long_name": "Percent of patients with an HCV medication on record who meet the hcv medication measure",
+              "category": "chronic",
+              "short_description": "Rate of a named Epic Cosmos quality measure among patients who have an HCV medication on record.",
+              "long_description": "Taken directly from the medication crosstab's \"has HCV medication\" bucket's own \"hcv medication measure (%)\" column (imputed via the standard 5 / denominator rule when blank -- see below), NOT computed by this repo from two independently reported counts, since the source does not report the underlying numerator count directly (see epic_n_patients_hepc_medication, which instead derives a count FROM this percent). The denominator (epic_n_patients_hepc_medication_pop) is patients with an HCV medication on record among those meeting the same viral hepatitis C diagnosis criteria as epic_n_patients_hepc -- a smaller, more specific population than \"all HCV-diagnosed patients\". The exact clinical definition of the \"hcv medication measure\" itself (e.g. adherence, treatment completion, sustained virologic response) is not stated in the SlicerDicer export and has not been confirmed against Epic Cosmos/SlicerDicer documentation; do not assert a specific clinical meaning without confirming it first. Nationally the rate has held in a narrow band, 77 to 84 percent, from 2018 to mid-2026, with no clear trend. Where the underlying count was suppressed (10 or fewer, or a rate withheld even though the population was shown), the imputed rate is 5 / denominator * 100 and the cell is flagged by epic_pct_hepc_medication_suppressed_flag. Where the denominator itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. The most recent period may be a partial year (currently 2026-06-30, narrower than epic_n_patients_hepc's own 2026-07-28 partial); use this percentage rather than the derived count for trend comparisons spanning the partial period, for the same reason described under epic_pct_hepc.",
+              "statement": "In {location}, {value}% of patients with an HCV medication on record in {time} met the hcv medication measure.",
+              "measure_type": "Percent",
+              "unit": "Percent",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "float",
+            "missing": 1501,
+            "mean": 80.877718,
+            "sd": 8.688889,
+            "min": 25,
+            "max": 100
+          },
+          {
+            "name": "epic_pct_hepc_medication_suppressed_flag",
+            "duplicates": 3637,
+            "info": {
+              "id": "epic_pct_hepc_medication_suppressed_flag",
+              "short_name": "Suppressed flag: HCV medication measure rate",
+              "long_name": "Suppression flag for the hcv medication measure rate",
+              "category": "chronic",
+              "short_description": "Indicates whether the measure rate rests on a suppressed and imputed value.",
+              "long_description": "1 when the source's own rate was blank -- either because the population denominator itself was 10 or fewer, or because the count meeting the measure was small enough to withhold on its own even though the population was shown; 0 otherwise. Computed before imputation. When only the count was suppressed (population shown, rate blank), the rate is imputed as 5 / denominator * 100. When the denominator itself was suppressed, epic_pct_hepc_medication is left missing while this flag remains 1. This flag is identical to epic_n_patients_hepc_medication_suppressed_flag, since both are derived from the same underlying rate.",
+              "statement": "In {location}, the hcv medication measure rate for {time} rests on a suppressed value ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 364,
+            "mean": 0.363858,
+            "sd": 0.481182,
+            "min": 0,
+            "max": 1
+          }
+        ]
+      },
+      "sha512": "77112c2bb28974d69c0719e3f0afebbd13606baf2f37c41e99551604570a4b876c13e0091359dedea776e10521c9eed809ed88f817244ef4829c14c1ce8b2708"
+    }
+  ],
+  "measure_info": {
+    "epic_n_patients_hepc": {
+      "id": "epic_n_patients_hepc",
+      "short_name": "Hepatitis C patients",
+      "long_name": "Number of patients with a viral hepatitis C diagnosis",
+      "category": "chronic",
+      "short_description": "Annual count of patients with a viral hepatitis C diagnosis.",
+      "long_description": "Count of distinct Epic Cosmos patients with at least one encounter in the calendar year who carry a viral hepatitis C diagnosis, by state of residence and age at encounter. The population base is all patients with any encounter and Country of Care = United States of America; no diagnosis filter is applied to the population, and the diagnosis restriction is applied as a row-level bucket so that the all-patients denominator (epic_n_patients) is reported alongside it. The diagnosis bucket was defined in SlicerDicer as ICD-10-CM B18.2 (chronic viral hepatitis C), B19.2 (unspecified viral hepatitis C), B17.1 (acute hepatitis C), and B17.2 (acute hepatitis E). B17.2 is not a hepatitis C code and was included by the session as built, so these counts contain a small number of acute hepatitis E patients; the bucket definition should be corrected and the session re-exported. Counts of 10 or fewer are suppressed by Epic Cosmos and imputed as 5 here, flagged by epic_n_patients_hepc_suppressed_flag. The age value \"Total\" is the source's own overall-age total and includes patients whose age at encounter is unknown, so it exceeds the sum of the six age buckets by 1 to 2.5 percent; use the \"Total\" row for overall figures rather than summing the buckets. The most recent period may be a partial year, identifiable because its time value is not December 31 (currently 2026-07-28, covering January 1 to July 28 only). Counts for a partial period are NOT comparable to a full year - the 2026 partial count is about 19 percent below the 2025 full-year count purely because of the shorter window. Use epic_pct_hepc for trend comparisons that include a partial period. NOTE: the SlicerDicer session backing this measure (2850163) covers 2020-2025 plus the 2026 partial only; a predecessor session (2850139) covered back to 2018 but lacked the age \"Total\" row, so 2018 and 2019 currently have NA here despite being present for epic_n_patients_hepc_medication.",
+      "statement": "In {location}, {value} patients had a viral hepatitis C diagnosis in {time}.",
+      "measure_type": "Count",
+      "unit": "Patients",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_n_patients_hepc_suppressed_flag": {
+      "id": "epic_n_patients_hepc_suppressed_flag",
+      "short_name": "Suppressed flag: hepatitis C patients",
+      "long_name": "Suppression flag for the number of patients with a viral hepatitis C diagnosis",
+      "category": "chronic",
+      "short_description": "Indicates whether the hepatitis C patient count was suppressed and imputed.",
+      "long_description": "1 when Epic Cosmos suppressed the cell (a count of 10 or fewer, reported as \"10 or fewer\") and the value was imputed as 5; 0 otherwise. The flag is computed before imputation, so it records what the source withheld rather than what the ingest wrote. A flag of 1 always accompanies the imputed value 5, and no source-reported value carries a flag of 1.",
+      "statement": "In {location}, the hepatitis C patient count for {time} was suppressed and imputed ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_n_patients": {
+      "id": "epic_n_patients",
+      "short_name": "All patients",
+      "long_name": "Number of patients with any encounter (denominator)",
+      "category": "chronic",
+      "short_description": "Annual count of all patients with any encounter, used as the hepatitis C denominator.",
+      "long_description": "Count of distinct Epic Cosmos patients with at least one encounter in the calendar year, regardless of diagnosis, by state of residence and age at encounter. Taken from the per-state \"Total\" row of the diagnosis dimension in the SlicerDicer export, which includes all data under that state bucket. This is the denominator for epic_pct_hepc. Because it counts the full Epic Cosmos patient population rather than a census population, it reflects Epic's market share in each state and is not a general population count; state-to-state comparisons of the count itself are therefore not meaningful, though the derived percentage is comparable. The age value \"Total\" is the source's own overall-age total and includes patients of unknown age, so it exceeds the sum of the six buckets. Like the numerator, a count for a partial trailing period (time not ending December 31) covers only part of the year and is not comparable to a full year. Counts of 10 or fewer would be suppressed and imputed as 5; no denominator cell was suppressed in the current export.",
+      "statement": "In {location}, {value} patients had at least one encounter in {time}.",
+      "measure_type": "Count",
+      "unit": "Patients",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_n_patients_suppressed_flag": {
+      "id": "epic_n_patients_suppressed_flag",
+      "short_name": "Suppressed flag: all patients",
+      "long_name": "Suppression flag for the number of patients with any encounter",
+      "category": "chronic",
+      "short_description": "Indicates whether the all-patients denominator was suppressed and imputed.",
+      "long_description": "1 when Epic Cosmos suppressed the denominator cell (a count of 10 or fewer) and the value was imputed as 5; 0 otherwise. Computed before imputation. Where this flag is 1, epic_pct_hepc is deliberately left missing rather than asserting the meaningless 5 / 5 = 100% that the imputed denominator would produce.",
+      "statement": "In {location}, the all-patients denominator for {time} was suppressed and imputed ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hepc": {
+      "id": "epic_pct_hepc",
+      "short_name": "Percent with hepatitis C",
+      "long_name": "Percent of patients with a viral hepatitis C diagnosis",
+      "category": "chronic",
+      "short_description": "Percent of patients with any encounter who have a viral hepatitis C diagnosis.",
+      "long_description": "Derived as epic_n_patients_hepc / epic_n_patients * 100 within each geography, year, and age group. Because both numerator and denominator come from the same Epic Cosmos patient population, this percentage is comparable across states and years in a way the raw counts are not. It measures diagnosed hepatitis C among patients who sought care, not population prevalence, and so is sensitive to testing and care-seeking patterns as well as to Epic's coverage in each state. Where the numerator was suppressed (10 or fewer), the imputed numerator of 5 carries through, which is equivalent to the 5 / denominator * 100 imputation rule; those cells are flagged by epic_pct_hepc_suppressed_flag. Where the denominator was suppressed, the value is left missing instead of computing 5 / 5 = 100%. Because numerator and denominator cover the same window, this measure is far more robust to a partial trailing period than the raw counts are: the 2026-07-28 partial value of 0.32 percent sits on the 2020-2025 declining trend (0.42, 0.39, 0.38, 0.37, 0.36, 0.34), whereas the underlying count drops about 19 percent purely from the shorter window. It is still not strictly comparable, since a shorter observation window gives each patient fewer opportunities for a diagnosis to be recorded. The underlying diagnosis bucket also includes ICD-10-CM B17.2 (acute hepatitis E) in error - see epic_n_patients_hepc.",
+      "statement": "In {location}, {value}% of patients with an encounter in {time} had a viral hepatitis C diagnosis.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hepc_suppressed_flag": {
+      "id": "epic_pct_hepc_suppressed_flag",
+      "short_name": "Suppressed flag: percent with hepatitis C",
+      "long_name": "Suppression flag for the percent of patients with a viral hepatitis C diagnosis",
+      "category": "chronic",
+      "short_description": "Indicates whether the hepatitis C percentage rests on a suppressed and imputed value.",
+      "long_description": "1 when either the numerator or the denominator of epic_pct_hepc was suppressed by Epic Cosmos; 0 otherwise. Computed before imputation. When only the numerator was suppressed, the percentage is reported using the imputed numerator of 5, matching the 5 / denominator * 100 rule. When the denominator was suppressed, epic_pct_hepc is left missing while this flag remains 1.",
+      "statement": "In {location}, the hepatitis C percentage for {time} rests on a suppressed value ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_n_patients_hepc_medication": {
+      "id": "epic_n_patients_hepc_medication",
+      "short_name": "HCV medication patients meeting the measure",
+      "long_name": "Number of patients with an HCV medication on record who meet the hcv medication measure (derived)",
+      "category": "chronic",
+      "short_description": "Annual count of patients with an HCV medication on record who meet the hcv medication measure.",
+      "long_description": "DERIVED, not directly reported by the source: computed as round(epic_n_patients_hepc_medication_pop * epic_pct_hepc_medication / 100). The source export gives this population's size (epic_n_patients_hepc_medication_pop) and its own rate for a named Epic Cosmos measure, \"hcv medication measure (%)\", but not a numerator count, so this column reconstructs it from those two. The underlying population is patients meeting the same viral hepatitis C diagnosis criteria as epic_n_patients_hepc who ALSO have an HCV medication on record (SlicerDicer's \"has HCV medication\" bucket of the \"All Medications\" row dimension) -- a smaller, more specific population than \"all HCV-diagnosed patients\"; do not confuse it with epic_n_patients_hepc. The diagnosis criteria include ICD-10-CM B17.2 (acute hepatitis E), which is not a hepatitis C code, so this population contains a small number of acute hepatitis E patients - the same error present in epic_n_patients_hepc's bucket definition (see its long_description). This measure comes from a separate SlicerDicer session (2850012) from epic_n_patients_hepc (2850163) with an independently set date range. Suppressed cells (source population of 10 or fewer, or a blank rate even when the population itself was shown) are imputed to 5, flagged by epic_n_patients_hepc_medication_suppressed_flag. The age value \"Total\" is the source's own overall-age total. The most recent period may be a partial year, identifiable because its time value is not December 31 (currently 2026-06-30, covering January 1 to June 30 only -- narrower than epic_n_patients_hepc's own 2026-07-28 partial period). Use epic_pct_hepc_medication for trend comparisons that include a partial period.",
+      "statement": "In {location}, {value} patients with an HCV medication on record met the hcv medication measure in {time}.",
+      "measure_type": "Count",
+      "unit": "Patients",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_n_patients_hepc_medication_suppressed_flag": {
+      "id": "epic_n_patients_hepc_medication_suppressed_flag",
+      "short_name": "Suppressed flag: HCV medication patients meeting the measure",
+      "long_name": "Suppression flag for the derived count of HCV medication patients meeting the measure",
+      "category": "chronic",
+      "short_description": "Indicates whether the underlying rate used to derive this count was suppressed and imputed.",
+      "long_description": "1 when Epic Cosmos suppressed the underlying cell (the population itself was 10 or fewer, or the population was shown but its rate was blank because the count meeting the measure was small enough to withhold on its own) and this derived value was imputed as 5; 0 otherwise. The flag is computed before imputation, so it records what the source withheld rather than what the ingest wrote. A flag of 1 always accompanies the imputed value 5, and no source-reported value carries a flag of 1. This flag is identical to epic_pct_hepc_medication_suppressed_flag, since both are derived from the same underlying rate.",
+      "statement": "In {location}, the HCV medication measure count for {time} was suppressed and imputed ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_n_patients_hepc_medication_pop": {
+      "id": "epic_n_patients_hepc_medication_pop",
+      "short_name": "Patients with an HCV medication on record",
+      "long_name": "Number of patients with an HCV medication on record (denominator for the hcv medication measure)",
+      "category": "chronic",
+      "short_description": "Annual count of patients with an HCV medication on record, used as the epic_pct_hepc_medication denominator.",
+      "long_description": "Taken directly from the medication crosstab's \"has HCV medication\" bucket (All Medications row dimension) -- \"Number of Patients\" for that bucket -- this is the count of patients, among those meeting the same viral hepatitis C diagnosis criteria as epic_n_patients_hepc, who ALSO have an HCV medication on record, by state of residence and age at encounter. It is the denominator for epic_pct_hepc_medication and for the derived epic_n_patients_hepc_medication. Do NOT confuse this with \"all HCV-diagnosed patients\": the crosstab's separate \"Total\" bucket (unused in this repo) is the one confirmed to match epic_n_patients_hepc exactly; this \"has HCV medication\" population is smaller and more specific, restricted to patients who already have an HCV medication documented. The diagnosis criteria include ICD-10-CM B17.2 (acute hepatitis E), which is not a hepatitis C code, so this population contains a small number of acute hepatitis E patients - the same error present in epic_n_patients_hepc's bucket definition (see its long_description). Counts of 10 or fewer are suppressed and imputed as 5, flagged by epic_n_patients_hepc_medication_pop_suppressed_flag. A count for a partial trailing period (time not ending December 31) covers only part of the year and is not comparable to a full year.",
+      "statement": "In {location}, {value} patients had an HCV medication on record in {time}.",
+      "measure_type": "Count",
+      "unit": "Patients",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_n_patients_hepc_medication_pop_suppressed_flag": {
+      "id": "epic_n_patients_hepc_medication_pop_suppressed_flag",
+      "short_name": "Suppressed flag: patients with an HCV medication on record",
+      "long_name": "Suppression flag for the HCV-medication population denominator",
+      "category": "chronic",
+      "short_description": "Indicates whether the population denominator was suppressed and imputed.",
+      "long_description": "1 when Epic Cosmos suppressed the denominator cell (a count of 10 or fewer) and the value was imputed as 5; 0 otherwise. Computed before imputation. Where this flag is 1, epic_pct_hepc_medication is deliberately left missing rather than asserting the meaningless 5 / 5 = 100% that the imputed denominator would produce.",
+      "statement": "In {location}, the HCV-medication population denominator for {time} was suppressed and imputed ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hepc_medication": {
+      "id": "epic_pct_hepc_medication",
+      "short_name": "HCV medication measure rate",
+      "long_name": "Percent of patients with an HCV medication on record who meet the hcv medication measure",
+      "category": "chronic",
+      "short_description": "Rate of a named Epic Cosmos quality measure among patients who have an HCV medication on record.",
+      "long_description": "Taken directly from the medication crosstab's \"has HCV medication\" bucket's own \"hcv medication measure (%)\" column (imputed via the standard 5 / denominator rule when blank -- see below), NOT computed by this repo from two independently reported counts, since the source does not report the underlying numerator count directly (see epic_n_patients_hepc_medication, which instead derives a count FROM this percent). The denominator (epic_n_patients_hepc_medication_pop) is patients with an HCV medication on record among those meeting the same viral hepatitis C diagnosis criteria as epic_n_patients_hepc -- a smaller, more specific population than \"all HCV-diagnosed patients\". The exact clinical definition of the \"hcv medication measure\" itself (e.g. adherence, treatment completion, sustained virologic response) is not stated in the SlicerDicer export and has not been confirmed against Epic Cosmos/SlicerDicer documentation; do not assert a specific clinical meaning without confirming it first. Nationally the rate has held in a narrow band, 77 to 84 percent, from 2018 to mid-2026, with no clear trend. Where the underlying count was suppressed (10 or fewer, or a rate withheld even though the population was shown), the imputed rate is 5 / denominator * 100 and the cell is flagged by epic_pct_hepc_medication_suppressed_flag. Where the denominator itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. The most recent period may be a partial year (currently 2026-06-30, narrower than epic_n_patients_hepc's own 2026-07-28 partial); use this percentage rather than the derived count for trend comparisons spanning the partial period, for the same reason described under epic_pct_hepc.",
+      "statement": "In {location}, {value}% of patients with an HCV medication on record in {time} met the hcv medication measure.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hepc_medication_suppressed_flag": {
+      "id": "epic_pct_hepc_medication_suppressed_flag",
+      "short_name": "Suppressed flag: HCV medication measure rate",
+      "long_name": "Suppression flag for the hcv medication measure rate",
+      "category": "chronic",
+      "short_description": "Indicates whether the measure rate rests on a suppressed and imputed value.",
+      "long_description": "1 when the source's own rate was blank -- either because the population denominator itself was 10 or fewer, or because the count meeting the measure was small enough to withhold on its own even though the population was shown; 0 otherwise. Computed before imputation. When only the count was suppressed (population shown, rate blank), the rate is imputed as 5 / denominator * 100. When the denominator itself was suppressed, epic_pct_hepc_medication is left missing while this flag remains 1. This flag is identical to epic_n_patients_hepc_medication_suppressed_flag, since both are derived from the same underlying rate.",
+      "statement": "In {location}, the hcv medication measure rate for {time} rests on a suppressed value ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "_sources": {
+      "epic_cosmos": {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/",
+        "date_accessed": 2026,
+        "organization": "Epic Systems",
+        "organization_url": "https://www.epic.com/",
+        "description": "Epic Cosmos is a collaborative research platform containing de-identified patient data from over 300 million patients across more than 1,600 hospitals and health systems using Epic electronic health record systems. Data is accessed via SlicerDicer, a self-service analytics tool. The dataset includes emergency department visits, diagnoses, immunizations, laboratory results, and other clinical data. Due to privacy protections, counts fewer than 10 are suppressed and imputed. Coverage extends across all U.S. states and territories. Note that county-level and city-level stratifications could differ markedly in total sample size due to high levels of missingness of county data in some states.",
+        "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'"
+      },
+      "id": "_sources"
+    }
+  },
+  "change_report": {
+    "data.csv.gz": {
+      "state": "unchanged"
+    }
+  }
+}

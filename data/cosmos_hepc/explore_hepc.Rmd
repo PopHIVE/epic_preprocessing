@@ -1,0 +1,292 @@
+---
+title: "Epic Cosmos Hepatitis C"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    fig_width: 9
+    fig_height: 5.5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, message = FALSE, warning = FALSE,
+  dev = "png", dpi = 150
+)
+
+library(dplyr)
+library(ggplot2)
+library(sf)
+
+# Age buckets, in order. "Total" is the export's all-ages column and is held out
+# of the stratified series.
+AGE_LEVELS <- c(
+  "<5 Years", "5-17 Years", "18-24 Years",
+  "25-44 Years", "45-64 Years", "65+ Years"
+)
+
+# Fixed categorical order (Okabe-Ito), assigned by age group and never cycled
+AGE_COLORS <- setNames(
+  c("#0072B2", "#56B4E9", "#009E73", "#E69F00", "#D55E00", "#CC79A7"),
+  AGE_LEVELS
+)
+
+theme_hepc <- theme_minimal(base_size = 12) +
+  theme(
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(color = "grey92", linewidth = 0.3),
+    axis.title = element_text(color = "grey30"),
+    plot.title = element_text(face = "bold", size = 13),
+    legend.title = element_text(color = "grey30")
+  )
+```
+
+```{r data}
+hepc_all <- vroom::vroom("standard/data.csv.gz", show_col_types = FALSE) %>%
+  mutate(year = as.integer(substr(time, 1, 4)))
+
+# Keep whole years only; the export's trailing partial period (2026-07-22) is
+# not comparable to a full year
+hepc <- hepc_all %>% filter(grepl("-12-31$", time))
+
+# Restrict to years present in BOTH source crosstabs. The diagnosis crosstab
+# has no age "Total" history for 2018-2019 (predecessor session lacked that
+# column), and the two crosstabs' trailing partial periods don't align
+# (2026-06-30 medication vs. 2026-07-28 diagnosis) -- see ingest.R. Deriving
+# by_age/all_ages/year_breaks from this filtered set keeps every chart below
+# comparing the same years.
+years_both <- hepc %>%
+  filter(
+    !is.na(epic_n_patients_hepc), !is.na(epic_n_patients_hepc_medication_pop)
+  ) %>%
+  distinct(year) %>%
+  pull(year) %>%
+  sort()
+
+hepc <- hepc %>% filter(year %in% years_both)
+
+stopifnot(all(hepc$age %in% c(AGE_LEVELS, "Total")))
+
+by_age <- hepc %>%
+  filter(age != "Total") %>%
+  mutate(age = factor(age, levels = AGE_LEVELS))
+
+all_ages <- hepc %>% filter(age == "Total")
+
+year_breaks <- sort(unique(hepc$year))
+```
+
+## National trend by age
+
+Limited to `r min(years_both)`-`r max(years_both)`, the years present in both the
+diagnosis and medication crosstabs.
+
+```{r ts-national-count}
+national <- by_age %>% filter(geography == "00")
+
+ggplot(national, aes(year, epic_n_patients_hepc, color = age)) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 2) +
+  scale_color_manual(values = AGE_COLORS, name = "Age group") +
+  scale_x_continuous(breaks = year_breaks) +
+  scale_y_continuous(labels = scales::comma) +
+  labs(
+    title = "Patients with a hepatitis C diagnosis, United States",
+    x = NULL, y = "Patients"
+  ) +
+  theme_hepc
+```
+
+```{r ts-national-pct}
+ggplot(national, aes(year, epic_pct_hepc, color = age)) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 2) +
+  scale_color_manual(values = AGE_COLORS, name = "Age group") +
+  scale_x_continuous(breaks = year_breaks) +
+  scale_y_continuous(labels = function(x) paste0(x, "%")) +
+  labs(
+    title = "Share of patients with a hepatitis C diagnosis, United States",
+    x = NULL, y = "Percent of patients"
+  ) +
+  theme_hepc
+```
+
+```{r ts-national-treatment}
+ggplot(national, aes(year, epic_pct_hepc_medication, color = age)) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 2) +
+  scale_color_manual(values = AGE_COLORS, name = "Age group") +
+  scale_x_continuous(breaks = year_breaks) +
+  scale_y_continuous(labels = function(x) paste0(x, "%")) +
+  labs(
+    title = "Hepatitis C patients receiving HCV medication, United States",
+    x = NULL, y = "Percent receiving treatment"
+  ) +
+  theme_hepc
+```
+
+```{r ts-table}
+national %>%
+  select(year, age, epic_n_patients_hepc, epic_pct_hepc) %>%
+  arrange(year, age) %>%
+  mutate(
+    epic_n_patients_hepc = scales::comma(epic_n_patients_hepc),
+    epic_pct_hepc = sprintf("%.3f%%", epic_pct_hepc)
+  ) %>%
+  knitr::kable(
+    col.names = c("Year", "Age group", "Patients", "Percent of patients"),
+    align = "llrr"
+  )
+```
+
+## State maps by year, all ages
+
+Limited to `r min(years_both)`-`r max(years_both)`, the years present in both the
+diagnosis and medication crosstabs.
+
+```{r state-names, include = FALSE}
+state_names <- vroom::vroom(
+  "../../resources/all_fips.csv.gz", show_col_types = FALSE
+) %>%
+  filter(nchar(geography) == 2) %>%
+  select(geography, geography_name)
+
+# Census state population, single vintage (no year column), so it serves as a
+# fixed denominator across all years
+state_pop <- vroom::vroom(
+  "../../resources/pop_state.csv.gz", show_col_types = FALSE
+) %>%
+  filter(age_level == "Total") %>%
+  inner_join(state_names, by = c("geography" = "geography_name")) %>%
+  select(geography = geography.y, popsize)
+```
+
+```{r map-setup, include = FALSE}
+state_year <- all_ages %>%
+  filter(geography != "00") %>%
+  left_join(state_pop, by = "geography") %>%
+  mutate(rate_per_100k = epic_n_patients_hepc / popsize * 1e5) %>%
+  select(
+    geography, year, rate_per_100k, epic_pct_hepc, epic_pct_hepc_medication
+  )
+
+stopifnot(!any(is.na(state_year$rate_per_100k)))
+
+# Puerto Rico ships with the usmap outlines but the source drops territories
+map_base <- usmap::us_map(regions = "states") %>% filter(fips != "72")
+
+# One panel per year with every state present, so no facet is left incomplete
+map_sf <- tidyr::expand_grid(fips = map_base$fips, year = year_breaks) %>%
+  left_join(state_year, by = c("fips" = "geography", "year")) %>%
+  left_join(map_base, by = "fips") %>%
+  st_as_sf()
+
+theme_map <- theme_void(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 13, hjust = 0),
+    strip.text = element_text(
+      size = 11, face = "bold", color = "grey20", margin = margin(b = 4)
+    ),
+    legend.position = "right",
+    legend.title = element_text(color = "grey30"),
+    panel.spacing = unit(0.4, "lines")
+  )
+```
+
+```{r map-rate, fig.height = 5.2}
+ggplot(map_sf) +
+  geom_sf(aes(fill = rate_per_100k), color = "white", linewidth = 0.18) +
+  facet_wrap(~year, ncol = 3) +
+  scale_fill_gradient(
+    low = "#DEEBF7", high = "#08306B",
+    labels = scales::comma, name = "Per 100,000", na.value = "grey90"
+  ) +
+  labs(
+    title = "Hepatitis C patients per 100,000 state population, all ages"
+  ) +
+  theme_map
+```
+
+```{r map-pct, fig.height = 5.2}
+ggplot(map_sf) +
+  geom_sf(aes(fill = epic_pct_hepc), color = "white", linewidth = 0.18) +
+  facet_wrap(~year, ncol = 3) +
+  scale_fill_gradient(
+    low = "#FEE6CE", high = "#7F2704",
+    labels = function(x) paste0(x, "%"), name = "Percent",
+    na.value = "grey90"
+  ) +
+  labs(
+    title = "Share of Epic patients with a hepatitis C diagnosis, all ages"
+  ) +
+  theme_map
+```
+
+```{r map-treatment, fig.height = 5.2}
+ggplot(map_sf) +
+  geom_sf(
+    aes(fill = epic_pct_hepc_medication), color = "white", linewidth = 0.18
+  ) +
+  facet_wrap(~year, ncol = 3) +
+  scale_fill_gradient(
+    low = "#E5F5E0", high = "#00441B",
+    labels = function(x) paste0(x, "%"), name = "Percent",
+    na.value = "grey90"
+  ) +
+  labs(
+    title = "Share of hepatitis C patients receiving HCV medication, all ages"
+  ) +
+  theme_map
+```
+
+```{r map-table}
+state_year %>%
+  left_join(state_names, by = "geography") %>%
+  mutate(
+    cell = sprintf(
+      "%.0f / %.3f%% / %.3f%%",
+      rate_per_100k, epic_pct_hepc, epic_pct_hepc_medication
+    )
+  ) %>%
+  tidyr::pivot_wider(
+    id_cols = geography_name, names_from = year, values_from = cell
+  ) %>%
+  arrange(geography_name) %>%
+  rename(State = geography_name) %>%
+  knitr::kable(
+    align = "l",
+    caption = "Cells: rate per 100,000 / % diagnosed / % receiving treatment"
+  )
+```
+
+## Suppressed state / age / year cells
+
+```{r suppressed-table}
+suppressed <- hepc_all %>%
+  filter(
+    geography != "00",
+    epic_n_patients_hepc_suppressed_flag == 1L |
+      epic_n_patients_suppressed_flag == 1L
+  ) %>%
+  left_join(state_names, by = "geography") %>%
+  mutate(
+    period = if_else(
+      grepl("-12-31$", time), as.character(year), paste0(year, " (partial)")
+    ),
+    age = factor(age, levels = c(AGE_LEVELS, "Total"))
+  )
+
+# Collapse to one row per state: the age groups it has suppressed cells in,
+# each followed by the years suppressed in that age group
+suppressed %>%
+  arrange(geography_name, age, time) %>%
+  group_by(geography_name, age) %>%
+  summarize(years = paste(period, collapse = ", "), .groups = "drop_last") %>%
+  summarize(
+    combos = paste0(age, ": ", years, collapse = "; "),
+    .groups = "drop"
+  ) %>%
+  arrange(geography_name) %>%
+  select(State = geography_name, `Suppressed age × year` = combos) %>%
+  knitr::kable(align = "ll")
+```

@@ -1,0 +1,32 @@
+{
+  "name": "cosmos_hepc",
+  "type": "source",
+  "scripts": [
+    {
+      "path": "ingest.R",
+      "manual": false,
+      "last_run": "2026-08-18 12:28:27",
+      "frequency": 0,
+      "run_time": 0.37,
+      "last_status": {
+        "log": ["", "Attaching package: 'dplyr'", "", "The following objects are masked from 'package:stats':", "", "    filter, lag", "", "The following objects are masked from 'package:base':", "", "    intersect, setdiff, setequal, union", ""],
+        "success": true
+      }
+    }
+  ],
+  "checked": "",
+  "check_results": [],
+  "standalone": false,
+  "raw_state": {
+    "files": "raw/staging/Patients_Crosstab_2026-08-18T10_28_16.xlsx",
+    "hashes": "aa0af75a9ba1c34afeccca6df0d1145b"
+  },
+  "standard_state": {
+    "./data/cosmos_hepc/measure_info.json": "b4f602db97e3f6302446fcf0829a5017",
+    "./data/cosmos_hepc/standard/data.csv.gz": "498fe8382b04ba484438b4bad674423d"
+  },
+  "medication_raw_state": {
+    "files": "raw/staging_medication/Patients_Crosstab_2026-08-18T10_48_12.xlsx",
+    "hashes": "acae30a556a3a6016091f603bc5e3276"
+  }
+}
