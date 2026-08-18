@@ -19,7 +19,7 @@
   "standalone": false,
   "vintages": {
     "data_weekly.csv.gz": {
-      "ed": "8/13/2026",
+      "ed": "8/17/2026",
       "all_encounters": "8/13/2026"
     },
     "weekly_tests.csv.gz": {

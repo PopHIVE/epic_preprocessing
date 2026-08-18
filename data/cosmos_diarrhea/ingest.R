@@ -217,13 +217,45 @@ write_metadata_json <- function(results, path) {
 # =============================================================================
 # 1. Process wide-format ED diarrhea files from raw/staging_diarrhea_wide/
 # =============================================================================
-# Layout: outcome blocks (diarrhea, Total) across columns, each block spanning
-# 7 age columns. Rows are one per (State of Residence, Year, Week/Month).
+# Layout: outcome blocks (diarrhea, nausea and vomiting, Total) across columns,
+# each block spanning 7 age columns. Rows are one per (State of Residence,
+# Year, Week/Month).
 # Row 12: outcome labels (fill rightward, one label per block)
 # Row 13: age labels (one per column, repeats within each block)
 # Row 14: id column headers (State of Residence, Year, Week or Month)
 # Row 15+: data rows (state and year fill down, week/month per row)
 # =============================================================================
+
+# The ED Diagnoses buckets expected in row 12, matched as regexes against the
+# raw labels ("all-cause diarrhea A00-09 R19.7", "Nausea and vomiting(
+# ICD-10-CM: R11.* )", "Total: ..."). Patterns deliberately key off the stable
+# part of each label so a re-worded bucket still matches. SlicerDicer sessions
+# gain and rename buckets over time, so an unrecognized or ambiguous label
+# stops the run instead of silently landing on the wrong measure -- extend this
+# map when the session changes.
+ED_OUTCOME_PATTERNS <- c(
+  all_encounters = "^Total",
+  diarrhea       = "diarrhea",
+  vomiting       = "[Nn]ausea and vomiting"
+)
+
+match_outcome_labels <- function(labels, patterns) {
+  uniq <- unique(labels)
+  mapped <- vapply(uniq, function(lbl) {
+    hit <- names(patterns)[vapply(patterns, function(p) grepl(p, lbl), logical(1))]
+    if (length(hit) != 1L) {
+      stop(
+        sprintf(
+          "Unrecognized or ambiguous ED Diagnoses bucket in export: '%s' (matched %d pattern%s). Update ED_OUTCOME_PATTERNS in ingest.R.",
+          lbl, length(hit), if (length(hit) == 1L) "" else "s"
+        ),
+        call. = FALSE
+      )
+    }
+    hit
+  }, character(1))
+  unname(mapped[match(labels, uniq)])
+}
 
 process_diarrhea_wide <- function(file, granularity, password = NULL) {
   message("Processing ", granularity, " file: ", basename(file))
@@ -242,7 +274,12 @@ process_diarrhea_wide <- function(file, granularity, password = NULL) {
   outcome_raw <- row12[(id_cols + 1):n_cols]
   outcome_raw[outcome_raw == ""] <- NA
   outcome_raw <- zoo::na.locf(outcome_raw, na.rm = FALSE)
-  outcome_std <- if_else(grepl("^Total", outcome_raw), "all_encounters", "diarrhea")
+  outcome_std <- match_outcome_labels(outcome_raw, ED_OUTCOME_PATTERNS)
+
+  message(
+    "  ED Diagnoses blocks found: ",
+    paste(unique(outcome_std), collapse = ", ")
+  )
 
   age_raw <- trimws(row13[(id_cols + 1):n_cols])
 
@@ -328,10 +365,12 @@ build_standard_table <- function(data_long, suffix) {
     filter(!is.na(age)) %>%
     rename(
       n_diarrhea = diarrhea,
+      n_vomiting = vomiting,
       !!paste0("n_all_encounters_", suffix) := all_encounters
     ) %>%
     mutate(
-      pct_diarrhea = 100 * n_diarrhea / .data[[paste0("n_all_encounters_", suffix)]]
+      pct_diarrhea = 100 * n_diarrhea / .data[[paste0("n_all_encounters_", suffix)]],
+      pct_vomiting = 100 * n_vomiting / .data[[paste0("n_all_encounters_", suffix)]]
     ) %>%
     rename(!!paste0("suppressed_flag_all_encounters_", suffix) := suppressed_flag_all_encounters) %>%
     rename_with(~ paste0("epic_", .x), .cols = -c(geography, time, age)) %>%
@@ -465,10 +504,20 @@ all_encounters_weekly_standard <- build_all_encounters_weekly_table(all_encounte
 weekly_standard_ed <- weekly_standard %>%
   rename(
     epic_n_ed_diarrhea = epic_n_diarrhea,
+    epic_n_ed_vomiting = epic_n_vomiting,
     epic_n_ed_encounters_weekly = epic_n_all_encounters_weekly,
     epic_pct_ed_diarrhea = epic_pct_diarrhea,
+    epic_pct_ed_vomiting = epic_pct_vomiting,
     epic_suppressed_flag_ed_diarrhea = epic_suppressed_flag_diarrhea,
+    epic_suppressed_flag_ed_vomiting = epic_suppressed_flag_vomiting,
     epic_suppressed_flag_ed_encounters_weekly = epic_suppressed_flag_all_encounters_weekly
+  ) %>%
+  select(
+    geography, age, time,
+    epic_n_ed_diarrhea, epic_n_ed_vomiting, epic_n_ed_encounters_weekly,
+    epic_pct_ed_diarrhea, epic_pct_ed_vomiting,
+    epic_suppressed_flag_ed_diarrhea, epic_suppressed_flag_ed_vomiting,
+    epic_suppressed_flag_ed_encounters_weekly
   ) %>%
   arrange(geography, age, time)
 
