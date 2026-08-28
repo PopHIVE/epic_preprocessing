@@ -1,0 +1,113 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE,
+                       fig.width = 12, fig.height = 7, dpi = 120)
+
+library(dplyr)
+library(tidyr)
+library(vroom)
+library(ggplot2)
+library(scales)
+library(sf)
+library(tigris)
+
+options(tigris_use_cache = TRUE)
+
+DISEASES <- c("lyme", "babesiosis", "malaria", "rmsf", "west_nile", "dengue")
+DISEASE_LABELS <- c(
+  lyme = "Lyme disease", babesiosis = "Babesiosis", malaria = "Malaria",
+  rmsf = "RMSF", west_nile = "West Nile virus", dengue = "Dengue"
+)
+YEARS <- c("2023", "2024", "2025", "2026")
+DROP_ST <- c("02", "15", "60", "66", "69", "72", "78")  # AK, HI, territories
+
+dat <- vroom(
+  "standard/data.csv.gz", show_col_types = FALSE,
+  col_types = cols(geography = "c", time = "c")
+)
+
+for (dz in DISEASES) {
+  dat[[paste0("epic_rate100k_", dz)]] <-
+    dat[[paste0("epic_n_", dz)]] / dat$epic_n_patients * 1e5
+}
+```
+
+```{r national-time-series}
+pct_cols <- paste0("epic_pct_", DISEASES)
+
+nat_long <- dat %>%
+  filter(geography == "00") %>%
+  mutate(time = as.Date(time)) %>%
+  select(time, all_of(pct_cols)) %>%
+  pivot_longer(-time, names_to = "measure", values_to = "value") %>%
+  mutate(measure = DISEASE_LABELS[sub("^epic_pct_", "", measure)])
+
+ggplot(nat_long, aes(time, value)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 0.8) +
+  facet_wrap(~measure, scales = "free_y", ncol = 3) +
+  labs(title = "National monthly percent of patients, by disease",
+       x = NULL, y = "Percent of patients") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r map-data}
+states_sf <- tigris::states(cb = TRUE, resolution = "5m", year = 2022, progress_bar = FALSE) %>%
+  filter(!STATEFP %in% DROP_ST) %>%
+  transmute(geography = as.character(GEOID))
+
+flag_cols <- paste0("epic_", DISEASES, "_suppressed_flag")
+
+state_annual <- dat %>%
+  filter(nchar(geography) == 2, geography != "00") %>%
+  mutate(year = substr(time, 1, 4)) %>%
+  filter(year %in% YEARS) %>%
+  group_by(geography, year) %>%
+  summarize(across(all_of(c(paste0("epic_pct_", DISEASES),
+                             paste0("epic_rate100k_", DISEASES))),
+                    ~ mean(.x, na.rm = TRUE)),
+            # TRUE only when every month contributing to the annual mean was
+            # suppressed for that disease - i.e. the average is entirely
+            # imputed, not just partly.
+            across(all_of(flag_cols), ~ mean(.x) == 1, .names = "allsupp_{.col}"),
+            .groups = "drop") %>%
+  mutate(year = factor(year, levels = YEARS))
+
+draw_map <- function(col, flag_col, label, low_col = "viridis") {
+  md <- states_sf %>%
+    left_join(
+      state_annual %>%
+        select(geography, year, value = all_of(col), suppressed = all_of(flag_col)) %>%
+        mutate(value = if_else(suppressed, NA_real_, value)),
+      by = "geography"
+    ) %>%
+    st_as_sf()
+
+  ggplot(md) +
+    geom_sf(aes(fill = value), color = "white", linewidth = 0.08) +
+    scale_fill_viridis_c(option = low_col, na.value = "grey70",
+                         labels = label_number(accuracy = 0.01), name = NULL) +
+    facet_wrap(~year, ncol = 2) +
+    coord_sf(crs = 5070, datum = NA) +
+    labs(title = label) +
+    theme_void(base_size = 11) +
+    theme(plot.title = element_text(face = "bold", hjust = 0.5, size = 13),
+          strip.text = element_text(face = "bold", size = 11),
+          legend.position = "right")
+}
+```
+
+```{r maps, results='asis'}
+for (dz in DISEASES) {
+  flag_col <- paste0("allsupp_epic_", dz, "_suppressed_flag")
+  print(draw_map(paste0("epic_pct_", dz), flag_col,
+                 sprintf("%s — percent of patients, by year", DISEASE_LABELS[dz])))
+  print(draw_map(paste0("epic_rate100k_", dz), flag_col,
+                 sprintf("%s — rate per 100,000 patients, by year", DISEASE_LABELS[dz])))
+}
+```

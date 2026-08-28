@@ -1,0 +1,28 @@
+{
+  "name": "cosmos_vector_borne",
+  "type": "source",
+  "scripts": [
+    {
+      "path": "ingest.R",
+      "manual": false,
+      "last_run": "2026-08-28 11:25:59",
+      "frequency": 0,
+      "run_time": 0.55,
+      "last_status": {
+        "log": ["", "Attaching package: 'dplyr'", "", "The following objects are masked from 'package:stats':", "", "    filter, lag", "", "The following objects are masked from 'package:base':", "", "    intersect, setdiff, setequal, union", "", "", "Attaching package: 'lubridate'", "", "The following objects are masked from 'package:base':", "", "    date, intersect, setdiff, union", ""],
+        "success": true
+      }
+    }
+  ],
+  "checked": "",
+  "check_results": [],
+  "standalone": false,
+  "raw_state": {
+    "files": "raw/staging/Patients_Crosstab_2026-08-28T08_49_14.xlsx",
+    "hashes": "02c672db08d1d2119e02789c57a82033"
+  },
+  "standard_state": {
+    "./data/cosmos_vector_borne/measure_info.json": "4d837610960f8adaff6daf832241c229",
+    "./data/cosmos_vector_borne/standard/data.csv.gz": "28060ae2c1c1e662ce1db3abee42353d"
+  }
+}
