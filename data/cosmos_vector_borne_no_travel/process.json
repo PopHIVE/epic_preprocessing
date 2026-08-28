@@ -1,0 +1,28 @@
+{
+  "name": "cosmos_vector_borne_no_travel",
+  "type": "source",
+  "scripts": [
+    {
+      "path": "ingest.R",
+      "manual": false,
+      "last_run": "2026-08-28 14:21:19",
+      "frequency": 0,
+      "run_time": 0.46,
+      "last_status": {
+        "log": ["Measure columns found: babesiosis, malaria, rmsf, west_nile, dengue, n_patients, lyme", "Dropping 1 row(s) from partial period(s): Jul 1 – Jul 28", "Standardized 54 rows | 1 geography(ies) | 2022-01-31 to 2026-06-30", "  epic_lyme_suppressed_flag: 0 suppressed/imputed", "  epic_babesiosis_suppressed_flag: 0 suppressed/imputed", "  epic_malaria_suppressed_flag: 0 suppressed/imputed", "  epic_rmsf_suppressed_flag: 0 suppressed/imputed", "  epic_west_nile_suppressed_flag: 0 suppressed/imputed", "  epic_dengue_suppressed_flag: 0 suppressed/imputed", "  epic_n_patients_suppressed_flag: 0 suppressed/imputed"],
+        "success": true
+      }
+    }
+  ],
+  "checked": "",
+  "check_results": [],
+  "standalone": true,
+  "raw_state": {
+    "files": "raw/staging/Patients_Crosstab_2026-08-28T13_13_58.xlsx",
+    "hashes": "20b6bda2e6f58ba3bea66265818265c0"
+  },
+  "standard_state": {
+    "C:/Users/as5325/Desktop/epic_preprocessing/data/cosmos_vector_borne_no_travel/measure_info.json": "3b9d51d61d32e6af71cfaf2709931d48",
+    "C:/Users/as5325/Desktop/epic_preprocessing/data/cosmos_vector_borne_no_travel/standard/data.csv.gz": "336db64288d04c7e602bcd692d1eb7b4"
+  }
+}
