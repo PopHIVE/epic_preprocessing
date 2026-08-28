@@ -8,11 +8,15 @@
 #   Data model      : ED Encounters
 #   Population base : All ED Encounters
 #   Criteria        : Country of Residence = United States of America
-#   ED Diagnoses    : "Suicidal behavior" (sessions 2852625, 2852630)
-#                      "Mood"              (sessions 2852768, 2852738 - a
-#                                            re-export of the original
-#                                            2852663/2852656 sessions, fixing
-#                                            a corrupted age-bucket label)
+#   ED Diagnoses    : "Suicidal behavior" (sessions 2852625, 2852630;
+#                                            7/1/2022-6/30/2026)
+#                      "Mood"              (sessions 2852830, 2852828;
+#                                            1/1/2022-6/30/2026 - the third
+#                                            re-export of this diagnosis; the
+#                                            first two, 2852663/2852656 and
+#                                            2852768/2852738, had a corrupted
+#                                            age-bucket label and/or a
+#                                            shorter date range)
 #   raw/staging_median_pct/ : Median ED Length of Stay + Percentage of Sliced
 #                              Population, by Year/Month/State of
 #                              Residence/Age at Time of Visit Range

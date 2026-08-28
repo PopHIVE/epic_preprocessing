@@ -42,16 +42,19 @@ Each diagnosis bucket requires **two** SlicerDicer sessions (Epic doesn't
 export both measure pairs in one session), dropped into two staging folders
 that `ingest.R` combines:
 
-| Folder | Session | Diagnosis | Measures |
-|---|---|---|---|
-| `raw/staging_median_pct/` | `2852625` - "Median ED Length of Stay (mins) and Percentage of Sliced Population by ED Diagnoses and State of Residence and Age at Time of Visit Range" | Suicidal behavior | Median ED LOS, Percentage of Sliced Population |
-| `raw/staging_median_pct/` | `2852768` - "Percentage of Sliced Population and Median Length of Stay by ED Diagnoses and State of Residence and Age at Time of Visit Range" | Mood | Percentage of Sliced Population, Median LOS |
-| `raw/staging_iqr/` | `2852630` - "Q3 ED length of stay and Q1 ED length of stay by ED Diagnoses and State of Residence and Age at Time of Visit Range" | Suicidal behavior | Q3 ED LOS, Q1 ED LOS |
-| `raw/staging_iqr/` | `2852738` - "Q1 Length of Stay and Q3 Length of Stay by ED Diagnoses and State of Residence and Age at Time of Visit Range" | Mood | Q1 LOS, Q3 LOS |
+| Folder | Session | Diagnosis | Date range | Measures |
+|---|---|---|---|---|
+| `raw/staging_median_pct/` | `2852625` - "Median ED Length of Stay (mins) and Percentage of Sliced Population by ED Diagnoses and State of Residence and Age at Time of Visit Range" | Suicidal behavior | 7/1/2022-6/30/2026 | Median ED LOS, Percentage of Sliced Population |
+| `raw/staging_median_pct/` | `2852830` - "Percentage of Sliced Population and Median Length of Stay by ED Diagnoses and State of Residence and Age at Time of Visit Range" | Mood | 1/1/2022-6/30/2026 | Percentage of Sliced Population, Median LOS |
+| `raw/staging_iqr/` | `2852630` - "Q3 ED length of stay and Q1 ED length of stay by ED Diagnoses and State of Residence and Age at Time of Visit Range" | Suicidal behavior | 7/1/2022-6/30/2026 | Q3 ED LOS, Q1 ED LOS |
+| `raw/staging_iqr/` | `2852828` - "Q1 Length of Stay and Q3 Length of Stay by ED Diagnoses and State of Residence and Age at Time of Visit Range" | Mood | 1/1/2022-6/30/2026 | Q1 LOS, Q3 LOS |
 
-The Mood sessions above are re-exports of the original `2852663`/`2852656`
-sessions, which had a corrupted "Age at Time of Visit" label (see below); the
-replacements fixed it and are what `raw/staging_*` currently holds.
+The Mood sessions above are the third export of this diagnosis. The first
+(`2852663`/`2852656`) had a corrupted "Age at Time of Visit" label; the second
+(`2852768`/`2852738`) fixed that but only covered 7/1/2023 onward. This third
+pair fixes the label **and** extends the date range back to 1/1/2022 - earlier,
+in fact, than the Suicidal-behavior sessions (7/1/2022). These are what
+`raw/staging_*` currently holds.
 
 Rows: Year, Month, State of Residence, Age at Time of Visit Range (column
 order varies between exports - `ingest.R` locates each by name, not position).
@@ -112,17 +115,28 @@ in `ingest.R` when a session changes wording or adds a bucket.
   `"<0.01%"`, which is a reported (if imprecise) value: it's imputed at half
   the bound (`0.005`) and still flagged suppressed.
 - **Mismatched session coverage.** The Suicidal-behavior sessions cover
-  7/1/2022-6/30/2026; the Mood sessions cover 7/1/2023-6/30/2026 (one year
-  shorter). The Mood columns are `NA` for 2022-07 through 2023-06.
-- **Corrupted Mood age label (fixed).** The original Mood exports (sessions
+  7/1/2022-6/30/2026; the Mood sessions cover 1/1/2022-6/30/2026 - actually
+  wider at the start. Suicidal-behavior columns are `NA` for 2022-01 through
+  2022-06; every other month in range has both diagnoses.
+- **A handful of cells present in one Mood measure pair but not the other.**
+  The median/percentage export and the Q1/Q3 export are independent
+  SlicerDicer sessions, and ~1,700 (geography, time, age) cells (out of
+  ~28,000 rows, spread evenly across the whole date range) appear in the
+  median/percentage export but not the Q1/Q3 export. This looks like the two
+  sessions handling a small number of near-zero cells differently (e.g.
+  omitting a row entirely rather than reporting it as suppressed), not a
+  date-range or parsing problem - `epic_median_ed_los_mood` /
+  `epic_pct_sliced_population_mood` can be non-`NA` while
+  `epic_q1_ed_los_mood` / `epic_q3_ed_los_mood` are `NA` for the same row.
+- **Corrupted Mood age label (fixed).** The first Mood export (sessions
   `2852663`/`2852656`) contained one malformed "Age at Time of Visit" label -
   `"Years or more and less than 30 Years"` - missing its leading lower-bound
   number, which meant the `10-14 Years` bucket was entirely missing for Mood.
-  The replacement exports (`2852768`/`2852738`) fixed this; Mood's age buckets
-  now match Suicidal-behavior's (`<5`, `5-9`, `10-14`, `15-19`, ...).
-  `ingest.R` keeps a defensive guard that drops any row matching that
-  malformed pattern (with a `message()` reporting the count) rather than
-  guessing at the intended bound, in case a future re-export regresses.
+  The current exports fixed this; Mood's age buckets now match
+  Suicidal-behavior's (`<5`, `5-9`, `10-14`, `15-19`, ...). `ingest.R` keeps a
+  defensive guard that drops any row matching that malformed pattern (with a
+  `message()` reporting the count) rather than guessing at the intended
+  bound, in case a future re-export regresses.
 - **Age buckets differ slightly by diagnosis.** Because they come from
   separate SlicerDicer sessions, the age dimension isn't guaranteed to be
   configured identically between the Suicidal-behavior and Mood exports.
