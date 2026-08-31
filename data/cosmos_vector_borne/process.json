@@ -5,11 +5,11 @@
     {
       "path": "ingest.R",
       "manual": false,
-      "last_run": "2026-08-28 11:25:59",
+      "last_run": "2026-08-28 17:09:36",
       "frequency": 0,
-      "run_time": 0.55,
+      "run_time": 0.11,
       "last_status": {
-        "log": ["", "Attaching package: 'dplyr'", "", "The following objects are masked from 'package:stats':", "", "    filter, lag", "", "The following objects are masked from 'package:base':", "", "    intersect, setdiff, setequal, union", "", "", "Attaching package: 'lubridate'", "", "The following objects are masked from 'package:base':", "", "    date, intersect, setdiff, union", ""],
+        "log": [],
         "success": true
       }
     }
@@ -18,11 +18,11 @@
   "check_results": [],
   "standalone": false,
   "raw_state": {
-    "files": "raw/staging/Patients_Crosstab_2026-08-28T08_49_14.xlsx",
-    "hashes": "02c672db08d1d2119e02789c57a82033"
+    "files": "raw/staging/Patients_Crosstab_2026-08-31T08_11_07.xlsx",
+    "hashes": "f1c04641a89abdeb2dcb6429a095988f"
   },
   "standard_state": {
-    "./data/cosmos_vector_borne/measure_info.json": "4d837610960f8adaff6daf832241c229",
-    "./data/cosmos_vector_borne/standard/data.csv.gz": "28060ae2c1c1e662ce1db3abee42353d"
+    "C:/Users/as5325/Desktop/epic_preprocessing/data/cosmos_vector_borne/measure_info.json": "a73de0e01ba04ae9aaa39e5ef7cb9496",
+    "C:/Users/as5325/Desktop/epic_preprocessing/data/cosmos_vector_borne/standard/data.csv.gz": "4bf60ebc42b4a3adeb4b332fbdb0a2b7"
   }
 }

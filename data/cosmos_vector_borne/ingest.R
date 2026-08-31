@@ -5,14 +5,21 @@
 #         state, for six diseases: Lyme, Babesiosis, Malaria, RMSF (Rocky
 #         Mountain Spotted Fever), West Nile, and Dengue
 #
-# SlicerDicer session 2852629, "Lyme N and Babesiosis N and Malaria N and RMSF
-# N and West Nile N and Dengue N and Number of Patients by State of
-# Residence":
+# SlicerDicer session 2852889 (originally created as session 2852629; Epic
+# assigns a new session ID whenever the session is re-saved, but the query is
+# unchanged), "Lyme N and Babesiosis N and Malaria N and RMSF N and West Nile
+# N and Dengue N and Number of Patients by State of Residence":
 #   Data model      : Patients
 #   Population base : All Patients
-#   Criteria        : Country of Care = United States of America
+#   Criteria        : Country of Care = United States of America,
+#                      Has Any Encounters
 #   Measures        : Lyme N, Babesiosis N, Malaria N, RMSF N, West Nile N,
 #                      Dengue N (numerators), Number of Patients (denominator)
+#
+# As of the 2026-08-28 export, the measure column labels changed from the
+# "<Disease> N" form (e.g. "Lyme N") to the lowercase "n <disease>" form (e.g.
+# "n lyme") used by cosmos_vector_borne_no_travel. MEASURE_PATTERNS matches
+# both forms so older staged exports would still parse.
 #
 # Raw export layout (rows, 1-indexed as in the spreadsheet):
 #   1-8   : session metadata
@@ -79,12 +86,12 @@ xlsx_password <- Sys.getenv("EPIC_XLSX_PASSWORD")
 # Unrecognized/ambiguous labels stop the run instead of silently landing on
 # the wrong column - extend this map when the session changes.
 MEASURE_PATTERNS <- c(
-  lyme        = "^Lyme N$",
-  babesiosis  = "^Babesiosis N$",
-  malaria     = "^Malaria N$",
-  rmsf        = "^RMSF N$",
-  west_nile   = "^West Nile N$",
-  dengue      = "^Dengue N$",
+  lyme        = "^(Lyme N|n lyme)$",
+  babesiosis  = "^(Babesiosis N|n babesiosis)$",
+  malaria     = "^(Malaria N|n malaria)$",
+  rmsf        = "^(RMSF N|n RMSF)$",
+  west_nile   = "^(West Nile N|n west nile)$",
+  dengue      = "^(Dengue N|n dengue)$",
   n_patients  = "^Number of Patients$"
 )
 DISEASE_KEYS <- setdiff(names(MEASURE_PATTERNS), "n_patients")
@@ -244,7 +251,12 @@ if (!identical(process$raw_state, current_state)) {
   data_raw <- data_raw %>%
     mutate(
       geography_name = case_when(
-        grepl("^Total$", state_name) ~ "United States",
+        # National total row. Epic sometimes appends a footnote to "Total"
+        # (e.g. "Total: Total includes all data under the Apr bucket,
+        # including data from rows not currently displayed.") when a bucket
+        # has additional suppressed/hidden rows; match on the prefix since
+        # no real state name starts with "Total".
+        grepl("^Total(:|$)", state_name) ~ "United States",
         state_name %in% valid_states ~ state_name,
         TRUE ~ NA_character_
       )

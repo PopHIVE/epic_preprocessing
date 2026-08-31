@@ -4,13 +4,26 @@
   "licenses": [],
   "resources": [
     {
-      "bytes": 141793,
+      "bytes": 180009,
       "encoding": "windows-1252",
-      "md5": "28060ae2c1c1e662ce1db3abee42353d",
+      "md5": "4bf60ebc42b4a3adeb4b332fbdb0a2b7",
       "format": "csv",
       "name": "data.csv",
       "filename": "data.csv.gz",
-      "versions": {},
+      "versions": {
+        "hash": [
+          "491bddeee4b9a708e8242f41c48a4df0e5156e47"
+        ],
+        "author": [
+          "anshap32 <73296024+anshap32@users.noreply.github.com>"
+        ],
+        "date": [
+          "Fri Aug 28 11:43:53 2026 -0400"
+        ],
+        "message": [
+          "ingest epic vector borne data"
+        ]
+      },
       "source": [],
       "data_format": "wide",
       "ids": [
@@ -21,83 +34,95 @@
       "id_length": 2,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-08-28 11:23:54.87137",
-      "last_modified": "2026-08-28 11:23:55.197727",
+      "created": "2026-08-28 14:44:16.303183",
+      "last_modified": "2026-08-28 17:01:40.26301",
       "vintage": {},
-      "row_count": 2184,
+      "row_count": 2808,
       "entity_count": 52,
       "schema": {
         "fields": [
           {
             "name": "geography",
-            "duplicates": 2132,
+            "duplicates": 2756,
             "info": [],
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "string",
             "missing": 0,
             "table": {
-              "00": 42,
-              "01": 42,
-              "02": 42,
-              "04": 42,
-              "05": 42,
-              "06": 42,
-              "08": 42,
-              "09": 42,
-              "10": 42,
-              "11": 42,
-              "12": 42,
-              "13": 42,
-              "15": 42,
-              "16": 42,
-              "17": 42,
-              "18": 42,
-              "19": 42,
-              "20": 42,
-              "21": 42,
-              "22": 42,
-              "23": 42,
-              "24": 42,
-              "25": 42,
-              "26": 42,
-              "27": 42,
-              "28": 42,
-              "29": 42,
-              "30": 42,
-              "31": 42,
-              "32": 42,
-              "33": 42,
-              "34": 42,
-              "35": 42,
-              "36": 42,
-              "37": 42,
-              "38": 42,
-              "39": 42,
-              "40": 42,
-              "41": 42,
-              "42": 42,
-              "44": 42,
-              "45": 42,
-              "46": 42,
-              "47": 42,
-              "48": 42,
-              "49": 42,
-              "50": 42,
-              "51": 42,
-              "53": 42,
-              "54": 42,
-              "55": 42,
-              "56": 42
+              "00": 54,
+              "01": 54,
+              "02": 54,
+              "04": 54,
+              "05": 54,
+              "06": 54,
+              "08": 54,
+              "09": 54,
+              "10": 54,
+              "11": 54,
+              "12": 54,
+              "13": 54,
+              "15": 54,
+              "16": 54,
+              "17": 54,
+              "18": 54,
+              "19": 54,
+              "20": 54,
+              "21": 54,
+              "22": 54,
+              "23": 54,
+              "24": 54,
+              "25": 54,
+              "26": 54,
+              "27": 54,
+              "28": 54,
+              "29": 54,
+              "30": 54,
+              "31": 54,
+              "32": 54,
+              "33": 54,
+              "34": 54,
+              "35": 54,
+              "36": 54,
+              "37": 54,
+              "38": 54,
+              "39": 54,
+              "40": 54,
+              "41": 54,
+              "42": 54,
+              "44": 54,
+              "45": 54,
+              "46": 54,
+              "47": 54,
+              "48": 54,
+              "49": 54,
+              "50": 54,
+              "51": 54,
+              "53": 54,
+              "54": 54,
+              "55": 54,
+              "56": 54
             }
           },
           {
             "name": "time",
-            "duplicates": 2142,
+            "duplicates": 2754,
             "info": [],
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "string",
             "missing": 0,
             "table": {
+              "2022-01-31": 52,
+              "2022-02-28": 52,
+              "2022-03-31": 52,
+              "2022-04-30": 52,
+              "2022-05-31": 52,
+              "2022-06-30": 52,
+              "2022-07-31": 52,
+              "2022-08-31": 52,
+              "2022-09-30": 52,
+              "2022-10-31": 52,
+              "2022-11-30": 52,
+              "2022-12-31": 52,
               "2023-01-31": 52,
               "2023-02-28": 52,
               "2023-03-31": 52,
@@ -144,14 +169,14 @@
           },
           {
             "name": "epic_n_lyme",
-            "duplicates": 770,
+            "duplicates": 1125,
             "info": {
               "id": "epic_n_lyme",
               "short_name": "Lyme Disease Patients",
               "long_name": "Patients with a Lyme Disease Diagnosis",
               "category": "infectious_disease",
               "short_description": "Monthly count of patients with a Lyme disease diagnosis.",
-              "long_description": "Monthly count of patients with a Lyme disease diagnosis, per Epic's \"Lyme N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_lyme_suppressed_flag. Population base per SlicerDicer session 2852629: data model Patients, population base All Patients, criteria Country of Care = United States of America - the denominator (epic_n_patients) is all patients, not restricted to any diagnosis or encounter type.",
+              "long_description": "Monthly count of patients with a Lyme disease diagnosis, per Epic's \"Lyme N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_lyme_suppressed_flag. Population base per SlicerDicer session 2852889: data model Patients, population base All Patients, criteria Country of Care = United States of America, Has Any Encounters - the denominator (epic_n_patients) is all patients with any encounter, not restricted to any diagnosis or encounter type otherwise.",
               "statement": "In {location}, {value} patients had a Lyme disease diagnosis.",
               "measure_type": "Count",
               "unit": "patients",
@@ -162,11 +187,11 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 4597.980769,
-            "sd": 16775.983693,
+            "mean": 4447.858262,
+            "sd": 16263.223286,
             "min": 14,
             "max": 139064
           },
@@ -179,7 +204,7 @@
               "long_name": "Percent of Patients with a Lyme Disease Diagnosis",
               "category": "infectious_disease",
               "short_description": "Monthly percent of patients with a Lyme disease diagnosis.",
-              "long_description": "Monthly percentage of patients with a Lyme disease diagnosis, computed as epic_n_lyme / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing, because dividing by the imputed denominator of 5 would assert a meaningless value; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852629.",
+              "long_description": "Monthly percentage of patients with a Lyme disease diagnosis, computed as epic_n_lyme / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing, because dividing by the imputed denominator of 5 would assert a meaningless value; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852889.",
               "statement": "In {location}, {value}% of patients had a Lyme disease diagnosis.",
               "measure_type": "Percent",
               "unit": "Percent",
@@ -190,17 +215,17 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "float",
             "missing": 0,
-            "mean": 0.15765,
-            "sd": 0.199376,
-            "min": 0.015994,
+            "mean": 0.154391,
+            "sd": 0.196209,
+            "min": 0.015262,
             "max": 0.889075
           },
           {
             "name": "epic_lyme_suppressed_flag",
-            "duplicates": 2183,
+            "duplicates": 2807,
             "info": {
               "id": "epic_lyme_suppressed_flag",
               "short_name": "Suppressed flag: Lyme disease",
@@ -217,7 +242,7 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
             "mean": 0,
@@ -227,14 +252,14 @@
           },
           {
             "name": "epic_n_babesiosis",
-            "duplicates": 1739,
+            "duplicates": 2327,
             "info": {
               "id": "epic_n_babesiosis",
               "short_name": "Babesiosis Patients",
               "long_name": "Patients with a Babesiosis Diagnosis",
               "category": "infectious_disease",
               "short_description": "Monthly count of patients with a babesiosis diagnosis.",
-              "long_description": "Monthly count of patients with a babesiosis diagnosis, per Epic's \"Babesiosis N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_babesiosis_suppressed_flag. Population base per SlicerDicer session 2852629: data model Patients, population base All Patients, criteria Country of Care = United States of America.",
+              "long_description": "Monthly count of patients with a babesiosis diagnosis, per Epic's \"Babesiosis N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_babesiosis_suppressed_flag. Population base per SlicerDicer session 2852889: data model Patients, population base All Patients, criteria Country of Care = United States of America, Has Any Encounters.",
               "statement": "In {location}, {value} patients had a babesiosis diagnosis.",
               "measure_type": "Count",
               "unit": "patients",
@@ -245,13 +270,13 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 237.081044,
-            "sd": 871.493717,
+            "mean": 199.485043,
+            "sd": 742.647917,
             "min": 5,
-            "max": 7613
+            "max": 6895
           },
           {
             "name": "epic_pct_babesiosis",
@@ -262,7 +287,7 @@
               "long_name": "Percent of Patients with a Babesiosis Diagnosis",
               "category": "infectious_disease",
               "short_description": "Monthly percent of patients with a babesiosis diagnosis.",
-              "long_description": "Monthly percentage of patients with a babesiosis diagnosis, computed as epic_n_babesiosis / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852629.",
+              "long_description": "Monthly percentage of patients with a babesiosis diagnosis, computed as epic_n_babesiosis / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852889.",
               "statement": "In {location}, {value}% of patients had a babesiosis diagnosis.",
               "measure_type": "Percent",
               "unit": "Percent",
@@ -273,17 +298,17 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "float",
             "missing": 0,
-            "mean": 0.008874,
-            "sd": 0.01431,
-            "min": 0.000587,
-            "max": 0.075231
+            "mean": 0.007862,
+            "sd": 0.013603,
+            "min": 0.000247,
+            "max": 0.074448
           },
           {
             "name": "epic_babesiosis_suppressed_flag",
-            "duplicates": 2182,
+            "duplicates": 2806,
             "info": {
               "id": "epic_babesiosis_suppressed_flag",
               "short_name": "Suppressed flag: babesiosis",
@@ -300,24 +325,24 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 0.294872,
-            "sd": 0.45609,
+            "mean": 0.376425,
+            "sd": 0.484575,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_malaria",
-            "duplicates": 1860,
+            "duplicates": 2424,
             "info": {
               "id": "epic_n_malaria",
               "short_name": "Malaria Patients",
               "long_name": "Patients with a Malaria Diagnosis",
               "category": "infectious_disease",
               "short_description": "Monthly count of patients with a malaria diagnosis.",
-              "long_description": "Monthly count of patients with a malaria diagnosis, per Epic's \"Malaria N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_malaria_suppressed_flag. Population base per SlicerDicer session 2852629: data model Patients, population base All Patients, criteria Country of Care = United States of America. Most malaria cases in the US are travel-associated rather than locally acquired.",
+              "long_description": "Monthly count of patients with a malaria diagnosis, per Epic's \"Malaria N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_malaria_suppressed_flag. Population base per SlicerDicer session 2852889: data model Patients, population base All Patients, criteria Country of Care = United States of America, Has Any Encounters. Most malaria cases in the US are travel-associated rather than locally acquired.",
               "statement": "In {location}, {value} patients had a malaria diagnosis.",
               "measure_type": "Count",
               "unit": "patients",
@@ -328,24 +353,24 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 122.330128,
-            "sd": 439.560537,
+            "mean": 137.654915,
+            "sd": 495.689394,
             "min": 5,
-            "max": 3515
+            "max": 4103
           },
           {
             "name": "epic_pct_malaria",
-            "duplicates": 2,
+            "duplicates": 1,
             "info": {
               "id": "epic_pct_malaria",
               "short_name": "Malaria Percentage",
               "long_name": "Percent of Patients with a Malaria Diagnosis",
               "category": "infectious_disease",
               "short_description": "Monthly percent of patients with a malaria diagnosis.",
-              "long_description": "Monthly percentage of patients with a malaria diagnosis, computed as epic_n_malaria / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852629.",
+              "long_description": "Monthly percentage of patients with a malaria diagnosis, computed as epic_n_malaria / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852889.",
               "statement": "In {location}, {value}% of patients had a malaria diagnosis.",
               "measure_type": "Percent",
               "unit": "Percent",
@@ -356,17 +381,17 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "float",
             "missing": 0,
-            "mean": 0.004146,
-            "sd": 0.002642,
-            "min": 0.000587,
-            "max": 0.015719
+            "mean": 0.004715,
+            "sd": 0.002997,
+            "min": 0.000515,
+            "max": 0.021034
           },
           {
             "name": "epic_malaria_suppressed_flag",
-            "duplicates": 2182,
+            "duplicates": 2806,
             "info": {
               "id": "epic_malaria_suppressed_flag",
               "short_name": "Suppressed flag: malaria",
@@ -383,24 +408,24 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 0.257784,
-            "sd": 0.437515,
+            "mean": 0.225071,
+            "sd": 0.417704,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_rmsf",
-            "duplicates": 1863,
+            "duplicates": 2454,
             "info": {
               "id": "epic_n_rmsf",
               "short_name": "RMSF Patients",
               "long_name": "Patients with a Rocky Mountain Spotted Fever Diagnosis",
               "category": "infectious_disease",
               "short_description": "Monthly count of patients with a Rocky Mountain Spotted Fever (RMSF) diagnosis.",
-              "long_description": "Monthly count of patients with a Rocky Mountain Spotted Fever diagnosis, per Epic's \"RMSF N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_rmsf_suppressed_flag. Population base per SlicerDicer session 2852629: data model Patients, population base All Patients, criteria Country of Care = United States of America.",
+              "long_description": "Monthly count of patients with a Rocky Mountain Spotted Fever diagnosis, per Epic's \"RMSF N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_rmsf_suppressed_flag. Population base per SlicerDicer session 2852889: data model Patients, population base All Patients, criteria Country of Care = United States of America, Has Any Encounters.",
               "statement": "In {location}, {value} patients had a Rocky Mountain Spotted Fever diagnosis.",
               "measure_type": "Count",
               "unit": "patients",
@@ -411,11 +436,11 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 134.226648,
-            "sd": 488.906036,
+            "mean": 129.86396,
+            "sd": 474.041166,
             "min": 5,
             "max": 3933
           },
@@ -428,7 +453,7 @@
               "long_name": "Percent of Patients with a Rocky Mountain Spotted Fever Diagnosis",
               "category": "infectious_disease",
               "short_description": "Monthly percent of patients with a Rocky Mountain Spotted Fever diagnosis.",
-              "long_description": "Monthly percentage of patients with a Rocky Mountain Spotted Fever diagnosis, computed as epic_n_rmsf / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852629.",
+              "long_description": "Monthly percentage of patients with a Rocky Mountain Spotted Fever diagnosis, computed as epic_n_rmsf / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852889.",
               "statement": "In {location}, {value}% of patients had a Rocky Mountain Spotted Fever diagnosis.",
               "measure_type": "Percent",
               "unit": "Percent",
@@ -439,17 +464,17 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "float",
             "missing": 0,
-            "mean": 0.005299,
-            "sd": 0.006109,
+            "mean": 0.005233,
+            "sd": 0.006086,
             "min": 0.00019,
-            "max": 0.028657
+            "max": 0.029173
           },
           {
             "name": "epic_rmsf_suppressed_flag",
-            "duplicates": 2182,
+            "duplicates": 2806,
             "info": {
               "id": "epic_rmsf_suppressed_flag",
               "short_name": "Suppressed flag: RMSF",
@@ -466,24 +491,24 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 0.339744,
-            "sd": 0.473731,
+            "mean": 0.352564,
+            "sd": 0.477854,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_west_nile",
-            "duplicates": 1916,
+            "duplicates": 2511,
             "info": {
               "id": "epic_n_west_nile",
               "short_name": "West Nile Virus Patients",
               "long_name": "Patients with a West Nile Virus Diagnosis",
               "category": "infectious_disease",
               "short_description": "Monthly count of patients with a West Nile virus diagnosis.",
-              "long_description": "Monthly count of patients with a West Nile virus diagnosis, per Epic's \"West Nile N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_west_nile_suppressed_flag. Population base per SlicerDicer session 2852629: data model Patients, population base All Patients, criteria Country of Care = United States of America.",
+              "long_description": "Monthly count of patients with a West Nile virus diagnosis, per Epic's \"West Nile N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_west_nile_suppressed_flag. Population base per SlicerDicer session 2852889: data model Patients, population base All Patients, criteria Country of Care = United States of America, Has Any Encounters.",
               "statement": "In {location}, {value} patients had a West Nile virus diagnosis.",
               "measure_type": "Count",
               "unit": "patients",
@@ -494,11 +519,11 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 103.222527,
-            "sd": 369.015076,
+            "mean": 99.460114,
+            "sd": 356.237688,
             "min": 5,
             "max": 3254
           },
@@ -511,7 +536,7 @@
               "long_name": "Percent of Patients with a West Nile Virus Diagnosis",
               "category": "infectious_disease",
               "short_description": "Monthly percent of patients with a West Nile virus diagnosis.",
-              "long_description": "Monthly percentage of patients with a West Nile virus diagnosis, computed as epic_n_west_nile / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852629.",
+              "long_description": "Monthly percentage of patients with a West Nile virus diagnosis, computed as epic_n_west_nile / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852889.",
               "statement": "In {location}, {value}% of patients had a West Nile virus diagnosis.",
               "measure_type": "Percent",
               "unit": "Percent",
@@ -522,17 +547,17 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "float",
             "missing": 0,
-            "mean": 0.005508,
-            "sd": 0.006837,
+            "mean": 0.005427,
+            "sd": 0.006769,
             "min": 0.000555,
             "max": 0.040736
           },
           {
             "name": "epic_west_nile_suppressed_flag",
-            "duplicates": 2182,
+            "duplicates": 2806,
             "info": {
               "id": "epic_west_nile_suppressed_flag",
               "short_name": "Suppressed flag: West Nile virus",
@@ -549,24 +574,24 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 0.252289,
-            "sd": 0.434426,
+            "mean": 0.259972,
+            "sd": 0.438697,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_dengue",
-            "duplicates": 2008,
+            "duplicates": 2616,
             "info": {
               "id": "epic_n_dengue",
               "short_name": "Dengue Patients",
               "long_name": "Patients with a Dengue Diagnosis",
               "category": "infectious_disease",
               "short_description": "Monthly count of patients with a dengue diagnosis.",
-              "long_description": "Monthly count of patients with a dengue diagnosis, per Epic's \"Dengue N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_dengue_suppressed_flag. Population base per SlicerDicer session 2852629: data model Patients, population base All Patients, criteria Country of Care = United States of America. Most dengue cases in the continental US are travel-associated rather than locally acquired.",
+              "long_description": "Monthly count of patients with a dengue diagnosis, per Epic's \"Dengue N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_dengue_suppressed_flag. Population base per SlicerDicer session 2852889: data model Patients, population base All Patients, criteria Country of Care = United States of America, Has Any Encounters. Most dengue cases in the continental US are travel-associated rather than locally acquired.",
               "statement": "In {location}, {value} patients had a dengue diagnosis.",
               "measure_type": "Count",
               "unit": "patients",
@@ -577,11 +602,11 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 47.047161,
-            "sd": 172.130894,
+            "mean": 44.333689,
+            "sd": 163.084527,
             "min": 5,
             "max": 1549
           },
@@ -594,7 +619,7 @@
               "long_name": "Percent of Patients with a Dengue Diagnosis",
               "category": "infectious_disease",
               "short_description": "Monthly percent of patients with a dengue diagnosis.",
-              "long_description": "Monthly percentage of patients with a dengue diagnosis, computed as epic_n_dengue / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852629.",
+              "long_description": "Monthly percentage of patients with a dengue diagnosis, computed as epic_n_dengue / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852889.",
               "statement": "In {location}, {value}% of patients had a dengue diagnosis.",
               "measure_type": "Percent",
               "unit": "Percent",
@@ -605,17 +630,17 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "float",
             "missing": 0,
-            "mean": 0.001889,
-            "sd": 0.001694,
+            "mean": 0.001855,
+            "sd": 0.001706,
             "min": 0.000229,
             "max": 0.011377
           },
           {
             "name": "epic_dengue_suppressed_flag",
-            "duplicates": 2182,
+            "duplicates": 2806,
             "info": {
               "id": "epic_dengue_suppressed_flag",
               "short_name": "Suppressed flag: dengue",
@@ -632,11 +657,11 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 0.516026,
-            "sd": 0.499858,
+            "mean": 0.536325,
+            "sd": 0.498768,
             "min": 0,
             "max": 1
           },
@@ -649,7 +674,7 @@
               "long_name": "Total Patients (Denominator)",
               "category": "general",
               "short_description": "Monthly total patient count, used as the denominator for each disease's percentage.",
-              "long_description": "Monthly total count of patients, used as the denominator for epic_pct_lyme, epic_pct_babesiosis, epic_pct_malaria, epic_pct_rmsf, epic_pct_west_nile, and epic_pct_dengue. Data from Epic Cosmos SlicerDicer session 2852629. Counts of 10 or fewer are suppressed by Epic and imputed as 5; see epic_n_patients_suppressed_flag. Population base: All Patients, Country of Care = United States of America.",
+              "long_description": "Monthly total count of patients, used as the denominator for epic_pct_lyme, epic_pct_babesiosis, epic_pct_malaria, epic_pct_rmsf, epic_pct_west_nile, and epic_pct_dengue. Data from Epic Cosmos SlicerDicer session 2852889. Counts of 10 or fewer are suppressed by Epic and imputed as 5; see epic_n_patients_suppressed_flag. Population base: All Patients, Country of Care = United States of America, Has Any Encounters.",
               "measure_type": "Count",
               "unit": "patients",
               "time_resolution": "Month",
@@ -659,17 +684,17 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 2857081.699176,
-            "sd": 10165191.579502,
+            "mean": 2808349.662037,
+            "sd": 9998911.802639,
             "min": 43947,
             "max": 79483814
           },
           {
             "name": "epic_n_patients_suppressed_flag",
-            "duplicates": 2183,
+            "duplicates": 2807,
             "info": {
               "id": "epic_n_patients_suppressed_flag",
               "short_name": "Suppressed flag: total patients",
@@ -686,7 +711,7 @@
                 }
               ]
             },
-            "time_range": [0, 41],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
             "mean": 0,
@@ -696,7 +721,7 @@
           }
         ]
       },
-      "sha512": "85bcdf4ee809bfe04dd77ab1d67a1daa296e6fdac9e30849b35f767135e869fc42c0ac7c385a2ab4facb1247be3315451c2f4f9bed132bbaa76b29122e823a5e"
+      "sha512": "f9ee7f20ca9709069e165c35278bce0d519f7ef0c1312fb3f67fbdf395e65644ff1fce9e3e29756fbc512e48b211824edf1b616bfe753a356a5a0c7ed504613c"
     }
   ],
   "measure_info": {
@@ -706,7 +731,7 @@
       "long_name": "Patients with a Lyme Disease Diagnosis",
       "category": "infectious_disease",
       "short_description": "Monthly count of patients with a Lyme disease diagnosis.",
-      "long_description": "Monthly count of patients with a Lyme disease diagnosis, per Epic's \"Lyme N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_lyme_suppressed_flag. Population base per SlicerDicer session 2852629: data model Patients, population base All Patients, criteria Country of Care = United States of America - the denominator (epic_n_patients) is all patients, not restricted to any diagnosis or encounter type.",
+      "long_description": "Monthly count of patients with a Lyme disease diagnosis, per Epic's \"Lyme N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_lyme_suppressed_flag. Population base per SlicerDicer session 2852889: data model Patients, population base All Patients, criteria Country of Care = United States of America, Has Any Encounters - the denominator (epic_n_patients) is all patients with any encounter, not restricted to any diagnosis or encounter type otherwise.",
       "statement": "In {location}, {value} patients had a Lyme disease diagnosis.",
       "measure_type": "Count",
       "unit": "patients",
@@ -724,7 +749,7 @@
       "long_name": "Percent of Patients with a Lyme Disease Diagnosis",
       "category": "infectious_disease",
       "short_description": "Monthly percent of patients with a Lyme disease diagnosis.",
-      "long_description": "Monthly percentage of patients with a Lyme disease diagnosis, computed as epic_n_lyme / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing, because dividing by the imputed denominator of 5 would assert a meaningless value; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852629.",
+      "long_description": "Monthly percentage of patients with a Lyme disease diagnosis, computed as epic_n_lyme / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing, because dividing by the imputed denominator of 5 would assert a meaningless value; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852889.",
       "statement": "In {location}, {value}% of patients had a Lyme disease diagnosis.",
       "measure_type": "Percent",
       "unit": "Percent",
@@ -759,7 +784,7 @@
       "long_name": "Patients with a Babesiosis Diagnosis",
       "category": "infectious_disease",
       "short_description": "Monthly count of patients with a babesiosis diagnosis.",
-      "long_description": "Monthly count of patients with a babesiosis diagnosis, per Epic's \"Babesiosis N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_babesiosis_suppressed_flag. Population base per SlicerDicer session 2852629: data model Patients, population base All Patients, criteria Country of Care = United States of America.",
+      "long_description": "Monthly count of patients with a babesiosis diagnosis, per Epic's \"Babesiosis N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_babesiosis_suppressed_flag. Population base per SlicerDicer session 2852889: data model Patients, population base All Patients, criteria Country of Care = United States of America, Has Any Encounters.",
       "statement": "In {location}, {value} patients had a babesiosis diagnosis.",
       "measure_type": "Count",
       "unit": "patients",
@@ -777,7 +802,7 @@
       "long_name": "Percent of Patients with a Babesiosis Diagnosis",
       "category": "infectious_disease",
       "short_description": "Monthly percent of patients with a babesiosis diagnosis.",
-      "long_description": "Monthly percentage of patients with a babesiosis diagnosis, computed as epic_n_babesiosis / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852629.",
+      "long_description": "Monthly percentage of patients with a babesiosis diagnosis, computed as epic_n_babesiosis / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852889.",
       "statement": "In {location}, {value}% of patients had a babesiosis diagnosis.",
       "measure_type": "Percent",
       "unit": "Percent",
@@ -812,7 +837,7 @@
       "long_name": "Patients with a Malaria Diagnosis",
       "category": "infectious_disease",
       "short_description": "Monthly count of patients with a malaria diagnosis.",
-      "long_description": "Monthly count of patients with a malaria diagnosis, per Epic's \"Malaria N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_malaria_suppressed_flag. Population base per SlicerDicer session 2852629: data model Patients, population base All Patients, criteria Country of Care = United States of America. Most malaria cases in the US are travel-associated rather than locally acquired.",
+      "long_description": "Monthly count of patients with a malaria diagnosis, per Epic's \"Malaria N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_malaria_suppressed_flag. Population base per SlicerDicer session 2852889: data model Patients, population base All Patients, criteria Country of Care = United States of America, Has Any Encounters. Most malaria cases in the US are travel-associated rather than locally acquired.",
       "statement": "In {location}, {value} patients had a malaria diagnosis.",
       "measure_type": "Count",
       "unit": "patients",
@@ -830,7 +855,7 @@
       "long_name": "Percent of Patients with a Malaria Diagnosis",
       "category": "infectious_disease",
       "short_description": "Monthly percent of patients with a malaria diagnosis.",
-      "long_description": "Monthly percentage of patients with a malaria diagnosis, computed as epic_n_malaria / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852629.",
+      "long_description": "Monthly percentage of patients with a malaria diagnosis, computed as epic_n_malaria / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852889.",
       "statement": "In {location}, {value}% of patients had a malaria diagnosis.",
       "measure_type": "Percent",
       "unit": "Percent",
@@ -865,7 +890,7 @@
       "long_name": "Patients with a Rocky Mountain Spotted Fever Diagnosis",
       "category": "infectious_disease",
       "short_description": "Monthly count of patients with a Rocky Mountain Spotted Fever (RMSF) diagnosis.",
-      "long_description": "Monthly count of patients with a Rocky Mountain Spotted Fever diagnosis, per Epic's \"RMSF N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_rmsf_suppressed_flag. Population base per SlicerDicer session 2852629: data model Patients, population base All Patients, criteria Country of Care = United States of America.",
+      "long_description": "Monthly count of patients with a Rocky Mountain Spotted Fever diagnosis, per Epic's \"RMSF N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_rmsf_suppressed_flag. Population base per SlicerDicer session 2852889: data model Patients, population base All Patients, criteria Country of Care = United States of America, Has Any Encounters.",
       "statement": "In {location}, {value} patients had a Rocky Mountain Spotted Fever diagnosis.",
       "measure_type": "Count",
       "unit": "patients",
@@ -883,7 +908,7 @@
       "long_name": "Percent of Patients with a Rocky Mountain Spotted Fever Diagnosis",
       "category": "infectious_disease",
       "short_description": "Monthly percent of patients with a Rocky Mountain Spotted Fever diagnosis.",
-      "long_description": "Monthly percentage of patients with a Rocky Mountain Spotted Fever diagnosis, computed as epic_n_rmsf / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852629.",
+      "long_description": "Monthly percentage of patients with a Rocky Mountain Spotted Fever diagnosis, computed as epic_n_rmsf / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852889.",
       "statement": "In {location}, {value}% of patients had a Rocky Mountain Spotted Fever diagnosis.",
       "measure_type": "Percent",
       "unit": "Percent",
@@ -918,7 +943,7 @@
       "long_name": "Patients with a West Nile Virus Diagnosis",
       "category": "infectious_disease",
       "short_description": "Monthly count of patients with a West Nile virus diagnosis.",
-      "long_description": "Monthly count of patients with a West Nile virus diagnosis, per Epic's \"West Nile N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_west_nile_suppressed_flag. Population base per SlicerDicer session 2852629: data model Patients, population base All Patients, criteria Country of Care = United States of America.",
+      "long_description": "Monthly count of patients with a West Nile virus diagnosis, per Epic's \"West Nile N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_west_nile_suppressed_flag. Population base per SlicerDicer session 2852889: data model Patients, population base All Patients, criteria Country of Care = United States of America, Has Any Encounters.",
       "statement": "In {location}, {value} patients had a West Nile virus diagnosis.",
       "measure_type": "Count",
       "unit": "patients",
@@ -936,7 +961,7 @@
       "long_name": "Percent of Patients with a West Nile Virus Diagnosis",
       "category": "infectious_disease",
       "short_description": "Monthly percent of patients with a West Nile virus diagnosis.",
-      "long_description": "Monthly percentage of patients with a West Nile virus diagnosis, computed as epic_n_west_nile / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852629.",
+      "long_description": "Monthly percentage of patients with a West Nile virus diagnosis, computed as epic_n_west_nile / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852889.",
       "statement": "In {location}, {value}% of patients had a West Nile virus diagnosis.",
       "measure_type": "Percent",
       "unit": "Percent",
@@ -971,7 +996,7 @@
       "long_name": "Patients with a Dengue Diagnosis",
       "category": "infectious_disease",
       "short_description": "Monthly count of patients with a dengue diagnosis.",
-      "long_description": "Monthly count of patients with a dengue diagnosis, per Epic's \"Dengue N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_dengue_suppressed_flag. Population base per SlicerDicer session 2852629: data model Patients, population base All Patients, criteria Country of Care = United States of America. Most dengue cases in the continental US are travel-associated rather than locally acquired.",
+      "long_description": "Monthly count of patients with a dengue diagnosis, per Epic's \"Dengue N\" measure. Data from Epic Cosmos, which contains de-identified data from 300M+ patients across 1,600+ hospitals. Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_dengue_suppressed_flag. Population base per SlicerDicer session 2852889: data model Patients, population base All Patients, criteria Country of Care = United States of America, Has Any Encounters. Most dengue cases in the continental US are travel-associated rather than locally acquired.",
       "statement": "In {location}, {value} patients had a dengue diagnosis.",
       "measure_type": "Count",
       "unit": "patients",
@@ -989,7 +1014,7 @@
       "long_name": "Percent of Patients with a Dengue Diagnosis",
       "category": "infectious_disease",
       "short_description": "Monthly percent of patients with a dengue diagnosis.",
-      "long_description": "Monthly percentage of patients with a dengue diagnosis, computed as epic_n_dengue / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852629.",
+      "long_description": "Monthly percentage of patients with a dengue diagnosis, computed as epic_n_dengue / epic_n_patients * 100 - a percent of all patients, NOT a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_patients_suppressed_flag. Data from Epic Cosmos SlicerDicer session 2852889.",
       "statement": "In {location}, {value}% of patients had a dengue diagnosis.",
       "measure_type": "Percent",
       "unit": "Percent",
@@ -1024,7 +1049,7 @@
       "long_name": "Total Patients (Denominator)",
       "category": "general",
       "short_description": "Monthly total patient count, used as the denominator for each disease's percentage.",
-      "long_description": "Monthly total count of patients, used as the denominator for epic_pct_lyme, epic_pct_babesiosis, epic_pct_malaria, epic_pct_rmsf, epic_pct_west_nile, and epic_pct_dengue. Data from Epic Cosmos SlicerDicer session 2852629. Counts of 10 or fewer are suppressed by Epic and imputed as 5; see epic_n_patients_suppressed_flag. Population base: All Patients, Country of Care = United States of America.",
+      "long_description": "Monthly total count of patients, used as the denominator for epic_pct_lyme, epic_pct_babesiosis, epic_pct_malaria, epic_pct_rmsf, epic_pct_west_nile, and epic_pct_dengue. Data from Epic Cosmos SlicerDicer session 2852889. Counts of 10 or fewer are suppressed by Epic and imputed as 5; see epic_n_patients_suppressed_flag. Population base: All Patients, Country of Care = United States of America, Has Any Encounters.",
       "measure_type": "Count",
       "unit": "patients",
       "time_resolution": "Month",

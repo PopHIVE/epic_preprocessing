@@ -6,12 +6,12 @@ Fever), West Nile virus, and Dengue. Each disease's numerator is the number of p
 with that diagnosis; the denominator (`epic_n_patients`) is the total patient count for
 the same state/month cell.
 
-**Population base** (SlicerDicer session `2852629`, "Lyme N and Babesiosis N and
+**Population base** (SlicerDicer session `2852889`, "Lyme N and Babesiosis N and
 Malaria N and RMSF N and West Nile N and Dengue N and Number of Patients by State of
 Residence"): data model `Patients`, population base `All Patients`, criteria
-`Country of Care = United States of America`. This is **not** restricted to any
-diagnosis, encounter type, or emergency department visits - the denominator is all
-patients.
+`Country of Care = United States of America` and `Has Any Encounters`. This is **not**
+restricted to any diagnosis or emergency department visit - the denominator is all
+patients with any encounter.
 
 This is a dcf data source project, initialized with `dcf::dcf_add_source`.
 
@@ -38,9 +38,10 @@ the output. There is no age or sex stratification in this session.
 
 ## Updating
 
-1. Re-run SlicerDicer session `2852629` and export the crosstab (rows: Year, Month,
+1. Re-run SlicerDicer session `2852889` and export the crosstab (rows: Year, Month,
    State of Residence; measures: Lyme N, Babesiosis N, Malaria N, RMSF N, West Nile N,
-   Dengue N, Number of Patients).
+   Dengue N, Number of Patients - or their lowercase `n <disease>` equivalents; both
+   forms are recognized).
 2. Drop the export into `raw/staging/`, **replacing** the previous file, so the same
    months are not read twice. This ingest expects exactly one staging file.
 3. From the project root: `Rscript -e "dcf::dcf_process('cosmos_vector_borne')"`, or
@@ -55,16 +56,19 @@ the output. There is no age or sex stratification in this session.
 
 ## Notes
 
-- **Layout**: row 11 holds the measure labels for the value columns (`Lyme N`,
-  `Babesiosis N`, `Malaria N`, `RMSF N`, `West Nile N`, `Dengue N`,
-  `Number of Patients`) and row 12 the row-dimension labels (`Year`, `Month`,
-  `State of Residence`). Data starts at row 13, ordered Year > Month > State (State
-  changes fastest). Year and Month are merged cells and must be filled down; State of
-  Residence is present on every row. The ingest locates the header dynamically (the row
-  where column C equals `"State of Residence"`) rather than hardcoding a row number, and
-  `stop()`s if columns A/B aren't `Year`/`Month` on that row, or if any measure column
-  label doesn't match `MEASURE_PATTERNS` in `ingest.R` - extend that map if the session
-  renames or adds a disease.
+- **Layout**: row 11 holds the measure labels for the value columns and row 12 the
+  row-dimension labels (`Year`, `Month`, `State of Residence`). Data starts at row 13,
+  ordered Year > Month > State (State changes fastest). Year and Month are merged cells
+  and must be filled down; State of Residence is present on every row. The ingest
+  locates the header dynamically (the row where column C equals
+  `"State of Residence"`) rather than hardcoding a row number, and `stop()`s if columns
+  A/B aren't `Year`/`Month` on that row, or if any measure column label doesn't match
+  `MEASURE_PATTERNS` in `ingest.R` - extend that map if the session renames or adds a
+  disease. As of the 2026-08-28 export, the measure labels changed from `Lyme N`,
+  `Babesiosis N`, `Malaria N`, `RMSF N`, `West Nile N`, `Dengue N` to the lowercase
+  `n lyme`, `n babesiosis`, `n malaria`, `n RMSF`, `n west nile`, `n dengue` form (same
+  convention as `cosmos_vector_borne_no_travel`); `Number of Patients` is unchanged.
+  `MEASURE_PATTERNS` matches both forms.
 - **Dropped rows**: non-US geographies (Canadian provinces, Mexican states, territories,
   e.g. Aguascalientes, Alberta, Manitoba, Nova Scotia, Ontario, Puerto Rico, Quebec,
   Virgin Islands, Armed Forces Africa) and `None of the above` are dropped, with a
