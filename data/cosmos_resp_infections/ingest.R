@@ -436,6 +436,20 @@ data <- lapply(files, function(file) {
 
   d <- vroom::vroom(file, show_col_types = FALSE, guess_max = Inf)
 
+  # Drop partial trailing/leading months (e.g. "Dec 1 – Dec 4") -- not
+  # comparable to whole months and unrecognized by dcf::dcf_standardize_epic()
+  if ("month" %in% names(d)) {
+    partial_months <- setdiff(unique(d$month), month.abb)
+    if (length(partial_months) > 0) {
+      message(
+        basename(file), ": dropping ", sum(d$month %in% partial_months),
+        " row(s) with partial month period(s): ",
+        paste(partial_months, collapse = ", ")
+      )
+      d <- d[d$month %in% month.abb, ]
+    }
+  }
+
   d2 <- dcf::dcf_standardize_epic(d)
 
   if('month' %in% names(d)){
