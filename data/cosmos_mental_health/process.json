@@ -5,48 +5,11 @@
     {
       "path": "ingest.R",
       "manual": false,
-      "last_run": "2026-08-28 13:16:50",
+      "last_run": "2026-08-31 11:58:55",
       "frequency": 0,
-      "run_time": 9.12,
+      "run_time": 6.97,
       "last_status": {
-        "log": [
-          "",
-          "Attaching package: 'dplyr'",
-          "",
-          "The following objects are masked from 'package:stats':",
-          "",
-          "    filter, lag",
-          "",
-          "The following objects are masked from 'package:base':",
-          "",
-          "    intersect, setdiff, setequal, union",
-          "",
-          "",
-          "Attaching package: 'lubridate'",
-          "",
-          "The following objects are masked from 'package:base':",
-          "",
-          "    date, intersect, setdiff, union",
-          "",
-          "",
-          "Attaching package: 'zoo'",
-          "",
-          "The following objects are masked from 'package:base':",
-          "",
-          "    as.Date, as.Date.numeric",
-          "",
-          "Dropping 14640 row(s) with age 'No value' (unclassified age at time of visit)",
-          "Dropped 15120 non-US / catch-all row(s) (state of residence: American Samoa, South Pacific, Armed Forces Africa, Armed Forces America, Armed Forces Pacific, Federated States of Micronesia, Guam, Marshall Islands, None of the above, Northern Mariana Islands, Puerto Rico, Virgin Islands)",
-          "Standardized 24720 rows | 52 geographies | 2022-07-31 to 2026-06-30",
-          "  epic_median_ed_los_suicidal_behavior_suppressed_flag: 2569 suppressed/imputed, 720 cell(s) absent from the source export",
-          "  epic_pct_sliced_population_suicidal_behavior_suppressed_flag: 2554 suppressed/imputed, 720 cell(s) absent from the source export",
-          "  epic_q1_ed_los_suicidal_behavior_suppressed_flag: 2569 suppressed/imputed, 720 cell(s) absent from the source export",
-          "  epic_q3_ed_los_suicidal_behavior_suppressed_flag: 2569 suppressed/imputed, 720 cell(s) absent from the source export",
-          "  epic_median_ed_los_mood_suppressed_flag: 4136 suppressed/imputed, 6000 cell(s) absent from the source export",
-          "  epic_pct_sliced_population_mood_suppressed_flag: 4131 suppressed/imputed, 6000 cell(s) absent from the source export",
-          "  epic_q1_ed_los_mood_suppressed_flag: 4068 suppressed/imputed, 6360 cell(s) absent from the source export",
-          "  epic_q3_ed_los_mood_suppressed_flag: 4068 suppressed/imputed, 6360 cell(s) absent from the source export"
-        ],
+        "log": ["", "Attaching package: 'dplyr'", "", "The following objects are masked from 'package:stats':", "", "    filter, lag", "", "The following objects are masked from 'package:base':", "", "    intersect, setdiff, setequal, union", "", "", "Attaching package: 'lubridate'", "", "The following objects are masked from 'package:base':", "", "    date, intersect, setdiff, union", "", "", "Attaching package: 'zoo'", "", "The following objects are masked from 'package:base':", "", "    as.Date, as.Date.numeric", "", "Dropping 6696 row(s) with age 'No value' (unclassified age at time of visit)", "Dropped 20736 non-US / catch-all row(s) (state of residence: American Samoa, South Pacific, Armed Forces Africa, Armed Forces America, Armed Forces Pacific, Federated States of Micronesia, Guam, Marshall Islands, Michoacán, None of the above, Northern Mariana Islands, Ontario, Palau, Puerto Rico, Virgin Islands)", "Standardized 28080 rows | 52 geographies | 2022-01-31 to 2026-06-30", "  epic_median_ed_los_suicidal_behavior_suppressed_flag: 1440 suppressed/imputed, 13680 cell(s) absent from the source export", "  epic_pct_sliced_population_suicidal_behavior_suppressed_flag: 1426 suppressed/imputed, 13680 cell(s) absent from the source export", "  epic_q1_ed_los_suicidal_behavior_suppressed_flag: 1440 suppressed/imputed, 13680 cell(s) absent from the source export", "  epic_q3_ed_los_suicidal_behavior_suppressed_flag: 1440 suppressed/imputed, 13680 cell(s) absent from the source export", "  epic_median_ed_los_mood_suppressed_flag: 6351 suppressed/imputed, 0 cell(s) absent from the source export", "  epic_pct_sliced_population_mood_suppressed_flag: 6337 suppressed/imputed, 0 cell(s) absent from the source export", "  epic_q1_ed_los_mood_suppressed_flag: 5872 suppressed/imputed, 2160 cell(s) absent from the source export", "  epic_q3_ed_los_mood_suppressed_flag: 5872 suppressed/imputed, 2160 cell(s) absent from the source export"],
         "success": true
       }
     }
@@ -55,11 +18,21 @@
   "check_results": [],
   "standalone": false,
   "raw_state": {
-    "files": ["raw/staging_median_pct/ED Encounters_Crosstab_2026-08-28T07_58_27.xlsx", "raw/staging_median_pct/ED Encounters_Crosstab_2026-08-28T13_37_01.xlsx", "raw/staging_iqr/ED Encounters_Crosstab_2026-08-28T08_28_15.xlsx", "raw/staging_iqr/ED Encounters_Crosstab_2026-08-28T13_34_08.xlsx"],
-    "hashes": ["501b6157a0c556fe19852568b09ca796", "aacfa2414beae2bfa7f1fc06720a9a8f", "c349917fe11a3b40101744e0a6a3cf7a", "b826e9bf68a5cc0a407fe6c85f8ea2f4"]
+    "files": [
+      "raw/staging_median_pct/ED Encounters_Crosstab_2026-08-28T13_37_01.xlsx",
+      "raw/staging_median_pct/ED Encounters_Crosstab_2026-08-31T09_41_48.xlsx",
+      "raw/staging_iqr/ED Encounters_Crosstab_2026-08-28T13_34_08.xlsx",
+      "raw/staging_iqr/ED Encounters_Crosstab_2026-08-31T09_59_13.xlsx"
+    ],
+    "hashes": [
+      "aacfa2414beae2bfa7f1fc06720a9a8f",
+      "4fe332b9017d4e1b923577eb513d87c9",
+      "b826e9bf68a5cc0a407fe6c85f8ea2f4",
+      "5937e5051f1e7c6923cea545c80d4ab7"
+    ]
   },
   "standard_state": {
-    "./data/cosmos_mental_health/measure_info.json": "77cbe411a46d846c90eb0c58faecaea1",
-    "./data/cosmos_mental_health/standard/data.csv.gz": "b877a51d5a31f0bcb2dadf194c507291"
+    "./data/cosmos_mental_health/measure_info.json": "8898410581a2298beded6ef9c19d16b3",
+    "./data/cosmos_mental_health/standard/data.csv.gz": "82eb48dad071e0e6b5578f6b3d1255a2"
   }
 }

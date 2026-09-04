@@ -44,9 +44,9 @@ that `ingest.R` combines:
 
 | Folder | Session | Diagnosis | Date range | Measures |
 |---|---|---|---|---|
-| `raw/staging_median_pct/` | `2852625` - "Median ED Length of Stay (mins) and Percentage of Sliced Population by ED Diagnoses and State of Residence and Age at Time of Visit Range" | Suicidal behavior | 7/1/2022-6/30/2026 | Median ED LOS, Percentage of Sliced Population |
+| `raw/staging_median_pct/` | `2853325` - "Median ED Length of Stay (mins) and Percentage of Sliced Population by ED Diagnoses and State of Residence and Age at Time of Visit Range" (2026-08-31 re-export, replaces `2852625`) | Suicidal behavior | 7/1/2022-6/30/2026 | Median ED LOS, Percentage of Sliced Population |
 | `raw/staging_median_pct/` | `2852830` - "Percentage of Sliced Population and Median Length of Stay by ED Diagnoses and State of Residence and Age at Time of Visit Range" | Mood | 1/1/2022-6/30/2026 | Percentage of Sliced Population, Median LOS |
-| `raw/staging_iqr/` | `2852630` - "Q3 ED length of stay and Q1 ED length of stay by ED Diagnoses and State of Residence and Age at Time of Visit Range" | Suicidal behavior | 7/1/2022-6/30/2026 | Q3 ED LOS, Q1 ED LOS |
+| `raw/staging_iqr/` | `2853329` - "Q3 ED length of stay and Q1 ED length of stay by ED Diagnoses and State of Residence and Age at Time of Visit Range" (2026-08-31 re-export, replaces `2852630`) | Suicidal behavior | 7/1/2022-6/30/2026 | Q3 ED LOS, Q1 ED LOS |
 | `raw/staging_iqr/` | `2852828` - "Q1 Length of Stay and Q3 Length of Stay by ED Diagnoses and State of Residence and Age at Time of Visit Range" | Mood | 1/1/2022-6/30/2026 | Q1 LOS, Q3 LOS |
 
 The Mood sessions above are the third export of this diagnosis. The first
@@ -92,6 +92,19 @@ in `ingest.R` when a session changes wording or adds a bucket.
 
 ## Notes and caveats
 
+- **Suicidal-behavior age coverage narrowed to under-25 as of the 2026-08-31
+  re-export.** Sessions `2853325`/`2853329` replaced `2852625`/`2852630` with
+  the same population base, criteria, and 7/1/2022-6/30/2026 date range, but
+  their "Age at Time of Visit" dimension now only includes `<5`, `5-9`,
+  `10-14`, `15-19`, and `20-24 Years` (plus `Overall`) - the `25-44`, `45-64`,
+  `65-84`, and `85+` buckets are **absent from the source grid entirely**, not
+  merely suppressed. This is a confirmed deliberate scope change to the
+  SlicerDicer session (not an export error), so all four suicidal-behavior
+  measures are `NA` with a `NULL` (absent-from-source) flag for those four
+  adult age buckets, across every state and month, retroactively over the
+  full history. Mood's age coverage is unaffected and still includes all ages.
+  If a future re-export needs adult ages back, re-run the Suicidal-behavior
+  sessions with the age dimension extended to match Mood's.
 - **"Percentage of Sliced Population" is not a rate.** This was verified
   empirically against the raw export: summed across every age bucket at the
   national ("Total" state) row for a fixed month, it totals ~100%; summed
