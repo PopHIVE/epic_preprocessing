@@ -228,15 +228,19 @@ write_metadata_json <- function(results, path) {
 
 # The ED Diagnoses buckets expected in row 12, matched as regexes against the
 # raw labels ("all-cause diarrhea A00-09 R19.7", "Nausea and vomiting(
-# ICD-10-CM: R11.* )", "Total: ..."). Patterns deliberately key off the stable
-# part of each label so a re-worded bucket still matches. SlicerDicer sessions
-# gain and rename buckets over time, so an unrecognized or ambiguous label
-# stops the run instead of silently landing on the wrong measure -- extend this
-# map when the session changes.
+# ICD-10-CM: R11.* )", "Acute gastroenteropathy due to Norwalk agent(
+# ICD-10-CM: A08.11 )", "Rotaviral enteritis( ICD-10-CM: A08.0 )", "Total:
+# ..."). Patterns deliberately key off the stable part of each label so a
+# re-worded bucket still matches. SlicerDicer sessions gain and rename buckets
+# over time, so an unrecognized or ambiguous label stops the run instead of
+# silently landing on the wrong measure -- extend this map when the session
+# changes. norovirus and rotavirus buckets were added 2026-09.
 ED_OUTCOME_PATTERNS <- c(
   all_encounters = "^Total",
   diarrhea       = "diarrhea",
-  vomiting       = "[Nn]ausea and vomiting"
+  vomiting       = "[Nn]ausea and vomiting",
+  norovirus      = "Norwalk",
+  rotavirus      = "Rotaviral"
 )
 
 match_outcome_labels <- function(labels, patterns) {
@@ -307,6 +311,16 @@ process_diarrhea_wide <- function(file, granularity, password = NULL) {
     ) %>%
     mutate(col_idx = as.integer(sub("v", "", col_name))) %>%
     left_join(col_meta, by = "col_idx")
+
+  # Norovirus and rotavirus buckets were added to this crosstab in the 2026-09
+  # export. They are recognized by ED_OUTCOME_PATTERNS (so an unrecognized-
+  # bucket error isn't raised), but not yet surfaced as standard measures --
+  # drop them here rather than adding them to build_standard_table.
+  n_dropped <- sum(data_long$outcome %in% c("norovirus", "rotavirus"))
+  if (n_dropped > 0) {
+    message("  Dropping ", n_dropped, " row(s) from unreleased norovirus/rotavirus buckets")
+    data_long <- data_long %>% filter(!outcome %in% c("norovirus", "rotavirus"))
+  }
 
   if (granularity == "week") {
     data_long <- filter_full_weeks(data_long, "time_raw", "year_raw")
