@@ -1,0 +1,15 @@
+{
+  "raw_state": {
+    "Patients with Birthing Parent Information_Crosstab_2026-09-08T15_18_31.xlsx": "71c2852e09d5e81bafe0e31729d79c45"
+  },
+  "raw_state_cpt_birth": {
+    "Patients with Birthing Parent Information_Crosstab_2026-09-08T15_29_27.xlsx": "d535783660cb1477464bd3066e4bcb85"
+  },
+  "type": "source",
+  "name": "cosmos_birth_vaccines",
+  "standard_state": {
+    "./data/cosmos_birth_vaccines/measure_info.json": "f0c01ee178c6c90e39acecdafe1ec6d9",
+    "./data/cosmos_birth_vaccines/standard/data.csv.gz": "dd3cbf3b5dfe032616ad4c3809c2d0fc",
+    "./data/cosmos_birth_vaccines/standard/data_cpt_birth.csv.gz": "e1adf7a8142df4757f2753a24ee4fe22"
+  }
+}
