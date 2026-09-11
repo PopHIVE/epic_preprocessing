@@ -7,83 +7,98 @@
 # Two crosstabs, merged into one standard/data.csv.gz keyed by
 # (geography, time, age):
 #
-# 1. raw/staging/ (Session ID 2850163; predecessors 2850139/2847109/2847096)
-#    -- annual counts of patients with a viral hepatitis C diagnosis, and the
-#    all-patients denominator, by state of residence and age at encounter.
-#    Population base: All Patients; Country of Care = United States of
-#    America; Has Any Encounters?  (no diagnosis filter on the population).
-#    Diagnosis is a ROW dimension with two buckets per state/year/age:
+# 1. raw/staging/ (Session ID 2855468; predecessors 2850163/2850139/2847109/
+#    2847096) -- annual counts of patients with a viral hepatitis C
+#    diagnosis, and the all-patients denominator, by state of residence and
+#    age at encounter. Population base: All Patients; Country of Care =
+#    United States of America; Has Any Encounters?  (no diagnosis filter on
+#    the population). Diagnosis is a ROW dimension with two buckets per
+#    state/year/age:
 #      "hepc"       -> patients with a viral hepatitis C diagnosis (numerator)
 #      "Total: ..." -> all patients in that state/year/age cell (denominator)
 #    epic_pct_hepc = numerator / denominator * 100.
+#    As of the 2026-09-10 export, this session ALSO carries two extra
+#    measure columns per age bucket ("HepC diagnosis (%)" and a "Percentage
+#    ... within 6 months (%)" medication measure) that are NOT used here --
+#    deliberately ignored, see the CAVEAT below. Only "Number of Patients"
+#    is extracted, keeping this crosstab's output identical in shape to
+#    before the 2026-09-10 update.
 #
-# 2. raw/staging_medication/ (Session ID 2850012) -- among patients with an
-#    HCV medication on record (itself among patients meeting the SAME viral
-#    hepatitis C diagnosis criteria as crosstab 1, applied here as a
-#    POPULATION filter rather than a row bucket), the rate of a named Epic
-#    Cosmos quality measure ("hcv medication measure"), by state of
-#    residence and age at encounter. "All Medications" is a ROW dimension
-#    with two buckets:
-#      "has HCV medication" -> the bucket actually used (see below)
-#      "Total"               -> all HCV-diagnosed patients in that cell,
-#                                unused here but CONFIRMED by inspection to
-#                                match epic_n_patients_hepc exactly at every
-#                                (geography, time, age) cell checked as of
-#                                the 2026-08-18 (10:48) export
-#    The "has HCV medication" bucket carries two columns: "Number of
-#    Patients" (this bucket's own population -- patients with an HCV
-#    medication on record) and "hcv medication measure (%)" (this
-#    population's own rate for the named measure, e.g. ~70-95% in the
-#    2026-08-18 export -- CONFIRMED against user domain knowledge to be the
-#    intended reading, not the ~5-35% that would result from treating the
-#    "Total" bucket's population as the denominator instead). The measure
-#    does NOT provide a numerator count directly:
-#      epic_n_patients_hepc_medication_pop = "has HCV medication" bucket's
-#        own population (the denominator)
-#      epic_pct_hepc_medication = "has HCV medication" bucket's own rate
-#        (reported directly, or imputed via the standard 5 / denominator
-#        rule when blank)
+# 2. raw/staging_medication/ (Session ID 2855386; predecessor 2850012) --
+#    among patients with a viral hepatitis C diagnosis (the same population
+#    filter as crosstab 1's "hepc" bucket, applied here at the session/
+#    population level), the rate of patients with 1 slice by all HCV
+#    medications within 6 months of diagnosis, by state of residence and age
+#    at encounter. As of the 2026-09-10 export this crosstab has THREE row
+#    dimensions (Year, State of Residence, Age at Encounter in Years) and two
+#    named measure columns -- "Number of Patients" and "Hep C medication
+#    (%)" -- with NO "All Medications" bucket dimension (the predecessor
+#    session 2850012 had a 4th row dimension, "All Medications", with a
+#    "has HCV medication" vs "Total" bucket; that bucket dimension is GONE
+#    in this session, replaced by applying the diagnosis filter directly to
+#    the population):
+#      epic_n_patients_hepc_medication_pop = "Number of Patients" (the
+#        HCV-diagnosed population for that cell -- CONFIRMED to match
+#        crosstab 1's epic_n_patients_hepc cell-for-cell on every
+#        (geography, time, age) checked in the 2026-09-10 exports, e.g.
+#        Texas / 2018 / 18-24 Years = 229 in both files)
+#      epic_pct_hepc_medication = "Hep C medication (%)" (reported directly,
+#        or imputed via the standard 5 / denominator rule when blank) --
+#        CONFIRMED to match crosstab 1's now-ignored "Percentage ... within
+#        6 months (%)" column cell-for-cell (e.g. Texas / 2018 / 18-24 Years
+#        = 9.61% in both files), so this measure now genuinely represents
+#        the medication-within-6-months rate AMONG ALL HCV-diagnosed
+#        patients, not among an already-medicated subset (see CAVEAT below
+#        -- this is a substantive, favorable change from the 2850012 session)
 #      epic_n_patients_hepc_medication = round(population * rate / 100),
 #        the DERIVED numerator -- not a value the source reports anywhere
 #
-# CAVEAT on the numerator's code set (both crosstabs): Session 2850012's own
-# Population Criteria Filters read: "Chronic viral hepatitis C (ICD-10-CM:
-# B18.2), Acute hepatitis E (ICD-10-CM: B17.2), Unspecified viral hepatitis
-# C". B17.2 is NOT a hepatitis C code. This matches the predecessor session
-# (2847096) used to define crosstab 1's "hepc" bucket (see
-# epic_n_patients_hepc's long_description), so BOTH crosstabs' HCV-diagnosed
-# populations include a small number of acute hepatitis E patients. Fix the
-# bucket definition in SlicerDicer and re-export both sessions to remove it.
+# CAVEAT on crosstab 1's two new, unused measure columns (2026-09-10):
+# "HepC diagnosis (%)" behaves inconsistently across the two Diagnosis (All)
+# row buckets -- on the "Total" row it closely tracks (hepc count / total
+# count) * 100, i.e. it approximates epic_pct_hepc itself, but on the
+# "Hep C diagnosis" row it is a distinct ~60-93% value whose precise Epic-
+# internal definition was not confirmed (plausibly the share of the loosely
+# coded "hepc" bucket -- see the code-set CAVEAT below -- meeting a stricter/
+# confirmed HepC diagnosis criteria, but this is not verified). The third
+# column ("Percentage ... within 6 months (%)") was confirmed to duplicate
+# raw/staging_medication's own epic_pct_hepc_medication exactly (see above).
+# Given the ambiguity of the first and the redundancy of the second, BOTH are
+# left out of the standard output; only "Number of Patients" is read from
+# this crosstab, same as before this update.
 #
-# CAVEAT on cross-crosstab comparison: epic_n_patients_hepc (crosstab 1) and
-# crosstab 2's own "Total" bucket (unused, not the same as
-# epic_n_patients_hepc_medication_pop, which is the "has HCV medication"
-# bucket's smaller population) count the same conceptual population --
-# HCV-diagnosed patients -- and were confirmed to match cell-for-cell in the
-# 2026-08-18 (10:48) exports checked,
-# but come from separately exported SlicerDicer sessions with independently
-# set session date ranges (crosstab 1 ends 2026-07-28; crosstab 2 ends
-# 2026-06-30 as of this update), so their trailing partial periods do NOT
-# align and future exports are not guaranteed to match as closely. Treat
-# them as related but distinct measures; do not substitute one for the
-# other without re-checking.
+# CAVEAT on the numerator's code set (both crosstabs): Session 2850012 (the
+# predecessor of the current medication crosstab)'s own Population Criteria
+# Filters read: "Chronic viral hepatitis C (ICD-10-CM: B18.2), Acute
+# hepatitis E (ICD-10-CM: B17.2), Unspecified viral hepatitis C". B17.2 is
+# NOT a hepatitis C code. This matches the predecessor session (2847096)
+# used to define crosstab 1's "hepc" bucket (see epic_n_patients_hepc's
+# long_description), so BOTH crosstabs' HCV-diagnosed populations include a
+# small number of acute hepatitis E patients. This has not been re-verified
+# against the current sessions (2855468 / 2855386); fix the bucket
+# definition in SlicerDicer and re-export both sessions to remove it.
 #
 # Layout notes (resolved from each export's own header rows, not
 # hard-coded):
-#   Rows 1-9   session metadata (Session Title, ID, Data Model, Population
+#   Rows 1-8   session metadata (Session Title, ID, Data Model, Population
 #              Base, Population Criteria Filters, Session Date Range,
-#              Measure [crosstab 1 only], Export User, Date of Export)
-#   Rows 10-11 blank
-#   Crosstab 1: Row 12 is the column axis label in the last row-index column,
-#     then one age-bucket label per value column; Row 13 is the row index
-#     header (Year, State of Residence, Diagnosis (All)); Row 14+ is data,
-#     with the first two index columns merged/filled down and the third
-#     (Diagnosis (All)) repeating every row.
+#              Export User, Date of Export) -- neither crosstab currently
+#              carries a separate metadata "Measure" row.
+#   Rows 9-10  blank
+#   Crosstab 1: Row 11 is the column axis label (Age at Encounter in Years),
+#     filled only on the FIRST column of each 3-column measure group; Row 12
+#     is a "Measures" header repeating ("Number of Patients", "HepC
+#     diagnosis (%)", "Percentage ... within 6 months (%)") once per age
+#     group; Row 13 is the row index header (Year, State of Residence,
+#     Diagnosis (All)); Row 14+ is data, with the first two index columns
+#     merged/filled down and the third (Diagnosis (All)) repeating every
+#     row. Only the "Number of Patients" column of each age group's triplet
+#     is extracted (see CAVEAT above).
 #   Crosstab 2: Row 11 is a "Measures" header over two named value columns
-#     (Number of Patients, hcv medication measure (%)); Row 12 is the row
-#     index header (Year, State of Residence, All Medications, Age at
-#     Encounter in Years -- FOUR dimensions); Row 13+ is data, with the
-#     first three index columns merged/filled down and the fourth (Age at
+#     (Number of Patients, Hep C medication (%)); Row 12 is the row index
+#     header (Year, State of Residence, Age at Encounter in Years -- THREE
+#     dimensions, no "All Medications" bucket); Row 13+ is data, with the
+#     first two index columns merged/filled down and the third (Age at
 #     Encounter in Years) repeating every row.
 #
 # Dropped rows (each reported via message()):
@@ -94,9 +109,9 @@
 # own true period-end date in `time` rather than a whole year. `time` is the
 # period END date, so a whole year is YYYY-12-31 while a trailing partial
 # period keeps its real end date. The two crosstabs' partial periods do NOT
-# necessarily align (see the cross-crosstab caveat above) -- validation
-# therefore checks "at most one partial period, and it is the most recent"
-# separately per crosstab, not on the merged file as a whole.
+# necessarily align -- validation therefore checks "at most one partial
+# period, and it is the most recent" separately per crosstab, not on the
+# merged file as a whole.
 #
 # Suppression: counts of 10 or fewer arrive as "10 or fewer" (or blank); they
 # are imputed as 5 and flagged. Flags are computed before imputation. A
@@ -109,15 +124,7 @@
 # age = "Total". It is the source's own total and may include patients whose
 # age at encounter is unknown, so it can exceed the sum of the six age
 # buckets slightly -- use the "Total" row for overall figures rather than
-# summing the buckets. Both crosstabs have the age "Total" enabled as of the
-# 2026-08-18 (10:28) update to crosstab 1.
-#
-# Crosstab 1's history: session 2850163 covers 2020-2025 plus a 2026 partial
-# period only (its predecessor, 2850139, covered 2018-2025 but lacked the age
-# "Total" column -- the update traded history depth for the Total row). Rows
-# for 2018 and 2019 therefore have NA for crosstab 1's measures
-# (epic_n_patients_hepc, epic_n_patients, epic_pct_hepc) but are still
-# populated for crosstab 2's medication measures.
+# summing the buckets. Both crosstabs have the age "Total" enabled.
 # =============================================================================
 
 library(dplyr)
@@ -163,22 +170,23 @@ AGE_EXPECTED <- c(
   "<5 Years", "5-17 Years", "18-24 Years", "25-44 Years", "45-64 Years",
   "65+ Years", "Total"
 )
-DX_LABELS <- c("hepc" = "hepc")
+DX_LABELS <- c("hepc" = "hepc", "hep c diagnosis" = "hepc")
 DENOM_COL <- "epic_n_patients"
 
 # --- Crosstab 2: HCV medication uptake (raw/staging_medication/) -----------
-# Layout differs from crosstab 1: FOUR row dimensions (Year, State of
-# Residence, All Medications, Age at Encounter in Years) followed by two
-# NAMED measure columns under a "Measures" header ("Number of Patients",
-# "hcv medication measure (%)") rather than one dimension's buckets spread
-# across columns -- see extract_medication_data() below.
+# Layout: THREE row dimensions (Year, State of Residence, Age at Encounter
+# in Years) followed by two NAMED measure columns under a "Measures" header
+# ("Number of Patients", "Hep C medication (%)") -- see
+# extract_medication_data() below. MED_PCT_LABELS accepts both the current
+# label and the predecessor session's (2850012), which reported the same
+# rate under the name "hcv medication measure (%)"; the predecessor's extra
+# "All Medications" row dimension is not otherwise supported by this parser.
 DIM_LABELS_MED <- c(
   "Year"                      = "year",
   "State of Residence"        = "state_name",
-  "All Medications"           = "med_status",
   "Age at Encounter in Years" = "age_raw"
 )
-MED_EXPECTED  <- c("has HCV medication", "Total")
+MED_PCT_LABELS <- c("Hep C medication (%)", "hcv medication measure (%)")
 MED_NUM_COL   <- "epic_n_patients_hepc_medication"
 MED_DENOM_COL <- "epic_n_patients_hepc_medication_pop"
 
@@ -203,9 +211,6 @@ standardize_age_label <- function(x) {
   }
   a
 }
-
-# "Total: Total includes ..." -> "Total"; "has HCV medication" unchanged
-standardize_med_label <- function(x) sub("^Total.*$", "Total", x)
 
 # Convert a SlicerDicer Year row label to its period END date, which is what
 # `time` carries. A whole year ("2020") ends 2020-12-31. A partial period
@@ -366,25 +371,65 @@ if (!identical(process$raw_state, current_state) ||
       )
     }
 
-    # The row above carries the column axis label in the last index column,
-    # then one bucket label per value column
-    axis_row <- as.character(grid[hdr - 1L, ])
-    if (!identical(axis_row[n_dim], col_axis_label)) {
-      stop(
-        file_label, ": expected column axis label '", col_axis_label,
-        "' in column ", n_dim, " of row ", hdr - 1L,
-        " but found '", axis_row[n_dim], "'.\n",
-        "Update the column axis label constant in ingest.R."
-      )
+    # Two possible layouts one row above the dimension header:
+    #  - single-level: the column axis label directly, then one bucket label
+    #    per value column (each bucket = one measure column)
+    #  - two-level: a "Measures" header, with the column axis label (e.g. age
+    #    bucket) one row further up, filled only on the FIRST column of each
+    #    measure group -- see extract_staging_data()'s header comment. Only
+    #    the column matching MEASURE_PATTERN is kept from each group; the
+    #    others (e.g. extra reported percentages) are deliberately dropped.
+    measures_row <- as.character(grid[hdr - 1L, ])
+    two_level <- identical(measures_row[n_dim], "Measures")
+
+    if (two_level) {
+      axis_row_raw <- as.character(grid[hdr - 2L, ])
+      if (!identical(axis_row_raw[n_dim], col_axis_label)) {
+        stop(
+          file_label, ": expected column axis label '", col_axis_label,
+          "' in column ", n_dim, " of row ", hdr - 2L,
+          " but found '", axis_row_raw[n_dim], "'.\n",
+          "Update the column axis label constant in ingest.R."
+        )
+      }
+
+      val_cols_all    <- (n_dim + 1L):ncol(grid)
+      axis_labels_fwd  <- axis_row_raw[val_cols_all]
+      axis_labels_fwd[axis_labels_fwd == ""] <- NA
+      for (i in seq_along(axis_labels_fwd)) {
+        if (is.na(axis_labels_fwd[i]) && i > 1L) axis_labels_fwd[i] <- axis_labels_fwd[i - 1L]
+      }
+      measure_labels <- measures_row[val_cols_all]
+
+      keep <- grepl(MEASURE_PATTERN, measure_labels)
+      if (!any(keep)) {
+        stop(
+          file_label, ": no measure column matching MEASURE_PATTERN ('",
+          MEASURE_PATTERN, "') found under '", col_axis_label, "'."
+        )
+      }
+
+      val_cols   <- val_cols_all[keep]
+      col_labels <- axis_labels_fwd[keep]
+    } else {
+      axis_row <- as.character(grid[hdr - 1L, ])
+      if (!identical(axis_row[n_dim], col_axis_label)) {
+        stop(
+          file_label, ": expected column axis label '", col_axis_label,
+          "' in column ", n_dim, " of row ", hdr - 1L,
+          " but found '", axis_row[n_dim], "'.\n",
+          "Update the column axis label constant in ingest.R."
+        )
+      }
+      val_cols   <- (n_dim + 1L):ncol(grid)
+      col_labels <- axis_row[val_cols]
     }
 
-    val_cols   <- (n_dim + 1L):ncol(grid)
-    col_labels <- axis_row[val_cols]
-    if (any(col_labels == "")) {
+    if (any(col_labels == "" | is.na(col_labels))) {
       stop(
         file_label, ": blank column label(s) at position(s) ",
-        paste(val_cols[col_labels == ""], collapse = ", "),
-        " of row ", hdr - 1L, "."
+        paste(val_cols[col_labels == "" | is.na(col_labels)], collapse = ", "),
+        " above row ", hdr, "."
       )
     }
 
@@ -413,7 +458,7 @@ if (!identical(process$raw_state, current_state) ||
       )
     }
 
-    body <- grid[(hdr + 1L):nrow(grid), , drop = FALSE]
+    body <- grid[(hdr + 1L):nrow(grid), c(seq_len(n_dim), val_cols), drop = FALSE]
     rownames(body) <- NULL
     names(body) <- c(unname(dim_labels), col_std)
 
@@ -433,15 +478,16 @@ if (!identical(process$raw_state, current_state) ||
       mutate(source_file = file_label)
   }
 
-  # Crosstab 2's layout is FOUR row dimensions followed by two NAMED measure
-  # columns under a "Measures" header, rather than one dimension's buckets
-  # spread across columns -- extract_staging_data()'s column-axis-pivot shape
-  # does not fit, so this is a dedicated parser. Both "Number of Patients"
-  # (the measure's own population/denominator) and "hcv medication measure
-  # (%)" (the measure's own rate) are kept -- see the CAVEAT at the top of
-  # this file: the source does not provide a numerator count directly, so it
-  # is derived downstream as round(population * rate / 100).
-  extract_medication_data <- function(grid, file_label, dim_labels, expected_med_labels) {
+  # Crosstab 2's layout is THREE row dimensions (Year, State of Residence,
+  # Age at Encounter in Years) followed by two NAMED measure columns under a
+  # "Measures" header, rather than one dimension's buckets spread across
+  # columns -- extract_staging_data()'s column-axis-pivot shape does not fit,
+  # so this is a dedicated parser. Both "Number of Patients" (the HCV-
+  # diagnosed population for this cell) and the medication rate (the measure
+  # named in MED_PCT_LABELS) are kept -- see the CAVEAT at the top of this
+  # file: the source does not provide a numerator count directly, so it is
+  # derived downstream as round(population * rate / 100).
+  extract_medication_data <- function(grid, file_label, dim_labels, pct_label_options) {
     dim_names <- names(dim_labels)
     n_dim <- length(dim_names)
 
@@ -477,30 +523,26 @@ if (!identical(process$raw_state, current_state) ||
         "Update extract_medication_data() in ingest.R."
       )
     }
-
-    body <- grid[(hdr + 1L):nrow(grid), , drop = FALSE]
-    rownames(body) <- NULL
-    names(body) <- c(unname(dim_labels), "n_raw", "pct_raw")
-
-    fill_cols <- unname(dim_labels)[1:3]   # Year, State, All Medications: merged, filled down
-    last_dim  <- unname(dim_labels)[n_dim] # Age at Encounter: populated on every row
-
-    body <- body %>%
-      mutate(across(all_of(unname(dim_labels)), ~ na_if(.x, ""))) %>%
-      tidyr::fill(all_of(fill_cols), .direction = "down") %>%
-      filter(!is.na(.data[[last_dim]]))
-
-    med_std <- standardize_med_label(body$med_status)
-    if (!all(med_std %in% expected_med_labels)) {
+    if (!measure_labels[2] %in% pct_label_options) {
       stop(
-        file_label, ": unrecognized 'All Medications' bucket label(s): ",
-        paste(unique(body$med_status[!med_std %in% expected_med_labels]), collapse = " | "), "\n",
-        "Extend MED_EXPECTED / standardize_med_label() in ingest.R."
+        file_label, ": unrecognized second measure column '", measure_labels[2],
+        "'; expected one of: ", paste(pct_label_options, collapse = ", "), "\n",
+        "Add the new label to MED_PCT_LABELS in ingest.R."
       )
     }
 
+    body <- grid[(hdr + 1L):nrow(grid), c(seq_len(n_dim), n_dim + 1L, n_dim + 2L), drop = FALSE]
+    rownames(body) <- NULL
+    names(body) <- c(unname(dim_labels), "n_raw", "pct_raw")
+
+    fill_cols <- unname(dim_labels)[1:(n_dim - 1L)] # Year, State: merged, filled down
+    last_dim  <- unname(dim_labels)[n_dim]          # Age at Encounter: populated on every row
+
     body %>%
-      mutate(med_status = med_std, source_file = file_label)
+      mutate(across(all_of(unname(dim_labels)), ~ na_if(.x, ""))) %>%
+      tidyr::fill(all_of(fill_cols), .direction = "down") %>%
+      filter(!is.na(.data[[last_dim]])) %>%
+      mutate(source_file = file_label)
   }
 
   data_raw_hepc <- bind_rows(lapply(staging_files, function(f) {
@@ -513,7 +555,7 @@ if (!identical(process$raw_state, current_state) ||
   data_raw_med <- bind_rows(lapply(med_staging_files, function(f) {
     extract_medication_data(
       read_slicerdicer_grid(f, xlsx_password), basename(f),
-      DIM_LABELS_MED, MED_EXPECTED
+      DIM_LABELS_MED, MED_PCT_LABELS
     )
   }))
 
@@ -713,8 +755,11 @@ if (!identical(process$raw_state, current_state) ||
     mutate(measure_col = paste0(measure_col, "_suppressed_flag")) %>%
     tidyr::pivot_wider(names_from = measure_col, values_from = suppressed_flag)
 
-  num_cols   <- paste0("epic_n_patients_", unname(DX_LABELS))
-  pct_cols   <- paste0("epic_pct_", unname(DX_LABELS))
+  # unique(): DX_LABELS may map several source bucket spellings (e.g. "hepc"
+  # and "Hep C diagnosis") to the same canonical suffix -- one output column
+  # per suffix, not per spelling.
+  num_cols   <- paste0("epic_n_patients_", unique(unname(DX_LABELS)))
+  pct_cols   <- paste0("epic_pct_", unique(unname(DX_LABELS)))
   denom_flag <- paste0(DENOM_COL, "_suppressed_flag")
 
   hepc_standard <- wide_values %>%
@@ -750,13 +795,12 @@ if (!identical(process$raw_state, current_state) ||
   # ---------------------------------------------------------------------------
   # 4b. Crosstab 2 -- HCV medication measure
   #
-  # Only the "has HCV medication" bucket is used (the "Total" bucket, which
-  # matches epic_n_patients_hepc, is validated as present for structural
-  # sanity but not otherwise used here -- see the CAVEAT at the top of this
-  # file). The source gives this bucket's own population ("Number of
-  # Patients") and its own rate ("hcv medication measure (%)") directly, but
-  # NOT the count of patients meeting the measure -- that numerator is
-  # derived below as round(population * rate / 100).
+  # The population filter (viral hepatitis C diagnosis) is applied at the
+  # session/population level in this export, not as a row bucket -- see the
+  # CAVEAT at the top of this file. The source gives this population's size
+  # ("Number of Patients") and its own medication rate directly, but NOT the
+  # count of patients meeting the measure -- that numerator is derived below
+  # as round(population * rate / 100).
   # ---------------------------------------------------------------------------
   bad_age <- unique(
     data_raw_med$age_raw[!standardize_age_label(data_raw_med$age_raw) %in% AGE_EXPECTED]
@@ -768,17 +812,8 @@ if (!identical(process$raw_state, current_state) ||
       "\nExtend AGE_EXPECTED / standardize_age_label() in ingest.R."
     )
   }
-  present_med <- unique(data_raw_med$med_status)
-  if (!all(MED_EXPECTED %in% present_med)) {
-    stop(
-      "Crosstab 2 (medication): expected buckets ",
-      paste(MED_EXPECTED, collapse = " and "), " in the export; found: ",
-      paste(present_med, collapse = ", ")
-    )
-  }
 
   data_raw_med <- data_raw_med %>%
-    filter(med_status == "has HCV medication") %>%
     mutate(age = standardize_age_label(age_raw))
 
   periods_med <- parse_period_end(data_raw_med$year)
@@ -815,10 +850,13 @@ if (!identical(process$raw_state, current_state) ||
       ),
       denom_value = as.numeric(if_else(denom_suppressed == 1L, "5", gsub(",", "", n_raw))),
       # A blank rate means the underlying numerator was suppressed. Confirmed
-      # against the 2026-08-18 export: every row with a suppressed
-      # population also had a blank rate, and a further 60 rows had a normal
-      # population but a blank rate (a numerator small enough to withhold on
-      # its own) -- no row had a suppressed population with a rate shown.
+      # against the predecessor session's 2026-08-18 export: every row with a
+      # suppressed population also had a blank rate, and a further 60 rows
+      # had a normal population but a blank rate (a numerator small enough to
+      # withhold on its own) -- no row had a suppressed population with a
+      # rate shown. Not independently re-verified against the current
+      # (2855386) session, but the same Epic Cosmos suppression convention
+      # is expected to apply.
       pct_parsed = as.numeric(gsub("%", "", pct_raw)),
       pct_suppressed = as.integer(is.na(pct_parsed))
     )
@@ -883,9 +921,8 @@ if (!identical(process$raw_state, current_state) ||
   # 5. Merge the two crosstabs. A full join on (geography, time, age) merges
   #    them without truncating either source to the other's max date/grain --
   #    cells present in only one crosstab (e.g. each crosstab's own trailing
-  #    partial period, or age = "Total" which crosstab 1 does not currently
-  #    export) get NA for the other crosstab's columns rather than being
-  #    silently dropped.
+  #    partial period) get NA for the other crosstab's columns rather than
+  #    being silently dropped.
   # ---------------------------------------------------------------------------
   data_standard <- full_join(hepc_standard, medication_standard, by = index_cols) %>%
     arrange(geography, time, age)
