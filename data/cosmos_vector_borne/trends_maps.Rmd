@@ -56,6 +56,49 @@ ggplot(nat_long, aes(time, value)) +
         axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
+```{r no-travel-comparison}
+# Comparison against cosmos_vector_borne_no_travel (same six diseases, but
+# restricted to patients without a travel history). Denominators differ
+# between the two sessions (see that source's README), so this compares raw
+# counts (epic_n_*), not percentages.
+no_travel_file <- "../cosmos_vector_borne_no_travel/standard/data.csv.gz"
+
+if (file.exists(no_travel_file)) {
+  n_cols <- paste0("epic_n_", DISEASES)
+
+  dat_all <- dat %>%
+    filter(geography == "00") %>%
+    mutate(time = as.Date(time), source = "All patients") %>%
+    select(time, source, all_of(n_cols))
+
+  dat_nt <- vroom(no_travel_file, show_col_types = FALSE,
+                   col_types = cols(geography = "c", time = "c")) %>%
+    filter(geography == "00") %>%
+    mutate(time = as.Date(time), source = "No travel history") %>%
+    select(time, source, all_of(n_cols))
+
+  compare_long <- bind_rows(dat_all, dat_nt) %>%
+    pivot_longer(all_of(n_cols), names_to = "measure", values_to = "value") %>%
+    mutate(measure = DISEASE_LABELS[sub("^epic_n_", "", measure)])
+
+  ggplot(compare_long, aes(time, value, color = source)) +
+    geom_line(linewidth = 0.6) +
+    geom_point(size = 0.8) +
+    facet_wrap(~measure, scales = "free_y", ncol = 3) +
+    scale_color_manual(values = c("All patients" = "#1b6ca8", "No travel history" = "#e07b39"),
+                        name = NULL) +
+    labs(title = "National monthly patient count, by disease — all patients vs. no travel history",
+         subtitle = "Counts only (not percentages) — the two sessions use different population denominators",
+         x = NULL, y = "Number of patients") +
+    theme_bw(base_size = 11) +
+    theme(strip.text = element_text(face = "bold"),
+          axis.text.x = element_text(angle = 45, hjust = 1),
+          legend.position = "bottom")
+} else {
+  message("cosmos_vector_borne_no_travel standard data not found; skipping comparison.")
+}
+```
+
 ```{r map-data}
 states_sf <- tigris::states(cb = TRUE, resolution = "5m", year = 2022, progress_bar = FALSE) %>%
   filter(!STATEFP %in% DROP_ST) %>%
