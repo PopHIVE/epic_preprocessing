@@ -11,10 +11,22 @@
       "name": "data.csv",
       "filename": "data.csv.gz",
       "versions": {
-        "hash": ["059c0dcd867faf6ca183141d62aba6df752b28d0"],
-        "author": ["anshap32 <73296024+anshap32@users.noreply.github.com>"],
-        "date": ["Tue Aug 18 12:38:32 2026 -0400"],
-        "message": ["added treatment rates"]
+        "hash": [
+          "e1389ec2f223812195dd666af698e4a6b9d949a8",
+          "059c0dcd867faf6ca183141d62aba6df752b28d0"
+        ],
+        "author": [
+          "anshap32 <73296024+anshap32@users.noreply.github.com>",
+          "anshap32 <73296024+anshap32@users.noreply.github.com>"
+        ],
+        "date": [
+          "Fri Sep 11 11:03:12 2026 -0400",
+          "Tue Aug 18 12:38:32 2026 -0400"
+        ],
+        "message": [
+          "ingest updated hep c query",
+          "added treatment rates"
+        ]
       },
       "source": [],
       "data_format": "wide",
@@ -26,8 +38,8 @@
       "id_length": 2,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-09-09 13:40:51.11739",
-      "last_modified": "2026-09-10 14:18:51.458012",
+      "created": "2026-09-21 08:43:45.964752",
+      "last_modified": "2026-09-21 12:37:27.692495",
       "vintage": {},
       "row_count": 3640,
       "entity_count": 52,
@@ -471,6 +483,1157 @@
         ]
       },
       "sha512": "fc1e48cb46e65d1c09419222366ce2b2fe3723661e091dd0514c45ebb4051fd19134cee3f8feef3c24456e91c43de3317ff30fe3b701cd17c0ff77b89149a8ab"
+    },
+    {
+      "bytes": 1026,
+      "encoding": "windows-1252",
+      "md5": "cd9f1a0b423ebb419ffd8377f31f2976",
+      "format": "csv",
+      "name": "data_dashboard.csv",
+      "filename": "data_dashboard.csv.gz",
+      "versions": {},
+      "source": [],
+      "data_format": "wide",
+      "ids": [
+        {
+          "variable": "geography"
+        }
+      ],
+      "id_length": 2,
+      "time": "time",
+      "profile": "data-resource",
+      "created": "2026-09-21 12:31:59.312277",
+      "last_modified": "2026-09-21 12:37:27.806601",
+      "vintage": {},
+      "row_count": 45,
+      "entity_count": 5,
+      "schema": {
+        "fields": [
+          {
+            "name": "geography",
+            "duplicates": 40,
+            "info": [],
+            "time_range": [0, 8],
+            "type": "string",
+            "missing": 0,
+            "table": {
+              "00": 9,
+              "01": 9,
+              "17": 9,
+              "22": 9,
+              "25": 9
+            }
+          },
+          {
+            "name": "time",
+            "duplicates": 36,
+            "info": [],
+            "time_range": [0, 8],
+            "type": "string",
+            "missing": 0,
+            "table": {
+              "2018-12-31": 5,
+              "2019-12-31": 5,
+              "2020-12-31": 5,
+              "2021-12-31": 5,
+              "2022-12-31": 5,
+              "2023-12-31": 5,
+              "2024-12-31": 5,
+              "2025-12-31": 5,
+              "2026-09-01": 5
+            }
+          },
+          {
+            "name": "epic_n_patients_hepc_new_diagnosis",
+            "duplicates": 4,
+            "info": {
+              "id": "epic_n_patients_hepc_new_diagnosis",
+              "short_name": "New HCV diagnoses",
+              "long_name": "Number of patients newly diagnosed with hepatitis C (no diagnosis in the prior year)",
+              "category": "chronic",
+              "short_description": "Annual count of NEW (incident) hepatitis C diagnoses -- patients diagnosed in the given year who were not already diagnosed the year before -- in the 5 geographies with any exported data.",
+              "long_description": "Taken from a dedicated, consolidated SlicerDicer session (2857569) that reports 6 measures at once (this population size, plus 5 rates -- see epic_pct_hepc_meds_after_diagnosis, epic_pct_hepc_abnormal_test_after_diagnosis, epic_pct_hepc_any_test_after_diagnosis, epic_pct_normal_vl_20wk_after_meds_new_diagnosis, epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis) cross-tabulated by state/year AND two additional row-bucket dimensions, (All) Lab Components in {\"Hep C tests\", Total} and All Medications in {\"Hep C meds\", Total}. Only the fully-unconditioned (Total x Total) row is kept here, per explicit user direction. The population is patients with a hepatitis C diagnosis in the given year who did NOT have one in the PRIOR year -- i.e. new/incident diagnoses, not the cumulative/prevalent diagnosed population -- confirmed with the user. This is why it is markedly smaller than epic_n_patients_hepc (crosstab 1, the cumulative diagnosed population as of that year: roughly 12-35% of it nationally, varying by year) and why it declines toward the present (167,148 nationally in 2018 down to 64,861 in 2025) even as epic_n_patients_hepc grows over the same span (471,746 to 561,496): fewer NEW diagnoses each year, while the prevalent pool keeps accumulating. Do not treat this as comparable to epic_n_patients_hepc or epic_n_patients_hepc_medication_pop -- it is a different (smaller, incident) population entirely. Counts of 10 or fewer are suppressed and imputed as 5, flagged by epic_n_patients_hepc_new_diagnosis_suppressed_flag. The most recent period (2026, partial year Jan 1 - Sep 1) is suppressed in EVERY one of the 5 geographies for this measure and all 5 percentage measures built on it -- confirmed directly in the raw export (every cell reads blank or \"10 or fewer\"), consistent with a partial year producing fewer new diagnoses than a full year, on top of the declining incidence trend.",
+              "statement": "In {location}, {value} patients were newly diagnosed with hepatitis C in {time} (no prior-year diagnosis).",
+              "measure_type": "Count",
+              "unit": "Patients",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 0,
+            "mean": 25930.088889,
+            "sd": 52391.038692,
+            "min": 5,
+            "max": 167148
+          },
+          {
+            "name": "epic_n_patients_hepc_new_diagnosis_suppressed_flag",
+            "duplicates": 43,
+            "info": {
+              "id": "epic_n_patients_hepc_new_diagnosis_suppressed_flag",
+              "short_name": "Suppressed flag: new HCV diagnoses",
+              "long_name": "Suppression flag for the new-HCV-diagnosis count",
+              "category": "chronic",
+              "short_description": "Indicates whether this population count was suppressed and imputed.",
+              "long_description": "1 when Epic Cosmos suppressed the cell (a count of 10 or fewer) and the value was imputed as 5; 0 otherwise. Computed before imputation. Where this flag is 1, all 5 percentage measures built on this population (see epic_n_patients_hepc_new_diagnosis) are deliberately left missing rather than asserting a meaningless 5 / 5 = 100%. Every geography is flagged 1 for the most recent partial period (2026) -- see the note under epic_n_patients_hepc_new_diagnosis.",
+              "statement": "In {location}, the new-HCV-diagnosis count for {time} was suppressed and imputed ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 0,
+            "mean": 0.111111,
+            "sd": 0.317821,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_pct_hepc_meds_after_diagnosis",
+            "duplicates": 5,
+            "info": {
+              "id": "epic_pct_hepc_meds_after_diagnosis",
+              "short_name": "HCV meds after diagnosis (new diagnoses)",
+              "long_name": "Percent of newly diagnosed hepatitis C patients who received an HCV medication after diagnosis",
+              "category": "chronic",
+              "short_description": "Rate of HCV medication receipt after diagnosis, among patients newly diagnosed that year.",
+              "long_description": "Taken directly from session 2857569's own \"Hep C meds after diagnosis (%)\" column (imputed via the standard 5 / population rule when blank), among epic_n_patients_hepc_new_diagnosis -- the NEW-DIAGNOSIS population (see there), NOT the same population or session as epic_pct_hepc_medication (crosstab 2), which is a within-6-months rate among the cumulative/prevalent diagnosed population; do not chart these as a continuous series or treat them as comparable. Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_hepc_new_diagnosis * 100, flagged by epic_pct_hepc_meds_after_diagnosis_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. The most recent period (2026 partial year) is suppressed in every geography -- see epic_n_patients_hepc_new_diagnosis's note.",
+              "statement": "In {location}, {value}% of patients newly diagnosed with hepatitis C in {time} received an HCV medication after diagnosis.",
+              "measure_type": "Percent",
+              "unit": "Percent",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 7],
+            "type": "float",
+            "missing": 5,
+            "mean": 17.47525,
+            "sd": 4.439287,
+            "min": 8.95,
+            "max": 25.13
+          },
+          {
+            "name": "epic_pct_hepc_meds_after_diagnosis_suppressed_flag",
+            "duplicates": 43,
+            "info": {
+              "id": "epic_pct_hepc_meds_after_diagnosis_suppressed_flag",
+              "short_name": "Suppressed flag: HCV meds after diagnosis (new diagnoses)",
+              "long_name": "Suppression flag for the new-diagnosis HCV-meds-after-diagnosis rate",
+              "category": "chronic",
+              "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+              "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_hepc_new_diagnosis * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+              "statement": "In {location}, the new-diagnosis HCV-meds-after-diagnosis rate for {time} rests on a suppressed value ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 0,
+            "mean": 0.111111,
+            "sd": 0.317821,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_pct_hepc_abnormal_test_after_diagnosis",
+            "duplicates": 5,
+            "info": {
+              "id": "epic_pct_hepc_abnormal_test_after_diagnosis",
+              "short_name": "Abnormal HCV test after diagnosis (new diagnoses)",
+              "long_name": "Percent of newly diagnosed hepatitis C patients with an abnormal HCV test after diagnosis",
+              "category": "chronic",
+              "short_description": "Rate of an abnormal HCV test result after diagnosis, among patients newly diagnosed that year.",
+              "long_description": "Taken directly from session 2857569's own \"Abnormal hep C tests after diagnosis (%)\" column (imputed via the standard 5 / population rule when blank), among epic_n_patients_hepc_new_diagnosis (the new-diagnosis population, see there). This measure is not reported elsewhere in this repo -- it is new as of this session. Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_hepc_new_diagnosis * 100, flagged by epic_pct_hepc_abnormal_test_after_diagnosis_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. The most recent period (2026 partial year) is suppressed in every geography -- see epic_n_patients_hepc_new_diagnosis's note.",
+              "statement": "In {location}, {value}% of patients newly diagnosed with hepatitis C in {time} had an abnormal HCV test after diagnosis.",
+              "measure_type": "Percent",
+              "unit": "Percent",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 7],
+            "type": "float",
+            "missing": 5,
+            "mean": 14.277,
+            "sd": 2.464599,
+            "min": 8.33,
+            "max": 18.22
+          },
+          {
+            "name": "epic_pct_hepc_abnormal_test_after_diagnosis_suppressed_flag",
+            "duplicates": 43,
+            "info": {
+              "id": "epic_pct_hepc_abnormal_test_after_diagnosis_suppressed_flag",
+              "short_name": "Suppressed flag: abnormal HCV test after diagnosis (new diagnoses)",
+              "long_name": "Suppression flag for the new-diagnosis abnormal-HCV-test-after-diagnosis rate",
+              "category": "chronic",
+              "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+              "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_hepc_new_diagnosis * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+              "statement": "In {location}, the new-diagnosis abnormal-HCV-test-after-diagnosis rate for {time} rests on a suppressed value ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 0,
+            "mean": 0.111111,
+            "sd": 0.317821,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_pct_hepc_any_test_after_diagnosis",
+            "duplicates": 4,
+            "info": {
+              "id": "epic_pct_hepc_any_test_after_diagnosis",
+              "short_name": "Any HCV test after diagnosis (new diagnoses)",
+              "long_name": "Percent of newly diagnosed hepatitis C patients with any HCV test after diagnosis",
+              "category": "chronic",
+              "short_description": "Rate of any HCV test (abnormal or normal) after diagnosis, among patients newly diagnosed that year.",
+              "long_description": "Taken directly from session 2857569's own \"Any hep C test after diagnosis (%)\" column (imputed via the standard 5 / population rule when blank), among epic_n_patients_hepc_new_diagnosis (the new-diagnosis population, see there). This measure is not reported elsewhere in this repo -- it is new as of this session, and is the broadest of the three \"after diagnosis\" rates (any_test >= abnormal_test, since abnormal tests are a subset of any test). Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_hepc_new_diagnosis * 100, flagged by epic_pct_hepc_any_test_after_diagnosis_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. The most recent period (2026 partial year) is suppressed in every geography -- see epic_n_patients_hepc_new_diagnosis's note.",
+              "statement": "In {location}, {value}% of patients newly diagnosed with hepatitis C in {time} had any HCV test after diagnosis.",
+              "measure_type": "Percent",
+              "unit": "Percent",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 7],
+            "type": "float",
+            "missing": 5,
+            "mean": 28.26075,
+            "sd": 4.050998,
+            "min": 18.68,
+            "max": 38.94
+          },
+          {
+            "name": "epic_pct_hepc_any_test_after_diagnosis_suppressed_flag",
+            "duplicates": 43,
+            "info": {
+              "id": "epic_pct_hepc_any_test_after_diagnosis_suppressed_flag",
+              "short_name": "Suppressed flag: any HCV test after diagnosis (new diagnoses)",
+              "long_name": "Suppression flag for the new-diagnosis any-HCV-test-after-diagnosis rate",
+              "category": "chronic",
+              "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+              "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_hepc_new_diagnosis * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+              "statement": "In {location}, the new-diagnosis any-HCV-test-after-diagnosis rate for {time} rests on a suppressed value ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 0,
+            "mean": 0.111111,
+            "sd": 0.317821,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_pct_normal_vl_20wk_after_meds_new_diagnosis",
+            "duplicates": 4,
+            "info": {
+              "id": "epic_pct_normal_vl_20wk_after_meds_new_diagnosis",
+              "short_name": "Normal HCV VL >20 weeks after meds (new diagnoses)",
+              "long_name": "Percent of newly diagnosed hepatitis C patients with a normal HCV VL result more than 20 weeks after medication",
+              "category": "chronic",
+              "short_description": "Rate of a normal HCV viral load result, 20+ weeks after medication, among patients newly diagnosed that year.",
+              "long_description": "Taken directly from session 2857569's own \"Normal hep c test after meds, 20 weeks (%)\" column (imputed via the standard 5 / population rule when blank), among epic_n_patients_hepc_new_diagnosis -- the new-diagnosis population (see there), NOT the medication-restricted, prevalent population used for epic_pct_normal_vl_20wk_after_hcv_medication (crosstab 4, session 2857341). These two measures are NOT comparable: this one's denominator is newly diagnosed patients regardless of medication status (diluting the rate for those never medicated), while crosstab 4's denominator is the prevalent diagnosed population already restricted to medicated patients. Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_hepc_new_diagnosis * 100, flagged by epic_pct_normal_vl_20wk_after_meds_new_diagnosis_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. The most recent period (2026 partial year) is suppressed in every geography -- see epic_n_patients_hepc_new_diagnosis's note; a 20-week-later outcome measure is especially sensitive to this since the window itself has often not yet elapsed for a partial year.",
+              "statement": "In {location}, {value}% of patients newly diagnosed with hepatitis C in {time} had a normal HCV VL result more than 20 weeks after medication.",
+              "measure_type": "Percent",
+              "unit": "Percent",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 7],
+            "type": "float",
+            "missing": 5,
+            "mean": 8.844895,
+            "sd": 4.125028,
+            "min": 1.315789,
+            "max": 19.78
+          },
+          {
+            "name": "epic_pct_normal_vl_20wk_after_meds_new_diagnosis_suppressed_flag",
+            "duplicates": 43,
+            "info": {
+              "id": "epic_pct_normal_vl_20wk_after_meds_new_diagnosis_suppressed_flag",
+              "short_name": "Suppressed flag: normal VL >20wk after meds (new diagnoses)",
+              "long_name": "Suppression flag for the new-diagnosis 20-week normal-VL-after-meds rate",
+              "category": "chronic",
+              "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+              "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_hepc_new_diagnosis * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+              "statement": "In {location}, the new-diagnosis 20-week normal-VL-after-meds rate for {time} rests on a suppressed value ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 0,
+            "mean": 0.133333,
+            "sd": 0.343776,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis",
+            "duplicates": 6,
+            "info": {
+              "id": "epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis",
+              "short_name": "Normal HCV VL >20 weeks after abnormal test (new diagnoses)",
+              "long_name": "Percent of newly diagnosed hepatitis C patients with a normal HCV VL result more than 20 weeks after an abnormal test",
+              "category": "chronic",
+              "short_description": "Rate of a normal HCV viral load result, 20+ weeks after an abnormal test, among patients newly diagnosed that year.",
+              "long_description": "Taken directly from session 2857569's own \"Normal hep c test after abnormal test, 20 weeks (%)\" column (imputed via the standard 5 / population rule when blank), among epic_n_patients_hepc_new_diagnosis -- the new-diagnosis population (see there), NOT the abnormal-test-restricted, prevalent population used for epic_pct_normal_vl_20wk_after_abnormal_vl (crosstab 3, session 2857336). These two measures are NOT comparable: this one's denominator is newly diagnosed patients regardless of whether they ever had an abnormal test (diluting the rate), while crosstab 3's denominator is the prevalent diagnosed population already restricted to patients with an abnormal test. Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_hepc_new_diagnosis * 100, flagged by epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. The most recent period (2026 partial year) is suppressed in every geography -- see epic_n_patients_hepc_new_diagnosis's note; a 20-week-later outcome measure is especially sensitive to this since the window itself has often not yet elapsed for a partial year.",
+              "statement": "In {location}, {value}% of patients newly diagnosed with hepatitis C in {time} had a normal HCV VL result more than 20 weeks after an abnormal test.",
+              "measure_type": "Percent",
+              "unit": "Percent",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 7],
+            "type": "float",
+            "missing": 5,
+            "mean": 6.544395,
+            "sd": 2.172495,
+            "min": 1.315789,
+            "max": 11.25
+          },
+          {
+            "name": "epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis_suppressed_flag",
+            "duplicates": 43,
+            "info": {
+              "id": "epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis_suppressed_flag",
+              "short_name": "Suppressed flag: normal VL >20wk after abnormal test (new diagnoses)",
+              "long_name": "Suppression flag for the new-diagnosis 20-week normal-VL-after-abnormal-test rate",
+              "category": "chronic",
+              "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+              "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_hepc_new_diagnosis * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+              "statement": "In {location}, the new-diagnosis 20-week normal-VL-after-abnormal-test rate for {time} rests on a suppressed value ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 0,
+            "mean": 0.133333,
+            "sd": 0.343776,
+            "min": 0,
+            "max": 1
+          }
+        ]
+      },
+      "sha512": "41f4857391d18b7147d8f9fadbb9bb2c2408d49d29ad38d9b6b647e2bdd79d0d56e4031e8de38f1a5bf1ac1db3d1f431992dacb204c1df7867e44fbcec64e1cb"
+    },
+    {
+      "bytes": 10706,
+      "encoding": "windows-1252",
+      "md5": "c9813e6eb5f46e5994fc725e4dd4436d",
+      "format": "csv",
+      "name": "data_normal_vl.csv",
+      "filename": "data_normal_vl.csv.gz",
+      "versions": {},
+      "source": [],
+      "data_format": "wide",
+      "ids": [
+        {
+          "variable": "geography"
+        }
+      ],
+      "id_length": 2,
+      "time": "time",
+      "profile": "data-resource",
+      "created": "2026-09-21 08:55:59.681643",
+      "last_modified": "2026-09-21 12:37:27.788832",
+      "vintage": {},
+      "row_count": 280,
+      "entity_count": 4,
+      "schema": {
+        "fields": [
+          {
+            "name": "geography",
+            "duplicates": 276,
+            "info": [],
+            "time_range": [0, 9],
+            "type": "string",
+            "missing": 0,
+            "table": {
+              "01": 70,
+              "17": 70,
+              "22": 70,
+              "25": 70
+            }
+          },
+          {
+            "name": "time",
+            "duplicates": 270,
+            "info": [],
+            "time_range": [0, 9],
+            "type": "string",
+            "missing": 0,
+            "table": {
+              "2018-12-31": 28,
+              "2019-12-31": 28,
+              "2020-12-31": 28,
+              "2021-12-31": 28,
+              "2022-12-31": 28,
+              "2023-12-31": 28,
+              "2024-12-31": 28,
+              "2025-12-31": 28,
+              "2026-07-28": 28,
+              "2026-08-18": 28
+            }
+          },
+          {
+            "name": "age",
+            "duplicates": 273,
+            "info": [],
+            "time_range": [0, 9],
+            "type": "string",
+            "missing": 0,
+            "table": {
+              "<5 Years": 40,
+              "18-24 Years": 40,
+              "25-44 Years": 40,
+              "45-64 Years": 40,
+              "5-17 Years": 40,
+              "65+ Years": 40,
+              "Total": 40
+            }
+          },
+          {
+            "name": "epic_n_patients_after_abnormal_vl",
+            "duplicates": 117,
+            "info": {
+              "id": "epic_n_patients_after_abnormal_vl",
+              "short_name": "Patients with an abnormal HCV VL test",
+              "long_name": "Number of patients with a viral hepatitis C diagnosis whose qualifying HCV lab result was abnormal",
+              "category": "chronic",
+              "short_description": "Annual count of HCV-diagnosed patients with an abnormal HCV viral load test, in the 4 states with any exported data.",
+              "long_description": "Taken directly from a dedicated SlicerDicer session (2857336) restricted to the \"(All) Lab Components\" row bucket = \"Abonormal Hep C test\" [sic -- source typo, kept as the ingest match key]; the session's other bucket (\"Total\", all patients regardless of this lab filter) is dropped by the ingest, since it is not the population this measure is named for. This is the population/denominator for epic_pct_normal_vl_12wk_after_abnormal_vl and epic_pct_normal_vl_20wk_after_abnormal_vl. Only 4 states have any exported data for this session (Alabama, Illinois, Louisiana, Massachusetts) -- there is no national total, and this measure is reported ONLY in standard/data_normal_vl.csv.gz, not in the main standard/data.csv.gz. Counts of 10 or fewer are suppressed by Epic Cosmos and imputed as 5, flagged by epic_n_patients_after_abnormal_vl_suppressed_flag. A count for a partial trailing period (time not ending December 31) covers only part of the year and is not comparable to a full year.",
+              "statement": "In {location}, {value} HCV-diagnosed patients had an abnormal HCV viral load test in {time}.",
+              "measure_type": "Count",
+              "unit": "Patients",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "integer",
+            "missing": 28,
+            "mean": 677.988095,
+            "sd": 1042.423095,
+            "min": 5,
+            "max": 5139
+          },
+          {
+            "name": "epic_n_patients_after_abnormal_vl_suppressed_flag",
+            "duplicates": 277,
+            "info": {
+              "id": "epic_n_patients_after_abnormal_vl_suppressed_flag",
+              "short_name": "Suppressed flag: patients with an abnormal HCV VL test",
+              "long_name": "Suppression flag for the number of patients with an abnormal HCV VL test",
+              "category": "chronic",
+              "short_description": "Indicates whether this population count was suppressed and imputed.",
+              "long_description": "1 when Epic Cosmos suppressed the cell (a count of 10 or fewer) and the value was imputed as 5; 0 otherwise. Computed before imputation. Where this flag is 1, both of this population's percent measures are deliberately left missing rather than asserting a meaningless 5 / 5 = 100%.",
+              "statement": "In {location}, the abnormal-HCV-VL patient count for {time} was suppressed and imputed ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "integer",
+            "missing": 28,
+            "mean": 0.297619,
+            "sd": 0.458121,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_pct_normal_vl_12wk_after_abnormal_vl",
+            "duplicates": 112,
+            "info": {
+              "id": "epic_pct_normal_vl_12wk_after_abnormal_vl",
+              "short_name": "Normal HCV VL >12 weeks after abnormal test",
+              "long_name": "Percent of patients with an abnormal HCV VL test who had a normal HCV VL result more than 12 weeks later",
+              "category": "chronic",
+              "short_description": "Rate of a subsequent normal HCV viral load result, 12+ weeks after an abnormal one, among the 4 states with any exported data.",
+              "long_description": "Taken directly from the source session's own \"Normal HCV VL >12 weeks (%)\" column (imputed via the standard 5 / population rule when blank -- see below), among patients in epic_n_patients_after_abnormal_vl. Not computed by this repo from two independently reported counts; the source does not report the underlying numerator count directly. Only 4 states have any exported data (Alabama, Illinois, Louisiana, Massachusetts); reported only in standard/data_normal_vl.csv.gz. Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_after_abnormal_vl * 100, flagged by epic_pct_normal_vl_12wk_after_abnormal_vl_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. A value for a partial trailing period is not comparable to a full year.",
+              "statement": "In {location}, {value}% of patients with an abnormal HCV VL test in {time} had a normal result more than 12 weeks later.",
+              "measure_type": "Percent",
+              "unit": "Percent",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "float",
+            "missing": 103,
+            "mean": 41.425575,
+            "sd": 17.221736,
+            "min": 3.571429,
+            "max": 85.71
+          },
+          {
+            "name": "epic_pct_normal_vl_12wk_after_abnormal_vl_suppressed_flag",
+            "duplicates": 277,
+            "info": {
+              "id": "epic_pct_normal_vl_12wk_after_abnormal_vl_suppressed_flag",
+              "short_name": "Suppressed flag: normal VL >12 weeks after abnormal test",
+              "long_name": "Suppression flag for the 12-week normal-VL-after-abnormal-test rate",
+              "category": "chronic",
+              "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+              "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the underlying population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_after_abnormal_vl * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+              "statement": "In {location}, the 12-week normal-VL-after-abnormal-test rate for {time} rests on a suppressed value ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "integer",
+            "missing": 28,
+            "mean": 0.369048,
+            "sd": 0.483507,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_pct_normal_vl_20wk_after_abnormal_vl",
+            "duplicates": 110,
+            "info": {
+              "id": "epic_pct_normal_vl_20wk_after_abnormal_vl",
+              "short_name": "Normal HCV VL >20 weeks after abnormal test",
+              "long_name": "Percent of patients with an abnormal HCV VL test who had a normal HCV VL result more than 20 weeks later",
+              "category": "chronic",
+              "short_description": "Rate of a subsequent normal HCV viral load result, 20+ weeks after an abnormal one, among the 4 states with any exported data.",
+              "long_description": "Same source, population, and imputation rules as epic_pct_normal_vl_12wk_after_abnormal_vl, taken from the source session's \"Normal HCV VL >20 weeks (%)\" column instead. Reported only in standard/data_normal_vl.csv.gz.",
+              "statement": "In {location}, {value}% of patients with an abnormal HCV VL test in {time} had a normal result more than 20 weeks later.",
+              "measure_type": "Percent",
+              "unit": "Percent",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "float",
+            "missing": 103,
+            "mean": 38.990397,
+            "sd": 17.378027,
+            "min": 1.683502,
+            "max": 80
+          },
+          {
+            "name": "epic_pct_normal_vl_20wk_after_abnormal_vl_suppressed_flag",
+            "duplicates": 277,
+            "info": {
+              "id": "epic_pct_normal_vl_20wk_after_abnormal_vl_suppressed_flag",
+              "short_name": "Suppressed flag: normal VL >20 weeks after abnormal test",
+              "long_name": "Suppression flag for the 20-week normal-VL-after-abnormal-test rate",
+              "category": "chronic",
+              "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+              "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the underlying population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_after_abnormal_vl * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+              "statement": "In {location}, the 20-week normal-VL-after-abnormal-test rate for {time} rests on a suppressed value ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "integer",
+            "missing": 28,
+            "mean": 0.373016,
+            "sd": 0.484569,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_n_patients_after_hcv_medication",
+            "duplicates": 120,
+            "info": {
+              "id": "epic_n_patients_after_hcv_medication",
+              "short_name": "Patients who received an HCV medication",
+              "long_name": "Number of patients with a viral hepatitis C diagnosis who received an HCV medication",
+              "category": "chronic",
+              "short_description": "Annual count of HCV-diagnosed patients who received an HCV medication, in the 4 states with any exported data.",
+              "long_description": "Taken directly from a dedicated SlicerDicer session (2857341) restricted to the \"All Medications\" row bucket = \"HCV medication\"; the session's other bucket (\"Total\", all patients regardless of medication) is dropped by the ingest, since it is not the population this measure is named for. This is the population/denominator for epic_pct_normal_vl_12wk_after_hcv_medication and epic_pct_normal_vl_20wk_after_hcv_medication. This is a DIFFERENT session, and likely a different definition of \"received an HCV medication\", from the one behind epic_n_patients_hepc_medication_pop / epic_pct_hepc_medication -- do not treat these as the same population. Only 4 states have any exported data (Alabama, Illinois, Louisiana, Massachusetts); reported only in standard/data_normal_vl.csv.gz. Counts of 10 or fewer are suppressed and imputed as 5, flagged by epic_n_patients_after_hcv_medication_suppressed_flag. A count for a partial trailing period is not comparable to a full year.",
+              "statement": "In {location}, {value} HCV-diagnosed patients received an HCV medication in {time}.",
+              "measure_type": "Count",
+              "unit": "Patients",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "integer",
+            "missing": 28,
+            "mean": 566.186508,
+            "sd": 830.275211,
+            "min": 5,
+            "max": 3402
+          },
+          {
+            "name": "epic_n_patients_after_hcv_medication_suppressed_flag",
+            "duplicates": 277,
+            "info": {
+              "id": "epic_n_patients_after_hcv_medication_suppressed_flag",
+              "short_name": "Suppressed flag: patients who received an HCV medication",
+              "long_name": "Suppression flag for the number of patients who received an HCV medication",
+              "category": "chronic",
+              "short_description": "Indicates whether this population count was suppressed and imputed.",
+              "long_description": "1 when Epic Cosmos suppressed the cell (a count of 10 or fewer) and the value was imputed as 5; 0 otherwise. Computed before imputation. Where this flag is 1, both of this population's percent measures are deliberately left missing rather than asserting a meaningless 5 / 5 = 100%.",
+              "statement": "In {location}, the HCV-medication patient count for {time} was suppressed and imputed ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "integer",
+            "missing": 28,
+            "mean": 0.293651,
+            "sd": 0.45634,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_pct_normal_vl_12wk_after_hcv_medication",
+            "duplicates": 113,
+            "info": {
+              "id": "epic_pct_normal_vl_12wk_after_hcv_medication",
+              "short_name": "Normal HCV VL >12 weeks after medication",
+              "long_name": "Percent of patients who received an HCV medication who had a normal HCV VL result more than 12 weeks later",
+              "category": "chronic",
+              "short_description": "Rate of a normal HCV viral load result, 12+ weeks after receiving an HCV medication, among the 4 states with any exported data.",
+              "long_description": "Taken directly from the source session's own \"Normal HCV VL >12 weeks (%)\" column (imputed via the standard 5 / population rule when blank -- see below), among patients in epic_n_patients_after_hcv_medication. Not computed by this repo from two independently reported counts; the source does not report the underlying numerator count directly. Only 4 states have any exported data (Alabama, Illinois, Louisiana, Massachusetts); reported only in standard/data_normal_vl.csv.gz. Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_after_hcv_medication * 100, flagged by epic_pct_normal_vl_12wk_after_hcv_medication_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. A value for a partial trailing period is not comparable to a full year.",
+              "statement": "In {location}, {value}% of patients who received an HCV medication in {time} had a normal HCV VL result more than 12 weeks later.",
+              "measure_type": "Percent",
+              "unit": "Percent",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "float",
+            "missing": 102,
+            "mean": 54.476102,
+            "sd": 15.167902,
+            "min": 20.833333,
+            "max": 85.71
+          },
+          {
+            "name": "epic_pct_normal_vl_12wk_after_hcv_medication_suppressed_flag",
+            "duplicates": 277,
+            "info": {
+              "id": "epic_pct_normal_vl_12wk_after_hcv_medication_suppressed_flag",
+              "short_name": "Suppressed flag: normal VL >12 weeks after medication",
+              "long_name": "Suppression flag for the 12-week normal-VL-after-medication rate",
+              "category": "chronic",
+              "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+              "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the underlying population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_after_hcv_medication * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+              "statement": "In {location}, the 12-week normal-VL-after-medication rate for {time} rests on a suppressed value ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "integer",
+            "missing": 28,
+            "mean": 0.349206,
+            "sd": 0.477668,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_pct_normal_vl_20wk_after_hcv_medication",
+            "duplicates": 114,
+            "info": {
+              "id": "epic_pct_normal_vl_20wk_after_hcv_medication",
+              "short_name": "Normal HCV VL >20 weeks after medication",
+              "long_name": "Percent of patients who received an HCV medication who had a normal HCV VL result more than 20 weeks later",
+              "category": "chronic",
+              "short_description": "Rate of a normal HCV viral load result, 20+ weeks after receiving an HCV medication, among the 4 states with any exported data.",
+              "long_description": "Same source, population, and imputation rules as epic_pct_normal_vl_12wk_after_hcv_medication, taken from the source session's \"Normal HCV VL >20 weeks (%)\" column instead. Reported only in standard/data_normal_vl.csv.gz.",
+              "statement": "In {location}, {value}% of patients who received an HCV medication in {time} had a normal HCV VL result more than 20 weeks later.",
+              "measure_type": "Percent",
+              "unit": "Percent",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "float",
+            "missing": 102,
+            "mean": 49.655689,
+            "sd": 15.201829,
+            "min": 18.518519,
+            "max": 80
+          },
+          {
+            "name": "epic_pct_normal_vl_20wk_after_hcv_medication_suppressed_flag",
+            "duplicates": 277,
+            "info": {
+              "id": "epic_pct_normal_vl_20wk_after_hcv_medication_suppressed_flag",
+              "short_name": "Suppressed flag: normal VL >20 weeks after medication",
+              "long_name": "Suppression flag for the 20-week normal-VL-after-medication rate",
+              "category": "chronic",
+              "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+              "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the underlying population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_after_hcv_medication * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+              "statement": "In {location}, the 20-week normal-VL-after-medication rate for {time} rests on a suppressed value ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "integer",
+            "missing": 28,
+            "mean": 0.369048,
+            "sd": 0.483507,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_n_patients_hepc",
+            "duplicates": 69,
+            "info": {
+              "id": "epic_n_patients_hepc",
+              "short_name": "Hepatitis C patients",
+              "long_name": "Number of patients with a viral hepatitis C diagnosis",
+              "category": "chronic",
+              "short_description": "Annual count of patients with a viral hepatitis C diagnosis.",
+              "long_description": "Count of distinct Epic Cosmos patients with at least one encounter in the calendar year who carry a viral hepatitis C diagnosis, by state of residence and age at encounter. The population base is all patients with any encounter and Country of Care = United States of America; no diagnosis filter is applied to the population, and the diagnosis restriction is applied as a row-level bucket so that the all-patients denominator (epic_n_patients) is reported alongside it. The diagnosis bucket was defined in SlicerDicer as ICD-10-CM B18.2 (chronic viral hepatitis C), B19.2 (unspecified viral hepatitis C), B17.1 (acute hepatitis C), and B17.2 (acute hepatitis E) as of the predecessor session; this has not been independently re-verified against the current session (2855468). B17.2 is not a hepatitis C code, so these counts likely contain a small number of acute hepatitis E patients; the bucket definition should be corrected and the session re-exported. Counts of 10 or fewer are suppressed by Epic Cosmos and imputed as 5 here, flagged by epic_n_patients_hepc_suppressed_flag. The age value \"Total\" is the source's own overall-age total and includes patients whose age at encounter is unknown, so it exceeds the sum of the six age buckets by 1 to 2.5 percent; use the \"Total\" row for overall figures rather than summing the buckets. The most recent period may be a partial year, identifiable because its time value is not December 31 (currently 2026-08-18, covering January 1 to August 18 only). Counts for a partial period are NOT comparable to a full year. Use epic_pct_hepc for trend comparisons that include a partial period. As of the 2026-09-10 update (session 2855468), this series now covers 2018 onward with the age \"Total\" column throughout -- the earlier 2018-2019 NA gap from the predecessor session (2850163) is resolved. The underlying export also carries two additional measure columns per age bucket (\"HepC diagnosis (%)\" and a medication-within-6-months percentage) that are deliberately NOT captured here -- see ingest.R's CAVEAT comment for why.",
+              "statement": "In {location}, {value} patients had a viral hepatitis C diagnosis in {time}.",
+              "measure_type": "Count",
+              "unit": "Patients",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "integer",
+            "missing": 28,
+            "mean": 3578.253968,
+            "sd": 5226.997778,
+            "min": 5,
+            "max": 22789
+          },
+          {
+            "name": "epic_n_patients_hepc_suppressed_flag",
+            "duplicates": 277,
+            "info": {
+              "id": "epic_n_patients_hepc_suppressed_flag",
+              "short_name": "Suppressed flag: hepatitis C patients",
+              "long_name": "Suppression flag for the number of patients with a viral hepatitis C diagnosis",
+              "category": "chronic",
+              "short_description": "Indicates whether the hepatitis C patient count was suppressed and imputed.",
+              "long_description": "1 when Epic Cosmos suppressed the cell (a count of 10 or fewer, reported as \"10 or fewer\") and the value was imputed as 5; 0 otherwise. The flag is computed before imputation, so it records what the source withheld rather than what the ingest wrote. A flag of 1 always accompanies the imputed value 5, and no source-reported value carries a flag of 1.",
+              "statement": "In {location}, the hepatitis C patient count for {time} was suppressed and imputed ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "integer",
+            "missing": 28,
+            "mean": 0.071429,
+            "sd": 0.258052,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_n_patients",
+            "duplicates": 27,
+            "info": {
+              "id": "epic_n_patients",
+              "short_name": "All patients",
+              "long_name": "Number of patients with any encounter (denominator)",
+              "category": "chronic",
+              "short_description": "Annual count of all patients with any encounter, used as the hepatitis C denominator.",
+              "long_description": "Count of distinct Epic Cosmos patients with at least one encounter in the calendar year, regardless of diagnosis, by state of residence and age at encounter. Taken from the per-state \"Total\" row of the diagnosis dimension in the SlicerDicer export, which includes all data under that state bucket. This is the denominator for epic_pct_hepc. Because it counts the full Epic Cosmos patient population rather than a census population, it reflects Epic's market share in each state and is not a general population count; state-to-state comparisons of the count itself are therefore not meaningful, though the derived percentage is comparable. The age value \"Total\" is the source's own overall-age total and includes patients of unknown age, so it exceeds the sum of the six buckets. Like the numerator, a count for a partial trailing period (time not ending December 31) covers only part of the year and is not comparable to a full year. Counts of 10 or fewer would be suppressed and imputed as 5; no denominator cell was suppressed in the current export.",
+              "statement": "In {location}, {value} patients had at least one encounter in {time}.",
+              "measure_type": "Count",
+              "unit": "Patients",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "integer",
+            "missing": 28,
+            "mean": 885670.309524,
+            "sd": 1218962.969958,
+            "min": 13543,
+            "max": 6197731
+          },
+          {
+            "name": "epic_n_patients_suppressed_flag",
+            "duplicates": 278,
+            "info": {
+              "id": "epic_n_patients_suppressed_flag",
+              "short_name": "Suppressed flag: all patients",
+              "long_name": "Suppression flag for the number of patients with any encounter",
+              "category": "chronic",
+              "short_description": "Indicates whether the all-patients denominator was suppressed and imputed.",
+              "long_description": "1 when Epic Cosmos suppressed the denominator cell (a count of 10 or fewer) and the value was imputed as 5; 0 otherwise. Computed before imputation. Where this flag is 1, epic_pct_hepc is deliberately left missing rather than asserting the meaningless 5 / 5 = 100% that the imputed denominator would produce.",
+              "statement": "In {location}, the all-patients denominator for {time} was suppressed and imputed ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "integer",
+            "missing": 28,
+            "mean": 0,
+            "sd": 0,
+            "min": 0,
+            "max": 0
+          },
+          {
+            "name": "epic_pct_hepc",
+            "duplicates": 27,
+            "info": {
+              "id": "epic_pct_hepc",
+              "short_name": "Percent with hepatitis C",
+              "long_name": "Percent of patients with a viral hepatitis C diagnosis",
+              "category": "chronic",
+              "short_description": "Percent of patients with any encounter who have a viral hepatitis C diagnosis.",
+              "long_description": "Derived as epic_n_patients_hepc / epic_n_patients * 100 within each geography, year, and age group. Because both numerator and denominator come from the same Epic Cosmos patient population, this percentage is comparable across states and years in a way the raw counts are not. It measures diagnosed hepatitis C among patients who sought care, not population prevalence, and so is sensitive to testing and care-seeking patterns as well as to Epic's coverage in each state. Where the numerator was suppressed (10 or fewer), the imputed numerator of 5 carries through, which is equivalent to the 5 / denominator * 100 imputation rule; those cells are flagged by epic_pct_hepc_suppressed_flag. Where the denominator was suppressed, the value is left missing instead of computing 5 / 5 = 100%. Because numerator and denominator cover the same window, this measure is far more robust to a partial trailing period than the raw counts are, though it is still not strictly comparable to a full year, since a shorter observation window gives each patient fewer opportunities for a diagnosis to be recorded. Nationally (geography \"00\", age \"Total\") the rate has declined steadily: 0.45% (2018), 0.45% (2019), 0.42% (2020), 0.39% (2021), 0.38% (2022), 0.37% (2023), 0.36% (2024), 0.34% (2025), with the 2026-08-18 partial period at 0.32%. The underlying diagnosis bucket also includes ICD-10-CM B17.2 (acute hepatitis E) in error - see epic_n_patients_hepc.",
+              "statement": "In {location}, {value}% of patients with an encounter in {time} had a viral hepatitis C diagnosis.",
+              "measure_type": "Percent",
+              "unit": "Percent",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "float",
+            "missing": 28,
+            "mean": 0.320417,
+            "sd": 0.326129,
+            "min": 0.004726,
+            "max": 1.617291
+          },
+          {
+            "name": "epic_pct_hepc_suppressed_flag",
+            "duplicates": 277,
+            "info": {
+              "id": "epic_pct_hepc_suppressed_flag",
+              "short_name": "Suppressed flag: percent with hepatitis C",
+              "long_name": "Suppression flag for the percent of patients with a viral hepatitis C diagnosis",
+              "category": "chronic",
+              "short_description": "Indicates whether the hepatitis C percentage rests on a suppressed and imputed value.",
+              "long_description": "1 when either the numerator or the denominator of epic_pct_hepc was suppressed by Epic Cosmos; 0 otherwise. Computed before imputation. When only the numerator was suppressed, the percentage is reported using the imputed numerator of 5, matching the 5 / denominator * 100 rule. When the denominator was suppressed, epic_pct_hepc is left missing while this flag remains 1.",
+              "statement": "In {location}, the hepatitis C percentage for {time} rests on a suppressed value ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 9],
+            "type": "integer",
+            "missing": 28,
+            "mean": 0.071429,
+            "sd": 0.258052,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_n_patients_hepc_medication",
+            "duplicates": 122,
+            "info": {
+              "id": "epic_n_patients_hepc_medication",
+              "short_name": "HCV medication patients meeting the measure",
+              "long_name": "Number of HCV-diagnosed patients who received an HCV medication within 6 months of diagnosis (derived)",
+              "category": "chronic",
+              "short_description": "Annual count of HCV-diagnosed patients who received an HCV medication within 6 months of diagnosis.",
+              "long_description": "DERIVED, not directly reported by the source: computed as round(epic_n_patients_hepc_medication_pop * epic_pct_hepc_medication / 100). The source export gives this population's size (epic_n_patients_hepc_medication_pop) and its own rate, but not a numerator count, so this column reconstructs it from those two. The underlying population is ALL patients meeting the same viral hepatitis C diagnosis criteria as epic_n_patients_hepc (confirmed to match epic_n_patients_hepc cell-for-cell as of the 2026-09-10 update) -- NOT a smaller already-medicated subset; see epic_n_patients_hepc_medication_pop for the definition history. The diagnosis criteria previously included ICD-10-CM B17.2 (acute hepatitis E), which is not a hepatitis C code (see epic_n_patients_hepc's long_description); this has not been re-verified against the current session. This measure comes from a separate SlicerDicer session (2855386; predecessor 2850012) from epic_n_patients_hepc (2855468) with an independently set date range. Suppressed cells (source population of 10 or fewer, or a blank rate even when the population itself was shown) are imputed to 5, flagged by epic_n_patients_hepc_medication_suppressed_flag. The age value \"Total\" is the source's own overall-age total. The most recent period may be a partial year, identifiable because its time value is not December 31 (currently 2026-07-28, narrower than epic_n_patients_hepc's own 2026-08-18 partial period). Use epic_pct_hepc_medication for trend comparisons that include a partial period.",
+              "statement": "In {location}, {value} HCV-diagnosed patients received an HCV medication within 6 months of diagnosis in {time}.",
+              "measure_type": "Count",
+              "unit": "Patients",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 28,
+            "mean": 608.333333,
+            "sd": 879.026735,
+            "min": 5,
+            "max": 3618
+          },
+          {
+            "name": "epic_n_patients_hepc_medication_suppressed_flag",
+            "duplicates": 277,
+            "info": {
+              "id": "epic_n_patients_hepc_medication_suppressed_flag",
+              "short_name": "Suppressed flag: HCV medication patients meeting the measure",
+              "long_name": "Suppression flag for the derived count of HCV medication patients meeting the measure",
+              "category": "chronic",
+              "short_description": "Indicates whether the underlying rate used to derive this count was suppressed and imputed.",
+              "long_description": "1 when Epic Cosmos suppressed the underlying cell (the population itself was 10 or fewer, or the population was shown but its rate was blank because the count meeting the measure was small enough to withhold on its own) and this derived value was imputed as 5; 0 otherwise. The flag is computed before imputation, so it records what the source withheld rather than what the ingest wrote. A flag of 1 always accompanies the imputed value 5, and no source-reported value carries a flag of 1. This flag is identical to epic_pct_hepc_medication_suppressed_flag, since both are derived from the same underlying rate.",
+              "statement": "In {location}, the HCV medication measure count for {time} was suppressed and imputed ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 28,
+            "mean": 0.309524,
+            "sd": 0.463217,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_n_patients_hepc_medication_pop",
+            "duplicates": 71,
+            "info": {
+              "id": "epic_n_patients_hepc_medication_pop",
+              "short_name": "HCV-diagnosed patients (medication crosstab)",
+              "long_name": "Number of patients with a viral hepatitis C diagnosis (denominator for epic_pct_hepc_medication)",
+              "category": "chronic",
+              "short_description": "Annual count of HCV-diagnosed patients, used as the epic_pct_hepc_medication denominator.",
+              "long_description": "Taken directly from the medication crosstab's \"Number of Patients\" column, by state of residence and age at encounter. As of the 2026-09-10 update (session 2855386), this population is applied as a session-level filter (viral hepatitis C diagnosis) rather than as a row-level bucket, and was CONFIRMED to match epic_n_patients_hepc cell-for-cell on every (geography, time, age) checked -- e.g. Texas / 2018 / 18-24 Years = 229 in both. This is a substantive change from the predecessor session (2850012), where this column instead reported a smaller, already-medicated subgroup (\"has HCV medication\" bucket); do not assume that older definition still applies. The diagnosis criteria previously included ICD-10-CM B17.2 (acute hepatitis E), which is not a hepatitis C code (see epic_n_patients_hepc's long_description); this has not been re-verified against the current session. Counts of 10 or fewer are suppressed and imputed as 5, flagged by epic_n_patients_hepc_medication_pop_suppressed_flag. A count for a partial trailing period (time not ending December 31) covers only part of the year and is not comparable to a full year.",
+              "statement": "In {location}, {value} patients had a viral hepatitis C diagnosis in {time} (medication crosstab).",
+              "measure_type": "Count",
+              "unit": "Patients",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 28,
+            "mean": 3570.59127,
+            "sd": 5219.324027,
+            "min": 5,
+            "max": 22789
+          },
+          {
+            "name": "epic_n_patients_hepc_medication_pop_suppressed_flag",
+            "duplicates": 277,
+            "info": {
+              "id": "epic_n_patients_hepc_medication_pop_suppressed_flag",
+              "short_name": "Suppressed flag: patients with an HCV medication on record",
+              "long_name": "Suppression flag for the HCV-medication population denominator",
+              "category": "chronic",
+              "short_description": "Indicates whether the population denominator was suppressed and imputed.",
+              "long_description": "1 when Epic Cosmos suppressed the denominator cell (a count of 10 or fewer) and the value was imputed as 5; 0 otherwise. Computed before imputation. Where this flag is 1, epic_pct_hepc_medication is deliberately left missing rather than asserting the meaningless 5 / 5 = 100% that the imputed denominator would produce.",
+              "statement": "In {location}, the HCV-medication population denominator for {time} was suppressed and imputed ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 28,
+            "mean": 0.071429,
+            "sd": 0.258052,
+            "min": 0,
+            "max": 1
+          },
+          {
+            "name": "epic_pct_hepc_medication",
+            "duplicates": 75,
+            "info": {
+              "id": "epic_pct_hepc_medication",
+              "short_name": "HCV medication rate among diagnosed",
+              "long_name": "Percent of HCV-diagnosed patients who received an HCV medication within 6 months of diagnosis",
+              "category": "chronic",
+              "short_description": "Rate of medication initiation within 6 months among all patients with a viral hepatitis C diagnosis.",
+              "long_description": "Taken directly from the medication crosstab's own rate column (imputed via the standard 5 / denominator rule when blank -- see below), NOT computed by this repo from two independently reported counts, since the source does not report the underlying numerator count directly (see epic_n_patients_hepc_medication, which instead derives a count FROM this percent). The denominator (epic_n_patients_hepc_medication_pop) is ALL patients meeting the same viral hepatitis C diagnosis criteria as epic_n_patients_hepc (confirmed to match it cell-for-cell as of the 2026-09-10 update) -- NOT a smaller already-medicated subset. The measure is: percent of these patients with 1 slice by any of a named set of HCV antiviral medications (ledipasvir/sofosbuvir, sofosbuvir, elbasvir/grazoprevir, sofosbuvir/velpatasvir/voxilaprevir, glecaprevir/pibrentasvir, or sofosbuvir/velpatasvir) within 6 months of their diagnosis -- i.e. a treatment-initiation rate, as stated in the SlicerDicer session title. This is a SUBSTANTIVE DEFINITION CHANGE from the predecessor session (2850012): that session's rate (nationally 77-84 percent) was computed among an already-medicated subgroup and its exact clinical meaning was never confirmed; this session's rate is computed among all diagnosed patients and is explicitly a within-6-months treatment-initiation rate, so it is much lower in magnitude (nationally 14.5-17.5 percent, 2018-2025, trending upward) and NOT comparable to the old values -- do not chart them as a continuous series across this update. Where the underlying count was suppressed (10 or fewer, or a rate withheld even though the population was shown), the imputed rate is 5 / denominator * 100 and the cell is flagged by epic_pct_hepc_medication_suppressed_flag. Where the denominator itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. The most recent period may be a partial year (currently 2026-07-28, narrower than epic_n_patients_hepc's own 2026-08-18 partial); use this percentage rather than the derived count for trend comparisons spanning the partial period, for the same reason described under epic_pct_hepc.",
+              "statement": "In {location}, {value}% of HCV-diagnosed patients in {time} received an HCV medication within 6 months of diagnosis.",
+              "measure_type": "Percent",
+              "unit": "Percent",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "float",
+            "missing": 46,
+            "mean": 16.059405,
+            "sd": 7.048542,
+            "min": 2.252252,
+            "max": 45.454545
+          },
+          {
+            "name": "epic_pct_hepc_medication_suppressed_flag",
+            "duplicates": 277,
+            "info": {
+              "id": "epic_pct_hepc_medication_suppressed_flag",
+              "short_name": "Suppressed flag: HCV medication measure rate",
+              "long_name": "Suppression flag for the hcv medication measure rate",
+              "category": "chronic",
+              "short_description": "Indicates whether the measure rate rests on a suppressed and imputed value.",
+              "long_description": "1 when the source's own rate was blank -- either because the population denominator itself was 10 or fewer, or because the count meeting the measure was small enough to withhold on its own even though the population was shown; 0 otherwise. Computed before imputation. When only the count was suppressed (population shown, rate blank), the rate is imputed as 5 / denominator * 100. When the denominator itself was suppressed, epic_pct_hepc_medication is left missing while this flag remains 1. This flag is identical to epic_n_patients_hepc_medication_suppressed_flag, since both are derived from the same underlying rate.",
+              "statement": "In {location}, the hcv medication measure rate for {time} rests on a suppressed value ({value}).",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Year",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
+            "time_range": [0, 8],
+            "type": "integer",
+            "missing": 28,
+            "mean": 0.309524,
+            "sd": 0.463217,
+            "min": 0,
+            "max": 1
+          }
+        ]
+      },
+      "sha512": "31da76d761c39b8a82231a7cb6f265db90cbe59c6fd26752ece4ded31fd9acdb39ec3f0804cf83ec82de9d3aed6e95e5c90da30a79966ac52e4202292c6fc6a0"
     }
   ],
   "measure_info": {
@@ -690,6 +1853,438 @@
       ],
       "citations": []
     },
+    "epic_n_patients_after_abnormal_vl": {
+      "id": "epic_n_patients_after_abnormal_vl",
+      "short_name": "Patients with an abnormal HCV VL test",
+      "long_name": "Number of patients with a viral hepatitis C diagnosis whose qualifying HCV lab result was abnormal",
+      "category": "chronic",
+      "short_description": "Annual count of HCV-diagnosed patients with an abnormal HCV viral load test, in the 4 states with any exported data.",
+      "long_description": "Taken directly from a dedicated SlicerDicer session (2857336) restricted to the \"(All) Lab Components\" row bucket = \"Abonormal Hep C test\" [sic -- source typo, kept as the ingest match key]; the session's other bucket (\"Total\", all patients regardless of this lab filter) is dropped by the ingest, since it is not the population this measure is named for. This is the population/denominator for epic_pct_normal_vl_12wk_after_abnormal_vl and epic_pct_normal_vl_20wk_after_abnormal_vl. Only 4 states have any exported data for this session (Alabama, Illinois, Louisiana, Massachusetts) -- there is no national total, and this measure is reported ONLY in standard/data_normal_vl.csv.gz, not in the main standard/data.csv.gz. Counts of 10 or fewer are suppressed by Epic Cosmos and imputed as 5, flagged by epic_n_patients_after_abnormal_vl_suppressed_flag. A count for a partial trailing period (time not ending December 31) covers only part of the year and is not comparable to a full year.",
+      "statement": "In {location}, {value} HCV-diagnosed patients had an abnormal HCV viral load test in {time}.",
+      "measure_type": "Count",
+      "unit": "Patients",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_n_patients_after_abnormal_vl_suppressed_flag": {
+      "id": "epic_n_patients_after_abnormal_vl_suppressed_flag",
+      "short_name": "Suppressed flag: patients with an abnormal HCV VL test",
+      "long_name": "Suppression flag for the number of patients with an abnormal HCV VL test",
+      "category": "chronic",
+      "short_description": "Indicates whether this population count was suppressed and imputed.",
+      "long_description": "1 when Epic Cosmos suppressed the cell (a count of 10 or fewer) and the value was imputed as 5; 0 otherwise. Computed before imputation. Where this flag is 1, both of this population's percent measures are deliberately left missing rather than asserting a meaningless 5 / 5 = 100%.",
+      "statement": "In {location}, the abnormal-HCV-VL patient count for {time} was suppressed and imputed ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_normal_vl_12wk_after_abnormal_vl": {
+      "id": "epic_pct_normal_vl_12wk_after_abnormal_vl",
+      "short_name": "Normal HCV VL >12 weeks after abnormal test",
+      "long_name": "Percent of patients with an abnormal HCV VL test who had a normal HCV VL result more than 12 weeks later",
+      "category": "chronic",
+      "short_description": "Rate of a subsequent normal HCV viral load result, 12+ weeks after an abnormal one, among the 4 states with any exported data.",
+      "long_description": "Taken directly from the source session's own \"Normal HCV VL >12 weeks (%)\" column (imputed via the standard 5 / population rule when blank -- see below), among patients in epic_n_patients_after_abnormal_vl. Not computed by this repo from two independently reported counts; the source does not report the underlying numerator count directly. Only 4 states have any exported data (Alabama, Illinois, Louisiana, Massachusetts); reported only in standard/data_normal_vl.csv.gz. Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_after_abnormal_vl * 100, flagged by epic_pct_normal_vl_12wk_after_abnormal_vl_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. A value for a partial trailing period is not comparable to a full year.",
+      "statement": "In {location}, {value}% of patients with an abnormal HCV VL test in {time} had a normal result more than 12 weeks later.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_normal_vl_12wk_after_abnormal_vl_suppressed_flag": {
+      "id": "epic_pct_normal_vl_12wk_after_abnormal_vl_suppressed_flag",
+      "short_name": "Suppressed flag: normal VL >12 weeks after abnormal test",
+      "long_name": "Suppression flag for the 12-week normal-VL-after-abnormal-test rate",
+      "category": "chronic",
+      "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+      "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the underlying population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_after_abnormal_vl * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+      "statement": "In {location}, the 12-week normal-VL-after-abnormal-test rate for {time} rests on a suppressed value ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_normal_vl_20wk_after_abnormal_vl": {
+      "id": "epic_pct_normal_vl_20wk_after_abnormal_vl",
+      "short_name": "Normal HCV VL >20 weeks after abnormal test",
+      "long_name": "Percent of patients with an abnormal HCV VL test who had a normal HCV VL result more than 20 weeks later",
+      "category": "chronic",
+      "short_description": "Rate of a subsequent normal HCV viral load result, 20+ weeks after an abnormal one, among the 4 states with any exported data.",
+      "long_description": "Same source, population, and imputation rules as epic_pct_normal_vl_12wk_after_abnormal_vl, taken from the source session's \"Normal HCV VL >20 weeks (%)\" column instead. Reported only in standard/data_normal_vl.csv.gz.",
+      "statement": "In {location}, {value}% of patients with an abnormal HCV VL test in {time} had a normal result more than 20 weeks later.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_normal_vl_20wk_after_abnormal_vl_suppressed_flag": {
+      "id": "epic_pct_normal_vl_20wk_after_abnormal_vl_suppressed_flag",
+      "short_name": "Suppressed flag: normal VL >20 weeks after abnormal test",
+      "long_name": "Suppression flag for the 20-week normal-VL-after-abnormal-test rate",
+      "category": "chronic",
+      "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+      "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the underlying population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_after_abnormal_vl * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+      "statement": "In {location}, the 20-week normal-VL-after-abnormal-test rate for {time} rests on a suppressed value ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_n_patients_after_hcv_medication": {
+      "id": "epic_n_patients_after_hcv_medication",
+      "short_name": "Patients who received an HCV medication",
+      "long_name": "Number of patients with a viral hepatitis C diagnosis who received an HCV medication",
+      "category": "chronic",
+      "short_description": "Annual count of HCV-diagnosed patients who received an HCV medication, in the 4 states with any exported data.",
+      "long_description": "Taken directly from a dedicated SlicerDicer session (2857341) restricted to the \"All Medications\" row bucket = \"HCV medication\"; the session's other bucket (\"Total\", all patients regardless of medication) is dropped by the ingest, since it is not the population this measure is named for. This is the population/denominator for epic_pct_normal_vl_12wk_after_hcv_medication and epic_pct_normal_vl_20wk_after_hcv_medication. This is a DIFFERENT session, and likely a different definition of \"received an HCV medication\", from the one behind epic_n_patients_hepc_medication_pop / epic_pct_hepc_medication -- do not treat these as the same population. Only 4 states have any exported data (Alabama, Illinois, Louisiana, Massachusetts); reported only in standard/data_normal_vl.csv.gz. Counts of 10 or fewer are suppressed and imputed as 5, flagged by epic_n_patients_after_hcv_medication_suppressed_flag. A count for a partial trailing period is not comparable to a full year.",
+      "statement": "In {location}, {value} HCV-diagnosed patients received an HCV medication in {time}.",
+      "measure_type": "Count",
+      "unit": "Patients",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_n_patients_after_hcv_medication_suppressed_flag": {
+      "id": "epic_n_patients_after_hcv_medication_suppressed_flag",
+      "short_name": "Suppressed flag: patients who received an HCV medication",
+      "long_name": "Suppression flag for the number of patients who received an HCV medication",
+      "category": "chronic",
+      "short_description": "Indicates whether this population count was suppressed and imputed.",
+      "long_description": "1 when Epic Cosmos suppressed the cell (a count of 10 or fewer) and the value was imputed as 5; 0 otherwise. Computed before imputation. Where this flag is 1, both of this population's percent measures are deliberately left missing rather than asserting a meaningless 5 / 5 = 100%.",
+      "statement": "In {location}, the HCV-medication patient count for {time} was suppressed and imputed ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_normal_vl_12wk_after_hcv_medication": {
+      "id": "epic_pct_normal_vl_12wk_after_hcv_medication",
+      "short_name": "Normal HCV VL >12 weeks after medication",
+      "long_name": "Percent of patients who received an HCV medication who had a normal HCV VL result more than 12 weeks later",
+      "category": "chronic",
+      "short_description": "Rate of a normal HCV viral load result, 12+ weeks after receiving an HCV medication, among the 4 states with any exported data.",
+      "long_description": "Taken directly from the source session's own \"Normal HCV VL >12 weeks (%)\" column (imputed via the standard 5 / population rule when blank -- see below), among patients in epic_n_patients_after_hcv_medication. Not computed by this repo from two independently reported counts; the source does not report the underlying numerator count directly. Only 4 states have any exported data (Alabama, Illinois, Louisiana, Massachusetts); reported only in standard/data_normal_vl.csv.gz. Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_after_hcv_medication * 100, flagged by epic_pct_normal_vl_12wk_after_hcv_medication_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. A value for a partial trailing period is not comparable to a full year.",
+      "statement": "In {location}, {value}% of patients who received an HCV medication in {time} had a normal HCV VL result more than 12 weeks later.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_normal_vl_12wk_after_hcv_medication_suppressed_flag": {
+      "id": "epic_pct_normal_vl_12wk_after_hcv_medication_suppressed_flag",
+      "short_name": "Suppressed flag: normal VL >12 weeks after medication",
+      "long_name": "Suppression flag for the 12-week normal-VL-after-medication rate",
+      "category": "chronic",
+      "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+      "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the underlying population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_after_hcv_medication * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+      "statement": "In {location}, the 12-week normal-VL-after-medication rate for {time} rests on a suppressed value ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_normal_vl_20wk_after_hcv_medication": {
+      "id": "epic_pct_normal_vl_20wk_after_hcv_medication",
+      "short_name": "Normal HCV VL >20 weeks after medication",
+      "long_name": "Percent of patients who received an HCV medication who had a normal HCV VL result more than 20 weeks later",
+      "category": "chronic",
+      "short_description": "Rate of a normal HCV viral load result, 20+ weeks after receiving an HCV medication, among the 4 states with any exported data.",
+      "long_description": "Same source, population, and imputation rules as epic_pct_normal_vl_12wk_after_hcv_medication, taken from the source session's \"Normal HCV VL >20 weeks (%)\" column instead. Reported only in standard/data_normal_vl.csv.gz.",
+      "statement": "In {location}, {value}% of patients who received an HCV medication in {time} had a normal HCV VL result more than 20 weeks later.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_normal_vl_20wk_after_hcv_medication_suppressed_flag": {
+      "id": "epic_pct_normal_vl_20wk_after_hcv_medication_suppressed_flag",
+      "short_name": "Suppressed flag: normal VL >20 weeks after medication",
+      "long_name": "Suppression flag for the 20-week normal-VL-after-medication rate",
+      "category": "chronic",
+      "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+      "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the underlying population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_after_hcv_medication * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+      "statement": "In {location}, the 20-week normal-VL-after-medication rate for {time} rests on a suppressed value ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_n_patients_hepc_new_diagnosis": {
+      "id": "epic_n_patients_hepc_new_diagnosis",
+      "short_name": "New HCV diagnoses",
+      "long_name": "Number of patients newly diagnosed with hepatitis C (no diagnosis in the prior year)",
+      "category": "chronic",
+      "short_description": "Annual count of NEW (incident) hepatitis C diagnoses -- patients diagnosed in the given year who were not already diagnosed the year before -- in the 5 geographies with any exported data.",
+      "long_description": "Taken from a dedicated, consolidated SlicerDicer session (2857569) that reports 6 measures at once (this population size, plus 5 rates -- see epic_pct_hepc_meds_after_diagnosis, epic_pct_hepc_abnormal_test_after_diagnosis, epic_pct_hepc_any_test_after_diagnosis, epic_pct_normal_vl_20wk_after_meds_new_diagnosis, epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis) cross-tabulated by state/year AND two additional row-bucket dimensions, (All) Lab Components in {\"Hep C tests\", Total} and All Medications in {\"Hep C meds\", Total}. Only the fully-unconditioned (Total x Total) row is kept here, per explicit user direction. The population is patients with a hepatitis C diagnosis in the given year who did NOT have one in the PRIOR year -- i.e. new/incident diagnoses, not the cumulative/prevalent diagnosed population -- confirmed with the user. This is why it is markedly smaller than epic_n_patients_hepc (crosstab 1, the cumulative diagnosed population as of that year: roughly 12-35% of it nationally, varying by year) and why it declines toward the present (167,148 nationally in 2018 down to 64,861 in 2025) even as epic_n_patients_hepc grows over the same span (471,746 to 561,496): fewer NEW diagnoses each year, while the prevalent pool keeps accumulating. Do not treat this as comparable to epic_n_patients_hepc or epic_n_patients_hepc_medication_pop -- it is a different (smaller, incident) population entirely. Counts of 10 or fewer are suppressed and imputed as 5, flagged by epic_n_patients_hepc_new_diagnosis_suppressed_flag. The most recent period (2026, partial year Jan 1 - Sep 1) is suppressed in EVERY one of the 5 geographies for this measure and all 5 percentage measures built on it -- confirmed directly in the raw export (every cell reads blank or \"10 or fewer\"), consistent with a partial year producing fewer new diagnoses than a full year, on top of the declining incidence trend.",
+      "statement": "In {location}, {value} patients were newly diagnosed with hepatitis C in {time} (no prior-year diagnosis).",
+      "measure_type": "Count",
+      "unit": "Patients",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_n_patients_hepc_new_diagnosis_suppressed_flag": {
+      "id": "epic_n_patients_hepc_new_diagnosis_suppressed_flag",
+      "short_name": "Suppressed flag: new HCV diagnoses",
+      "long_name": "Suppression flag for the new-HCV-diagnosis count",
+      "category": "chronic",
+      "short_description": "Indicates whether this population count was suppressed and imputed.",
+      "long_description": "1 when Epic Cosmos suppressed the cell (a count of 10 or fewer) and the value was imputed as 5; 0 otherwise. Computed before imputation. Where this flag is 1, all 5 percentage measures built on this population (see epic_n_patients_hepc_new_diagnosis) are deliberately left missing rather than asserting a meaningless 5 / 5 = 100%. Every geography is flagged 1 for the most recent partial period (2026) -- see the note under epic_n_patients_hepc_new_diagnosis.",
+      "statement": "In {location}, the new-HCV-diagnosis count for {time} was suppressed and imputed ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hepc_meds_after_diagnosis": {
+      "id": "epic_pct_hepc_meds_after_diagnosis",
+      "short_name": "HCV meds after diagnosis (new diagnoses)",
+      "long_name": "Percent of newly diagnosed hepatitis C patients who received an HCV medication after diagnosis",
+      "category": "chronic",
+      "short_description": "Rate of HCV medication receipt after diagnosis, among patients newly diagnosed that year.",
+      "long_description": "Taken directly from session 2857569's own \"Hep C meds after diagnosis (%)\" column (imputed via the standard 5 / population rule when blank), among epic_n_patients_hepc_new_diagnosis -- the NEW-DIAGNOSIS population (see there), NOT the same population or session as epic_pct_hepc_medication (crosstab 2), which is a within-6-months rate among the cumulative/prevalent diagnosed population; do not chart these as a continuous series or treat them as comparable. Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_hepc_new_diagnosis * 100, flagged by epic_pct_hepc_meds_after_diagnosis_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. The most recent period (2026 partial year) is suppressed in every geography -- see epic_n_patients_hepc_new_diagnosis's note.",
+      "statement": "In {location}, {value}% of patients newly diagnosed with hepatitis C in {time} received an HCV medication after diagnosis.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hepc_meds_after_diagnosis_suppressed_flag": {
+      "id": "epic_pct_hepc_meds_after_diagnosis_suppressed_flag",
+      "short_name": "Suppressed flag: HCV meds after diagnosis (new diagnoses)",
+      "long_name": "Suppression flag for the new-diagnosis HCV-meds-after-diagnosis rate",
+      "category": "chronic",
+      "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+      "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_hepc_new_diagnosis * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+      "statement": "In {location}, the new-diagnosis HCV-meds-after-diagnosis rate for {time} rests on a suppressed value ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hepc_abnormal_test_after_diagnosis": {
+      "id": "epic_pct_hepc_abnormal_test_after_diagnosis",
+      "short_name": "Abnormal HCV test after diagnosis (new diagnoses)",
+      "long_name": "Percent of newly diagnosed hepatitis C patients with an abnormal HCV test after diagnosis",
+      "category": "chronic",
+      "short_description": "Rate of an abnormal HCV test result after diagnosis, among patients newly diagnosed that year.",
+      "long_description": "Taken directly from session 2857569's own \"Abnormal hep C tests after diagnosis (%)\" column (imputed via the standard 5 / population rule when blank), among epic_n_patients_hepc_new_diagnosis (the new-diagnosis population, see there). This measure is not reported elsewhere in this repo -- it is new as of this session. Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_hepc_new_diagnosis * 100, flagged by epic_pct_hepc_abnormal_test_after_diagnosis_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. The most recent period (2026 partial year) is suppressed in every geography -- see epic_n_patients_hepc_new_diagnosis's note.",
+      "statement": "In {location}, {value}% of patients newly diagnosed with hepatitis C in {time} had an abnormal HCV test after diagnosis.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hepc_abnormal_test_after_diagnosis_suppressed_flag": {
+      "id": "epic_pct_hepc_abnormal_test_after_diagnosis_suppressed_flag",
+      "short_name": "Suppressed flag: abnormal HCV test after diagnosis (new diagnoses)",
+      "long_name": "Suppression flag for the new-diagnosis abnormal-HCV-test-after-diagnosis rate",
+      "category": "chronic",
+      "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+      "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_hepc_new_diagnosis * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+      "statement": "In {location}, the new-diagnosis abnormal-HCV-test-after-diagnosis rate for {time} rests on a suppressed value ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hepc_any_test_after_diagnosis": {
+      "id": "epic_pct_hepc_any_test_after_diagnosis",
+      "short_name": "Any HCV test after diagnosis (new diagnoses)",
+      "long_name": "Percent of newly diagnosed hepatitis C patients with any HCV test after diagnosis",
+      "category": "chronic",
+      "short_description": "Rate of any HCV test (abnormal or normal) after diagnosis, among patients newly diagnosed that year.",
+      "long_description": "Taken directly from session 2857569's own \"Any hep C test after diagnosis (%)\" column (imputed via the standard 5 / population rule when blank), among epic_n_patients_hepc_new_diagnosis (the new-diagnosis population, see there). This measure is not reported elsewhere in this repo -- it is new as of this session, and is the broadest of the three \"after diagnosis\" rates (any_test >= abnormal_test, since abnormal tests are a subset of any test). Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_hepc_new_diagnosis * 100, flagged by epic_pct_hepc_any_test_after_diagnosis_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. The most recent period (2026 partial year) is suppressed in every geography -- see epic_n_patients_hepc_new_diagnosis's note.",
+      "statement": "In {location}, {value}% of patients newly diagnosed with hepatitis C in {time} had any HCV test after diagnosis.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hepc_any_test_after_diagnosis_suppressed_flag": {
+      "id": "epic_pct_hepc_any_test_after_diagnosis_suppressed_flag",
+      "short_name": "Suppressed flag: any HCV test after diagnosis (new diagnoses)",
+      "long_name": "Suppression flag for the new-diagnosis any-HCV-test-after-diagnosis rate",
+      "category": "chronic",
+      "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+      "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_hepc_new_diagnosis * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+      "statement": "In {location}, the new-diagnosis any-HCV-test-after-diagnosis rate for {time} rests on a suppressed value ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_normal_vl_20wk_after_meds_new_diagnosis": {
+      "id": "epic_pct_normal_vl_20wk_after_meds_new_diagnosis",
+      "short_name": "Normal HCV VL >20 weeks after meds (new diagnoses)",
+      "long_name": "Percent of newly diagnosed hepatitis C patients with a normal HCV VL result more than 20 weeks after medication",
+      "category": "chronic",
+      "short_description": "Rate of a normal HCV viral load result, 20+ weeks after medication, among patients newly diagnosed that year.",
+      "long_description": "Taken directly from session 2857569's own \"Normal hep c test after meds, 20 weeks (%)\" column (imputed via the standard 5 / population rule when blank), among epic_n_patients_hepc_new_diagnosis -- the new-diagnosis population (see there), NOT the medication-restricted, prevalent population used for epic_pct_normal_vl_20wk_after_hcv_medication (crosstab 4, session 2857341). These two measures are NOT comparable: this one's denominator is newly diagnosed patients regardless of medication status (diluting the rate for those never medicated), while crosstab 4's denominator is the prevalent diagnosed population already restricted to medicated patients. Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_hepc_new_diagnosis * 100, flagged by epic_pct_normal_vl_20wk_after_meds_new_diagnosis_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. The most recent period (2026 partial year) is suppressed in every geography -- see epic_n_patients_hepc_new_diagnosis's note; a 20-week-later outcome measure is especially sensitive to this since the window itself has often not yet elapsed for a partial year.",
+      "statement": "In {location}, {value}% of patients newly diagnosed with hepatitis C in {time} had a normal HCV VL result more than 20 weeks after medication.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_normal_vl_20wk_after_meds_new_diagnosis_suppressed_flag": {
+      "id": "epic_pct_normal_vl_20wk_after_meds_new_diagnosis_suppressed_flag",
+      "short_name": "Suppressed flag: normal VL >20wk after meds (new diagnoses)",
+      "long_name": "Suppression flag for the new-diagnosis 20-week normal-VL-after-meds rate",
+      "category": "chronic",
+      "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+      "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_hepc_new_diagnosis * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+      "statement": "In {location}, the new-diagnosis 20-week normal-VL-after-meds rate for {time} rests on a suppressed value ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis": {
+      "id": "epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis",
+      "short_name": "Normal HCV VL >20 weeks after abnormal test (new diagnoses)",
+      "long_name": "Percent of newly diagnosed hepatitis C patients with a normal HCV VL result more than 20 weeks after an abnormal test",
+      "category": "chronic",
+      "short_description": "Rate of a normal HCV viral load result, 20+ weeks after an abnormal test, among patients newly diagnosed that year.",
+      "long_description": "Taken directly from session 2857569's own \"Normal hep c test after abnormal test, 20 weeks (%)\" column (imputed via the standard 5 / population rule when blank), among epic_n_patients_hepc_new_diagnosis -- the new-diagnosis population (see there), NOT the abnormal-test-restricted, prevalent population used for epic_pct_normal_vl_20wk_after_abnormal_vl (crosstab 3, session 2857336). These two measures are NOT comparable: this one's denominator is newly diagnosed patients regardless of whether they ever had an abnormal test (diluting the rate), while crosstab 3's denominator is the prevalent diagnosed population already restricted to patients with an abnormal test. Where the underlying count was suppressed, the imputed rate is 5 / epic_n_patients_hepc_new_diagnosis * 100, flagged by epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis_suppressed_flag. Where the population itself was suppressed, the value is left missing instead of computing 5 / 5 = 100%. The most recent period (2026 partial year) is suppressed in every geography -- see epic_n_patients_hepc_new_diagnosis's note; a 20-week-later outcome measure is especially sensitive to this since the window itself has often not yet elapsed for a partial year.",
+      "statement": "In {location}, {value}% of patients newly diagnosed with hepatitis C in {time} had a normal HCV VL result more than 20 weeks after an abnormal test.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis_suppressed_flag": {
+      "id": "epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis_suppressed_flag",
+      "short_name": "Suppressed flag: normal VL >20wk after abnormal test (new diagnoses)",
+      "long_name": "Suppression flag for the new-diagnosis 20-week normal-VL-after-abnormal-test rate",
+      "category": "chronic",
+      "short_description": "Indicates whether this rate rests on a suppressed and imputed value.",
+      "long_description": "1 when the source's own rate was blank; 0 otherwise. Computed before imputation. When the population was not itself suppressed, the rate is imputed as 5 / epic_n_patients_hepc_new_diagnosis * 100. When the population was suppressed, the rate is left missing while this flag remains 1.",
+      "statement": "In {location}, the new-diagnosis 20-week normal-VL-after-abnormal-test rate for {time} rests on a suppressed value ({value}).",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Year",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
     "_sources": {
       "epic_cosmos": {
         "name": "Epic Cosmos",
@@ -705,75 +2300,13 @@
   },
   "change_report": {
     "data.csv.gz": {
-      "state": "changed",
-      "variables": {
-        "geography": {
-          "status": "present",
-          "same_type": true,
-          "added_levels": [],
-          "dropped_levels": []
-        },
-        "time": {
-          "status": "present",
-          "same_type": true,
-          "added_levels": "2026-08-18",
-          "dropped_levels": "2026-06-30"
-        },
-        "age": {
-          "status": "present",
-          "same_type": true,
-          "added_levels": [],
-          "dropped_levels": []
-        },
-        "epic_n_patients_hepc": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_patients_hepc_suppressed_flag": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_patients": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_patients_suppressed_flag": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_pct_hepc": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_pct_hepc_suppressed_flag": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_patients_hepc_medication": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_patients_hepc_medication_suppressed_flag": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_patients_hepc_medication_pop": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_patients_hepc_medication_pop_suppressed_flag": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_pct_hepc_medication": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_pct_hepc_medication_suppressed_flag": {
-          "status": "present",
-          "same_type": true
-        }
-      }
+      "state": "unchanged"
+    },
+    "data_dashboard.csv.gz": {
+      "state": "unchanged"
+    },
+    "data_normal_vl.csv.gz": {
+      "state": "unchanged"
     }
   }
 }

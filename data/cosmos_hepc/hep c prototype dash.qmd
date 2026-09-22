@@ -1,0 +1,515 @@
+---
+title: "PopHIVE Hepatitis C Care Cascade"
+format:
+  html:
+    embed-resources: true
+    toc: true
+    toc-title: "On this page"
+    toc-expand: true
+    code-fold: true
+    fig-align: center
+    smart: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{=html}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Rubik', sans-serif; color: #26323d; background-color: #ffffff; padding-top: 2.75rem; }
+h1, h2, h3, h4, .title, .subtitle { font-family: 'Source Serif 4', serif; color: #00356b; font-weight: 600; }
+h2 { border-bottom: 2px solid #bedeff; padding-bottom: 0.3rem; margin-top: 2.5rem; }
+a { color: #00356b; }
+a:hover { color: #4e98e4; }
+.quarto-title-banner .title, .quarto-title-banner .subtitle, .quarto-title-banner .quarto-title-meta { color: #ffffff !important; }
+.quarto-title-banner { background-color: #00356b; }
+::selection { background: #bedeff; }
+.pophive-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: #00356b; padding: 0.7rem 1.5rem; display: flex; align-items: center;
+  justify-content: space-between; font-family: 'Rubik', sans-serif;
+}
+.pophive-nav a { color: #ffffff !important; text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+.pophive-nav a:hover { color: #bedeff !important; }
+.pophive-brand {
+  font-family: 'Source Serif 4', serif !important; font-weight: 600 !important;
+  font-size: 1.15rem !important; letter-spacing: 0.02em;
+}
+.pophive-nav-links { display: flex; gap: 1.75rem; }
+.pophive-footer {
+  width: 100vw; position: relative; left: 50%; right: 50%;
+  margin-left: -50vw; margin-right: -50vw; margin-top: 3rem;
+  padding: 1.75rem 1.5rem; text-align: center;
+  background: #00356b; color: #dbe7f5; font-family: 'Rubik', sans-serif;
+  font-size: 0.85rem; line-height: 1.6;
+}
+.pophive-footer strong { font-family: 'Source Serif 4', serif; color: #ffffff; font-size: 1rem; }
+.pophive-footer a { color: #bedeff !important; }
+.pophive-footer a:hover { color: #ffffff !important; }
+.pophive-footer .disclaimer { color: #a9bdd4; font-size: 0.8rem; margin-top: 0.4rem; }
+#TOC a { white-space: normal; word-wrap: break-word; }
+.ctl-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; margin: 0.25rem 0 0.5rem; font-family: 'Rubik', sans-serif; }
+.ctl-field { font-size: 0.85rem; color: #00356b; font-weight: 500; }
+.ctl-field select { font-family: 'Rubik', sans-serif; font-size: 0.85rem; color: #26323d; border: 1px solid #bedeff; border-radius: 6px; padding: 0.3rem 0.5rem; margin-left: 0.35rem; min-width: 12rem; }
+.ctl-map-title { font-family: 'Source Serif 4', serif; color: #00356b; font-weight: 600; font-size: 1.15rem; margin: 0.5rem 0 0; }
+.ctl-map-sub { font-family: 'Rubik', sans-serif; color: #767676; font-size: 0.82rem; margin: 0.15rem 0 0.25rem; }
+.ctl-denom-note { font-family: 'Rubik', sans-serif; color: #767676; font-size: 0.78rem; font-style: italic; margin: 0 0 0.6rem; }
+.ctl-slider-row { display: flex; align-items: center; gap: 0.75rem; margin: 0.25rem 0; font-family: 'Rubik', sans-serif; font-size: 0.82rem; color: #00356b; }
+.ctl-slider-row input[type=range] { flex: 1; accent-color: #00356b; }
+.ctl-period-label { min-width: 7rem; font-weight: 500; }
+.overview-text { font-size: 14px; }
+.state-picker-row { display: flex; align-items: center; gap: 0.75rem; margin: 1rem 0 1.5rem; padding: 0.85rem 1rem; background: #f5f9ff; border: 1px solid #bedeff; border-radius: 8px; }
+.state-picker-row label { font-family: 'Source Serif 4', serif; font-weight: 600; color: #00356b; font-size: 1rem; }
+.state-picker-row select { font-family: 'Rubik', sans-serif; font-size: 0.95rem; color: #26323d; border: 1px solid #bedeff; border-radius: 6px; padding: 0.35rem 0.6rem; min-width: 14rem; }
+.suppressed-note { font-family: 'Rubik', sans-serif; color: #767676; font-size: 0.8rem; font-style: italic; margin-top: 0.4rem; }
+.compare-toggle { display: flex; align-items: center; gap: 0.4rem; font-family: 'Rubik', sans-serif; font-size: 0.9rem; color: #00356b; margin-left: auto; }
+.compare-toggle input { accent-color: #00356b; width: 1rem; height: 1rem; }
+</style>
+```
+
+```{=html}
+<nav class="pophive-nav">
+  <a href="https://www.pophive.org/" class="pophive-brand">PopHIVE</a>
+  <div class="pophive-nav-links">
+    <a href="https://www.pophive.org/">Home</a>
+    <a href="https://www.pophive.org/about">About</a>
+  </div>
+</nav>
+```
+
+## Overview
+
+::: {.overview-text}
+Notes:
+
+- **Source**: Epic Cosmos, accessed via SlicerDicer
+- **Restrictions**: Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).
+- **Suppression**: counts of 10 or fewer patients are suppressed and imputed as 5; suppressed years are shown as gaps in the trend charts and as a placeholder message in the care-cascade view.
+:::
+
+```{r}
+#| label: setup
+#| include: false
+library(readr)
+library(dplyr)
+library(tidyr)
+library(jsonlite)
+```
+
+```{r}
+#| label: prep-data
+#| include: false
+
+data <- read_csv(
+  "standard/data_dashboard.csv.gz", show_col_types = FALSE,
+  col_types = cols(geography = col_character(), time = col_character())
+)
+
+state_lookup <- tribble(
+  ~geography, ~state_name,
+  "00", "National",
+  "01", "Alabama",
+  "17", "Illinois",
+  "22", "Louisiana",
+  "25", "Massachusetts"
+)
+
+records <- data %>%
+  left_join(state_lookup, by = "geography") %>%
+  mutate(
+    year        = as.integer(substr(time, 1, 4)),
+    partial     = !grepl("-12-31$", time),
+    year_label  = if_else(partial, paste0(year, " (partial)"), as.character(year))
+  ) %>%
+  arrange(state_name != "National", state_name, time) %>%
+  transmute(
+    geography, state_name, time, year, year_label, partial,
+    n                         = epic_n_patients_hepc_new_diagnosis,
+    n_suppressed              = epic_n_patients_hepc_new_diagnosis_suppressed_flag,
+    pct_meds                  = epic_pct_hepc_meds_after_diagnosis,
+    n_meds                    = epic_n_patients_hepc_meds_after_diagnosis,
+    pct_abnormal              = epic_pct_hepc_abnormal_test_after_diagnosis,
+    n_abnormal                = epic_n_patients_hepc_abnormal_test_after_diagnosis,
+    pct_any                   = epic_pct_hepc_any_test_after_diagnosis,
+    pct_normal_after_meds     = epic_pct_normal_vl_20wk_after_meds_new_diagnosis,
+    pct_normal_after_abnormal = epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis
+  )
+
+states <- unique(records$state_name)
+years  <- sort(unique(records$year))
+```
+
+```{r}
+#| label: shared-data-json
+#| results: asis
+
+cat(paste0(
+  '<script>',
+  'window.HEPC_DATA = ', toJSON(records, na = "null", auto_unbox = TRUE), ';',
+  'window.HEPC_STATES = ', toJSON(states, auto_unbox = TRUE), ';',
+  'window.HEPC_YEARS = ', toJSON(years, auto_unbox = TRUE), ';',
+  '</script>\n'
+))
+```
+
+```{r}
+#| label: plotly-dependency
+# Renders nothing visible - registers the plotly.js htmlwidgets dependency so
+# embed-resources: true inlines it. Every chart below is drawn by hand with
+# vanilla JS against window.Plotly, matching the plain HTML controls used
+# throughout.
+htmltools::div(style = "display:none;", plotly::plot_ly())
+```
+
+```{=html}
+<div class="state-picker-row">
+  <label for="hepc-state">State:</label>
+  <select id="hepc-state"></select>
+  <label class="compare-toggle">
+    <input type="checkbox" id="hepc-compare-national">
+    Compare to National
+  </label>
+</div>
+```
+
+## Trends over time
+
+Click a measure in the legend to show or hide it. A suppressed years appear as a gap in the line.
+
+```{=html}
+<p class="ctl-map-title" id="trend-title"></p>
+<p class="ctl-map-sub">Percent of newly diagnosed hepatitis C patients, by outcome and year</p>
+<div id="trend-chart" style="width:100%;height:480px;"></div>
+
+<p class="ctl-map-title" id="count-title"></p>
+<p class="ctl-map-sub">Number of patients newly diagnosed with hepatitis C, by year</p>
+<div id="count-chart" style="width:100%;height:260px;"></div>
+
+<div id="nat-count-wrap" style="display:none;">
+<p class="ctl-map-title">National - newly diagnosed hepatitis C patients</p>
+<p class="ctl-map-sub">Shown on its own scale - National's raw count is far larger than any one state's</p>
+<div id="nat-count-chart" style="width:100%;height:260px;"></div>
+</div>
+```
+
+```{=html}
+<script>
+(function () {
+  function ready() {
+    if (!window.Plotly) { return setTimeout(ready, 120); }
+    var D = window.HEPC_DATA;
+    var stateSel = document.getElementById('hepc-state');
+    var compareChk = document.getElementById('hepc-compare-national');
+    // National stays out of the picker (it's offered as a comparison overlay
+    // instead, via the checkbox) -- only the 4 states with their own row.
+    var PICKABLE_STATES = window.HEPC_STATES.filter(function (s) { return s !== 'National'; });
+    PICKABLE_STATES.forEach(function (s) {
+      var o = document.createElement('option'); o.value = s; o.textContent = s;
+      stateSel.appendChild(o);
+    });
+    stateSel.value = PICKABLE_STATES[0];
+
+    var byState = {};
+    D.forEach(function (r) {
+      (byState[r.state_name] = byState[r.state_name] || []).push(r);
+    });
+
+    // Categorical palette, fixed order (never re-cycled per selection) -
+    // see the dataviz skill's validated default palette.
+    var MEASURES = [
+      { key: 'pct_meds',                  label: 'Received antivirals after diagnosis',        color: '#2a78d6' },
+      { key: 'pct_abnormal',               label: 'Positive HCVL test after diagnosis',         color: '#eb6834' },
+      { key: 'pct_any',                    label: 'Any HCVL test after diagnosis',              color: '#1baf7a' },
+      { key: 'pct_normal_after_meds',      label: 'Normal VL ≥20wk after antivirals',        color: '#eda100' },
+      { key: 'pct_normal_after_abnormal',  label: 'Normal VL ≥20wk after positive HCVL test', color: '#e87ba4' }
+    ];
+
+    var trendDiv = document.getElementById('trend-chart');
+    var countDiv = document.getElementById('count-chart');
+    var natCountDiv = document.getElementById('nat-count-chart');
+    var natCountWrap = document.getElementById('nat-count-wrap');
+    var trendTitle = document.getElementById('trend-title');
+    var countTitle = document.getElementById('count-title');
+
+    function render() {
+      var rows = byState[stateSel.value] || [];
+      var natRows = byState['National'] || [];
+      var x = rows.map(function (r) { return r.year_label; });
+      var compare = compareChk.checked;
+
+      var traces = [];
+      MEASURES.forEach(function (m) {
+        traces.push({
+          type: 'scatter', mode: 'lines+markers', name: m.label,
+          x: x, y: rows.map(function (r) { return r[m.key]; }),
+          line: { color: m.color, width: 2 }, marker: { size: 6, color: m.color },
+          legendgroup: m.key, connectgaps: false,
+          hovertemplate: m.label + '<br>%{x}<br>%{y:.1f}%<extra></extra>'
+        });
+        if (compare) {
+          // National overlay: same color, dashed and lighter, sharing the
+          // measure's legend group so toggling one hides both together.
+          traces.push({
+            type: 'scatter', mode: 'lines', name: m.label + ' (National)',
+            x: natRows.map(function (r) { return r.year_label; }),
+            y: natRows.map(function (r) { return r[m.key]; }),
+            line: { color: m.color, width: 2, dash: 'dot' }, opacity: 0.55,
+            legendgroup: m.key, connectgaps: false,
+            hovertemplate: m.label + ' (National)<br>%{x}<br>%{y:.1f}%<extra></extra>'
+          });
+        }
+      });
+
+      Plotly.react(trendDiv, traces, {
+        margin: { t: 20, b: 45, l: 55, r: 20 }, paper_bgcolor: 'white', plot_bgcolor: 'white',
+        font: { family: 'Rubik, sans-serif', color: '#00356b', size: 11 }, hovermode: 'closest',
+        xaxis: { title: 'Year', gridcolor: 'white', zeroline: false },
+        yaxis: { title: 'Percent', range: [0, 100], gridcolor: '#e5e5e5', griddash: 'dash', zeroline: false },
+        legend: { orientation: 'h', x: 0.5, xanchor: 'center', y: 1.22, yanchor: 'bottom' }
+      }, { displayModeBar: false, responsive: true });
+
+      var barColors = rows.map(function (r) { return r.n_suppressed === 1 ? '#c3c2b7' : '#2a78d6'; });
+      var countTrace = {
+        type: 'bar', name: stateSel.value, x: x, y: rows.map(function (r) { return r.n_suppressed === 1 ? null : r.n; }),
+        marker: { color: barColors }, showlegend: false,
+        hovertemplate: 'New diagnoses<br>%{x}<br>%{y:,}<extra></extra>'
+      };
+      // Suppressed years still get a visible placeholder bar (a thin sliver) so the
+      // gap in the series reads as "unknown", not silently absent from the x-axis.
+      var suppTrace = {
+        type: 'bar', x: rows.filter(function (r) { return r.n_suppressed === 1; }).map(function (r) { return r.year_label; }),
+        y: rows.filter(function (r) { return r.n_suppressed === 1; }).map(function () { return 1; }),
+        marker: { color: '#c3c2b7' }, showlegend: false,
+        hovertemplate: 'Suppressed (10 or fewer)<br>%{x}<extra></extra>'
+      };
+      // National's raw patient count is 100-1000x a single state's, so it is
+      // deliberately NOT overlaid here (that would need a second y-axis, or
+      // it would flatten the state's own bars to invisible) -- the National
+      // comparison for counts lives in its own chart below instead.
+      Plotly.react(countDiv, [countTrace, suppTrace], {
+        barmode: 'overlay',
+        margin: { t: 10, b: 40, l: 60, r: 20 }, paper_bgcolor: 'white', plot_bgcolor: 'white',
+        font: { family: 'Rubik, sans-serif', color: '#00356b', size: 11 }, hovermode: 'closest',
+        xaxis: { title: 'Year', gridcolor: 'white', zeroline: false },
+        yaxis: { title: 'Patients', gridcolor: '#e5e5e5', griddash: 'dash', zeroline: false, rangemode: 'tozero' },
+        showlegend: false
+      }, { displayModeBar: false, responsive: true });
+
+      if (compare) {
+        var natBarColors = natRows.map(function (r) { return r.n_suppressed === 1 ? '#c3c2b7' : '#00356b'; });
+        Plotly.react(natCountDiv, [{
+          type: 'bar', x: natRows.map(function (r) { return r.year_label; }),
+          y: natRows.map(function (r) { return r.n_suppressed === 1 ? null : r.n; }),
+          marker: { color: natBarColors },
+          hovertemplate: 'National new diagnoses<br>%{x}<br>%{y:,}<extra></extra>'
+        }, {
+          type: 'bar',
+          x: natRows.filter(function (r) { return r.n_suppressed === 1; }).map(function (r) { return r.year_label; }),
+          y: natRows.filter(function (r) { return r.n_suppressed === 1; }).map(function () { return 1; }),
+          marker: { color: '#c3c2b7' },
+          hovertemplate: 'Suppressed (10 or fewer)<br>%{x}<extra></extra>'
+        }], {
+          barmode: 'overlay',
+          margin: { t: 10, b: 40, l: 60, r: 20 }, paper_bgcolor: 'white', plot_bgcolor: 'white',
+          font: { family: 'Rubik, sans-serif', color: '#00356b', size: 11 }, hovermode: 'closest',
+          xaxis: { title: 'Year', gridcolor: 'white', zeroline: false },
+          yaxis: { title: 'Patients', gridcolor: '#e5e5e5', griddash: 'dash', zeroline: false, rangemode: 'tozero' },
+          showlegend: false
+        }, { displayModeBar: false, responsive: true });
+      }
+      natCountWrap.style.display = compare ? '' : 'none';
+
+      trendTitle.textContent = stateSel.value + ' - hepatitis C care cascade rates' + (compare ? ' (dotted = National)' : '');
+      countTitle.textContent = stateSel.value + ' - newly diagnosed hepatitis C patients';
+    }
+
+    stateSel.addEventListener('change', function () { render(); renderCascade(); });
+    compareChk.addEventListener('change', function () { render(); renderCascade(); });
+    render();
+  }
+  ready();
+})();
+</script>
+```
+
+## Care cascade
+
+```{=html}
+<div class="ctl-slider-row">
+  <span class="ctl-period-label" id="cascade-year-label"></span>
+  <input type="range" id="cascade-year" min="1" value="1" step="1" aria-label="year">
+</div>
+<p class="ctl-map-title" id="cascade-title"></p>
+<p class="ctl-map-sub" id="cascade-sub"></p>
+<div id="cascade-chart" style="width:100%;height:480px;"></div>
+<p class="ctl-denom-note" id="cascade-note"></p>
+
+<div id="nat-cascade-wrap" style="display:none;">
+<p class="ctl-map-title" id="nat-cascade-title"></p>
+<p class="ctl-map-sub" id="nat-cascade-sub"></p>
+<div id="nat-cascade-chart" style="width:100%;height:480px;"></div>
+</div>
+```
+
+```{=html}
+<script>
+(function () {
+  function ready() {
+    if (!window.Plotly) { return setTimeout(ready, 120); }
+    var D = window.HEPC_DATA;
+    var YEARS = window.HEPC_YEARS;
+    var stateSel = document.getElementById('hepc-state');
+    var compareChk = document.getElementById('hepc-compare-national');
+    var slider = document.getElementById('cascade-year');
+    var yearLabel = document.getElementById('cascade-year-label');
+    var titleEl = document.getElementById('cascade-title');
+    var subEl = document.getElementById('cascade-sub');
+    var noteEl = document.getElementById('cascade-note');
+    var chartDiv = document.getElementById('cascade-chart');
+    var natWrap = document.getElementById('nat-cascade-wrap');
+    var natTitleEl = document.getElementById('nat-cascade-title');
+    var natSubEl = document.getElementById('nat-cascade-sub');
+    var natChartDiv = document.getElementById('nat-cascade-chart');
+
+    var byState = {};
+    D.forEach(function (r) {
+      (byState[r.state_name] = byState[r.state_name] || []).push(r);
+    });
+
+    slider.max = YEARS.length;
+    // Default to the most recent FULL year (2026 is a partial, fully-suppressed
+    // year in every geography), not the last slider position.
+    var defaultIdx = YEARS.length;
+    for (var i = YEARS.length - 1; i >= 0; i--) {
+      var probe = (byState['National'] || []).filter(function (r) { return r.year === YEARS[i]; })[0];
+      if (probe && probe.n_suppressed !== 1) { defaultIdx = i + 1; break; }
+    }
+    slider.value = defaultIdx;
+
+    var fmt = function (n) { return Math.round(n).toLocaleString(); };
+
+    // Draws one state/year's cascade into `div`; returns the subtitle text
+    // (the caller decides where to put it). A true sequential cascade now:
+    // stage-2 boxes (normal VL) are counted directly off their stage-1 box's
+    // own count, not off the full new-diagnosis population - see the
+    // Overview note on the 2026-09-21 recondition.
+    function drawCascade(div, label, row) {
+      if (!row || row.n_suppressed === 1) {
+        var suppText = row && row.partial
+          ? 'Data suppressed: ' + row.year + ' is a partial year with 10 or fewer new diagnoses in ' + label + '.'
+          : 'Data suppressed for ' + label + ' (10 or fewer new diagnoses).';
+        Plotly.react(div, [], {
+          annotations: [{
+            text: suppText, showarrow: false, x: 0.5, y: 0.5,
+            xref: 'paper', yref: 'paper', font: { size: 13, color: '#767676' }
+          }],
+          margin: { t: 10, b: 10, l: 10, r: 10 }, paper_bgcolor: 'white', plot_bgcolor: 'white'
+        }, { displayModeBar: false, responsive: true });
+        return 'Newly diagnosed hepatitis C patients';
+      }
+
+      var n = row.n;
+      var nMeds     = row.n_meds;
+      var nAbnormal = row.n_abnormal;
+      var nAny      = n * row.pct_any / 100;
+      var nNormAfterMeds     = nMeds * row.pct_normal_after_meds / 100;
+      var nNormAfterAbnormal = nAbnormal * row.pct_normal_after_abnormal / 100;
+
+      // Short labels stay ON the diagram (name + count only, so six of them
+      // can sit in three columns without their text runs colliding); the
+      // full description + percent moves into customdata, read out on hover
+      // instead - see the hovertemplate below.
+      var labels = [
+        'New diagnoses<br>' + fmt(n),
+        'Antivirals<br>' + fmt(nMeds),
+        'Positive test<br>' + fmt(nAbnormal),
+        'Any test<br>' + fmt(nAny),
+        'Normal VL<br>' + fmt(nNormAfterMeds),
+        'Normal VL<br>' + fmt(nNormAfterAbnormal)
+      ];
+      var hoverLabels = [
+        'New HCV diagnoses<br>' + fmt(n) + ' patients',
+        'Received antivirals after diagnosis<br>' + fmt(nMeds) + ' patients (' + row.pct_meds.toFixed(1) + '% of new diagnoses)',
+        'Positive HCVL test after diagnosis<br>' + fmt(nAbnormal) + ' patients (' + row.pct_abnormal.toFixed(1) + '% of new diagnoses)',
+        'Any HCVL test after diagnosis<br>' + fmt(nAny) + ' patients (' + row.pct_any.toFixed(1) + '% of new diagnoses)',
+        'Normal VL ≥20wk after antivirals<br>' + fmt(nNormAfterMeds) + ' patients (' + row.pct_normal_after_meds.toFixed(1) + '% of patients who received antivirals)',
+        'Normal VL ≥20wk after a positive test<br>' + fmt(nNormAfterAbnormal) + ' patients (' + row.pct_normal_after_abnormal.toFixed(1) + '% of patients with a positive test)'
+      ];
+      var nodeColors = ['#00356b', '#2a78d6', '#eb6834', '#1baf7a', '#86b6ef', '#f2b880'];
+      var nodeX = [0.01, 0.4, 0.4, 0.4, 0.98, 0.98];
+      var nodeY = [0.5, 0.05, 0.5, 0.95, 0.05, 0.5];
+      var linkColors = ['rgba(42,120,214,0.35)', 'rgba(235,104,52,0.35)', 'rgba(27,175,122,0.35)',
+        'rgba(42,120,214,0.25)', 'rgba(235,104,52,0.25)'];
+
+      var trace = {
+        type: 'sankey', arrangement: 'snap',
+        textfont: { family: 'Rubik, sans-serif', size: 11, color: '#26323d' },
+        node: {
+          label: labels, customdata: hoverLabels, color: nodeColors, pad: 28, thickness: 16,
+          line: { color: 'white', width: 1 }, x: nodeX, y: nodeY,
+          hovertemplate: '%{customdata}<extra></extra>'
+        },
+        link: {
+          source: [0, 0, 0, 1, 2],
+          target: [1, 2, 3, 4, 5],
+          value:  [nMeds, nAbnormal, nAny, nNormAfterMeds, nNormAfterAbnormal],
+          color:  linkColors,
+          hovertemplate: '%{value:.0f} patients<extra></extra>'
+        }
+      };
+
+      Plotly.react(div, [trace], {
+        margin: { t: 10, b: 10, l: 10, r: 10 }, paper_bgcolor: 'white', plot_bgcolor: 'white',
+        font: { family: 'Rubik, sans-serif', color: '#00356b', size: 12 }
+      }, { displayModeBar: false, responsive: true });
+
+      return 'Newly diagnosed hepatitis C patients (n = ' + fmt(n) + ')' + (row.partial ? ' - partial year' : '');
+    }
+
+    function render() {
+      var rows = byState[stateSel.value] || [];
+      var year = YEARS[parseInt(slider.value, 10) - 1];
+      yearLabel.textContent = String(year);
+      var row = rows.filter(function (r) { return r.year === year; })[0];
+      var compare = compareChk.checked;
+
+      titleEl.textContent = stateSel.value + ' - ' + year + ' care cascade';
+      subEl.textContent = drawCascade(chartDiv, stateSel.value, row);
+      noteEl.textContent = 'The two rightmost boxes are computed against the box immediately upstream (a true sequential cascade) - see the Overview note above.';
+
+      natWrap.style.display = compare ? '' : 'none';
+      if (compare) {
+        var natRow = (byState['National'] || []).filter(function (r) { return r.year === year; })[0];
+        natTitleEl.textContent = 'National - ' + year + ' care cascade';
+        natSubEl.textContent = drawCascade(natChartDiv, 'National', natRow);
+      }
+    }
+
+    slider.addEventListener('input', render);
+    window.renderCascade = render;
+    render();
+    // The sankey can draw blank on this very first call, before the page's
+    // layout (fonts, TOC sidebar) has settled - a known plotly.js quirk.
+    // Re-render once more on the next frame and once more on window load,
+    // the same fix that happens today when the slider is moved by hand.
+    requestAnimationFrame(render);
+    window.addEventListener('load', render);
+  }
+  ready();
+})();
+</script>
+```
+
+```{=html}
+<nav class="pophive-footer">
+  <strong>PopHIVE</strong><br>
+  A public health surveillance platform combining multiple data sources.<br>
+  <a href="https://www.pophive.org/about">About PopHIVE</a> &middot;
+  <a href="https://github.com/PopHIVE/Ingest">Data Processing on GitHub</a>
+  <div class="disclaimer">Data shown here comes from Epic Cosmos and is subject to the suppression and imputation rules described above. This page is for informational purposes and is not a substitute for clinical judgment.</div>
+</nav>
+```

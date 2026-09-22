@@ -1,7 +1,9 @@
 # cosmos_hepc
 
-Epic Cosmos annual counts related to **hepatitis C**, from two SlicerDicer sessions merged
-into one standard file, keyed by `(geography, time, age)`:
+Epic Cosmos annual counts related to **hepatitis C**, from four SlicerDicer sessions. The
+first two are merged into one standard file, keyed by `(geography, time, age)`; the last two
+are combined with a 4-state slice of that same file into a SEPARATE standard file (see
+"Normal HCV VL outcomes" below), since they cover only 4 states.
 
 1. **Hepatitis C diagnosis counts** (`raw/staging/`) -- patients with a viral hepatitis C
    diagnosis, alongside the all-patients denominator, stratified by state of residence and
@@ -45,11 +47,81 @@ rows are merged with a **full join** on `(geography, time, age)`: a cell that ex
 one crosstab gets `NA` for the other crosstab's columns rather than being dropped or
 truncated to a shared date range.
 
+### Normal HCV VL outcomes (4 states only)
+
+Two more SlicerDicer sessions report a subsequent **normal HCV viral load** result among two
+specific patient groups:
+
+3. **VL after an abnormal test** (`raw/staging_vl_after_abnormal/`) -- among the same
+   HCV-diagnosed population, patients whose qualifying HCV lab result was abnormal (row
+   bucket `(All) Lab Components = Abonormal Hep C test` [sic]), the rate of a subsequent
+   *normal* HCV VL result at >12 weeks and >20 weeks.
+4. **VL after medication** (`raw/staging_vl_after_meds/`) -- the same two rate measures,
+   among patients who received an HCV medication (row bucket
+   `All Medications = HCV medication`).
+
+Each session's other row bucket (`Total` -- all patients regardless of that filter) is
+dropped by the ingest; it is not the population either file is named for. **Only 4 states
+have any exported data in either session** (Alabama, Illinois, Louisiana, Massachusetts) --
+there is no national `"00"` row in either crosstab's target bucket. Because of this sparse
+coverage, crosstabs 3 and 4 are combined with a 4-state-only slice of `standard/data.csv.gz`
+into a SEPARATE output, `standard/data_normal_vl.csv.gz`, rather than folded into the main,
+nationally-representative file.
+
+Output: `standard/data_normal_vl.csv.gz`
+
+| Column | Description |
+|---|---|
+| `geography` | 2-digit state FIPS -- only `01` (Alabama), `17` (Illinois), `22` (Louisiana), `25` (Massachusetts). No national row. |
+| `time` | Period end date, same convention as `standard/data.csv.gz` |
+| `age` | Same 7 buckets as `standard/data.csv.gz` |
+| `epic_n_patients_after_abnormal_vl` (+ `_suppressed_flag`) | Patients with an abnormal HCV VL test (denominator for the two rates below) |
+| `epic_pct_normal_vl_12wk_after_abnormal_vl` (+ `_suppressed_flag`) | Rate of a normal VL result >12 weeks after the abnormal one |
+| `epic_pct_normal_vl_20wk_after_abnormal_vl` (+ `_suppressed_flag`) | Rate of a normal VL result >20 weeks after the abnormal one |
+| `epic_n_patients_after_hcv_medication` (+ `_suppressed_flag`) | Patients who received an HCV medication (denominator for the two rates below) |
+| `epic_pct_normal_vl_12wk_after_hcv_medication` (+ `_suppressed_flag`) | Rate of a normal VL result >12 weeks after the medication |
+| `epic_pct_normal_vl_20wk_after_hcv_medication` (+ `_suppressed_flag`) | Rate of a normal VL result >20 weeks after the medication |
+| ...plus every column from `standard/data.csv.gz` (see table above), restricted to the same 4 states | The diagnosis and medication-uptake measures, for context alongside the VL outcome measures |
+
+### Combined dashboard measures -- NEW diagnoses only (5 geographies, no age breakdown)
+
+A fifth SlicerDicer session (`2857569`) reports 6 measures at once -- population size, HCV-meds-after-diagnosis rate, abnormal-test-after-diagnosis rate, any-test-after-diagnosis rate, and both 20-week normal-VL rates already covered separately by crosstabs 3/4 -- cross-tabulated by state/year AND two additional row-bucket dimensions, `(All) Lab Components` in `{"Hep C tests", Total}` and `All Medications` in `{"Hep C meds", Total}` (4 rows per state/year). **Per explicit user direction, only the fully-unconditioned `Total x Total` row is kept** -- the other 3 combinations (restricted to the `Hep C tests` and/or `Hep C meds` buckets) are dropped. This session has no age dimension and, unlike crosstabs 3/4, DOES report a national `Total` row, so geography here is the same 4 states (Alabama, Illinois, Louisiana, Massachusetts) plus national `"00"` -- 5 geographies.
+
+**The population is NEW (incident) hepatitis C diagnoses, not the cumulative/prevalent diagnosed population used elsewhere in this file** -- confirmed with the user: it is patients diagnosed in the given year who did NOT have a diagnosis the year before. This is why it is markedly smaller than `epic_n_patients_hepc` (crosstab 1) and declines toward the present even as `epic_n_patients_hepc` grows: fewer new diagnoses each year, while the prevalent pool keeps accumulating. All measures below are computed among this NEW-diagnosis population (directly, or as a sub-population of it -- see below), so none of them are comparable to the similarly-named measures in crosstabs 2/3/4, which are computed among the prevalent diagnosed population.
+
+**Care-cascade denominators, RECONDITIONED 2026-09-21 per explicit user direction.** The source itself reports all 6 raw measures against the same denominator, `epic_n_patients_hepc_new_diagnosis` -- including the two "Normal VL" rates, despite their names implying a narrower, already-conditioned population. To build a true sequential care cascade (diagnosed -> received antivirals / positive test / any test -> normal VL), this ingest now re-expresses those two rates against the actual preceding-stage population instead:
+
+- `epic_pct_hepc_meds_after_diagnosis`, `epic_pct_hepc_abnormal_test_after_diagnosis`, and `epic_pct_hepc_any_test_after_diagnosis` are **unchanged** -- still computed against `epic_n_patients_hepc_new_diagnosis` (the full new-diagnosis population), per explicit user direction.
+- `epic_pct_normal_vl_20wk_after_meds_new_diagnosis` is now `epic_n_patients_normal_vl_after_meds` (an internal, not-exported numerator) `/ epic_n_patients_hepc_meds_after_diagnosis * 100` -- i.e. among patients who received antivirals after diagnosis, not among all newly diagnosed patients.
+- `epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis` is now that numerator `/ epic_n_patients_hepc_abnormal_test_after_diagnosis * 100` -- i.e. among patients with a positive HCV viral load test after diagnosis.
+
+`epic_n_patients_hepc_meds_after_diagnosis` and `epic_n_patients_hepc_abnormal_test_after_diagnosis` are new DERIVED columns (the source never reports these sub-population counts directly, only their rate against the new-diagnosis population): `round(epic_n_patients_hepc_new_diagnosis * rate / 100)`, the same derivation pattern used throughout this file. The "Normal VL" numerator is likewise only recoverable via the source's own rate against the full population, so it is backed out that way first, then **capped at the stage-1 count** it should be a subset of (the two rates are independently rounded by the source and can rarely disagree by a patient or two -- observed once in the 2026-09-10 export: Illinois 2025, 194 vs 176) so the re-expressed rate never exceeds 100%.
+
+Output: `standard/data_dashboard.csv.gz`
+
+| Column | Description |
+|---|---|
+| `geography` | 2-digit FIPS -- `00` (national), `01` (Alabama), `17` (Illinois), `22` (Louisiana), `25` (Massachusetts) |
+| `time` | Period end date, same convention as the other standard files |
+| `epic_n_patients_hepc_new_diagnosis` (+ `_suppressed_flag`) | Count of patients newly diagnosed with hepatitis C that year (no diagnosis the year before) |
+| `epic_pct_hepc_meds_after_diagnosis` (+ `_suppressed_flag`) | Rate of receiving antivirals after diagnosis, among ALL newly diagnosed patients (source-reported denominator, unchanged) |
+| `epic_n_patients_hepc_meds_after_diagnosis` (+ `_suppressed_flag`) | **DERIVED**: count of newly diagnosed patients who received antivirals after diagnosis -- `round(epic_n_patients_hepc_new_diagnosis * epic_pct_hepc_meds_after_diagnosis / 100)`. Denominator for `epic_pct_normal_vl_20wk_after_meds_new_diagnosis` |
+| `epic_pct_hepc_abnormal_test_after_diagnosis` (+ `_suppressed_flag`) | Rate of a positive HCV viral load test after diagnosis, among ALL newly diagnosed patients (source-reported denominator, unchanged) |
+| `epic_n_patients_hepc_abnormal_test_after_diagnosis` (+ `_suppressed_flag`) | **DERIVED**: count of newly diagnosed patients with a positive HCV viral load test after diagnosis -- `round(epic_n_patients_hepc_new_diagnosis * epic_pct_hepc_abnormal_test_after_diagnosis / 100)`. Denominator for `epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis` |
+| `epic_pct_hepc_any_test_after_diagnosis` (+ `_suppressed_flag`) | Rate of any HCV viral load test (positive or normal) after diagnosis, among ALL newly diagnosed patients. No cascade stage is built downstream of this branch |
+| `epic_pct_normal_vl_20wk_after_meds_new_diagnosis` (+ `_suppressed_flag`) | **RECONDITIONED**: rate of a normal VL result 20+ weeks after treatment, among patients who received antivirals after diagnosis (denominator: `epic_n_patients_hepc_meds_after_diagnosis`) -- NOT among all newly diagnosed patients as previously, and NOT the medication-restricted, prevalent population used for `epic_pct_normal_vl_20wk_after_hcv_medication` |
+| `epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis` (+ `_suppressed_flag`) | **RECONDITIONED**: rate of a normal VL result 20+ weeks after a positive test, among patients with a positive HCV viral load test after diagnosis (denominator: `epic_n_patients_hepc_abnormal_test_after_diagnosis`) -- NOT among all newly diagnosed patients as previously, and NOT the abnormal-test-restricted, prevalent population used for `epic_pct_normal_vl_20wk_after_abnormal_vl` |
+
+**The most recent period (2026, partial year Jan 1 - Sep 1) is suppressed in every one of the 5 geographies, for every one of the 6 source measures (and therefore for the two derived counts too).** This is confirmed in the raw export itself (every cell reads blank or "10 or fewer" for that period), not a parsing artifact -- consistent with a partial year producing fewer new diagnoses than a full year, on top of the declining incidence trend.
+
 ## Updating
 
 **SlicerDicer session IDs:**
 - Diagnosis crosstab: `2855468` (predecessors: `2850163`, `2850139`, `2847109`, `2847096`)
 - Medication crosstab: `2855386` (predecessor: `2850012`)
+- VL after abnormal test crosstab: `2857336`
+- VL after medication crosstab: `2857341`
+- Combined dashboard crosstab: `2857569`
 
 ### Diagnosis crosstab (`raw/staging/`)
 
@@ -106,11 +178,52 @@ re-exporting this session in the future, re-verify with a cell-for-cell spot che
 the diagnosis crosstab that the population is still "all HCV-diagnosed patients" and not a
 narrower bucket, since that distinction is not obvious from the column labels alone.
 
+### VL crosstabs (`raw/staging_vl_after_abnormal/`, `raw/staging_vl_after_meds/`)
+
+Both sessions share the same three named measure columns under a "Measures" header, in the
+same order -- `Normal HCV VL >12 weeks (%)`, `Normal HCV VL >20 weeks (%)`,
+`Number of Patients` (`NORMAL_VL_MEASURES`) -- but the row dimensions are in a **different
+order** between the two sessions, so each has its own `DIM_LABELS_VL_*` constant:
+
+- VL after abnormal test: `Year`, `Age at Encounter in Years`, `(All) Lab Components`,
+  `State of Residence` (last, repeats every row)
+- VL after medication: `Year`, `All Medications`, `State of Residence`,
+  `Age at Encounter in Years` (last, repeats every row)
+
+Only the row matching `TARGET_BUCKET_ABNORMAL` (`Abonormal Hep C test`, sic) or
+`TARGET_BUCKET_MEDS` (`HCV medication`) is kept from the respective bucket dimension; the
+crosstab's own `Total` bucket is dropped. Geography is then restricted to `VL_FOUR_STATES`
+(Alabama, Illinois, Louisiana, Massachusetts) -- this also drops the national `Total` row
+that appears within the target bucket, and (for the medication crosstab) a
+`None of the above` row.
+
+### Combined dashboard crosstab (`raw/staging_dashboard/`)
+
+Rows, in this order:
+
+1. `Year`
+2. `State of Residence`
+3. `(All) Lab Components`, with **both** `Hep C tests` and its `Total` bucket enabled
+4. `All Medications`, with **both** `Hep C meds` and its `Total` bucket enabled
+
+Measures (columns), all under a single "Measures" header: `Normal hep c test after meds, 20
+weeks (%)`, `Normal hep c test after abnormal test, 20 weeks (%)`, `Number of Patients`,
+`Hep C meds after diagnosis (%)`, `Abnormal hep C tests after diagnosis (%)`, `Any hep C test
+after diagnosis (%)` -- in that exact order (`DASHBOARD_MEASURES`). **When re-exporting,
+confirm the column order and exact wording still match**, since a duplicate or reordered
+label here would silently produce a `stop()` (safe) or, if two columns happened to share a
+label, would need `extract_named_measures_data()`'s exact-match check to catch it (it does).
+Note that an earlier export of this session had the "after meds" and "after abnormal test"
+measure labels IDENTICAL (a SlicerDicer labeling bug in that version of the session), making
+the two columns indistinguishable -- re-verify they are still uniquely labeled on each
+re-export before trusting the parse.
+
 ### Then
 
-1. Export both sessions from SlicerDicer and drop the `.xlsx` files into `raw/staging/` and
-   `raw/staging_medication/` respectively, **replacing** the previous export in each folder
-   (the ingest binds every file in each folder, so leaving an old one in place would
+1. Export all five sessions from SlicerDicer and drop the `.xlsx` files into `raw/staging/`,
+   `raw/staging_medication/`, `raw/staging_vl_after_abnormal/`, `raw/staging_vl_after_meds/`,
+   and `raw/staging_dashboard/` respectively, **replacing** the previous export in each
+   folder (the ingest binds every file in each folder, so leaving an old one in place would
    double-count overlapping years).
 2. Run the ingest:
    ```r
@@ -118,11 +231,13 @@ narrower bucket, since that distinction is not obvious from the column labels al
    ```
    or, from the project root, `dcf::dcf_process("cosmos_hepc")`.
 
-The ingest reprocesses only when the set of staging files or their md5 hashes changes in
-*either* folder; an unchanged pair of folders is a no-op. If only the ingest LOGIC changed
-(not the staging files), clear `raw_state` / `medication_raw_state` to `null` in
-`process.json` first to force a reprocess with the same files -- `dcf` will regenerate both
-fields with correct hashes on a successful run.
+The ingest reprocesses when the set of staging files or their md5 hashes changes in *any* of
+the five folders -- a single guard covers all of them, since `data_normal_vl.csv.gz` is
+built from four of them. An unchanged set of folders is a no-op. If only the ingest LOGIC
+changed (not the staging files), clear `raw_state` / `medication_raw_state` /
+`vl_abnormal_raw_state` / `vl_meds_raw_state` / `dashboard_raw_state` to `null` in
+`process.json` first to force a reprocess with the same files -- `dcf` will regenerate all
+five fields with correct hashes on a successful run.
 
 ### Prerequisites
 
@@ -147,17 +262,24 @@ column. Extend the constants at the top of `ingest.R`:
 | `MED_PCT_LABELS` | Recognized labels for the medication crosstab's rate column (currently `Hep C medication (%)` and the predecessor's `hcv medication measure (%)`) |
 | `DENOM_COL` / `MED_NUM_COL` / `MED_DENOM_COL` | Denominator/numerator column names per crosstab |
 | `MEASURE_PATTERN` | The measure name used both to pick "Number of Patients" out of the diagnosis crosstab's per-age-group measure triplet, and (where present) to assert the metadata block |
+| `DIM_LABELS_VL_ABNORMAL` / `DIM_LABELS_VL_MEDS` | Row index dimensions and their order, per VL crosstab |
+| `NORMAL_VL_MEASURES` | The 3 named measure columns both VL crosstabs report, in order |
+| `TARGET_BUCKET_ABNORMAL` / `TARGET_BUCKET_MEDS` | The bucket dimension value to keep per VL crosstab (the crosstab's other bucket, `Total`, is dropped) |
+| `VL_FOUR_STATES` | The states either VL session has exported data for |
 
-The two crosstabs use **different parsing functions** because their layouts differ in kind,
-not just in labels: `extract_staging_data()` handles the diagnosis crosstab's shape (3 row
-dimensions + a column axis, one or more measures per axis bucket -- only the one matching
-`MEASURE_PATTERN` is kept); `extract_medication_data()` handles the medication crosstab's
-shape (3 row dimensions + 2 named measure columns under a "Measures" header). Adding a
-second diagnosis bucket to the diagnosis crosstab needs only a `DX_LABELS` entry -- the
-script generates its count column, its percentage, and both flags automatically. See
-sections "4a"/"4b" in `ingest.R` for the downstream numerator/denominator/percent pattern to
-follow for a new measure. Add the corresponding `measure_info.json` entries by hand in all
-cases.
+The crosstabs use **three different parsing functions** because their layouts differ in
+kind, not just in labels: `extract_staging_data()` handles the diagnosis crosstab's shape (3
+row dimensions + a column axis, one or more measures per axis bucket -- only the one
+matching `MEASURE_PATTERN` is kept); `extract_medication_data()` handles the medication
+crosstab's shape (3 row dimensions + exactly 2 named measure columns, `Number of Patients`
+first); `extract_named_measures_data()` handles the two VL crosstabs' shape (an arbitrary
+number of row dimensions + an arbitrary, ordered set of named measure columns under a
+"Measures" header -- more general than the other two, so a future crosstab with a new
+dimension count or measure count is more likely to fit this one). Adding a second diagnosis
+bucket to the diagnosis crosstab needs only a `DX_LABELS` entry -- the script generates its
+count column, its percentage, and both flags automatically. See sections "4a"/"4b"/"4c+4d"
+in `ingest.R` for the downstream numerator/denominator/percent pattern to follow for a new
+measure. Add the corresponding `measure_info.json` entries by hand in all cases.
 
 ## Notes and caveats
 
@@ -217,9 +339,12 @@ cases.
   **Counts for a partial period are not comparable to a full year** -- use the percentage
   measure for any trend that spans a partial period, since the derived count is itself
   downstream of the (window-limited) rate.
-- **Dropped rows**, reported via `message()` at run time, in both crosstabs:
-  - `None of the above` (unknown state of residence) and non-state geographies
-    (`Puerto Rico`, other territories).
+- **Dropped rows**, reported via `message()` at run time:
+  - Diagnosis and medication crosstabs: `None of the above` (unknown state of residence) and
+    non-state geographies (`Puerto Rico`, other territories).
+  - VL crosstabs: each session's own `Total` bucket row (see "Normal HCV VL outcomes"
+    above), plus any geography outside `VL_FOUR_STATES` -- including the national `Total`
+    row and, for the medication crosstab, `None of the above`.
 - **Suppression.** For the medication measure, a blank rate can mean either that the
   population itself was 10 or fewer (denominator suppressed, Rule 1), or that the population
   was shown but the count meeting the measure was small enough to withhold on its own (Rule
@@ -240,7 +365,12 @@ cases.
 
 ## Current output
 
-52 geographies (50 states + DC + national) x 7 age groups (6 buckets + `Total`) x periods
-that differ by crosstab -- diagnosis crosstab: 2018-2025 full years plus the 2026-08-18
-partial (9 periods); medication crosstab: 2018-2025 full years plus the 2026-07-28 partial
-(9 periods) -- = 3,640 rows after the full join.
+**`standard/data.csv.gz`:** 52 geographies (50 states + DC + national) x 7 age groups (6
+buckets + `Total`) x periods that differ by crosstab -- diagnosis crosstab: 2018-2025 full
+years plus the 2026-08-18 partial (9 periods); medication crosstab: 2018-2025 full years plus
+the 2026-07-28 partial (9 periods) -- = 3,640 rows after the full join.
+
+**`standard/data_normal_vl.csv.gz`:** 4 geographies (Alabama, Illinois, Louisiana,
+Massachusetts; no national row) x 7 age groups x 10 distinct period-end dates (both VL
+crosstabs' own 2018-2025 full years plus their 2026-08-18 partial, unioned with the main
+file's 2026-08-18 and 2026-07-28 partials) = 280 rows after the full joins.

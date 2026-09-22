@@ -125,6 +125,97 @@
 # age at encounter is unknown, so it can exceed the sum of the six age
 # buckets slightly -- use the "Total" row for overall figures rather than
 # summing the buckets. Both crosstabs have the age "Total" enabled.
+#
+# 3. raw/staging_vl_after_abnormal/ (Session ID 2857336) -- among patients
+#    with the same viral hepatitis diagnosis, the rate of a subsequent NORMAL
+#    HCV viral load result at >12 weeks and >20 weeks, restricted to the
+#    "(All) Lab Components" row bucket = "Abonormal Hep C test" [sic --
+#    source typo, kept verbatim as the match key] (patients whose qualifying
+#    HCV lab result was abnormal). Four row dimensions: Year, Age at
+#    Encounter in Years, (All) Lab Components, State of Residence (last,
+#    repeats every row). Three named measure columns under a "Measures"
+#    header: "Normal HCV VL >12 weeks (%)", "Normal HCV VL >20 weeks (%)",
+#    "Number of Patients". The crosstab's OTHER Lab Components bucket
+#    ("Total" -- all patients regardless of this filter) is dropped; it is
+#    not the population this file is named for.
+#
+# 4. raw/staging_vl_after_meds/ (Session ID 2857341) -- the same two rate
+#    measures, restricted to the "All Medications" row bucket = "HCV
+#    medication" (patients who have received an HCV medication). Four row
+#    dimensions in a DIFFERENT order: Year, All Medications, State of
+#    Residence, Age at Encounter in Years (last, repeats every row). Same
+#    three named measure columns as crosstab 3. Its own "Total" bucket (all
+#    patients regardless of medication) is dropped for the same reason.
+#
+# Crosstabs 3 and 4 are written to a SEPARATE output,
+# standard/data_normal_vl.csv.gz, together with a copy of the corresponding
+# rows of standard/data.csv.gz -- see section 5b below. Only 4 states have
+# any exported data in either session (Alabama, Illinois, Louisiana,
+# Massachusetts); there is no national ("00") row in either crosstab's
+# target bucket, so data_normal_vl.csv.gz is intentionally state-only with
+# no national aggregate, unlike every other standard file in this repo.
+#
+# 5. raw/staging_dashboard/ (Session ID 2857569) -- a consolidated export
+#    combining 6 measures at once (population size, HCV-medication-after-
+#    diagnosis rate, abnormal-test-after-diagnosis rate, any-test-after-
+#    diagnosis rate, and BOTH VL-normalization rates already covered by
+#    crosstabs 3/4) into ONE crosstab, cross-tabulated by state/year AND two
+#    row-bucket dimensions: (All) Lab Components in {"Hep C tests", Total}
+#    and All Medications in {"Hep C meds", Total} -- 4 rows per state/year.
+#    PER USER DIRECTION, only the fully-UNCONDITIONED (Total x Total) row is
+#    kept. The population (epic_n_patients_hepc_new_diagnosis) is NEW/
+#    INCIDENT hepatitis C diagnoses -- patients with a diagnosis in the given
+#    year who did NOT have one in the prior year -- confirmed with the user;
+#    this is why it is markedly smaller than crosstab 1's epic_n_patients_hepc
+#    (which counts ALL patients diagnosed as of that year, i.e. the
+#    cumulative/prevalent population) and why it declines toward the present
+#    even as epic_n_patients_hepc grows: fewer NEW diagnoses each year, while
+#    the prevalent pool keeps accumulating. This makes every one of these 6
+#    measures a DIFFERENT population from the similarly-named measures
+#    elsewhere in this file (crosstab 2's epic_pct_hepc_medication, crosstab
+#    3/4's epic_pct_normal_vl_*_after_*, both computed among the PREVALENT
+#    diagnosed population) -- see each measure's entry in measure_info.json.
+#    Unlike crosstabs 3/4, this session DOES report a national "Total" row,
+#    so geography here is the same 4 states (Alabama, Illinois, Louisiana,
+#    Massachusetts) plus national "00" -- 5 geographies. The session has no
+#    age dimension at all (grain is geography/time only). Because both the
+#    grain (no age) and the national-row coverage differ from
+#    data_normal_vl.csv.gz's documented invariants, this crosstab is written
+#    to its own separate output, standard/data_dashboard.csv.gz, rather than
+#    folded into either existing standard file.
+#
+#    RECONDITIONED denominators for the two "Normal VL" rates (2026-09-21
+#    update, per explicit user direction): the source reports ALL 6 measures
+#    against the same denominator, epic_n_patients_hepc_new_diagnosis (see
+#    above) -- including "Normal hep c test after meds" and "Normal hep c
+#    test after abnormal test", despite their names implying a narrower,
+#    already-conditioned population. To build a true sequential care cascade
+#    (diagnosed -> meds/abnormal-test/any-test -> normal VL), this ingest now
+#    RE-EXPRESSES those two rates against the actual preceding-stage
+#    population instead of the full new-diagnosis population:
+#      epic_pct_normal_vl_20wk_after_meds_new_diagnosis is now numerator /
+#        epic_n_patients_hepc_meds_after_diagnosis * 100 (was: numerator /
+#        epic_n_patients_hepc_new_diagnosis * 100)
+#      epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis is now numerator /
+#        epic_n_patients_hepc_abnormal_test_after_diagnosis * 100 (same change)
+#    epic_n_patients_hepc_meds_after_diagnosis and
+#    epic_n_patients_hepc_abnormal_test_after_diagnosis are new DERIVED
+#    columns (the source never reports these sub-population counts directly,
+#    only their rate against the new-diagnosis population -- see
+#    round(population * rate / 100) below, the same derivation pattern used
+#    throughout this file). The numerator (the "normal VL" patient count) is
+#    still only recoverable via the source's own rate against the full
+#    new-diagnosis population, so it is first backed out that way and only
+#    then re-divided by the narrower denominator. Because the two stage-1
+#    rates and the two VL rates are independently reported/rounded by the
+#    source against the same total, the back-derived "normal VL" count can
+#    rarely come out fractionally above the stage-1 count it should be a
+#    subset of (observed once in the 2026-09-10 export: Illinois 2025, 194 vs
+#    176) -- capped at the stage-1 count so the re-expressed rate never
+#    exceeds 100%. epic_pct_hepc_meds_after_diagnosis,
+#    epic_pct_hepc_abnormal_test_after_diagnosis, and
+#    epic_pct_hepc_any_test_after_diagnosis are UNCHANGED -- still computed
+#    against epic_n_patients_hepc_new_diagnosis, per explicit user direction.
 # =============================================================================
 
 library(dplyr)
@@ -145,7 +236,11 @@ if (msoffcrypto_check != 0) {
 
 # Initialize process record
 if (!file.exists("process.json")) {
-  process <- list(raw_state = NULL, medication_raw_state = NULL)
+  process <- list(
+    raw_state = NULL, medication_raw_state = NULL,
+    vl_abnormal_raw_state = NULL, vl_meds_raw_state = NULL,
+    dashboard_raw_state = NULL
+  )
 } else {
   process <- dcf::dcf_process_record()
 }
@@ -192,6 +287,58 @@ MED_DENOM_COL <- "epic_n_patients_hepc_medication_pop"
 
 # The measure both sessions report; asserted against each export's metadata
 MEASURE_PATTERN <- "^Number of Patients"
+
+# --- Crosstabs 3 & 4: "Normal HCV VL" outcome after two exposures ----------
+# Both crosstabs report the same three named measure columns, in the same
+# order, under a "Measures" header -- but with the row dimensions in
+# DIFFERENT orders (see the header note above), so each gets its own
+# DIM_LABELS. Only the named TARGET_BUCKET_* row of the bucket dimension is
+# kept; the crosstab's own "Total" bucket is dropped (see header note).
+NORMAL_VL_MEASURES <- c(
+  "Normal HCV VL >12 weeks (%)", "Normal HCV VL >20 weeks (%)", "Number of Patients"
+)
+DIM_LABELS_VL_ABNORMAL <- c(
+  "Year"                      = "year",
+  "Age at Encounter in Years" = "age_raw",
+  "(All) Lab Components"      = "bucket",
+  "State of Residence"        = "state_name"
+)
+DIM_LABELS_VL_MEDS <- c(
+  "Year"                      = "year",
+  "All Medications"           = "bucket",
+  "State of Residence"        = "state_name",
+  "Age at Encounter in Years" = "age_raw"
+)
+TARGET_BUCKET_ABNORMAL <- "Abonormal Hep C test"  # sic -- source typo, kept verbatim
+TARGET_BUCKET_MEDS     <- "HCV medication"
+VL_FOUR_STATES <- c("Alabama", "Illinois", "Louisiana", "Massachusetts")
+
+# --- Crosstab 5: consolidated dashboard export (raw/staging_dashboard/) ----
+# FOUR row dimensions (Year, State of Residence, (All) Lab Components, All
+# Medications) and SIX named measure columns under a "Measures" header --
+# extract_named_measures_data() handles this shape unchanged, same as
+# crosstabs 3/4. Only the row where BOTH bucket dimensions read their own
+# "Total: ..." bucket (the unconditioned Total x Total combination) is kept;
+# the other 3 combinations per state/year (restricted to the "Hep C tests"
+# and/or "Hep C meds" buckets) are dropped -- the inverse of crosstabs 3/4,
+# which keep a named bucket and drop "Total". The "Total" bucket text for
+# (All) Lab Components embeds the state name (e.g. "Total: Total includes
+# all data under the Illinois bucket..."), so matching is by prefix, not an
+# exact string.
+DIM_LABELS_DASHBOARD <- c(
+  "Year"                  = "year",
+  "State of Residence"    = "state_name",
+  "(All) Lab Components"  = "lab_components",
+  "All Medications"       = "all_medications"
+)
+DASHBOARD_MEASURES <- c(
+  "Normal hep c test after meds, 20 weeks (%)",
+  "Normal hep c test after abnormal test, 20 weeks (%)",
+  "Number of Patients",
+  "Hep C meds after diagnosis (%)",
+  "Abnormal hep C tests after diagnosis (%)",
+  "Any hep C test after diagnosis (%)"
+)
 
 # Convert SlicerDicer age bucket text to the repo's age labels (shared by
 # both crosstabs -- crosstab 1 applies it to column headers, crosstab 2 to a
@@ -277,6 +424,42 @@ if (length(med_staging_files) == 0) {
   )
 }
 
+vl_abnormal_staging_files <- list.files(
+  "raw/staging_vl_after_abnormal",
+  pattern = "\\.(csv|xlsx)$", full.names = TRUE
+)
+if (length(vl_abnormal_staging_files) == 0) {
+  stop(
+    "No staging files found in raw/staging_vl_after_abnormal/.\n",
+    "Export the 'Normal HCV VL after abnormal VL' crosstab from Epic Cosmos ",
+    "SlicerDicer and place the .xlsx file there."
+  )
+}
+
+vl_meds_staging_files <- list.files(
+  "raw/staging_vl_after_meds",
+  pattern = "\\.(csv|xlsx)$", full.names = TRUE
+)
+if (length(vl_meds_staging_files) == 0) {
+  stop(
+    "No staging files found in raw/staging_vl_after_meds/.\n",
+    "Export the 'Normal HCV VL after meds' crosstab from Epic Cosmos ",
+    "SlicerDicer and place the .xlsx file there."
+  )
+}
+
+dashboard_staging_files <- list.files(
+  "raw/staging_dashboard",
+  pattern = "\\.(csv|xlsx)$", full.names = TRUE
+)
+if (length(dashboard_staging_files) == 0) {
+  stop(
+    "No staging files found in raw/staging_dashboard/.\n",
+    "Export the consolidated dashboard crosstab from Epic Cosmos SlicerDicer ",
+    "and place the .xlsx file there."
+  )
+}
+
 current_state <- list(
   files  = staging_files,
   hashes = unname(tools::md5sum(staging_files))
@@ -285,9 +468,30 @@ current_med_state <- list(
   files  = med_staging_files,
   hashes = unname(tools::md5sum(med_staging_files))
 )
+current_vl_abnormal_state <- list(
+  files  = vl_abnormal_staging_files,
+  hashes = unname(tools::md5sum(vl_abnormal_staging_files))
+)
+current_vl_meds_state <- list(
+  files  = vl_meds_staging_files,
+  hashes = unname(tools::md5sum(vl_meds_staging_files))
+)
+current_dashboard_state <- list(
+  files  = dashboard_staging_files,
+  hashes = unname(tools::md5sum(dashboard_staging_files))
+)
 
+# A single guard covers all five crosstabs: standard/data_normal_vl.csv.gz
+# (section 5b) is built from BOTH the VL crosstabs AND a slice of the main
+# merged file, so any of the four inputs changing must trigger a full
+# recompute of both standard outputs. Crosstab 5 writes its own separate
+# output (standard/data_dashboard.csv.gz) but is tracked by the same guard
+# for simplicity.
 if (!identical(process$raw_state, current_state) ||
-    !identical(process$medication_raw_state, current_med_state)) {
+    !identical(process$medication_raw_state, current_med_state) ||
+    !identical(process$vl_abnormal_raw_state, current_vl_abnormal_state) ||
+    !identical(process$vl_meds_raw_state, current_vl_meds_state) ||
+    !identical(process$dashboard_raw_state, current_dashboard_state)) {
 
   # ---------------------------------------------------------------------------
   # 2. Read the raw grids
@@ -545,6 +749,77 @@ if (!identical(process$raw_state, current_state) ||
       mutate(source_file = file_label)
   }
 
+  # Generic extractor for a K-row-dimension x M-named-measure-column
+  # crosstab, where the last dimension repeats every row and the earlier
+  # K-1 dimensions are merged cells (filled down). Unlike
+  # extract_staging_data() (one dimension spread across columns) or
+  # extract_medication_data() (fixed at exactly 2 named measures), this
+  # supports an arbitrary, ordered set of named measure columns under a
+  # "Measures" header -- crosstabs 3 & 4's shape.
+  extract_named_measures_data <- function(grid, file_label, dim_labels, expected_measures) {
+    dim_names <- names(dim_labels)
+    n_dim <- length(dim_names)
+
+    hdr <- NA_integer_
+    for (i in seq_len(nrow(grid))) {
+      if (identical(as.character(grid[i, seq_along(dim_names)]), dim_names)) {
+        hdr <- i
+        break
+      }
+    }
+    if (is.na(hdr)) {
+      stop(
+        file_label, ": could not find the row index header.\n",
+        "Expected the leading cells of a row to be: ", paste(dim_names, collapse = " | "), "\n",
+        "Update the relevant DIM_LABELS constant in ingest.R to match the export."
+      )
+    }
+
+    extra_dims <- setdiff(as.character(grid[hdr, ])[-seq_len(n_dim)], "")
+    if (length(extra_dims) > 0) {
+      stop(
+        file_label, ": unrecognized row dimension(s) in the header row: ",
+        paste(extra_dims, collapse = ", "),
+        "\nAdd them to the relevant DIM_LABELS constant in ingest.R."
+      )
+    }
+
+    measures_row <- as.character(grid[hdr - 1L, ])
+    if (!identical(measures_row[n_dim], "Measures")) {
+      stop(
+        file_label, ": expected 'Measures' label in column ", n_dim,
+        " of row ", hdr - 1L, " but found '", measures_row[n_dim], "'.\n",
+        "Update extract_named_measures_data() in ingest.R."
+      )
+    }
+
+    measure_labels <- measures_row[(n_dim + 1L):ncol(grid)]
+    measure_labels <- measure_labels[measure_labels != ""]
+    val_cols <- (n_dim + 1L):(n_dim + length(measure_labels))
+
+    if (!identical(measure_labels, expected_measures)) {
+      stop(
+        file_label, ": measure columns do not match expectations.\n",
+        "Found:    ", paste(measure_labels, collapse = " | "), "\n",
+        "Expected: ", paste(expected_measures, collapse = " | "), "\n",
+        "Update the expected-measures constant in ingest.R, or re-export the session."
+      )
+    }
+
+    body <- grid[(hdr + 1L):nrow(grid), c(seq_len(n_dim), val_cols), drop = FALSE]
+    rownames(body) <- NULL
+    names(body) <- c(unname(dim_labels), paste0("measure_", seq_along(measure_labels)))
+
+    fill_cols <- unname(dim_labels)[seq_len(n_dim - 1L)]
+    last_dim  <- unname(dim_labels)[n_dim]
+
+    body %>%
+      mutate(across(all_of(unname(dim_labels)), ~ na_if(.x, ""))) %>%
+      tidyr::fill(all_of(fill_cols), .direction = "down") %>%
+      filter(!is.na(.data[[last_dim]])) %>%
+      mutate(source_file = file_label)
+  }
+
   data_raw_hepc <- bind_rows(lapply(staging_files, function(f) {
     extract_staging_data(
       read_slicerdicer_grid(f, xlsx_password), basename(f),
@@ -556,6 +831,27 @@ if (!identical(process$raw_state, current_state) ||
     extract_medication_data(
       read_slicerdicer_grid(f, xlsx_password), basename(f),
       DIM_LABELS_MED, MED_PCT_LABELS
+    )
+  }))
+
+  data_raw_vl_abnormal <- bind_rows(lapply(vl_abnormal_staging_files, function(f) {
+    extract_named_measures_data(
+      read_slicerdicer_grid(f, xlsx_password), basename(f),
+      DIM_LABELS_VL_ABNORMAL, NORMAL_VL_MEASURES
+    )
+  }))
+
+  data_raw_vl_meds <- bind_rows(lapply(vl_meds_staging_files, function(f) {
+    extract_named_measures_data(
+      read_slicerdicer_grid(f, xlsx_password), basename(f),
+      DIM_LABELS_VL_MEDS, NORMAL_VL_MEASURES
+    )
+  }))
+
+  data_raw_dashboard <- bind_rows(lapply(dashboard_staging_files, function(f) {
+    extract_named_measures_data(
+      read_slicerdicer_grid(f, xlsx_password), basename(f),
+      DIM_LABELS_DASHBOARD, DASHBOARD_MEASURES
     )
   }))
 
@@ -918,6 +1214,420 @@ if (!identical(process$raw_state, current_state) ||
   )
 
   # ---------------------------------------------------------------------------
+  # 4c/4d. Crosstabs 3 & 4 -- "Normal HCV VL" outcome after two exposures.
+  # Both report a population count for the TARGET bucket and two rates
+  # directly; no numerator count is reported for either rate by the source,
+  # so none is derived here -- only what the source itself provides. See the
+  # header note for what "target bucket" means per crosstab and why the
+  # crosstab's other bucket ("Total") is dropped.
+  # ---------------------------------------------------------------------------
+  build_normal_vl_standard <- function(data_raw, target_bucket, label,
+                                        num_col, pct12_col, pct20_col) {
+    names(data_raw)[names(data_raw) == "measure_1"] <- "pct12_raw"
+    names(data_raw)[names(data_raw) == "measure_2"] <- "pct20_raw"
+    names(data_raw)[names(data_raw) == "measure_3"] <- "n_raw"
+
+    bad_age <- unique(data_raw$age_raw[!standardize_age_label(data_raw$age_raw) %in% AGE_EXPECTED])
+    if (length(bad_age) > 0) {
+      stop(
+        label, ": unrecognized age bucket label(s): ", paste(bad_age, collapse = " | "),
+        "\nExtend AGE_EXPECTED / standardize_age_label() in ingest.R."
+      )
+    }
+    data_raw <- data_raw %>% mutate(age = standardize_age_label(age_raw))
+
+    periods <- parse_period_end(data_raw$year)
+    if (any(periods$partial)) {
+      for (lbl in unique(data_raw$year[periods$partial])) {
+        message(
+          label, ": retaining partial period '", lbl, "' as time = ",
+          format(periods$date[match(lbl, data_raw$year)], "%Y-%m-%d"),
+          " - its counts cover only part of the year and are NOT comparable ",
+          "to a full year."
+        )
+      }
+    }
+
+    n_dropped_bucket <- sum(data_raw$bucket != target_bucket)
+    data_raw <- data_raw %>% filter(bucket == target_bucket)
+    message(
+      label, ": dropped ", n_dropped_bucket, " row(s) outside bucket = '",
+      target_bucket, "' (the crosstab's own 'Total' bucket)."
+    )
+
+    dropped_geo <- setdiff(unique(data_raw$state_name), VL_FOUR_STATES)
+    if (length(dropped_geo) > 0) {
+      message(
+        label, ": dropping geography rows outside the 4 covered states: ",
+        paste(dropped_geo, collapse = " | ")
+      )
+      data_raw <- data_raw %>% filter(state_name %in% VL_FOUR_STATES)
+    }
+
+    out <- data_raw %>%
+      left_join(state_fips_lookup, by = c("state_name" = "geography_name")) %>%
+      mutate(
+        time = format(parse_period_end(year)$date, "%Y-%m-%d"),
+        n_suppressed_flag = if_else(
+          is.na(n_raw) | n_raw == "" | n_raw == "10 or fewer", 1L, 0L, missing = 1L
+        ),
+        n_value = as.numeric(if_else(n_suppressed_flag == 1L, "5", gsub(",", "", n_raw))),
+        pct12_parsed = as.numeric(gsub("%", "", pct12_raw)),
+        pct12_suppressed_flag = as.integer(is.na(pct12_parsed)),
+        pct20_parsed = as.numeric(gsub("%", "", pct20_raw)),
+        pct20_suppressed_flag = as.integer(is.na(pct20_parsed))
+      )
+
+    if (any(is.na(out$geography))) {
+      stop(
+        label, ": unmatched state name(s): ",
+        paste(unique(out$state_name[is.na(out$geography)]), collapse = " | ")
+      )
+    }
+    if (any(is.na(out$time))) {
+      stop(label, ": failed to parse year for ", sum(is.na(out$time)), " rows.")
+    }
+    if (any(is.na(out$n_value))) {
+      stop(
+        label, ": unparseable count value(s): ",
+        paste(unique(out$n_raw[is.na(out$n_value)]), collapse = " | "),
+        "\nAdd the new suppression marker to the flag logic in ingest.R."
+      )
+    }
+    if (anyDuplicated(out[, index_cols]) > 0) {
+      stop(label, ": duplicate cells for the same geography / time / age.")
+    }
+
+    # Rates: reported directly when present; imputed via 5 / population when
+    # blank and the population itself was not suppressed; left NA when the
+    # population WAS suppressed (cosmos_vaccines precedent -- 5 / 5 * 100
+    # would assert a meaningless 100%).
+    out[[num_col]] <- out$n_value
+    out[[paste0(num_col, "_suppressed_flag")]] <- out$n_suppressed_flag
+    out[[pct12_col]] <- case_when(
+      !is.na(out$pct12_parsed) ~ out$pct12_parsed,
+      out$n_suppressed_flag == 1L ~ NA_real_,
+      TRUE ~ 5 / out$n_value * 100
+    )
+    out[[paste0(pct12_col, "_suppressed_flag")]] <- out$pct12_suppressed_flag
+    out[[pct20_col]] <- case_when(
+      !is.na(out$pct20_parsed) ~ out$pct20_parsed,
+      out$n_suppressed_flag == 1L ~ NA_real_,
+      TRUE ~ 5 / out$n_value * 100
+    )
+    out[[paste0(pct20_col, "_suppressed_flag")]] <- out$pct20_suppressed_flag
+
+    measure_cols <- c(num_col, pct12_col, pct20_col)
+    flag_cols    <- paste0(measure_cols, "_suppressed_flag")
+
+    out <- out %>%
+      select(all_of(index_cols), all_of(as.vector(rbind(measure_cols, flag_cols)))) %>%
+      arrange(geography, time, age)
+
+    # Dedicated validation, not validate_crosstab_standard(): these crosstabs
+    # have no national "00" row by design -- only 4 states are covered.
+    if (!all(grepl("^[0-9]{2}$", out$geography))) {
+      stop(label, ": non-2-digit-FIPS geography values found.")
+    }
+    if (!all(grepl("^[0-9]{4}-[0-9]{2}-[0-9]{2}$", out$time))) {
+      stop(label, ": time is not formatted as YYYY-mm-dd for all rows.")
+    }
+    for (mc in measure_cols) {
+      fc <- paste0(mc, "_suppressed_flag")
+      if (any(is.na(out[[fc]])) || !all(out[[fc]] %in% c(0L, 1L))) {
+        stop(label, ": ", fc, " must be 0 or 1 with no missing values.")
+      }
+      if (any(out[[mc]] < 0, na.rm = TRUE)) stop(label, ": ", mc, " has negative values.")
+    }
+    if (any(is.na(out[[num_col]]))) {
+      stop(label, ": ", num_col, " has missing values; every suppressed count should be imputed to 5.")
+    }
+    for (pc in c(pct12_col, pct20_col)) {
+      if (any(out[[pc]] < 0 | out[[pc]] > 100, na.rm = TRUE)) {
+        stop(label, ": ", pc, " has values outside [0, 100].")
+      }
+    }
+
+    out
+  }
+
+  vl_abnormal_standard <- build_normal_vl_standard(
+    data_raw_vl_abnormal, TARGET_BUCKET_ABNORMAL, "Crosstab 3 (VL after abnormal test)",
+    num_col = "epic_n_patients_after_abnormal_vl",
+    pct12_col = "epic_pct_normal_vl_12wk_after_abnormal_vl",
+    pct20_col = "epic_pct_normal_vl_20wk_after_abnormal_vl"
+  )
+
+  vl_meds_standard <- build_normal_vl_standard(
+    data_raw_vl_meds, TARGET_BUCKET_MEDS, "Crosstab 4 (VL after medication)",
+    num_col = "epic_n_patients_after_hcv_medication",
+    pct12_col = "epic_pct_normal_vl_12wk_after_hcv_medication",
+    pct20_col = "epic_pct_normal_vl_20wk_after_hcv_medication"
+  )
+
+  # ---------------------------------------------------------------------------
+  # 4e. Crosstab 5 -- consolidated dashboard export, Total x Total combo only.
+  # Six measures at once, all computed within the SAME unconditioned baseline
+  # population (see header CAVEAT) -- distinct from the similarly-named
+  # measures in crosstabs 2/3/4. No age dimension; this session DOES report a
+  # national "Total" row, unlike crosstabs 3/4.
+  # ---------------------------------------------------------------------------
+  names(data_raw_dashboard)[names(data_raw_dashboard) == "measure_1"] <- "pct_vl20wk_after_meds_raw"
+  names(data_raw_dashboard)[names(data_raw_dashboard) == "measure_2"] <- "pct_vl20wk_after_abnormal_raw"
+  names(data_raw_dashboard)[names(data_raw_dashboard) == "measure_3"] <- "n_raw"
+  names(data_raw_dashboard)[names(data_raw_dashboard) == "measure_4"] <- "pct_meds_after_dx_raw"
+  names(data_raw_dashboard)[names(data_raw_dashboard) == "measure_5"] <- "pct_abnormal_test_after_dx_raw"
+  names(data_raw_dashboard)[names(data_raw_dashboard) == "measure_6"] <- "pct_any_test_after_dx_raw"
+
+  n_dropped_combo <- sum(!(
+    grepl("^Total:", data_raw_dashboard$lab_components) &
+    grepl("^Total:", data_raw_dashboard$all_medications)
+  ))
+  data_raw_dashboard <- data_raw_dashboard %>%
+    filter(grepl("^Total:", lab_components) & grepl("^Total:", all_medications))
+  message(
+    "Crosstab 5 (dashboard): kept only the Total x Total (unconditioned) row ",
+    "per state/year, dropping ", n_dropped_combo, " row(s) restricted to the ",
+    "Hep C tests / Hep C meds buckets."
+  )
+
+  periods_dash <- parse_period_end(data_raw_dashboard$year)
+  if (any(periods_dash$partial)) {
+    for (lbl in unique(data_raw_dashboard$year[periods_dash$partial])) {
+      message(
+        "Crosstab 5 (dashboard): retaining partial period '", lbl, "' as time = ",
+        format(periods_dash$date[match(lbl, data_raw_dashboard$year)], "%Y-%m-%d"),
+        " - its counts cover only part of the year and are NOT comparable to a ",
+        "full year."
+      )
+    }
+  }
+
+  dropped_geo_dash <- setdiff(unique(data_raw_dashboard$state_name), valid_states)
+  if (length(dropped_geo_dash) > 0) {
+    message(
+      "Crosstab 5 (dashboard): dropping non-state / unknown geography rows: ",
+      paste(dropped_geo_dash, collapse = " | ")
+    )
+    data_raw_dashboard <- data_raw_dashboard %>% filter(state_name %in% valid_states)
+  }
+
+  dashboard_standard <- data_raw_dashboard %>%
+    mutate(
+      geography_name = if_else(state_name == "Total", "United States", state_name)
+    ) %>%
+    left_join(state_fips_lookup, by = "geography_name") %>%
+    mutate(
+      time = format(parse_period_end(year)$date, "%Y-%m-%d"),
+      n_suppressed_flag = if_else(
+        is.na(n_raw) | n_raw == "" | n_raw == "10 or fewer", 1L, 0L, missing = 1L
+      ),
+      n_value = as.numeric(if_else(n_suppressed_flag == 1L, "5", gsub(",", "", n_raw))),
+      pct_meds_parsed     = as.numeric(gsub("%", "", pct_meds_after_dx_raw)),
+      pct_meds_suppressed = as.integer(is.na(pct_meds_parsed)),
+      pct_abn_parsed      = as.numeric(gsub("%", "", pct_abnormal_test_after_dx_raw)),
+      pct_abn_suppressed  = as.integer(is.na(pct_abn_parsed)),
+      pct_any_parsed      = as.numeric(gsub("%", "", pct_any_test_after_dx_raw)),
+      pct_any_suppressed  = as.integer(is.na(pct_any_parsed)),
+      pct_vlm_parsed      = as.numeric(gsub("%", "", pct_vl20wk_after_meds_raw)),
+      pct_vlm_suppressed  = as.integer(is.na(pct_vlm_parsed)),
+      pct_vla_parsed      = as.numeric(gsub("%", "", pct_vl20wk_after_abnormal_raw)),
+      pct_vla_suppressed  = as.integer(is.na(pct_vla_parsed))
+    )
+
+  if (any(is.na(dashboard_standard$geography))) {
+    stop(
+      "Crosstab 5 (dashboard): unmatched geography name(s): ",
+      paste(unique(dashboard_standard$geography_name[is.na(dashboard_standard$geography)]), collapse = " | ")
+    )
+  }
+  if (any(is.na(dashboard_standard$time))) {
+    stop("Crosstab 5 (dashboard): failed to parse year for ", sum(is.na(dashboard_standard$time)), " rows.")
+  }
+  if (any(is.na(dashboard_standard$n_value))) {
+    stop(
+      "Crosstab 5 (dashboard): unparseable count value(s): ",
+      paste(unique(dashboard_standard$n_raw[is.na(dashboard_standard$n_value)]), collapse = " | "),
+      "\nAdd the new suppression marker to the flag logic in ingest.R."
+    )
+  }
+  dash_index_cols <- c("geography", "time")
+  if (anyDuplicated(dashboard_standard[, dash_index_cols]) > 0) {
+    stop("Crosstab 5 (dashboard): duplicate cells for the same geography / time.")
+  }
+
+  # Rule 1 (count) for the population, Rule 2 (5 / population * 100, or NA if
+  # the population itself was suppressed) for every percent measure -- all
+  # five rates share the same denominator, epic_n_patients_hepc_new_diagnosis.
+  impute_dashboard_pct <- function(parsed, n_suppressed, n_value) {
+    case_when(
+      !is.na(parsed) ~ parsed,
+      n_suppressed == 1L ~ NA_real_,
+      TRUE ~ 5 / n_value * 100
+    )
+  }
+
+  dashboard_standard$epic_n_patients_hepc_new_diagnosis <- dashboard_standard$n_value
+  dashboard_standard$epic_n_patients_hepc_new_diagnosis_suppressed_flag <- dashboard_standard$n_suppressed_flag
+
+  dashboard_standard$epic_pct_hepc_meds_after_diagnosis <- impute_dashboard_pct(
+    dashboard_standard$pct_meds_parsed, dashboard_standard$n_suppressed_flag, dashboard_standard$n_value
+  )
+  dashboard_standard$epic_pct_hepc_meds_after_diagnosis_suppressed_flag <- dashboard_standard$pct_meds_suppressed
+
+  dashboard_standard$epic_pct_hepc_abnormal_test_after_diagnosis <- impute_dashboard_pct(
+    dashboard_standard$pct_abn_parsed, dashboard_standard$n_suppressed_flag, dashboard_standard$n_value
+  )
+  dashboard_standard$epic_pct_hepc_abnormal_test_after_diagnosis_suppressed_flag <- dashboard_standard$pct_abn_suppressed
+
+  dashboard_standard$epic_pct_hepc_any_test_after_diagnosis <- impute_dashboard_pct(
+    dashboard_standard$pct_any_parsed, dashboard_standard$n_suppressed_flag, dashboard_standard$n_value
+  )
+  dashboard_standard$epic_pct_hepc_any_test_after_diagnosis_suppressed_flag <- dashboard_standard$pct_any_suppressed
+
+  # --- Derived stage-1 counts: patients within the new-diagnosis population
+  # who received meds / had an abnormal test after diagnosis. Not reported by
+  # the source directly (only the rate against epic_n_patients_hepc_new_diagnosis
+  # is), so derived the same way as every other back-calculated count in this
+  # file: round(population * rate / 100), with a suppressed cell imputed
+  # straight to 5 rather than round-tripping through an already-imputed rate.
+  # These become the denominators for the two "Normal VL" rates below.
+  dashboard_standard$epic_n_patients_hepc_meds_after_diagnosis <- if_else(
+    dashboard_standard$epic_pct_hepc_meds_after_diagnosis_suppressed_flag == 1L, 5,
+    round(dashboard_standard$n_value * dashboard_standard$epic_pct_hepc_meds_after_diagnosis / 100)
+  )
+  dashboard_standard$epic_n_patients_hepc_meds_after_diagnosis_suppressed_flag <-
+    dashboard_standard$epic_pct_hepc_meds_after_diagnosis_suppressed_flag
+
+  dashboard_standard$epic_n_patients_hepc_abnormal_test_after_diagnosis <- if_else(
+    dashboard_standard$epic_pct_hepc_abnormal_test_after_diagnosis_suppressed_flag == 1L, 5,
+    round(dashboard_standard$n_value * dashboard_standard$epic_pct_hepc_abnormal_test_after_diagnosis / 100)
+  )
+  dashboard_standard$epic_n_patients_hepc_abnormal_test_after_diagnosis_suppressed_flag <-
+    dashboard_standard$epic_pct_hepc_abnormal_test_after_diagnosis_suppressed_flag
+
+  # --- Normal VL rates, RECONDITIONED onto their true care-cascade
+  # denominator -- see the header note above. The source's own rate (against
+  # the full new-diagnosis population) is still the only way to recover the
+  # raw numerator COUNT, so it's backed out that way first and then
+  # re-expressed as a percent of the narrower, preceding-stage denominator.
+  raw_pct_vlm <- impute_dashboard_pct(
+    dashboard_standard$pct_vlm_parsed, dashboard_standard$n_suppressed_flag, dashboard_standard$n_value
+  )
+  n_normal_after_meds <- if_else(
+    dashboard_standard$pct_vlm_suppressed == 1L, 5,
+    round(dashboard_standard$n_value * raw_pct_vlm / 100)
+  )
+  # Capped at the stage-1 count it should be a subset of -- see header note
+  # on why the independently-rounded source rates can rarely disagree.
+  n_normal_after_meds <- pmin(n_normal_after_meds, dashboard_standard$epic_n_patients_hepc_meds_after_diagnosis)
+  dashboard_standard$epic_pct_normal_vl_20wk_after_meds_new_diagnosis <- case_when(
+    dashboard_standard$pct_vlm_suppressed == 1L ~ NA_real_,
+    dashboard_standard$epic_n_patients_hepc_meds_after_diagnosis_suppressed_flag == 1L ~ NA_real_,
+    dashboard_standard$epic_n_patients_hepc_meds_after_diagnosis == 0 ~ NA_real_,
+    TRUE ~ n_normal_after_meds / dashboard_standard$epic_n_patients_hepc_meds_after_diagnosis * 100
+  )
+  dashboard_standard$epic_pct_normal_vl_20wk_after_meds_new_diagnosis_suppressed_flag <- as.integer(
+    dashboard_standard$pct_vlm_suppressed == 1L |
+      dashboard_standard$epic_n_patients_hepc_meds_after_diagnosis_suppressed_flag == 1L
+  )
+
+  raw_pct_vla <- impute_dashboard_pct(
+    dashboard_standard$pct_vla_parsed, dashboard_standard$n_suppressed_flag, dashboard_standard$n_value
+  )
+  n_normal_after_abnormal <- if_else(
+    dashboard_standard$pct_vla_suppressed == 1L, 5,
+    round(dashboard_standard$n_value * raw_pct_vla / 100)
+  )
+  n_normal_after_abnormal <- pmin(n_normal_after_abnormal, dashboard_standard$epic_n_patients_hepc_abnormal_test_after_diagnosis)
+  dashboard_standard$epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis <- case_when(
+    dashboard_standard$pct_vla_suppressed == 1L ~ NA_real_,
+    dashboard_standard$epic_n_patients_hepc_abnormal_test_after_diagnosis_suppressed_flag == 1L ~ NA_real_,
+    dashboard_standard$epic_n_patients_hepc_abnormal_test_after_diagnosis == 0 ~ NA_real_,
+    TRUE ~ n_normal_after_abnormal / dashboard_standard$epic_n_patients_hepc_abnormal_test_after_diagnosis * 100
+  )
+  dashboard_standard$epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis_suppressed_flag <- as.integer(
+    dashboard_standard$pct_vla_suppressed == 1L |
+      dashboard_standard$epic_n_patients_hepc_abnormal_test_after_diagnosis_suppressed_flag == 1L
+  )
+
+  dash_pct_cols <- c(
+    "epic_pct_hepc_meds_after_diagnosis",
+    "epic_pct_hepc_abnormal_test_after_diagnosis",
+    "epic_pct_hepc_any_test_after_diagnosis",
+    "epic_pct_normal_vl_20wk_after_meds_new_diagnosis",
+    "epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis"
+  )
+  dash_count_cols <- c(
+    "epic_n_patients_hepc_new_diagnosis",
+    "epic_n_patients_hepc_meds_after_diagnosis",
+    "epic_n_patients_hepc_abnormal_test_after_diagnosis"
+  )
+  dash_measure_cols <- c(
+    "epic_n_patients_hepc_new_diagnosis",
+    "epic_pct_hepc_meds_after_diagnosis",
+    "epic_n_patients_hepc_meds_after_diagnosis",
+    "epic_pct_hepc_abnormal_test_after_diagnosis",
+    "epic_n_patients_hepc_abnormal_test_after_diagnosis",
+    "epic_pct_hepc_any_test_after_diagnosis",
+    "epic_pct_normal_vl_20wk_after_meds_new_diagnosis",
+    "epic_pct_normal_vl_20wk_after_abnormal_new_diagnosis"
+  )
+  dash_flag_cols <- paste0(dash_measure_cols, "_suppressed_flag")
+
+  dashboard_standard <- dashboard_standard %>%
+    select(all_of(dash_index_cols), all_of(as.vector(rbind(dash_measure_cols, dash_flag_cols)))) %>%
+    arrange(geography, time)
+
+  # Dedicated validation: no age dimension (grain is geography/time only),
+  # and a national "00" row IS expected here, unlike crosstabs 3/4.
+  if (!all(grepl("^[0-9]{2}$", dashboard_standard$geography))) {
+    stop("Crosstab 5 (dashboard): non-2-digit-FIPS geography values found.")
+  }
+  if (!"00" %in% dashboard_standard$geography) {
+    stop("Crosstab 5 (dashboard): national row ('00') is missing from the output.")
+  }
+  if (!all(grepl("^[0-9]{4}-[0-9]{2}-[0-9]{2}$", dashboard_standard$time))) {
+    stop("Crosstab 5 (dashboard): time is not formatted as YYYY-mm-dd for all rows.")
+  }
+  for (mc in dash_measure_cols) {
+    fc <- paste0(mc, "_suppressed_flag")
+    if (any(is.na(dashboard_standard[[fc]])) || !all(dashboard_standard[[fc]] %in% c(0L, 1L))) {
+      stop("Crosstab 5 (dashboard): ", fc, " must be 0 or 1 with no missing values.")
+    }
+    if (any(dashboard_standard[[mc]] < 0, na.rm = TRUE)) {
+      stop("Crosstab 5 (dashboard): ", mc, " has negative values.")
+    }
+  }
+  for (cc in dash_count_cols) {
+    if (any(is.na(dashboard_standard[[cc]]))) {
+      stop(
+        "Crosstab 5 (dashboard): ", cc, " has missing values; every ",
+        "suppressed count should be imputed to 5."
+      )
+    }
+  }
+  for (pc in dash_pct_cols) {
+    v <- dashboard_standard[[pc]]
+    if (any(v < 0 | v > 100, na.rm = TRUE)) {
+      stop("Crosstab 5 (dashboard): ", pc, " has values outside [0, 100].")
+    }
+  }
+  # The two derived stage-1 counts are sub-populations of the new-diagnosis
+  # population -- they should never exceed it (a "more meds patients than
+  # diagnoses" cell would indicate a bug in the derivation above).
+  for (cc in c("epic_n_patients_hepc_meds_after_diagnosis", "epic_n_patients_hepc_abnormal_test_after_diagnosis")) {
+    over <- which(dashboard_standard[[cc]] > dashboard_standard$epic_n_patients_hepc_new_diagnosis)
+    if (length(over) > 0) {
+      stop(
+        "Crosstab 5 (dashboard): ", cc, " exceeds epic_n_patients_hepc_new_diagnosis in ",
+        length(over), " cell(s), e.g. ", dashboard_standard$geography[over[1]],
+        " / ", dashboard_standard$time[over[1]]
+      )
+    }
+  }
+
+  # ---------------------------------------------------------------------------
   # 5. Merge the two crosstabs. A full join on (geography, time, age) merges
   #    them without truncating either source to the other's max date/grain --
   #    cells present in only one crosstab (e.g. each crosstab's own trailing
@@ -928,10 +1638,26 @@ if (!identical(process$raw_state, current_state) ||
     arrange(geography, time, age)
 
   # ---------------------------------------------------------------------------
+  # 5b. Crosstabs 3 & 4 cover only 4 states, so they are combined with a
+  #    4-state-only slice of standard/data.csv.gz into a SEPARATE output
+  #    rather than folded into the (nationally-representative) main file.
+  # ---------------------------------------------------------------------------
+  vl_four_state_fips <- state_fips_lookup$geography[state_fips_lookup$geography_name %in% VL_FOUR_STATES]
+
+  data_normal_vl_standard <- full_join(vl_abnormal_standard, vl_meds_standard, by = index_cols) %>%
+    full_join(
+      data_standard %>% filter(geography %in% vl_four_state_fips),
+      by = index_cols
+    ) %>%
+    arrange(geography, time, age)
+
+  # ---------------------------------------------------------------------------
   # 6. Write standardized output
   # ---------------------------------------------------------------------------
   if (!dir.exists("standard")) dir.create("standard")
   vroom::vroom_write(data_standard, "standard/data.csv.gz", delim = ",")
+  vroom::vroom_write(data_normal_vl_standard, "standard/data_normal_vl.csv.gz", delim = ",")
+  vroom::vroom_write(dashboard_standard, "standard/data_dashboard.csv.gz", delim = ",")
 
   message(
     "Wrote standard/data.csv.gz: ", nrow(data_standard), " rows, ",
@@ -952,10 +1678,51 @@ if (!identical(process$raw_state, current_state) ||
     )
   }
 
+  message(
+    "Wrote standard/data_normal_vl.csv.gz: ", nrow(data_normal_vl_standard), " rows, ",
+    length(unique(data_normal_vl_standard$geography)), " geographies (",
+    paste(sort(unique(data_normal_vl_standard$geography)), collapse = ", "), "), ",
+    min(data_normal_vl_standard$time), " to ", max(data_normal_vl_standard$time)
+  )
+  for (mc in c(
+    "epic_n_patients_after_abnormal_vl", "epic_pct_normal_vl_12wk_after_abnormal_vl",
+    "epic_pct_normal_vl_20wk_after_abnormal_vl", "epic_n_patients_after_hcv_medication",
+    "epic_pct_normal_vl_12wk_after_hcv_medication", "epic_pct_normal_vl_20wk_after_hcv_medication"
+  )) {
+    fc <- paste0(mc, "_suppressed_flag")
+    message(
+      "  ", mc, ": ", sum(data_normal_vl_standard[[fc]], na.rm = TRUE), " of ",
+      sum(!is.na(data_normal_vl_standard[[fc]])), " cells suppressed (",
+      round(100 * mean(data_normal_vl_standard[[fc]], na.rm = TRUE), 1), "%), ",
+      sum(is.na(data_normal_vl_standard[[mc]])), " left NA"
+    )
+  }
+
+  message(
+    "Wrote standard/data_dashboard.csv.gz: ", nrow(dashboard_standard), " rows, ",
+    length(unique(dashboard_standard$geography)), " geographies (",
+    paste(sort(unique(dashboard_standard$geography)), collapse = ", "), "), ",
+    min(dashboard_standard$time), " to ", max(dashboard_standard$time)
+  )
+  for (mc in dash_measure_cols) {
+    fc <- paste0(mc, "_suppressed_flag")
+    message(
+      "  ", mc, ": ", sum(dashboard_standard[[fc]], na.rm = TRUE), " of ",
+      sum(!is.na(dashboard_standard[[fc]])), " cells suppressed (",
+      round(100 * mean(dashboard_standard[[fc]], na.rm = TRUE), 1), "%)",
+      if (mc %in% dash_pct_cols) {
+        paste0(", ", sum(is.na(dashboard_standard[[mc]])), " left NA")
+      } else ""
+    )
+  }
+
   # ---------------------------------------------------------------------------
   # 7. Record processed state
   # ---------------------------------------------------------------------------
   process$raw_state <- current_state
   process$medication_raw_state <- current_med_state
+  process$vl_abnormal_raw_state <- current_vl_abnormal_state
+  process$vl_meds_raw_state <- current_vl_meds_state
+  process$dashboard_raw_state <- current_dashboard_state
   dcf::dcf_process_record(updated = process)
 }
