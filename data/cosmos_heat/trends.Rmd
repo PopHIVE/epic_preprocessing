@@ -1,0 +1,153 @@
+---
+title: "cosmos_heat trends"
+output:
+  html_document:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE,
+                       fig.width = 10, fig.height = 7)
+
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(scales)
+library(sf)
+library(tigris)
+
+options(tigris_use_cache = TRUE)
+
+# Excluded from state maps for cartographic simplicity (CRS 5070 is CONUS-only),
+# matching scripts/validate_dataset.Rmd's convention.
+DROP_ST <- c("02", "15", "60", "66", "69", "72", "78")  # AK, HI, territories
+
+dat <- vroom::vroom("standard/data.csv.gz", show_col_types = FALSE,
+                     col_types = vroom::cols(geography = "c")) %>%
+  mutate(time = as.Date(time))
+
+all_fips <- vroom::vroom("../../resources/all_fips.csv.gz", show_col_types = FALSE)
+
+pop_state <- vroom::vroom("../../resources/pop_state.csv.gz", show_col_types = FALSE) %>%
+  filter(age_level == "Total", geography != "United States") %>%
+  rename(geography_name = geography) %>%
+  left_join(
+    all_fips %>% filter(nchar(geography) == 2) %>% select(geography, geography_name),
+    by = "geography_name"
+  ) %>%
+  filter(!is.na(geography)) %>%
+  transmute(geography, population = popsize)
+
+states_sf <- tigris::states(cb = TRUE, resolution = "5m", year = 2022, progress_bar = FALSE) %>%
+  filter(!STATEFP %in% DROP_ST) %>%
+  transmute(geography = as.character(GEOID))
+
+pct_fmt <- label_percent(scale = 1, accuracy = 0.001)
+```
+
+```{r national-trend}
+measure_labels <- c(epic_pct_hri_high = "High severity",
+                     epic_pct_hri_med  = "Medium severity",
+                     epic_pct_hri_low  = "Low severity")
+
+nat <- dat %>%
+  filter(geography == "00") %>%
+  select(time, all_of(names(measure_labels))) %>%
+  pivot_longer(-time, names_to = "measure", values_to = "value") %>%
+  mutate(measure = factor(measure_labels[measure], levels = measure_labels))
+
+ggplot(nat, aes(time, value, color = measure)) +
+  geom_line(linewidth = 0.7) +
+  geom_point(size = 1) +
+  scale_color_manual(values = c("High severity"   = "#d7191c",
+                                 "Medium severity" = "#fdae61",
+                                 "Low severity"    = "#2c7bb6"),
+                      name = NULL) +
+  scale_y_continuous(labels = pct_fmt) +
+  labs(title = "National Heat-Related Illness, by Severity",
+       subtitle = "Percent of all Epic Cosmos patients, monthly",
+       x = NULL, y = NULL) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "top", plot.title = element_text(face = "bold"))
+```
+
+```{r map-helper}
+draw_year_maps <- function(measure_col, label) {
+  d_state <- dat %>%
+    filter(nchar(geography) == 2, geography != "00") %>%
+    mutate(year = format(time, "%Y")) %>%
+    group_by(geography, year) %>%
+    summarize(value = mean(.data[[measure_col]], na.rm = TRUE), .groups = "drop")
+
+  grid0 <- expand.grid(geography = states_sf$geography,
+                        year = sort(unique(d_state$year)),
+                        stringsAsFactors = FALSE)
+
+  md <- grid0 %>%
+    left_join(d_state, by = c("geography", "year")) %>%
+    left_join(states_sf, by = "geography") %>%
+    sf::st_as_sf()
+
+  print(
+    ggplot(md) +
+      geom_sf(aes(fill = value), color = "white", linewidth = 0.1) +
+      scale_fill_viridis_c(option = "viridis", na.value = "grey80",
+                            labels = pct_fmt, name = NULL) +
+      facet_wrap(~year, ncol = 4) +
+      coord_sf(crs = 5070, datum = NA) +
+      labs(title = label,
+           subtitle = "Annual mean percent of patients (grey = no data)") +
+      theme_void(base_size = 11) +
+      theme(plot.title = element_text(face = "bold", hjust = 0.5),
+            strip.text = element_text(face = "bold"),
+            legend.position = "right")
+  )
+}
+```
+
+```{r state-maps-high, fig.height=11}
+draw_year_maps("epic_pct_hri_high", "High Severity Heat-Related Illness")
+```
+
+```{r state-maps-med, fig.height=11}
+draw_year_maps("epic_pct_hri_med", "Medium Severity Heat-Related Illness")
+```
+
+```{r state-maps-low, fig.height=11}
+draw_year_maps("epic_pct_hri_low", "Low Severity Heat-Related Illness")
+```
+
+```{r coverage-map}
+year_counts <- dat %>%
+  filter(nchar(geography) == 2, geography != "00") %>%
+  distinct(time) %>%
+  mutate(year = format(time, "%Y")) %>%
+  count(year, name = "n_months")
+
+coverage_year <- max(year_counts$year[year_counts$n_months == 12])
+
+coverage <- dat %>%
+  filter(nchar(geography) == 2, geography != "00", format(time, "%Y") == coverage_year) %>%
+  group_by(geography) %>%
+  summarize(n_patients = mean(epic_n_patients), .groups = "drop") %>%
+  left_join(pop_state, by = "geography") %>%
+  mutate(coverage_pct = n_patients / population * 100)
+
+grid_cov <- data.frame(geography = states_sf$geography, stringsAsFactors = FALSE)
+
+md_cov <- grid_cov %>%
+  left_join(coverage, by = "geography") %>%
+  left_join(states_sf, by = "geography") %>%
+  sf::st_as_sf()
+
+ggplot(md_cov) +
+  geom_sf(aes(fill = coverage_pct), color = "white", linewidth = 0.1) +
+  scale_fill_viridis_c(option = "magma", na.value = "grey80",
+                        labels = pct_fmt, name = NULL) +
+  coord_sf(crs = 5070, datum = NA) +
+  labs(title = "Epic Cosmos Coverage",
+       subtitle = sprintf("Average monthly patients / state population, %s (grey = no data)",
+                           coverage_year)) +
+  theme_void(base_size = 12) +
+  theme(plot.title = element_text(face = "bold", hjust = 0.5), legend.position = "right")
+```
