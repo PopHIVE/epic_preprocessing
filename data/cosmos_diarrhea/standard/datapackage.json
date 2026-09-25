@@ -58,8 +58,8 @@
       "id_length": 2,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-09-25 13:53:05.179078",
-      "last_modified": "2026-09-25 13:53:05.179078",
+      "created": "2026-09-25 14:55:08.675255",
+      "last_modified": "2026-09-25 14:55:08.675255",
       "vintage": ["9/25/2026", "9/25/2026"],
       "row_count": 78183,
       "entity_count": 51,
@@ -1049,9 +1049,9 @@
       "sha512": "0d999f8e459853a4593ee316aace836c4dfcd4a41a4aa53929a999bfa24614058847291984a3b272565a3c81451403fbb8716e0bc062152a160e5d98649ac4a9"
     },
     {
-      "bytes": 384231,
+      "bytes": 384728,
       "encoding": "ISO-8859-1",
-      "md5": "ba06bbc5e73013049426e96bddd21e92",
+      "md5": "5e429631d4ec738b461e6e0fdaecee25",
       "format": "csv",
       "name": "weekly_tests.csv",
       "filename": "weekly_tests.csv.gz",
@@ -1099,9 +1099,9 @@
       "id_length": 2,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-09-25 13:53:06.081073",
-      "last_modified": "2026-09-25 13:53:06.081073",
-      "vintage": ["9/25/2026", "9/4/2026"],
+      "created": "2026-09-25 14:55:09.597658",
+      "last_modified": "2026-09-25 14:55:09.597658",
+      "vintage": ["9/25/2026", "9/25/2026"],
       "row_count": 11169,
       "entity_count": 51,
       "schema": {
@@ -1424,7 +1424,7 @@
           },
           {
             "name": "epic_n_encounters_total_weekly",
-            "duplicates": 44,
+            "duplicates": 40,
             "info": {
               "id": "epic_n_encounters_total_weekly",
               "short_name": "All Encounters (Any Reason, Weekly)",
@@ -1443,14 +1443,14 @@
             "time_range": [0, 218],
             "type": "integer",
             "missing": 0,
-            "mean": 1939938.672844,
-            "sd": 6878157.708005,
+            "mean": 1939856.872325,
+            "sd": 6878168.217526,
             "min": 4655,
             "max": 61262123
           },
           {
             "name": "epic_n_cyclospora_positive",
-            "duplicates": 11069,
+            "duplicates": 11066,
             "info": {
               "id": "epic_n_cyclospora_positive",
               "short_name": "Cyclospora Positive Encounters",
@@ -1466,17 +1466,17 @@
                 }
               ]
             },
-            "time_range": [0, 216],
+            "time_range": [0, 217],
             "type": "integer",
-            "missing": 102,
-            "mean": 7.916509,
-            "sd": 67.998943,
+            "missing": 51,
+            "mean": 7.974276,
+            "sd": 68.63439,
             "min": 5,
-            "max": 4721
+            "max": 4762
           },
           {
             "name": "epic_n_cyclospora_tested",
-            "duplicates": 10056,
+            "duplicates": 10025,
             "info": {
               "id": "epic_n_cyclospora_tested",
               "short_name": "Cyclospora Tests Performed",
@@ -1492,17 +1492,17 @@
                 }
               ]
             },
-            "time_range": [0, 216],
+            "time_range": [0, 217],
             "type": "integer",
-            "missing": 102,
-            "mean": 359.031626,
-            "sd": 1339.188764,
+            "missing": 51,
+            "mean": 365.041015,
+            "sd": 1365.016923,
             "min": 5,
-            "max": 29693
+            "max": 29953
           },
           {
             "name": "epic_pct_cyclospora_positive",
-            "duplicates": 9927,
+            "duplicates": 9881,
             "info": {
               "id": "epic_pct_cyclospora_positive",
               "short_name": "Cyclospora Percent Positive",
@@ -1518,17 +1518,17 @@
                 }
               ]
             },
-            "time_range": [0, 216],
+            "time_range": [0, 217],
             "type": "float",
-            "missing": 102,
-            "mean": 15.996739,
-            "sd": 28.350214,
-            "min": 0.042127,
+            "missing": 51,
+            "mean": 15.838565,
+            "sd": 28.193148,
+            "min": 0.041985,
             "max": 100
           },
           {
             "name": "epic_pct_cyclospora_tested",
-            "duplicates": 107,
+            "duplicates": 55,
             "info": {
               "id": "epic_pct_cyclospora_tested",
               "short_name": "Percent Tested for Cyclospora",
@@ -1544,17 +1544,17 @@
                 }
               ]
             },
-            "time_range": [0, 216],
+            "time_range": [0, 217],
             "type": "float",
-            "missing": 102,
-            "mean": 0.020605,
-            "sd": 0.014077,
+            "missing": 51,
+            "mean": 0.0208,
+            "sd": 0.014109,
             "min": 0.000274,
-            "max": 0.162776
+            "max": 0.165387
           },
           {
             "name": "epic_pct_all_diarrhea",
-            "duplicates": 0,
+            "duplicates": 1,
             "info": {
               "id": "epic_pct_all_diarrhea",
               "short_name": "Diarrhea Encounters (All Encounters, %)",
@@ -1573,9 +1573,9 @@
             "time_range": [0, 218],
             "type": "float",
             "missing": 0,
-            "mean": 0.411769,
-            "sd": 0.086191,
-            "min": 0.144032,
+            "mean": 0.411832,
+            "sd": 0.086173,
+            "min": 0.144132,
             "max": 1.420906
           },
           {
@@ -1645,11 +1645,11 @@
                 }
               ]
             },
-            "time_range": [0, 216],
+            "time_range": [0, 217],
             "type": "integer",
-            "missing": 102,
-            "mean": 0.971085,
-            "sd": 0.167575,
+            "missing": 51,
+            "mean": 0.970408,
+            "sd": 0.169466,
             "min": 0,
             "max": 1
           },
@@ -1670,11 +1670,11 @@
                 }
               ]
             },
-            "time_range": [0, 216],
+            "time_range": [0, 217],
             "type": "integer",
-            "missing": 102,
-            "mean": 0.094786,
-            "sd": 0.292933,
+            "missing": 51,
+            "mean": 0.093452,
+            "sd": 0.291078,
             "min": 0,
             "max": 1
           }
@@ -2005,84 +2005,12 @@
           "id": "_catalog"
         }
       },
-      "sha512": "96fb5857a7cb967d387d93293ae784c65dad469831d9b567a7ae8206a1c76ebcb2f51305cda35c025d0ba3c95f9021d60a5ffd7b8b8e765bb1eb934eb3773749"
+      "sha512": "9ee25c51c3993928996b300d164cf648502b87ad243467380d07954740b648459e64830342709ba415ae27b3cdfbdbf4780360578e227c7e29548fe9c8de3ba5"
     }
   ],
   "change_report": {
     "data_weekly.csv.gz": {
-      "state": "changed",
-      "variables": {
-        "geography": {
-          "status": "present",
-          "same_type": true,
-          "added_levels": [],
-          "dropped_levels": []
-        },
-        "age": {
-          "status": "present",
-          "same_type": true,
-          "added_levels": [],
-          "dropped_levels": []
-        },
-        "time": {
-          "status": "present",
-          "same_type": true,
-          "added_levels": ["2026-08-29", "2026-09-05"],
-          "dropped_levels": []
-        },
-        "epic_n_ed_diarrhea": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_ed_vomiting": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_ed_encounters_weekly": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_pct_ed_diarrhea": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_pct_ed_vomiting": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_suppressed_flag_ed_diarrhea": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_suppressed_flag_ed_vomiting": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_suppressed_flag_ed_encounters_weekly": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_all_diarrhea": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_encounters_total_weekly": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_pct_all_diarrhea": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_suppressed_flag_all_diarrhea": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_suppressed_flag_encounters_total_weekly": {
-          "status": "present",
-          "same_type": true
-        }
-      }
+      "state": "unchanged"
     },
     "weekly_tests.csv.gz": {
       "state": "changed",
@@ -2096,7 +2024,7 @@
         "time": {
           "status": "present",
           "same_type": true,
-          "added_levels": ["2026-08-29", "2026-09-05"],
+          "added_levels": [],
           "dropped_levels": []
         },
         "epic_n_all_diarrhea": {
