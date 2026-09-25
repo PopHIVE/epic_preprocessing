@@ -1,37 +1,48 @@
 # =============================================================================
 # Epic Cosmos Vector-Borne Disease Data Ingestion
 # Source: Epic Cosmos SlicerDicer export (raw/staging/*.xlsx)
-#         Monthly patient counts with a vector-borne disease diagnosis, by
-#         state, for six diseases: Lyme, Babesiosis, Malaria, RMSF (Rocky
-#         Mountain Spotted Fever), West Nile, and Dengue
+#         Annual patient counts with a vector-borne disease diagnosis, by
+#         state, for seven diseases: Erythema Migrans, Lyme, Babesiosis,
+#         Malaria, RMSF (Rocky Mountain Spotted Fever), West Nile, and Dengue
 #
-# SlicerDicer session 2852889 (originally created as session 2852629; Epic
-# assigns a new session ID whenever the session is re-saved, but the query is
-# unchanged), "Lyme N and Babesiosis N and Malaria N and RMSF N and West Nile
-# N and Dengue N and Number of Patients by State of Residence":
+# SlicerDicer session 2857896 (previously 2852889 / 2852629 - Epic assigns a
+# new session ID whenever the session is re-saved), "n erythema migrans and n
+# babesiosis and n malaria and n RMSF and n west nile and n dengue and Number
+# of Patients and n lyme by State of Residence":
 #   Data model      : Patients
 #   Population base : All Patients
 #   Criteria        : Country of Care = United States of America,
 #                      Has Any Encounters
-#   Measures        : Lyme N, Babesiosis N, Malaria N, RMSF N, West Nile N,
-#                      Dengue N (numerators), Number of Patients (denominator)
+#   Measures        : n erythema migrans, n babesiosis, n malaria, n RMSF,
+#                      n west nile, n dengue, n lyme (numerators),
+#                      Number of Patients (denominator)
 #
-# As of the 2026-08-28 export, the measure column labels changed from the
-# "<Disease> N" form (e.g. "Lyme N") to the lowercase "n <disease>" form (e.g.
-# "n lyme") used by cosmos_vector_borne_no_travel. MEASURE_PATTERNS matches
-# both forms so older staged exports would still parse.
+# As of the 2026-09-22 export (session 2857896), two things changed from the
+# prior 2852889 session:
+#   1. A new measure was added: "n erythema migrans" (the erythema migrans
+#      rash characteristic of early Lyme disease, coded/diagnosed separately
+#      from the "n lyme" measure).
+#   2. The session's row dimensions dropped "Month" - it now groups by Year
+#      and State of Residence only, so this source is ANNUAL as of this
+#      export (previously monthly). This is a deliberate grain change,
+#      confirmed with the data owner; earlier monthly history is not
+#      preserved because raw/staging holds only the latest export.
+# MEASURE_PATTERNS matches both the older "<Disease> N" and current
+# "n <disease>" label forms so older staged exports would still parse.
 #
 # Raw export layout (rows, 1-indexed as in the spreadsheet):
 #   1-8   : session metadata
-#   11    : measure labels for the value columns (Lyme N, Babesiosis N, ...)
-#   12    : row-dimension labels (A: Year, B: Month, C: State of Residence)
-#   13+   : data rows, ordered Year > Month > State (State changes fastest).
-#           Year and Month are merged cells - blank until the next value, so
-#           both must be filled down. State of Residence is present on every
-#           row (never blank).
+#   11    : measure labels for the value columns (n erythema migrans, ...)
+#   12    : row-dimension labels (A: Year, B: State of Residence)
+#   13+   : data rows, ordered Year > State (State changes fastest). Year is
+#           a merged cell - blank until the next value - so it must be filled
+#           down. State of Residence is present on every row (never blank).
+#   The trailing bucket for the current year is a partial period (e.g.
+#   "Jan 1 - Jul 28 2026") and is dropped, same convention as the previous
+#   trailing-partial-month handling.
 #
 # Output (PopHIVE wide format, standard/data.csv.gz):
-#   index   : geography (FIPS string, "00" = national), time
+#   index   : geography (FIPS string, "00" = national), time (YYYY-12-31)
 #   measures, one triplet per disease:
 #     epic_n_<disease>, epic_pct_<disease> -> epic_<disease>_suppressed_flag
 #       (the flag covers both; the percent is derived from the same
@@ -39,9 +50,8 @@
 #   denominator: epic_n_patients -> epic_n_patients_suppressed_flag
 #
 # Conventions applied here:
-#   - time is the LAST day of the month, formatted YYYY-mm-dd; the trailing
-#     partial period at the end of the exported range (e.g. "Jul 1 - Jul 28")
-#     is dropped
+#   - time is the LAST day of the year (YYYY-12-31); the trailing partial
+#     year at the end of the exported range is dropped
 #   - state_name is resolved to a FIPS `geography` and then dropped
 #   - suppression is handled per measure (blank / "10 or fewer" -> 5, flag 1)
 #   - each disease measure is a PERCENT of all patients, not a rate per
@@ -82,17 +92,18 @@ if (!file.exists("process.json")) {
 # Password for xlsx files (set in .Renviron via usethis::edit_r_environ())
 xlsx_password <- Sys.getenv("EPIC_XLSX_PASSWORD")
 
-# The stable part of each measure column label, matched against row 11.
-# Unrecognized/ambiguous labels stop the run instead of silently landing on
-# the wrong column - extend this map when the session changes.
+# The stable part of each measure column label, matched against the measure
+# label row. Unrecognized/ambiguous labels stop the run instead of silently
+# landing on the wrong column - extend this map when the session changes.
 MEASURE_PATTERNS <- c(
-  lyme        = "^(Lyme N|n lyme)$",
-  babesiosis  = "^(Babesiosis N|n babesiosis)$",
-  malaria     = "^(Malaria N|n malaria)$",
-  rmsf        = "^(RMSF N|n RMSF)$",
-  west_nile   = "^(West Nile N|n west nile)$",
-  dengue      = "^(Dengue N|n dengue)$",
-  n_patients  = "^Number of Patients$"
+  erythema_migrans = "^(Erythema Migrans N|n erythema migrans)$",
+  lyme             = "^(Lyme N|n lyme)$",
+  babesiosis       = "^(Babesiosis N|n babesiosis)$",
+  malaria          = "^(Malaria N|n malaria)$",
+  rmsf             = "^(RMSF N|n RMSF)$",
+  west_nile        = "^(West Nile N|n west nile)$",
+  dengue           = "^(Dengue N|n dengue)$",
+  n_patients       = "^Number of Patients$"
 )
 DISEASE_KEYS <- setdiff(names(MEASURE_PATTERNS), "n_patients")
 
@@ -173,22 +184,18 @@ if (!identical(process$raw_state, current_state)) {
   # ---------------------------------------------------------------------------
   # 3. Locate and validate header rows (fails loudly if the session drifts)
   # ---------------------------------------------------------------------------
-  dim_label_row <- which(grid[[3]] == "State of Residence")
+  dim_label_row <- which(grid[[1]] == "Year" & grid[[2]] == "State of Residence")
   if (length(dim_label_row) != 1) {
-    stop("Could not find exactly one 'State of Residence' row-label row; export layout changed.")
-  }
-  if (!identical(grid[[1]][[dim_label_row]], "Year") || !identical(grid[[2]][[dim_label_row]], "Month")) {
-    stop("Expected columns A/B row-dimension labels 'Year'/'Month' on row ", dim_label_row,
-         "; export layout changed.")
+    stop("Could not find exactly one row with columns A/B = 'Year'/'State of Residence'; export layout changed.")
   }
 
   measure_label_row <- dim_label_row - 1L
   data_start <- dim_label_row + 1L
 
   n_cols <- ncol(grid)
-  if (n_cols < 4) stop("Unexpected export width (", n_cols, " columns); expected year/month/state plus value columns.")
+  if (n_cols < 3) stop("Unexpected export width (", n_cols, " columns); expected year/state plus value columns.")
 
-  value_col_idx <- 4:n_cols
+  value_col_idx <- 3:n_cols
   measure_labels_raw <- trimws(as.character(grid[measure_label_row, value_col_idx]))
   measure_keys <- match_measure_labels(measure_labels_raw, MEASURE_PATTERNS)
 
@@ -206,41 +213,37 @@ if (!identical(process$raw_state, current_state)) {
   message("Measure columns found: ", paste(measure_keys, collapse = ", "))
 
   # ---------------------------------------------------------------------------
-  # 4. Data rows: fill down merged year/month cells (state is present on every row)
+  # 4. Data rows: fill down merged year cells (state is present on every row)
   # ---------------------------------------------------------------------------
   data_raw <- grid[data_start:nrow(grid), , drop = FALSE]
-  colnames(data_raw)[1:3] <- c("year", "month", "state_name")
+  colnames(data_raw)[1:2] <- c("year", "state_name")
   colnames(data_raw)[value_col_idx] <- as.character(value_col_idx)
 
   data_raw <- data_raw %>%
     mutate(
       state_name = iconv(state_name, to = "UTF-8", sub = ""),
-      month      = iconv(month,      to = "UTF-8", sub = ""),
+      year       = iconv(year,       to = "UTF-8", sub = ""),
       state_name = na_if(trimws(state_name), ""),
-      year       = na_if(trimws(year), ""),
-      month      = na_if(trimws(month), "")
+      year       = na_if(trimws(year), "")
     ) %>%
-    fill(year, month, .direction = "down") %>%
+    fill(year, .direction = "down") %>%
     filter(!is.na(state_name))
 
-  # --- Drop the trailing partial period (e.g. "Jul 1 - Jul 28") ---
-  is_full_month <- grepl("^[A-Za-z]{3}$", trimws(data_raw$month))
-  n_partial <- sum(!is_full_month)
+  # --- Drop the trailing partial year (e.g. "Jan 1 - Jul 28 2026") ---
+  is_full_year <- grepl("^\\d{4}$", trimws(data_raw$year))
+  n_partial <- sum(!is_full_year)
   if (n_partial > 0) {
     message(
       "Dropping ", n_partial, " row(s) from partial period(s): ",
-      paste(unique(data_raw$month[!is_full_month]), collapse = ", ")
+      paste(unique(data_raw$year[!is_full_year]), collapse = ", ")
     )
     if (n_partial == nrow(data_raw)) {
-      stop("Every row was classified as a partial period - the month label format probably changed.")
+      stop("Every row was classified as a partial period - the year label format probably changed.")
     }
   }
-  data_raw <- data_raw[is_full_month, ]
+  data_raw <- data_raw[is_full_year, ]
 
-  data_raw$time <- format(
-    ceiling_date(as.Date(paste(data_raw$year, data_raw$month, "01"), format = "%Y %b %d"), "month") - days(1),
-    "%Y-%m-%d"
-  )
+  data_raw$time <- paste0(trimws(data_raw$year), "-12-31")
 
   # ---------------------------------------------------------------------------
   # 5. Geography: state name -> FIPS
@@ -363,9 +366,8 @@ if (!identical(process$raw_state, current_state)) {
     # Geography: FIPS strings, national is "00"
     all(nchar(data_clean$geography) == 2),
     "00" %in% data_clean$geography,
-    # Time: YYYY-mm-dd, always the last day of a month
-    all(grepl("^\\d{4}-\\d{2}-\\d{2}$", data_clean$time)),
-    all(as.Date(data_clean$time) == ceiling_date(as.Date(data_clean$time), "month") - days(1)),
+    # Time: YYYY-12-31 (annual)
+    all(grepl("^\\d{4}-12-31$", data_clean$time)),
     # Denominator is present and non-negative
     !any(is.na(data_clean$epic_n_patients)),
     all(data_clean$epic_n_patients >= 0),
