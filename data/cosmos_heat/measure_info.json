@@ -4,8 +4,8 @@
     "short_name": "Total Patients",
     "long_name": "Total Patients (Denominator)",
     "category": "injury",
-    "short_description": "Monthly total patient count used as the denominator for the heat-related illness percentages.",
-    "long_description": "Monthly total count of patients, used as the denominator for epic_pct_hri_high, epic_pct_hri_med, and epic_pct_hri_low. Data from Epic Cosmos SlicerDicer session 2858385. Population base: data model Patients, population base All Patients, criteria Country of Residence = United States of America and Has Any Encounters - this is the entire Epic patient population for the state/month, NOT a cohort restricted to heat-related illness or emergency department visits. Counts of 10 or fewer are suppressed by Epic and imputed as 5; see epic_n_patients_suppressed_flag. In practice no state or the national total ever hits this threshold - only small territories (which are dropped before standardization) do.",
+    "short_description": "Monthly total patient count used as the denominator for the heat-related illness percentage.",
+    "long_description": "Monthly total count of patients, used as the denominator for epic_pct_hri. Data from Epic Cosmos SlicerDicer session 2860390. Population base: data model Patients, population base All Patients, criteria Country of Residence = United States of America and Has Any Encounters - this is the entire Epic patient population for the state/month, NOT a cohort restricted to heat-related illness or emergency department visits. Counts of 10 or fewer are suppressed by Epic and imputed as 5; see epic_n_patients_suppressed_flag. In practice no state or the national total ever hits this threshold - only small territories (which are dropped before standardization) do.",
     "statement": "",
     "measure_type": "Count",
     "unit": "patients",
@@ -23,7 +23,7 @@
     "long_name": "Suppression flag for the total patient count",
     "category": "injury",
     "short_description": "Indicates whether the total patient count was suppressed and imputed.",
-    "long_description": "1 when Epic Cosmos suppressed the denominator cell (a count of 10 or fewer, reported as \"10 or fewer\" or left blank) and epic_n_patients was imputed as 5; 0 otherwise. Where this flag is 1, epic_pct_hri_high/med/low are left missing rather than computed from an imputed denominator.",
+    "long_description": "1 when Epic Cosmos suppressed the denominator cell (a count of 10 or fewer, reported as \"10 or fewer\" or left blank) and epic_n_patients was imputed as 5; 0 otherwise. Where this flag is 1, epic_pct_hri is left missing rather than computed from an imputed denominator.",
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
@@ -35,14 +35,14 @@
     ],
     "citations": []
   },
-  "epic_pct_hri_high": {
-    "id": "epic_pct_hri_high",
-    "short_name": "High Severity Heat Illness",
-    "long_name": "Percent of Patients with High Severity Heat-Related Illness",
+  "epic_pct_hri": {
+    "id": "epic_pct_hri",
+    "short_name": "Heat-Related Illness",
+    "long_name": "Percent of Patients with Any Heat-Related Illness",
     "category": "injury",
-    "short_description": "Monthly percent of all patients with a high-severity heat-related illness (HRI) diagnosis.",
-    "long_description": "Monthly percent of all patients (epic_n_patients, NOT an emergency-department-only or heat-illness-only cohort) diagnosed with a high-severity heat-related illness. Because the denominator is the entire patient population and heat illness is rare, most cells are affected by suppression or Epic's percentage rounding - see epic_pct_hri_high_suppressed_flag for how these are imputed. Data from Epic Cosmos SlicerDicer session 2858385; population base All Patients, Country of Residence = United States of America, Has Any Encounters.",
-    "statement": "In {location}, {value}% of patients had a high severity heat-related illness diagnosis.",
+    "short_description": "Monthly percent of all patients with a heat-related illness (HRI) diagnosis of any severity.",
+    "long_description": "Monthly percent of all patients (epic_n_patients, NOT an emergency-department-only or heat-illness-only cohort) diagnosed with a heat-related illness of any severity (all HRI levels combined; individual high/medium/low severity levels are not included). Because the denominator is the entire patient population and heat illness is rare, most cells are affected by suppression or Epic's percentage rounding - see epic_pct_hri_suppressed_flag for how these are imputed. Data from Epic Cosmos SlicerDicer session 2860390; population base All Patients, Country of Residence = United States of America, Has Any Encounters.",
+    "statement": "In {location}, {value}% of patients had a heat-related illness diagnosis.",
     "measure_type": "Percent",
     "unit": "Percent",
     "time_resolution": "Month",
@@ -53,85 +53,13 @@
     ],
     "citations": []
   },
-  "epic_pct_hri_high_suppressed_flag": {
-    "id": "epic_pct_hri_high_suppressed_flag",
-    "short_name": "Suppressed flag: high severity heat illness",
-    "long_name": "Suppression/imputation flag for high-severity heat-related illness percent",
+  "epic_pct_hri_suppressed_flag": {
+    "id": "epic_pct_hri_suppressed_flag",
+    "short_name": "Suppressed flag: heat-related illness",
+    "long_name": "Suppression/imputation flag for the all-severity heat-related illness percent",
     "category": "injury",
-    "short_description": "Indicates whether the high-severity heat illness percent was suppressed, bounded, or otherwise imputed.",
-    "long_description": "1 when epic_pct_hri_high was not a directly reported value, for any of three reasons: (1) the numerator cell was suppressed (10 or fewer patients, shown blank by Epic) and imputed as 5 / epic_n_patients * 100; (2) Epic reported the cell as the bounded string \"<0.01%\" (a numerator > 10 but small relative to the multi-million-patient denominator) and it was imputed at half the bound, 0.005; or (3) the denominator itself (epic_n_patients) was suppressed, in which case the percent is left missing rather than computed from an imputed denominator - see epic_n_patients_suppressed_flag. 0 when Epic reported an exact, unbounded percentage. Flags are computed before imputation. Because the population base is All Patients rather than a heat-illness-specific cohort, the large majority of cells in this export fall into case (1) or (2), which is expected given how rare high-severity heat illness is relative to the entire patient population - this is not a data quality issue.",
-    "statement": "",
-    "measure_type": "Binary",
-    "unit": "0/1",
-    "time_resolution": "Month",
-    "sources": [
-      {
-        "id": "epic_cosmos"
-      }
-    ],
-    "citations": []
-  },
-  "epic_pct_hri_med": {
-    "id": "epic_pct_hri_med",
-    "short_name": "Medium Severity Heat Illness",
-    "long_name": "Percent of Patients with Medium Severity Heat-Related Illness",
-    "category": "injury",
-    "short_description": "Monthly percent of all patients with a medium-severity heat-related illness (HRI) diagnosis.",
-    "long_description": "Monthly percent of all patients (epic_n_patients) diagnosed with a medium-severity heat-related illness. See epic_pct_hri_high for the population base and epic_pct_hri_med_suppressed_flag for how suppressed/bounded cells are imputed. In this export essentially every cell for this measure is either suppressed or bounded (see epic_pct_hri_med_suppressed_flag) - medium-severity heat illness is rare enough relative to the All Patients denominator that an exact, unbounded percentage is almost never reported.",
-    "statement": "In {location}, {value}% of patients had a medium severity heat-related illness diagnosis.",
-    "measure_type": "Percent",
-    "unit": "Percent",
-    "time_resolution": "Month",
-    "sources": [
-      {
-        "id": "epic_cosmos"
-      }
-    ],
-    "citations": []
-  },
-  "epic_pct_hri_med_suppressed_flag": {
-    "id": "epic_pct_hri_med_suppressed_flag",
-    "short_name": "Suppressed flag: medium severity heat illness",
-    "long_name": "Suppression/imputation flag for medium-severity heat-related illness percent",
-    "category": "injury",
-    "short_description": "Indicates whether the medium-severity heat illness percent was suppressed, bounded, or otherwise imputed.",
-    "long_description": "Same logic as epic_pct_hri_high_suppressed_flag, applied to epic_pct_hri_med: 1 when the cell was suppressed (blank, imputed as 5 / epic_n_patients * 100), bounded (\"<0.01%\", imputed as 0.005), or left missing because the denominator was itself suppressed; 0 when Epic reported an exact percentage. In this export virtually every geography/month combination is flagged 1 for this measure.",
-    "statement": "",
-    "measure_type": "Binary",
-    "unit": "0/1",
-    "time_resolution": "Month",
-    "sources": [
-      {
-        "id": "epic_cosmos"
-      }
-    ],
-    "citations": []
-  },
-  "epic_pct_hri_low": {
-    "id": "epic_pct_hri_low",
-    "short_name": "Low Severity Heat Illness",
-    "long_name": "Percent of Patients with Low Severity Heat-Related Illness",
-    "category": "injury",
-    "short_description": "Monthly percent of all patients with a low-severity heat-related illness (HRI) diagnosis.",
-    "long_description": "Monthly percent of all patients (epic_n_patients) diagnosed with a low-severity heat-related illness. See epic_pct_hri_high for the population base and epic_pct_hri_low_suppressed_flag for how suppressed/bounded cells are imputed. This is the most commonly-reported (least suppressed) of the three severity measures, though most cells are still suppressed or bounded given the All Patients denominator.",
-    "statement": "In {location}, {value}% of patients had a low severity heat-related illness diagnosis.",
-    "measure_type": "Percent",
-    "unit": "Percent",
-    "time_resolution": "Month",
-    "sources": [
-      {
-        "id": "epic_cosmos"
-      }
-    ],
-    "citations": []
-  },
-  "epic_pct_hri_low_suppressed_flag": {
-    "id": "epic_pct_hri_low_suppressed_flag",
-    "short_name": "Suppressed flag: low severity heat illness",
-    "long_name": "Suppression/imputation flag for low-severity heat-related illness percent",
-    "category": "injury",
-    "short_description": "Indicates whether the low-severity heat illness percent was suppressed, bounded, or otherwise imputed.",
-    "long_description": "Same logic as epic_pct_hri_high_suppressed_flag, applied to epic_pct_hri_low: 1 when the cell was suppressed (blank, imputed as 5 / epic_n_patients * 100), bounded (\"<0.01%\", imputed as 0.005), or left missing because the denominator was itself suppressed; 0 when Epic reported an exact percentage.",
+    "short_description": "Indicates whether the heat-related illness percent was suppressed, bounded, or otherwise imputed.",
+    "long_description": "1 when epic_pct_hri was not a directly reported value, for any of three reasons: (1) the numerator cell was suppressed (10 or fewer patients, shown blank by Epic) and imputed as 5 / epic_n_patients * 100; (2) Epic reported the cell as the bounded string \"<0.01%\" (a numerator > 10 but small relative to the multi-million-patient denominator) and it was imputed at half the bound, 0.005; or (3) the denominator itself (epic_n_patients) was suppressed, in which case the percent is left missing rather than computed from an imputed denominator - see epic_n_patients_suppressed_flag. 0 when Epic reported an exact, unbounded percentage. Flags are computed before imputation. Because the population base is All Patients rather than a heat-illness-specific cohort, most cells fall into case (1) or (2); this is expected given how rare heat illness is relative to the entire patient population and is not a data quality issue.",
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",

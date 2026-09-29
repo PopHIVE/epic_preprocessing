@@ -5,11 +5,11 @@
     {
       "path": "ingest.R",
       "manual": false,
-      "last_run": "2026-09-25 08:55:46",
+      "last_run": "2026-09-29 10:11:41",
       "frequency": 0,
-      "run_time": 2.33,
+      "run_time": 2.91,
       "last_status": {
-        "log": ["", "Attaching package: 'dplyr'", "", "The following objects are masked from 'package:stats':", "", "    filter, lag", "", "The following objects are masked from 'package:base':", "", "    intersect, setdiff, setequal, union", "", "", "Attaching package: 'lubridate'", "", "The following objects are masked from 'package:base':", "", "    date, intersect, setdiff, union", "", "Dropping 1 partial-period column(s): Sep 1", "Dropped non-US / catch-all rows: American Samoa, South Pacific, Armed Forces Africa, Armed Forces America, Armed Forces Pacific, Federated States of Micronesia, Guam, None of the above, Northern Mariana Islands, Puerto Rico, Virgin Islands", "Standardized 6656 rows | 52 geographies | 2016-01-31 to 2026-08-31", "  epic_n_patients_suppressed_flag: 0 imputed", "  epic_pct_hri_high_suppressed_flag: 6158 imputed/bounded (0 left NA)", "  epic_pct_hri_med_suppressed_flag:  6656 imputed/bounded (0 left NA)", "  epic_pct_hri_low_suppressed_flag:  6617 imputed/bounded (0 left NA)"],
+        "log": ["", "Attaching package: 'dplyr'", "", "The following objects are masked from 'package:stats':", "", "    filter, lag", "", "The following objects are masked from 'package:base':", "", "    intersect, setdiff, setequal, union", "", "", "Attaching package: 'lubridate'", "", "The following objects are masked from 'package:base':", "", "    date, intersect, setdiff, union", "", "Dropped non-US / catch-all rows: American Samoa, South Pacific, Armed Forces Africa, Armed Forces America, Armed Forces Pacific, Federated States of Micronesia, Guam, None of the above, Northern Mariana Islands, Puerto Rico, Virgin Islands", "Standardized 6656 rows | 52 geographies | 2016-01-31 to 2026-08-31", "  epic_n_patients_suppressed_flag: 0 imputed", "  epic_pct_hri_suppressed_flag: 5707 imputed/bounded (0 left NA)"],
         "success": true
       }
     }
@@ -18,11 +18,11 @@
   "check_results": [],
   "standalone": false,
   "raw_state": {
-    "files": "raw/staging/Patients_Crosstab_2026-09-25T07_40_37.xlsx",
-    "hashes": "39aca671b18264be3a11cec4fad2a14a"
+    "files": "raw/staging/Patients_Crosstab_2026-09-29T09_08_40.xlsx",
+    "hashes": "ad5398a7535589bedbc85a3a18f6d7c0"
   },
   "standard_state": {
-    "./data/cosmos_heat/measure_info.json": "3b9d51d61d32e6af71cfaf2709931d48",
-    "./data/cosmos_heat/standard/data.csv.gz": "7d85326e81e586cbb698ee69d9c76fea"
+    "./data/cosmos_heat/measure_info.json": "c7cb025b41e92c72b429c7d4f8fc792c",
+    "./data/cosmos_heat/standard/data.csv.gz": "31e349389d6523a9240b2c8bf47da326"
   }
 }

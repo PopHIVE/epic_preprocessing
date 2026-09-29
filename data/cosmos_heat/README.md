@@ -1,11 +1,11 @@
 # cosmos_heat
 
-Monthly heat-related illness (HRI) severity data from Epic Cosmos, by state of
+Monthly heat-related illness (HRI) data from Epic Cosmos, by state of
 residence: total patient count plus the percent of all patients diagnosed with a
-high-, medium-, or low-severity heat-related illness.
+heat-related illness of any severity (individual severity levels are not included).
 
-**Population base** (SlicerDicer session `2858385`, "Number of Patients and High
-severity HRI and Med severity HRI and Low severity HRI by State of Residence"): data
+**Population base** (SlicerDicer session `2860390`, "Number of Patients and All HRI
+by State of Residence"): data
 model `Patients`, population base `All Patients`, criteria `Country of Residence =
 United States of America` and `Has Any Encounters?`. The denominator for every
 percentage is the **entire** Epic patient population for that state/month, **not** a
@@ -23,21 +23,16 @@ This is a dcf data source project, initialized with `dcf::dcf_add_source`.
 | `time` | `YYYY-mm-dd`, the **last day of the month** |
 | `epic_n_patients` | Total patients (denominator) |
 | `epic_n_patients_suppressed_flag` | Suppression flag for the denominator |
-| `epic_pct_hri_high` | Percent of patients with high-severity HRI |
-| `epic_pct_hri_high_suppressed_flag` | Suppression/imputation flag (see Suppression below) |
-| `epic_pct_hri_med` | Percent of patients with medium-severity HRI |
-| `epic_pct_hri_med_suppressed_flag` | Suppression/imputation flag |
-| `epic_pct_hri_low` | Percent of patients with low-severity HRI |
-| `epic_pct_hri_low_suppressed_flag` | Suppression/imputation flag |
+| `epic_pct_hri` | Percent of patients with any heat-related illness |
+| `epic_pct_hri_suppressed_flag` | Suppression/imputation flag (see Suppression below) |
 
 No age/sex/race stratification is present in this export - the grain is
 geography x month.
 
 ## Updating
 
-1. Re-run SlicerDicer session `2858385` and export the crosstab (rows: Measures
-   [`Number of Patients`, `High severity HRI (%)`, `Med severity HRI (%)`,
-   `Low severity HRI (%)`], State of Residence; columns: Year, Month).
+1. Re-run SlicerDicer session `2860390` and export the crosstab (rows: Measures
+   [`Number of Patients`, `All HRI (%)`], State of Residence; columns: Year, Month).
 2. Drop the export into `raw/staging/`, **replacing** the previous file, so the same
    months are not read twice.
 3. From the project root: `Rscript -e "dcf::dcf_process('cosmos_heat')"`, or while
@@ -69,7 +64,7 @@ geography x month.
 - **Suppression and imputation** - three distinct cases, all folded into one flag per
   percent measure:
   1. **Suppressed numerator**: Epic never emits an explicit `0%`; a blank cell means
-     10 or fewer patients had that severity of HRI. Imputed as
+     10 or fewer patients had an HRI diagnosis. Imputed as
      `5 / epic_n_patients * 100`, flag `1`.
   2. **Bounded numerator**: Epic reports the literal string `"<0.01%"` when the count
      is above 10 but the percentage still rounds under 0.01% (common here, because the

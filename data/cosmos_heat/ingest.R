@@ -1,11 +1,11 @@
 # =============================================================================
 # Epic Cosmos Heat-Related Illness (HRI) Data Ingestion
 # Source: Epic Cosmos SlicerDicer export (raw/staging/*.xlsx)
-#         Number of Patients, and percent of patients with High/Med/Low
-#         severity heat-related illness (HRI), by State of Residence and Month
+#         Number of Patients, and percent of patients with any (all-severity)
+#         heat-related illness (HRI), by State of Residence and Month
 #
-# SlicerDicer session 2858385, "Number of Patients and High severity HRI and
-# Med severity HRI and Low severity HRI by State of Residence":
+# SlicerDicer session 2860390, "Number of Patients and All HRI by State of
+# Residence":
 #   Data model      : Patients
 #   Population base : All Patients
 #   Criteria        : Country of Residence = United States of America;
@@ -16,22 +16,20 @@
 #     of 62 rows (50 states + DC + territories + "None of the above" + Total)
 #   - Columns are (Year) x (Month), one column per calendar month; Year is
 #     only populated on the first column of each year (fill right)
-#   - The 4 measure blocks, identified by the label in column A: "Number of
-#     Patients", "High severity HRI (%)", "Med severity HRI (%)",
-#     "Low severity HRI (%)"
+#   - The 2 measure blocks, identified by the label in column A: "Number of
+#     Patients", "All HRI (%)". (Earlier exports also carried High/Med/Low
+#     severity blocks; those were dropped in favor of the all-HRI total.)
 #
 # Output (PopHIVE wide format, standard/data.csv.gz):
 #   index   : geography (FIPS string, "00" = national), time (month-end)
 #   measures: epic_n_patients                -> epic_n_patients_suppressed_flag
-#             epic_pct_hri_high              -> epic_pct_hri_high_suppressed_flag
-#             epic_pct_hri_med               -> epic_pct_hri_med_suppressed_flag
-#             epic_pct_hri_low               -> epic_pct_hri_low_suppressed_flag
+#             epic_pct_hri                   -> epic_pct_hri_suppressed_flag
 #
 # Suppression / imputation notes (see README for full detail):
 #   - epic_n_patients: blank / "10 or fewer" -> 5, flag 1 (in practice, none
 #     of the 50 states/DC/Total ever hit this - only tiny territories do,
 #     and those rows are dropped before this point)
-#   - epic_pct_hri_*: this is "% of ALL patients" (not % of a heat-illness
+#   - epic_pct_hri: this is "% of ALL patients" (not % of a heat-illness
 #     cohort), so with denominators in the millions, suppressed (<=10
 #     patient) numerators are common and show as a BLANK cell -> imputed as
 #     5 / epic_n_patients * 100, flag 1
@@ -182,9 +180,7 @@ if (!identical(process$raw_state, current_state)) {
 
   MEASURE_LABELS <- c(
     "Number of Patients" = "n_patients",
-    "High severity HRI (%)" = "pct_hri_high",
-    "Med severity HRI (%)" = "pct_hri_med",
-    "Low severity HRI (%)" = "pct_hri_low"
+    "All HRI (%)" = "pct_hri"
   )
   unknown_measures <- setdiff(unique(measure_label), names(MEASURE_LABELS))
   if (length(unknown_measures) > 0) {
@@ -282,21 +278,13 @@ if (!identical(process$raw_state, current_state)) {
       epic_n_patients_suppressed_flag = as.integer(is_suppressed_count(n_patients)),
       epic_n_patients = unsuppress_count(n_patients),
 
-      epic_pct_hri_high_suppressed_flag = flag_pct(pct_hri_high, epic_n_patients_suppressed_flag),
-      epic_pct_hri_high = impute_pct(pct_hri_high, epic_n_patients_suppressed_flag, epic_n_patients),
-
-      epic_pct_hri_med_suppressed_flag = flag_pct(pct_hri_med, epic_n_patients_suppressed_flag),
-      epic_pct_hri_med = impute_pct(pct_hri_med, epic_n_patients_suppressed_flag, epic_n_patients),
-
-      epic_pct_hri_low_suppressed_flag = flag_pct(pct_hri_low, epic_n_patients_suppressed_flag),
-      epic_pct_hri_low = impute_pct(pct_hri_low, epic_n_patients_suppressed_flag, epic_n_patients)
+      epic_pct_hri_suppressed_flag = flag_pct(pct_hri, epic_n_patients_suppressed_flag),
+      epic_pct_hri = impute_pct(pct_hri, epic_n_patients_suppressed_flag, epic_n_patients)
     ) %>%
     select(
       geography, time,
       epic_n_patients, epic_n_patients_suppressed_flag,
-      epic_pct_hri_high, epic_pct_hri_high_suppressed_flag,
-      epic_pct_hri_med, epic_pct_hri_med_suppressed_flag,
-      epic_pct_hri_low, epic_pct_hri_low_suppressed_flag
+      epic_pct_hri, epic_pct_hri_suppressed_flag
     ) %>%
     arrange(geography, time)
 
@@ -317,17 +305,11 @@ if (!identical(process$raw_state, current_state)) {
     all(data_clean$epic_n_patients[data_clean$epic_n_patients_suppressed_flag == 1L] == 5),
     # Flags are 0/1
     all(data_clean$epic_n_patients_suppressed_flag %in% c(0L, 1L)),
-    all(data_clean$epic_pct_hri_high_suppressed_flag %in% c(0L, 1L)),
-    all(data_clean$epic_pct_hri_med_suppressed_flag %in% c(0L, 1L)),
-    all(data_clean$epic_pct_hri_low_suppressed_flag %in% c(0L, 1L)),
+    all(data_clean$epic_pct_hri_suppressed_flag %in% c(0L, 1L)),
     # Percentages are in [0, 100] where present
-    all(data_clean$epic_pct_hri_high >= 0 & data_clean$epic_pct_hri_high <= 100, na.rm = TRUE),
-    all(data_clean$epic_pct_hri_med >= 0 & data_clean$epic_pct_hri_med <= 100, na.rm = TRUE),
-    all(data_clean$epic_pct_hri_low >= 0 & data_clean$epic_pct_hri_low <= 100, na.rm = TRUE),
+    all(data_clean$epic_pct_hri >= 0 & data_clean$epic_pct_hri <= 100, na.rm = TRUE),
     # A percent cell is NA only where the denominator itself was suppressed
-    identical(is.na(data_clean$epic_pct_hri_high), data_clean$epic_n_patients_suppressed_flag == 1L),
-    identical(is.na(data_clean$epic_pct_hri_med), data_clean$epic_n_patients_suppressed_flag == 1L),
-    identical(is.na(data_clean$epic_pct_hri_low), data_clean$epic_n_patients_suppressed_flag == 1L)
+    identical(is.na(data_clean$epic_pct_hri), data_clean$epic_n_patients_suppressed_flag == 1L)
   )
 
   message(
@@ -337,16 +319,8 @@ if (!identical(process$raw_state, current_state)) {
   )
   message("  epic_n_patients_suppressed_flag: ", sum(data_clean$epic_n_patients_suppressed_flag), " imputed")
   message(
-    "  epic_pct_hri_high_suppressed_flag: ", sum(data_clean$epic_pct_hri_high_suppressed_flag),
-    " imputed/bounded (", sum(is.na(data_clean$epic_pct_hri_high)), " left NA)"
-  )
-  message(
-    "  epic_pct_hri_med_suppressed_flag:  ", sum(data_clean$epic_pct_hri_med_suppressed_flag),
-    " imputed/bounded (", sum(is.na(data_clean$epic_pct_hri_med)), " left NA)"
-  )
-  message(
-    "  epic_pct_hri_low_suppressed_flag:  ", sum(data_clean$epic_pct_hri_low_suppressed_flag),
-    " imputed/bounded (", sum(is.na(data_clean$epic_pct_hri_low)), " left NA)"
+    "  epic_pct_hri_suppressed_flag: ", sum(data_clean$epic_pct_hri_suppressed_flag),
+    " imputed/bounded (", sum(is.na(data_clean$epic_pct_hri)), " left NA)"
   )
 
   # ---------------------------------------------------------------------------

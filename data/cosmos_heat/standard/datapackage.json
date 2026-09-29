@@ -4,13 +4,18 @@
   "licenses": [],
   "resources": [
     {
-      "bytes": 134379,
+      "bytes": 69960,
       "encoding": "windows-1252",
-      "md5": "7d85326e81e586cbb698ee69d9c76fea",
+      "md5": "31e349389d6523a9240b2c8bf47da326",
       "format": "csv",
       "name": "data.csv",
       "filename": "data.csv.gz",
-      "versions": {},
+      "versions": {
+        "hash": ["9a3534cbde73c151e27d6f2101072fcef2bcd029"],
+        "author": ["anshap32 <73296024+anshap32@users.noreply.github.com>"],
+        "date": ["Fri Sep 25 11:08:45 2026 -0400"],
+        "message": ["ingest heat"]
+      },
       "source": [],
       "data_format": "wide",
       "ids": [
@@ -21,8 +26,8 @@
       "id_length": 2,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-09-25 08:54:36.446791",
-      "last_modified": "2026-09-25 08:55:46.386312",
+      "created": "2026-09-29 10:09:36.461325",
+      "last_modified": "2026-09-29 10:11:41.153194",
       "vintage": {},
       "row_count": 6656,
       "entity_count": 52,
@@ -231,7 +236,22 @@
           {
             "name": "epic_n_patients",
             "duplicates": 9,
-            "info": [],
+            "info": {
+              "id": "epic_n_patients",
+              "short_name": "Total Patients",
+              "long_name": "Total Patients (Denominator)",
+              "category": "injury",
+              "short_description": "Monthly total patient count used as the denominator for the heat-related illness percentages.",
+              "long_description": "Monthly total count of patients, used as the denominator for epic_pct_hri_high, epic_pct_hri_med, and epic_pct_hri_low. Data from Epic Cosmos SlicerDicer session 2858385. Population base: data model Patients, population base All Patients, criteria Country of Residence = United States of America and Has Any Encounters - this is the entire Epic patient population for the state/month, NOT a cohort restricted to heat-related illness or emergency department visits. Counts of 10 or fewer are suppressed by Epic and imputed as 5; see epic_n_patients_suppressed_flag. In practice no state or the national total ever hits this threshold - only small territories (which are dropped before standardization) do.",
+              "measure_type": "Count",
+              "unit": "patients",
+              "time_resolution": "Month",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
             "time_range": [0, 127],
             "type": "integer",
             "missing": 0,
@@ -243,7 +263,22 @@
           {
             "name": "epic_n_patients_suppressed_flag",
             "duplicates": 6655,
-            "info": [],
+            "info": {
+              "id": "epic_n_patients_suppressed_flag",
+              "short_name": "Suppressed flag: total patients",
+              "long_name": "Suppression flag for the total patient count",
+              "category": "injury",
+              "short_description": "Indicates whether the total patient count was suppressed and imputed.",
+              "long_description": "1 when Epic Cosmos suppressed the denominator cell (a count of 10 or fewer, reported as \"10 or fewer\" or left blank) and epic_n_patients was imputed as 5; 0 otherwise. Where this flag is 1, epic_pct_hri_high/med/low are left missing rather than computed from an imputed denominator.",
+              "measure_type": "Binary",
+              "unit": "0/1",
+              "time_resolution": "Month",
+              "sources": [
+                {
+                  "id": "epic_cosmos"
+                }
+              ]
+            },
             "time_range": [0, 127],
             "type": "integer",
             "missing": 0,
@@ -253,92 +288,236 @@
             "max": 0
           },
           {
-            "name": "epic_pct_hri_high",
-            "duplicates": 4217,
+            "name": "epic_pct_hri",
+            "duplicates": 4477,
             "info": [],
             "time_range": [0, 127],
             "type": "float",
             "missing": 0,
-            "mean": 0.004869,
-            "sd": 0.00404,
+            "mean": 0.005373,
+            "sd": 0.004215,
             "min": 0.000314,
             "max": 0.05863
           },
           {
-            "name": "epic_pct_hri_high_suppressed_flag",
+            "name": "epic_pct_hri_suppressed_flag",
             "duplicates": 6654,
             "info": [],
             "time_range": [0, 127],
             "type": "integer",
             "missing": 0,
-            "mean": 0.92518,
-            "sd": 0.26312,
-            "min": 0,
-            "max": 1
-          },
-          {
-            "name": "epic_pct_hri_med",
-            "duplicates": 150,
-            "info": [],
-            "time_range": [0, 127],
-            "type": "float",
-            "missing": 0,
-            "mean": 0.001752,
-            "sd": 0.004024,
-            "min": 0.000074,
-            "max": 0.05863
-          },
-          {
-            "name": "epic_pct_hri_med_suppressed_flag",
-            "duplicates": 6655,
-            "info": [],
-            "time_range": [0, 127],
-            "type": "integer",
-            "missing": 0,
-            "mean": 1,
-            "sd": 0,
-            "min": 1,
-            "max": 1
-          },
-          {
-            "name": "epic_pct_hri_low",
-            "duplicates": 1194,
-            "info": [],
-            "time_range": [0, 127],
-            "type": "float",
-            "missing": 0,
-            "mean": 0.002515,
-            "sd": 0.004156,
-            "min": 0.00009,
-            "max": 0.05863
-          },
-          {
-            "name": "epic_pct_hri_low_suppressed_flag",
-            "duplicates": 6654,
-            "info": [],
-            "time_range": [0, 127],
-            "type": "integer",
-            "missing": 0,
-            "mean": 0.994141,
-            "sd": 0.076328,
+            "mean": 0.857422,
+            "sd": 0.349668,
             "min": 0,
             "max": 1
           }
         ]
       },
-      "sha512": "b5731280f4be6e510b0e7d7d137eeb66f795af2778e48005d4bda5901b47db01978a6a9a263114a6bf0a4574ed664bc4e6ec8ba076eca017adf722c67a7aab28"
+      "sha512": "f02acc26fe48e1023568fa0ea9e8baf0ae6e5fffe5aa2d5c998351590fde54cb2954a41b8c56ca99877b11dd7b836e0cc4feebeb29680dfdb1e86925047eb0f2"
     }
   ],
   "measure_info": {
-    "example_variable": {
-      "id": "example_variable",
-      "sources": [],
+    "epic_n_patients": {
+      "id": "epic_n_patients",
+      "short_name": "Total Patients",
+      "long_name": "Total Patients (Denominator)",
+      "category": "injury",
+      "short_description": "Monthly total patient count used as the denominator for the heat-related illness percentages.",
+      "long_description": "Monthly total count of patients, used as the denominator for epic_pct_hri_high, epic_pct_hri_med, and epic_pct_hri_low. Data from Epic Cosmos SlicerDicer session 2858385. Population base: data model Patients, population base All Patients, criteria Country of Residence = United States of America and Has Any Encounters - this is the entire Epic patient population for the state/month, NOT a cohort restricted to heat-related illness or emergency department visits. Counts of 10 or fewer are suppressed by Epic and imputed as 5; see epic_n_patients_suppressed_flag. In practice no state or the national total ever hits this threshold - only small territories (which are dropped before standardization) do.",
+      "measure_type": "Count",
+      "unit": "patients",
+      "time_resolution": "Month",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
       "citations": []
+    },
+    "epic_n_patients_suppressed_flag": {
+      "id": "epic_n_patients_suppressed_flag",
+      "short_name": "Suppressed flag: total patients",
+      "long_name": "Suppression flag for the total patient count",
+      "category": "injury",
+      "short_description": "Indicates whether the total patient count was suppressed and imputed.",
+      "long_description": "1 when Epic Cosmos suppressed the denominator cell (a count of 10 or fewer, reported as \"10 or fewer\" or left blank) and epic_n_patients was imputed as 5; 0 otherwise. Where this flag is 1, epic_pct_hri_high/med/low are left missing rather than computed from an imputed denominator.",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Month",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hri_high": {
+      "id": "epic_pct_hri_high",
+      "short_name": "High Severity Heat Illness",
+      "long_name": "Percent of Patients with High Severity Heat-Related Illness",
+      "category": "injury",
+      "short_description": "Monthly percent of all patients with a high-severity heat-related illness (HRI) diagnosis.",
+      "long_description": "Monthly percent of all patients (epic_n_patients, NOT an emergency-department-only or heat-illness-only cohort) diagnosed with a high-severity heat-related illness. Because the denominator is the entire patient population and heat illness is rare, most cells are affected by suppression or Epic's percentage rounding - see epic_pct_hri_high_suppressed_flag for how these are imputed. Data from Epic Cosmos SlicerDicer session 2858385; population base All Patients, Country of Residence = United States of America, Has Any Encounters.",
+      "statement": "In {location}, {value}% of patients had a high severity heat-related illness diagnosis.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Month",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hri_high_suppressed_flag": {
+      "id": "epic_pct_hri_high_suppressed_flag",
+      "short_name": "Suppressed flag: high severity heat illness",
+      "long_name": "Suppression/imputation flag for high-severity heat-related illness percent",
+      "category": "injury",
+      "short_description": "Indicates whether the high-severity heat illness percent was suppressed, bounded, or otherwise imputed.",
+      "long_description": "1 when epic_pct_hri_high was not a directly reported value, for any of three reasons: (1) the numerator cell was suppressed (10 or fewer patients, shown blank by Epic) and imputed as 5 / epic_n_patients * 100; (2) Epic reported the cell as the bounded string \"<0.01%\" (a numerator > 10 but small relative to the multi-million-patient denominator) and it was imputed at half the bound, 0.005; or (3) the denominator itself (epic_n_patients) was suppressed, in which case the percent is left missing rather than computed from an imputed denominator - see epic_n_patients_suppressed_flag. 0 when Epic reported an exact, unbounded percentage. Flags are computed before imputation. Because the population base is All Patients rather than a heat-illness-specific cohort, the large majority of cells in this export fall into case (1) or (2), which is expected given how rare high-severity heat illness is relative to the entire patient population - this is not a data quality issue.",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Month",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hri_med": {
+      "id": "epic_pct_hri_med",
+      "short_name": "Medium Severity Heat Illness",
+      "long_name": "Percent of Patients with Medium Severity Heat-Related Illness",
+      "category": "injury",
+      "short_description": "Monthly percent of all patients with a medium-severity heat-related illness (HRI) diagnosis.",
+      "long_description": "Monthly percent of all patients (epic_n_patients) diagnosed with a medium-severity heat-related illness. See epic_pct_hri_high for the population base and epic_pct_hri_med_suppressed_flag for how suppressed/bounded cells are imputed. In this export essentially every cell for this measure is either suppressed or bounded (see epic_pct_hri_med_suppressed_flag) - medium-severity heat illness is rare enough relative to the All Patients denominator that an exact, unbounded percentage is almost never reported.",
+      "statement": "In {location}, {value}% of patients had a medium severity heat-related illness diagnosis.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Month",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hri_med_suppressed_flag": {
+      "id": "epic_pct_hri_med_suppressed_flag",
+      "short_name": "Suppressed flag: medium severity heat illness",
+      "long_name": "Suppression/imputation flag for medium-severity heat-related illness percent",
+      "category": "injury",
+      "short_description": "Indicates whether the medium-severity heat illness percent was suppressed, bounded, or otherwise imputed.",
+      "long_description": "Same logic as epic_pct_hri_high_suppressed_flag, applied to epic_pct_hri_med: 1 when the cell was suppressed (blank, imputed as 5 / epic_n_patients * 100), bounded (\"<0.01%\", imputed as 0.005), or left missing because the denominator was itself suppressed; 0 when Epic reported an exact percentage. In this export virtually every geography/month combination is flagged 1 for this measure.",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Month",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hri_low": {
+      "id": "epic_pct_hri_low",
+      "short_name": "Low Severity Heat Illness",
+      "long_name": "Percent of Patients with Low Severity Heat-Related Illness",
+      "category": "injury",
+      "short_description": "Monthly percent of all patients with a low-severity heat-related illness (HRI) diagnosis.",
+      "long_description": "Monthly percent of all patients (epic_n_patients) diagnosed with a low-severity heat-related illness. See epic_pct_hri_high for the population base and epic_pct_hri_low_suppressed_flag for how suppressed/bounded cells are imputed. This is the most commonly-reported (least suppressed) of the three severity measures, though most cells are still suppressed or bounded given the All Patients denominator.",
+      "statement": "In {location}, {value}% of patients had a low severity heat-related illness diagnosis.",
+      "measure_type": "Percent",
+      "unit": "Percent",
+      "time_resolution": "Month",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "epic_pct_hri_low_suppressed_flag": {
+      "id": "epic_pct_hri_low_suppressed_flag",
+      "short_name": "Suppressed flag: low severity heat illness",
+      "long_name": "Suppression/imputation flag for low-severity heat-related illness percent",
+      "category": "injury",
+      "short_description": "Indicates whether the low-severity heat illness percent was suppressed, bounded, or otherwise imputed.",
+      "long_description": "Same logic as epic_pct_hri_high_suppressed_flag, applied to epic_pct_hri_low: 1 when the cell was suppressed (blank, imputed as 5 / epic_n_patients * 100), bounded (\"<0.01%\", imputed as 0.005), or left missing because the denominator was itself suppressed; 0 when Epic reported an exact percentage.",
+      "measure_type": "Binary",
+      "unit": "0/1",
+      "time_resolution": "Month",
+      "sources": [
+        {
+          "id": "epic_cosmos"
+        }
+      ],
+      "citations": []
+    },
+    "_sources": {
+      "epic_cosmos": {
+        "name": "Epic Cosmos",
+        "url": "https://cosmos.epic.com/",
+        "date_accessed": 2026,
+        "organization": "Epic Systems",
+        "organization_url": "https://www.epic.com/",
+        "description": "Epic Cosmos is a collaborative research platform containing de-identified patient data from over 300 million patients across more than 1,600 hospitals and health systems using Epic electronic health record systems. Data is accessed via SlicerDicer, a self-service analytics tool. The dataset includes emergency department visits, diagnoses, immunizations, laboratory results, and other clinical data. Due to privacy protections, counts fewer than 10 are suppressed and imputed. Coverage extends across all U.S. states and territories. Note that county-level and city-level stratifications could differ markedly in total sample size due to high levels of missingness of county data in some states.",
+        "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'"
+      },
+      "id": "_sources"
     }
   },
   "change_report": {
     "data.csv.gz": {
-      "state": "unchanged"
+      "state": "changed",
+      "variables": {
+        "geography": {
+          "status": "present",
+          "same_type": true,
+          "added_levels": [],
+          "dropped_levels": []
+        },
+        "time": {
+          "status": "present",
+          "same_type": true,
+          "added_levels": [],
+          "dropped_levels": []
+        },
+        "epic_n_patients": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_n_patients_suppressed_flag": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_pct_hri": {
+          "status": "added"
+        },
+        "epic_pct_hri_suppressed_flag": {
+          "status": "added"
+        },
+        "epic_pct_hri_high": {
+          "status": "removed"
+        },
+        "epic_pct_hri_high_suppressed_flag": {
+          "status": "removed"
+        },
+        "epic_pct_hri_med": {
+          "status": "removed"
+        },
+        "epic_pct_hri_med_suppressed_flag": {
+          "status": "removed"
+        },
+        "epic_pct_hri_low": {
+          "status": "removed"
+        },
+        "epic_pct_hri_low_suppressed_flag": {
+          "status": "removed"
+        }
+      }
     }
   }
 }
