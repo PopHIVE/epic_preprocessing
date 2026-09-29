@@ -1,0 +1,154 @@
+---
+title: "Missingness in Epic Cosmos diabetes indicators by county"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    df_print: paged
+params:
+  data_dir: "standard"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, fig.width = 9, fig.height = 4.6)
+library(dplyr); library(tidyr); library(ggplot2); library(knitr); library(scales); library(forcats)
+
+theme_set(theme_minimal(base_size = 12) + theme(legend.position = "bottom", panel.grid.minor = element_blank()))
+pal <- c("Patient count" = "#4C78A8", "A1c 6.5+ (%)" = "#E45756", "Diabetes CCW (%)" = "#F58518")
+
+read_std <- function(f) vroom::vroom(file.path(params$data_dir, f), col_types = vroom::cols(geography = "c", .default = "?"), show_col_types = FALSE)
+ra <- read_std("data_ruca_age.csv.gz")   # County x RUCA x Age
+ar <- read_std("data_age_race.csv.gz")   # County x Age x Race
+
+state_of <- c("12" = "Florida", "17" = "Illinois", "39" = "Ohio", "56" = "Wyoming")
+ra <- ra %>% mutate(state = state_of[substr(geography, 1, 2)])
+ar <- ar %>% mutate(state = state_of[substr(geography, 1, 2)])
+
+age_lv  <- c("<18 Years", "18-24 Years", "25-34 Years", "35-44 Years", "45-54 Years", "55-64 Years", "65+ Years", "Total")
+ruca_lv <- c("Metropolitan", "Micropolitan", "Rural", "Unknown", "Total")
+ra$age  <- factor(ra$age, age_lv); ar$age <- factor(ar$age, age_lv)
+ra$ruca <- factor(ra$ruca, ruca_lv)
+
+# A "leaf" cell has no stratifier at its Total level; the rest are marginals
+ra <- ra %>% mutate(level = if_else(ruca == "Total" | age == "Total", "Marginal", "Detailed cell"))
+ar <- ar %>% mutate(level = if_else(race_ethnicity == "Total" | age == "Total", "Marginal", "Detailed cell"))
+
+measures <- c(epic_n_patients = "Patient count", epic_pct_a1c_6_5_plus = "A1c 6.5+ (%)", epic_pct_diabetes_ccw = "Diabetes CCW (%)")
+flag_of  <- function(m) paste0(m, "_suppressed_flag")
+
+# Long format: one row per cell x measure, with missingness indicators
+to_long <- function(d, file_label) {
+  bind_rows(lapply(names(measures), function(m) {
+    d %>% mutate(
+      file = file_label, measure = measures[[m]],
+      value = .data[[m]], flag = .data[[flag_of(m)]]
+    )
+  })) %>% mutate(measure = factor(measure, unname(measures)))
+}
+ra_long <- to_long(ra, "County x RUCA x Age")
+ar_long <- to_long(ar, "County x Age x Race")
+```
+
+# 1. Dataset overviews
+Includes all Patients from 2024 in Illinois, Florida, Ohio, Wyoming
+```{r overview}
+overview <- function(d, strat, label) {
+  tibble(
+    Export = label,
+    Rows = nrow(d),
+    Counties = n_distinct(d$geography),
+    `Detailed cells` = sum(d$level == "Detailed cell"),
+    `Marginal rows` = sum(d$level == "Marginal"),
+    Strata = paste(strat, collapse = ", ")
+  )
+}
+bind_rows(
+  overview(ra, c(paste(n_distinct(ra$ruca[ra$ruca != "Total"]), "RUCA levels"), "7 age bands"), "County x RUCA x Age"),
+  overview(ar, c(paste(n_distinct(ar$race_ethnicity[ar$race_ethnicity != "Total"]), "race levels"), "7 age bands"), "County x Age x Race")
+) %>% kable(format.args = list(big.mark = ","))
+```
+
+```{r overall-plot}
+overall <- bind_rows(ra_long, ar_long) %>%
+  group_by(file, level, measure) %>%
+  summarise(`% suppressed` = 100 * mean(flag == 1), cells = n(), .groups = "drop")
+
+overall %>% filter(level == "Detailed cell") %>%
+  ggplot(aes(measure, `% suppressed`, fill = measure)) +
+  geom_col(width = .7, show.legend = FALSE) +
+  geom_text(aes(label = sprintf("%.0f%%", `% suppressed`)), vjust = -.4, size = 3.5) +
+  facet_wrap(~file) + scale_y_continuous(limits = c(0, 100), labels = label_number(suffix = "%")) +
+  scale_fill_manual(values = pal) +
+  labs(x = NULL, y = "Share of detailed cells suppressed", title = "Detailed cells suppressed by measure")
+```
+
+# 2. Missingness by demographics
+
+```{r by-age}
+by_stratum <- function(long, var) {
+  long %>% filter(level == "Detailed cell") %>%
+    group_by(file, stratum = as.character(.data[[var]]), measure) %>%
+    summarise(pct = 100 * mean(flag == 1), cells = n(), .groups = "drop")
+}
+plot_stratum <- function(df, title, lv = NULL) {
+  if (!is.null(lv)) df$stratum <- factor(df$stratum, lv)
+  ggplot(df, aes(stratum, pct, fill = measure)) +
+    geom_col(position = position_dodge(width = .85), width = .8) +
+    scale_fill_manual(values = pal, name = NULL) +
+    scale_y_continuous(limits = c(0, 100), labels = label_number(suffix = "%")) +
+    labs(x = NULL, y = "% of detailed cells suppressed", title = title) +
+    theme(axis.text.x = element_text(angle = 30, hjust = 1))
+}
+bind_rows(by_stratum(ra_long, "age"), by_stratum(ar_long, "age")) %>%
+  plot_stratum("By age band", setdiff(age_lv, "Total")) + facet_wrap(~file)
+```
+
+
+```{r by-ruca}
+by_stratum(ra_long, "ruca") %>% plot_stratum("By rural-urban commuting area", setdiff(ruca_lv, "Total"))
+```
+
+```{r by-race}
+by_stratum(ar_long, "race_ethnicity") %>% mutate(stratum = fct_reorder(stratum, pct, .desc = TRUE)) %>%
+  plot_stratum("By race") + scale_x_discrete(labels = label_wrap(25))
+```
+
+```{r by-state}
+bind_rows(by_stratum(ra_long, "state"), by_stratum(ar_long, "state")) %>% plot_stratum("By state") + facet_wrap(~file)
+```
+
+
+```{r heat}
+heat <- function(d, var, title) {
+  d %>% filter(level == "Detailed cell") %>%
+    group_by(age, s = .data[[var]]) %>% summarise(pct = 100 * mean(epic_n_patients_suppressed_flag == 1), .groups = "drop") %>%
+    ggplot(aes(age, s, fill = pct)) + geom_tile(colour = "white") +
+    geom_text(aes(label = sprintf("%.0f", pct)), size = 3.3) +
+    scale_fill_gradient(low = "#F1F5F9", high = "#B5352F", limits = c(0, 100), name = "% suppressed") +
+    labs(x = NULL, y = NULL, title = title) + theme(axis.text.x = element_text(angle = 30, hjust = 1), legend.position = "right")
+}
+heat(droplevels(ra[ra$level == "Detailed cell", ]), "ruca", "Patient count: RUCA x age")
+heat(ar, "race_ethnicity", "Patient count: race x age")
+```
+
+```{r county-size}
+county_n <- ra %>% filter(ruca == "Total", age == "Total") %>%
+  transmute(geography, county_total = epic_n_patients, county_total_flag = epic_n_patients_suppressed_flag)
+size_bins <- c(0, 100, 500, 1000, 5000, 10000, 50000, 1e9)
+size_lbl <- c("<=100", "101-500", "501-1k", "1k-5k", "5k-10k", "10k-50k", ">50k")
+
+size_df <- bind_rows(ra_long, ar_long) %>% filter(level == "Detailed cell") %>%
+  left_join(county_n, by = "geography") %>%
+  mutate(size = cut(county_total, size_bins, size_lbl)) %>%
+  group_by(file, size, measure) %>% summarise(pct = 100 * mean(flag == 1), cells = n(), .groups = "drop")
+
+ggplot(size_df, aes(size, pct, colour = measure, group = measure)) + geom_line(linewidth = 1) + geom_point(size = 2.2) +
+  facet_wrap(~file) + scale_colour_manual(values = pal, name = NULL) +
+  scale_y_continuous(limits = c(0, 100), labels = label_number(suffix = "%")) +
+  labs(x = "County total patients (Jan 2024)", y = "% of detailed cells suppressed", title = "Suppression falls as county size grows")
+
+county_n %>% mutate(size = cut(county_total, size_bins, size_lbl)) %>% count(size, name = "counties") %>%
+  kable(caption = "Number of counties in each size bin")
+```

@@ -1,0 +1,68 @@
+{
+  "name": "cosmos_diabetes_county",
+  "type": "source",
+  "scripts": [
+    {
+      "path": "ingest.R",
+      "manual": false,
+      "last_run": "2026-09-29 10:24:00",
+      "frequency": 0,
+      "run_time": 5.03,
+      "last_status": {
+        "log": [
+          "",
+          "Attaching package: 'dplyr'",
+          "",
+          "The following objects are masked from 'package:stats':",
+          "",
+          "    filter, lag",
+          "",
+          "The following objects are masked from 'package:base':",
+          "",
+          "    intersect, setdiff, setequal, union",
+          "",
+          "",
+          "Attaching package: 'lubridate'",
+          "",
+          "The following objects are masked from 'package:base':",
+          "",
+          "    date, intersect, setdiff, union",
+          "",
+          "Reading: Patients_Crosstab_2026-09-29T09_14_25.xlsx",
+          "  Session ID: 2860367",
+          "  Population Base: All Patients",
+          "  Session Date Range: 1/1/2024 - 1/31/2024",
+          "  Dropped 40 county 'Total' rows (four-state total, not national) and 40 'None of the above' (unknown county) rows",
+          "Reading: Patients_Crosstab_2026-09-29T09_15_37.xlsx",
+          "  Session ID: 2860371",
+          "  Population Base: All Patients",
+          "  Session Date Range: 1/1/2024 - 1/31/2024",
+          "  Dropped 56 county 'Total' rows (four-state total, not national) and 56 'None of the above' (unknown county) rows",
+          "data_ruca_age: 11160 rows | 279 counties | time 2024-01-31",
+          "  epic_pct_a1c_6_5_plus_suppressed_flag: 7314 suppressed/imputed",
+          "  epic_pct_diabetes_ccw_suppressed_flag: 6810 suppressed/imputed",
+          "  epic_n_patients_suppressed_flag: 5143 suppressed/imputed",
+          "  percent cells left NA (denominator also suppressed): 5143 (a1c), 5143 (ccw)",
+          "data_age_race: 15624 rows | 279 counties | time 2024-01-31",
+          "  epic_pct_a1c_6_5_plus_suppressed_flag: 10290 suppressed/imputed",
+          "  epic_pct_diabetes_ccw_suppressed_flag: 9389 suppressed/imputed",
+          "  epic_n_patients_suppressed_flag: 5989 suppressed/imputed",
+          "  percent cells left NA (denominator also suppressed): 5989 (a1c), 5989 (ccw)"
+        ],
+        "success": true
+      }
+    }
+  ],
+  "checked": "",
+  "check_results": [],
+  "standalone": false,
+  "raw_state": {
+    "files": ["raw/staging/Patients_Crosstab_2026-09-29T09_14_25.xlsx", "raw/staging/Patients_Crosstab_2026-09-29T09_15_37.xlsx"],
+    "hashes": ["f6d66e5348136394f7763ad67762266a", "4069ee259e0907bbff62ba97f3d006e7"]
+  },
+  "standard_state": {
+    "./data/cosmos_diabetes_county/measure_info.json": "3b9d51d61d32e6af71cfaf2709931d48",
+    "./data/cosmos_diabetes_county/standard/data_age_race.csv.gz": "559c5536d93a54bac27bdee47d705372",
+    "./data/cosmos_diabetes_county/standard/data_ruca_age.csv.gz": "542b7be12e915f201a3211f65b149ce3"
+  }
+}

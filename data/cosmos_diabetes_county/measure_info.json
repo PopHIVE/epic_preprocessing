@@ -1,0 +1,95 @@
+{
+  "epic_n_patients": {
+    "id": "epic_n_patients",
+    "short_name": "Patients in stratum",
+    "long_name": "Number of patients in the county / stratum cell",
+    "category": "chronic",
+    "short_description": "Number of Epic Cosmos patients in the cell; the denominator of both percent measures.",
+    "long_description": "Number of Patients from SlicerDicer sessions 2860367 and 2860371 (population base: All Patients; State of Residence = Illinois, Florida, Ohio, Wyoming; Country of Care = United States; Has Any Encounters; Base Patient), January 2024. Cells of 10 or fewer patients are suppressed by Epic and imputed as 5 (flag = 1). The 'Total' county row (four-state total, not national) and 'None of the above' county row are dropped. Race categories can overlap (a patient can carry more than one race), so race-specific counts do not sum to the Total.",
+    "statement": "In {location}, {value} patients were in this group",
+    "measure_type": "Count",
+    "unit": "Count",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+  "epic_n_patients_suppressed_flag": {
+    "id": "epic_n_patients_suppressed_flag",
+    "short_name": "Suppressed flag: patients",
+    "long_name": "Suppression flag for the patient count",
+    "category": "chronic",
+    "short_description": "Indicates whether the patient count was suppressed and imputed.",
+    "long_description": "1 when Epic Cosmos suppressed the cell (10 or fewer patients) and the count was imputed as 5; 0 otherwise. Computed before imputation.",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+  "epic_pct_a1c_6_5_plus": {
+    "id": "epic_pct_a1c_6_5_plus",
+    "short_name": "Percent with A1c 6.5+",
+    "long_name": "Percent of patients with a hemoglobin A1c of 6.5% or higher",
+    "category": "chronic",
+    "short_description": "Percent of patients in the cell with an A1c of 6.5 or higher.",
+    "long_description": "A1c 6.5+ (%) from the SlicerDicer exports. A blank or '-' percent means the numerator was 10 or fewer; it is imputed as 5 / epic_n_patients * 100 (flag = 1), which is an upper-bound-style placeholder (the true percent lies between 0 and 10 / n), not an estimate. When the denominator was also suppressed (imputed to 5), 5/5 would assert 100% by construction, so the value is left NA with the flag set to 1.",
+    "statement": "In {location}, {value}% of patients had an A1c of 6.5 or higher",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+  "epic_pct_a1c_6_5_plus_suppressed_flag": {
+    "id": "epic_pct_a1c_6_5_plus_suppressed_flag",
+    "short_name": "Suppressed flag: A1c 6.5+",
+    "long_name": "Suppression flag for the A1c 6.5+ percent",
+    "category": "chronic",
+    "short_description": "Indicates whether the percent was suppressed and imputed (or left missing).",
+    "long_description": "1 when the source percent was blank or '-' (numerator of 10 or fewer); 0 otherwise. Where the flag is 1 and epic_n_patients_suppressed_flag is also 1, the percent is NA.",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+  "epic_pct_diabetes_ccw": {
+    "id": "epic_pct_diabetes_ccw",
+    "short_name": "Percent with diabetes (CCW)",
+    "long_name": "Percent of patients meeting the CMS Chronic Conditions Warehouse diabetes definition",
+    "category": "chronic",
+    "short_description": "Percent of patients in the cell meeting the Diabetes CCW definition.",
+    "long_description": "Diabetes CCW definition (%) from the SlicerDicer exports. Suppression handling is identical to epic_pct_a1c_6_5_plus: a blank or '-' percent is imputed as 5 / epic_n_patients * 100 (flag = 1), and left NA when the denominator was also suppressed.",
+    "statement": "In {location}, {value}% of patients met the diabetes (CCW) definition",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+  "epic_pct_diabetes_ccw_suppressed_flag": {
+    "id": "epic_pct_diabetes_ccw_suppressed_flag",
+    "short_name": "Suppressed flag: diabetes (CCW)",
+    "long_name": "Suppression flag for the Diabetes CCW percent",
+    "category": "chronic",
+    "short_description": "Indicates whether the percent was suppressed and imputed (or left missing).",
+    "long_description": "1 when the source percent was blank or '-' (numerator of 10 or fewer); 0 otherwise. Where the flag is 1 and epic_n_patients_suppressed_flag is also 1, the percent is NA.",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [{ "id": "epic_cosmos" }],
+    "citations": []
+  },
+
+  "_sources": {
+    "epic_cosmos": {
+      "name": "Epic Cosmos",
+      "url": "https://cosmos.epic.com/",
+      "date_accessed": 2026,
+      "organization": "Epic Systems",
+      "organization_url": "https://www.epic.com/",
+      "description": "Epic Cosmos is a collaborative research platform containing de-identified patient data from over 300 million patients across more than 1,600 hospitals and health systems using Epic electronic health record systems. Data is accessed via SlicerDicer, a self-service analytics tool. The dataset includes emergency department visits, diagnoses, immunizations, laboratory results, and other clinical data. Due to privacy protections, counts fewer than 10 are suppressed and imputed. Coverage extends across all U.S. states and territories. Note that county-level and city-level stratifications could differ markedly in total sample size due to high levels of missingness of county data in some states.",
+      "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'"
+    }
+  }
+}
