@@ -1,25 +1,23 @@
 # =============================================================================
-# Epic Cosmos Vector-Borne Disease Data Ingestion
+# Epic Cosmos Vector-Borne Disease NEW CASES Data Ingestion
 # Source: Epic Cosmos SlicerDicer export (raw/staging/*.xlsx)
-#         Monthly patient counts with a vector-borne disease diagnosis, by
-#         state, for six diseases: Lyme, Babesiosis, Malaria, RMSF (Rocky
-#         Mountain Spotted Fever), West Nile, and Dengue
+#         Monthly count of patients with a NEW (first-time) vector-borne
+#         disease diagnosis, by state, for six diseases: Lyme, Babesiosis,
+#         Malaria, RMSF (Rocky Mountain Spotted Fever), West Nile, and Dengue
 #
-# SlicerDicer session 2852889 (originally created as session 2852629; Epic
-# assigns a new session ID whenever the session is re-saved, but the query is
-# unchanged), "Lyme N and Babesiosis N and Malaria N and RMSF N and West Nile
-# N and Dengue N and Number of Patients by State of Residence":
+# SlicerDicer session 2861722, "n new west nile and n new babesiosis and n new
+# malaria and n new RMSF and n new dengue and Number of Patients and n new lyme
+# by State of Residence":
 #   Data model      : Patients
 #   Population base : All Patients
 #   Criteria        : Country of Care = United States of America,
 #                      Has Any Encounters
-#   Measures        : Lyme N, Babesiosis N, Malaria N, RMSF N, West Nile N,
-#                      Dengue N (numerators), Number of Patients (denominator)
+#   Measures        : n new <disease> (numerators, new diagnoses only),
+#                      Number of Patients (denominator)
 #
-# As of the 2026-08-28 export, the measure column labels changed from the
-# "<Disease> N" form (e.g. "Lyme N") to the lowercase "n <disease>" form (e.g.
-# "n lyme") used by cosmos_vector_borne_no_travel. MEASURE_PATTERNS matches
-# both forms so older staged exports would still parse.
+# Sibling of cosmos_vector_borne, whose measures count patients with ANY
+# diagnosis in the month (new or ongoing). Output columns carry a `new_` infix
+# (epic_n_new_lyme, ...) so they cannot collide with that source in a bundle.
 #
 # Raw export layout (rows, 1-indexed as in the spreadsheet):
 #   1-8   : session metadata
@@ -33,7 +31,7 @@
 # Output (PopHIVE wide format, standard/data.csv.gz):
 #   index   : geography (FIPS string, "00" = national), time
 #   measures, one triplet per disease:
-#     epic_n_<disease>, epic_pct_<disease> -> epic_<disease>_suppressed_flag
+#     epic_n_new_<disease>, epic_pct_new_<disease> -> epic_new_<disease>_suppressed_flag
 #       (the flag covers both; the percent is derived from the same
 #       numerator cell)
 #   denominator: epic_n_patients -> epic_n_patients_suppressed_flag
@@ -86,12 +84,12 @@ xlsx_password <- Sys.getenv("EPIC_XLSX_PASSWORD")
 # Unrecognized/ambiguous labels stop the run instead of silently landing on
 # the wrong column - extend this map when the session changes.
 MEASURE_PATTERNS <- c(
-  lyme        = "^(Lyme N|n lyme)$",
-  babesiosis  = "^(Babesiosis N|n babesiosis)$",
-  malaria     = "^(Malaria N|n malaria)$",
-  rmsf        = "^(RMSF N|n RMSF)$",
-  west_nile   = "^(West Nile N|n west nile)$",
-  dengue      = "^(Dengue N|n dengue)$",
+  lyme        = "^n new lyme$",
+  babesiosis  = "^n new babesiosis$",
+  malaria     = "^n new malaria$",
+  rmsf        = "^n new RMSF$",
+  west_nile   = "^n new west nile$",
+  dengue      = "^n new dengue$",
   n_patients  = "^Number of Patients$"
 )
 DISEASE_KEYS <- setdiff(names(MEASURE_PATTERNS), "n_patients")
@@ -404,6 +402,14 @@ if (!identical(process$raw_state, current_state)) {
   # ---------------------------------------------------------------------------
   # 9. Write standardized output
   # ---------------------------------------------------------------------------
+  # Rename disease columns to the `new_` infix (validated above under the
+  # plain names shared with cosmos_vector_borne's logic).
+  for (dz in DISEASE_KEYS) {
+    names(data_clean)[names(data_clean) == paste0("epic_n_", dz)] <- paste0("epic_n_new_", dz)
+    names(data_clean)[names(data_clean) == paste0("epic_pct_", dz)] <- paste0("epic_pct_new_", dz)
+    names(data_clean)[names(data_clean) == paste0("epic_", dz, "_suppressed_flag")] <- paste0("epic_new_", dz, "_suppressed_flag")
+  }
+
   if (!dir.exists("standard")) dir.create("standard")
   vroom::vroom_write(data_clean, "standard/data.csv.gz", delim = ",")
 

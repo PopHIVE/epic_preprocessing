@@ -1,0 +1,373 @@
+{
+  "epic_n_new_lyme": {
+    "id": "epic_n_new_lyme",
+    "short_name": "New Lyme Disease Patients",
+    "long_name": "Patients with a New Lyme Disease Diagnosis",
+    "category": "infectious_disease",
+    "short_description": "Monthly count of patients with a new Lyme disease diagnosis.",
+    "long_description": "Monthly count of patients with a new Lyme disease diagnosis, per Epic's new-case measure (\"n new ...\"; first-time diagnoses only, excluding patients already diagnosed before the month). Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_new_lyme_suppressed_flag.",
+    "statement": "In {location}, {value} patients had a new Lyme disease diagnosis.",
+    "measure_type": "Count",
+    "unit": "patients",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_pct_new_lyme": {
+    "id": "epic_pct_new_lyme",
+    "short_name": "New Lyme Disease Percentage",
+    "long_name": "Percent of Patients with a New Lyme Disease Diagnosis",
+    "category": "infectious_disease",
+    "short_description": "Monthly percent of patients with a new Lyme disease diagnosis.",
+    "long_description": "Monthly percentage of patients with a new Lyme disease diagnosis, computed as epic_n_new_lyme / epic_n_patients * 100 - a percent of all patients, not a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing, because dividing by the imputed denominator of 5 would assert a meaningless value; those cells are marked by epic_n_patients_suppressed_flag.",
+    "statement": "In {location}, {value}% of patients had a new Lyme disease diagnosis.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_new_lyme_suppressed_flag": {
+    "id": "epic_new_lyme_suppressed_flag",
+    "short_name": "Suppressed flag: new Lyme disease",
+    "long_name": "Suppression flag for the Lyme disease new-case numerator (count and percent)",
+    "category": "infectious_disease",
+    "short_description": "Indicates whether the Lyme disease new-case numerator was suppressed and imputed; applies to both epic_n_new_lyme and epic_pct_new_lyme.",
+    "long_description": "1 when Epic Cosmos suppressed the Lyme disease cell (a count of 10 or fewer, reported blank or as \"10 or fewer\") and epic_n_new_lyme was imputed as 5; 0 otherwise. Suppression of the denominator is tracked separately by epic_n_patients_suppressed_flag.",
+    "statement": "",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_n_new_babesiosis": {
+    "id": "epic_n_new_babesiosis",
+    "short_name": "New Babesiosis Patients",
+    "long_name": "Patients with a New Babesiosis Diagnosis",
+    "category": "infectious_disease",
+    "short_description": "Monthly count of patients with a new babesiosis diagnosis.",
+    "long_description": "Monthly count of patients with a new babesiosis diagnosis, per Epic's new-case measure (\"n new ...\"; first-time diagnoses only, excluding patients already diagnosed before the month). Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_new_babesiosis_suppressed_flag.",
+    "statement": "In {location}, {value} patients had a new babesiosis diagnosis.",
+    "measure_type": "Count",
+    "unit": "patients",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_pct_new_babesiosis": {
+    "id": "epic_pct_new_babesiosis",
+    "short_name": "New Babesiosis Percentage",
+    "long_name": "Percent of Patients with a New Babesiosis Diagnosis",
+    "category": "infectious_disease",
+    "short_description": "Monthly percent of patients with a new babesiosis diagnosis.",
+    "long_description": "Monthly percentage of patients with a new babesiosis diagnosis, computed as epic_n_new_babesiosis / epic_n_patients * 100 - a percent of all patients, not a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing, because dividing by the imputed denominator of 5 would assert a meaningless value; those cells are marked by epic_n_patients_suppressed_flag.",
+    "statement": "In {location}, {value}% of patients had a new babesiosis diagnosis.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_new_babesiosis_suppressed_flag": {
+    "id": "epic_new_babesiosis_suppressed_flag",
+    "short_name": "Suppressed flag: new babesiosis",
+    "long_name": "Suppression flag for the babesiosis new-case numerator (count and percent)",
+    "category": "infectious_disease",
+    "short_description": "Indicates whether the babesiosis new-case numerator was suppressed and imputed; applies to both epic_n_new_babesiosis and epic_pct_new_babesiosis.",
+    "long_description": "1 when Epic Cosmos suppressed the babesiosis cell (a count of 10 or fewer, reported blank or as \"10 or fewer\") and epic_n_new_babesiosis was imputed as 5; 0 otherwise. Suppression of the denominator is tracked separately by epic_n_patients_suppressed_flag.",
+    "statement": "",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_n_new_malaria": {
+    "id": "epic_n_new_malaria",
+    "short_name": "New Malaria Patients",
+    "long_name": "Patients with a New Malaria Diagnosis",
+    "category": "infectious_disease",
+    "short_description": "Monthly count of patients with a new malaria diagnosis.",
+    "long_description": "Monthly count of patients with a new malaria diagnosis, per Epic's new-case measure (\"n new ...\"; first-time diagnoses only, excluding patients already diagnosed before the month). Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_new_malaria_suppressed_flag. Most malaria cases in the US are travel-associated rather than locally acquired.",
+    "statement": "In {location}, {value} patients had a new malaria diagnosis.",
+    "measure_type": "Count",
+    "unit": "patients",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_pct_new_malaria": {
+    "id": "epic_pct_new_malaria",
+    "short_name": "New Malaria Percentage",
+    "long_name": "Percent of Patients with a New Malaria Diagnosis",
+    "category": "infectious_disease",
+    "short_description": "Monthly percent of patients with a new malaria diagnosis.",
+    "long_description": "Monthly percentage of patients with a new malaria diagnosis, computed as epic_n_new_malaria / epic_n_patients * 100 - a percent of all patients, not a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing, because dividing by the imputed denominator of 5 would assert a meaningless value; those cells are marked by epic_n_patients_suppressed_flag.",
+    "statement": "In {location}, {value}% of patients had a new malaria diagnosis.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_new_malaria_suppressed_flag": {
+    "id": "epic_new_malaria_suppressed_flag",
+    "short_name": "Suppressed flag: new malaria",
+    "long_name": "Suppression flag for the malaria new-case numerator (count and percent)",
+    "category": "infectious_disease",
+    "short_description": "Indicates whether the malaria new-case numerator was suppressed and imputed; applies to both epic_n_new_malaria and epic_pct_new_malaria.",
+    "long_description": "1 when Epic Cosmos suppressed the malaria cell (a count of 10 or fewer, reported blank or as \"10 or fewer\") and epic_n_new_malaria was imputed as 5; 0 otherwise. Suppression of the denominator is tracked separately by epic_n_patients_suppressed_flag.",
+    "statement": "",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_n_new_rmsf": {
+    "id": "epic_n_new_rmsf",
+    "short_name": "New RMSF Patients",
+    "long_name": "Patients with a New Rocky Mountain Spotted Fever Diagnosis",
+    "category": "infectious_disease",
+    "short_description": "Monthly count of patients with a new Rocky Mountain Spotted Fever (RMSF) diagnosis.",
+    "long_description": "Monthly count of patients with a new Rocky Mountain Spotted Fever diagnosis, per Epic's new-case measure (\"n new ...\"; first-time diagnoses only, excluding patients already diagnosed before the month). Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_new_rmsf_suppressed_flag.",
+    "statement": "In {location}, {value} patients had a new Rocky Mountain Spotted Fever diagnosis.",
+    "measure_type": "Count",
+    "unit": "patients",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_pct_new_rmsf": {
+    "id": "epic_pct_new_rmsf",
+    "short_name": "New RMSF Percentage",
+    "long_name": "Percent of Patients with a New Rocky Mountain Spotted Fever Diagnosis",
+    "category": "infectious_disease",
+    "short_description": "Monthly percent of patients with a new Rocky Mountain Spotted Fever diagnosis.",
+    "long_description": "Monthly percentage of patients with a new Rocky Mountain Spotted Fever diagnosis, computed as epic_n_new_rmsf / epic_n_patients * 100 - a percent of all patients, not a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing, because dividing by the imputed denominator of 5 would assert a meaningless value; those cells are marked by epic_n_patients_suppressed_flag.",
+    "statement": "In {location}, {value}% of patients had a new Rocky Mountain Spotted Fever diagnosis.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_new_rmsf_suppressed_flag": {
+    "id": "epic_new_rmsf_suppressed_flag",
+    "short_name": "Suppressed flag: new RMSF",
+    "long_name": "Suppression flag for the RMSF new-case numerator (count and percent)",
+    "category": "infectious_disease",
+    "short_description": "Indicates whether the RMSF new-case numerator was suppressed and imputed; applies to both epic_n_new_rmsf and epic_pct_new_rmsf.",
+    "long_description": "1 when Epic Cosmos suppressed the RMSF cell (a count of 10 or fewer, reported blank or as \"10 or fewer\") and epic_n_new_rmsf was imputed as 5; 0 otherwise. Suppression of the denominator is tracked separately by epic_n_patients_suppressed_flag.",
+    "statement": "",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_n_new_west_nile": {
+    "id": "epic_n_new_west_nile",
+    "short_name": "New West Nile Virus Patients",
+    "long_name": "Patients with a New West Nile Virus Diagnosis",
+    "category": "infectious_disease",
+    "short_description": "Monthly count of patients with a new West Nile virus diagnosis.",
+    "long_description": "Monthly count of patients with a new West Nile virus diagnosis, per Epic's new-case measure (\"n new ...\"; first-time diagnoses only, excluding patients already diagnosed before the month). Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_new_west_nile_suppressed_flag.",
+    "statement": "In {location}, {value} patients had a new West Nile virus diagnosis.",
+    "measure_type": "Count",
+    "unit": "patients",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_pct_new_west_nile": {
+    "id": "epic_pct_new_west_nile",
+    "short_name": "New West Nile Virus Percentage",
+    "long_name": "Percent of Patients with a New West Nile Virus Diagnosis",
+    "category": "infectious_disease",
+    "short_description": "Monthly percent of patients with a new West Nile virus diagnosis.",
+    "long_description": "Monthly percentage of patients with a new West Nile virus diagnosis, computed as epic_n_new_west_nile / epic_n_patients * 100 - a percent of all patients, not a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing, because dividing by the imputed denominator of 5 would assert a meaningless value; those cells are marked by epic_n_patients_suppressed_flag.",
+    "statement": "In {location}, {value}% of patients had a new West Nile virus diagnosis.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_new_west_nile_suppressed_flag": {
+    "id": "epic_new_west_nile_suppressed_flag",
+    "short_name": "Suppressed flag: new West Nile virus",
+    "long_name": "Suppression flag for the West Nile virus new-case numerator (count and percent)",
+    "category": "infectious_disease",
+    "short_description": "Indicates whether the West Nile virus new-case numerator was suppressed and imputed; applies to both epic_n_new_west_nile and epic_pct_new_west_nile.",
+    "long_description": "1 when Epic Cosmos suppressed the West Nile virus cell (a count of 10 or fewer, reported blank or as \"10 or fewer\") and epic_n_new_west_nile was imputed as 5; 0 otherwise. Suppression of the denominator is tracked separately by epic_n_patients_suppressed_flag.",
+    "statement": "",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_n_new_dengue": {
+    "id": "epic_n_new_dengue",
+    "short_name": "New Dengue Patients",
+    "long_name": "Patients with a New Dengue Diagnosis",
+    "category": "infectious_disease",
+    "short_description": "Monthly count of patients with a new dengue diagnosis.",
+    "long_description": "Monthly count of patients with a new dengue diagnosis, per Epic's new-case measure (\"n new ...\"; first-time diagnoses only, excluding patients already diagnosed before the month). Counts of 10 or fewer are suppressed by Epic (reported blank or as \"10 or fewer\") and imputed as 5; see epic_new_dengue_suppressed_flag. Most dengue cases in the continental US are travel-associated rather than locally acquired.",
+    "statement": "In {location}, {value} patients had a new dengue diagnosis.",
+    "measure_type": "Count",
+    "unit": "patients",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_pct_new_dengue": {
+    "id": "epic_pct_new_dengue",
+    "short_name": "New Dengue Percentage",
+    "long_name": "Percent of Patients with a New Dengue Diagnosis",
+    "category": "infectious_disease",
+    "short_description": "Monthly percent of patients with a new dengue diagnosis.",
+    "long_description": "Monthly percentage of patients with a new dengue diagnosis, computed as epic_n_new_dengue / epic_n_patients * 100 - a percent of all patients, not a rate per 100,000. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing, because dividing by the imputed denominator of 5 would assert a meaningless value; those cells are marked by epic_n_patients_suppressed_flag.",
+    "statement": "In {location}, {value}% of patients had a new dengue diagnosis.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_new_dengue_suppressed_flag": {
+    "id": "epic_new_dengue_suppressed_flag",
+    "short_name": "Suppressed flag: new dengue",
+    "long_name": "Suppression flag for the dengue new-case numerator (count and percent)",
+    "category": "infectious_disease",
+    "short_description": "Indicates whether the dengue new-case numerator was suppressed and imputed; applies to both epic_n_new_dengue and epic_pct_new_dengue.",
+    "long_description": "1 when Epic Cosmos suppressed the dengue cell (a count of 10 or fewer, reported blank or as \"10 or fewer\") and epic_n_new_dengue was imputed as 5; 0 otherwise. Suppression of the denominator is tracked separately by epic_n_patients_suppressed_flag.",
+    "statement": "",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_n_patients": {
+    "id": "epic_n_patients",
+    "short_name": "Total Patients",
+    "long_name": "Total Patients (Denominator)",
+    "category": "general",
+    "short_description": "Monthly total patient count, used as the denominator for each disease's percentage.",
+    "long_description": "Monthly total count of patients, used as the denominator for each epic_pct_new_* column. Data from Epic Cosmos SlicerDicer session 2861722. Counts of 10 or fewer are suppressed by Epic and imputed as 5; see epic_n_patients_suppressed_flag. Population base: All Patients, Country of Care = United States of America, Has Any Encounters. Same denominator definition as cosmos_vector_borne.",
+    "statement": "",
+    "measure_type": "Count",
+    "unit": "patients",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "epic_n_patients_suppressed_flag": {
+    "id": "epic_n_patients_suppressed_flag",
+    "short_name": "Suppressed flag: total patients",
+    "long_name": "Suppression flag for the total patient count",
+    "category": "general",
+    "short_description": "Indicates whether the total patient count was suppressed and imputed.",
+    "long_description": "1 when Epic Cosmos suppressed the denominator cell (a count of 10 or fewer, reported blank or as \"10 or fewer\") and epic_n_patients was imputed as 5; 0 otherwise. Where this flag is 1, every epic_pct_new_* column is left missing rather than computed from an imputed denominator.",
+    "statement": "",
+    "measure_type": "Binary",
+    "unit": "0/1",
+    "time_resolution": "Month",
+    "sources": [
+      {
+        "id": "epic_cosmos"
+      }
+    ],
+    "citations": []
+  },
+  "_sources": {
+    "epic_cosmos": {
+      "name": "Epic Cosmos",
+      "url": "https://cosmos.epic.com/",
+      "date_accessed": 2026,
+      "organization": "Epic Systems",
+      "organization_url": "https://www.epic.com/",
+      "description": "Epic Cosmos is a collaborative research platform containing de-identified patient data from over 300 million patients across more than 1,600 hospitals and health systems using Epic electronic health record systems. Data is accessed via SlicerDicer, a self-service analytics tool. The dataset includes emergency department visits, diagnoses, immunizations, laboratory results, and other clinical data. Due to privacy protections, counts fewer than 10 are suppressed and imputed. Coverage extends across all U.S. states and territories. Note that county-level and city-level stratifications could differ markedly in total sample size due to high levels of missingness of county data in some states.",
+      "restrictions": "The data can be re-used with appropriate attribution. A suggested citation relating to this data is 'Results of research performed with Epic Cosmos were obtained from the PopHIVE platform (https://github.com/PopHIVE/Ingest).'"
+    }
+  }
+}

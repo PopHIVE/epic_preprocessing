@@ -35,6 +35,10 @@ for (dz in DISEASES) {
 }
 ```
 
+# Epic Cosmos vector-borne diseases {.tabset}
+
+## Trends and maps
+
 ```{r national-time-series}
 pct_cols <- paste0("epic_pct_", DISEASES)
 
@@ -54,6 +58,101 @@ ggplot(nat_long, aes(time, value)) +
   theme_bw(base_size = 11) +
   theme(strip.text = element_text(face = "bold"),
         axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r national-time-series-rate}
+rate_cols <- paste0("epic_rate100k_", DISEASES)
+
+nat_rate_long <- dat %>%
+  filter(geography == "00") %>%
+  mutate(time = as.Date(time)) %>%
+  select(time, all_of(rate_cols)) %>%
+  pivot_longer(-time, names_to = "measure", values_to = "value") %>%
+  mutate(measure = DISEASE_LABELS[sub("^epic_rate100k_", "", measure)])
+
+ggplot(nat_rate_long, aes(time, value)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 0.8) +
+  facet_wrap(~measure, scales = "free_y", ncol = 3) +
+  labs(title = "National monthly rate per 100,000 patients, by disease",
+       x = NULL, y = "Cases per 100,000 patients") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r regional-time-series}
+# Five common geographic regions (National Geographic scheme; DC grouped with
+# the Northeast). Regional percent = pooled counts across member states /
+# pooled patients, so larger states weigh more.
+REGION_STATES <- list(
+  Northeast = c("CT", "DE", "DC", "ME", "MD", "MA", "NH", "NJ", "NY", "PA", "RI", "VT"),
+  Southeast = c("AL", "AR", "FL", "GA", "KY", "LA", "MS", "NC", "SC", "TN", "VA", "WV"),
+  Midwest   = c("IL", "IN", "IA", "KS", "MI", "MN", "MO", "NE", "ND", "OH", "SD", "WI"),
+  Southwest = c("AZ", "NM", "OK", "TX"),
+  West      = c("AK", "CA", "CO", "HI", "ID", "MT", "NV", "OR", "UT", "WA", "WY")
+)
+REGION_MAP <- stack(REGION_STATES) %>%
+  transmute(state = as.character(values), region = as.character(ind))
+
+all_fips <- vroom("../../resources/all_fips.csv.gz", show_col_types = FALSE,
+                  col_types = cols(geography = "c"))
+
+region_lookup <- all_fips %>%
+  filter(nchar(geography) == 2, geography != "00") %>%
+  select(geography, state) %>%
+  left_join(REGION_MAP, by = "state") %>%
+  filter(!is.na(region)) %>%
+  select(geography, region)
+
+n_cols_reg <- paste0("epic_n_", DISEASES)
+
+region_long <- dat %>%
+  inner_join(region_lookup, by = "geography") %>%
+  mutate(time = as.Date(time)) %>%
+  group_by(region, time) %>%
+  summarize(across(all_of(c(n_cols_reg, "epic_n_patients")), ~ sum(.x, na.rm = TRUE)),
+            .groups = "drop") %>%
+  pivot_longer(all_of(n_cols_reg), names_to = "measure", values_to = "n") %>%
+  mutate(value = n / epic_n_patients * 100,
+         measure = DISEASE_LABELS[sub("^epic_n_", "", measure)])
+
+ggplot(region_long, aes(time, value, color = region)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 0.8) +
+  facet_wrap(~measure, scales = "free_y", ncol = 3) +
+  scale_color_brewer(palette = "Dark2", name = NULL) +
+  labs(title = "Regional monthly percent of patients, by disease",
+       subtitle = "Five geographic regions; pooled across member states",
+       x = NULL, y = "Percent of patients") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom")
+```
+
+```{r regional-time-series-log}
+# Same regional monthly percent, on a log scale with one panel per disease and
+# a shared y-axis so the four diseases can be compared with each other.
+LOG_DISEASES <- c("lyme", "babesiosis", "malaria", "rmsf")
+
+region_log <- region_long %>%
+  filter(measure %in% DISEASE_LABELS[LOG_DISEASES]) %>%
+  mutate(measure = factor(measure, levels = DISEASE_LABELS[LOG_DISEASES]))
+
+ggplot(region_log, aes(time, value, color = region)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 0.8) +
+  facet_wrap(~measure, ncol = 2) +
+  scale_y_log10(labels = label_number(accuracy = 0.0001)) +
+  scale_color_brewer(palette = "Dark2", name = NULL) +
+  labs(title = "Regional monthly percent of patients, log scale",
+       subtitle = "Lyme disease, babesiosis, malaria and RMSF; same y-axis in every panel",
+       x = NULL, y = "Percent of patients (log scale)") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom")
 ```
 
 ```{r no-travel-comparison}
@@ -153,4 +252,585 @@ for (dz in DISEASES) {
   print(draw_map(paste0("epic_rate100k_", dz), flag_col,
                  sprintf("%s — rate per 100,000 patients, by year", DISEASE_LABELS[dz])))
 }
+```
+
+## New cases
+
+Patients with a **new** (first-time) diagnosis, from `cosmos_vector_borne_new_cases`
+(SlicerDicer session 2861722). Same population base and denominator as the tab above,
+but the numerator counts only first-time diagnoses, so it is a subset of the
+all-diagnosis counts. Most state-month cells for the rarer diseases are suppressed
+(imputed as 5), so the national and regional panels are the most reliable.
+
+```{r nc-data}
+nc_file <- "../cosmos_vector_borne_new_cases/standard/data.csv.gz"
+HAVE_NC <- file.exists(nc_file)
+if (!HAVE_NC) message("cosmos_vector_borne_new_cases standard data not found; skipping new-case section.")
+
+if (HAVE_NC) {
+  nc <- vroom(nc_file, show_col_types = FALSE,
+              col_types = cols(geography = "c", time = "c"))
+  for (dz in DISEASES) {
+    nc[[paste0("epic_rate100k_new_", dz)]] <-
+      nc[[paste0("epic_n_new_", dz)]] / nc$epic_n_patients * 1e5
+  }
+}
+```
+
+```{r nc-national, eval=HAVE_NC}
+
+nc_nat <- nc %>%
+  filter(geography == "00") %>%
+  mutate(time = as.Date(time)) %>%
+  select(time, all_of(paste0("epic_pct_new_", DISEASES))) %>%
+  pivot_longer(-time, names_to = "measure", values_to = "value") %>%
+  mutate(measure = DISEASE_LABELS[sub("^epic_pct_new_", "", measure)])
+
+ggplot(nc_nat, aes(time, value)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 0.8) +
+  facet_wrap(~measure, scales = "free_y", ncol = 3) +
+  labs(title = "National monthly percent of patients with a new diagnosis, by disease",
+       x = NULL, y = "Percent of patients") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r nc-national-rate, eval=HAVE_NC}
+nc_rate <- nc %>%
+  filter(geography == "00") %>%
+  mutate(time = as.Date(time)) %>%
+  select(time, all_of(paste0("epic_rate100k_new_", DISEASES))) %>%
+  pivot_longer(-time, names_to = "measure", values_to = "value") %>%
+  mutate(measure = DISEASE_LABELS[sub("^epic_rate100k_new_", "", measure)])
+
+ggplot(nc_rate, aes(time, value)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 0.8) +
+  facet_wrap(~measure, scales = "free_y", ncol = 3) +
+  labs(title = "National monthly rate of new diagnoses per 100,000 patients, by disease",
+       x = NULL, y = "New cases per 100,000 patients") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r nc-vs-all, eval=HAVE_NC}
+# New-case counts are a subset of the all-diagnosis counts (same patients
+# denominator definition), so the two series are directly comparable.
+nc_n_cols <- paste0("epic_n_new_", DISEASES)
+all_n_cols <- paste0("epic_n_", DISEASES)
+
+nc_cmp <- bind_rows(
+  dat %>% filter(geography == "00") %>%
+    transmute(time = as.Date(time), source = "Any diagnosis",
+              !!!setNames(lapply(all_n_cols, as.name), DISEASES)),
+  nc %>% filter(geography == "00") %>%
+    transmute(time = as.Date(time), source = "New diagnosis only",
+              !!!setNames(lapply(nc_n_cols, as.name), DISEASES))
+) %>%
+  pivot_longer(all_of(DISEASES), names_to = "measure", values_to = "value") %>%
+  mutate(measure = DISEASE_LABELS[measure])
+
+ggplot(nc_cmp, aes(time, value, color = source)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 0.8) +
+  facet_wrap(~measure, scales = "free_y", ncol = 3) +
+  scale_color_manual(values = c("Any diagnosis" = "#1b6ca8",
+                                 "New diagnosis only" = "#e07b39"), name = NULL) +
+  labs(title = "National monthly patient count — any diagnosis vs. new diagnosis only",
+       x = NULL, y = "Number of patients") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom")
+```
+
+```{r nc-regional, eval=HAVE_NC}
+nc_n_reg <- paste0("epic_n_new_", DISEASES)
+
+nc_region <- nc %>%
+  inner_join(region_lookup, by = "geography") %>%
+  mutate(time = as.Date(time)) %>%
+  group_by(region, time) %>%
+  summarize(across(all_of(c(nc_n_reg, "epic_n_patients")), ~ sum(.x, na.rm = TRUE)),
+            .groups = "drop") %>%
+  pivot_longer(all_of(nc_n_reg), names_to = "measure", values_to = "n") %>%
+  mutate(value = n / epic_n_patients * 100,
+         measure = DISEASE_LABELS[sub("^epic_n_new_", "", measure)])
+
+ggplot(nc_region, aes(time, value, color = region)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 0.8) +
+  facet_wrap(~measure, scales = "free_y", ncol = 3) +
+  scale_color_brewer(palette = "Dark2", name = NULL) +
+  labs(title = "Regional monthly percent of patients with a new diagnosis, by disease",
+       subtitle = "Five geographic regions; pooled across member states",
+       x = NULL, y = "Percent of patients") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom")
+```
+
+```{r nc-regional-log, eval=HAVE_NC}
+# Same regional monthly percent on a log scale, shared y-axis (as in the
+# all-diagnosis tab).
+nc_region_log <- nc_region %>%
+  filter(measure %in% DISEASE_LABELS[LOG_DISEASES], value > 0) %>%
+  mutate(measure = factor(measure, levels = DISEASE_LABELS[LOG_DISEASES]))
+
+ggplot(nc_region_log, aes(time, value, color = region)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 0.8) +
+  facet_wrap(~measure, ncol = 2) +
+  scale_y_log10(labels = label_number(accuracy = 0.0001)) +
+  scale_color_brewer(palette = "Dark2", name = NULL) +
+  labs(title = "Regional monthly percent of patients with a new diagnosis, log scale",
+       subtitle = "Lyme disease, babesiosis, malaria and RMSF; same y-axis in every panel",
+       x = NULL, y = "Percent of patients (log scale)") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom")
+```
+
+```{r nc-maps, eval=HAVE_NC, results='asis'}
+nc_flag_cols <- paste0("epic_new_", DISEASES, "_suppressed_flag")
+
+nc_state_annual <- nc %>%
+  filter(nchar(geography) == 2, geography != "00") %>%
+  mutate(year = substr(time, 1, 4)) %>%
+  filter(year %in% YEARS) %>%
+  group_by(geography, year) %>%
+  summarize(across(all_of(c(paste0("epic_pct_new_", DISEASES),
+                             paste0("epic_rate100k_new_", DISEASES))),
+                    ~ mean(.x, na.rm = TRUE)),
+            # TRUE only when every contributing month was suppressed
+            across(all_of(nc_flag_cols), ~ mean(.x) == 1, .names = "allsupp_{.col}"),
+            .groups = "drop") %>%
+  mutate(year = factor(year, levels = YEARS))
+
+draw_nc_map <- function(col, flag_col, label) {
+  md <- states_sf %>%
+    left_join(
+      nc_state_annual %>%
+        select(geography, year, value = all_of(col), suppressed = all_of(flag_col)) %>%
+        mutate(value = if_else(suppressed, NA_real_, value)),
+      by = "geography"
+    ) %>%
+    st_as_sf()
+
+  ggplot(md) +
+    geom_sf(aes(fill = value), color = "white", linewidth = 0.08) +
+    scale_fill_viridis_c(option = "viridis", na.value = "grey70",
+                         labels = label_number(accuracy = 0.01), name = NULL) +
+    facet_wrap(~year, ncol = 2) +
+    coord_sf(crs = 5070, datum = NA) +
+    labs(title = label) +
+    theme_void(base_size = 11) +
+    theme(plot.title = element_text(face = "bold", hjust = 0.5, size = 13),
+          strip.text = element_text(face = "bold", size = 11),
+          legend.position = "right")
+}
+
+for (dz in DISEASES) {
+  flag_col <- paste0("allsupp_epic_new_", dz, "_suppressed_flag")
+  print(draw_nc_map(paste0("epic_pct_new_", dz), flag_col,
+                    sprintf("%s — percent of patients with a new diagnosis, by year", DISEASE_LABELS[dz])))
+  print(draw_nc_map(paste0("epic_rate100k_new_", dz), flag_col,
+                    sprintf("%s — new diagnoses per 100,000 patients, by year", DISEASE_LABELS[dz])))
+}
+```
+
+## Comparison with NNDSS and ArboNET
+
+Epic Cosmos counts are compared with the NNDSS and `arbonet`. NNDSS has babesiosis, 
+malaria, West Nile virus and dengue. ArboNET has West Nile virus only.
+
+```{r external-data}
+INGEST_RAW <- "https://raw.githubusercontent.com/PopHIVE/Ingest/main/data"
+
+fetch_ingest <- function(path) {
+  dest <- tempfile(fileext = ".csv.gz")
+  ok <- tryCatch({
+    download.file(file.path(INGEST_RAW, path), dest, mode = "wb", quiet = TRUE)
+    TRUE
+  }, error = function(e) FALSE)
+  if (!ok) return(NULL)
+  vroom(dest, show_col_types = FALSE,
+        col_types = cols(geography = "c", time = "c"))
+}
+
+nnds_raw <- fetch_ingest("nnds/standard/data.csv.gz")
+arbo_raw <- fetch_ingest("arbonet/standard/data_state.csv.gz")
+HAVE_EXT <- !is.null(nnds_raw) && !is.null(arbo_raw)
+if (!HAVE_EXT) message("Could not download NNDSS/ArboNET from the Ingest repo; skipping comparison.")
+```
+
+```{r external-annual, eval=HAVE_EXT}
+SRC_EPIC <- "Epic Cosmos"; SRC_NNDS <- "NNDSS"; SRC_ARBO <- "ArboNET"
+SRC_EPIC_NEW <- "Epic Cosmos (new cases)"
+CMP_DISEASES <- c("babesiosis", "malaria", "west_nile", "dengue")
+SRC_COLS <- c("Epic Cosmos" = "#1b6ca8", "Epic Cosmos (new cases)" = "#7b3294",
+              "NNDSS" = "#e07b39", "ArboNET" = "#4c9a2a")
+
+# Epic: annual patient counts from complete calendar years only. `prefix` is
+# the numerator column prefix: epic_n_ (any diagnosis) or epic_n_new_ (first-time
+# diagnoses, cosmos_vector_borne_new_cases).
+annual_epic <- function(d, prefix, source) {
+  d %>%
+    mutate(year = as.integer(substr(time, 1, 4))) %>%
+    group_by(geography, year) %>%
+    summarize(across(all_of(paste0(prefix, DISEASES)), ~ sum(.x, na.rm = TRUE)),
+              n_months = n(), .groups = "drop") %>%
+    filter(n_months == 12) %>%
+    pivot_longer(starts_with(prefix), names_to = "disease", values_to = "value") %>%
+    mutate(disease = sub(paste0("^", prefix), "", disease), source = source) %>%
+    select(geography, year, disease, source, value)
+}
+
+epic_annual <- annual_epic(dat, "epic_n_", SRC_EPIC)
+if (HAVE_NC) epic_annual <- bind_rows(epic_annual, annual_epic(nc, "epic_n_new_", SRC_EPIC_NEW))
+
+# NNDSS: values are cumulative year-to-date by week, so the annual total is the
+# maximum over the year's weeks. Dengue = dengue + dengue-like + severe dengue.
+NNDS_COLS <- list(
+  babesiosis = "babesiosis",
+  malaria    = "malaria",
+  west_nile  = "arboviral_diseases_west_nile_virus_disease",
+  dengue     = c("dengue_virus_infections_dengue",
+                 "dengue_virus_infections_dengue_like_illness",
+                 "dengue_virus_infections_severe_dengue")
+)
+
+nnds_annual <- nnds_raw %>%
+  select(geography, year = mmwr_year, all_of(unname(unlist(NNDS_COLS)))) %>%
+  group_by(geography, year) %>%
+  summarize(across(everything(), ~ max(.x, na.rm = TRUE)), .groups = "drop")
+for (dz in names(NNDS_COLS)) {
+  nnds_annual[[dz]] <- rowSums(nnds_annual[NNDS_COLS[[dz]]])
+}
+nnds_annual <- nnds_annual %>%
+  select(geography, year, all_of(names(NNDS_COLS))) %>%
+  pivot_longer(all_of(names(NNDS_COLS)), names_to = "disease", values_to = "value") %>%
+  group_by(disease, year) %>%
+  # a disease-year with a national total of 0 was not reported, not zero cases
+  mutate(value = if (max(value[geography == "00"]) == 0) NA_real_ else value) %>%
+  ungroup() %>%
+  mutate(source = SRC_NNDS, year = as.integer(year)) %>%
+  select(geography, year, disease, source, value)
+
+# ArboNET: West Nile virus cases (annual)
+arbo_annual <- arbo_raw %>%
+  transmute(geography, year = as.integer(substr(time, 1, 4)),
+            disease = "west_nile", source = SRC_ARBO,
+            value = arbonet_wnv_cases)
+
+ann <- bind_rows(epic_annual, nnds_annual, arbo_annual) %>%
+  filter(disease %in% CMP_DISEASES, year >= 2022, year <= 2025)
+```
+
+```{r rate-data, eval=HAVE_EXT}
+STATE_FIPS <- all_fips %>%
+  filter(nchar(geography) == 2, state %in% c(state.abb, "DC")) %>%
+  select(geography, abbr = state)
+
+pop_lookup <- vroom("../../resources/pop_state.csv.gz", show_col_types = FALSE) %>%
+  filter(age_level == "Total") %>%
+  inner_join(all_fips %>% filter(nchar(geography) == 2), by = c("geography" = "geography_name"),
+             suffix = c("_name", "")) %>%
+  filter(geography %in% STATE_FIPS$geography) %>%
+  select(geography, pop = popsize)
+pop_lookup <- bind_rows(pop_lookup,
+                        tibble(geography = "00", pop = sum(pop_lookup$pop)))
+
+# Yearly denominator: all Epic patients with any encounter that year, by state
+# (cosmos_chronic state_year).
+epic_annual_patients <- vroom("../cosmos_chronic/standard/state_year.csv.gz",
+                              show_col_types = FALSE,
+                              col_types = cols(geography = "c", time = "c")) %>%
+  filter(age == "Total") %>%
+  transmute(geography, year = as.integer(substr(time, 1, 4)),
+            epic_n_patients = n_patients_chronic)
+
+rate_epic <- function(d, prefix, source) {
+  d %>%
+    mutate(year = as.integer(substr(time, 1, 4))) %>%
+    select(-epic_n_patients) %>%
+    group_by(geography, year) %>%
+    # Yearly scale: numerator = cases summed over the 12 months
+    summarize(across(all_of(paste0(prefix, DISEASES)), ~ sum(.x, na.rm = TRUE)),
+              n_months = n(), .groups = "drop") %>%
+    filter(n_months == 12) %>%
+    inner_join(epic_annual_patients, by = c("geography", "year")) %>%
+    pivot_longer(all_of(paste0(prefix, DISEASES)), names_to = "disease", values_to = "num") %>%
+    transmute(geography, year, disease = sub(paste0("^", prefix), "", disease),
+              source = source, num, den = epic_n_patients)
+}
+
+epic_rate_parts <- rate_epic(dat, "epic_n_", SRC_EPIC)
+if (HAVE_NC) epic_rate_parts <- bind_rows(epic_rate_parts,
+                                          rate_epic(nc, "epic_n_new_", SRC_EPIC_NEW))
+
+rate_parts <- bind_rows(
+  epic_rate_parts,
+  ann %>%
+    filter(!source %in% c(SRC_EPIC, SRC_EPIC_NEW)) %>%
+    inner_join(pop_lookup, by = "geography") %>%
+    transmute(geography, year, disease, source, num = value, den = pop)
+) %>%
+  filter(disease %in% CMP_DISEASES, year >= 2022, year <= 2025, !is.na(num))
+```
+
+```{r compare-national, eval=HAVE_EXT}
+nat_cmp <- ann %>%
+  filter(geography == "00", !is.na(value)) %>%
+  mutate(disease_label = factor(DISEASE_LABELS[disease],
+                                levels = DISEASE_LABELS[CMP_DISEASES]))
+
+ggplot(nat_cmp, aes(year, value, color = source)) +
+  geom_line(linewidth = 0.7) +
+  geom_point(size = 1.5) +
+  facet_wrap(~disease_label, scales = "free_y", ncol = 2) +
+  scale_y_log10(labels = label_comma()) +
+  scale_color_manual(values = SRC_COLS, name = NULL) +
+  scale_x_continuous(breaks = 2022:2025) +
+  labs(title = "National annual counts",
+       subtitle = "Epic Cosmos: patient counts; NNDSS and ArboNET: reported cases (log scale)",
+       x = NULL, y = "Count (log scale)") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"), legend.position = "bottom")
+
+```
+
+```{r rate-national, eval=HAVE_EXT}
+nat_rate <- rate_parts %>%
+  filter(geography == "00") %>%
+  mutate(rate = num / den * 1e5,
+         disease_label = factor(DISEASE_LABELS[disease],
+                                levels = DISEASE_LABELS[CMP_DISEASES]))
+
+ggplot(nat_rate, aes(year, rate, color = source)) +
+  geom_line(linewidth = 0.7) +
+  geom_point(size = 1.5) +
+  facet_wrap(~disease_label, scales = "free_y", ncol = 2) +
+  scale_y_log10(labels = label_number(accuracy = 0.01)) +
+  scale_color_manual(values = SRC_COLS, name = NULL) +
+  scale_x_continuous(breaks = 2022:2025) +
+  labs(title = "National annual rate per 100,000",
+       subtitle = "Epic Cosmos: per 100,000 Epic patients; NNDSS and ArboNET: per 100,000 US population (log scale)",
+       x = NULL, y = "Rate per 100,000 (log scale)") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"), legend.position = "bottom")
+
+```
+
+```{r rate-national-pct, eval=HAVE_EXT}
+# National, no aggregation: Epic monthly, NNDSS weekly, ArboNET annual, each as
+# a percent (Epic: of Epic patients that month; NNDSS/ArboNET: of US population).
+US_POP <- pop_lookup$pop[pop_lookup$geography == "00"]
+
+# Monthly denominator: that month's own patient count (epic_n_patients).
+epic_pct_ts <- dat %>%
+  filter(geography == "00") %>%
+  mutate(time = as.Date(time)) %>%
+  select(time, epic_n_patients, all_of(paste0("epic_n_", CMP_DISEASES))) %>%
+  pivot_longer(starts_with("epic_n_") & !any_of("epic_n_patients"),
+               names_to = "disease", values_to = "n") %>%
+  transmute(time, disease = sub("^epic_n_", "", disease), source = SRC_EPIC,
+            pct = n / epic_n_patients * 100)
+
+# NNDSS values are cumulative year-to-date, so difference within each year to
+# get the cases newly reported that week (dengue = the three dengue columns).
+nnds_pct_ts <- nnds_raw %>%
+  filter(geography == "00") %>%
+  arrange(mmwr_year, mmwr_week) %>%
+  transmute(time = as.Date(time), mmwr_year,
+            babesiosis = babesiosis, malaria = malaria,
+            west_nile = arboviral_diseases_west_nile_virus_disease,
+            dengue = dengue_virus_infections_dengue +
+              dengue_virus_infections_dengue_like_illness +
+              dengue_virus_infections_severe_dengue) %>%
+  pivot_longer(all_of(CMP_DISEASES), names_to = "disease", values_to = "cum") %>%
+  group_by(disease, mmwr_year) %>%
+  mutate(n = cum - lag(cum, default = 0)) %>%
+  ungroup() %>%
+  transmute(time, disease, source = SRC_NNDS, pct = n / US_POP * 100)
+
+arbo_pct_ts <- arbo_raw %>%
+  filter(geography == "00") %>%
+  transmute(time = as.Date(paste0(substr(time, 1, 4), "-07-01")),
+            disease = "west_nile", source = SRC_ARBO,
+            pct = arbonet_wnv_cases / US_POP * 100)
+
+epic_new_pct_ts <- if (HAVE_NC) {
+  nc %>%
+    filter(geography == "00") %>%
+    mutate(time = as.Date(time)) %>%
+    select(time, epic_n_patients, all_of(paste0("epic_n_new_", CMP_DISEASES))) %>%
+    pivot_longer(starts_with("epic_n_new_"), names_to = "disease", values_to = "n") %>%
+    transmute(time, disease = sub("^epic_n_new_", "", disease), source = SRC_EPIC_NEW,
+              pct = n / epic_n_patients * 100)
+}
+
+pct_ts <- bind_rows(epic_pct_ts, epic_new_pct_ts, nnds_pct_ts, arbo_pct_ts) %>%
+  filter(time >= as.Date("2022-01-01"), time < as.Date("2026-01-01"),
+         !is.na(pct), pct > 0) %>%   # zeros / negative corrections can't be drawn on a log axis
+  mutate(disease_label = factor(DISEASE_LABELS[disease], levels = DISEASE_LABELS[CMP_DISEASES]))
+
+ggplot(pct_ts, aes(time, pct, color = source)) +
+  geom_line(data = ~ filter(.x, source != SRC_ARBO), linewidth = 0.5) +
+  geom_point(size = 0.9) +
+  facet_wrap(~disease_label, scales = "free_y", ncol = 2) +
+  scale_y_log10(labels = label_number(accuracy = 0.00001)) +
+  scale_color_manual(values = SRC_COLS, name = NULL) +
+  labs(title = "National percent of population, at each source's native resolution",
+       subtitle = "Epic Cosmos: monthly, % of that month's Epic patients; NNDSS: weekly new cases, % of US population; ArboNET: annual (plotted mid-year), % of US population",
+       x = NULL, y = "Percent (log scale)") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"), legend.position = "bottom")
+```
+
+```{r compare-state, eval=HAVE_EXT}
+# State share of the national total, pooled over the years (2023-2025) for
+# which both sources have a national value.
+pair_shares <- function(dz, src_x, src_y) {
+  d <- ann %>% filter(disease == dz, source %in% c(src_x, src_y), year >= 2023)
+  ok_years <- d %>%
+    filter(geography == "00", !is.na(value)) %>%
+    count(year) %>% filter(n == 2) %>% pull(year)
+  d %>%
+    filter(geography %in% STATE_FIPS$geography, year %in% ok_years) %>%
+    group_by(source, geography) %>%
+    summarize(value = sum(value, na.rm = TRUE), .groups = "drop") %>%
+    group_by(source) %>%
+    mutate(share = value / sum(value) * 100) %>%
+    ungroup() %>%
+    select(geography, source, share) %>%
+    pivot_wider(names_from = source, values_from = share) %>%
+    transmute(geography, x = .data[[src_x]], y = .data[[src_y]],
+              disease = dz,
+              panel = sprintf("%s (y) vs %s (x)", src_y, src_x),
+              years = if (length(ok_years)) paste(range(ok_years), collapse = "-") else NA_character_)
+}
+
+plot_pairs <- function(pairs, facet_var, title, xlab, ylab) {
+  cors <- pairs %>%
+    group_by(.data[[facet_var]]) %>%
+    summarize(label = sprintf("Spearman rho = %.2f\nyears %s",
+                              cor(x, y, method = "spearman", use = "complete.obs"),
+                              first(years)), .groups = "drop")
+  pairs %>%
+    left_join(STATE_FIPS, by = "geography") %>%
+    ggplot(aes(x, y)) +
+    geom_abline(linetype = "dashed", color = "grey60") +
+    geom_point(color = "#1b6ca8", alpha = 0.7) +
+    geom_text(aes(label = abbr), size = 2.6, vjust = -0.7, check_overlap = TRUE) +
+    geom_text(data = cors, aes(x = -Inf, y = Inf, label = label),
+              hjust = -0.05, vjust = 1.3, size = 3.2, inherit.aes = FALSE) +
+    facet_wrap(vars(.data[[facet_var]]), scales = "free", ncol = 2) +
+    labs(title = title, x = xlab, y = ylab,
+         subtitle = "Each point is a state; dashed line = equal share") +
+    theme_bw(base_size = 11) +
+    theme(strip.text = element_text(face = "bold"))
+}
+
+epic_nnds <- bind_rows(lapply(CMP_DISEASES, pair_shares, SRC_EPIC, SRC_NNDS)) %>%
+  mutate(disease = factor(DISEASE_LABELS[disease], levels = DISEASE_LABELS[CMP_DISEASES]))
+
+plot_pairs(epic_nnds, "disease",
+           "State share of national total: NNDSS vs. Epic Cosmos",
+           "Epic Cosmos: % of national patient count",
+           "NNDSS: % of national case count")
+
+if (HAVE_NC) {
+  epic_new_nnds <- bind_rows(lapply(CMP_DISEASES, pair_shares, SRC_EPIC_NEW, SRC_NNDS)) %>%
+    mutate(disease = factor(DISEASE_LABELS[disease], levels = DISEASE_LABELS[CMP_DISEASES]))
+
+  print(plot_pairs(epic_new_nnds, "disease",
+                   "State share of national total: NNDSS vs. Epic Cosmos (new cases)",
+                   "Epic Cosmos new cases: % of national patient count",
+                   "NNDSS: % of national case count"))
+}
+
+wnv_pairs <- bind_rows(
+  pair_shares("west_nile", SRC_EPIC, SRC_ARBO),
+  if (HAVE_NC) pair_shares("west_nile", SRC_EPIC_NEW, SRC_ARBO),
+  pair_shares("west_nile", SRC_NNDS, SRC_ARBO)
+)
+
+plot_pairs(wnv_pairs, "panel",
+           "West Nile virus: state share of national total, ArboNET vs. other sources",
+           "Other source: % of national count",
+           "ArboNET: % of national case count")
+```
+
+```{r rate-state, eval=HAVE_EXT}
+# State rate pooled over the years both sources have a national value
+pair_rates <- function(dz, src_x, src_y) {
+  d <- rate_parts %>% filter(disease == dz, source %in% c(src_x, src_y), year >= 2023)
+  ok_years <- d %>% filter(geography == "00") %>% count(year) %>%
+    filter(n == 2) %>% pull(year)
+  d %>%
+    filter(geography %in% STATE_FIPS$geography, year %in% ok_years) %>%
+    group_by(source, geography) %>%
+    summarize(rate = sum(num) / sum(den) * 1e5, .groups = "drop") %>%
+    pivot_wider(names_from = source, values_from = rate) %>%
+    transmute(geography, x = .data[[src_x]], y = .data[[src_y]],
+              disease = dz,
+              panel = sprintf("%s (y) vs %s (x)", src_y, src_x),
+              years = if (length(ok_years)) paste(range(ok_years), collapse = "-") else NA_character_)
+}
+
+plot_rate_pairs <- function(pairs, facet_var, title, xlab, ylab) {
+  cors <- pairs %>%
+    group_by(.data[[facet_var]]) %>%
+    summarize(label = sprintf("Spearman rho = %.2f\nyears %s",
+                              cor(x, y, method = "spearman", use = "complete.obs"),
+                              first(years)), .groups = "drop")
+  pairs %>%
+    left_join(STATE_FIPS, by = "geography") %>%
+    ggplot(aes(x, y)) +
+    geom_point(color = "#1b6ca8", alpha = 0.7) +
+    geom_text(aes(label = abbr), size = 2.6, vjust = -0.7, check_overlap = TRUE) +
+    geom_text(data = cors, aes(x = -Inf, y = Inf, label = label),
+              hjust = -0.05, vjust = 1.3, size = 3.2, inherit.aes = FALSE) +
+    facet_wrap(vars(.data[[facet_var]]), scales = "free", ncol = 2) +
+    scale_x_continuous(trans = pseudo_log_trans(base = 10)) +
+    scale_y_continuous(trans = pseudo_log_trans(base = 10)) +
+    labs(title = title, x = xlab, y = ylab) +
+    theme_bw(base_size = 11) +
+    theme(strip.text = element_text(face = "bold"))
+}
+
+rate_epic_nnds <- bind_rows(lapply(CMP_DISEASES, pair_rates, SRC_EPIC, SRC_NNDS)) %>%
+  mutate(disease = factor(DISEASE_LABELS[disease], levels = DISEASE_LABELS[CMP_DISEASES]))
+
+plot_rate_pairs(rate_epic_nnds, "disease",
+                "State rate: NNDSS (per 100,000 population) vs. Epic Cosmos (per 100,000 patients)",
+                "Epic Cosmos: annual cases per 100,000 Epic patients",
+                "NNDSS: cases per 100,000 population")
+
+if (HAVE_NC) {
+  rate_epic_new_nnds <- bind_rows(lapply(CMP_DISEASES, pair_rates, SRC_EPIC_NEW, SRC_NNDS)) %>%
+    mutate(disease = factor(DISEASE_LABELS[disease], levels = DISEASE_LABELS[CMP_DISEASES]))
+
+  print(plot_rate_pairs(rate_epic_new_nnds, "disease",
+                        "State rate: NNDSS (per 100,000 population) vs. Epic Cosmos new cases (per 100,000 patients)",
+                        "Epic Cosmos new cases: annual cases per 100,000 Epic patients",
+                        "NNDSS: cases per 100,000 population"))
+}
+
+rate_wnv <- bind_rows(
+  pair_rates("west_nile", SRC_EPIC, SRC_ARBO),
+  if (HAVE_NC) pair_rates("west_nile", SRC_EPIC_NEW, SRC_ARBO),
+  pair_rates("west_nile", SRC_NNDS, SRC_ARBO)
+)
+
+plot_rate_pairs(rate_wnv, "panel",
+                "West Nile virus state rate",
+                "Annual rate (Epic per 100,000 patients; NNDSS per 100,000 population)",
+                "ArboNET: cases per 100,000 population")
 ```
