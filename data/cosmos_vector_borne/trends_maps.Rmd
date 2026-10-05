@@ -155,49 +155,6 @@ ggplot(region_log, aes(time, value, color = region)) +
         legend.position = "bottom")
 ```
 
-```{r no-travel-comparison}
-# Comparison against cosmos_vector_borne_no_travel (same six diseases, but
-# restricted to patients without a travel history). Denominators differ
-# between the two sessions (see that source's README), so this compares raw
-# counts (epic_n_*), not percentages.
-no_travel_file <- "../cosmos_vector_borne_no_travel/standard/data.csv.gz"
-
-if (file.exists(no_travel_file)) {
-  n_cols <- paste0("epic_n_", DISEASES)
-
-  dat_all <- dat %>%
-    filter(geography == "00") %>%
-    mutate(time = as.Date(time), source = "All patients") %>%
-    select(time, source, all_of(n_cols))
-
-  dat_nt <- vroom(no_travel_file, show_col_types = FALSE,
-                   col_types = cols(geography = "c", time = "c")) %>%
-    filter(geography == "00") %>%
-    mutate(time = as.Date(time), source = "No travel history") %>%
-    select(time, source, all_of(n_cols))
-
-  compare_long <- bind_rows(dat_all, dat_nt) %>%
-    pivot_longer(all_of(n_cols), names_to = "measure", values_to = "value") %>%
-    mutate(measure = DISEASE_LABELS[sub("^epic_n_", "", measure)])
-
-  ggplot(compare_long, aes(time, value, color = source)) +
-    geom_line(linewidth = 0.6) +
-    geom_point(size = 0.8) +
-    facet_wrap(~measure, scales = "free_y", ncol = 3) +
-    scale_color_manual(values = c("All patients" = "#1b6ca8", "No travel history" = "#e07b39"),
-                        name = NULL) +
-    labs(title = "National monthly patient count, by disease — all patients vs. no travel history",
-         subtitle = "Counts only (not percentages) — the two sessions use different population denominators",
-         x = NULL, y = "Number of patients") +
-    theme_bw(base_size = 11) +
-    theme(strip.text = element_text(face = "bold"),
-          axis.text.x = element_text(angle = 45, hjust = 1),
-          legend.position = "bottom")
-} else {
-  message("cosmos_vector_borne_no_travel standard data not found; skipping comparison.")
-}
-```
-
 ```{r map-data}
 states_sf <- tigris::states(cb = TRUE, resolution = "5m", year = 2022, progress_bar = FALSE) %>%
   filter(!STATEFP %in% DROP_ST) %>%
@@ -254,18 +211,19 @@ for (dz in DISEASES) {
 }
 ```
 
-## New cases
+## New cases problem list
 
-Patients with a **new** (first-time) diagnosis, from `cosmos_vector_borne_new_cases`
-(SlicerDicer session 2861722). Same population base and denominator as the tab above,
+Patients with a **new** (first-time) diagnosis, using Epic's new-case measure on the
+problem list, from this source
+(SlicerDicer session 2861722, `standard/data_new_cases.csv.gz`). Same population base and denominator as the tab above,
 but the numerator counts only first-time diagnoses, so it is a subset of the
-all-diagnosis counts. Most state-month cells for the rarer diseases are suppressed
+all-diagnosis counts. See the *New cases pop filter* tab for the alternative definition. Most state-month cells for the rarer diseases are suppressed
 (imputed as 5), so the national and regional panels are the most reliable.
 
 ```{r nc-data}
-nc_file <- "../cosmos_vector_borne_new_cases/standard/data.csv.gz"
+nc_file <- "standard/data_new_cases.csv.gz"
 HAVE_NC <- file.exists(nc_file)
-if (!HAVE_NC) message("cosmos_vector_borne_new_cases standard data not found; skipping new-case section.")
+if (!HAVE_NC) message("standard/data_new_cases.csv.gz not found; skipping new-case section.")
 
 if (HAVE_NC) {
   nc <- vroom(nc_file, show_col_types = FALSE,
@@ -443,6 +401,394 @@ for (dz in DISEASES) {
                     sprintf("%s — new diagnoses per 100,000 patients, by year", DISEASE_LABELS[dz])))
 }
 ```
+
+## New cases pop filter
+
+Patients with a **new** (first-time) diagnosis, defined with a **population filter**
+(SlicerDicer session 2863644, `standard/data_new_cases_pop_filter.csv.gz`, annual,
+2022-2025; the partial 2026 year is dropped). The population is restricted to patients with a
+diagnosis of one of the six diseases that was not preceded by the same diagnosis within
+6 months. The denominator is therefore the number of patients **in that filtered population**,
+not all Epic patients, so the percents below are shares among patients with a new
+vector-borne diagnosis (not comparable to the percents in the other tabs). A patient can
+have more than one disease, so disease counts can sum to more than the denominator. Most
+state-year cells for the rarer diseases are suppressed (imputed as 5); the national and
+regional panels are the most reliable.
+
+```{r pf-data}
+pf_file <- "standard/data_new_cases_pop_filter.csv.gz"
+HAVE_PF <- file.exists(pf_file)
+if (!HAVE_PF) message(pf_file, " not found; skipping pop-filter section.")
+PF_YEARS <- c("2022", "2023", "2024", "2025")
+
+if (HAVE_PF) {
+  pf <- vroom(pf_file, show_col_types = FALSE,
+              col_types = cols(geography = "c", time = "c")) %>%
+    mutate(year = substr(time, 1, 4))
+}
+```
+
+```{r pf-national, eval=HAVE_PF}
+pf_nat <- pf %>%
+  filter(geography == "00") %>%
+  select(year, all_of(c(paste0("epic_n_new_popfilter_", DISEASES),
+                        paste0("epic_pct_new_popfilter_", DISEASES)))) %>%
+  pivot_longer(-year, names_to = "measure", values_to = "value") %>%
+  mutate(type = if_else(grepl("^epic_pct_", measure), "Percent of filtered patients", "Number of patients"),
+         disease = DISEASE_LABELS[sub("^epic_(n|pct)_new_popfilter_", "", measure)],
+         year = as.integer(year))
+
+ggplot(pf_nat, aes(year, value)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 1.2) +
+  facet_grid(type ~ disease, scales = "free_y", switch = "y") +
+  labs(title = "National annual new diagnoses (pop filter), by disease",
+       x = NULL, y = NULL) +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"), strip.placement = "outside")
+```
+
+```{r pf-regional, eval=HAVE_PF}
+pf_n_cols <- paste0("epic_n_new_popfilter_", DISEASES)
+
+pf_region <- pf %>%
+  inner_join(region_lookup, by = "geography") %>%
+  group_by(region, year) %>%
+  summarize(across(all_of(c(pf_n_cols, "epic_n_new_popfilter_patients")), ~ sum(.x, na.rm = TRUE)),
+            .groups = "drop") %>%
+  pivot_longer(all_of(pf_n_cols), names_to = "measure", values_to = "n") %>%
+  mutate(value = n / epic_n_new_popfilter_patients * 100,
+         measure = DISEASE_LABELS[sub("^epic_n_new_popfilter_", "", measure)],
+         year = as.integer(year))
+
+ggplot(pf_region, aes(year, value, color = region)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 1) +
+  facet_wrap(~measure, scales = "free_y", ncol = 3) +
+  scale_color_brewer(palette = "Dark2", name = NULL) +
+  labs(title = "Regional annual percent of filtered patients with a new diagnosis, by disease",
+       subtitle = "Five geographic regions; pooled across member states",
+       x = NULL, y = "Percent of filtered patients") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"), legend.position = "bottom")
+```
+
+```{r pf-regional-log, eval=HAVE_PF}
+pf_region_log <- pf_region %>%
+  filter(measure %in% DISEASE_LABELS[LOG_DISEASES], value > 0) %>%
+  mutate(measure = factor(measure, levels = DISEASE_LABELS[LOG_DISEASES]))
+
+ggplot(pf_region_log, aes(year, value, color = region)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 1) +
+  facet_wrap(~measure, ncol = 2) +
+  scale_y_log10(labels = label_number(accuracy = 0.0001)) +
+  scale_color_brewer(palette = "Dark2", name = NULL) +
+  labs(title = "Regional annual percent of filtered patients with a new diagnosis, log scale",
+       subtitle = "Lyme disease, babesiosis, malaria and RMSF; same y-axis in every panel",
+       x = NULL, y = "Percent of filtered patients (log scale)") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"), legend.position = "bottom")
+```
+
+```{r pf-maps, eval=HAVE_PF, results='asis'}
+pf_state <- pf %>%
+  filter(nchar(geography) == 2, geography != "00", year %in% PF_YEARS) %>%
+  mutate(year = factor(year, levels = PF_YEARS))
+
+draw_pf_map <- function(col, flag_col, label) {
+  md <- states_sf %>%
+    left_join(
+      pf_state %>%
+        select(geography, year, value = all_of(col), suppressed = all_of(flag_col)) %>%
+        mutate(value = if_else(suppressed == 1L, NA_real_, value)),
+      by = "geography"
+    ) %>%
+    st_as_sf()
+
+  ggplot(md) +
+    geom_sf(aes(fill = value), color = "white", linewidth = 0.08) +
+    scale_fill_viridis_c(option = "viridis", na.value = "grey70",
+                         labels = label_number(accuracy = 0.1), name = NULL) +
+    facet_wrap(~year, ncol = 2) +
+    coord_sf(crs = 5070, datum = NA) +
+    labs(title = label, caption = "Grey = suppressed (10 or fewer patients) or no data") +
+    theme_void(base_size = 11) +
+    theme(plot.title = element_text(face = "bold", hjust = 0.5, size = 13),
+          strip.text = element_text(face = "bold", size = 11),
+          legend.position = "right")
+}
+
+for (dz in DISEASES) {
+  print(draw_pf_map(paste0("epic_pct_new_popfilter_", dz),
+                    paste0("epic_new_popfilter_", dz, "_suppressed_flag"),
+                    sprintf("%s — percent of filtered patients with a new diagnosis, by year", DISEASE_LABELS[dz])))
+}
+```
+
+### Comparison: problem list vs. pop filter
+
+Both definitions count patients with a new diagnosis, but the problem-list measure
+(`data_new_cases.csv.gz`, monthly, all patients) and the pop-filter measure
+(`data_new_cases_pop_filter.csv.gz`, annual) come from different Cosmos sessions with different
+definitions of "new". The problem-list monthly counts are summed to calendar years
+(complete years 2022-2025); a patient newly diagnosed in two different months is counted twice
+in that sum.
+
+```{r pf-compare-national, eval=HAVE_PF && HAVE_NC}
+nc_annual_nat <- nc %>%
+  filter(geography == "00") %>%
+  mutate(year = substr(time, 1, 4)) %>%
+  filter(year %in% PF_YEARS) %>%
+  group_by(year) %>%
+  summarize(across(all_of(paste0("epic_n_new_", DISEASES)), ~ sum(.x, na.rm = TRUE)), .groups = "drop") %>%
+  pivot_longer(-year, names_to = "measure", values_to = "n") %>%
+  mutate(disease = sub("^epic_n_new_", "", measure), source = "Problem list")
+
+pf_annual_nat <- pf %>%
+  filter(geography == "00") %>%
+  select(year, all_of(paste0("epic_n_new_popfilter_", DISEASES))) %>%
+  pivot_longer(-year, names_to = "measure", values_to = "n") %>%
+  mutate(disease = sub("^epic_n_new_popfilter_", "", measure), source = "Pop filter")
+
+cmp_nat <- bind_rows(nc_annual_nat, pf_annual_nat) %>%
+  select(year, disease, source, n) %>%
+  mutate(disease = factor(DISEASE_LABELS[disease], levels = DISEASE_LABELS),
+         year = as.integer(year))
+
+ggplot(cmp_nat, aes(year, n, color = source)) +
+  geom_line(linewidth = 0.7) +
+  geom_point(size = 1.5) +
+  facet_wrap(~disease, scales = "free_y", ncol = 3) +
+  scale_color_manual(values = c("Problem list" = "#e07b39", "Pop filter" = "#1b6ca8"), name = NULL) +
+  labs(title = "National annual patients with a new diagnosis — problem list vs. pop filter",
+       x = NULL, y = "Number of patients") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"), legend.position = "bottom")
+```
+
+```{r pf-compare-table, eval=HAVE_PF && HAVE_NC}
+cmp_nat %>%
+  tidyr::pivot_wider(names_from = source, values_from = n) %>%
+  mutate(`Pop filter / problem list` = round(`Pop filter` / `Problem list`, 2)) %>%
+  arrange(disease, year) %>%
+  knitr::kable(caption = "National annual counts, by disease and year")
+```
+
+```{r pf-compare-state, eval=HAVE_PF && HAVE_NC}
+# State-year points. Problem list: annual sum of monthly counts, kept only when
+# no contributing month was suppressed. Pop filter: kept only when the cell was
+# not suppressed. Log axes, Spearman correlation on exactly the plotted points.
+nc_state_year <- bind_rows(lapply(DISEASES, function(dz) {
+  nc %>%
+    filter(nchar(geography) == 2, geography != "00") %>%
+    mutate(year = substr(time, 1, 4)) %>%
+    filter(year %in% PF_YEARS) %>%
+    group_by(geography, year) %>%
+    summarize(problem_list = sum(.data[[paste0("epic_n_new_", dz)]]),
+              any_supp = any(.data[[paste0("epic_new_", dz, "_suppressed_flag")]] == 1L),
+              .groups = "drop") %>%
+    mutate(disease = dz)
+}))
+
+pf_state_year <- bind_rows(lapply(DISEASES, function(dz) {
+  pf %>%
+    filter(nchar(geography) == 2, geography != "00", year %in% PF_YEARS) %>%
+    transmute(geography, year, pop_filter = .data[[paste0("epic_n_new_popfilter_", dz)]],
+              pf_supp = .data[[paste0("epic_new_popfilter_", dz, "_suppressed_flag")]] == 1L,
+              disease = dz)
+}))
+
+cmp_state <- inner_join(nc_state_year, pf_state_year, by = c("geography", "year", "disease")) %>%
+  filter(!any_supp, !pf_supp, problem_list > 0, pop_filter > 0) %>%
+  mutate(disease = factor(DISEASE_LABELS[disease], levels = DISEASE_LABELS))
+
+cors <- cmp_state %>%
+  group_by(disease) %>%
+  summarize(n = n(), rho = if (n() > 2) cor(problem_list, pop_filter, method = "spearman") else NA_real_,
+            .groups = "drop") %>%
+  mutate(label = sprintf("n = %d, Spearman rho = %s", n, ifelse(is.na(rho), "NA", sprintf("%.2f", rho))))
+
+if (nrow(cmp_state) > 0) {
+  ggplot(cmp_state, aes(problem_list, pop_filter)) +
+    geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "grey50") +
+    geom_point(alpha = 0.6) +
+    geom_text(data = cors, aes(x = -Inf, y = Inf, label = label), inherit.aes = FALSE,
+              hjust = -0.05, vjust = 1.5, size = 3) +
+    facet_wrap(~disease, ncol = 3) +
+    scale_x_log10() + scale_y_log10() +
+    labs(title = "State-year patients with a new diagnosis — problem list vs. pop filter",
+         subtitle = "Each point is a state-year with no suppressed cells in either source; dashed line is y = x",
+         x = "Problem list (annual sum of monthly counts)", y = "Pop filter (annual count)") +
+    theme_bw(base_size = 11) +
+    theme(strip.text = element_text(face = "bold"))
+}
+```
+
+## Testing
+
+Lab component results from Epic Cosmos (`standard/data_lab_tests.csv.gz`, annual, 2022-2025).
+**Testing volume** is the number of disease-specific test results per 100,000 lab component
+results of any kind (the denominator is results, not patients). **Test positivity** is
+approximated as new diagnoses (patients, `data_new_cases.csv.gz`) divided by test results
+(`n new cases / n tests`); the two come from different Cosmos sessions and count different
+units, so it is a proxy and can exceed what a true per-test positivity would be. There is no
+Lyme disease test measure. State-years where the test count, or every month of the new-case
+count, was suppressed are left blank (maps) or dropped (correlations).
+
+```{r lt-data, eval=HAVE_NC}
+TEST_DZ <- c("babesiosis", "rmsf", "west_nile", "dengue", "malaria")
+TEST_YEARS <- 2022:2025
+
+lt <- vroom("standard/data_lab_tests.csv.gz", show_col_types = FALSE,
+            col_types = cols(geography = "c", time = "c")) %>%
+  mutate(year = as.integer(substr(time, 1, 4)))
+
+# Annual new-case counts (complete calendar years only)
+nc_yr <- nc %>%
+  mutate(year = as.integer(substr(time, 1, 4))) %>%
+  group_by(geography, year) %>%
+  summarize(n_months = n(),
+            n_pat = sum(epic_n_patients, na.rm = TRUE),
+            across(all_of(paste0("epic_n_new_", TEST_DZ)), ~ sum(.x, na.rm = TRUE)),
+            across(all_of(paste0("epic_new_", TEST_DZ, "_suppressed_flag")),
+                   ~ mean(.x) == 1, .names = "allsupp_{.col}"),
+            .groups = "drop") %>%
+  filter(n_months == 12)
+
+lt_panel <- bind_rows(lapply(TEST_DZ, function(dz) {
+  lt %>%
+    transmute(geography, year, disease = dz,
+              n_tests = .data[[paste0("epic_n_tests_", dz)]],
+              tests_supp = .data[[paste0("epic_tests_", dz, "_suppressed_flag")]] == 1,
+              n_lab = epic_n_lab_results) %>%
+    inner_join(
+      nc_yr %>% transmute(geography, year, n_pat,
+                          n_cases = .data[[paste0("epic_n_new_", dz)]],
+                          cases_supp = .data[[paste0("allsupp_epic_new_", dz, "_suppressed_flag")]]),
+      by = c("geography", "year"))
+})) %>%
+  mutate(n_tests = if_else(tests_supp, NA_real_, n_tests),
+         n_cases = if_else(cases_supp, NA_real_, n_cases),
+         tests_per100k = n_tests / n_lab * 1e5,
+         case_rate = n_cases / n_pat * 1e5,
+         positivity = n_cases / n_tests * 100,
+         disease_label = factor(DISEASE_LABELS[disease], levels = DISEASE_LABELS[TEST_DZ]))
+```
+
+```{r lt-national, eval=HAVE_NC}
+lt_nat <- lt_panel %>% filter(geography == "00")
+
+ggplot(lt_nat, aes(year, tests_per100k)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 1.5) +
+  facet_wrap(~disease_label, scales = "free_y", ncol = 3) +
+  scale_x_continuous(breaks = TEST_YEARS) +
+  labs(title = "National annual testing volume, by disease",
+       x = NULL, y = "Tests per 100,000 lab component results") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"))
+
+ggplot(lt_nat, aes(year, positivity)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 1.5) +
+  facet_wrap(~disease_label, scales = "free_y", ncol = 3) +
+  scale_x_continuous(breaks = TEST_YEARS) +
+  labs(title = "National annual test positivity (new diagnoses / tests), by disease",
+       x = NULL, y = "New diagnoses per 100 tests") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"))
+```
+
+```{r lt-regional, eval=HAVE_NC}
+lt_region <- lt_panel %>%
+  inner_join(region_lookup, by = "geography") %>%
+  filter(!tests_supp) %>%
+  group_by(region, year, disease_label) %>%
+  summarize(tests_per100k = sum(n_tests) / sum(n_lab) * 1e5, .groups = "drop")
+
+ggplot(lt_region, aes(year, tests_per100k, color = region)) +
+  geom_line(linewidth = 0.6) +
+  geom_point(size = 1.5) +
+  facet_wrap(~disease_label, scales = "free_y", ncol = 3) +
+  scale_x_continuous(breaks = TEST_YEARS) +
+  scale_color_brewer(palette = "Dark2", name = NULL) +
+  labs(title = "Regional annual testing volume, by disease",
+       subtitle = "Five geographic regions; pooled across member states",
+       x = NULL, y = "Tests per 100,000 lab component results") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"), legend.position = "bottom")
+```
+
+```{r lt-maps, eval=HAVE_NC, results='asis'}
+draw_lt_map <- function(d, col, label, digits = 0.01) {
+  md <- states_sf %>%
+    left_join(d %>% filter(geography != "00") %>%
+                select(geography, year, value = all_of(col)), by = "geography") %>%
+    st_as_sf()
+
+  ggplot(md) +
+    geom_sf(aes(fill = value), color = "white", linewidth = 0.08) +
+    scale_fill_viridis_c(option = "viridis", na.value = "grey70",
+                         labels = label_number(accuracy = digits), name = NULL) +
+    facet_wrap(~year, ncol = 2) +
+    coord_sf(crs = 5070, datum = NA) +
+    labs(title = label) +
+    theme_void(base_size = 11) +
+    theme(plot.title = element_text(face = "bold", hjust = 0.5, size = 13),
+          strip.text = element_text(face = "bold", size = 11),
+          legend.position = "right")
+}
+
+for (dz in TEST_DZ) {
+  d <- lt_panel %>% filter(disease == dz)
+  print(draw_lt_map(d, "tests_per100k",
+                    sprintf("%s — tests per 100,000 lab component results, by year", DISEASE_LABELS[dz]),
+                    digits = 1))
+  print(draw_lt_map(d, "positivity",
+                    sprintf("%s — new diagnoses per 100 tests, by year", DISEASE_LABELS[dz])))
+}
+```
+
+```{r lt-correlation, eval=HAVE_NC}
+# One point per state-year. Log axes, so only positive values can be drawn;
+# Spearman correlation is computed on exactly the plotted points.
+plot_lt_cor <- function(xcol, xlab, title) {
+  d <- lt_panel %>%
+    filter(geography != "00", geography %in% STATE_FIPS_LT$geography) %>%
+    mutate(x = .data[[xcol]], y = case_rate) %>%
+    filter(!is.na(x), !is.na(y), x > 0, y > 0)
+  cors <- d %>%
+    group_by(disease_label) %>%
+    summarize(label = sprintf("Spearman rho = %.2f\nn = %d state-years",
+                              cor(x, y, method = "spearman"), n()), .groups = "drop")
+  ggplot(d, aes(x, y)) +
+    geom_point(aes(color = factor(year)), alpha = 0.7) +
+    geom_smooth(method = "lm", se = FALSE, color = "grey30", linewidth = 0.5) +
+    geom_text(data = cors, aes(x = -Inf, y = Inf, label = label),
+              hjust = -0.05, vjust = 1.3, size = 3.2, inherit.aes = FALSE) +
+    facet_wrap(~disease_label, scales = "free", ncol = 2) +
+    scale_x_log10(labels = label_number(accuracy = 0.01, big.mark = ",")) +
+    scale_y_log10(labels = label_number(accuracy = 0.01)) +
+    scale_color_brewer(palette = "Dark2", name = NULL) +
+    labs(title = title, subtitle = "Each point is a state-year (2022-2025); both axes log scale",
+         x = xlab, y = "New diagnoses per 100,000 Epic patients") +
+    theme_bw(base_size = 11) +
+    theme(strip.text = element_text(face = "bold"), legend.position = "bottom")
+}
+
+STATE_FIPS_LT <- all_fips %>%
+  filter(nchar(geography) == 2, state %in% c(state.abb, "DC")) %>%
+  select(geography)
+
+plot_lt_cor("tests_per100k", "Tests per 100,000 lab component results",
+            "New-diagnosis rate vs. testing volume")
+plot_lt_cor("positivity", "New diagnoses per 100 tests (positivity proxy)",
+            "New-diagnosis rate vs. test positivity")
+```
+
+Note that the positivity panel shares its numerator (new diagnoses) with the y-axis, so some
+positive association is expected by construction.
 
 ## Comparison with NNDSS and ArboNET
 

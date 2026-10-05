@@ -96,3 +96,60 @@ the output. There is no age or sex stratification in this session.
 - This ingest expects a **single** staging file and `stop()`s if more than one is
   present, since the export already covers the full history in one file. Extend
   `ingest.R` if a future update needs to combine multiple exports.
+
+## Additional exports (merged into this source)
+
+`ingest.R` also processes two more exports, each in its own `raw/staging/` subfolder
+(one file per folder, replacing the previous file when updating), each tracked by its own
+key in `process.json`, and each written to its own standard file:
+
+| Export | Staging folder | Output | Columns |
+|---|---|---|---|
+| Any diagnosis (above) | `raw/staging/` | `standard/data.csv.gz` | `epic_n_<dz>`, `epic_pct_<dz>`, `epic_<dz>_suppressed_flag`, `epic_n_patients` |
+| New (first-time) diagnoses, session `2861722` | `raw/staging/new_cases/` | `standard/data_new_cases.csv.gz` | `epic_n_new_<dz>`, `epic_pct_new_<dz>`, `epic_new_<dz>_suppressed_flag`, `epic_n_patients` |
+| New diagnoses, pop filter, session `2863644` | `raw/staging/new_cases_pop_filter/` | `standard/data_new_cases_pop_filter.csv.gz` | `epic_n_new_popfilter_<dz>`, `epic_pct_new_popfilter_<dz>`, `epic_new_popfilter_<dz>_suppressed_flag`, `epic_n_new_popfilter_patients` |
+| Lab component results, session `2862159` | `raw/staging/lab_tests/` | `standard/data_lab_tests.csv.gz` | `epic_n_tests_<dz>`, `epic_pct_tests_<dz>`, `epic_tests_<dz>_suppressed_flag`, `epic_n_lab_results` |
+
+(This replaces the former `cosmos_vector_borne_new_cases` source, which had the same
+layout; its measure definitions are now in this folder's `measure_info.json`.)
+
+### New cases (problem list)
+
+Same population base, diseases, and layout as the any-diagnosis export, but counting only
+new diagnoses (`n new lyme`, `n new babesiosis`, `n new malaria`, `n new RMSF`,
+`n new west nile`, `n new dengue`, `Number of Patients`; column order may vary). Most
+state-month cells for the rarer diseases are suppressed (imputed as 5); prefer national
+or annual aggregates for those.
+
+### New cases (pop filter)
+
+Annual (Year x State of Residence, no month). The population itself is filtered to patients
+with a first diagnosis of one of the six diseases (not preceded by the same diagnosis within
+6 months), Country of Care = United States, Has Any Encounters; measures are
+`n lyme`, `n babesiosis`, `n malaria`, `n RMSF`, `n west nile`, `n dengue`, `Number of Patients`.
+`Number of Patients` is the size of that filtered population (not all patients), so
+`epic_pct_new_popfilter_<dz>` is a share among patients with a new vector-borne diagnosis. The
+partial current year (e.g. "Jan 1 - Jul 28 2026") is dropped; `time` is `YYYY-12-31`.
+Counts differ substantially from the problem-list new cases above (see the comparison in
+`trends_maps.Rmd`).
+
+### Lab tests
+
+SlicerDicer session `2862558`, "Number of Lab Component Results and n west nile tests and
+n babesia and n RMSF tests and n malaria tests and n dengue tests by State of Residence":
+data model `Lab Component Results`, population base `All Lab Component Results`, criteria
+`Country of Care = United States of America`. Layout: states are rows, and each measure
+(`Number of Lab Component Results` as the denominator, `n west nile tests`, `n babesia`,
+`n RMSF tests`, `n malaria tests`, `n dengue tests`) spans one column per year. The `n
+babesia` label is assumed to be babesia tests (it lacks the word "tests" in the export).
+
+- **Annual**, `time` = `YYYY-12-31`. Row 11 holds the measure label (first column of each
+  group only, so it is carried forward) and row 12 the year; row 13 is `State of
+  Residence`. The ingest `stop()`s on any unrecognized measure label.
+- **Partial year dropped**: the current-year column (`Jan 1 - Sep 8 2026` in the first
+  export) is not a full year and is dropped with a `message()`. Years 2022-2025 are kept.
+- Values count **lab component results**, not patients, and `epic_pct_tests_*` is the
+  percent of **all** lab component results (any test), not a positivity rate.
+- Territories, Canadian provinces, Mexican states and `None of the above` are dropped (with
+  a `message()`); `Total` becomes `"00"`. Blank cells are suppressed counts (imputed as 5,
+  flag 1; 46 cells in the first export, mostly dengue).
