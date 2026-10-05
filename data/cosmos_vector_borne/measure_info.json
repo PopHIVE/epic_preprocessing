@@ -688,12 +688,12 @@
     "short_name": "Lab Results: babesia",
     "long_name": "Lab Component Results for babesia",
     "category": "infectious_disease",
-    "short_description": "Annual count of lab component results for babesia testing.",
-    "long_description": "Count of lab component results for babesia, per Epic's \"n babesia\" measure, per calendar year (`time` = YYYY-12-31; SlicerDicer session 2862558, data model Lab Component Results, Country of Care = United States of America). Only full calendar years are kept - the partial current year (e.g. \"Jan 1 - Sep 8 2026\") is dropped. Counts are lab component results, not patients. Counts of 10 or fewer are suppressed by Epic (reported blank) and imputed as 5; see epic_tests_babesiosis_suppressed_flag.",
+    "short_description": "Monthly count of lab component results for babesia testing.",
+    "long_description": "Count of lab component results for babesia, per Epic's \"n babesia\" measure, per month (`time` = last day of the month; SlicerDicer session 2863670, data model Lab Component Results, Country of Care = United States of America). Only full calendar years are kept - the partial current year (e.g. \"Jan 1 - Sep 8 2026\") is dropped. Counts are lab component results, not patients. Counts of 10 or fewer are suppressed by Epic (reported blank) and imputed as 5; see epic_tests_babesiosis_suppressed_flag.",
     "statement": "In {location}, {value} lab component results were recorded for babesia testing.",
     "measure_type": "Count",
     "unit": "lab component results",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -707,11 +707,11 @@
     "long_name": "Percent of Lab Component Results for babesia",
     "category": "infectious_disease",
     "short_description": "Percent of all lab component results that were for babesia testing.",
-    "long_description": "Computed as epic_n_tests_babesiosis / epic_n_lab_results * 100 - a percent of ALL lab component results (every test type), not a positivity rate and not a rate per 100,000. Annual. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_lab_results_suppressed_flag.",
+    "long_description": "Computed as epic_n_tests_babesiosis / epic_n_lab_results * 100 - a percent of ALL lab component results (every test type), not a positivity rate and not a rate per 100,000. Monthly. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_lab_results_suppressed_flag.",
     "statement": "In {location}, {value}% of lab component results were for babesia testing.",
     "measure_type": "Percent",
     "unit": "Percent",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -729,7 +729,7 @@
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -742,12 +742,12 @@
     "short_name": "Lab Results: Rocky Mountain Spotted Fever (RMSF)",
     "long_name": "Lab Component Results for Rocky Mountain Spotted Fever (RMSF)",
     "category": "infectious_disease",
-    "short_description": "Annual count of lab component results for Rocky Mountain Spotted Fever (RMSF) testing.",
-    "long_description": "Count of lab component results for Rocky Mountain Spotted Fever (RMSF), per Epic's \"n RMSF tests\" measure, per calendar year (`time` = YYYY-12-31; SlicerDicer session 2862558, data model Lab Component Results, Country of Care = United States of America). Only full calendar years are kept - the partial current year (e.g. \"Jan 1 - Sep 8 2026\") is dropped. Counts are lab component results, not patients. Counts of 10 or fewer are suppressed by Epic (reported blank) and imputed as 5; see epic_tests_rmsf_suppressed_flag.",
+    "short_description": "Monthly count of lab component results for Rocky Mountain Spotted Fever (RMSF) testing.",
+    "long_description": "Count of lab component results for Rocky Mountain Spotted Fever (RMSF), per Epic's \"n RMSF tests\" measure, per month (`time` = last day of the month; SlicerDicer session 2863670, data model Lab Component Results, Country of Care = United States of America). Only full calendar years are kept - the partial current year (e.g. \"Jan 1 - Sep 8 2026\") is dropped. Counts are lab component results, not patients. Counts of 10 or fewer are suppressed by Epic (reported blank) and imputed as 5; see epic_tests_rmsf_suppressed_flag.",
     "statement": "In {location}, {value} lab component results were recorded for Rocky Mountain Spotted Fever (RMSF) testing.",
     "measure_type": "Count",
     "unit": "lab component results",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -761,11 +761,11 @@
     "long_name": "Percent of Lab Component Results for Rocky Mountain Spotted Fever (RMSF)",
     "category": "infectious_disease",
     "short_description": "Percent of all lab component results that were for Rocky Mountain Spotted Fever (RMSF) testing.",
-    "long_description": "Computed as epic_n_tests_rmsf / epic_n_lab_results * 100 - a percent of ALL lab component results (every test type), not a positivity rate and not a rate per 100,000. Annual. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_lab_results_suppressed_flag.",
+    "long_description": "Computed as epic_n_tests_rmsf / epic_n_lab_results * 100 - a percent of ALL lab component results (every test type), not a positivity rate and not a rate per 100,000. Monthly. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_lab_results_suppressed_flag.",
     "statement": "In {location}, {value}% of lab component results were for Rocky Mountain Spotted Fever (RMSF) testing.",
     "measure_type": "Percent",
     "unit": "Percent",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -783,7 +783,7 @@
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -796,12 +796,12 @@
     "short_name": "Lab Results: West Nile virus",
     "long_name": "Lab Component Results for West Nile virus",
     "category": "infectious_disease",
-    "short_description": "Annual count of lab component results for West Nile virus testing.",
-    "long_description": "Count of lab component results for West Nile virus, per Epic's \"n west nile tests\" measure, per calendar year (`time` = YYYY-12-31; SlicerDicer session 2862558, data model Lab Component Results, Country of Care = United States of America). Only full calendar years are kept - the partial current year (e.g. \"Jan 1 - Sep 8 2026\") is dropped. Counts are lab component results, not patients. Counts of 10 or fewer are suppressed by Epic (reported blank) and imputed as 5; see epic_tests_west_nile_suppressed_flag.",
+    "short_description": "Monthly count of lab component results for West Nile virus testing.",
+    "long_description": "Count of lab component results for West Nile virus, per Epic's \"n west nile tests\" measure, per month (`time` = last day of the month; SlicerDicer session 2863670, data model Lab Component Results, Country of Care = United States of America). Only full calendar years are kept - the partial current year (e.g. \"Jan 1 - Sep 8 2026\") is dropped. Counts are lab component results, not patients. Counts of 10 or fewer are suppressed by Epic (reported blank) and imputed as 5; see epic_tests_west_nile_suppressed_flag.",
     "statement": "In {location}, {value} lab component results were recorded for West Nile virus testing.",
     "measure_type": "Count",
     "unit": "lab component results",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -815,11 +815,11 @@
     "long_name": "Percent of Lab Component Results for West Nile virus",
     "category": "infectious_disease",
     "short_description": "Percent of all lab component results that were for West Nile virus testing.",
-    "long_description": "Computed as epic_n_tests_west_nile / epic_n_lab_results * 100 - a percent of ALL lab component results (every test type), not a positivity rate and not a rate per 100,000. Annual. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_lab_results_suppressed_flag.",
+    "long_description": "Computed as epic_n_tests_west_nile / epic_n_lab_results * 100 - a percent of ALL lab component results (every test type), not a positivity rate and not a rate per 100,000. Monthly. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_lab_results_suppressed_flag.",
     "statement": "In {location}, {value}% of lab component results were for West Nile virus testing.",
     "measure_type": "Percent",
     "unit": "Percent",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -837,7 +837,7 @@
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -850,12 +850,12 @@
     "short_name": "Lab Results: dengue",
     "long_name": "Lab Component Results for dengue",
     "category": "infectious_disease",
-    "short_description": "Annual count of lab component results for dengue testing.",
-    "long_description": "Count of lab component results for dengue, per Epic's \"n dengue tests\" measure, per calendar year (`time` = YYYY-12-31; SlicerDicer session 2862558, data model Lab Component Results, Country of Care = United States of America). Only full calendar years are kept - the partial current year (e.g. \"Jan 1 - Sep 8 2026\") is dropped. Counts are lab component results, not patients. Counts of 10 or fewer are suppressed by Epic (reported blank) and imputed as 5; see epic_tests_dengue_suppressed_flag.",
+    "short_description": "Monthly count of lab component results for dengue testing.",
+    "long_description": "Count of lab component results for dengue, per Epic's \"n dengue tests\" measure, per month (`time` = last day of the month; SlicerDicer session 2863670, data model Lab Component Results, Country of Care = United States of America). Only full calendar years are kept - the partial current year (e.g. \"Jan 1 - Sep 8 2026\") is dropped. Counts are lab component results, not patients. Counts of 10 or fewer are suppressed by Epic (reported blank) and imputed as 5; see epic_tests_dengue_suppressed_flag.",
     "statement": "In {location}, {value} lab component results were recorded for dengue testing.",
     "measure_type": "Count",
     "unit": "lab component results",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -869,11 +869,11 @@
     "long_name": "Percent of Lab Component Results for dengue",
     "category": "infectious_disease",
     "short_description": "Percent of all lab component results that were for dengue testing.",
-    "long_description": "Computed as epic_n_tests_dengue / epic_n_lab_results * 100 - a percent of ALL lab component results (every test type), not a positivity rate and not a rate per 100,000. Annual. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_lab_results_suppressed_flag.",
+    "long_description": "Computed as epic_n_tests_dengue / epic_n_lab_results * 100 - a percent of ALL lab component results (every test type), not a positivity rate and not a rate per 100,000. Monthly. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_lab_results_suppressed_flag.",
     "statement": "In {location}, {value}% of lab component results were for dengue testing.",
     "measure_type": "Percent",
     "unit": "Percent",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -891,7 +891,7 @@
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -904,12 +904,12 @@
     "short_name": "Lab Results: malaria",
     "long_name": "Lab Component Results for malaria",
     "category": "infectious_disease",
-    "short_description": "Annual count of lab component results for malaria testing.",
-    "long_description": "Count of lab component results for malaria, per Epic's \"n malaria tests\" measure, per calendar year (`time` = YYYY-12-31; SlicerDicer session 2862558, data model Lab Component Results, Country of Care = United States of America). Only full calendar years are kept - the partial current year (e.g. \"Jan 1 - Sep 8 2026\") is dropped. Counts are lab component results, not patients. Counts of 10 or fewer are suppressed by Epic (reported blank) and imputed as 5; see epic_tests_malaria_suppressed_flag.",
+    "short_description": "Monthly count of lab component results for malaria testing.",
+    "long_description": "Count of lab component results for malaria, per Epic's \"n malaria tests\" measure, per month (`time` = last day of the month; SlicerDicer session 2863670, data model Lab Component Results, Country of Care = United States of America). Only full calendar years are kept - the partial current year (e.g. \"Jan 1 - Sep 8 2026\") is dropped. Counts are lab component results, not patients. Counts of 10 or fewer are suppressed by Epic (reported blank) and imputed as 5; see epic_tests_malaria_suppressed_flag.",
     "statement": "In {location}, {value} lab component results were recorded for malaria testing.",
     "measure_type": "Count",
     "unit": "lab component results",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -923,11 +923,11 @@
     "long_name": "Percent of Lab Component Results for malaria",
     "category": "infectious_disease",
     "short_description": "Percent of all lab component results that were for malaria testing.",
-    "long_description": "Computed as epic_n_tests_malaria / epic_n_lab_results * 100 - a percent of ALL lab component results (every test type), not a positivity rate and not a rate per 100,000. Annual. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_lab_results_suppressed_flag.",
+    "long_description": "Computed as epic_n_tests_malaria / epic_n_lab_results * 100 - a percent of ALL lab component results (every test type), not a positivity rate and not a rate per 100,000. Monthly. Where the numerator was suppressed it is imputed as 5 before the percentage is computed. Where the denominator was itself suppressed the percentage is left missing; those cells are marked by epic_n_lab_results_suppressed_flag.",
     "statement": "In {location}, {value}% of lab component results were for malaria testing.",
     "measure_type": "Percent",
     "unit": "Percent",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -945,7 +945,7 @@
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -958,12 +958,12 @@
     "short_name": "Total Lab Component Results",
     "long_name": "Total Lab Component Results (Denominator)",
     "category": "general",
-    "short_description": "Annual total of lab component results, the denominator for each lab-test percentage.",
-    "long_description": "Total count of lab component results (all test types) per state per year, used as the denominator for every epic_pct_tests_* column. SlicerDicer session 2862558; population base: All Lab Component Results, Country of Care = United States of America. Annual, not monthly. Counts of 10 or fewer are suppressed and imputed as 5; see epic_n_lab_results_suppressed_flag.",
+    "short_description": "Monthly total of lab component results, the denominator for each lab-test percentage.",
+    "long_description": "Total count of lab component results (all test types) per state per month, used as the denominator for every epic_pct_tests_* column. SlicerDicer session 2863670; population base: All Lab Component Results, Country of Care = United States of America. Annual, not monthly. Counts of 10 or fewer are suppressed and imputed as 5; see epic_n_lab_results_suppressed_flag.",
     "statement": "",
     "measure_type": "Count",
     "unit": "lab component results",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -981,7 +981,7 @@
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -994,12 +994,12 @@
     "short_name": "New Lyme disease patients (pop filter)",
     "long_name": "Patients with a new Lyme disease diagnosis, population-filtered",
     "category": "infectious_disease",
-    "short_description": "Annual count of patients with a new Lyme disease diagnosis, pop-filter definition.",
-    "long_description": "Annual count of patients with a new Lyme disease diagnosis. Annual (Year x State of Residence) export from Epic Cosmos SlicerDicer session 2863644 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients. Counts of 10 or fewer are suppressed by Epic (blank or \"10 or fewer\") and imputed as 5; see epic_new_popfilter_lyme_suppressed_flag.",
-    "statement": "In {location}, {value} patients had a new Lyme disease diagnosis in the year.",
+    "short_description": "Monthly count of patients with a new Lyme disease diagnosis, pop-filter definition.",
+    "long_description": "Monthly count of patients with a new Lyme disease diagnosis. Monthly (Year > Month > State of Residence) export from Epic Cosmos SlicerDicer session 2863672 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients. Counts of 10 or fewer are suppressed by Epic (blank or \"10 or fewer\") and imputed as 5; see epic_new_popfilter_lyme_suppressed_flag.",
+    "statement": "In {location}, {value} patients had a new Lyme disease diagnosis in the month.",
     "measure_type": "Count",
     "unit": "patients",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1012,12 +1012,12 @@
     "short_name": "New Lyme disease percent of filtered patients",
     "long_name": "Percent of filtered patients with a new Lyme disease diagnosis",
     "category": "infectious_disease",
-    "short_description": "Annual percent of patients in the new-diagnosis population with a new Lyme disease diagnosis.",
-    "long_description": "Computed as epic_n_new_popfilter_lyme / epic_n_new_popfilter_patients * 100. The denominator is the filtered population (patients with a new diagnosis of any of the six diseases), NOT all patients, so this is a share among patients with a new vector-borne diagnosis and is not comparable to epic_pct_new_lyme. Left missing where the denominator was suppressed. Annual (Year x State of Residence) export from Epic Cosmos SlicerDicer session 2863644 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
+    "short_description": "Monthly percent of patients in the new-diagnosis population with a new Lyme disease diagnosis.",
+    "long_description": "Computed as epic_n_new_popfilter_lyme / epic_n_new_popfilter_patients * 100. The denominator is the filtered population (patients with a new diagnosis of any of the six diseases), NOT all patients, so this is a share among patients with a new vector-borne diagnosis and is not comparable to epic_pct_new_lyme. Left missing where the denominator was suppressed. Monthly (Year > Month > State of Residence) export from Epic Cosmos SlicerDicer session 2863672 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
     "statement": "In {location}, {value}% of patients with a new vector-borne diagnosis had a new Lyme disease diagnosis.",
     "measure_type": "Percent",
     "unit": "Percent",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1035,7 +1035,7 @@
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1048,12 +1048,12 @@
     "short_name": "New babesiosis patients (pop filter)",
     "long_name": "Patients with a new babesiosis diagnosis, population-filtered",
     "category": "infectious_disease",
-    "short_description": "Annual count of patients with a new babesiosis diagnosis, pop-filter definition.",
-    "long_description": "Annual count of patients with a new babesiosis diagnosis. Annual (Year x State of Residence) export from Epic Cosmos SlicerDicer session 2863644 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients. Counts of 10 or fewer are suppressed by Epic (blank or \"10 or fewer\") and imputed as 5; see epic_new_popfilter_babesiosis_suppressed_flag.",
-    "statement": "In {location}, {value} patients had a new babesiosis diagnosis in the year.",
+    "short_description": "Monthly count of patients with a new babesiosis diagnosis, pop-filter definition.",
+    "long_description": "Monthly count of patients with a new babesiosis diagnosis. Monthly (Year > Month > State of Residence) export from Epic Cosmos SlicerDicer session 2863672 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients. Counts of 10 or fewer are suppressed by Epic (blank or \"10 or fewer\") and imputed as 5; see epic_new_popfilter_babesiosis_suppressed_flag.",
+    "statement": "In {location}, {value} patients had a new babesiosis diagnosis in the month.",
     "measure_type": "Count",
     "unit": "patients",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1066,12 +1066,12 @@
     "short_name": "New babesiosis percent of filtered patients",
     "long_name": "Percent of filtered patients with a new babesiosis diagnosis",
     "category": "infectious_disease",
-    "short_description": "Annual percent of patients in the new-diagnosis population with a new babesiosis diagnosis.",
-    "long_description": "Computed as epic_n_new_popfilter_babesiosis / epic_n_new_popfilter_patients * 100. The denominator is the filtered population (patients with a new diagnosis of any of the six diseases), NOT all patients, so this is a share among patients with a new vector-borne diagnosis and is not comparable to epic_pct_new_babesiosis. Left missing where the denominator was suppressed. Annual (Year x State of Residence) export from Epic Cosmos SlicerDicer session 2863644 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
+    "short_description": "Monthly percent of patients in the new-diagnosis population with a new babesiosis diagnosis.",
+    "long_description": "Computed as epic_n_new_popfilter_babesiosis / epic_n_new_popfilter_patients * 100. The denominator is the filtered population (patients with a new diagnosis of any of the six diseases), NOT all patients, so this is a share among patients with a new vector-borne diagnosis and is not comparable to epic_pct_new_babesiosis. Left missing where the denominator was suppressed. Monthly (Year > Month > State of Residence) export from Epic Cosmos SlicerDicer session 2863672 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
     "statement": "In {location}, {value}% of patients with a new vector-borne diagnosis had a new babesiosis diagnosis.",
     "measure_type": "Percent",
     "unit": "Percent",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1089,7 +1089,7 @@
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1102,12 +1102,12 @@
     "short_name": "New malaria patients (pop filter)",
     "long_name": "Patients with a new malaria diagnosis, population-filtered",
     "category": "infectious_disease",
-    "short_description": "Annual count of patients with a new malaria diagnosis, pop-filter definition.",
-    "long_description": "Annual count of patients with a new malaria diagnosis. Annual (Year x State of Residence) export from Epic Cosmos SlicerDicer session 2863644 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients. Counts of 10 or fewer are suppressed by Epic (blank or \"10 or fewer\") and imputed as 5; see epic_new_popfilter_malaria_suppressed_flag.",
-    "statement": "In {location}, {value} patients had a new malaria diagnosis in the year.",
+    "short_description": "Monthly count of patients with a new malaria diagnosis, pop-filter definition.",
+    "long_description": "Monthly count of patients with a new malaria diagnosis. Monthly (Year > Month > State of Residence) export from Epic Cosmos SlicerDicer session 2863672 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients. Counts of 10 or fewer are suppressed by Epic (blank or \"10 or fewer\") and imputed as 5; see epic_new_popfilter_malaria_suppressed_flag.",
+    "statement": "In {location}, {value} patients had a new malaria diagnosis in the month.",
     "measure_type": "Count",
     "unit": "patients",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1120,12 +1120,12 @@
     "short_name": "New malaria percent of filtered patients",
     "long_name": "Percent of filtered patients with a new malaria diagnosis",
     "category": "infectious_disease",
-    "short_description": "Annual percent of patients in the new-diagnosis population with a new malaria diagnosis.",
-    "long_description": "Computed as epic_n_new_popfilter_malaria / epic_n_new_popfilter_patients * 100. The denominator is the filtered population (patients with a new diagnosis of any of the six diseases), NOT all patients, so this is a share among patients with a new vector-borne diagnosis and is not comparable to epic_pct_new_malaria. Left missing where the denominator was suppressed. Annual (Year x State of Residence) export from Epic Cosmos SlicerDicer session 2863644 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
+    "short_description": "Monthly percent of patients in the new-diagnosis population with a new malaria diagnosis.",
+    "long_description": "Computed as epic_n_new_popfilter_malaria / epic_n_new_popfilter_patients * 100. The denominator is the filtered population (patients with a new diagnosis of any of the six diseases), NOT all patients, so this is a share among patients with a new vector-borne diagnosis and is not comparable to epic_pct_new_malaria. Left missing where the denominator was suppressed. Monthly (Year > Month > State of Residence) export from Epic Cosmos SlicerDicer session 2863672 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
     "statement": "In {location}, {value}% of patients with a new vector-borne diagnosis had a new malaria diagnosis.",
     "measure_type": "Percent",
     "unit": "Percent",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1143,7 +1143,7 @@
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1156,12 +1156,12 @@
     "short_name": "New Rocky Mountain spotted fever (RMSF) patients (pop filter)",
     "long_name": "Patients with a new Rocky Mountain spotted fever (RMSF) diagnosis, population-filtered",
     "category": "infectious_disease",
-    "short_description": "Annual count of patients with a new Rocky Mountain spotted fever (RMSF) diagnosis, pop-filter definition.",
-    "long_description": "Annual count of patients with a new Rocky Mountain spotted fever (RMSF) diagnosis. Annual (Year x State of Residence) export from Epic Cosmos SlicerDicer session 2863644 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients. Counts of 10 or fewer are suppressed by Epic (blank or \"10 or fewer\") and imputed as 5; see epic_new_popfilter_rmsf_suppressed_flag.",
-    "statement": "In {location}, {value} patients had a new Rocky Mountain spotted fever (RMSF) diagnosis in the year.",
+    "short_description": "Monthly count of patients with a new Rocky Mountain spotted fever (RMSF) diagnosis, pop-filter definition.",
+    "long_description": "Monthly count of patients with a new Rocky Mountain spotted fever (RMSF) diagnosis. Monthly (Year > Month > State of Residence) export from Epic Cosmos SlicerDicer session 2863672 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients. Counts of 10 or fewer are suppressed by Epic (blank or \"10 or fewer\") and imputed as 5; see epic_new_popfilter_rmsf_suppressed_flag.",
+    "statement": "In {location}, {value} patients had a new Rocky Mountain spotted fever (RMSF) diagnosis in the month.",
     "measure_type": "Count",
     "unit": "patients",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1174,12 +1174,12 @@
     "short_name": "New Rocky Mountain spotted fever (RMSF) percent of filtered patients",
     "long_name": "Percent of filtered patients with a new Rocky Mountain spotted fever (RMSF) diagnosis",
     "category": "infectious_disease",
-    "short_description": "Annual percent of patients in the new-diagnosis population with a new Rocky Mountain spotted fever (RMSF) diagnosis.",
-    "long_description": "Computed as epic_n_new_popfilter_rmsf / epic_n_new_popfilter_patients * 100. The denominator is the filtered population (patients with a new diagnosis of any of the six diseases), NOT all patients, so this is a share among patients with a new vector-borne diagnosis and is not comparable to epic_pct_new_rmsf. Left missing where the denominator was suppressed. Annual (Year x State of Residence) export from Epic Cosmos SlicerDicer session 2863644 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
+    "short_description": "Monthly percent of patients in the new-diagnosis population with a new Rocky Mountain spotted fever (RMSF) diagnosis.",
+    "long_description": "Computed as epic_n_new_popfilter_rmsf / epic_n_new_popfilter_patients * 100. The denominator is the filtered population (patients with a new diagnosis of any of the six diseases), NOT all patients, so this is a share among patients with a new vector-borne diagnosis and is not comparable to epic_pct_new_rmsf. Left missing where the denominator was suppressed. Monthly (Year > Month > State of Residence) export from Epic Cosmos SlicerDicer session 2863672 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
     "statement": "In {location}, {value}% of patients with a new vector-borne diagnosis had a new Rocky Mountain spotted fever (RMSF) diagnosis.",
     "measure_type": "Percent",
     "unit": "Percent",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1197,7 +1197,7 @@
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1210,12 +1210,12 @@
     "short_name": "New West Nile virus patients (pop filter)",
     "long_name": "Patients with a new West Nile virus diagnosis, population-filtered",
     "category": "infectious_disease",
-    "short_description": "Annual count of patients with a new West Nile virus diagnosis, pop-filter definition.",
-    "long_description": "Annual count of patients with a new West Nile virus diagnosis. Annual (Year x State of Residence) export from Epic Cosmos SlicerDicer session 2863644 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients. Counts of 10 or fewer are suppressed by Epic (blank or \"10 or fewer\") and imputed as 5; see epic_new_popfilter_west_nile_suppressed_flag.",
-    "statement": "In {location}, {value} patients had a new West Nile virus diagnosis in the year.",
+    "short_description": "Monthly count of patients with a new West Nile virus diagnosis, pop-filter definition.",
+    "long_description": "Monthly count of patients with a new West Nile virus diagnosis. Monthly (Year > Month > State of Residence) export from Epic Cosmos SlicerDicer session 2863672 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients. Counts of 10 or fewer are suppressed by Epic (blank or \"10 or fewer\") and imputed as 5; see epic_new_popfilter_west_nile_suppressed_flag.",
+    "statement": "In {location}, {value} patients had a new West Nile virus diagnosis in the month.",
     "measure_type": "Count",
     "unit": "patients",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1228,12 +1228,12 @@
     "short_name": "New West Nile virus percent of filtered patients",
     "long_name": "Percent of filtered patients with a new West Nile virus diagnosis",
     "category": "infectious_disease",
-    "short_description": "Annual percent of patients in the new-diagnosis population with a new West Nile virus diagnosis.",
-    "long_description": "Computed as epic_n_new_popfilter_west_nile / epic_n_new_popfilter_patients * 100. The denominator is the filtered population (patients with a new diagnosis of any of the six diseases), NOT all patients, so this is a share among patients with a new vector-borne diagnosis and is not comparable to epic_pct_new_west_nile. Left missing where the denominator was suppressed. Annual (Year x State of Residence) export from Epic Cosmos SlicerDicer session 2863644 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
+    "short_description": "Monthly percent of patients in the new-diagnosis population with a new West Nile virus diagnosis.",
+    "long_description": "Computed as epic_n_new_popfilter_west_nile / epic_n_new_popfilter_patients * 100. The denominator is the filtered population (patients with a new diagnosis of any of the six diseases), NOT all patients, so this is a share among patients with a new vector-borne diagnosis and is not comparable to epic_pct_new_west_nile. Left missing where the denominator was suppressed. Monthly (Year > Month > State of Residence) export from Epic Cosmos SlicerDicer session 2863672 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
     "statement": "In {location}, {value}% of patients with a new vector-borne diagnosis had a new West Nile virus diagnosis.",
     "measure_type": "Percent",
     "unit": "Percent",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1251,7 +1251,7 @@
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1264,12 +1264,12 @@
     "short_name": "New dengue patients (pop filter)",
     "long_name": "Patients with a new dengue diagnosis, population-filtered",
     "category": "infectious_disease",
-    "short_description": "Annual count of patients with a new dengue diagnosis, pop-filter definition.",
-    "long_description": "Annual count of patients with a new dengue diagnosis. Annual (Year x State of Residence) export from Epic Cosmos SlicerDicer session 2863644 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients. Counts of 10 or fewer are suppressed by Epic (blank or \"10 or fewer\") and imputed as 5; see epic_new_popfilter_dengue_suppressed_flag.",
-    "statement": "In {location}, {value} patients had a new dengue diagnosis in the year.",
+    "short_description": "Monthly count of patients with a new dengue diagnosis, pop-filter definition.",
+    "long_description": "Monthly count of patients with a new dengue diagnosis. Monthly (Year > Month > State of Residence) export from Epic Cosmos SlicerDicer session 2863672 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients. Counts of 10 or fewer are suppressed by Epic (blank or \"10 or fewer\") and imputed as 5; see epic_new_popfilter_dengue_suppressed_flag.",
+    "statement": "In {location}, {value} patients had a new dengue diagnosis in the month.",
     "measure_type": "Count",
     "unit": "patients",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1282,12 +1282,12 @@
     "short_name": "New dengue percent of filtered patients",
     "long_name": "Percent of filtered patients with a new dengue diagnosis",
     "category": "infectious_disease",
-    "short_description": "Annual percent of patients in the new-diagnosis population with a new dengue diagnosis.",
-    "long_description": "Computed as epic_n_new_popfilter_dengue / epic_n_new_popfilter_patients * 100. The denominator is the filtered population (patients with a new diagnosis of any of the six diseases), NOT all patients, so this is a share among patients with a new vector-borne diagnosis and is not comparable to epic_pct_new_dengue. Left missing where the denominator was suppressed. Annual (Year x State of Residence) export from Epic Cosmos SlicerDicer session 2863644 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
+    "short_description": "Monthly percent of patients in the new-diagnosis population with a new dengue diagnosis.",
+    "long_description": "Computed as epic_n_new_popfilter_dengue / epic_n_new_popfilter_patients * 100. The denominator is the filtered population (patients with a new diagnosis of any of the six diseases), NOT all patients, so this is a share among patients with a new vector-borne diagnosis and is not comparable to epic_pct_new_dengue. Left missing where the denominator was suppressed. Monthly (Year > Month > State of Residence) export from Epic Cosmos SlicerDicer session 2863672 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
     "statement": "In {location}, {value}% of patients with a new vector-borne diagnosis had a new dengue diagnosis.",
     "measure_type": "Percent",
     "unit": "Percent",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1305,7 +1305,7 @@
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1318,12 +1318,12 @@
     "short_name": "Patients with any new diagnosis (pop filter)",
     "long_name": "Patients with a new diagnosis of any of the six diseases (pop-filter denominator)",
     "category": "infectious_disease",
-    "short_description": "Annual count of patients in the pop-filter population, the denominator for epic_pct_new_popfilter_*.",
-    "long_description": "Number of Patients in the filtered population (a new diagnosis of any of the six diseases in the year). A patient can have more than one disease, so the disease counts can sum to more than this. Counts of 10 or fewer are suppressed and imputed as 5. Annual (Year x State of Residence) export from Epic Cosmos SlicerDicer session 2863644 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
+    "short_description": "Monthly count of patients in the pop-filter population, the denominator for epic_pct_new_popfilter_*.",
+    "long_description": "Number of Patients in the filtered population (a new diagnosis of any of the six diseases in the month). A patient can have more than one disease, so the disease counts can sum to more than this. Counts of 10 or fewer are suppressed and imputed as 5. Monthly (Year > Month > State of Residence) export from Epic Cosmos SlicerDicer session 2863672 (population filter): the population is restricted to patients with a first diagnosis (not preceded by the same diagnosis within 6 months) of Lyme disease, babesiosis, malaria, RMSF, West Nile virus or dengue, Country of Care = United States of America, Has Any Encounters. This differs from the problem-list new-case measures (epic_n_new_*), which count new problem-list diagnoses among all patients.",
     "statement": "",
     "measure_type": "Count",
     "unit": "patients",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"
@@ -1341,7 +1341,7 @@
     "statement": "",
     "measure_type": "Binary",
     "unit": "0/1",
-    "time_resolution": "Year",
+    "time_resolution": "Month",
     "sources": [
       {
         "id": "epic_cosmos"

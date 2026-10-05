@@ -736,13 +736,18 @@
       "sha512": "f67d67bd67f186ee3b878fdc5c06cfda77cd91c97e66d1ef9bd6567392495fe2531b64f4b5082a1fda59f3ddb75757312dfdb033401c359e137f9d3284668217"
     },
     {
-      "bytes": 15457,
+      "bytes": 172184,
       "encoding": "windows-1252",
-      "md5": "bfcc03794a11f8d3feb7c3a6e987678d",
+      "md5": "f637f8fecd06ce2162317536f9aac14c",
       "format": "csv",
       "name": "data_lab_tests.csv",
       "filename": "data_lab_tests.csv.gz",
-      "versions": {},
+      "versions": {
+        "hash": ["5dc8ae4530e1f395da99e0802c04b0cf60721f49"],
+        "author": ["anshap32 <73296024+anshap32@users.noreply.github.com>"],
+        "date": ["Mon Oct 5 12:38:33 2026 -0400"],
+        "message": ["add lab tests and new case logic"]
+      },
       "source": [],
       "data_format": "wide",
       "ids": [
@@ -754,91 +759,143 @@
       "time": "time",
       "profile": "data-resource",
       "created": "2026-10-02 12:07:15.897556",
-      "last_modified": "2026-10-05 11:32:49.933365",
+      "last_modified": "2026-10-05 13:16:15.027115",
       "vintage": {},
-      "row_count": 208,
+      "row_count": 2912,
       "entity_count": 52,
       "schema": {
         "fields": [
           {
             "name": "geography",
-            "duplicates": 156,
+            "duplicates": 2860,
             "info": [],
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "string",
             "missing": 0,
             "table": {
-              "00": 4,
-              "01": 4,
-              "02": 4,
-              "04": 4,
-              "05": 4,
-              "06": 4,
-              "08": 4,
-              "09": 4,
-              "10": 4,
-              "11": 4,
-              "12": 4,
-              "13": 4,
-              "15": 4,
-              "16": 4,
-              "17": 4,
-              "18": 4,
-              "19": 4,
-              "20": 4,
-              "21": 4,
-              "22": 4,
-              "23": 4,
-              "24": 4,
-              "25": 4,
-              "26": 4,
-              "27": 4,
-              "28": 4,
-              "29": 4,
-              "30": 4,
-              "31": 4,
-              "32": 4,
-              "33": 4,
-              "34": 4,
-              "35": 4,
-              "36": 4,
-              "37": 4,
-              "38": 4,
-              "39": 4,
-              "40": 4,
-              "41": 4,
-              "42": 4,
-              "44": 4,
-              "45": 4,
-              "46": 4,
-              "47": 4,
-              "48": 4,
-              "49": 4,
-              "50": 4,
-              "51": 4,
-              "53": 4,
-              "54": 4,
-              "55": 4,
-              "56": 4
+              "00": 56,
+              "01": 56,
+              "02": 56,
+              "04": 56,
+              "05": 56,
+              "06": 56,
+              "08": 56,
+              "09": 56,
+              "10": 56,
+              "11": 56,
+              "12": 56,
+              "13": 56,
+              "15": 56,
+              "16": 56,
+              "17": 56,
+              "18": 56,
+              "19": 56,
+              "20": 56,
+              "21": 56,
+              "22": 56,
+              "23": 56,
+              "24": 56,
+              "25": 56,
+              "26": 56,
+              "27": 56,
+              "28": 56,
+              "29": 56,
+              "30": 56,
+              "31": 56,
+              "32": 56,
+              "33": 56,
+              "34": 56,
+              "35": 56,
+              "36": 56,
+              "37": 56,
+              "38": 56,
+              "39": 56,
+              "40": 56,
+              "41": 56,
+              "42": 56,
+              "44": 56,
+              "45": 56,
+              "46": 56,
+              "47": 56,
+              "48": 56,
+              "49": 56,
+              "50": 56,
+              "51": 56,
+              "53": 56,
+              "54": 56,
+              "55": 56,
+              "56": 56
             }
           },
           {
             "name": "time",
-            "duplicates": 204,
+            "duplicates": 2856,
             "info": [],
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "string",
             "missing": 0,
             "table": {
+              "2022-01-31": 52,
+              "2022-02-28": 52,
+              "2022-03-31": 52,
+              "2022-04-30": 52,
+              "2022-05-31": 52,
+              "2022-06-30": 52,
+              "2022-07-31": 52,
+              "2022-08-31": 52,
+              "2022-09-30": 52,
+              "2022-10-31": 52,
+              "2022-11-30": 52,
               "2022-12-31": 52,
+              "2023-01-31": 52,
+              "2023-02-28": 52,
+              "2023-03-31": 52,
+              "2023-04-30": 52,
+              "2023-05-31": 52,
+              "2023-06-30": 52,
+              "2023-07-31": 52,
+              "2023-08-31": 52,
+              "2023-09-30": 52,
+              "2023-10-31": 52,
+              "2023-11-30": 52,
               "2023-12-31": 52,
+              "2024-01-31": 52,
+              "2024-02-29": 52,
+              "2024-03-31": 52,
+              "2024-04-30": 52,
+              "2024-05-31": 52,
+              "2024-06-30": 52,
+              "2024-07-31": 52,
+              "2024-08-31": 52,
+              "2024-09-30": 52,
+              "2024-10-31": 52,
+              "2024-11-30": 52,
               "2024-12-31": 52,
-              "2025-12-31": 52
+              "2025-01-31": 52,
+              "2025-02-28": 52,
+              "2025-03-31": 52,
+              "2025-04-30": 52,
+              "2025-05-31": 52,
+              "2025-06-30": 52,
+              "2025-07-31": 52,
+              "2025-08-31": 52,
+              "2025-09-30": 52,
+              "2025-10-31": 52,
+              "2025-11-30": 52,
+              "2025-12-31": 52,
+              "2026-01-31": 52,
+              "2026-02-28": 52,
+              "2026-03-31": 52,
+              "2026-04-30": 52,
+              "2026-05-31": 52,
+              "2026-06-30": 52,
+              "2026-07-31": 52,
+              "2026-08-31": 52
             }
           },
           {
             "name": "epic_n_tests_babesiosis",
-            "duplicates": 14,
+            "duplicates": 2051,
             "info": {
               "id": "epic_n_tests_babesiosis",
               "short_name": "Lab Results: babesia",
@@ -856,13 +913,13 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "integer",
             "missing": 0,
-            "mean": 9695.278846,
-            "sd": 37759.826282,
+            "mean": 860.916209,
+            "sd": 3818.592973,
             "min": 5,
-            "max": 368529
+            "max": 62887
           },
           {
             "name": "epic_pct_tests_babesiosis",
@@ -884,17 +941,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "float",
             "missing": 0,
-            "mean": 0.003191,
-            "sd": 0.006755,
-            "min": 0.000016,
-            "max": 0.039977
+            "mean": 0.003365,
+            "sd": 0.008475,
+            "min": 1e-05,
+            "max": 0.100082
           },
           {
             "name": "epic_tests_babesiosis_suppressed_flag",
-            "duplicates": 206,
+            "duplicates": 2910,
             "info": {
               "id": "epic_tests_babesiosis_suppressed_flag",
               "short_name": "Suppressed flag: lab results, babesia",
@@ -911,17 +968,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "integer",
             "missing": 0,
-            "mean": 0.009615,
-            "sd": 0.097821,
+            "mean": 0.286058,
+            "sd": 0.451994,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_tests_rmsf",
-            "duplicates": 18,
+            "duplicates": 2216,
             "info": {
               "id": "epic_n_tests_rmsf",
               "short_name": "Lab Results: Rocky Mountain Spotted Fever (RMSF)",
@@ -939,13 +996,13 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "integer",
             "missing": 0,
-            "mean": 3790.975962,
-            "sd": 13887.353352,
+            "mean": 337.064904,
+            "sd": 1406.401449,
             "min": 5,
-            "max": 122972
+            "max": 21485
           },
           {
             "name": "epic_pct_tests_rmsf",
@@ -967,17 +1024,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "float",
             "missing": 0,
-            "mean": 0.000926,
-            "sd": 0.001115,
-            "min": 0.000025,
-            "max": 0.005138
+            "mean": 0.000974,
+            "sd": 0.001499,
+            "min": 0.00002,
+            "max": 0.013151
           },
           {
             "name": "epic_tests_rmsf_suppressed_flag",
-            "duplicates": 206,
+            "duplicates": 2910,
             "info": {
               "id": "epic_tests_rmsf_suppressed_flag",
               "short_name": "Suppressed flag: lab results, Rocky Mountain Spotted Fever (RMSF)",
@@ -994,17 +1051,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "integer",
             "missing": 0,
-            "mean": 0.014423,
-            "sd": 0.119515,
+            "mean": 0.262363,
+            "sd": 0.439994,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_tests_west_nile",
-            "duplicates": 0,
+            "duplicates": 434,
             "info": {
               "id": "epic_n_tests_west_nile",
               "short_name": "Lab Results: West Nile virus",
@@ -1022,13 +1079,13 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "integer",
             "missing": 0,
-            "mean": 148487.870192,
-            "sd": 532440.277717,
-            "min": 479,
-            "max": 4229841
+            "mean": 12540.696429,
+            "sd": 44913.936746,
+            "min": 25,
+            "max": 384273
           },
           {
             "name": "epic_pct_tests_west_nile",
@@ -1050,17 +1107,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "float",
             "missing": 0,
-            "mean": 0.035646,
-            "sd": 0.0217,
-            "min": 0.003713,
-            "max": 0.110716
+            "mean": 0.035166,
+            "sd": 0.021632,
+            "min": 0.000967,
+            "max": 0.116451
           },
           {
             "name": "epic_tests_west_nile_suppressed_flag",
-            "duplicates": 207,
+            "duplicates": 2911,
             "info": {
               "id": "epic_tests_west_nile_suppressed_flag",
               "short_name": "Suppressed flag: lab results, West Nile virus",
@@ -1077,7 +1134,7 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "integer",
             "missing": 0,
             "mean": 0,
@@ -1087,7 +1144,7 @@
           },
           {
             "name": "epic_n_tests_dengue",
-            "duplicates": 79,
+            "duplicates": 2721,
             "info": {
               "id": "epic_n_tests_dengue",
               "short_name": "Lab Results: dengue",
@@ -1105,13 +1162,13 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "integer",
             "missing": 0,
-            "mean": 326.504808,
-            "sd": 1292.421418,
+            "mean": 29.912775,
+            "sd": 115.735255,
             "min": 5,
-            "max": 13191
+            "max": 1840
           },
           {
             "name": "epic_pct_tests_dengue",
@@ -1133,17 +1190,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "float",
             "missing": 0,
-            "mean": 0.000074,
-            "sd": 0.000081,
-            "min": 2e-06,
-            "max": 0.000592
+            "mean": 0.000138,
+            "sd": 0.000178,
+            "min": 8e-06,
+            "max": 0.001372
           },
           {
             "name": "epic_tests_dengue_suppressed_flag",
-            "duplicates": 206,
+            "duplicates": 2910,
             "info": {
               "id": "epic_tests_dengue_suppressed_flag",
               "short_name": "Suppressed flag: lab results, dengue",
@@ -1160,17 +1217,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "integer",
             "missing": 0,
-            "mean": 0.192308,
-            "sd": 0.395064,
+            "mean": 0.665522,
+            "sd": 0.471889,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_tests_malaria",
-            "duplicates": 29,
+            "duplicates": 2558,
             "info": {
               "id": "epic_n_tests_malaria",
               "short_name": "Lab Results: malaria",
@@ -1188,13 +1245,13 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "integer",
             "missing": 0,
-            "mean": 1173.951923,
-            "sd": 4338.009998,
+            "mean": 97.848214,
+            "sd": 379.04258,
             "min": 5,
-            "max": 37202
+            "max": 5334
           },
           {
             "name": "epic_pct_tests_malaria",
@@ -1216,17 +1273,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "float",
             "missing": 0,
-            "mean": 0.000297,
-            "sd": 0.000286,
-            "min": 1e-05,
-            "max": 0.00164
+            "mean": 0.000311,
+            "sd": 0.000373,
+            "min": 0.000017,
+            "max": 0.003776
           },
           {
             "name": "epic_tests_malaria_suppressed_flag",
-            "duplicates": 206,
+            "duplicates": 2910,
             "info": {
               "id": "epic_tests_malaria_suppressed_flag",
               "short_name": "Suppressed flag: lab results, malaria",
@@ -1243,11 +1300,11 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "integer",
             "missing": 0,
-            "mean": 0.004808,
-            "sd": 0.069338,
+            "mean": 0.401442,
+            "sd": 0.490274,
             "min": 0,
             "max": 1
           },
@@ -1270,17 +1327,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "integer",
             "missing": 0,
-            "mean": 402112046,
-            "sd": 1444430680.943508,
-            "min": 4805641,
-            "max": 12233066834
+            "mean": 34494204.854739,
+            "sd": 123842092.771108,
+            "min": 364558,
+            "max": 1109593692
           },
           {
             "name": "epic_n_lab_results_suppressed_flag",
-            "duplicates": 207,
+            "duplicates": 2911,
             "info": {
               "id": "epic_n_lab_results_suppressed_flag",
               "short_name": "Suppressed flag: total lab results",
@@ -1297,7 +1354,7 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 55],
             "type": "integer",
             "missing": 0,
             "mean": 0,
@@ -1307,7 +1364,7 @@
           }
         ]
       },
-      "sha512": "5396dca7cc171ef533bb5ee222f475d6b753716cd6e1b87ab7c31b5b10f1463098b6718f53c110b2abf29e9edc1aca158bbce0f491f93521fcd7c99fc6b15c94"
+      "sha512": "1b962f7a2a38dc5f74a5796c18537a672d8f4badf1f89ce5a688351cf75523261ced6d9ed80a91d6e63a8e2b54c251de3fa7f2ee6537aa8086a777776c47e867"
     },
     {
       "bytes": 84348,
@@ -1316,7 +1373,12 @@
       "format": "csv",
       "name": "data_new_cases.csv",
       "filename": "data_new_cases.csv.gz",
-      "versions": {},
+      "versions": {
+        "hash": ["5dc8ae4530e1f395da99e0802c04b0cf60721f49"],
+        "author": ["anshap32 <73296024+anshap32@users.noreply.github.com>"],
+        "date": ["Mon Oct 5 12:38:33 2026 -0400"],
+        "message": ["add lab tests and new case logic"]
+      },
       "source": [],
       "data_format": "wide",
       "ids": [
@@ -2017,13 +2079,18 @@
       "sha512": "d1f3afa92fe920d98fe19d44ec6836b309ee0f0a7f19a5857a41c9fdb2eb0f09a28019e46adc4bd9bf1447e030dd2bb5385e173fdbbd54a255a50a16ddbf7e63"
     },
     {
-      "bytes": 11382,
+      "bytes": 93747,
       "encoding": "windows-1252",
-      "md5": "20fa4381a70ae5a70c9fbd653c883cf3",
+      "md5": "c88f3808ed35238b9bad3e4896c7fe1c",
       "format": "csv",
       "name": "data_new_cases_pop_filter.csv",
       "filename": "data_new_cases_pop_filter.csv.gz",
-      "versions": {},
+      "versions": {
+        "hash": ["5dc8ae4530e1f395da99e0802c04b0cf60721f49"],
+        "author": ["anshap32 <73296024+anshap32@users.noreply.github.com>"],
+        "date": ["Mon Oct 5 12:38:33 2026 -0400"],
+        "message": ["add lab tests and new case logic"]
+      },
       "source": [],
       "data_format": "wide",
       "ids": [
@@ -2035,91 +2102,141 @@
       "time": "time",
       "profile": "data-resource",
       "created": "2026-10-05 12:12:40.053896",
-      "last_modified": "2026-10-05 12:12:40.127802",
+      "last_modified": "2026-10-05 13:16:16.593908",
       "vintage": {},
-      "row_count": 208,
+      "row_count": 2808,
       "entity_count": 52,
       "schema": {
         "fields": [
           {
             "name": "geography",
-            "duplicates": 156,
+            "duplicates": 2756,
             "info": [],
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "string",
             "missing": 0,
             "table": {
-              "00": 4,
-              "01": 4,
-              "02": 4,
-              "04": 4,
-              "05": 4,
-              "06": 4,
-              "08": 4,
-              "09": 4,
-              "10": 4,
-              "11": 4,
-              "12": 4,
-              "13": 4,
-              "15": 4,
-              "16": 4,
-              "17": 4,
-              "18": 4,
-              "19": 4,
-              "20": 4,
-              "21": 4,
-              "22": 4,
-              "23": 4,
-              "24": 4,
-              "25": 4,
-              "26": 4,
-              "27": 4,
-              "28": 4,
-              "29": 4,
-              "30": 4,
-              "31": 4,
-              "32": 4,
-              "33": 4,
-              "34": 4,
-              "35": 4,
-              "36": 4,
-              "37": 4,
-              "38": 4,
-              "39": 4,
-              "40": 4,
-              "41": 4,
-              "42": 4,
-              "44": 4,
-              "45": 4,
-              "46": 4,
-              "47": 4,
-              "48": 4,
-              "49": 4,
-              "50": 4,
-              "51": 4,
-              "53": 4,
-              "54": 4,
-              "55": 4,
-              "56": 4
+              "00": 54,
+              "01": 54,
+              "02": 54,
+              "04": 54,
+              "05": 54,
+              "06": 54,
+              "08": 54,
+              "09": 54,
+              "10": 54,
+              "11": 54,
+              "12": 54,
+              "13": 54,
+              "15": 54,
+              "16": 54,
+              "17": 54,
+              "18": 54,
+              "19": 54,
+              "20": 54,
+              "21": 54,
+              "22": 54,
+              "23": 54,
+              "24": 54,
+              "25": 54,
+              "26": 54,
+              "27": 54,
+              "28": 54,
+              "29": 54,
+              "30": 54,
+              "31": 54,
+              "32": 54,
+              "33": 54,
+              "34": 54,
+              "35": 54,
+              "36": 54,
+              "37": 54,
+              "38": 54,
+              "39": 54,
+              "40": 54,
+              "41": 54,
+              "42": 54,
+              "44": 54,
+              "45": 54,
+              "46": 54,
+              "47": 54,
+              "48": 54,
+              "49": 54,
+              "50": 54,
+              "51": 54,
+              "53": 54,
+              "54": 54,
+              "55": 54,
+              "56": 54
             }
           },
           {
             "name": "time",
-            "duplicates": 204,
+            "duplicates": 2754,
             "info": [],
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "string",
             "missing": 0,
             "table": {
+              "2022-01-31": 52,
+              "2022-02-28": 52,
+              "2022-03-31": 52,
+              "2022-04-30": 52,
+              "2022-05-31": 52,
+              "2022-06-30": 52,
+              "2022-07-31": 52,
+              "2022-08-31": 52,
+              "2022-09-30": 52,
+              "2022-10-31": 52,
+              "2022-11-30": 52,
               "2022-12-31": 52,
+              "2023-01-31": 52,
+              "2023-02-28": 52,
+              "2023-03-31": 52,
+              "2023-04-30": 52,
+              "2023-05-31": 52,
+              "2023-06-30": 52,
+              "2023-07-31": 52,
+              "2023-08-31": 52,
+              "2023-09-30": 52,
+              "2023-10-31": 52,
+              "2023-11-30": 52,
               "2023-12-31": 52,
+              "2024-01-31": 52,
+              "2024-02-29": 52,
+              "2024-03-31": 52,
+              "2024-04-30": 52,
+              "2024-05-31": 52,
+              "2024-06-30": 52,
+              "2024-07-31": 52,
+              "2024-08-31": 52,
+              "2024-09-30": 52,
+              "2024-10-31": 52,
+              "2024-11-30": 52,
               "2024-12-31": 52,
-              "2025-12-31": 52
+              "2025-01-31": 52,
+              "2025-02-28": 52,
+              "2025-03-31": 52,
+              "2025-04-30": 52,
+              "2025-05-31": 52,
+              "2025-06-30": 52,
+              "2025-07-31": 52,
+              "2025-08-31": 52,
+              "2025-09-30": 52,
+              "2025-10-31": 52,
+              "2025-11-30": 52,
+              "2025-12-31": 52,
+              "2026-01-31": 52,
+              "2026-02-28": 52,
+              "2026-03-31": 52,
+              "2026-04-30": 52,
+              "2026-05-31": 52,
+              "2026-06-30": 52
             }
           },
           {
             "name": "epic_n_new_popfilter_lyme",
-            "duplicates": 162,
+            "duplicates": 2726,
             "info": {
               "id": "epic_n_new_popfilter_lyme",
               "short_name": "New Lyme disease patients (pop filter)",
@@ -2137,17 +2254,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 33.485577,
-            "sd": 118.092651,
+            "mean": 14.595798,
+            "sd": 46.851288,
             "min": 5,
-            "max": 968
+            "max": 405
           },
           {
             "name": "epic_pct_new_popfilter_lyme",
-            "duplicates": 24,
+            "duplicates": 2002,
             "info": {
               "id": "epic_pct_new_popfilter_lyme",
               "short_name": "New Lyme disease percent of filtered patients",
@@ -2165,17 +2282,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "float",
-            "missing": 0,
-            "mean": 5.760039,
-            "sd": 4.766241,
-            "min": 0.67659,
-            "max": 25
+            "missing": 130,
+            "mean": 8.914766,
+            "sd": 8.81176,
+            "min": 0.806452,
+            "max": 45.454545
           },
           {
             "name": "epic_new_popfilter_lyme_suppressed_flag",
-            "duplicates": 206,
+            "duplicates": 2806,
             "info": {
               "id": "epic_new_popfilter_lyme_suppressed_flag",
               "short_name": "Suppressed flag: new Lyme disease (pop filter)",
@@ -2192,17 +2309,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 0.538462,
-            "sd": 0.499721,
+            "mean": 0.809117,
+            "sd": 0.393067,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_new_popfilter_babesiosis",
-            "duplicates": 192,
+            "duplicates": 2784,
             "info": {
               "id": "epic_n_new_popfilter_babesiosis",
               "short_name": "New babesiosis patients (pop filter)",
@@ -2220,17 +2337,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 8.769231,
-            "sd": 19.907385,
+            "mean": 5.809829,
+            "sd": 5.742623,
             "min": 5,
-            "max": 175
+            "max": 62
           },
           {
             "name": "epic_pct_new_popfilter_babesiosis",
-            "duplicates": 28,
+            "duplicates": 2213,
             "info": {
               "id": "epic_pct_new_popfilter_babesiosis",
               "short_name": "New babesiosis percent of filtered patients",
@@ -2248,17 +2365,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "float",
-            "missing": 0,
-            "mean": 4.012316,
-            "sd": 4.901634,
-            "min": 0.237417,
-            "max": 23.809524
+            "missing": 130,
+            "mean": 8.054156,
+            "sd": 9.248908,
+            "min": 0.424945,
+            "max": 45.454545
           },
           {
             "name": "epic_new_popfilter_babesiosis_suppressed_flag",
-            "duplicates": 206,
+            "duplicates": 2806,
             "info": {
               "id": "epic_new_popfilter_babesiosis_suppressed_flag",
               "short_name": "Suppressed flag: new babesiosis (pop filter)",
@@ -2275,17 +2392,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 0.918269,
-            "sd": 0.274615,
+            "mean": 0.978276,
+            "sd": 0.145806,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_new_popfilter_malaria",
-            "duplicates": 71,
+            "duplicates": 2468,
             "info": {
               "id": "epic_n_new_popfilter_malaria",
               "short_name": "New malaria patients (pop filter)",
@@ -2303,17 +2420,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 307.033654,
-            "sd": 1104.816781,
+            "mean": 112.274929,
+            "sd": 403.97538,
             "min": 5,
-            "max": 8652
+            "max": 3273
           },
           {
             "name": "epic_pct_new_popfilter_malaria",
-            "duplicates": 9,
+            "duplicates": 1081,
             "info": {
               "id": "epic_pct_new_popfilter_malaria",
               "short_name": "New malaria percent of filtered patients",
@@ -2331,17 +2448,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "float",
-            "missing": 0,
-            "mean": 38.091504,
-            "sd": 17.895123,
-            "min": 8.442777,
-            "max": 80.263158
+            "missing": 130,
+            "mean": 33.904325,
+            "sd": 19.120339,
+            "min": 2.95858,
+            "max": 91.666667
           },
           {
             "name": "epic_new_popfilter_malaria_suppressed_flag",
-            "duplicates": 206,
+            "duplicates": 2806,
             "info": {
               "id": "epic_new_popfilter_malaria_suppressed_flag",
               "short_name": "Suppressed flag: new malaria (pop filter)",
@@ -2358,17 +2475,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 0.009615,
-            "sd": 0.097821,
+            "mean": 0.271724,
+            "sd": 0.444927,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_new_popfilter_rmsf",
-            "duplicates": 93,
+            "duplicates": 2485,
             "info": {
               "id": "epic_n_new_popfilter_rmsf",
               "short_name": "New Rocky Mountain spotted fever (RMSF) patients (pop filter)",
@@ -2386,17 +2503,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 258.322115,
-            "sd": 941.703476,
+            "mean": 104.529202,
+            "sd": 380.585385,
             "min": 5,
-            "max": 7071
+            "max": 3184
           },
           {
             "name": "epic_pct_new_popfilter_rmsf",
-            "duplicates": 16,
+            "duplicates": 1188,
             "info": {
               "id": "epic_pct_new_popfilter_rmsf",
               "short_name": "New Rocky Mountain spotted fever (RMSF) percent of filtered patients",
@@ -2414,17 +2531,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "float",
-            "missing": 0,
-            "mean": 27.115978,
-            "sd": 23.724625,
-            "min": 2.283105,
-            "max": 82.519864
+            "missing": 130,
+            "mean": 30.348776,
+            "sd": 24.469052,
+            "min": 1.436782,
+            "max": 89.473684
           },
           {
             "name": "epic_new_popfilter_rmsf_suppressed_flag",
-            "duplicates": 206,
+            "duplicates": 2806,
             "info": {
               "id": "epic_new_popfilter_rmsf_suppressed_flag",
               "short_name": "Suppressed flag: new Rocky Mountain spotted fever (RMSF) (pop filter)",
@@ -2441,17 +2558,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 0.25,
-            "sd": 0.434057,
+            "mean": 0.382479,
+            "sd": 0.486079,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_new_popfilter_west_nile",
-            "duplicates": 95,
+            "duplicates": 2579,
             "info": {
               "id": "epic_n_new_popfilter_west_nile",
               "short_name": "New West Nile virus patients (pop filter)",
@@ -2469,17 +2586,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 150.033654,
-            "sd": 539.549583,
+            "mean": 67.379274,
+            "sd": 240.22736,
             "min": 5,
-            "max": 4347
+            "max": 2232
           },
           {
             "name": "epic_pct_new_popfilter_west_nile",
-            "duplicates": 10,
+            "duplicates": 1060,
             "info": {
               "id": "epic_pct_new_popfilter_west_nile",
               "short_name": "New West Nile virus percent of filtered patients",
@@ -2497,17 +2614,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "float",
-            "missing": 0,
-            "mean": 23.941041,
-            "sd": 20.574663,
-            "min": 2.179177,
-            "max": 81.300813
+            "missing": 130,
+            "mean": 28.147798,
+            "sd": 21.902855,
+            "min": 1.47929,
+            "max": 93.103448
           },
           {
             "name": "epic_new_popfilter_west_nile_suppressed_flag",
-            "duplicates": 206,
+            "duplicates": 2806,
             "info": {
               "id": "epic_new_popfilter_west_nile_suppressed_flag",
               "short_name": "Suppressed flag: new West Nile virus (pop filter)",
@@ -2524,17 +2641,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 0.182692,
-            "sd": 0.387346,
+            "mean": 0.298433,
+            "sd": 0.457652,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_new_popfilter_dengue",
-            "duplicates": 120,
+            "duplicates": 2632,
             "info": {
               "id": "epic_n_new_popfilter_dengue",
               "short_name": "New dengue patients (pop filter)",
@@ -2552,17 +2669,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 105.644231,
-            "sd": 409.461704,
+            "mean": 37.757123,
+            "sd": 138.150781,
             "min": 5,
-            "max": 4025
+            "max": 1334
           },
           {
             "name": "epic_pct_new_popfilter_dengue",
-            "duplicates": 13,
+            "duplicates": 1587,
             "info": {
               "id": "epic_pct_new_popfilter_dengue",
               "short_name": "New dengue percent of filtered patients",
@@ -2580,17 +2697,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "float",
-            "missing": 0,
-            "mean": 12.537418,
-            "sd": 10.126405,
-            "min": 1.138952,
-            "max": 58.823529
+            "missing": 130,
+            "mean": 13.111838,
+            "sd": 9.067667,
+            "min": 1.529052,
+            "max": 64.705882
           },
           {
             "name": "epic_new_popfilter_dengue_suppressed_flag",
-            "duplicates": 206,
+            "duplicates": 2806,
             "info": {
               "id": "epic_new_popfilter_dengue_suppressed_flag",
               "short_name": "Suppressed flag: new dengue (pop filter)",
@@ -2607,17 +2724,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 0.3125,
-            "sd": 0.464631,
+            "mean": 0.581553,
+            "sd": 0.493392,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_new_popfilter_patients",
-            "duplicates": 31,
+            "duplicates": 2218,
             "info": {
               "id": "epic_n_new_popfilter_patients",
               "short_name": "Patients with any new diagnosis (pop filter)",
@@ -2634,17 +2751,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 816.956731,
-            "sd": 2941.531666,
-            "min": 21,
-            "max": 23410
+            "mean": 318.852564,
+            "sd": 1143.049075,
+            "min": 5,
+            "max": 9661
           },
           {
             "name": "epic_n_new_popfilter_patients_suppressed_flag",
-            "duplicates": 207,
+            "duplicates": 2806,
             "info": {
               "id": "epic_n_new_popfilter_patients_suppressed_flag",
               "short_name": "Suppressed flag: pop-filter patients",
@@ -2661,17 +2778,17 @@
                 }
               ]
             },
-            "time_range": [0, 3],
+            "time_range": [0, 53],
             "type": "integer",
             "missing": 0,
-            "mean": 0,
-            "sd": 0,
+            "mean": 0.046296,
+            "sd": 0.210163,
             "min": 0,
-            "max": 0
+            "max": 1
           }
         ]
       },
-      "sha512": "7f44f6eede42436c0902df39057166318a40e640e6eb09686beebb3862a0838d8679f6a6b5ad1343bff103f8c5cc42600f3503b1eb034052a30b184a68982569"
+      "sha512": "baaf661b712701fdb719cda76750476ade1806566a298e278da9f779777bce46fc6d5c388cbe3e6fefd3f6dcc5f0786ec19725052f9571429ec397bf0c423122"
     }
   ],
   "measure_info": {
@@ -4011,6 +4128,9 @@
   },
   "change_report": {
     "data.csv.gz": {
+      "state": "unchanged"
+    },
+    "data_lab_tests.csv.gz": {
       "state": "changed",
       "variables": {
         "geography": {
@@ -4022,99 +4142,178 @@
         "time": {
           "status": "present",
           "same_type": true,
-          "added_levels": [],
+          "added_levels": ["2022-01-31", "2022-02-28", "2022-03-31", "2022-04-30", "2022-05-31", "2022-06-30", "2022-07-31", "2022-08-31", "2022-09-30", "2022-10-31", "2022-11-30", "2023-01-31", "2023-02-28", "2023-03-31", "2023-04-30", "2023-05-31", "2023-06-30", "2023-07-31", "2023-08-31", "2023-09-30", "2023-10-31", "2023-11-30", "2024-01-31", "2024-02-29", "2024-03-31", "2024-04-30", "2024-05-31", "2024-06-30", "2024-07-31", "2024-08-31", "2024-09-30", "2024-10-31", "2024-11-30", "2025-01-31", "2025-02-28", "2025-03-31", "2025-04-30", "2025-05-31", "2025-06-30", "2025-07-31", "2025-08-31", "2025-09-30", "2025-10-31", "2025-11-30", "2026-01-31", "2026-02-28", "2026-03-31", "2026-04-30", "2026-05-31", "2026-06-30", "2026-07-31", "2026-08-31"],
           "dropped_levels": []
         },
-        "epic_n_lyme": {
+        "epic_n_tests_babesiosis": {
           "status": "present",
           "same_type": true
         },
-        "epic_pct_lyme": {
+        "epic_pct_tests_babesiosis": {
           "status": "present",
           "same_type": true
         },
-        "epic_lyme_suppressed_flag": {
+        "epic_tests_babesiosis_suppressed_flag": {
           "status": "present",
           "same_type": true
         },
-        "epic_n_babesiosis": {
+        "epic_n_tests_rmsf": {
           "status": "present",
           "same_type": true
         },
-        "epic_pct_babesiosis": {
+        "epic_pct_tests_rmsf": {
           "status": "present",
           "same_type": true
         },
-        "epic_babesiosis_suppressed_flag": {
+        "epic_tests_rmsf_suppressed_flag": {
           "status": "present",
           "same_type": true
         },
-        "epic_n_malaria": {
+        "epic_n_tests_west_nile": {
           "status": "present",
           "same_type": true
         },
-        "epic_pct_malaria": {
+        "epic_pct_tests_west_nile": {
           "status": "present",
           "same_type": true
         },
-        "epic_malaria_suppressed_flag": {
+        "epic_tests_west_nile_suppressed_flag": {
           "status": "present",
           "same_type": true
         },
-        "epic_n_rmsf": {
+        "epic_n_tests_dengue": {
           "status": "present",
           "same_type": true
         },
-        "epic_pct_rmsf": {
+        "epic_pct_tests_dengue": {
           "status": "present",
           "same_type": true
         },
-        "epic_rmsf_suppressed_flag": {
+        "epic_tests_dengue_suppressed_flag": {
           "status": "present",
           "same_type": true
         },
-        "epic_n_west_nile": {
+        "epic_n_tests_malaria": {
           "status": "present",
           "same_type": true
         },
-        "epic_pct_west_nile": {
+        "epic_pct_tests_malaria": {
           "status": "present",
           "same_type": true
         },
-        "epic_west_nile_suppressed_flag": {
+        "epic_tests_malaria_suppressed_flag": {
           "status": "present",
           "same_type": true
         },
-        "epic_n_dengue": {
+        "epic_n_lab_results": {
           "status": "present",
           "same_type": true
         },
-        "epic_pct_dengue": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_dengue_suppressed_flag": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_patients": {
-          "status": "present",
-          "same_type": true
-        },
-        "epic_n_patients_suppressed_flag": {
+        "epic_n_lab_results_suppressed_flag": {
           "status": "present",
           "same_type": true
         }
       }
     },
-    "data_lab_tests.csv.gz": {
-      "state": "new file"
-    },
     "data_new_cases.csv.gz": {
-      "state": "new file"
+      "state": "unchanged"
     },
     "data_new_cases_pop_filter.csv.gz": {
-      "state": "new file"
+      "state": "changed",
+      "variables": {
+        "geography": {
+          "status": "present",
+          "same_type": true,
+          "added_levels": [],
+          "dropped_levels": []
+        },
+        "time": {
+          "status": "present",
+          "same_type": true,
+          "added_levels": ["2022-01-31", "2022-02-28", "2022-03-31", "2022-04-30", "2022-05-31", "2022-06-30", "2022-07-31", "2022-08-31", "2022-09-30", "2022-10-31", "2022-11-30", "2023-01-31", "2023-02-28", "2023-03-31", "2023-04-30", "2023-05-31", "2023-06-30", "2023-07-31", "2023-08-31", "2023-09-30", "2023-10-31", "2023-11-30", "2024-01-31", "2024-02-29", "2024-03-31", "2024-04-30", "2024-05-31", "2024-06-30", "2024-07-31", "2024-08-31", "2024-09-30", "2024-10-31", "2024-11-30", "2025-01-31", "2025-02-28", "2025-03-31", "2025-04-30", "2025-05-31", "2025-06-30", "2025-07-31", "2025-08-31", "2025-09-30", "2025-10-31", "2025-11-30", "2026-01-31", "2026-02-28", "2026-03-31", "2026-04-30", "2026-05-31", "2026-06-30"],
+          "dropped_levels": []
+        },
+        "epic_n_new_popfilter_lyme": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_pct_new_popfilter_lyme": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_new_popfilter_lyme_suppressed_flag": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_n_new_popfilter_babesiosis": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_pct_new_popfilter_babesiosis": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_new_popfilter_babesiosis_suppressed_flag": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_n_new_popfilter_malaria": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_pct_new_popfilter_malaria": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_new_popfilter_malaria_suppressed_flag": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_n_new_popfilter_rmsf": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_pct_new_popfilter_rmsf": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_new_popfilter_rmsf_suppressed_flag": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_n_new_popfilter_west_nile": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_pct_new_popfilter_west_nile": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_new_popfilter_west_nile_suppressed_flag": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_n_new_popfilter_dengue": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_pct_new_popfilter_dengue": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_new_popfilter_dengue_suppressed_flag": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_n_new_popfilter_patients": {
+          "status": "present",
+          "same_type": true
+        },
+        "epic_n_new_popfilter_patients_suppressed_flag": {
+          "status": "present",
+          "same_type": true
+        }
+      }
     }
   }
 }

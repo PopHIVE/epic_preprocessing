@@ -32,23 +32,19 @@
 #      cannot collide with (1) in a bundle.
 #
 #   3. raw/staging/lab_tests/*.xlsx  -> standard/data_lab_tests.csv.gz
-#      ANNUAL lab component results for each pathogen (babesia, RMSF, West
-#      Nile, dengue, malaria), by state. SlicerDicer session 2862558, "Number
+#      MONTHLY lab component results for each pathogen (babesia, RMSF, West\n#      Nile, dengue, malaria), by state. SlicerDicer session 2863670, "Number
 #      of Lab Component Results and n west nile tests and n babesia and n RMSF
 #      tests and n malaria tests and n dengue tests by State of Residence".
 #        Data model      : Lab Component Results
 #        Population base : All Lab Component Results
 #        Criteria        : Country of Care = United States of America
-#      Time is annual (columns are years, states are rows); time =
-#      YYYY-12-31. The partial current year (e.g. "Jan 1 - Sep 8 2026") is
-#      dropped, like the partial month in the monthly exports.
+#      Time is monthly (columns are measure > year > month, states are rows);\n#      time = last day of month. The trailing partial month ("Sep 1 - Sep 8")\n#      is dropped, as in the other monthly exports.
 #   4. raw/staging/new_cases_pop_filter/*.xlsx
 #                                    -> standard/data_new_cases_pop_filter.csv.gz
-#      ANNUAL new-case counts (Year x State of Residence, no month) for the
-#      same six diseases, but the population itself is filtered: only patients
+#      MONTHLY new-case counts (Year > Month > State, same layout as (1)) for\n#      the same six diseases, but the population itself is filtered: only patients
 #      with a first diagnosis of one of the diseases (ICD-10 based, "Not
 #      Preceded By" the same diagnosis within 6 months), Country of Care = United
-#      States, Has Any Encounters. SlicerDicer session 2863644. "Number of
+#      States, Has Any Encounters. SlicerDicer session 2863672. "Number of
 #      Patients" is therefore the number of patients in that filtered
 #      population, NOT all patients, so percents are shares of patients with a
 #      new vector-borne diagnosis. Columns carry a `new_popfilter_` infix.
@@ -69,9 +65,7 @@
 # Raw layout of the lab export:
 #   1-8   : session metadata
 #   11    : measure labels, only on the first column of each measure group
-#   12    : period of each column (2022, 2023, ..., partial current year)
-#   13    : A: State of Residence
-#   14+   : one row per state, plus "None of the above" and "Total"
+#   12    : year (first column of each year within a measure group)\n#   13    : month of each column (last one is the partial month)\n#   14    : A: State of Residence\n#   15+   : one row per state, plus "None of the above" and "Total"
 #
 # Output (PopHIVE wide format):
 #   index   : geography (FIPS string, "00" = national), time
@@ -532,45 +526,51 @@ if (!identical(process$lab_state, lab_state)) {
   lab_keys <- setdiff(names(LAB_PATTERNS), "n_lab_results")
   grid <- read_epic_grid(lab_state$files[[1]], xlsx_password)
 
-  # Header rows: two-level crosstab. Row 11 holds the measure label (only on
-  # the first column of each group, so it is carried forward), row 12 the
-  # period of each column, row 13 "State of Residence"; states are rows.
+  # Header rows: four-level crosstab, states are rows. Row 11 holds the measure
+  # label (only on the first column of each measure group), row 12 the year
+  # (first column of each year within a group), row 13 the month of each
+  # column, row 14 "State of Residence". Measure and year labels are carried
+  # forward across the columns they span. The trailing partial month (e.g.
+  # "Sep 1 - Sep 8") is dropped.
   dim_label_row <- which(grid[[1]] == "State of Residence")
   if (length(dim_label_row) != 1) {
     stop("Could not find exactly one 'State of Residence' row-label row; export layout changed.")
   }
-  period_row <- dim_label_row - 1L
-  measure_label_row <- dim_label_row - 2L
+  month_row <- dim_label_row - 1L
+  year_row <- dim_label_row - 2L
+  measure_label_row <- dim_label_row - 3L
   data_start <- dim_label_row + 1L
   if (ncol(grid) < 3) stop("Unexpected export width (", ncol(grid), " columns); expected state plus value columns.")
 
   value_col_idx <- 2:ncol(grid)
-  measure_raw <- na_if(trimws(as.character(unlist(grid[measure_label_row, value_col_idx]))), "")
-  if (is.na(measure_raw[[1]])) stop("First value column has no measure label on row ", measure_label_row, "; export layout changed.")
-  # carry the group label across the columns it spans
-  measure_raw <- fill(data.frame(m = measure_raw), m, .direction = "down")$m
-  measure_keys <- match_measure_labels(measure_raw, LAB_PATTERNS)
+  carry <- function(row) {
+    x <- na_if(trimws(as.character(unlist(grid[row, value_col_idx]))), "")
+    if (is.na(x[[1]])) stop("First value column has no label on row ", row, "; export layout changed.")
+    fill(data.frame(v = x), v, .direction = "down")$v
+  }
+  measure_keys <- match_measure_labels(carry(measure_label_row), LAB_PATTERNS)
   missing_measures <- setdiff(names(LAB_PATTERNS), measure_keys)
   if (length(missing_measures) > 0) {
     stop("Expected measure(s) not found in export: ", paste(missing_measures, collapse = ", "))
   }
-
-  # Period labels: a bare 4-digit year is a full calendar year -> YYYY-12-31.
-  # Anything else (e.g. "Jan 1 - Sep 8 2026") is a partial year and is dropped.
-  period_raw <- trimws(as.character(unlist(grid[period_row, value_col_idx])))
-  is_full_year <- grepl("^\\d{4}$", period_raw)
-  if (!any(is_full_year)) stop("No full-year period columns found on row ", period_row, "; export layout changed.")
+  year_raw <- carry(year_row)
+  if (!all(grepl("^\\d{4}$", year_raw))) stop("Unexpected year label(s) on row ", year_row, ": ",
+                                              paste(setdiff(unique(year_raw), grep("^\\d{4}$", year_raw, value = TRUE)), collapse = ", "))
+  month_raw <- trimws(as.character(unlist(grid[month_row, value_col_idx])))
+  is_full_month <- grepl("^[A-Za-z]{3}$", month_raw)
+  if (!any(is_full_month)) stop("No full-month columns found on row ", month_row, "; export layout changed.")
   message(
-    "Dropping ", sum(!is_full_year), " column(s) from partial period(s): ",
-    paste(unique(period_raw[!is_full_year]), collapse = ", ")
+    "Dropping ", sum(!is_full_month), " column(s) from partial period(s): ",
+    paste(unique(month_raw[!is_full_month]), collapse = ", ")
   )
+  month_end <- ceiling_date(as.Date(paste(year_raw, month_raw, "01"), format = "%Y %b %d"), "month") - days(1)
   col_meta <- data.frame(
     col_idx = value_col_idx, measure = measure_keys,
-    time = ifelse(is_full_year, paste0(period_raw, "-12-31"), NA_character_),
+    time = ifelse(is_full_month, format(month_end, "%Y-%m-%d"), NA_character_),
     stringsAsFactors = FALSE
   ) %>% filter(!is.na(time))
   message("Measure columns found: ", paste(unique(measure_keys), collapse = ", "),
-          " | years: ", paste(sort(unique(substr(col_meta$time, 1, 4))), collapse = ", "))
+          " | months: ", min(col_meta$time), " to ", max(col_meta$time))
 
   data_raw <- grid[data_start:nrow(grid), , drop = FALSE]
   colnames(data_raw)[1] <- "state_name"
@@ -613,7 +613,7 @@ if (!identical(process$lab_state, lab_state)) {
            epic_n_lab_results, epic_n_lab_results_suppressed_flag) %>%
     arrange(geography, time)
 
-  validate_wide(data_lab, lab_keys, denom = "epic_n_lab_results", monthly = FALSE)
+  validate_wide(data_lab, lab_keys, denom = "epic_n_lab_results", monthly = TRUE)
   report_monthly(data_lab, lab_keys, "epic_n_lab_results")
 
   # Rename disease columns to the `tests_` infix
@@ -638,85 +638,12 @@ pf_state <- get_staging_state("raw/staging/new_cases_pop_filter", "new-cases pop
 if (!identical(process$new_cases_pop_filter_state, pf_state)) {
   message("== New-cases pop-filter export: ", basename(pf_state$files))
   pf_keys <- setdiff(names(POP_FILTER_PATTERNS), "n_patients")
-  grid <- read_epic_grid(pf_state$files[[1]], xlsx_password)
-
-  # Layout: row 11 measure labels (B: "Measures"), row 12 "Year" / "State of
-  # Residence", then data. Year is a merged cell (filled down); the current
-  # partial year is a range label like "Jan 1 - Jul 28 2026" and is dropped.
-  dim_label_row <- which(trimws(grid[[2]]) == "State of Residence")
-  if (length(dim_label_row) != 1 || !identical(trimws(grid[[1]][[dim_label_row]]), "Year")) {
-    stop("Expected 'Year' / 'State of Residence' row labels in columns A/B; export layout changed.")
-  }
-  measure_label_row <- dim_label_row - 1L
-  data_start <- dim_label_row + 1L
-  value_col_idx <- 3:ncol(grid)
-  measure_keys <- match_measure_labels(
-    trimws(as.character(unlist(grid[measure_label_row, value_col_idx]))), POP_FILTER_PATTERNS
-  )
-  missing_measures <- setdiff(names(POP_FILTER_PATTERNS), measure_keys)
-  if (length(missing_measures) > 0) {
-    stop("Expected measure(s) not found in export: ", paste(missing_measures, collapse = ", "))
-  }
-  col_meta <- data.frame(col_idx = value_col_idx, measure = measure_keys, stringsAsFactors = FALSE)
-
-  data_raw <- grid[data_start:nrow(grid), , drop = FALSE]
-  colnames(data_raw)[1:2] <- c("year", "state_name")
-  colnames(data_raw)[value_col_idx] <- as.character(value_col_idx)
-  data_raw <- data_raw %>%
-    mutate(
-      state_name = na_if(trimws(iconv(state_name, to = "UTF-8", sub = "")), ""),
-      year       = na_if(trimws(iconv(year, to = "UTF-8", sub = "")), "")
-    ) %>%
-    fill(year, .direction = "down") %>%
-    filter(!is.na(state_name))
-
-  is_full_year <- grepl("^\\d{4}$", data_raw$year)
-  if (!any(is_full_year)) stop("No full-year rows found; the year label format probably changed.")
-  if (any(!is_full_year)) {
-    message("Dropping ", sum(!is_full_year), " row(s) from partial period(s): ",
-            paste(unique(data_raw$year[!is_full_year]), collapse = ", "))
-  }
-  data_raw <- data_raw[is_full_year, ]
-  data_raw$time <- paste0(data_raw$year, "-12-31")
-
-  data_raw <- attach_geography(data_raw)
-
-  data_long <- data_raw %>%
-    select(geography, time, all_of(as.character(value_col_idx))) %>%
-    pivot_longer(cols = all_of(as.character(value_col_idx)), names_to = "col_idx", values_to = "raw_value") %>%
-    mutate(col_idx = as.integer(col_idx)) %>%
-    left_join(col_meta, by = "col_idx") %>%
-    select(-col_idx) %>%
-    mutate(
-      suppressed = as.integer(is_suppressed_count(raw_value)),
-      value = unsuppress_count(raw_value)
-    )
-
-  data_pf <- long_to_wide(data_long) %>%
-    rename(epic_n_patients = epic_n_n_patients)
-
-  # Percent of the FILTERED population (patients with a new vector-borne
-  # diagnosis); NA where the denominator was suppressed (see standardize_monthly).
-  for (dz in pf_keys) {
-    data_pf[[paste0("epic_pct_", dz)]] <- if_else(
-      data_pf$epic_n_patients_suppressed_flag == 1L | data_pf$epic_n_patients == 0,
-      NA_real_,
-      data_pf[[paste0("epic_n_", dz)]] / data_pf$epic_n_patients * 100
-    )
-  }
-
-  measure_cols <- unlist(lapply(pf_keys, function(dz) {
-    c(paste0("epic_n_", dz), paste0("epic_pct_", dz), paste0("epic_", dz, "_suppressed_flag"))
-  }))
-  data_pf <- data_pf %>%
-    select(geography, time, all_of(measure_cols),
-           epic_n_patients, epic_n_patients_suppressed_flag) %>%
-    arrange(geography, time)
-
-  validate_wide(data_pf, pf_keys, denom = "epic_n_patients", monthly = FALSE)
+  data_pf <- standardize_monthly(pf_state$files[[1]], POP_FILTER_PATTERNS)
   report_monthly(data_pf, pf_keys, "epic_n_patients")
 
-  # Rename to the `new_popfilter_` infix
+  # Percents here are shares of the FILTERED population (epic_n_patients is the
+  # number of patients with a new diagnosis of any of the six diseases, not all
+  # patients). Rename to the `new_popfilter_` infix.
   for (dz in pf_keys) {
     names(data_pf)[names(data_pf) == paste0("epic_n_", dz)] <- paste0("epic_n_new_popfilter_", dz)
     names(data_pf)[names(data_pf) == paste0("epic_pct_", dz)] <- paste0("epic_pct_new_popfilter_", dz)
