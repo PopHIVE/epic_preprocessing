@@ -1,0 +1,28 @@
+{
+  "name": "cosmos_mental_health",
+  "type": "source",
+  "scripts": [
+    {
+      "path": "ingest.R",
+      "manual": false,
+      "last_run": "2026-08-03 13:58:46",
+      "frequency": 0,
+      "run_time": 0.47,
+      "last_status": {
+        "log": ["", "Attaching package: 'dplyr'", "", "The following objects are masked from 'package:stats':", "", "    filter, lag", "", "The following objects are masked from 'package:base':", "", "    intersect, setdiff, setequal, union", "", "", "Attaching package: 'lubridate'", "", "The following objects are masked from 'package:base':", "", "    date, intersect, setdiff, union", ""],
+        "success": true
+      }
+    }
+  ],
+  "checked": "",
+  "check_results": [],
+  "standalone": false,
+  "standard_state": {
+    "./data/cosmos_mental_health/measure_info.json": "4bb87ee5137768887dac2ddcb48c7aaa",
+    "./data/cosmos_mental_health/standard/data.csv.gz": "66a233b0e1163dc10d9309932af6b98e"
+  },
+  "raw_state": {
+    "files": "raw/staging/ED Encounters_Crosstab_2026-08-03T11_16_04.xlsx",
+    "hashes": "b968f3a31103b7184deb3d73334d7ff3"
+  }
+}
