@@ -5,11 +5,11 @@
     {
       "path": "ingest.R",
       "manual": false,
-      "last_run": "2026-08-03 13:58:46",
+      "last_run": "2026-10-07 13:30:48",
       "frequency": 0,
-      "run_time": 0.47,
+      "run_time": 47.13,
       "last_status": {
-        "log": ["", "Attaching package: 'dplyr'", "", "The following objects are masked from 'package:stats':", "", "    filter, lag", "", "The following objects are masked from 'package:base':", "", "    intersect, setdiff, setequal, union", "", "", "Attaching package: 'lubridate'", "", "The following objects are masked from 'package:base':", "", "    date, intersect, setdiff, union", ""],
+        "log": ["", "Attaching package: 'dplyr'", "", "The following objects are masked from 'package:stats':", "", "    filter, lag", "", "The following objects are masked from 'package:base':", "", "    intersect, setdiff, setequal, union", "", "", "Attaching package: 'lubridate'", "", "The following objects are masked from 'package:base':", "", "    date, intersect, setdiff, union", "", "Reading: behavioral med pct.xlsx", "  5887 rows | measures: median, pct", "Reading: behavioral qs.xlsx", "  5844 rows | measures: q3, q1", "Reading: ED Encounters_Crosstab_2026-10-07T12_25_04.xlsx", "  372 rows x 56 months | measure: count | by age band", "Reading: ED Encounters_Summary_2026-10-07T11_31_13.xlsx", "  1253 rows | measures: q3, q1", "Reading: ED Encounters_Summary_2026-10-07T12_02_47.xlsx", "  12193 rows | measures: pct, median", "Reading: ed med pct.xlsx", "  1297 rows | measures: median, pct", "Reading: mood q1 q3.xlsx", "  11671 rows | measures: q1, q3", "Reading: other all.xlsx", "  5055 rows | measures: q3, q1, median, pct", "Reading: psychosis all.xlsx", "  6200 rows | measures: q3, q1, median, pct", "Reading: psychosis med pct.xlsx", "  6200 rows | measures: median, pct", "Reading: substance abuse all.xlsx", "  9549 rows | measures: q3, q1, median, pct", "Reading: suicide med pct.xlsx", "  13645 rows | measures: median, pct", "Reading: suicide qs.xlsx", "  13628 rows | measures: q3, q1", "Dropping non-state geograph(ies): None of the above, Puerto Rico, Virgin Islands, Armed Forces Africa, Guam, Armed Forces Pacific, American Samoa, South Pacific, Northern Mariana Islands, Federated States of Micronesia, Armed Forces America", "Quartile check: 0 of 51608 triples violate Q1 <= median <= Q3 (0.00%)", "Age-share check: largest sum of age bands within a state-month-diagnosis is 98.8%", "Mental health share of ED encounters, state x month: median 6.63%, IQR 5.93-8.22%", "Age-band counts / state all-ages count (all five bands present): median 0.566", "ED visit counts, national / sum of states: median 1.001, range 1-1.001", "Monthly: 17472 rows x 81 cols | 52 geographies | ages: 0-4, 10-14, 15-19, 20-24, 5-9, Overall | 2022-01-31 to 2026-08-31"],
         "success": true
       }
     }
@@ -18,11 +18,39 @@
   "check_results": [],
   "standalone": false,
   "standard_state": {
-    "./data/cosmos_mental_health/measure_info.json": "4bb87ee5137768887dac2ddcb48c7aaa",
-    "./data/cosmos_mental_health/standard/data.csv.gz": "66a233b0e1163dc10d9309932af6b98e"
+    "./data/cosmos_mental_health/measure_info.json": "5180abc6fac252e41305284436eec257",
+    "./data/cosmos_mental_health/standard/data.csv.gz": "0632756bc058c13255edb4d674020eff"
   },
   "raw_state": {
-    "files": "raw/staging/ED Encounters_Crosstab_2026-08-03T11_16_04.xlsx",
-    "hashes": "b968f3a31103b7184deb3d73334d7ff3"
+    "files": [
+      "raw/staging/behavioral med pct.xlsx",
+      "raw/staging/behavioral qs.xlsx",
+      "raw/staging/ED Encounters_Crosstab_2026-10-07T12_25_04.xlsx",
+      "raw/staging/ED Encounters_Summary_2026-10-07T11_31_13.xlsx",
+      "raw/staging/ED Encounters_Summary_2026-10-07T12_02_47.xlsx",
+      "raw/staging/ed med pct.xlsx",
+      "raw/staging/mood q1 q3.xlsx",
+      "raw/staging/other all.xlsx",
+      "raw/staging/psychosis all.xlsx",
+      "raw/staging/psychosis med pct.xlsx",
+      "raw/staging/substance abuse all.xlsx",
+      "raw/staging/suicide med pct.xlsx",
+      "raw/staging/suicide qs.xlsx"
+    ],
+    "hashes": [
+      "f551310de563eb230da943b1d3f90afe",
+      "b09e82016a1c87478a1e5352e9d471c5",
+      "36d5d5a41905d2b8ae94986ab3c4db05",
+      "821ebb0e9d22fb9259a26f33d38da0f6",
+      "8f7b08c471da43b06076c35bcdae321a",
+      "e3cc67744956fd7b5bb4fea24d5998b7",
+      "52dfc1e17854fc451fcb554d6a9b7227",
+      "fb5d391bdaa2616961b148962dd2572a",
+      "b6dbd3f7981d52997f93aafaebf5da0f",
+      "751380cfa3dbdec27f5c38f221d83c3f",
+      "6522f5470129643621983a6fd59088fc",
+      "044bec9064e27cc14d2a662325e55ea4",
+      "3c856355642b88f2989710d48a60519b"
+    ]
   }
 }

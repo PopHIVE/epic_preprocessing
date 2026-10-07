@@ -1,133 +1,130 @@
 # cosmos_mental_health
 
 Epic Cosmos mental health emergency department burden: monthly ED length-of-stay statistics
-(average, median, standard deviation, minimum, maximum) and diagnosis case mix, by mental
-health diagnosis group, state of residence, and evaluated sex, with an all-cause ED baseline
-for comparison.
+(median and quartiles), diagnosis case mix, and ED visit counts, by mental health diagnosis
+group, state of residence and age band, with an all-cause ED baseline.
 
 This is a dcf data source project, initialized with `dcf::dcf_add_source`.
 
 ## Updating
 
-1. Re-run the SlicerDicer session (Session ID 2846547) in Epic Cosmos and export the
-   crosstab as xlsx. Data model = ED Encounters; population base = All ED Encounters,
-   filtered to Country of Residence: United States of America. Rows = State of Residence /
-   Year / Month; columns = Evaluated Sex (outer) x ED Diagnoses (middle) x Measures (inner),
-   with measures = Average, Variance, Max, Min, Median ED Length of Stay (mins) and
-   Percentage of Sliced Population.
-2. Drop the export into `raw/staging/`, replacing the previous file.
-3. Run the ingest — `ingest.R` reprocesses only when a staging file hash changes.
+All raw data is a set of password-protected SlicerDicer exports in `raw/staging/`, all pulled
+2026-10-07 with data through 2026-08. Re-export a session over the full date range and replace
+its file; `ingest.R` reprocesses only when a file hash changes. Each file's layout is read from
+its own header. All sessions use Data model = ED Encounters, population base = All ED
+Encounters, filtered to **Country of Residence** = United States of America. The ingest
+rejects a Country of Care export (it counts non-US residents treated in the US, ~1.3% more
+visits nationally, and disagrees with the residence sessions in small state cells) and a Sneak
+Peek sample export (~1% of real volume).
 
-Requires two things in the environment:
+- **Flat sessions** (12 files, one per diagnosis and measure set: `behavioral qs.xlsx`,
+  `mood q1 q3.xlsx`, `psychosis all.xlsx`, the `ED Encounters_Summary_*` files, ...): rows are
+  Start Date / End Date / ED Diagnoses / State of Residence / Age at Time of Visit (5-year
+  bands), one column per measure (median, Q1, Q3, Percentage of Sliced Population). Rows are
+  laid out in blocks (national all-cause, national by diagnosis, state by diagnosis, state by
+  diagnosis by age) with no merged cells. Overlapping files (e.g. `psychosis all` and
+  `psychosis med pct`) must agree cell for cell or the ingest stops.
+- **Visit-count crosstab** (`ED Encounters_Crosstab_2026-10-07T12_25_04.xlsx`, session
+  2864470): Number of ED Encounters, rows = State of Residence (plus a `Total` state for the
+  nation) x Age at Time of Visit (five bands and a per-state all-ages `Total` row), columns =
+  Year over Month. The source of every `epic_ed_n_visits` value and the denominators of the
+  case mix. The state is written on its first row only and is carried down.
 
-- `EPIC_XLSX_PASSWORD` in `.Renviron` (see `usethis::edit_r_environ()`) — SlicerDicer
-  exports are password protected.
-- `msoffcrypto-tool` on the Python used by R (`python -m pip install msoffcrypto-tool`),
-  used to decrypt the xlsx.
+The older state x year x month crosstab with Evaluated Sex columns (August 2026) is no longer
+read; the ingest stops with a clear error if one is placed in `raw/staging/`.
 
-`ingest.R` resolves the crosstab layout from the export's own header rows rather than
-hard-coding it. Each level of the column hierarchy is classified by matching its labels
-against the vocabularies at the top of the script, so a session with a different nesting
-order — or one with no Measures level at all, like the earlier single-measure export — parses
-without changes. Unrecognized dimensions, sexes, diagnosis buckets, or measures raise an
-error instead of being silently mapped onto the wrong column; extend `DIM_LABELS` /
-`SEX_LABELS` / `DX_PATTERNS` / `MEASURE_PATTERNS` when the session changes.
+Requires:
+
+- `EPIC_XLSX_PASSWORD` in `.Renviron` (see `usethis::edit_r_environ()`) — exports are
+  password protected.
+- `msoffcrypto-tool` on the Python used by R (`python -m pip install msoffcrypto-tool`).
 
 ## Output
 
-`standard/data.csv.gz`, indexed by `geography` x `time` x `sex` — 9,600 rows, 97 columns.
-`sex` takes `Male`, `Female`, `Ambiguous`, and `Overall`.
+`standard/data.csv.gz`, indexed by `geography` x `time` (month end, `YYYY-MM-DD`) x `age` —
+17,472 rows, 81 columns, 2022-01 through 2026-08. `age` takes `0-4`, `5-9`, `10-14`, `15-19`,
+`20-24`, and `Overall` (all ages). The exports stop at age 25, so the bands do not sum to
+`Overall`. Age bands exist at the state level for every measure, and nationally for
+`epic_ed_n_visits` only. Geographies are the 50 states, DC, and national (`"00"`).
 
-Six statistics, each with one column per diagnosis bucket and a per-column suppression flag:
-
-| Column family | Statistic | Notes |
-|---------------|-----------|-------|
-| `epic_ed_los_avg_*` | Average minutes | Right-skewed by boarders |
-| `epic_ed_los_median_*` | Median minutes | **Most robust — recommended default** |
-| `epic_ed_los_sd_*` | SD in minutes | Square root of the source's variance field |
-| `epic_ed_los_min_*` | Shortest stay | Unreliable, see below |
-| `epic_ed_los_max_*` | Longest stay | Unreliable, see below |
-| `epic_ed_pct_visits_*` | Percent of ED encounters | Derived, see below |
+| Column family | Statistic | Where populated |
+|---------------|-----------|-----------------|
+| `epic_ed_los_median_*` | Median ED length of stay, minutes. **Recommended default** | All geographies, ages |
+| `epic_ed_los_q1_*`, `epic_ed_los_q3_*` | 25th / 75th percentile, minutes | As median |
+| `epic_ed_pct_visits_*` | Percent of ED encounters with the diagnosis (case mix) | National and state, all ages; state age bands |
+| `epic_ed_pct_age_*` | Percent of the state's diagnosis encounters in the age band | State, age-band rows only |
+| `epic_ed_n_visits` | Number of ED visits, all causes | National and state, every age row |
 
 Diagnosis suffixes: `suicidal_behavior`, `mood`, `behavioral`, `substance_use`, `psychosis`,
-`eating_disorders`, `other`, `all_cause`. `epic_ed_pct_visits_*` omits `all_cause` (100% by
-construction), giving 5x8 + 7 = 47 measure columns and 47 flags.
+`eating_disorders`, `other`, `all_cause`. `all_cause` (every ED encounter, including
+non-mental-health) is published for median/Q1/Q3 nationally for all ages only, and is the
+baseline to normalize against. `epic_ed_pct_visits_*` and `epic_ed_pct_age_*` omit it.
+Every column has a `_suppressed_flag`; see Notes.
 
 ## Notes
 
+- **State `epic_ed_pct_visits_*` is derived**, because the source's "Percentage of Sliced
+  Population" means a different thing in each block: national diagnosis row = diagnosis share
+  of all ED encounters (`nat`, read directly for the national row); state row = the state's
+  share of the national diagnosis volume (`r`); age-band row = the band's share of the state's
+  diagnosis encounters (`pa`). With `N` an encounter count, using `epic_ed_n_visits`:
+
+  ```
+  N(state, dx)       = r * nat * N(nation, all)
+  case mix, all ages = N(state, dx) / N(state, all)
+  case mix, age band = pa * N(state, dx) / N(state, age band, all)
+  ```
+
+  Checked against the August derivation (state x sex crosstab, now retired): the median state
+  ratio is 0.99-1.00 for six of seven diagnoses, with p10-p90 about 0.94-1.07, and the seven
+  buckets sum to a median 6.6% of state ED encounters (6.1% before). Eating disorders run ~10%
+  below the old values because the old export pinned the national share at 0.01 whereas the
+  new ones resolve 0.008-0.010. Source percentages carry about three significant digits, so
+  rare buckets (eating disorders at ~0.01% nationally) carry large relative rounding error. The
+  buckets are not mutually exclusive, so they need not sum to a total.
+
 - **`*_all_cause` is all-cause, not a mental health total.** It is the total row of the ED
   Diagnoses grouper, which includes the non-mental-health diagnoses that are not displayed as
-  their own columns. Nationally the average runs ~300 minutes against ~450-1000 for the mental
-  health buckets, which could not hold for a mental-health-only total. Use it as the baseline
-  to normalize against when comparing geographies or months with differing ED throughput.
+  their own columns. Use it as the baseline when comparing geographies or months.
 
-- **`epic_ed_pct_visits_*` is derived, not a source column.** The source's "Percentage of
-  Sliced Population" field has a denominator that depends on the cell's position in the
-  crosstab — within a sex group it is that sex's share of the geography's encounters for the
-  diagnosis; on the all-sex row it is the geography's share of national encounters for the
-  diagnosis; on the national all-sex row it is the diagnosis's share of all encounters. All
-  three readings were confirmed against the export (sex shares sum to 100 within a
-  state-month-diagnosis, state shares sum to 100 within a month-diagnosis, and the national
-  row reproduces the diagnosis mix). Because they are three different quantities the raw field
-  is not publishable as one column, so it is rescaled onto a single definition: the percent of
-  ED encounters in that geography, month and sex stratum carrying the diagnosis. See section 5
-  of `ingest.R` for the algebra. Two independent checks support it — the national mix read
-  directly off the export equals the median of the separately derived state shares, and the
-  seven mental health buckets sum to a median 6.1% of ED encounters (IQR 5.2-7.5%), matching
-  published estimates. Caveats: source percentages are rounded to two decimals, so rare
-  buckets (eating disorders sits at the 0.01% national floor) carry large relative rounding
-  error, and the buckets are not guaranteed mutually exclusive so they need not sum to a total.
+- **`epic_ed_n_visits`**: on `Overall` rows it is all-ages ED encounters for the state or the
+  nation (the nation matches the sum of states to within 0.1%); on age-band rows it is that
+  band's count, about 57% of the total in sum. Counts of 10 or fewer are imputed as 5 with the
+  flag set to 1 (the value is kept).
 
-- **Nothing is dropped or altered.** Every value the source published is carried through as
-  published, including implausible ones. The only transformation applied to a value is the
-  variance being emitted as its square root (`_sd`), so it is on the same scale in minutes as
-  the other statistics. Consequently **length-of-stay columns can be negative**, and any
-  consumer that needs a non-negative duration must filter for it explicitly.
+- **Suppression and flags.** Epic suppresses cells built on 10 or fewer encounters, and omits
+  those rows from the exports entirely, so an absent state-month-age row can be suppression or
+  simply not returned. Length-of-stay and percentage statistics are not counts and cannot be
+  imputed: the value is left `NA`. The flag is `1` for a missing value inside the months a
+  column's exports cover, `0` where published, and `NA` where the column is not reported for
+  that row at all (not a stratum it describes: for example `epic_ed_pct_age_*` on `Overall`
+  rows). For derived `epic_ed_pct_visits_*` the flag is 1 when an input was suppressed.
 
-- **`min` and `max` are unreliable and published only for completeness.** Both are extremes of
-  a distribution contaminated by corrupted arrival/departure timestamps. About 17% of the
-  reported minima are negative — not a possible elapsed time — and many others are 0. Roughly a
-  third of the maxima exceed seven days and the largest exceed two years; no arithmetic test
-  separates those from genuine extended boarding. Use `median` (and `avg`) for anything
-  interpretive. `avg` carries four negative cells; `median`, `sd` and `max` carry none.
+- **Coverage gaps.** Suicidal behavior starts 2022-07. Some states are absent from a given
+  diagnosis's export throughout (for example no DC, South Dakota or Wisconsin for behavioral),
+  and about 31 states have eating-disorder data. Puerto Rico, other territories, Canadian
+  provinces, Mexican states and `None of the above` (unknown state) are dropped:
+  `resources/all_fips.csv.gz` has no name for them.
 
-- **Suppression is per measure**, so every measure carries its own `<measure>_suppressed_flag`.
-  Epic suppresses a cell built on 10 or fewer encounters by blanking it. Unlike the count
-  measures elsewhere in this repository, none of these statistics can be imputed — there is no
-  published denominator to impute a numerator against — so the value is left `NA` and only the
-  flag is set. Suppression is heavy in the sparser buckets: ~83% of cells for eating disorders,
-  ~47% for behavioral, against ~0% for all-cause. Check the flag before comparing geographies.
+- **Quartile ordering holds**: `Q1 <= median <= Q3` in every one of the 51,608 published
+  triples. Length of stay runs to ED **departure**, so it includes boarding time for patients
+  awaiting an inpatient or psychiatric bed; that is the main reason mental health stays run
+  several times the all-cause median, and it makes these measures boarding indicators as much
+  as throughput ones.
 
-- **`NA` and flag `1` coincide exactly**, since nothing is dropped: the flag is equivalent to
-  `is.na()` on the measure and exists so the reason for the gap is explicit in the file.
+- **Removed in the October rebuild** (all came only from the retired August crosstab): average,
+  standard deviation, minimum and maximum length of stay, and the Male/Female/Ambiguous strata
+  (and the `sex` column). Medians in the two pulls differed (about a minute nationally, up to
+  ~450 minutes in small state cells) because the source refreshes between pulls, so values here
+  will not match the earlier file. Retrieve the old version from git history (commit 6d7494e)
+  if needed.
 
 - **`ingest.R` validates rather than cleans.** It hard-fails on structural problems — duplicate
-  index rows, missing expected columns, missingness disagreeing with the flag, sex shares that
-  stop summing to 100, a derived mental health share outside 1–25%, or `min <= median <= max`
-  failing in more than 1% of triples (a layout-misread tripwire; it currently fails in 0 of
-  57,365). Implausible individual values are reported in the run log, never silently fixed.
-
-- Incomplete leading/trailing periods (e.g. `Jul 1 - Jul 22`) average over only part of a
-  month and are dropped, so the series runs on whole months: 2022-07 through 2026-06.
-
-- **South Dakota and Wisconsin are absent from the 2026-08-03 export** and so from the output,
-  which covers 48 states, DC, and national (`"00"`). The 2026-07-31 export had all 50 states,
-  so this is a gap in the SlicerDicer session's state selection rather than a parsing failure
-  — worth fixing on the next export.
-
-- Territories (Puerto Rico, Virgin Islands, Guam, American Samoa, Northern Mariana Islands,
-  Marshall Islands, Micronesia), Armed Forces regions, one foreign state (Michoacán), and
-  `None of the above` (unknown state of residence) are dropped: `resources/all_fips.csv.gz`
-  carries no `geography_name` for those codes.
-
-- `None of the above` evaluated sex is dropped from the output — it is populated in under 1% of
-  cells — but is read first, because the sex shares are used to validate the percentage field's
-  semantics on every run. If those shares stop summing to 100 the ingest fails loudly rather
-  than emitting a silently wrong `epic_ed_pct_visits_*`.
-
-- Length of stay runs to ED **departure**, so it includes boarding time for patients awaiting an
-  inpatient or psychiatric bed. That is the main reason mental health stays run several times the
-  all-cause average, and it makes these measures boarding indicators as much as throughput ones.
+  index rows, a value and its flag disagreeing, overlapping exports that disagree, unrecognized
+  diagnosis/age/measure labels, percentages outside 0-100, age bands summing past 100, `Q1 <=
+  median <= Q3` failing in more than 1% of cells, state age-band counts exceeding the state
+  total, a median mental health share outside 1-25%, or the national visit count straying from
+  the sum of the states.
 
 You can use the `dcf` package to check the project:
 
