@@ -399,6 +399,36 @@ build_standard_table <- function(data_long, suffix) {
 
 weekly_standard <- build_standard_table(weekly_long, "weekly")
 
+# ED visits are the only export refreshed routinely, so they are written to
+# their own file (standard/data_weekly_ed.csv.gz) and never wait on the
+# all-encounters or cyclospora exports below.
+weekly_standard_ed <- weekly_standard %>%
+  rename(
+    epic_n_ed_diarrhea = epic_n_diarrhea,
+    epic_n_ed_vomiting = epic_n_vomiting,
+    epic_n_ed_encounters_weekly = epic_n_all_encounters_weekly,
+    epic_pct_ed_diarrhea = epic_pct_diarrhea,
+    epic_pct_ed_vomiting = epic_pct_vomiting,
+    epic_suppressed_flag_ed_diarrhea = epic_suppressed_flag_diarrhea,
+    epic_suppressed_flag_ed_vomiting = epic_suppressed_flag_vomiting,
+    epic_suppressed_flag_ed_encounters_weekly = epic_suppressed_flag_all_encounters_weekly
+  ) %>%
+  select(
+    geography, age, time,
+    epic_n_ed_diarrhea, epic_n_ed_vomiting, epic_n_ed_encounters_weekly,
+    epic_pct_ed_diarrhea, epic_pct_ed_vomiting,
+    epic_suppressed_flag_ed_diarrhea, epic_suppressed_flag_ed_vomiting,
+    epic_suppressed_flag_ed_encounters_weekly
+  ) %>%
+  arrange(geography, age, time)
+
+vroom::vroom_write(weekly_standard_ed, "standard/data_weekly_ed.csv.gz", ",")
+
+# The non-ED exports (all-encounters by age, cyclospora tests) are no longer
+# updated. Set UPDATE_NON_ED <- TRUE to reprocess them from their raw folders
+# and rewrite standard/data_weekly.csv.gz and standard/weekly_tests.csv.gz.
+UPDATE_NON_ED <- FALSE
+
 # =============================================================================
 # 2b. Process the state x age x week "all encounters" (non-ED) diarrhea
 #     crosstab and merge it with the ED weekly measure into one standard file,
@@ -502,46 +532,22 @@ build_all_encounters_weekly_table <- function(data_long) {
     )
 }
 
-all_encounters_weekly_files <- list.files(
-  "raw/staging_diarrhea_all_encounters_weekly_wide", "\\.xlsx$", full.names = TRUE
-)
-all_encounters_weekly_results <- lapply(
-  all_encounters_weekly_files, process_diarrhea_all_encounters_weekly_wide, password = xlsx_password
-)
-write_metadata_json(all_encounters_weekly_results, "raw/staging_diarrhea_all_encounters_weekly_wide.json")
+if (UPDATE_NON_ED) {
+  all_encounters_weekly_files <- list.files(
+    "raw/staging_diarrhea_all_encounters_weekly_wide", "\\.xlsx$", full.names = TRUE
+  )
+  all_encounters_weekly_results <- lapply(
+    all_encounters_weekly_files, process_diarrhea_all_encounters_weekly_wide, password = xlsx_password
+  )
+  write_metadata_json(all_encounters_weekly_results, "raw/staging_diarrhea_all_encounters_weekly_wide.json")
 
-all_encounters_weekly_long <- standardize_all_encounters_geo(
-  bind_rows(lapply(all_encounters_weekly_results, `[[`, "data"))
-)
-all_encounters_weekly_standard <- build_all_encounters_weekly_table(all_encounters_weekly_long)
+  all_encounters_weekly_long <- standardize_all_encounters_geo(
+    bind_rows(lapply(all_encounters_weekly_results, `[[`, "data"))
+  )
+  all_encounters_weekly_standard <- build_all_encounters_weekly_table(all_encounters_weekly_long)
 
-weekly_standard_ed <- weekly_standard %>%
-  rename(
-    epic_n_ed_diarrhea = epic_n_diarrhea,
-    epic_n_ed_vomiting = epic_n_vomiting,
-    epic_n_ed_encounters_weekly = epic_n_all_encounters_weekly,
-    epic_pct_ed_diarrhea = epic_pct_diarrhea,
-    epic_pct_ed_vomiting = epic_pct_vomiting,
-    epic_suppressed_flag_ed_diarrhea = epic_suppressed_flag_diarrhea,
-    epic_suppressed_flag_ed_vomiting = epic_suppressed_flag_vomiting,
-    epic_suppressed_flag_ed_encounters_weekly = epic_suppressed_flag_all_encounters_weekly
-  ) %>%
-  select(
-    geography, age, time,
-    epic_n_ed_diarrhea, epic_n_ed_vomiting, epic_n_ed_encounters_weekly,
-    epic_pct_ed_diarrhea, epic_pct_ed_vomiting,
-    epic_suppressed_flag_ed_diarrhea, epic_suppressed_flag_ed_vomiting,
-    epic_suppressed_flag_ed_encounters_weekly
-  ) %>%
-  arrange(geography, age, time)
-
-data_weekly <- full_join(
-  weekly_standard_ed, all_encounters_weekly_standard,
-  by = c("geography", "age", "time")
-) %>%
-  arrange(geography, age, time)
-
-vroom::vroom_write(data_weekly, "standard/data_weekly.csv.gz", ",")
+  vroom::vroom_write(all_encounters_weekly_standard, "standard/data_weekly.csv.gz", ",")
+}
 
 standardize_measure_geo <- function(data_long) {
   map_state_to_geography(data_long) %>%
@@ -620,37 +626,41 @@ build_weekly_tests_table <- function(data_long) {
     )
 }
 
-cyclospora_weekly_files <- list.files("raw/staging_cyclospora_weekly_wide", "\\.xlsx$", full.names = TRUE)
-cyclospora_weekly_results <- lapply(cyclospora_weekly_files, process_cyclospora_weekly_wide, password = xlsx_password)
-write_metadata_json(cyclospora_weekly_results, "raw/staging_cyclospora_weekly_wide.json")
+if (UPDATE_NON_ED) {
+  cyclospora_weekly_files <- list.files("raw/staging_cyclospora_weekly_wide", "\\.xlsx$", full.names = TRUE)
+  cyclospora_weekly_results <- lapply(cyclospora_weekly_files, process_cyclospora_weekly_wide, password = xlsx_password)
+  write_metadata_json(cyclospora_weekly_results, "raw/staging_cyclospora_weekly_wide.json")
 
-# All-ages diarrhea/total-encounters rows already computed in section 2b --
-# reused here instead of parsing a duplicate by-state-only crosstab.
-all_encounters_total_age_long <- all_encounters_weekly_long %>%
-  filter(age == "Total") %>%
-  select(geography, measure = outcome, time, value, suppressed)
+  # All-ages diarrhea/total-encounters rows already computed in section 2b --
+  # reused here instead of parsing a duplicate by-state-only crosstab.
+  all_encounters_total_age_long <- all_encounters_weekly_long %>%
+    filter(age == "Total") %>%
+    select(geography, measure = outcome, time, value, suppressed)
 
-weekly_tests_long <- bind_rows(
-  all_encounters_total_age_long,
-  standardize_measure_geo(bind_rows(lapply(cyclospora_weekly_results, `[[`, "data")))
-)
-weekly_tests_standard <- build_weekly_tests_table(weekly_tests_long)
+  weekly_tests_long <- bind_rows(
+    all_encounters_total_age_long,
+    standardize_measure_geo(bind_rows(lapply(cyclospora_weekly_results, `[[`, "data")))
+  )
+  weekly_tests_standard <- build_weekly_tests_table(weekly_tests_long)
 
-vroom::vroom_write(weekly_tests_standard, "standard/weekly_tests.csv.gz", ",")
+  vroom::vroom_write(weekly_tests_standard, "standard/weekly_tests.csv.gz", ",")
+}
 
 # =============================================================================
 # 4. Record processed state
 # =============================================================================
 
 process <- dcf::dcf_process_record()
-process$vintages <- list(
-  data_weekly.csv.gz = list(
-    ed = wide_results[[1]]$metadata[["Date of Export"]],
+process$vintages$data_weekly_ed.csv.gz <- list(
+  ed = wide_results[[1]]$metadata[["Date of Export"]]
+)
+if (UPDATE_NON_ED) {
+  process$vintages$data_weekly.csv.gz <- list(
     all_encounters = all_encounters_weekly_results[[1]]$metadata[["Date of Export"]]
-  ),
-  weekly_tests.csv.gz = list(
+  )
+  process$vintages$weekly_tests.csv.gz <- list(
     all_encounters = all_encounters_weekly_results[[1]]$metadata[["Date of Export"]],
     cyclospora = cyclospora_weekly_results[[1]]$metadata[["Date of Export"]]
   )
-)
+}
 dcf::dcf_process_record(updated = process)

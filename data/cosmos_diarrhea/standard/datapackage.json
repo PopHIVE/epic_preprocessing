@@ -5,13 +5,14 @@
   "resources": [
     {
       "bytes": 3218203,
-      "encoding": "ISO-8859-1",
+      "encoding": "windows-1252",
       "md5": "355f6dd4461a7b3f73bf00b8370af396",
       "format": "csv",
       "name": "data_weekly.csv",
       "filename": "data_weekly.csv.gz",
       "versions": {
         "hash": [
+          "4c5d3e4c7447e37eda1fb72715dd6564b7fc3882",
           "a4233472316926bf879d374f0b530625f331fe54",
           "ab63c6d21a9fb5ae200a45f1c1e9032569f16689",
           "7d74256f7e0e4e9104e6813c6737629dc7c1ab5e",
@@ -21,6 +22,7 @@
           "15a07a619687a62c78228d58874d935b8e2f4baa"
         ],
         "author": [
+          "Callie Annas <callie.annas@yale.edu>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
@@ -30,6 +32,7 @@
           "anshap32 <73296024+anshap32@users.noreply.github.com>"
         ],
         "date": [
+          "Fri Sep 25 13:55:31 2026 -0400",
           "Fri Sep 4 13:31:40 2026 -0400",
           "Tue Aug 18 08:30:59 2026 -0400",
           "Thu Aug 13 08:56:41 2026 -0400",
@@ -39,6 +42,7 @@
           "Fri Jul 17 08:56:35 2026 -0400"
         ],
         "message": [
+          "Updating diarrhea data",
           "update epic correct dates",
           "added vomiting",
           "updated cyclo new data",
@@ -58,8 +62,8 @@
       "id_length": 2,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-09-25 14:55:08.675255",
-      "last_modified": "2026-09-25 14:55:08.675255",
+      "created": "2026-08-17 16:12:55.371017",
+      "last_modified": "2026-10-08 13:11:30.480137",
       "vintage": ["9/25/2026", "9/25/2026"],
       "row_count": 78183,
       "entity_count": 51,
@@ -1040,7 +1044,8 @@
             "Infectious disease"
           ],
           "files": {
-            "data_weekly.csv.gz": "Enterics related health care encounters counts by age",
+            "data_weekly_ed.csv.gz": "Emergency department visits for diarrhea and vomiting by age",
+            "data_weekly.csv.gz": "All-encounters (any setting) diarrhea counts by age",
             "weekly_tests.csv.gz": "State-level cyclospora testing counts"
           },
           "id": "_catalog"
@@ -1050,13 +1055,15 @@
     },
     {
       "bytes": 384728,
-      "encoding": "ISO-8859-1",
-      "md5": "5e429631d4ec738b461e6e0fdaecee25",
+      "encoding": "windows-1252",
+      "md5": "ef8b1f177f66637eac06b1d59a1031d2",
       "format": "csv",
       "name": "weekly_tests.csv",
       "filename": "weekly_tests.csv.gz",
       "versions": {
         "hash": [
+          "1c3896f5f600c6461fbd2816d879c325f558264f",
+          "4c5d3e4c7447e37eda1fb72715dd6564b7fc3882",
           "a4233472316926bf879d374f0b530625f331fe54",
           "7d74256f7e0e4e9104e6813c6737629dc7c1ab5e",
           "4c7250aa72dbb973edf99243e96a86076d24f819",
@@ -1065,6 +1072,8 @@
           "50d2122ae8cea711298d27cb8388e87b942de019"
         ],
         "author": [
+          "Callie Annas <callie.annas@yale.edu>",
+          "Callie Annas <callie.annas@yale.edu>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
@@ -1073,6 +1082,8 @@
           "anshap32 <73296024+anshap32@users.noreply.github.com>"
         ],
         "date": [
+          "Fri Sep 25 15:02:14 2026 -0400",
+          "Fri Sep 25 13:55:31 2026 -0400",
           "Fri Sep 4 13:31:40 2026 -0400",
           "Thu Aug 13 08:56:41 2026 -0400",
           "Fri Jul 31 08:26:28 2026 -0400",
@@ -1081,6 +1092,8 @@
           "Thu Jul 16 11:36:52 2026 -0400"
         ],
         "message": [
+          "Updating cyclo data",
+          "Updating diarrhea data",
           "update epic correct dates",
           "updated cyclo new data",
           "added latest data",
@@ -1099,8 +1112,8 @@
       "id_length": 2,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-09-25 14:55:09.597658",
-      "last_modified": "2026-09-25 14:55:09.597658",
+      "created": "2026-08-17 16:12:55.371017",
+      "last_modified": "2026-10-08 13:29:59.242481",
       "vintage": ["9/25/2026", "9/25/2026"],
       "row_count": 11169,
       "entity_count": 51,
@@ -1999,13 +2012,14 @@
             "Infectious disease"
           ],
           "files": {
-            "data_weekly.csv.gz": "Enterics related health care encounters counts by age",
+            "data_weekly_ed.csv.gz": "Emergency department visits for diarrhea and vomiting by age",
+            "data_weekly.csv.gz": "All-encounters (any setting) diarrhea counts by age",
             "weekly_tests.csv.gz": "State-level cyclospora testing counts"
           },
           "id": "_catalog"
         }
       },
-      "sha512": "9ee25c51c3993928996b300d164cf648502b87ad243467380d07954740b648459e64830342709ba415ae27b3cdfbdbf4780360578e227c7e29548fe9c8de3ba5"
+      "sha512": "5c5dd05c7160c59de8d3023c0803bbe92de05596e16f1fae6850cf79f375abdaa15f05498ac8aec1a3cc60e4d1cefee103927c0a7f8b2dcae04ccf8e956d1f8b"
     }
   ],
   "change_report": {

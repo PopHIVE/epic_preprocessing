@@ -263,7 +263,8 @@
       "Infectious disease"
     ],
     "files": {
-      "data_weekly.csv.gz": "Enterics related health care encounters counts by age",
+      "data_weekly_ed.csv.gz": "Emergency department visits for diarrhea and vomiting by age",
+      "data_weekly.csv.gz": "All-encounters (any setting) diarrhea counts by age",
       "weekly_tests.csv.gz": "State-level cyclospora testing counts"
     }
   }
