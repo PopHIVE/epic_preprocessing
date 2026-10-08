@@ -399,9 +399,8 @@ build_standard_table <- function(data_long, suffix) {
 
 weekly_standard <- build_standard_table(weekly_long, "weekly")
 
-# ED visits are the only export refreshed routinely, so they are written to
-# their own file (standard/data_weekly_ed.csv.gz) and never wait on the
-# all-encounters or cyclospora exports below.
+# ED visits are the only export refreshed routinely, so they never wait on the
+# all-encounters or cyclospora exports below (see UPDATE_NON_ED).
 weekly_standard_ed <- weekly_standard %>%
   rename(
     epic_n_ed_diarrhea = epic_n_diarrhea,
@@ -422,11 +421,11 @@ weekly_standard_ed <- weekly_standard %>%
   ) %>%
   arrange(geography, age, time)
 
-vroom::vroom_write(weekly_standard_ed, "standard/data_weekly_ed.csv.gz", ",")
-
 # The non-ED exports (all-encounters by age, cyclospora tests) are no longer
-# updated. Set UPDATE_NON_ED <- TRUE to reprocess them from their raw folders
-# and rewrite standard/data_weekly.csv.gz and standard/weekly_tests.csv.gz.
+# updated. Set UPDATE_NON_ED <- TRUE to reprocess them from their raw folders.
+# Otherwise standard/data_weekly.csv.gz keeps its existing all-encounters
+# columns and only the ED columns are refreshed; weekly_tests.csv.gz is left
+# as is.
 UPDATE_NON_ED <- FALSE
 
 # =============================================================================
@@ -546,8 +545,24 @@ if (UPDATE_NON_ED) {
   )
   all_encounters_weekly_standard <- build_all_encounters_weekly_table(all_encounters_weekly_long)
 
-  vroom::vroom_write(all_encounters_weekly_standard, "standard/data_weekly.csv.gz", ",")
 }
+
+if (!UPDATE_NON_ED) {
+  # Carry the frozen all-encounters columns forward from the existing file.
+  all_encounters_weekly_standard <- vroom::vroom(
+    "standard/data_weekly.csv.gz", show_col_types = FALSE,
+    col_types = vroom::cols(geography = "c", age = "c", time = "D")
+  ) %>%
+    select(geography, age, time, contains("all_diarrhea"), contains("encounters_total_weekly"))
+}
+
+data_weekly <- full_join(
+  weekly_standard_ed, all_encounters_weekly_standard,
+  by = c("geography", "age", "time")
+) %>%
+  arrange(geography, age, time)
+
+vroom::vroom_write(data_weekly, "standard/data_weekly.csv.gz", ",")
 
 standardize_measure_geo <- function(data_long) {
   map_state_to_geography(data_long) %>%
@@ -651,13 +666,10 @@ if (UPDATE_NON_ED) {
 # =============================================================================
 
 process <- dcf::dcf_process_record()
-process$vintages$data_weekly_ed.csv.gz <- list(
-  ed = wide_results[[1]]$metadata[["Date of Export"]]
-)
+process$vintages$data_weekly.csv.gz$ed <- wide_results[[1]]$metadata[["Date of Export"]]
 if (UPDATE_NON_ED) {
-  process$vintages$data_weekly.csv.gz <- list(
-    all_encounters = all_encounters_weekly_results[[1]]$metadata[["Date of Export"]]
-  )
+  process$vintages$data_weekly.csv.gz$all_encounters <-
+    all_encounters_weekly_results[[1]]$metadata[["Date of Export"]]
   process$vintages$weekly_tests.csv.gz <- list(
     all_encounters = all_encounters_weekly_results[[1]]$metadata[["Date of Export"]],
     cyclospora = cyclospora_weekly_results[[1]]$metadata[["Date of Export"]]

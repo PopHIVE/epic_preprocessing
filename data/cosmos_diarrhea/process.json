@@ -25,6 +25,9 @@
     "weekly_tests.csv.gz": {
       "all_encounters": "9/25/2026",
       "cyclospora": "9/25/2026"
+    },
+    "data_weekly_ed.csv.gz": {
+      "ed": "10/8/2026"
     }
   },
   "standard_state": {
