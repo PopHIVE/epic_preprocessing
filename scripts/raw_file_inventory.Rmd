@@ -1,0 +1,433 @@
+---
+title: "Epic Cosmos Raw File Inventory"
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output:
+  html_document:
+    df_print: kable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir = normalizePath(".."))
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r libs}
+library(dplyr)
+library(tidyr)
+library(purrr)
+library(stringr)
+library(knitr)
+library(dcf)
+```
+
+```{r ast-helpers}
+# ============================================================================
+# Generic AST-walking helpers, shared by the lineage engine below.
+# ============================================================================
+
+# A call with a trailing comma (e.g. `mutate(x = 1, )`) parses to a call
+# whose last argument slot holds R's internal "missing argument" marker.
+# Touching that value in almost any way -- even just assigning it, or
+# passing it to another function -- raises "argument is missing, with no
+# default" as soon as it's forced. as.list()ing the call is safe; what's
+# NOT safe is looping over the result with `for (a in ...)` or recursing
+# into an element without checking first. This drops any such slot before
+# the caller ever touches it.
+safe_args <- function(x) {
+  lst <- as.list(x)
+  if (length(lst) <= 1) return(lst[0])
+  rest <- lst[-1]
+  keep <- vapply(seq_along(rest), function(j) {
+    tryCatch({ force(rest[[j]]); TRUE }, error = function(e) FALSE)
+  }, logical(1))
+  rest[keep]
+}
+
+find_calls <- function(e) {
+  out <- list()
+  rec <- function(x) {
+    ok <- tryCatch({ force(x); TRUE }, error = function(e) FALSE)
+    if (!ok) return(invisible(NULL))
+    if (is.call(x)) {
+      out[[length(out) + 1]] <<- x
+      for (a in safe_args(x)) rec(a)
+    }
+  }
+  rec(e)
+  out
+}
+
+# Descend into `{ ... }` blocks and both branches of `if` so that statements
+# nested inside them are analyzed just like top-level ones (dcf's caching
+# pattern is `if (!identical(old_state, new_state)) { ...write... }`).
+flatten_stmts <- function(e) {
+  if (is.call(e) && identical(e[[1]], as.name("{"))) {
+    return(unlist(lapply(safe_args(e), flatten_stmts), recursive = FALSE))
+  }
+  if (is.call(e) && identical(e[[1]], as.name("if"))) {
+    branches <- safe_args(e)[-1]
+    return(unlist(lapply(branches, flatten_stmts), recursive = FALSE))
+  }
+  list(e)
+}
+
+normalize_key <- function(p) sub("^\\./", "", gsub("\\\\", "/", p))
+
+# Dummy definitions used only so match.call() can bind a real call's
+# arguments (named or positional) to consistent formal names, regardless of
+# whether the call in the script used `vroom::vroom(...)`, `read.csv(...)`,
+# etc. -- match.call() matches against `definition`'s formals, not whatever
+# function the call itself names.
+.dummy_list_files <- function(path, pattern = NULL, full.names = FALSE, recursive = FALSE, ...) NULL
+.dummy_read_file   <- function(file, ...) NULL
+.dummy_dcf_staging <- function(staging_dir = "raw/staging", out_dir = "raw", verbose = TRUE,
+                                 cleanup = TRUE, standard_names = NULL, ...) NULL
+.dummy_write       <- function(x, file, delim = ",", ...) NULL
+```
+
+```{r lineage-engine}
+# ============================================================================
+# The lineage engine: parses one source's ingest.R and returns every
+# (standard_file, raw_files) pair it can trace.
+# ============================================================================
+
+analyze_source <- function(source_dir) {
+  ingest_path <- file.path(source_dir, "ingest.R")
+  if (!file.exists(ingest_path)) return(list())
+
+  exprs <- tryCatch(parse(ingest_path, keep.source = FALSE), error = function(e) NULL)
+  if (is.null(exprs)) return(list())
+  stmts <- unlist(lapply(as.list(exprs), flatten_stmts), recursive = FALSE)
+
+  path_literals <- list()  # var -> literal path string (e.g. "raw/staging_x")
+  file_taint    <- list()  # var-or-resolved-literal-key -> character vector of real raw files
+  results       <- list()  # accumulated (standard_file, raw_files) sinks
+
+  raw_ish <- function(p) grepl("^\\.{0,2}/?raw", p, ignore.case = TRUE)
+
+  resolve_string <- function(e) {
+    if (is.null(e)) return(NULL)
+    if (is.character(e)) return(if (length(e) == 1) e else NULL)
+    if (is.symbol(e)) return(path_literals[[as.character(e)]])
+    if (is.call(e) && identical(e[[1]], as.name("file.path"))) {
+      parts <- lapply(safe_args(e), resolve_string)
+      if (any(vapply(parts, is.null, logical(1)))) return(NULL)
+      return(do.call(file.path, parts))
+    }
+    NULL
+  }
+
+  resolve_and_list <- function(dirpath, pattern) {
+    full <- file.path(source_dir, dirpath)
+    if (!dir.exists(full)) return(character(0))
+    list.files(full, pattern = pattern, full.names = TRUE)
+  }
+
+  extract_standard_names_vec <- function(e) {
+    if (is.null(e) || !(is.call(e) && identical(e[[1]], as.name("c")))) return(NULL)
+    args <- safe_args(e)
+    nms  <- names(args)
+    vals <- vapply(args, function(a) if (is.character(a) && length(a) == 1) a else NA_character_, character(1))
+    keep <- !is.na(vals) & !is.null(nms) & !is.na(nms) & nzchar(nms)
+    if (!any(keep)) return(NULL)
+    v <- vals[keep]; names(v) <- nms[keep]
+    v
+  }
+
+  # Identifiers propagate taint either directly (file_taint[[name]]) or via a
+  # resolved literal path that was separately seeded (file_taint[[path]]) --
+  # e.g. a variable holding "raw/diabetes_decrypted.csv" whose taint was
+  # seeded under that literal key by detect_xlsx_csv_pairs() below.
+  taint_of_ids <- function(ids) {
+    out <- character(0)
+    for (v in ids) {
+      if (!is.null(file_taint[[v]])) out <- union(out, file_taint[[v]])
+      lit <- path_literals[[v]]
+      if (!is.null(lit)) {
+        key <- normalize_key(lit)
+        if (!is.null(file_taint[[key]])) out <- union(out, file_taint[[key]])
+      }
+    }
+    out
+  }
+
+  # Reproduces what dcf::dcf_process_epic_staging() actually does: call the
+  # real dcf::dcf_read_epic() on each staged file (with the same
+  # standard_names the script passed) to see which output name it routes to,
+  # then seed that name's <out_dir>/<name>.csv.xz and .json as fed by every
+  # staged file that routed there.
+  route_epic_staging <- function(staging_s, out_s, std_names_vec) {
+    full_staging <- file.path(source_dir, staging_s)
+    if (!dir.exists(full_staging)) return(invisible(NULL))
+    staged_files <- sort(list.files(full_staging, "csv", full.names = TRUE, recursive = TRUE))
+    staged_files <- staged_files[!grepl("census", staged_files)]
+    if (length(staged_files) == 0) return(invisible(NULL))
+    routed <- vapply(staged_files, function(f) {
+      tryCatch(dcf::dcf_read_epic(f, standard_names = std_names_vec)$metadata$standard_name,
+               error = function(e) NA_character_)
+    }, character(1))
+    by_name <- split(staged_files, routed)
+    by_name <- by_name[nzchar(names(by_name)) & !is.na(names(by_name))]
+    for (nm in names(by_name)) {
+      for (ext in c(".csv.xz", ".json")) {
+        key <- normalize_key(file.path(out_s, paste0(nm, ext)))
+        file_taint[[key]] <<- unname(by_name[[nm]])
+      }
+    }
+  }
+
+  handle_rhs <- function(var, rhs) {
+    if (is.character(rhs) && length(rhs) == 1) {
+      path_literals[[var]] <<- rhs
+      return(invisible(NULL))
+    }
+    if (is.call(rhs) && identical(rhs[[1]], as.name("file.path"))) {
+      resolved <- resolve_string(rhs)
+      if (!is.null(resolved)) { path_literals[[var]] <<- resolved; return(invisible(NULL)) }
+    }
+
+    set_taint <- character(0)
+    for (cl in find_calls(rhs)) {
+      head_name <- tryCatch(paste(deparse(cl[[1]]), collapse = ""), error = function(e) "")
+
+      if (head_name == "list.files") {
+        mc <- tryCatch(match.call(.dummy_list_files, cl), error = function(e) NULL)
+        if (!is.null(mc)) {
+          dir_s <- resolve_string(mc$path)
+          pat_s <- if (!is.null(mc$pattern)) resolve_string(mc$pattern) else NULL
+          if (!is.null(dir_s) && raw_ish(dir_s)) {
+            set_taint <- union(set_taint, resolve_and_list(dir_s, pat_s))
+          }
+        }
+      } else if (head_name %in% c("vroom::vroom", "vroom", "read.csv", "read_csv",
+                                    "readr::read_csv", "read.delim", "readr::read_delim")) {
+        mc <- tryCatch(match.call(.dummy_read_file, cl), error = function(e) NULL)
+        if (!is.null(mc)) {
+          file_s <- resolve_string(mc$file)
+          if (!is.null(file_s)) {
+            key <- normalize_key(file_s)
+            if (!is.null(file_taint[[key]])) {
+              set_taint <- union(set_taint, file_taint[[key]])
+            } else if (raw_ish(file_s)) {
+              full <- file.path(source_dir, file_s)
+              if (file.exists(full)) set_taint <- union(set_taint, full)
+            }
+          }
+        }
+      } else if (head_name %in% c("dcf::dcf_process_epic_staging", "dcf_process_epic_staging")) {
+        mc <- tryCatch(match.call(.dummy_dcf_staging, cl), error = function(e) NULL)
+        if (!is.null(mc)) {
+          staging_s <- resolve_string(mc$staging_dir)
+          out_s <- if (!is.null(mc$out_dir)) resolve_string(mc$out_dir) else "raw"
+          if (!is.null(staging_s)) {
+            route_epic_staging(staging_s, out_s, extract_standard_names_vec(mc$standard_names))
+          }
+        }
+      }
+    }
+
+    ids <- tryCatch(all.vars(rhs), error = function(e) character(0))
+    set_taint <- union(set_taint, taint_of_ids(ids))
+    if (length(set_taint) > 0) file_taint[[var]] <<- set_taint
+  }
+
+  # General rule (not tied to any one source's variable names): a bare call
+  # containing a `list(xlsx = X, csv = Y)`-shaped argument -- the convention
+  # used to batch-decrypt password-protected xlsx via Excel COM when
+  # msoffcrypto can't -- means the file at Y is downstream of the raw xlsx
+  # at X, so Y inherits X's taint.
+  detect_xlsx_csv_pairs <- function(e) {
+    for (cl in find_calls(e)) {
+      if (identical(cl[[1]], as.name("list"))) {
+        args <- safe_args(cl)
+        nms <- names(args)
+        if (!is.null(nms) && "xlsx" %in% nms && "csv" %in% nms) {
+          xlsx_s <- resolve_string(args[[which(nms == "xlsx")]])
+          csv_s  <- resolve_string(args[[which(nms == "csv")]])
+          if (!is.null(xlsx_s) && !is.null(csv_s) && raw_ish(xlsx_s)) {
+            full_xlsx <- file.path(source_dir, xlsx_s)
+            if (file.exists(full_xlsx)) file_taint[[normalize_key(csv_s)]] <<- full_xlsx
+          }
+        }
+      }
+    }
+  }
+
+  detect_write_sink <- function(e) {
+    for (cl in find_calls(e)) {
+      head_name <- tryCatch(paste(deparse(cl[[1]]), collapse = ""), error = function(e) "")
+      if (head_name %in% c("vroom::vroom_write", "vroom_write", "write_csv",
+                             "readr::write_csv", "write.csv")) {
+        mc <- tryCatch(match.call(.dummy_write, cl), error = function(e) NULL)
+        if (is.null(mc)) next
+        dest_s <- resolve_string(mc$file)
+        if (is.null(dest_s)) next
+        dest_s <- normalize_key(dest_s)
+        if (!grepl("^standard/", dest_s)) next
+        ids <- tryCatch(all.vars(e), error = function(e) character(0))
+        results[[length(results) + 1]] <<- list(standard_file = dest_s, raw_files = taint_of_ids(ids))
+      }
+    }
+  }
+
+  for (e in stmts) {
+    if (is.call(e) && length(e) == 3 && as.character(e[[1]])[1] %in% c("<-", "=", "<<-") && is.symbol(e[[2]])) {
+      handle_rhs(as.character(e[[2]]), e[[3]])
+    } else {
+      detect_write_sink(e)
+      detect_xlsx_csv_pairs(e)
+    }
+  }
+
+  results
+}
+```
+
+```{r meta-readers}
+# ============================================================================
+# Read Session Date Range + Date of Export straight out of a raw file.
+# ============================================================================
+
+read_header_rows <- function(path, n = 20) {
+  tryCatch(
+    read.csv(path, header = FALSE, nrows = n, colClasses = "character",
+             stringsAsFactors = FALSE, check.names = FALSE),
+    error = function(e) tryCatch(
+      read.csv(path, header = FALSE, nrows = n, colClasses = "character",
+               stringsAsFactors = FALSE, check.names = FALSE, fileEncoding = "windows-1252"),
+      error = function(e2) NULL
+    )
+  )
+}
+
+label_value <- function(header_df, label, value_col = 2) {
+  if (is.null(header_df) || ncol(header_df) < value_col) return(NA_character_)
+  hit <- which(trimws(as.character(header_df[[1]])) == label)
+  if (length(hit) == 0) return(NA_character_)
+  trimws(as.character(header_df[hit[1], value_col]))
+}
+
+# Strip a trailing annotation like "(Based On Arrival Date)" so the range
+# column holds just the two dates.
+clean_range <- function(x) ifelse(is.na(x), x, trimws(sub("\\s*\\(.*\\)\\s*$", "", x)))
+
+meta_plain_csv <- function(path) {
+  rows <- read_header_rows(path)
+  list(session_date_range = clean_range(label_value(rows, "Session Date Range")),
+       date_of_export      = label_value(rows, "Date of Export"))
+}
+
+decrypt_xlsx <- function(path, password) {
+  decrypted <- tempfile(fileext = ".xlsx")
+  cmd <- sprintf('python -m msoffcrypto -p "%s" "%s" "%s"',
+                 password, normalizePath(path, winslash = "/"), decrypted)
+  status <- suppressWarnings(system(cmd, ignore.stdout = TRUE, ignore.stderr = TRUE))
+  if (status != 0 || !file.exists(decrypted)) return(NULL)
+  decrypted
+}
+
+meta_xlsx <- function(path, password = Sys.getenv("EPIC_XLSX_PASSWORD")) {
+  na_result <- list(session_date_range = NA_character_, date_of_export = NA_character_)
+  if (!file.exists(path) || !nzchar(password)) return(na_result)
+  decrypted <- tryCatch(decrypt_xlsx(path, password), error = function(e) NULL)
+  if (is.null(decrypted)) return(na_result)
+  on.exit(unlink(decrypted), add = TRUE)
+  rows <- tryCatch({
+    wb <- openxlsx2::wb_load(decrypted)
+    openxlsx2::wb_to_df(wb, sheet = 1, col_names = FALSE, skip_empty_rows = FALSE,
+                         skip_empty_cols = FALSE, rows = 1:20)
+  }, error = function(e) NULL)
+  if (is.null(rows)) return(na_result)
+  rows <- as.data.frame(lapply(rows, function(x) { x <- as.character(x); x[is.na(x)] <- ""; x }))
+  list(session_date_range = clean_range(label_value(rows, "Session Date Range")),
+       date_of_export      = label_value(rows, "Date of Export"))
+}
+
+read_meta <- function(path) if (grepl("\\.xlsx$", path, ignore.case = TRUE)) meta_xlsx(path) else meta_plain_csv(path)
+```
+
+```{r discover}
+# ============================================================================
+# Discover sources (excluding bundle_cosmos, which has no raw/ of its own),
+# run the lineage engine on each, and detect stale standard files.
+# ============================================================================
+
+discover_standard_files <- function(dir) {
+  list.files(file.path("data", dir, "standard"), pattern = "\\.csv(\\.gz)?$", full.names = FALSE)
+}
+
+all_dirs    <- list.dirs("data", full.names = FALSE, recursive = FALSE)
+source_dirs <- all_dirs[grepl("^cosmos_", all_dirs)]
+
+engine_results <- lapply(source_dirs, function(s) analyze_source(file.path("data", s)))
+names(engine_results) <- source_dirs
+
+own_lineage <- bind_rows(lapply(source_dirs, function(s) {
+  bind_rows(lapply(engine_results[[s]], function(r) {
+    if (length(r$raw_files) == 0) return(NULL)
+    tibble(source = s, standard_file = r$standard_file, raw_file = r$raw_files)
+  }))
+}))
+if (nrow(own_lineage) == 0) own_lineage <- tibble(source = character(), standard_file = character(), raw_file = character())
+
+stale_own <- bind_rows(lapply(source_dirs, function(s) {
+  on_disk <- discover_standard_files(s)
+  found   <- basename(unique(own_lineage$standard_file[own_lineage$source == s]))
+  missing <- setdiff(on_disk, found)
+  if (length(missing) == 0) return(NULL)
+  tibble(source = s, standard_file = file.path("standard", missing), raw_file = NA_character_,
+         note = "Not produced by the current ingest.R -- no write of this file was found while parsing the script, so this is likely a leftover from an earlier version with no traceable raw-file lineage.")
+}))
+
+all_detail <- bind_rows(
+  own_lineage %>% mutate(note = NA_character_),
+  stale_own
+)
+
+# Auto-detect reuse: the same raw file feeding more than one standard file
+# within a source gets a note instead of being silently duplicated.
+reuse_note <- all_detail %>%
+  filter(!is.na(raw_file)) %>%
+  distinct(source, standard_file, raw_file) %>%
+  group_by(source, raw_file) %>%
+  filter(n() > 1) %>%
+  summarize(other = paste(unique(basename(standard_file)), collapse = ", "), .groups = "drop")
+
+all_detail <- all_detail %>%
+  left_join(reuse_note, by = c("source", "raw_file")) %>%
+  mutate(note = case_when(
+    !is.na(note)  ~ note,
+    !is.na(other) ~ paste0("Also feeds: ", other),
+    TRUE          ~ NA_character_
+  )) %>%
+  select(-other)
+```
+
+```{r resolve}
+meta <- all_detail %>%
+  filter(!is.na(raw_file)) %>%
+  distinct(raw_file) %>%
+  mutate(m = map(raw_file, read_meta),
+         session_date_range = map_chr(m, "session_date_range"),
+         date_of_export      = map_chr(m, "date_of_export")) %>%
+  select(-m)
+
+detail <- all_detail %>% left_join(meta, by = "raw_file")
+```
+
+## Standard files with corresponding raw files and date range
+
+```{r detail-table}
+detail %>%
+  transmute(
+    Source              = source,
+    `Standard file`      = standard_file,
+    `Raw file`           = coalesce(basename(raw_file), "(none -- see note)"),
+    `Session Date Range` = coalesce(session_date_range, "unavailable"),
+    `Date of Export`     = coalesce(date_of_export, "unavailable"),
+    Note                 = coalesce(note, "")
+  ) %>%
+  arrange(Source, `Standard file`) %>%
+  mutate(across(c(Source, `Standard file`), ~ if_else(duplicated(cur_data()[c("Source", "Standard file")]), "", .x))) %>%
+  kable()
+```

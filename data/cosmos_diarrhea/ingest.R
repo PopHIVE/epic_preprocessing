@@ -217,13 +217,49 @@ write_metadata_json <- function(results, path) {
 # =============================================================================
 # 1. Process wide-format ED diarrhea files from raw/staging_diarrhea_wide/
 # =============================================================================
-# Layout: outcome blocks (diarrhea, Total) across columns, each block spanning
-# 7 age columns. Rows are one per (State of Residence, Year, Week/Month).
+# Layout: outcome blocks (diarrhea, nausea and vomiting, Total) across columns,
+# each block spanning 7 age columns. Rows are one per (State of Residence,
+# Year, Week/Month).
 # Row 12: outcome labels (fill rightward, one label per block)
 # Row 13: age labels (one per column, repeats within each block)
 # Row 14: id column headers (State of Residence, Year, Week or Month)
 # Row 15+: data rows (state and year fill down, week/month per row)
 # =============================================================================
+
+# The ED Diagnoses buckets expected in row 12, matched as regexes against the
+# raw labels ("all-cause diarrhea A00-09 R19.7", "Nausea and vomiting(
+# ICD-10-CM: R11.* )", "Acute gastroenteropathy due to Norwalk agent(
+# ICD-10-CM: A08.11 )", "Rotaviral enteritis( ICD-10-CM: A08.0 )", "Total:
+# ..."). Patterns deliberately key off the stable part of each label so a
+# re-worded bucket still matches. SlicerDicer sessions gain and rename buckets
+# over time, so an unrecognized or ambiguous label stops the run instead of
+# silently landing on the wrong measure -- extend this map when the session
+# changes. norovirus and rotavirus buckets were added 2026-09.
+ED_OUTCOME_PATTERNS <- c(
+  all_encounters = "^Total",
+  diarrhea       = "diarrhea",
+  vomiting       = "[Nn]ausea and vomiting",
+  norovirus      = "Norwalk",
+  rotavirus      = "Rotaviral"
+)
+
+match_outcome_labels <- function(labels, patterns) {
+  uniq <- unique(labels)
+  mapped <- vapply(uniq, function(lbl) {
+    hit <- names(patterns)[vapply(patterns, function(p) grepl(p, lbl), logical(1))]
+    if (length(hit) != 1L) {
+      stop(
+        sprintf(
+          "Unrecognized or ambiguous ED Diagnoses bucket in export: '%s' (matched %d pattern%s). Update ED_OUTCOME_PATTERNS in ingest.R.",
+          lbl, length(hit), if (length(hit) == 1L) "" else "s"
+        ),
+        call. = FALSE
+      )
+    }
+    hit
+  }, character(1))
+  unname(mapped[match(labels, uniq)])
+}
 
 process_diarrhea_wide <- function(file, granularity, password = NULL) {
   message("Processing ", granularity, " file: ", basename(file))
@@ -242,7 +278,12 @@ process_diarrhea_wide <- function(file, granularity, password = NULL) {
   outcome_raw <- row12[(id_cols + 1):n_cols]
   outcome_raw[outcome_raw == ""] <- NA
   outcome_raw <- zoo::na.locf(outcome_raw, na.rm = FALSE)
-  outcome_std <- if_else(grepl("^Total", outcome_raw), "all_encounters", "diarrhea")
+  outcome_std <- match_outcome_labels(outcome_raw, ED_OUTCOME_PATTERNS)
+
+  message(
+    "  ED Diagnoses blocks found: ",
+    paste(unique(outcome_std), collapse = ", ")
+  )
 
   age_raw <- trimws(row13[(id_cols + 1):n_cols])
 
@@ -270,6 +311,16 @@ process_diarrhea_wide <- function(file, granularity, password = NULL) {
     ) %>%
     mutate(col_idx = as.integer(sub("v", "", col_name))) %>%
     left_join(col_meta, by = "col_idx")
+
+  # Norovirus and rotavirus buckets were added to this crosstab in the 2026-09
+  # export. They are recognized by ED_OUTCOME_PATTERNS (so an unrecognized-
+  # bucket error isn't raised), but not yet surfaced as standard measures --
+  # drop them here rather than adding them to build_standard_table.
+  n_dropped <- sum(data_long$outcome %in% c("norovirus", "rotavirus"))
+  if (n_dropped > 0) {
+    message("  Dropping ", n_dropped, " row(s) from unreleased norovirus/rotavirus buckets")
+    data_long <- data_long %>% filter(!outcome %in% c("norovirus", "rotavirus"))
+  }
 
   if (granularity == "week") {
     data_long <- filter_full_weeks(data_long, "time_raw", "year_raw")
@@ -328,10 +379,12 @@ build_standard_table <- function(data_long, suffix) {
     filter(!is.na(age)) %>%
     rename(
       n_diarrhea = diarrhea,
+      n_vomiting = vomiting,
       !!paste0("n_all_encounters_", suffix) := all_encounters
     ) %>%
     mutate(
-      pct_diarrhea = 100 * n_diarrhea / .data[[paste0("n_all_encounters_", suffix)]]
+      pct_diarrhea = 100 * n_diarrhea / .data[[paste0("n_all_encounters_", suffix)]],
+      pct_vomiting = 100 * n_vomiting / .data[[paste0("n_all_encounters_", suffix)]]
     ) %>%
     rename(!!paste0("suppressed_flag_all_encounters_", suffix) := suppressed_flag_all_encounters) %>%
     rename_with(~ paste0("epic_", .x), .cols = -c(geography, time, age)) %>%
@@ -345,6 +398,35 @@ build_standard_table <- function(data_long, suffix) {
 }
 
 weekly_standard <- build_standard_table(weekly_long, "weekly")
+
+# ED visits are the only export refreshed routinely, so they never wait on the
+# all-encounters or cyclospora exports below (see UPDATE_NON_ED).
+weekly_standard_ed <- weekly_standard %>%
+  rename(
+    epic_n_ed_diarrhea = epic_n_diarrhea,
+    epic_n_ed_vomiting = epic_n_vomiting,
+    epic_n_ed_encounters_weekly = epic_n_all_encounters_weekly,
+    epic_pct_ed_diarrhea = epic_pct_diarrhea,
+    epic_pct_ed_vomiting = epic_pct_vomiting,
+    epic_suppressed_flag_ed_diarrhea = epic_suppressed_flag_diarrhea,
+    epic_suppressed_flag_ed_vomiting = epic_suppressed_flag_vomiting,
+    epic_suppressed_flag_ed_encounters_weekly = epic_suppressed_flag_all_encounters_weekly
+  ) %>%
+  select(
+    geography, age, time,
+    epic_n_ed_diarrhea, epic_n_ed_vomiting, epic_n_ed_encounters_weekly,
+    epic_pct_ed_diarrhea, epic_pct_ed_vomiting,
+    epic_suppressed_flag_ed_diarrhea, epic_suppressed_flag_ed_vomiting,
+    epic_suppressed_flag_ed_encounters_weekly
+  ) %>%
+  arrange(geography, age, time)
+
+# The non-ED exports (all-encounters by age, cyclospora tests) are no longer
+# updated. Set UPDATE_NON_ED <- TRUE to reprocess them from their raw folders.
+# Otherwise standard/data_weekly.csv.gz keeps its existing all-encounters
+# columns and only the ED columns are refreshed; weekly_tests.csv.gz is left
+# as is.
+UPDATE_NON_ED <- FALSE
 
 # =============================================================================
 # 2b. Process the state x age x week "all encounters" (non-ED) diarrhea
@@ -449,28 +531,30 @@ build_all_encounters_weekly_table <- function(data_long) {
     )
 }
 
-all_encounters_weekly_files <- list.files(
-  "raw/staging_diarrhea_all_encounters_weekly_wide", "\\.xlsx$", full.names = TRUE
-)
-all_encounters_weekly_results <- lapply(
-  all_encounters_weekly_files, process_diarrhea_all_encounters_weekly_wide, password = xlsx_password
-)
-write_metadata_json(all_encounters_weekly_results, "raw/staging_diarrhea_all_encounters_weekly_wide.json")
+if (UPDATE_NON_ED) {
+  all_encounters_weekly_files <- list.files(
+    "raw/staging_diarrhea_all_encounters_weekly_wide", "\\.xlsx$", full.names = TRUE
+  )
+  all_encounters_weekly_results <- lapply(
+    all_encounters_weekly_files, process_diarrhea_all_encounters_weekly_wide, password = xlsx_password
+  )
+  write_metadata_json(all_encounters_weekly_results, "raw/staging_diarrhea_all_encounters_weekly_wide.json")
 
-all_encounters_weekly_long <- standardize_all_encounters_geo(
-  bind_rows(lapply(all_encounters_weekly_results, `[[`, "data"))
-)
-all_encounters_weekly_standard <- build_all_encounters_weekly_table(all_encounters_weekly_long)
+  all_encounters_weekly_long <- standardize_all_encounters_geo(
+    bind_rows(lapply(all_encounters_weekly_results, `[[`, "data"))
+  )
+  all_encounters_weekly_standard <- build_all_encounters_weekly_table(all_encounters_weekly_long)
 
-weekly_standard_ed <- weekly_standard %>%
-  rename(
-    epic_n_ed_diarrhea = epic_n_diarrhea,
-    epic_n_ed_encounters_weekly = epic_n_all_encounters_weekly,
-    epic_pct_ed_diarrhea = epic_pct_diarrhea,
-    epic_suppressed_flag_ed_diarrhea = epic_suppressed_flag_diarrhea,
-    epic_suppressed_flag_ed_encounters_weekly = epic_suppressed_flag_all_encounters_weekly
+}
+
+if (!UPDATE_NON_ED) {
+  # Carry the frozen all-encounters columns forward from the existing file.
+  all_encounters_weekly_standard <- vroom::vroom(
+    "standard/data_weekly.csv.gz", show_col_types = FALSE,
+    col_types = vroom::cols(geography = "c", age = "c", time = "D")
   ) %>%
-  arrange(geography, age, time)
+    select(geography, age, time, contains("all_diarrhea"), contains("encounters_total_weekly"))
+}
 
 data_weekly <- full_join(
   weekly_standard_ed, all_encounters_weekly_standard,
@@ -557,37 +641,38 @@ build_weekly_tests_table <- function(data_long) {
     )
 }
 
-cyclospora_weekly_files <- list.files("raw/staging_cyclospora_weekly_wide", "\\.xlsx$", full.names = TRUE)
-cyclospora_weekly_results <- lapply(cyclospora_weekly_files, process_cyclospora_weekly_wide, password = xlsx_password)
-write_metadata_json(cyclospora_weekly_results, "raw/staging_cyclospora_weekly_wide.json")
+if (UPDATE_NON_ED) {
+  cyclospora_weekly_files <- list.files("raw/staging_cyclospora_weekly_wide", "\\.xlsx$", full.names = TRUE)
+  cyclospora_weekly_results <- lapply(cyclospora_weekly_files, process_cyclospora_weekly_wide, password = xlsx_password)
+  write_metadata_json(cyclospora_weekly_results, "raw/staging_cyclospora_weekly_wide.json")
 
-# All-ages diarrhea/total-encounters rows already computed in section 2b --
-# reused here instead of parsing a duplicate by-state-only crosstab.
-all_encounters_total_age_long <- all_encounters_weekly_long %>%
-  filter(age == "Total") %>%
-  select(geography, measure = outcome, time, value, suppressed)
+  # All-ages diarrhea/total-encounters rows already computed in section 2b --
+  # reused here instead of parsing a duplicate by-state-only crosstab.
+  all_encounters_total_age_long <- all_encounters_weekly_long %>%
+    filter(age == "Total") %>%
+    select(geography, measure = outcome, time, value, suppressed)
 
-weekly_tests_long <- bind_rows(
-  all_encounters_total_age_long,
-  standardize_measure_geo(bind_rows(lapply(cyclospora_weekly_results, `[[`, "data")))
-)
-weekly_tests_standard <- build_weekly_tests_table(weekly_tests_long)
+  weekly_tests_long <- bind_rows(
+    all_encounters_total_age_long,
+    standardize_measure_geo(bind_rows(lapply(cyclospora_weekly_results, `[[`, "data")))
+  )
+  weekly_tests_standard <- build_weekly_tests_table(weekly_tests_long)
 
-vroom::vroom_write(weekly_tests_standard, "standard/weekly_tests.csv.gz", ",")
+  vroom::vroom_write(weekly_tests_standard, "standard/weekly_tests.csv.gz", ",")
+}
 
 # =============================================================================
 # 4. Record processed state
 # =============================================================================
 
 process <- dcf::dcf_process_record()
-process$vintages <- list(
-  data_weekly.csv.gz = list(
-    ed = wide_results[[1]]$metadata[["Date of Export"]],
-    all_encounters = all_encounters_weekly_results[[1]]$metadata[["Date of Export"]]
-  ),
-  weekly_tests.csv.gz = list(
+process$vintages$data_weekly.csv.gz$ed <- wide_results[[1]]$metadata[["Date of Export"]]
+if (UPDATE_NON_ED) {
+  process$vintages$data_weekly.csv.gz$all_encounters <-
+    all_encounters_weekly_results[[1]]$metadata[["Date of Export"]]
+  process$vintages$weekly_tests.csv.gz <- list(
     all_encounters = all_encounters_weekly_results[[1]]$metadata[["Date of Export"]],
     cyclospora = cyclospora_weekly_results[[1]]$metadata[["Date of Export"]]
   )
-)
+}
 dcf::dcf_process_record(updated = process)

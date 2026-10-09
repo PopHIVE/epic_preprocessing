@@ -370,6 +370,28 @@ merged_weekly <- merged_weekly %>%
   ) %>%
   arrange(geography, age, time) %>%
   mutate(time = as.Date(time)) %>%
+  # --- Flag and remove recent weeks with a likely reporting lag ---
+  # Among the 4 most recent weeks per geography/age group, drop any week
+  # where total encounter volume fell more than 50% vs. a stable baseline
+  # (the median of the 4 weeks before that window) -- a sign of
+  # incomplete/still-arriving Epic Cosmos data, not a real decline.
+  # Using a fixed baseline (rather than the immediately prior week) ensures
+  # weeks that stay low after an initial drop keep getting flagged, instead
+  # of only the first week of the decline.
+  group_by(geography, age) %>%
+  mutate(
+    week_rank = dplyr::min_rank(dplyr::desc(time)),
+    baseline = median(epic_n_all_encounters_weekly[week_rank %in% 5:8], na.rm = TRUE),
+    remove = if_else(
+      week_rank <= 4 &
+        !is.na(baseline) &
+        epic_n_all_encounters_weekly < 0.5 * baseline,
+      1, 0
+    )
+  ) %>%
+  filter(remove != 1) %>%
+  dplyr::select(-remove, -week_rank, -baseline) %>%
+  ungroup() %>%
   dplyr::select(
     geography, age, time,
     starts_with("epic_n"),
@@ -413,6 +435,20 @@ files <- list.files("raw", "\\.csv\\.xz", full.names = TRUE)
 data <- lapply(files, function(file) {
 
   d <- vroom::vroom(file, show_col_types = FALSE, guess_max = Inf)
+
+  # Drop partial trailing/leading months (e.g. "Dec 1 – Dec 4") -- not
+  # comparable to whole months and unrecognized by dcf::dcf_standardize_epic()
+  if ("month" %in% names(d)) {
+    partial_months <- setdiff(unique(d$month), month.abb)
+    if (length(partial_months) > 0) {
+      message(
+        basename(file), ": dropping ", sum(d$month %in% partial_months),
+        " row(s) with partial month period(s): ",
+        paste(partial_months, collapse = ", ")
+      )
+      d <- d[d$month %in% month.abb, ]
+    }
+  }
 
   d2 <- dcf::dcf_standardize_epic(d)
 
