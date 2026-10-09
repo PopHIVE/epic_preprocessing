@@ -33,6 +33,9 @@
 #                                (not published)
 #      state, age band         : age band share of the state's diagnosis volume
 #                                -> epic_ed_pct_age_*
+#      national, age band      : age band share of the national diagnosis volume
+#                                (from a separate export with no state slice)
+#                                -> epic_ed_pct_age_*
 #    Only values Epic reports are published; nothing is derived from them. The
 #    state share of the national diagnosis volume is not published.
 #
@@ -54,7 +57,10 @@
 #    flagged. The crosstab's age rows use the same bands as the LOS export; its
 #    'No value' age rows are disregarded. The age rows do not add up to the
 #    state's 'Total' row (the 'Overall' count); both are published as exported.
-#    The 0-24 row is the sum of the four exported bands below 25 (0-9 to 20-24).
+#    The 0-24 row is exported directly ('Less than 25 Years') and overlaps the
+#    bands below it. A second crosstab supplies it (and drops the 0-9 band);
+#    the crosstabs are merged, keeping one copy of each shared cell. The LOS
+#    exports carry a 0-24 band too, so it is not count-only.
 # =============================================================================
 
 library(dplyr)
@@ -119,6 +125,7 @@ AGE_LABELS <- c(
   "10 Years or more and less than 15 Years"  = "10-14",
   "15 Years or more and less than 20 Years"  = "15-19",
   "20 Years or more and less than 25 Years"  = "20-24",
+  "Less than 25 Years"                       = "0-24",
   "25 Years or more and less than 45 Years"  = "25-44",
   "45 Years or more and less than 65 Years"  = "45-64",
   "65 Years or more"                         = "65+"
@@ -409,7 +416,11 @@ if (!identical(process$raw_state, current_state)) {
   # ED visit counts: months -> whole quarters
   # ---------------------------------------------------------------------------
   # 'No value' age rows are disregarded
-  month_counts <- month_counts[!(month_counts$age_raw %in% "No value"), ]
+  # The 'Less than 5 Years' row (a 0-4 band the LOS exports do not have) is not
+  # published. Two crosstabs overlap on the shared age rows, so keep one
+  # copy of each state x age x month cell.
+  month_counts <- month_counts[!(month_counts$age_raw %in% c("No value", "Less than 5 Years")), ]
+  month_counts <- distinct(month_counts, start, state, age_raw, .keep_all = TRUE)
   unknown_ct_age <- setdiff(unique(na.omit(month_counts$age_raw)), names(AGE_LABELS))
   if (length(unknown_ct_age) > 0) {
     stop("Unrecognized age row(s) in the count crosstab: ",
@@ -435,17 +446,6 @@ if (!identical(process$raw_state, current_state)) {
     filter(n_months == 3, !is.na(value)) %>%     # whole quarters only
     mutate(time = format(ceiling_date(qstart, "quarter") - days(1), "%Y-%m-%d")) %>%
     select(geography, time, age, value, flag)
-
-  # Under 25: the sum of the four exported bands below 25. It is only published
-  # where all four are, and is flagged if any was imputed.
-  UNDER_25 <- unname(AGE_LABELS[1:4])
-  under_25 <- counts_age %>%
-    filter(age %in% UNDER_25) %>%
-    group_by(geography, time) %>%
-    filter(n() == length(UNDER_25)) %>%
-    summarize(age = "0-24", value = sum(value), flag = max(flag), .groups = "drop") %>%
-    select(geography, time, age, value, flag)
-  counts_age <- bind_rows(counts_age, under_25)
 
   # ===========================================================================
   # 4. Build the wide table
@@ -473,10 +473,11 @@ if (!identical(process$raw_state, current_state)) {
   in_scope <- function(col) {
     switch(
       sub("^(epic_ed_los_median|epic_ed_los_q1|epic_ed_los_q3|epic_ed_pct_visits|epic_ed_pct_age)_.*$", "\\1", col),
-      # National all ages only: Epic reports no state-level case mix and no national age bands
+      # National all ages only: Epic reports no state-level case mix
       # (the cells at state level hold other shares, which are not published)
       epic_ed_pct_visits = wide$geography == "00" & wide$age == "Overall",
-      epic_ed_pct_age    = wide$geography != "00" & wide$age != "Overall",
+      # Age-band shares: states and the nation (national age-band export)
+      epic_ed_pct_age    = wide$age != "Overall",
       # Length of stay: all-cause is published nationally for all ages only
       if (grepl("_all_cause$", col)) {
         wide$geography == "00" & wide$age == "Overall"
@@ -493,9 +494,11 @@ if (!identical(process$raw_state, current_state)) {
 
   # All-ED-encounter visit counts, as exported. Unlike the length-of-stay
   # statistics a suppressed count is imputed (as 5) rather than left missing, so
-  # its flag may be 1 on an observed value. Quarters before the LOS export
-  # begins get a row with only the count.
+  # its flag may be 1 on an observed value. Only quarters the LOS export covers
+  # are kept, so every count has mental health data alongside it; rows for strata
+  # the LOS export does not report carry the count only.
   counts_out <- counts_age %>%
+    filter(time >= min(flat_long$time), time <= max(flat_long$time)) %>%
     transmute(
       geography, time, age,
       epic_ed_n_visits_all_cause = value,
@@ -567,7 +570,7 @@ if (!identical(process$raw_state, current_state)) {
   # (every age), so they cannot sum past 100 beyond rounding
   pa_cols <- grep("^epic_ed_pct_age_[a-z_]+$", measure_cols, value = TRUE)
   age_sums <- data_quarterly %>%
-    filter(age != "Overall", geography != "00") %>%
+    filter(!age %in% c("Overall", "0-24"), geography != "00") %>%   # 0-24 overlaps the bands
     group_by(geography, time) %>%
     summarize(across(all_of(pa_cols), ~ sum(.x, na.rm = TRUE)), .groups = "drop")
   max_sum <- max(unlist(age_sums[, pa_cols]))
