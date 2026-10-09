@@ -1,66 +1,36 @@
 # =============================================================================
 # Epic Cosmos Mental Health ED Length of Stay Ingestion
-# Source: Epic Cosmos SlicerDicer export (raw/staging/*.xlsx)
-#         ED length of stay quartiles and median, and diagnosis share, by mental
-#         health ED diagnosis grouper, state of residence, and age band, by
-#         calendar quarter of arrival.
+# Source: Epic Cosmos SlicerDicer crosstab (raw/staging/*.xlsx), session 2865212
+#         ED length of stay (Q1, median, Q3) and number of ED encounters, for
+#         suicidal behavior, other ED diagnoses, and all ED diagnoses, by state
+#         of residence and age band, by calendar quarter of arrival.
 #
 # Population base: all ED encounters with country of residence = United States.
 #
-# The export is one flat SlicerDicer session: rows are
-#   Start Date x End Date x ED Diagnoses x State of Residence x Age band
-# with one column per measure (Q1, median, Q3, Percentage of Sliced Population).
-# There are no merged cells. Which slicing columns are filled identifies the block:
-#
-#   diagnosis  state  age   block
-#   ---------  -----  ----  ------------------------------------------------
-#   blank      blank  blank national, all ED encounters (all-cause reference)
-#   filled     blank  blank national, one diagnosis
-#   filled     filled blank state, one diagnosis, all ages
-#   filled     filled filled state, one diagnosis, one age band
+# Layout (one two-level crosstab, no flat blocks):
+#   rows    Year > Quarter > Age at Time of Visit > State of Residence
+#           (the outer labels are written on the first row of each group only)
+#   columns ED Diagnoses group (written on the first column of the group) over
+#           the measures Q3 / Q1 / Median length of stay and Number of ED
+#           Encounters. The last group, "Total", is every ED diagnosis.
+#   A 'Total' age row is the all-ages stratum; a 'Total' state row is the nation.
 #
 # Things about this source that need care:
 #
-# 1. The blank-diagnosis row covers every ED encounter, including the
-#    non-mental-health diagnoses, so it is emitted as an all-cause reference
-#    series (*_all_cause), published nationally for all ages only.
+# 1. Epic suppresses a cell built on 10 or fewer encounters. The count shows
+#    "10 or fewer" and the length-of-stay statistics are blank. Counts are
+#    imputed as 5 and flagged; length-of-stay statistics are not counts, so they
+#    stay missing and are flagged.
 #
-# 2. "Percentage of Sliced Population" is the share of the nearest enclosing
-#    block, so it means something different in each block:
-#      national, one diagnosis : diagnosis share of all ED encounters
-#                                -> epic_ed_pct_visits_*   (national only)
-#      state, all ages         : state share of the national diagnosis volume
-#                                (not published)
-#      state, age band         : age band share of the state's diagnosis volume
-#                                -> epic_ed_pct_age_*
-#      national, age band      : age band share of the national diagnosis volume
-#                                (from a separate export with no state slice)
-#                                -> epic_ed_pct_age_*
-#    Only values Epic reports are published; nothing is derived from them. The
-#    state share of the national diagnosis volume is not published.
+# 2. The "Less than 25 Years" band overlaps the narrower bands below it, and the
+#    age bands do not cover every encounter (some have no recorded age), so the
+#    bands do not add up to the all-ages row. Both are published as exported.
 #
-# 3. Epic omits a suppressed row from the export outright instead of blanking it,
-#    so an absent row and a blank cell both mean "not published". These statistics
-#    are not counts, so they cannot be imputed: the value is left missing and
-#    the suppression flag is set.
+# 3. Only whole calendar quarters are comparable. The ingest stops on a period
+#    that is not one.
 #
-# 4. The final period of an export is usually a partial quarter (the export date
-#    cuts it off). Partial quarters are not comparable and are dropped.
-#
-# 5. Every session must be filtered to Country of Residence = United States; a
+# 4. Every session must be filtered to Country of Residence = United States; a
 #    Country of Care or Sneak Peek (sample) export is rejected on read.
-#
-# 6. ED visit counts (epic_ed_n_visits_all_cause) come from a second export, a
-#    crosstab (State of Residence x Age at Time of Visit x Month) of the Number of
-#    ED Encounters, for all diagnoses. The only step applied is summing the three
-#    months of each whole quarter. Counts of "10 or fewer" are imputed as 5 and
-#    flagged. The crosstab's age rows use the same bands as the LOS export; its
-#    'No value' age rows are disregarded. The age rows do not add up to the
-#    state's 'Total' row (the 'Overall' count); both are published as exported.
-#    The 0-24 row is exported directly ('Less than 25 Years') and overlaps the
-#    bands below it. A second crosstab supplies it (and drops the 0-9 band);
-#    the crosstabs are merged, keeping one copy of each shared cell. The LOS
-#    exports carry a 0-24 band too, so it is not count-only.
 # =============================================================================
 
 library(dplyr)
@@ -90,54 +60,48 @@ if (!file.exists("process.json")) {
 # Password for the encrypted xlsx exports (set in .Renviron via usethis::edit_r_environ())
 xlsx_password <- Sys.getenv("EPIC_XLSX_PASSWORD")
 
-# Recognized ED Diagnoses buckets, keyed by the output column suffix. Values are
-# regexes matched against the bucket label in the export. A blank label is the
-# all-ED-encounters total and is mapped to all_cause separately.
+# --- Label maps: the contract with the export --------------------------------
+# Row dimensions, as labeled in the header row
+DIM_LABELS <- c(
+  "Year"                 = "year",
+  "Quarter"              = "quarter",
+  "Age at Time of Visit" = "age",
+  "State of Residence"   = "state"
+)
+
+# ED Diagnoses groups, keyed by the output column suffix. Regexes match the
+# group label in the export; "Total" is every ED diagnosis.
 DX_PATTERNS <- c(
   suicidal_behavior = "^Suicidal behavio",
-  mood              = "^Mood",
-  behavioral        = "^Behavioral",
-  substance_use     = "^Substance use",
-  psychosis         = "^Psychosis",
-  eating_disorders  = "^Eating disorder",
   other             = "^Other",
-  all_cause         = "^Total"
+  all               = "^Total"
 )
 
-# Header row 10 reads
-#   Start Date | End Date | <slicing columns, any order> | <measure> | ...
-FLAT_DIM_MAP <- c(
-  "Slices by ED Diagnoses"                 = "dx_label",
-  "Slices by State of Residence"           = "state",
-  "Slices by Age at Time of Visit (Years)" = "age"
-)
-FLAT_MEASURE_PATTERNS <- c(
-  q1     = "^Q1\\b",
-  q3     = "^Q3\\b",
-  median = "^Median",
-  pct    = "^Percentage of Sliced Population"
+# Measures, keyed by the output column prefix. The all-diagnoses visit count is
+# published as plain epic_ed_n_visits.
+MEASURE_PATTERNS <- c(
+  epic_ed_los_q1     = "^Q1\\b",
+  epic_ed_los_q3     = "^Q3\\b",
+  epic_ed_los_median = "^Median",
+  epic_ed_n_visits   = "^Number of ED Encounters"
 )
 
-# Age bands, mapped to the repository's age labels. "Overall" (all ages) is the
-# unstratified row.
-AGE_LABELS <- c(
-  "Less than 10 Years"                       = "0-9",
-  "10 Years or more and less than 15 Years"  = "10-14",
-  "15 Years or more and less than 20 Years"  = "15-19",
-  "20 Years or more and less than 25 Years"  = "20-24",
-  "Less than 25 Years"                       = "0-24",
-  "25 Years or more and less than 45 Years"  = "25-44",
-  "45 Years or more and less than 65 Years"  = "45-64",
-  "65 Years or more"                         = "65+"
+# Age bands, mapped to the repository's age labels. Epic has written the bands
+# both as ">= 10 and < 15 Years" and as "10 Years or more and less than 15
+# Years"; both match. Regexes avoid the non-ASCII comparison signs.
+AGE_PATTERNS <- c(
+  "0-9"   = "^Less than 10 Years",
+  "10-14" = "^(\\S+ 10 and \\S+ 15|10 Years or more and less than 15) Years",
+  "15-19" = "^(\\S+ 15 and \\S+ 20|15 Years or more and less than 20) Years",
+  "20-24" = "^(\\S+ 20 and \\S+ 25|20 Years or more and less than 25) Years",
+  "0-24"  = "^Less than 25 Years",
+  "25-44" = "^(\\S+ 25 and \\S+ 45|25 Years or more and less than 45) Years",
+  "45-64" = "^(\\S+ 45 and \\S+ 65|45 Years or more and less than 65) Years",
+  "65+"   = "^65 Years or more",
+  "Overall" = "^Total"
 )
 
 INDEX_COLS <- c("geography", "time", "age")
-
-# Published output column families, in output order
-FAMILIES <- c(
-  "epic_ed_los_median", "epic_ed_los_q1", "epic_ed_los_q3",
-  "epic_ed_pct_visits", "epic_ed_pct_age"
-)
 
 # Match each label against a set of regexes; NA unless exactly one matches
 match_patterns <- function(labels, patterns) {
@@ -150,14 +114,14 @@ match_patterns <- function(labels, patterns) {
 # =============================================================================
 # 1. Locate raw files
 # =============================================================================
-# Place exported .xlsx files from Epic Cosmos SlicerDicer into raw/staging/.
+# Place the exported .xlsx from Epic Cosmos SlicerDicer in raw/staging/.
 # Superseded exports live in raw/archive/ and are not read.
 staging_files <- list.files("raw/staging", pattern = "\\.xlsx$", full.names = TRUE)
 
 if (length(staging_files) == 0) {
   stop(
     "No staging files found in raw/staging/.\n",
-    "Export data from Epic Cosmos SlicerDicer and place .xlsx files there."
+    "Export data from Epic Cosmos SlicerDicer and place the .xlsx file there."
   )
 }
 
@@ -217,124 +181,68 @@ if (!identical(process$raw_state, current_state)) {
     invisible(TRUE)
   }
 
-  # Return one file's cells in long form: one row per (period x diagnosis x
-  # state x age band x measure).
-  extract_flat_data <- function(grid, file) {
+  # Return one crosstab in long form: one row per (quarter x age x state x
+  # diagnosis group x measure).
+  extract_crosstab <- function(grid, file) {
     nm      <- basename(file)
-    hdr_row <- which(trimws(grid[[1]]) == "Start Date")[1]
-    if (is.na(hdr_row)) stop(nm, " is not a flat SlicerDicer export (no 'Start Date' header).")
+    hdr_row <- which(trimws(grid[[1]]) == "Year")[1]
+    if (is.na(hdr_row) || hdr_row < 3) stop(nm, " has no 'Year' header row.")
     hdr <- trimws(unlist(grid[hdr_row, ]))
-    if (!identical(unname(hdr[1:2]), c("Start Date", "End Date"))) {
-      stop("Expected 'Start Date', 'End Date' as the first two columns of ", nm)
-    }
 
-    # Slicing columns run contiguously from column 3; measures follow them
-    j <- 3
-    while (j <= length(hdr) && hdr[j] %in% names(FLAT_DIM_MAP)) j <- j + 1
-    dim_cols  <- seq_len(j - 1)[-(1:2)]
-    meas_cols <- which(hdr != "" & seq_along(hdr) >= j)
-    meas      <- match_patterns(hdr[meas_cols], FLAT_MEASURE_PATTERNS)
-    if (length(dim_cols) == 0 || anyNA(meas) || anyDuplicated(meas)) {
+    # Row dimensions run contiguously from column 1; values follow them
+    dim_cols <- which(hdr %in% names(DIM_LABELS))
+    if (!identical(dim_cols, seq_along(dim_cols)) || length(dim_cols) != length(DIM_LABELS) ||
+        !setequal(hdr[dim_cols], names(DIM_LABELS))) {
+      stop(
+        "Unexpected row dimensions in ", nm, ": ", paste(sQuote(hdr[hdr != ""]), collapse = ", "),
+        "\nExtend DIM_LABELS as needed."
+      )
+    }
+    val_cols <- seq_along(hdr)[-dim_cols]
+
+    # The diagnosis group sits two rows above the header, the measure one row
+    # above; the group label is written on its first column only
+    group   <- trimws(unlist(grid[hdr_row - 2, ]))
+    measure <- trimws(unlist(grid[hdr_row - 1, ]))
+    for (i in val_cols) if (group[i] == "" && i > min(val_cols)) group[i] <- group[i - 1]
+    val_cols <- val_cols[measure[val_cols] != ""]
+
+    dx   <- match_patterns(group[val_cols],   DX_PATTERNS)
+    meas <- match_patterns(measure[val_cols], MEASURE_PATTERNS)
+    if (anyNA(dx) || anyNA(meas) || anyDuplicated(paste(dx, meas))) {
       stop(
         "Could not classify the columns of ", nm, ": ",
-        paste(sQuote(hdr[meas_cols][is.na(meas) | duplicated(meas)]), collapse = ", "),
-        "\nExtend FLAT_MEASURE_PATTERNS / FLAT_DIM_MAP as needed."
+        paste(sQuote(paste(group[val_cols], "/", measure[val_cols])[is.na(dx) | is.na(meas) | duplicated(paste(dx, meas))]), collapse = "; "),
+        "\nExtend DX_PATTERNS / MEASURE_PATTERNS as needed."
       )
     }
 
-    # Data rows are those with an ISO start date; blank spacer rows and the
-    # "Slices by ..." block labels carry none
-    data_rows <- which(grepl("^\\d{4}-\\d{2}-\\d{2}$", trimws(grid[[1]])))
-    data_rows <- data_rows[data_rows > hdr_row]
-    d     <- grid[data_rows, , drop = FALSE]
+    rows <- (hdr_row + 1):nrow(grid)
     clean <- function(x) na_if(trimws(iconv(x, to = "UTF-8", sub = "")), "")
+    keys <- tibble::tibble(.rows = length(rows))
+    for (k in dim_cols) keys[[DIM_LABELS[[hdr[k]]]]] <- clean(grid[[k]][rows])
 
-    keys <- tibble::tibble(
-      start    = as.Date(trimws(d[[1]])),
-      end      = as.Date(trimws(d[[2]])),
-      dx_label = NA_character_,
-      state    = NA_character_,
-      age      = NA_character_
-    )
-    for (k in dim_cols) keys[[FLAT_DIM_MAP[[hdr[k]]]]] <- clean(d[[k]])
+    # Blank rows below the table carry no state; merged cells are filled down
+    keep <- !is.na(keys$state)
+    keys <- keys[keep, ]
+    raw  <- grid[rows[keep], val_cols, drop = FALSE]
+    keys <- tidyr::fill(keys, year, quarter, age, .direction = "down")
 
-    message("  ", nrow(keys), " rows | measures: ", paste(meas, collapse = ", "))
-    bind_rows(lapply(seq_along(meas_cols), function(k) {
-      raw   <- trimws(d[[meas_cols[k]]])
-      value <- suppressWarnings(as.numeric(gsub("[%,]", "", raw)))
-      mutate(keys, meas = meas[k], value = value)
+    message("  ", nrow(keys), " rows x ", length(val_cols), " value columns | groups: ",
+            paste(unique(dx), collapse = ", "))
+    bind_rows(lapply(seq_along(val_cols), function(k) {
+      mutate(keys, dx = dx[k], meas = meas[k], raw = trimws(raw[[k]]))
     }))
   }
 
-  # Crosstab of the visit count by month: rows are State of Residence (plus a
-  # 'Total' row for the nation) with a second 'Age at Time of Visit' column
-  # holding the age bands and an all-ages 'Total: ...' row per state; columns are
-  # Year over Month, the year sitting on the first month of each year. The state
-  # is written on the first row of its group only.
-  is_state_month_crosstab <- function(grid) {
-    top <- trimws(grid[[1]][seq_len(min(30, nrow(grid)))])
-    "State of Residence" %in% top && !("Start Date" %in% top)
-  }
-
-  extract_state_month_counts <- function(grid, file) {
-    nm      <- basename(file)
-    lab_row <- which(trimws(grid[[1]]) == "State of Residence")[1]
-    measure <- trimws(grid[which(trimws(grid[[1]]) == "Measure")[1], 2])
-    if (is.na(measure) || !grepl("^Number of ED Encounters", measure)) {
-      stop("Expected the 'Number of ED Encounters' measure in ", nm, ", found: ", measure)
-    }
-    if (trimws(grid[lab_row, 2]) != "Age at Time of Visit") {
-      stop(nm, " must be sliced by Age at Time of Visit as well as State of Residence.")
-    }
-
-    years  <- trimws(unlist(grid[lab_row - 2, ]))
-    months <- trimws(unlist(grid[lab_row - 1, ]))
-    cols   <- which(months != "" & seq_along(months) >= 3)
-    for (i in seq_along(years)) if (i > 1 && years[i] == "") years[i] <- years[i - 1]
-    start <- as.Date(paste(years[cols], months[cols], "01"), format = "%Y %b %d")
-    if (anyNA(start)) stop("Could not parse the Year / Month header of ", nm)
-
-    rows  <- (lab_row + 1):nrow(grid)
-    state <- trimws(iconv(grid[[1]][rows], to = "UTF-8", sub = ""))
-    age   <- trimws(grid[[2]][rows])
-    keep  <- state != "" | age != ""
-    rows <- rows[keep]; state <- state[keep]; age <- age[keep]
-    for (i in seq_along(state)) if (i > 1 && state[i] == "") state[i] <- state[i - 1]
-    age[grepl("^Total", age)] <- ""   # the all-ages row
-
-    raw     <- trimws(unlist(grid[rows, cols, drop = FALSE], use.names = FALSE))
-    imputed <- grepl("^10 or fewer$", raw, ignore.case = TRUE)
-    value   <- suppressWarnings(as.numeric(gsub(",", "", raw)))
-    value[imputed] <- 5
-
-    message("  ", length(rows), " rows x ", length(cols), " months | measure: count")
-    tibble::tibble(
-      start   = rep(start, each = length(rows)),
-      state   = rep(state, times = length(cols)),
-      age_raw = na_if(rep(age, times = length(cols)), ""),
-      value   = value,
-      imputed = imputed
-    ) %>%
-      mutate(state = if_else(state == "Total", NA_character_, state))
-  }
-
-  parsed <- lapply(staging_files, function(f) {
+  long <- bind_rows(lapply(staging_files, function(f) {
     grid <- read_slicerdicer_grid(f, xlsx_password)
     require_residence(grid, basename(f))
-    if (is_state_month_crosstab(grid)) {
-      list(type = "counts", data = extract_state_month_counts(grid, f))
-    } else {
-      list(type = "flat", data = extract_flat_data(grid, f))
-    }
-  })
-  of_type <- function(t) bind_rows(lapply(Filter(function(p) p$type == t, parsed), `[[`, "data"))
-  flat_long    <- of_type("flat")
-  month_counts <- of_type("counts")
-  if (nrow(flat_long) == 0) stop("No length-of-stay export (flat SlicerDicer layout) in raw/staging/.")
-  if (nrow(month_counts) == 0) stop("No visit count crosstab (State x Age x Month) in raw/staging/.")
+    extract_crosstab(grid, f)
+  }))
 
   # ===========================================================================
-  # 3. Standardize periods, diagnoses, ages and geographies
+  # 3. Standardize periods, ages and geographies
   # ===========================================================================
   all_fips <- vroom::vroom("../../resources/all_fips.csv.gz", show_col_types = FALSE)
 
@@ -347,177 +255,81 @@ if (!identical(process$raw_state, current_state)) {
   stopifnot(!anyDuplicated(state_fips_lookup$geography_name))
   valid_states <- c(state.name, "District of Columbia")
 
-  # Only whole calendar quarters are comparable; anything else is dropped
-  whole_quarter <- flat_long$start == floor_date(flat_long$start, "quarter") &
-    flat_long$end == ceiling_date(flat_long$start, "quarter") - days(1)
-  if (any(!whole_quarter)) {
-    message(
-      "Dropping ", sum(!whole_quarter), " cell(s) whose period is not a whole quarter: ",
-      paste(unique(paste(flat_long$start, "to", flat_long$end)[!whole_quarter]), collapse = ", ")
-    )
-  }
-
-  flat_long <- flat_long %>%
-    filter(whole_quarter) %>%
-    mutate(
-      time = format(end, "%Y-%m-%d"),
-      dx   = if_else(is.na(dx_label), "all_cause", match_patterns(dx_label, DX_PATTERNS)),
-      level = case_when(
-        !is.na(age)       ~ "age",
-        !is.na(state)     ~ "state",
-        dx != "all_cause" ~ "national_dx",
-        TRUE              ~ "national_all"
-      )
-    )
-
-  if (anyNA(flat_long$dx)) {
+  # Quarter label ("Jul 1 - Sep 30", any dash) -> quarter end date. Only whole
+  # calendar quarters are accepted.
+  quarter_ends <- c("Jan 1" = "Mar 31", "Apr 1" = "Jun 30", "Jul 1" = "Sep 30", "Oct 1" = "Dec 31")
+  q_start <- sub("^(\\w{3} \\d+).*$", "\\1", long$quarter)
+  q_end   <- sub("^.*?(\\w{3} \\d+)$", "\\1", long$quarter)
+  bad_q   <- !(q_start %in% names(quarter_ends)) | unname(quarter_ends[q_start]) != q_end
+  if (any(bad_q, na.rm = TRUE) || anyNA(bad_q)) {
     stop(
-      "Unrecognized ED Diagnoses label(s): ",
-      paste(sQuote(unique(flat_long$dx_label[is.na(flat_long$dx)])), collapse = ", "),
-      "\nExtend DX_PATTERNS as needed."
+      "Period(s) that are not whole calendar quarters: ",
+      paste(sQuote(unique(long$quarter[bad_q | is.na(bad_q)])), collapse = ", ")
     )
   }
-  unknown_age <- setdiff(unique(na.omit(flat_long$age)), names(AGE_LABELS))
-  if (length(unknown_age) > 0) {
+  long$time <- format(
+    as.Date(paste(long$year, q_end), format = "%Y %b %d"), "%Y-%m-%d"
+  )
+  if (anyNA(long$time)) stop("Could not parse the Year / Quarter labels.")
+
+  long$age_label <- match_patterns(long$age, AGE_PATTERNS)
+  if (anyNA(long$age_label)) {
     stop(
-      "Unrecognized age band(s): ", paste(sQuote(unknown_age), collapse = ", "),
-      "\nExtend AGE_LABELS as needed."
+      "Unrecognized age band(s): ", paste(sQuote(unique(long$age[is.na(long$age_label)])), collapse = ", "),
+      "\nExtend AGE_PATTERNS as needed."
     )
   }
 
-  # Territories, Puerto Rico, Canadian provinces, Mexican states and 'None of
-  # the above' have no all_fips name and are dropped
-  dropped_geos <- setdiff(unique(na.omit(flat_long$state)), valid_states)
+  # Territories, Puerto Rico, Canadian provinces, Mexican states, 'Armed Forces'
+  # and 'None of the above' have no all_fips name and are dropped
+  dropped_geos <- setdiff(unique(long$state), c(valid_states, "Total"))
   if (length(dropped_geos) > 0) {
-    message("Dropping non-state geograph(ies): ", paste(dropped_geos, collapse = ", "))
+    message("Dropping non-state geograph(ies): ", paste(sort(dropped_geos), collapse = ", "))
   }
 
-  flat_long <- flat_long %>%
-    filter(is.na(state) | state %in% valid_states) %>%
-    mutate(
-      geography_name = coalesce(state, "United States"),
-      age_label      = if_else(is.na(age), "Overall", unname(AGE_LABELS[age])),
-      # Which column a cell feeds. The state share of the national diagnosis
-      # volume (meas == "pct", level == "state") is not published.
-      column = case_when(
-        meas == "median"                       ~ paste0("epic_ed_los_median_", dx),
-        meas == "q1"                           ~ paste0("epic_ed_los_q1_", dx),
-        meas == "q3"                           ~ paste0("epic_ed_los_q3_", dx),
-        meas == "pct" & level == "national_dx" ~ paste0("epic_ed_pct_visits_", dx),
-        meas == "pct" & level == "age"         ~ paste0("epic_ed_pct_age_", dx),
-        TRUE                                   ~ NA_character_
-      )
-    ) %>%
-    filter(!is.na(column)) %>%
-    left_join(state_fips_lookup, by = "geography_name") %>%
-    filter(!is.na(geography))
+  long <- long %>%
+    filter(state %in% c(valid_states, "Total")) %>%
+    mutate(geography_name = if_else(state == "Total", "United States", state)) %>%
+    left_join(state_fips_lookup, by = "geography_name")
+  stopifnot(!anyNA(long$geography))
 
-  # ---------------------------------------------------------------------------
-  # ED visit counts: months -> whole quarters
-  # ---------------------------------------------------------------------------
-  # 'No value' age rows are disregarded
-  # The 'Less than 5 Years' row (a 0-4 band the LOS exports do not have) is not
-  # published. Two crosstabs overlap on the shared age rows, so keep one
-  # copy of each state x age x month cell.
-  month_counts <- month_counts[!(month_counts$age_raw %in% c("No value", "Less than 5 Years")), ]
-  month_counts <- distinct(month_counts, start, state, age_raw, .keep_all = TRUE)
-  unknown_ct_age <- setdiff(unique(na.omit(month_counts$age_raw)), names(AGE_LABELS))
-  if (length(unknown_ct_age) > 0) {
-    stop("Unrecognized age row(s) in the count crosstab: ",
-         paste(sQuote(unknown_ct_age), collapse = ", "), "\nExtend AGE_LABELS as needed.")
+  # Suppression: a count of "10 or fewer" (or a blank) is imputed as 5; the
+  # length-of-stay statistics are not counts and stay missing. Either way the
+  # flag records what Epic withheld, computed before imputation.
+  is_count <- long$meas == "epic_ed_n_visits"
+  value    <- suppressWarnings(as.numeric(gsub(",", "", long$raw)))
+  unparsed <- !is.na(value) | long$raw %in% c("", "-", "10 or fewer")
+  if (any(!unparsed)) {
+    stop("Unrecognized cell value(s): ", paste(sQuote(unique(long$raw[!unparsed])), collapse = ", "))
   }
-
-  counts_age <- month_counts %>%
-    filter(is.na(state) | state %in% valid_states) %>%
-    mutate(
-      geography_name = coalesce(state, "United States"),
-      age    = if_else(is.na(age_raw), "Overall", unname(AGE_LABELS[age_raw])),
-      qstart = floor_date(start, "quarter")
-    ) %>%
-    left_join(state_fips_lookup, by = "geography_name") %>%
-    filter(!is.na(geography)) %>%
-    group_by(geography, qstart, age) %>%
-    summarize(
-      n_months = n(),
-      flag     = as.integer(any(imputed)),
-      value    = if (anyNA(value)) NA_real_ else sum(value),
-      .groups  = "drop"
-    ) %>%
-    filter(n_months == 3, !is.na(value)) %>%     # whole quarters only
-    mutate(time = format(ceiling_date(qstart, "quarter") - days(1), "%Y-%m-%d")) %>%
-    select(geography, time, age, value, flag)
+  long$flag  <- as.integer(is.na(value))
+  long$value <- if_else(is_count & is.na(value), 5, value)
+  # The all-diagnoses visit count is plain epic_ed_n_visits
+  long$column <- if_else(
+    is_count & long$dx == "all", long$meas, paste0(long$meas, "_", long$dx)
+  )
 
   # ===========================================================================
   # 4. Build the wide table
   # ===========================================================================
-  # One row per geography x time x age, one column per statistic x diagnosis,
-  # each value followed by its suppression flag. The flag is 1 where the
-  # statistic is missing for a row it should describe (suppressed, or the row was
-  # not returned), 0 where it was published, and NA where the column does not
-  # describe that stratum at all.
-  wide <- flat_long %>%
+  value_wide <- long %>%
     transmute(geography, time, age = age_label, column, value) %>%
-    group_by(geography, time, age, column) %>%
-    summarize(
-      value = if (all(is.na(value))) NA_real_ else value[!is.na(value)][1],
-      .groups = "drop"
-    ) %>%
     pivot_wider(id_cols = all_of(INDEX_COLS), names_from = column, values_from = value)
+  flag_wide <- long %>%
+    transmute(geography, time, age = age_label, column = paste0(column, "_suppressed_flag"), flag) %>%
+    pivot_wider(id_cols = all_of(INDEX_COLS), names_from = column, values_from = flag)
+  wide <- left_join(value_wide, flag_wide, by = INDEX_COLS)
 
-  cols <- setdiff(names(wide), INDEX_COLS)
-
-  # A row exists only if the export published something for it
-  wide <- wide[rowSums(!is.na(wide[cols])) > 0, ]
-
-  # Is the row a stratum the column describes?
-  in_scope <- function(col) {
-    switch(
-      sub("^(epic_ed_los_median|epic_ed_los_q1|epic_ed_los_q3|epic_ed_pct_visits|epic_ed_pct_age)_.*$", "\\1", col),
-      # National all ages only: Epic reports no state-level case mix
-      # (the cells at state level hold other shares, which are not published)
-      epic_ed_pct_visits = wide$geography == "00" & wide$age == "Overall",
-      # Age-band shares: states and the nation (national age-band export)
-      epic_ed_pct_age    = wide$age != "Overall",
-      # Length of stay: all-cause is published nationally for all ages only
-      if (grepl("_all_cause$", col)) {
-        wide$geography == "00" & wide$age == "Overall"
-      } else {
-        rep(TRUE, nrow(wide))
-      }
-    )
-  }
-  for (col in cols) {
-    wide[[paste0(col, "_suppressed_flag")]] <- if_else(
-      in_scope(col), as.integer(is.na(wide[[col]])), NA_integer_
-    )
-  }
-
-  # All-ED-encounter visit counts, as exported. Unlike the length-of-stay
-  # statistics a suppressed count is imputed (as 5) rather than left missing, so
-  # its flag may be 1 on an observed value. Only quarters the LOS export covers
-  # are kept, so every count has mental health data alongside it; rows for strata
-  # the LOS export does not report carry the count only.
-  counts_out <- counts_age %>%
-    filter(time >= min(flat_long$time), time <= max(flat_long$time)) %>%
-    transmute(
-      geography, time, age,
-      epic_ed_n_visits_all_cause = value,
-      epic_ed_n_visits_all_cause_suppressed_flag = flag
-    )
-  wide <- full_join(wide, counts_out, by = INDEX_COLS)
-
-  # Order: index, each family's diagnoses in a stable order with each value
+  # Order: index, then each measure family across diagnosis groups, each value
   # followed by its flag
-  ordered <- intersect(
-    as.vector(outer(names(DX_PATTERNS), FAMILIES, function(dx, fam) paste0(fam, "_", dx))),
-    names(wide)
-  )
+  dx_order <- c("all", "suicidal_behavior", "other")
+  ordered <- unlist(lapply(
+    c("epic_ed_los_median", "epic_ed_los_q1", "epic_ed_los_q3", "epic_ed_n_visits"),
+    function(m) ifelse(dx_order == "all" & m == "epic_ed_n_visits", m, paste0(m, "_", dx_order))
+  ))
+  stopifnot(setequal(ordered, setdiff(names(value_wide), INDEX_COLS)))
   data_quarterly <- wide %>%
-    select(all_of(c(
-      INDEX_COLS,
-      as.vector(rbind(ordered, paste0(ordered, "_suppressed_flag"))),
-      "epic_ed_n_visits_all_cause", "epic_ed_n_visits_all_cause_suppressed_flag"
-    ))) %>%
+    select(all_of(c(INDEX_COLS, as.vector(rbind(ordered, paste0(ordered, "_suppressed_flag")))))) %>%
     arrange(across(all_of(INDEX_COLS)))
 
   # ===========================================================================
@@ -528,25 +340,27 @@ if (!identical(process$raw_state, current_state)) {
     stop("Duplicate ", paste(INDEX_COLS, collapse = "/"), " rows: ", nrow(dupes))
   }
 
-  # A value must carry flag 0 and a missing value must carry flag 1 or NA
-  measure_cols <- setdiff(
-    grep("^epic_", names(data_quarterly), value = TRUE),
-    grep("_suppressed_flag$", names(data_quarterly), value = TRUE)
-  )
-  for (mc in setdiff(measure_cols, "epic_ed_n_visits_all_cause")) {
+  # A length-of-stay value must carry flag 0 and a missing one flag 1. A count is
+  # always present (imputed as 5 when suppressed).
+  for (mc in ordered) {
     v <- data_quarterly[[mc]]
     f <- data_quarterly[[paste0(mc, "_suppressed_flag")]]
-    if (any(!is.na(v) & !(f %in% 0L)) || any(is.na(v) & f %in% 0L)) {
+    if (any(is.na(f))) stop("Missing suppression flag in ", mc)
+    if (grepl("^epic_ed_n_visits", mc)) {
+      if (anyNA(v) || any(f == 1L & v != 5)) {
+        stop("Count and suppression flag disagree in ", mc)
+      }
+    } else if (any(!is.na(v) & f != 0L) || any(is.na(v) & f != 1L)) {
       stop("Value and suppression flag disagree in ", mc)
     }
+    message(mc, ": ", sum(f == 1L), " suppressed cell(s) of ", length(f))
   }
 
   # Quartile ordering over cells where all three statistics are published
   ord_total <- 0L
   ord_viol  <- 0L
-  for (dxs in names(DX_PATTERNS)) {
+  for (dxs in dx_order) {
     qcols <- paste0("epic_ed_los_", c("q1", "median", "q3"), "_", dxs)
-    if (!all(qcols %in% names(data_quarterly))) next
     tri <- data_quarterly[, qcols]
     ok  <- stats::complete.cases(tri)
     ord_total <- ord_total + sum(ok)
@@ -560,44 +374,29 @@ if (!identical(process$raw_state, current_state)) {
     stop("Q1 <= median <= Q3 fails in more than 1% of cells; check the measure mapping.")
   }
 
-  pct_cols <- grep("^epic_ed_pct_(visits|age)_[a-z_]+$", measure_cols, value = TRUE)
-  pct_vals <- unlist(data_quarterly[, pct_cols])
-  if (any(pct_vals < 0 | pct_vals > 100, na.rm = TRUE)) {
-    stop("Percentages outside [0, 100]")
+  if (any(unlist(data_quarterly[, grep("^epic_ed_los", ordered, value = TRUE)]) <= 0, na.rm = TRUE)) {
+    stop("Non-positive length of stay.")
   }
 
-  # The age bands of one state-quarter-diagnosis are shares of the same total
-  # (every age), so they cannot sum past 100 beyond rounding
-  pa_cols <- grep("^epic_ed_pct_age_[a-z_]+$", measure_cols, value = TRUE)
-  age_sums <- data_quarterly %>%
-    filter(!age %in% c("Overall", "0-24"), geography != "00") %>%   # 0-24 overlaps the bands
-    group_by(geography, time) %>%
-    summarize(across(all_of(pa_cols), ~ sum(.x, na.rm = TRUE)), .groups = "drop")
-  max_sum <- max(unlist(age_sums[, pa_cols]))
-  message("Age-share check: largest sum of age bands within a state-quarter-diagnosis is ",
-          round(max_sum, 1), "%")
-  if (max_sum > 101) stop("Age shares sum past 100 within a state-quarter-diagnosis.")
+  # The diagnosis groups are subsets of all ED encounters; imputed 5s can push a
+  # small cell over, so only observed cells are compared
+  for (dxs in c("suicidal_behavior", "other")) {
+    n_dx <- data_quarterly[[paste0("epic_ed_n_visits_", dxs)]]
+    f_dx <- data_quarterly[[paste0("epic_ed_n_visits_", dxs, "_suppressed_flag")]]
+    if (any(f_dx == 0L & n_dx > data_quarterly$epic_ed_n_visits &
+            data_quarterly$epic_ed_n_visits_suppressed_flag == 0L)) {
+      stop("A diagnosis group exceeds all ED encounters (", dxs, ").")
+    }
+  }
 
-  # Visit counts: the national count should be close to the sum of the states
-  # (territories and unknown state of residence are in the national figure only)
-  nv <- data_quarterly %>% filter(!is.na(epic_ed_n_visits_all_cause))
-  ratio <- nv %>% filter(age == "Overall") %>% group_by(time) %>%
-    summarize(r = epic_ed_n_visits_all_cause[geography == "00"] /
-                sum(epic_ed_n_visits_all_cause[geography != "00"]), .groups = "drop")
+  # The national count should be close to the sum of the states (territories and
+  # unknown state of residence are in the national figure only)
+  ratio <- data_quarterly %>% filter(age == "Overall") %>% group_by(time) %>%
+    summarize(r = epic_ed_n_visits[geography == "00"] /
+                sum(epic_ed_n_visits[geography != "00"]), .groups = "drop")
   message("ED visits, national / sum of states: median ", round(median(ratio$r), 3),
           ", range ", paste(round(range(ratio$r), 3), collapse = "-"))
   if (any(ratio$r < 0.9 | ratio$r > 1.2)) stop("National ED visit count is far from the sum of the states.")
-
-  if (nrow(filter(data_quarterly, epic_ed_n_visits_all_cause < 0)) > 0) stop("Negative visit count.")
-  # The age rows of the crosstab do not cover every visit (note 6), so the bands
-  # add up to less than the all-ages count, never more
-  band_ratio <- nv %>% filter(geography != "00") %>%
-    group_by(geography, time) %>%
-    summarize(r = sum(epic_ed_n_visits_all_cause[!age %in% c("Overall", "0-24")]) /
-                epic_ed_n_visits_all_cause[age == "Overall"], .groups = "drop")
-  message("Age-band visits / state all-ages visits: median ", round(median(band_ratio$r), 3),
-          ", range ", paste(round(range(band_ratio$r), 3), collapse = "-"))
-  if (any(band_ratio$r > 1.001)) stop("State age-band visits exceed the state's all-ages count.")
 
   message(
     "Quarterly: ", nrow(data_quarterly), " rows x ", ncol(data_quarterly), " cols | ",
