@@ -5,63 +5,11 @@
     {
       "path": "ingest.R",
       "manual": false,
-      "last_run": "2026-10-07 13:30:48",
+      "last_run": "2026-10-09 15:34:29",
       "frequency": 0,
-      "run_time": 47.13,
+      "run_time": 14.9,
       "last_status": {
-        "log": [
-          "",
-          "Attaching package: 'dplyr'",
-          "",
-          "The following objects are masked from 'package:stats':",
-          "",
-          "    filter, lag",
-          "",
-          "The following objects are masked from 'package:base':",
-          "",
-          "    intersect, setdiff, setequal, union",
-          "",
-          "",
-          "Attaching package: 'lubridate'",
-          "",
-          "The following objects are masked from 'package:base':",
-          "",
-          "    date, intersect, setdiff, union",
-          "",
-          "Reading: behavioral med pct.xlsx",
-          "  5887 rows | measures: median, pct",
-          "Reading: behavioral qs.xlsx",
-          "  5844 rows | measures: q3, q1",
-          "Reading: ED Encounters_Crosstab_2026-10-07T12_25_04.xlsx",
-          "  372 rows x 56 months | measure: count | by age band",
-          "Reading: ED Encounters_Summary_2026-10-07T11_31_13.xlsx",
-          "  1253 rows | measures: q3, q1",
-          "Reading: ED Encounters_Summary_2026-10-07T12_02_47.xlsx",
-          "  12193 rows | measures: pct, median",
-          "Reading: ed med pct.xlsx",
-          "  1297 rows | measures: median, pct",
-          "Reading: mood q1 q3.xlsx",
-          "  11671 rows | measures: q1, q3",
-          "Reading: other all.xlsx",
-          "  5055 rows | measures: q3, q1, median, pct",
-          "Reading: psychosis all.xlsx",
-          "  6200 rows | measures: q3, q1, median, pct",
-          "Reading: psychosis med pct.xlsx",
-          "  6200 rows | measures: median, pct",
-          "Reading: substance abuse all.xlsx",
-          "  9549 rows | measures: q3, q1, median, pct",
-          "Reading: suicide med pct.xlsx",
-          "  13645 rows | measures: median, pct",
-          "Reading: suicide qs.xlsx",
-          "  13628 rows | measures: q3, q1",
-          "Dropping non-state geograph(ies): None of the above, Puerto Rico, Virgin Islands, Armed Forces Africa, Guam, Armed Forces Pacific, American Samoa, South Pacific, Northern Mariana Islands, Federated States of Micronesia, Armed Forces America",
-          "Quartile check: 0 of 51608 triples violate Q1 <= median <= Q3 (0.00%)",
-          "Age-share check: largest sum of age bands within a state-month-diagnosis is 98.8%",
-          "Mental health share of ED encounters, state x month: median 6.63%, IQR 5.93-8.22%",
-          "Age-band counts / state all-ages count (all five bands present): median 0.566",
-          "ED visit counts, national / sum of states: median 1.001, range 1-1.001",
-          "Monthly: 17472 rows x 81 cols | 52 geographies | ages: 0-4, 10-14, 15-19, 20-24, 5-9, Overall | 2022-01-31 to 2026-08-31"
-        ],
+        "log": ["", "Attaching package: 'dplyr'", "", "The following objects are masked from 'package:stats':", "", "    filter, lag", "", "The following objects are masked from 'package:base':", "", "    intersect, setdiff, setequal, union", "", "", "Attaching package: 'lubridate'", "", "The following objects are masked from 'package:base':", "", "    date, intersect, setdiff, union", "", "Reading: ED Encounters_Crosstab_2026-10-09T14_24_58.xlsx", "  7632 rows x 12 value columns | groups: suicidal_behavior, other, all", "Dropping non-state geograph(ies): Armed Forces Africa, None of the above, Virgin Islands", "epic_ed_los_median_all: 0 suppressed cell(s) of 7200", "epic_ed_los_median_suicidal_behavior: 298 suppressed cell(s) of 7200", "epic_ed_los_median_other: 737 suppressed cell(s) of 7200", "epic_ed_los_q1_all: 0 suppressed cell(s) of 7200", "epic_ed_los_q1_suicidal_behavior: 298 suppressed cell(s) of 7200", "epic_ed_los_q1_other: 737 suppressed cell(s) of 7200", "epic_ed_los_q3_all: 0 suppressed cell(s) of 7200", "epic_ed_los_q3_suicidal_behavior: 298 suppressed cell(s) of 7200", "epic_ed_los_q3_other: 737 suppressed cell(s) of 7200", "epic_ed_n_visits: 0 suppressed cell(s) of 7200", "epic_ed_n_visits_suicidal_behavior: 296 suppressed cell(s) of 7200", "epic_ed_n_visits_other: 728 suppressed cell(s) of 7200", "Quartile check: 0 of 20565 triples violate Q1 <= median <= Q3 (0.00%)", "ED visits, national / sum of states: median 1.025, range 1.022-1.028", "Quarterly: 7200 rows x 27 cols | 50 geographies | ages: 0-24, 0-9, 10-14, 15-19, 20-24, 25-44, 45-64, 65+, Overall | 2022-09-30 to 2026-06-30"],
         "success": true
       }
     }
@@ -70,11 +18,11 @@
   "check_results": [],
   "standalone": false,
   "standard_state": {
-    "./data/cosmos_mental_health/measure_info.json": "5180abc6fac252e41305284436eec257",
-    "./data/cosmos_mental_health/standard/data.csv.gz": "0632756bc058c13255edb4d674020eff"
+    "./data/cosmos_mental_health/measure_info.json": "4268242f97171802da7469fb4646c06c",
+    "./data/cosmos_mental_health/standard/data.csv.gz": "52b67fd81745cb15a3279e1677d68397"
   },
   "raw_state": {
-    "files": ["raw/staging/ED Encounters_Crosstab_2026-10-09T12_09_25.xlsx", "raw/staging/ED Encounters_Summary_2026-10-09T11_54_54.xlsx", "raw/staging/ED Encounters_Summary_2026-10-09T11_56_18.xlsx"],
-    "hashes": ["ed16fdab81fe5eacdb7e344f7025f9ed", "57a2f1ba25046cd3a08ed972f47aeefd", "34ee091747227ea5747b48825c278701"]
+    "files": "raw/staging/ED Encounters_Crosstab_2026-10-09T14_24_58.xlsx",
+    "hashes": "208994900ff12a7fd39ec3b8de07590c"
   }
 }
