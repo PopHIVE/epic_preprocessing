@@ -9,7 +9,44 @@
       "frequency": 0,
       "run_time": 14.9,
       "last_status": {
-        "log": ["", "Attaching package: 'dplyr'", "", "The following objects are masked from 'package:stats':", "", "    filter, lag", "", "The following objects are masked from 'package:base':", "", "    intersect, setdiff, setequal, union", "", "", "Attaching package: 'lubridate'", "", "The following objects are masked from 'package:base':", "", "    date, intersect, setdiff, union", "", "Reading: ED Encounters_Crosstab_2026-10-09T14_24_58.xlsx", "  7632 rows x 12 value columns | groups: suicidal_behavior, other, all", "Dropping non-state geograph(ies): Armed Forces Africa, None of the above, Virgin Islands", "epic_ed_los_median_all: 0 suppressed cell(s) of 7200", "epic_ed_los_median_suicidal_behavior: 298 suppressed cell(s) of 7200", "epic_ed_los_median_other: 737 suppressed cell(s) of 7200", "epic_ed_los_q1_all: 0 suppressed cell(s) of 7200", "epic_ed_los_q1_suicidal_behavior: 298 suppressed cell(s) of 7200", "epic_ed_los_q1_other: 737 suppressed cell(s) of 7200", "epic_ed_los_q3_all: 0 suppressed cell(s) of 7200", "epic_ed_los_q3_suicidal_behavior: 298 suppressed cell(s) of 7200", "epic_ed_los_q3_other: 737 suppressed cell(s) of 7200", "epic_ed_n_visits: 0 suppressed cell(s) of 7200", "epic_ed_n_visits_suicidal_behavior: 296 suppressed cell(s) of 7200", "epic_ed_n_visits_other: 728 suppressed cell(s) of 7200", "Quartile check: 0 of 20565 triples violate Q1 <= median <= Q3 (0.00%)", "ED visits, national / sum of states: median 1.025, range 1.022-1.028", "Quarterly: 7200 rows x 27 cols | 50 geographies | ages: 0-24, 0-9, 10-14, 15-19, 20-24, 25-44, 45-64, 65+, Overall | 2022-09-30 to 2026-06-30"],
+        "log": [
+          "",
+          "Attaching package: 'dplyr'",
+          "",
+          "The following objects are masked from 'package:stats':",
+          "",
+          "    filter, lag",
+          "",
+          "The following objects are masked from 'package:base':",
+          "",
+          "    intersect, setdiff, setequal, union",
+          "",
+          "",
+          "Attaching package: 'lubridate'",
+          "",
+          "The following objects are masked from 'package:base':",
+          "",
+          "    date, intersect, setdiff, union",
+          "",
+          "Reading: ED Encounters_Crosstab_2026-10-09T14_24_58.xlsx",
+          "  7632 rows x 12 value columns | groups: suicidal_behavior, other, all",
+          "Dropping non-state geograph(ies): Armed Forces Africa, None of the above, Virgin Islands",
+          "epic_ed_los_median_all: 0 suppressed cell(s) of 7200",
+          "epic_ed_los_median_suicidal_behavior: 298 suppressed cell(s) of 7200",
+          "epic_ed_los_median_other: 737 suppressed cell(s) of 7200",
+          "epic_ed_los_q1_all: 0 suppressed cell(s) of 7200",
+          "epic_ed_los_q1_suicidal_behavior: 298 suppressed cell(s) of 7200",
+          "epic_ed_los_q1_other: 737 suppressed cell(s) of 7200",
+          "epic_ed_los_q3_all: 0 suppressed cell(s) of 7200",
+          "epic_ed_los_q3_suicidal_behavior: 298 suppressed cell(s) of 7200",
+          "epic_ed_los_q3_other: 737 suppressed cell(s) of 7200",
+          "epic_ed_n_visits: 0 suppressed cell(s) of 7200",
+          "epic_ed_n_visits_suicidal_behavior: 296 suppressed cell(s) of 7200",
+          "epic_ed_n_visits_other: 728 suppressed cell(s) of 7200",
+          "Quartile check: 0 of 20565 triples violate Q1 <= median <= Q3 (0.00%)",
+          "ED visits, national / sum of states: median 1.025, range 1.022-1.028",
+          "Quarterly: 7200 rows x 27 cols | 50 geographies | ages: 0-24, 0-9, 10-14, 15-19, 20-24, 25-44, 45-64, 65+, Overall | 2022-09-30 to 2026-06-30"
+        ],
         "success": true
       }
     }
@@ -22,7 +59,7 @@
     "./data/cosmos_mental_health/standard/data.csv.gz": "52b67fd81745cb15a3279e1677d68397"
   },
   "raw_state": {
-    "files": "raw/staging/ED Encounters_Crosstab_2026-10-09T14_24_58.xlsx",
-    "hashes": "208994900ff12a7fd39ec3b8de07590c"
+    "files": ["raw/staging/ED Encounters_Crosstab_2026-10-09T14_24_58.xlsx", "raw/staging/ED Encounters_Crosstab_2026-10-19T10_18_33.xlsx"],
+    "hashes": ["208994900ff12a7fd39ec3b8de07590c", "55058bf06b30ea6e8b4d275713a196ee"]
   }
 }

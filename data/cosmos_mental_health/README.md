@@ -55,7 +55,11 @@ Every column has a `_suppressed_flag`.
   `None of the above` have no name in `resources/all_fips.csv.gz` and are dropped. The
   `Total` state row is the nation (`"00"`); the `Total` age row is `Overall`.
 - **Age bands** do not sum to `Overall` (some encounters have no recorded age), and `0-24`
-  overlaps the narrower bands.
+  overlaps the narrower bands. `0-24` comes from its own export (session 2868324) and is
+  larger than the sum of `0-9`, `10-14`, `15-19` and `20-24` (e.g. national Q3 2022: 3,589,924
+  vs 3,068,575), so the four narrow bands miss some under-25 encounters. An earlier
+  `0-24` export (session 2865212) was wrong (smaller than `0-9`); `ingest.R` takes each age
+  band from the newest export that contains it.
 - **Length of stay** runs to ED departure, so it includes boarding time for patients awaiting an
   inpatient or psychiatric bed.
 - **No percent measures.** This export carries no percentage columns; diagnosis share of ED

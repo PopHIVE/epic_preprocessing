@@ -25,6 +25,9 @@
 # 2. The "Less than 25 Years" band overlaps the narrower bands below it, and the
 #    age bands do not cover every encounter (some have no recorded age), so the
 #    bands do not add up to the all-ages row. Both are published as exported.
+#    The "Less than 25 Years" rows come from their own export (session 2868324);
+#    the same band in the earlier crosstab (session 2865212) was wrong (smaller
+#    than 0-9) and is superseded by the newest-file rule when reading.
 #
 # 3. Only whole calendar quarters are comparable. The ingest stops on a period
 #    that is not one.
@@ -231,7 +234,7 @@ if (!identical(process$raw_state, current_state)) {
     message("  ", nrow(keys), " rows x ", length(val_cols), " value columns | groups: ",
             paste(unique(dx), collapse = ", "))
     bind_rows(lapply(seq_along(val_cols), function(k) {
-      mutate(keys, dx = dx[k], meas = meas[k], raw = trimws(raw[[k]]))
+      mutate(keys, dx = dx[k], meas = meas[k], raw = trimws(raw[[k]]), src = nm)
     }))
   }
 
@@ -240,6 +243,18 @@ if (!identical(process$raw_state, current_state)) {
     require_residence(grid, basename(f))
     extract_crosstab(grid, f)
   }))
+
+  # An age band exported in more than one file is taken from the newest one.
+  # Export file names end in a sortable timestamp. This is how a re-export of a
+  # single band (e.g. "Less than 25 Years") supersedes the older, flawed one
+  # without discarding the other bands in the older file.
+  newest_src <- long %>%
+    group_by(age) %>%
+    summarize(newest = max(src), .groups = "drop")
+  long <- long %>%
+    inner_join(newest_src, by = "age") %>%
+    filter(src == newest) %>%
+    select(-newest, -src)
 
   # ===========================================================================
   # 3. Standardize periods, ages and geographies
