@@ -1,60 +1,35 @@
 # =============================================================================
 # Epic Cosmos Vector-Borne Disease Data Ingestion
-# Source: Epic Cosmos SlicerDicer exports (raw/staging/**/*.xlsx), three
-# exports, three standardized outputs:
+# Source: Epic Cosmos SlicerDicer exports (raw/staging/**/*.xlsx), two
+# exports, two standardized outputs:
 #
-#   1. raw/staging/*.xlsx            -> standard/data.csv.gz
-#      Monthly patient counts with ANY vector-borne disease diagnosis (new or
-#      ongoing), by state: Lyme, Babesiosis, Malaria, RMSF (Rocky Mountain
-#      Spotted Fever), West Nile, and Dengue.
-#      SlicerDicer session 2852889 (originally created as session 2852629;
-#      Epic assigns a new session ID whenever the session is re-saved, but the
-#      query is unchanged), "Lyme N and Babesiosis N and Malaria N and RMSF N
-#      and West Nile N and Dengue N and Number of Patients by State of
-#      Residence":
-#        Data model      : Patients
-#        Population base : All Patients
-#        Criteria        : Country of Care = United States of America,
-#                           Has Any Encounters
-#        Measures        : Lyme N, Babesiosis N, Malaria N, RMSF N, West Nile
-#                           N, Dengue N (numerators), Number of Patients
-#                           (denominator)
-#      As of the 2026-08-28 export, the measure labels changed from the
-#      "<Disease> N" form (e.g. "Lyme N") to the lowercase "n <disease>" form
-#      (e.g. "n lyme"). MEASURE_PATTERNS matches both forms.
-#
-#   2. raw/staging/new_cases/*.xlsx  -> standard/data_new_cases.csv.gz
-#      Same population, diseases and layout as (1), but counting only NEW
-#      (first-time) diagnoses. SlicerDicer session 2861722, "n new west nile
-#      and n new babesiosis and n new malaria and n new RMSF and n new dengue
-#      and Number of Patients and n new lyme by State of Residence".
-#      Output columns carry a `new_` infix (epic_n_new_lyme, ...) so they
-#      cannot collide with (1) in a bundle.
-#
-#   3. raw/staging/lab_tests/*.xlsx  -> standard/data_lab_tests.csv.gz
-#      MONTHLY lab component results for each pathogen (babesia, RMSF, West\n#      Nile, dengue, malaria), by state. SlicerDicer session 2863670, "Number
+#   1. raw/staging/lab_tests/*.xlsx  -> standard/data_lab_tests.csv.gz
+#      MONTHLY lab component results for each pathogen (babesia, RMSF, West
+#      Nile, dengue, malaria), by state. SlicerDicer session 2863670, "Number
 #      of Lab Component Results and n west nile tests and n babesia and n RMSF
 #      tests and n malaria tests and n dengue tests by State of Residence".
 #        Data model      : Lab Component Results
 #        Population base : All Lab Component Results
 #        Criteria        : Country of Care = United States of America
-#      Time is monthly (columns are measure > year > month, states are rows);\n#      time = last day of month. The trailing partial month ("Sep 1 - Sep 8")\n#      is dropped, as in the other monthly exports.
-#   4. raw/staging/new_cases_pop_filter/*.xlsx
-#                                    -> standard/data_new_cases_pop_filter.csv.gz
-#      MONTHLY new-case counts (Year > Month > State, same layout as (1)) for\n#      the same six diseases, but the population itself is filtered: only patients
-#      with a first diagnosis of one of the diseases (ICD-10 based, "Not
-#      Preceded By" the same diagnosis within 6 months), Country of Care = United
-#      States, Has Any Encounters. SlicerDicer session 2863672. "Number of
-#      Patients" is therefore the number of patients in that filtered
-#      population, NOT all patients, so percents are shares of patients with a
-#      new vector-borne diagnosis. Columns carry a `new_popfilter_` infix.
-#      The export (1)-(2) call this the "problem list" definition of new
-#      cases; (4) is the "pop filter" definition.
-## Each export is tracked with its own key in process.json (raw_state,
-# new_cases_state, lab_state, new_cases_pop_filter_state) and only reprocessed
-# when its files change.
+#      Time is monthly (columns are measure > year > month, states are rows);
+#      time = last day of month. The trailing partial month ("Sep 1 - Sep 8")
+#      is dropped, as in the other monthly exports.
 #
-# Raw layout of the monthly exports (rows, 1-indexed as in the spreadsheet):
+#   2. raw/staging/new_cases/*.xlsx  -> standard/data_new_cases.csv.gz
+#      MONTHLY new-case counts (Year > Month > State) for Lyme, Babesiosis,
+#      Malaria, RMSF, West Nile and Dengue, where the population itself is
+#      filtered: only patients with a first diagnosis of one of the diseases
+#      (ICD-10 based, "Not Preceded By" the same diagnosis within 6 months),
+#      Country of Care = United States, Has Any Encounters. SlicerDicer
+#      session 2863672. "Number of Patients" is therefore the number of
+#      patients in that filtered population, NOT all patients, so percents are
+#      shares of patients with a new vector-borne diagnosis. Columns carry a
+#      `new_` infix (epic_n_new_lyme, ..., epic_n_new_patients).
+#
+# Each export is tracked with its own key in process.json (lab_state,
+# new_cases_state) and only reprocessed when its files change.
+#
+# Raw layout of the new-cases export (rows, 1-indexed as in the spreadsheet):
 #   1-8   : session metadata
 #   11    : measure labels for the value columns
 #   12    : row-dimension labels (A: Year, B: Month, C: State of Residence)
@@ -65,19 +40,20 @@
 # Raw layout of the lab export:
 #   1-8   : session metadata
 #   11    : measure labels, only on the first column of each measure group
-#   12    : year (first column of each year within a measure group)\n#   13    : month of each column (last one is the partial month)\n#   14    : A: State of Residence\n#   15+   : one row per state, plus "None of the above" and "Total"
+#   12    : year (first column of each year within a measure group)
+#   13    : month of each column (last one is the partial month)
+#   14    : A: State of Residence
+#   15+   : one row per state, plus "None of the above" and "Total"
 #
 # Output (PopHIVE wide format):
 #   index   : geography (FIPS string, "00" = national), time
-#   measures, one triplet per disease:
-#     epic_n_<disease>, epic_pct_<disease> -> epic_<disease>_suppressed_flag
-#       (the flag covers both; the percent is derived from the same
-#       numerator cell)
-#   denominator: epic_n_patients -> epic_n_patients_suppressed_flag
-#   (new cases: epic_n_new_<disease>, epic_pct_new_<disease>,
-#    epic_new_<disease>_suppressed_flag; lab tests: epic_n_tests_<disease>,
-#    epic_pct_tests_<disease>, epic_tests_<disease>_suppressed_flag, with
-#    denominator epic_n_lab_results -> epic_n_lab_results_suppressed_flag)
+#   new cases: epic_n_new_<disease>, epic_pct_new_<disease>,
+#     epic_new_<disease>_suppressed_flag (the flag covers both; the percent is
+#     derived from the same numerator cell); denominator epic_n_new_patients ->
+#     epic_n_new_patients_suppressed_flag
+#   lab tests: epic_n_tests_<disease>, epic_pct_tests_<disease>,
+#     epic_tests_<disease>_suppressed_flag, denominator epic_n_lab_results ->
+#     epic_n_lab_results_suppressed_flag
 #
 # Conventions applied here:
 #   - time is the LAST day of the month, formatted YYYY-mm-dd; the trailing
@@ -85,8 +61,9 @@
 #     is dropped
 #   - state_name is resolved to a FIPS `geography` and then dropped
 #   - suppression is handled per measure (blank / "10 or fewer" -> 5, flag 1)
-#   - each disease measure is a PERCENT of its denominator (all patients, or
-#     all lab component results), not a rate per 100,000
+#   - each disease measure is a PERCENT of its denominator (the filtered
+#     new-case population, or all lab component results), not a rate per
+#     100,000
 # =============================================================================
 
 library(dplyr)
@@ -129,25 +106,7 @@ xlsx_password <- Sys.getenv("EPIC_XLSX_PASSWORD")
 # silently landing on the wrong column - extend these maps when a session
 # changes.
 # -----------------------------------------------------------------------------
-MEASURE_PATTERNS <- c(
-  lyme        = "^(Lyme N|n lyme)$",
-  babesiosis  = "^(Babesiosis N|n babesiosis)$",
-  malaria     = "^(Malaria N|n malaria)$",
-  rmsf        = "^(RMSF N|n RMSF)$",
-  west_nile   = "^(West Nile N|n west nile)$",
-  dengue      = "^(Dengue N|n dengue)$",
-  n_patients  = "^Number of Patients$"
-)
 NEW_CASE_PATTERNS <- c(
-  lyme        = "^n new lyme$",
-  babesiosis  = "^n new babesiosis$",
-  malaria     = "^n new malaria$",
-  rmsf        = "^n new RMSF$",
-  west_nile   = "^n new west nile$",
-  dengue      = "^n new dengue$",
-  n_patients  = "^Number of Patients$"
-)
-POP_FILTER_PATTERNS <- c(
   lyme        = "^n lyme$",
   babesiosis  = "^n babesiosis$",
   malaria     = "^n malaria$",
@@ -296,7 +255,7 @@ long_to_wide <- function(data_long) {
 }
 
 # =============================================================================
-# Monthly by-state exports (any diagnosis, new cases)
+# Monthly by-state export (new cases)
 # =============================================================================
 
 # Read one monthly crosstab and return the standardized wide data with plain
@@ -476,48 +435,7 @@ report_monthly <- function(data_clean, disease_keys, denom) {
 if (!dir.exists("standard")) dir.create("standard")
 
 # -----------------------------------------------------------------------------
-# 1. Any diagnosis (raw/staging/*.xlsx) -> standard/data.csv.gz
-# -----------------------------------------------------------------------------
-current_state <- get_staging_state("raw/staging", "vector-borne disease crosstab")
-
-if (!identical(process$raw_state, current_state)) {
-  message("== Any-diagnosis export: ", basename(current_state$files))
-  data_any <- standardize_monthly(current_state$files[[1]], MEASURE_PATTERNS)
-  report_monthly(data_any, setdiff(names(MEASURE_PATTERNS), "n_patients"), "epic_n_patients")
-
-  vroom::vroom_write(data_any, "standard/data.csv.gz", delim = ",")
-
-  process$raw_state <- current_state
-  dcf::dcf_process_record(updated = process)
-}
-
-# -----------------------------------------------------------------------------
-# 2. New cases (raw/staging/new_cases/*.xlsx) -> standard/data_new_cases.csv.gz
-# -----------------------------------------------------------------------------
-new_cases_state <- get_staging_state("raw/staging/new_cases", "new-cases crosstab")
-
-if (!identical(process$new_cases_state, new_cases_state)) {
-  message("== New-cases export: ", basename(new_cases_state$files))
-  data_new <- standardize_monthly(new_cases_state$files[[1]], NEW_CASE_PATTERNS)
-  new_keys <- setdiff(names(NEW_CASE_PATTERNS), "n_patients")
-  report_monthly(data_new, new_keys, "epic_n_patients")
-
-  # Rename disease columns to the `new_` infix (validated above under the
-  # plain names shared with the any-diagnosis logic).
-  for (dz in new_keys) {
-    names(data_new)[names(data_new) == paste0("epic_n_", dz)] <- paste0("epic_n_new_", dz)
-    names(data_new)[names(data_new) == paste0("epic_pct_", dz)] <- paste0("epic_pct_new_", dz)
-    names(data_new)[names(data_new) == paste0("epic_", dz, "_suppressed_flag")] <- paste0("epic_new_", dz, "_suppressed_flag")
-  }
-
-  vroom::vroom_write(data_new, "standard/data_new_cases.csv.gz", delim = ",")
-
-  process$new_cases_state <- new_cases_state
-  dcf::dcf_process_record(updated = process)
-}
-
-# -----------------------------------------------------------------------------
-# 3. Lab tests (raw/staging/lab_tests/*.xlsx) -> standard/data_lab_tests.csv.gz
+# 1. Lab tests (raw/staging/lab_tests/*.xlsx) -> standard/data_lab_tests.csv.gz
 # -----------------------------------------------------------------------------
 lab_state <- get_staging_state("raw/staging/lab_tests", "lab component results crosstab")
 
@@ -630,30 +548,31 @@ if (!identical(process$lab_state, lab_state)) {
 }
 
 # -----------------------------------------------------------------------------
-# 4. New cases, pop filter (raw/staging/new_cases_pop_filter/*.xlsx)
-#    -> standard/data_new_cases_pop_filter.csv.gz
+# 2. New cases (raw/staging/new_cases/*.xlsx) -> standard/data_new_cases.csv.gz
 # -----------------------------------------------------------------------------
-pf_state <- get_staging_state("raw/staging/new_cases_pop_filter", "new-cases pop filter crosstab")
+new_cases_state <- get_staging_state("raw/staging/new_cases", "new-cases crosstab")
 
-if (!identical(process$new_cases_pop_filter_state, pf_state)) {
-  message("== New-cases pop-filter export: ", basename(pf_state$files))
-  pf_keys <- setdiff(names(POP_FILTER_PATTERNS), "n_patients")
-  data_pf <- standardize_monthly(pf_state$files[[1]], POP_FILTER_PATTERNS)
-  report_monthly(data_pf, pf_keys, "epic_n_patients")
+if (!identical(process$new_cases_state, new_cases_state)) {
+  message("== New-cases export: ", basename(new_cases_state$files))
+  new_keys <- setdiff(names(NEW_CASE_PATTERNS), "n_patients")
+  data_new <- standardize_monthly(new_cases_state$files[[1]], NEW_CASE_PATTERNS)
+  report_monthly(data_new, new_keys, "epic_n_patients")
 
   # Percents here are shares of the FILTERED population (epic_n_patients is the
   # number of patients with a new diagnosis of any of the six diseases, not all
-  # patients). Rename to the `new_popfilter_` infix.
-  for (dz in pf_keys) {
-    names(data_pf)[names(data_pf) == paste0("epic_n_", dz)] <- paste0("epic_n_new_popfilter_", dz)
-    names(data_pf)[names(data_pf) == paste0("epic_pct_", dz)] <- paste0("epic_pct_new_popfilter_", dz)
-    names(data_pf)[names(data_pf) == paste0("epic_", dz, "_suppressed_flag")] <- paste0("epic_new_popfilter_", dz, "_suppressed_flag")
+  # patients). Rename to the `new_` infix.
+  for (dz in new_keys) {
+    names(data_new)[names(data_new) == paste0("epic_n_", dz)] <- paste0("epic_n_new_", dz)
+    names(data_new)[names(data_new) == paste0("epic_pct_", dz)] <- paste0("epic_pct_new_", dz)
+    names(data_new)[names(data_new) == paste0("epic_", dz, "_suppressed_flag")] <- paste0("epic_new_", dz, "_suppressed_flag")
   }
-  names(data_pf)[names(data_pf) == "epic_n_patients"] <- "epic_n_new_popfilter_patients"
-  names(data_pf)[names(data_pf) == "epic_n_patients_suppressed_flag"] <- "epic_n_new_popfilter_patients_suppressed_flag"
+  names(data_new)[names(data_new) == "epic_n_patients"] <- "epic_n_new_patients"
+  names(data_new)[names(data_new) == "epic_n_patients_suppressed_flag"] <- "epic_n_new_patients_suppressed_flag"
 
-  vroom::vroom_write(data_pf, "standard/data_new_cases_pop_filter.csv.gz", delim = ",")
+  vroom::vroom_write(data_new, "standard/data_new_cases.csv.gz", delim = ",")
 
-  process$new_cases_pop_filter_state <- pf_state
+  process$new_cases_state <- new_cases_state
   dcf::dcf_process_record(updated = process)
 }
+
+
