@@ -1,0 +1,258 @@
+---
+title: "Cosmos Birth Vaccines"
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+library(dplyr)
+library(ggplot2)
+library(tigris)
+library(sf)
+library(patchwork)
+library(vroom)
+library(ggrepel)
+
+options(tigris_use_cache = TRUE)
+if (!dir.exists("maps")) dir.create("maps")
+```
+
+Comparing two Epic Cosmos population bases:
+
+- **All patients** — `standard/data.csv.gz`: all patients with birthing parent
+  information, no additional filter.
+- **CPT birth cohort** — `standard/data_cpt_birth.csv.gz`: subset filtered to a billed
+  procedure indicating birth (CPT 99460-99465, 99468, 99477).
+
+
+
+```{r load-data}
+all_patients <- vroom::vroom("standard/data.csv.gz", show_col_types = FALSE) %>%
+  filter(geography != "00") %>%
+  mutate(date = as.Date(time, "%m-%d-%Y"))
+cpt_birth <- vroom::vroom("standard/data_cpt_birth.csv.gz", show_col_types = FALSE) %>%
+  filter(geography != "00") %>%
+  mutate(date = as.Date(time, "%m-%d-%Y"))
+
+# Snapshot at the latest year both exports cover
+common_date <- max(intersect(all_patients$date, cpt_birth$date)) %>%
+  as.Date(origin = "1970-01-01")
+time_label <- format(common_date, "%Y")
+
+all_snap <- all_patients %>% filter(date == common_date)
+cpt_snap <- cpt_birth     %>% filter(date == common_date)
+
+states_sf <- tigris::states(cb = TRUE, year = 2020) %>%
+  filter(!STATEFP %in% c("60", "66", "69", "72", "78")) %>% # drop territories
+  select(geography = STATEFP, state_name = NAME, geometry) %>%
+  tigris::shift_geometry() # inset AK/HI below the continental US
+
+map_all <- states_sf %>% left_join(all_snap, by = "geography")
+map_cpt <- states_sf %>% left_join(cpt_snap, by = "geography")
+
+pct_measures <- list(
+  list(col = "epic_pct_vitamin_k", label = "Vitamin K", slug = "vitamin_k"),
+  list(col = "epic_pct_rsv",       label = "RSV immunization", slug = "rsv"),
+  list(col = "epic_pct_hepb",      label = "HepB vaccination", slug = "hepb")
+)
+
+diff_data <- all_snap %>%
+  select(geography, all_of(vapply(pct_measures, `[[`, character(1), "col"))) %>%
+  rename_with(~ paste0(., "_all"), -geography) %>%
+  full_join(
+    cpt_snap %>%
+      select(geography, all_of(vapply(pct_measures, `[[`, character(1), "col")), epic_n_patients) %>%
+      rename_with(~ paste0(., "_cpt"), -geography),
+    by = "geography"
+  ) %>%
+  left_join(
+    all_snap %>% select(geography, epic_n_patients_all = epic_n_patients),
+    by = "geography"
+  ) %>%
+  left_join(states_sf %>% st_drop_geometry() %>% select(geography, state_name), by = "geography") %>%
+  mutate(state_abb = state.abb[match(state_name, state.name)])
+
+for (m in pct_measures) {
+  diff_data[[paste0("diff_", m$slug)]] <-
+    diff_data[[paste0(m$col, "_cpt")]] - diff_data[[paste0(m$col, "_all")]]
+}
+diff_data$ratio_n <- diff_data$epic_n_patients_cpt / diff_data$epic_n_patients_all
+
+map_diff <- states_sf %>% left_join(diff_data, by = "geography")
+```
+
+```{r helpers}
+state_panel <- function(map_df, fill_var, title, legend_name = "", diverging = FALSE) {
+  if (diverging) {
+    lim   <- max(abs(map_df[[fill_var]]), na.rm = TRUE)
+    scale <- scale_fill_distiller(
+      name = legend_name, palette = "RdBu", direction = 1,
+      limits = c(-lim, lim), na.value = "grey85"
+    )
+  } else {
+    scale <- scale_fill_viridis_c(
+      name = legend_name, option = "plasma", na.value = "grey85",
+      breaks = scales::breaks_pretty(n = 4)
+    )
+  }
+
+  ggplot(map_df) +
+    geom_sf(aes(fill = .data[[fill_var]]), color = "white", linewidth = 0.1) +
+    scale +
+    labs(title = title) +
+    theme_void(base_size = 10) +
+    theme(
+      plot.title       = element_text(face = "bold", size = 11, hjust = 0.5),
+      legend.position  = "bottom",
+      legend.key.width = unit(1.2, "cm"),
+      legend.title     = element_text(size = 8),
+      legend.text      = element_text(size = 7)
+    )
+}
+
+# Builds and saves the triptych (All | CPT birth | Difference) for one measure,
+# returning the combined patchwork so the calling chunk can print it inline.
+render_triptych <- function(m) {
+  p1 <- state_panel(map_all,  m$col, "All patients", "%")
+  p2 <- state_panel(map_cpt,  m$col, "CPT birth cohort", "%")
+  p3 <- state_panel(map_diff, paste0("diff_", m$slug), "Difference (CPT birth − All)", "pp", diverging = TRUE)
+
+  combined <- (p1 | p2 | p3) +
+    plot_annotation(
+      title    = paste0(m$label, " (%) by State — ", time_label),
+      subtitle = "Epic Cosmos | All patients with birthing parent information vs. CPT birth cohort subset",
+      caption  = "Grey = no data.",
+      theme = theme(
+        plot.title    = element_text(face = "bold", size = 14),
+        plot.subtitle = element_text(color = "grey40"),
+        plot.caption  = element_text(color = "grey50", size = 8)
+      )
+    )
+
+  ggsave(file.path("maps", paste0("compare_", m$slug, ".png")), combined, width = 18, height = 6, dpi = 150)
+  combined
+}
+
+# Builds and saves the All-vs-CPT-birth scatter plot for one measure, returning
+# the ggplot so the calling chunk can print it inline.
+render_scatter <- function(m) {
+  x_col <- paste0(m$col, "_all")
+  y_col <- paste0(m$col, "_cpt")
+
+  scatter_data <- diff_data %>%
+    filter(!is.na(.data[[x_col]]), !is.na(.data[[y_col]]))
+
+  lim <- range(c(scatter_data[[x_col]], scatter_data[[y_col]]), na.rm = TRUE)
+
+  cor_test <- cor.test(scatter_data[[x_col]], scatter_data[[y_col]])
+  cor_label <- sprintf(
+    "r = %.3f, p = %.3f", round(cor_test$estimate, 3), round(cor_test$p.value, 3)
+  )
+
+  p_scatter <- ggplot(scatter_data, aes(x = .data[[x_col]], y = .data[[y_col]])) +
+    geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "grey60") +
+    geom_point(color = "#1b6ca8", size = 2) +
+    ggrepel::geom_text_repel(aes(label = state_abb), size = 2.8, max.overlaps = 30) +
+    coord_equal(xlim = lim, ylim = lim) +
+    labs(
+      title    = paste0(m$label, " (%) — All vs. CPT Birth Cohort by State, ", time_label),
+      subtitle = paste0(cor_label),
+      x        = "All patients (%)",
+      y        = "CPT birth cohort (%)"
+    ) +
+    theme_minimal(base_size = 11) +
+    theme(plot.title = element_text(face = "bold", size = 12))
+
+  ggsave(file.path("maps", paste0("scatter_", m$slug, ".png")), p_scatter, width = 7, height = 7, dpi = 150)
+  p_scatter
+}
+```
+
+## Vitamin K
+
+```{r vitamin-k-map, fig.width=18, fig.height=6}
+render_triptych(pct_measures[[1]])
+```
+
+```{r vitamin-k-scatter, fig.width=7, fig.height=7}
+render_scatter(pct_measures[[1]])
+```
+
+## RSV Immunization
+
+```{r rsv-map, fig.width=18, fig.height=6}
+render_triptych(pct_measures[[2]])
+```
+
+```{r rsv-scatter, fig.width=7, fig.height=7}
+render_scatter(pct_measures[[2]])
+```
+
+## HepB Vaccination
+
+```{r hepb-map, fig.width=18, fig.height=6}
+render_triptych(pct_measures[[3]])
+```
+
+```{r hepb-scatter, fig.width=7, fig.height=7}
+render_scatter(pct_measures[[3]])
+```
+
+## Patient Count QC
+
+Share of the "all patients" population that also has a CPT code indicating birth.
+
+```{r ratio-map, fig.width=10, fig.height=8.5}
+p_ratio <- ggplot(map_diff) +
+  geom_sf(aes(fill = ratio_n), color = "white", linewidth = 0.1) +
+  scale_fill_viridis_c(
+    name = "CPT birth / All", option = "magma", na.value = "grey85",
+    breaks = scales::breaks_pretty(n = 5)
+  ) +
+  labs(
+    title    = paste0("Patient Count Ratio (CPT Birth Cohort / All) by State — ", time_label),
+    subtitle = "Share of the 'all patients' population that also has a CPT code indicating birth"
+  ) +
+  theme_void(base_size = 11) +
+  theme(
+    plot.title       = element_text(face = "bold", size = 13, hjust = 0.5),
+    plot.subtitle    = element_text(color = "grey40", hjust = 0.5, size = 9),
+    legend.position  = "bottom",
+    legend.key.width = unit(1.5, "cm")
+  )
+
+ggsave(file.path("maps", "compare_n_patients_ratio.png"), p_ratio, width = 10, height = 8.5, dpi = 150)
+p_ratio
+```
+
+```{r timeseries, fig.width=9, fig.height=5}
+national <- bind_rows(
+  vroom::vroom("standard/data.csv.gz", show_col_types = FALSE) %>%
+    filter(geography == "00") %>% mutate(source = "All patients"),
+  vroom::vroom("standard/data_cpt_birth.csv.gz", show_col_types = FALSE) %>%
+    filter(geography == "00") %>% mutate(source = "CPT birth cohort")
+) %>%
+  mutate(date = as.Date(time, "%m-%d-%Y"))
+
+p_ts <- ggplot(national, aes(x = date, y = epic_n_patients, color = source)) +
+  geom_line(linewidth = 0.9) +
+  geom_point(size = 1.5) +
+  scale_y_continuous(labels = scales::label_comma()) +
+  scale_color_manual(values = c("All patients" = "#1b6ca8", "CPT birth cohort" = "#d1495b")) +
+  labs(
+    title = "National Patient Count Over Time",
+    x = NULL, y = "Patients", color = NULL
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(legend.position = "bottom")
+
+ggsave(file.path("maps", "compare_n_patients_timeseries.png"), p_ts, width = 9, height = 5, dpi = 150)
+p_ts
+```
+
