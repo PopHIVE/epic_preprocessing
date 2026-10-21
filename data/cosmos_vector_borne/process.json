@@ -1,0 +1,70 @@
+{
+  "name": "cosmos_vector_borne",
+  "type": "source",
+  "scripts": [
+    {
+      "path": "ingest.R",
+      "manual": false,
+      "last_run": "2026-10-05 13:16:16",
+      "frequency": 0,
+      "run_time": 4.33,
+      "last_status": {
+        "log": [
+          "",
+          "Attaching package: 'dplyr'",
+          "",
+          "The following objects are masked from 'package:stats':",
+          "",
+          "    filter, lag",
+          "",
+          "The following objects are masked from 'package:base':",
+          "",
+          "    intersect, setdiff, setequal, union",
+          "",
+          "",
+          "Attaching package: 'lubridate'",
+          "",
+          "The following objects are masked from 'package:base':",
+          "",
+          "    date, intersect, setdiff, union",
+          "",
+          "== Lab-tests export: Lab Component Results_Crosstab_2026-10-05T12_11_11.xlsx",
+          "Dropping 6 column(s) from partial period(s): Sep 1 – Sep 8",
+          "Measure columns found: n_lab_results, west_nile, babesiosis, rmsf, malaria, dengue | months: 2022-01-31 to 2026-08-31",
+          "Dropped 10 non-US / catch-all row(s) (state of residence: Alberta, British Columbia, Guam, Manitoba, México, None of the above, Ontario, Puerto Rico, Quebec, Virgin Islands)",
+          "Standardized 2912 rows | 52 geographies | 2022-01-31 to 2026-08-31",
+          "  epic_babesiosis_suppressed_flag: 833 suppressed/imputed",
+          "  epic_rmsf_suppressed_flag: 764 suppressed/imputed",
+          "  epic_west_nile_suppressed_flag: 0 suppressed/imputed",
+          "  epic_dengue_suppressed_flag: 1938 suppressed/imputed",
+          "  epic_malaria_suppressed_flag: 1169 suppressed/imputed",
+          "  epic_n_lab_results_suppressed_flag: 0 suppressed/imputed",
+          "== New-cases pop-filter export: Patients_Crosstab_2026-10-05T12_12_31.xlsx",
+          "Measure columns found: babesiosis, malaria, rmsf, west_nile, dengue, n_patients, lyme",
+          "Dropping 61 row(s) from partial period(s): Jul 1 – Jul 28",
+          "Dropped 486 non-US / catch-all row(s) (state of residence: British Columbia, New Brunswick, None of the above, Nova Scotia, Ontario, Palau, Puerto Rico, Quebec, Virgin Islands)",
+          "Standardized 2808 rows | 52 geographies | 2022-01-31 to 2026-06-30",
+          "  epic_lyme_suppressed_flag: 2272 suppressed/imputed",
+          "  epic_babesiosis_suppressed_flag: 2747 suppressed/imputed",
+          "  epic_malaria_suppressed_flag: 763 suppressed/imputed",
+          "  epic_rmsf_suppressed_flag: 1074 suppressed/imputed",
+          "  epic_west_nile_suppressed_flag: 838 suppressed/imputed",
+          "  epic_dengue_suppressed_flag: 1633 suppressed/imputed",
+          "  epic_n_patients_suppressed_flag: 130 suppressed/imputed"
+        ],
+        "success": true
+      }
+    }
+  ],
+  "checked": "",
+  "check_results": [],
+  "standalone": false,
+  "lab_state": {
+    "files": "raw/staging/lab_tests/Lab Component Results_Crosstab_2026-10-05T12_11_11.xlsx",
+    "hashes": "2f6f93a4faa95524166a30a8a74c87cb"
+  },
+  "new_cases_state": {
+    "files": "raw/staging/new_cases/Patients_Crosstab_2026-10-05T12_12_31.xlsx",
+    "hashes": "865141fa901a0e72c18bfa82c2cb68c0"
+  }
+}
