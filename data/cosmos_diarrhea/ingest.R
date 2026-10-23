@@ -243,6 +243,19 @@ ED_OUTCOME_PATTERNS <- c(
   rotavirus      = "Rotaviral"
 )
 
+# Row-14 id column headers of the ED crosstab, mapped to standard names. The
+# row-dimension order drifts between SlicerDicer sessions (the 2026-10-08
+# export was State / Year / Week; the 2026-10-23 export is Year / Week / State),
+# so the id columns are named by header label rather than by position. An
+# unrecognized header stops the run -- extend this map if the session gains or
+# renames a row dimension.
+ED_ID_LABELS <- c(
+  "State of Residence" = "state_name",
+  "Year"               = "year_raw",
+  "Week"               = "time_raw",
+  "Month"              = "time_raw"
+)
+
 match_outcome_labels <- function(labels, patterns) {
   uniq <- unique(labels)
   mapped <- vapply(uniq, function(lbl) {
@@ -270,9 +283,23 @@ process_diarrhea_wide <- function(file, granularity, password = NULL) {
 
   row12 <- as.character(all_rows[12, ])
   row13 <- as.character(all_rows[13, ])
+  row14 <- as.character(all_rows[14, ])
 
   n_cols <- ncol(all_rows)
   id_cols <- 3L
+
+  # --- Resolve the id columns from the row-14 header labels ---
+  id_raw <- trimws(row14[seq_len(id_cols)])
+  id_std <- unname(ED_ID_LABELS[id_raw])
+  if (any(is.na(id_std)) || anyDuplicated(id_std) > 0) {
+    stop(
+      "Unrecognized id column header(s) in row 14 of ", basename(file), ": ",
+      paste(sprintf("'%s'", id_raw), collapse = ", "),
+      ". Update ED_ID_LABELS in ingest.R.",
+      call. = FALSE
+    )
+  }
+  message("  Row dimensions: ", paste(id_raw, collapse = " / "))
 
   # --- Fill outcome labels rightward within the value columns ---
   outcome_raw <- row12[(id_cols + 1):n_cols]
@@ -296,12 +323,15 @@ process_diarrhea_wide <- function(file, granularity, password = NULL) {
 
   # --- Data rows (row 15 onward) ---
   data_raw <- all_rows[15:nrow(all_rows), , drop = FALSE]
-  colnames(data_raw) <- c("state_name", "year_raw", "time_raw", paste0("v", (id_cols + 1):n_cols))
+  colnames(data_raw) <- c(id_std, paste0("v", (id_cols + 1):n_cols))
   rownames(data_raw) <- NULL
 
+  # Fill all id columns down: outer dimensions are only filled on the first
+  # row of each group (blank = same as above); the innermost is never blank
   data_raw$state_name[data_raw$state_name == ""] <- NA
   data_raw$year_raw[data_raw$year_raw == ""] <- NA
-  data_raw <- tidyr::fill(data_raw, state_name, year_raw, .direction = "down")
+  data_raw$time_raw[data_raw$time_raw == ""] <- NA
+  data_raw <- tidyr::fill(data_raw, state_name, year_raw, time_raw, .direction = "down")
 
   data_long <- data_raw %>%
     tidyr::pivot_longer(
