@@ -38,6 +38,17 @@ state_fips_lookup <- all_fips %>%
 # Row 16+: data rows (state fills down, age per row)
 # =============================================================================
 
+# Row-15 id column headers expected in the wide exports, mapped to standard
+# names. The row-dimension order drifts between SlicerDicer sessions (exports
+# up to 2026-10-08 were State x Age; those from 2026-10-23 are Age x State), so
+# the id columns are named by header label rather than by position. An
+# unrecognized header stops the run instead of silently mislabeling columns --
+# extend this map if the session gains or renames a row dimension.
+ID_LABELS <- c(
+  "State of Residence"   = "state_name",
+  "Age at Time of Visit" = "age"
+)
+
 process_wide_epic_file <- function(file, password = NULL) {
   message("Processing wide file: ", basename(file))
 
@@ -78,7 +89,7 @@ process_wide_epic_file <- function(file, password = NULL) {
     # --- Extract metadata from header rows 1-8 ---
     meta_fields <- c(
       "Session Title", "Session ID", "Data Model", "Population Base",
-      "Population Criteria Filters", "Session Date Range",
+      "Population Criteria Filters", "Session Date Range", "Measure",
       "Export User", "Date of Export"
     )
     meta <- list(
@@ -93,10 +104,11 @@ process_wide_epic_file <- function(file, password = NULL) {
       meta[[meta_fields[i]]] <- val
     }
 
-    # Extract header rows (rows 12, 13, 14 in the original spreadsheet)
+    # Extract header rows (rows 12, 13, 14, 15 in the original spreadsheet)
     row12 <- as.character(all_rows[12, ])
     row13 <- as.character(all_rows[13, ])
     row14 <- as.character(all_rows[14, ])
+    row15 <- as.character(all_rows[15, ])
 
     # Extract data rows (row 16 onward)
     data_raw <- all_rows[16:nrow(all_rows), , drop = FALSE]
@@ -139,6 +151,7 @@ process_wide_epic_file <- function(file, password = NULL) {
     row12 <- parse_csv_row(raw_lines[12])
     row13 <- parse_csv_row(raw_lines[13])
     row14 <- parse_csv_row(raw_lines[14])
+    row15 <- parse_csv_row(raw_lines[15])
 
     data_raw <- read.csv(
       file, skip = 15, header = FALSE,
@@ -227,14 +240,29 @@ process_wide_epic_file <- function(file, password = NULL) {
     stringsAsFactors = FALSE
   )
 
-  # Clean first two columns (state, age)
+  # --- Resolve the two id columns from the row-15 header labels ---
+  id_raw <- trimws(as.character(row15[1:2]))
+  id_std <- unname(ID_LABELS[id_raw])
+  if (any(is.na(id_std)) || anyDuplicated(id_std) > 0) {
+    stop(
+      "Unrecognized id column header(s) in row 15 of ", basename(file), ": ",
+      paste(sprintf("'%s'", id_raw), collapse = ", "),
+      ". Update ID_LABELS in ingest.R.",
+      call. = FALSE
+    )
+  }
+  message("  Row dimensions: ", paste(id_raw, collapse = " x "))
+
+  # Clean first two columns and name them from the header labels
   data_raw[[1]] <- trimws(data_raw[[1]])
   data_raw[[2]] <- trimws(data_raw[[2]])
+  colnames(data_raw)[1:2] <- id_std
 
-  # Fill state name down (blank = same state as above)
-  data_raw[[1]][data_raw[[1]] == ""] <- NA
-  colnames(data_raw)[1:2] <- c("state_name", "age")
-  data_raw <- tidyr::fill(data_raw, state_name, .direction = "down")
+  # Fill both id columns down: the outer dimension is only filled on the first
+  # row of each group (blank = same as above); the inner one is never blank
+  data_raw$state_name[data_raw$state_name == ""] <- NA
+  data_raw$age[data_raw$age == ""] <- NA
+  data_raw <- tidyr::fill(data_raw, state_name, age, .direction = "down")
 
   # --- Name data columns and trim to match metadata ---
   n_data <- min(ncol(data_raw) - 2, n_cols)

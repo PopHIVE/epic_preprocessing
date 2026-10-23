@@ -56,11 +56,11 @@
           "variable": "geography"
         }
       ],
-      "id_length": 2,
+      "id_length": 0,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-09-25 13:42:18.882832",
-      "last_modified": "2026-09-25 13:42:18.882832",
+      "created": "2026-10-23 14:54:06.205062",
+      "last_modified": "2026-10-23 14:54:06.205062",
       "vintage": {},
       "row_count": 18760,
       "entity_count": 54,
@@ -116,64 +116,12 @@
             "duplicates": 18706,
             "info": [],
             "time_range": [0, 34],
-            "type": "string",
+            "type": "integer",
             "missing": 0,
-            "table": {
-              "00": 350,
-              "01": 350,
-              "02": 350,
-              "04": 350,
-              "05": 350,
-              "06": 350,
-              "08": 350,
-              "09": 350,
-              "10": 350,
-              "11": 350,
-              "12": 350,
-              "13": 350,
-              "15": 350,
-              "16": 350,
-              "17": 350,
-              "18": 350,
-              "19": 350,
-              "20": 350,
-              "21": 350,
-              "22": 350,
-              "23": 350,
-              "24": 350,
-              "25": 350,
-              "26": 350,
-              "27": 350,
-              "28": 350,
-              "29": 350,
-              "30": 350,
-              "31": 350,
-              "32": 350,
-              "33": 350,
-              "34": 350,
-              "35": 350,
-              "36": 350,
-              "37": 350,
-              "38": 350,
-              "39": 350,
-              "40": 350,
-              "41": 350,
-              "42": 350,
-              "44": 210,
-              "45": 350,
-              "46": 350,
-              "47": 350,
-              "48": 350,
-              "49": 350,
-              "50": 350,
-              "51": 350,
-              "52": 350,
-              "53": 350,
-              "54": 350,
-              "55": 350,
-              "56": 350,
-              "72": 350
-            }
+            "mean": 29.541045,
+            "sd": 17.086339,
+            "min": 0,
+            "max": 72
           },
           {
             "name": "age",
@@ -197,8 +145,6 @@
             "type": "string",
             "missing": 0,
             "table": {
-              "<1 Years": 1855,
-              "<5 Years": 1890,
               "1-4 Years": 1855,
               "18-39 Years": 1890,
               "18-49 Years": 1855,
@@ -206,6 +152,8 @@
               "5-17 Years": 1890,
               "50-64 Years": 1855,
               "65+ Years": 1890,
+              "<1 Years": 1855,
+              "<5 Years": 1890,
               "Total": 1890
             }
           },
@@ -767,11 +715,11 @@
           "variable": "geography"
         }
       ],
-      "id_length": 2,
+      "id_length": 0,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-09-25 13:42:18.93552",
-      "last_modified": "2026-09-25 13:42:18.93552",
+      "created": "2026-10-23 14:54:06.233791",
+      "last_modified": "2026-10-23 14:54:06.233791",
       "vintage": "2025-12-18",
       "row_count": 20650,
       "entity_count": 54,
@@ -844,8 +792,6 @@
             "type": "string",
             "missing": 0,
             "table": {
-              "<1 Years": 1855,
-              "<5 Years": 1890,
               "1-4 Years": 1855,
               "18-39 Years": 1890,
               "18-49 Years": 1855,
@@ -853,6 +799,8 @@
               "5-17 Years": 1890,
               "50-64 Years": 1855,
               "65+ Years": 1890,
+              "<1 Years": 1855,
+              "<5 Years": 1890,
               "NA": 1890,
               "Total": 1890
             }
@@ -862,64 +810,12 @@
             "duplicates": 20596,
             "info": [],
             "time_range": [0, 34],
-            "type": "string",
+            "type": "integer",
             "missing": 0,
-            "table": {
-              "00": 385,
-              "01": 385,
-              "02": 385,
-              "04": 385,
-              "05": 385,
-              "06": 385,
-              "08": 385,
-              "09": 385,
-              "10": 385,
-              "11": 385,
-              "12": 385,
-              "13": 385,
-              "15": 385,
-              "16": 385,
-              "17": 385,
-              "18": 385,
-              "19": 385,
-              "20": 385,
-              "21": 385,
-              "22": 385,
-              "23": 385,
-              "24": 385,
-              "25": 385,
-              "26": 385,
-              "27": 385,
-              "28": 385,
-              "29": 385,
-              "30": 385,
-              "31": 385,
-              "32": 385,
-              "33": 385,
-              "34": 385,
-              "35": 385,
-              "36": 385,
-              "37": 385,
-              "38": 385,
-              "39": 385,
-              "40": 385,
-              "41": 385,
-              "42": 385,
-              "44": 245,
-              "45": 385,
-              "46": 385,
-              "47": 385,
-              "48": 385,
-              "49": 385,
-              "50": 385,
-              "51": 385,
-              "52": 385,
-              "53": 385,
-              "54": 385,
-              "55": 385,
-              "56": 385,
-              "72": 385
-            }
+            "mean": 29.550847,
+            "sd": 17.08465,
+            "min": 0,
+            "max": 72
           },
           {
             "name": "positive_rsv_tests_(%)",
@@ -3099,9 +2995,9 @@
       "sha512": "dfdcbcd3bfd4e9b6addf4b3c11628eb4d1908eefbe8bf8587908c6549cb241f3e3aae76d82509c9cab4bf243ebbedd97b3802ac6df70ee8e7f687063c491b57e"
     },
     {
-      "bytes": 4228463,
+      "bytes": 4321461,
       "encoding": "ISO-8859-1",
-      "md5": "aafb0dc19b57a59b78dcb9b4c9ee7a90",
+      "md5": "e3d50d0b6623b94a70449aa700f2d0ce",
       "format": "csv",
       "name": "weekly.csv",
       "filename": "weekly.csv.gz",
@@ -3198,81 +3094,31 @@
           "variable": "geography"
         }
       ],
-      "id_length": 2,
+      "id_length": 0,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-09-25 13:42:10.813423",
-      "last_modified": "2026-09-25 13:42:18.270762",
+      "created": "2026-10-23 14:54:02.061196",
+      "last_modified": "2026-10-23 14:54:02.061196",
       "vintage": "2026-02-19",
-      "row_count": 164515,
+      "row_count": 166334,
       "entity_count": 52,
       "schema": {
         "fields": [
           {
             "name": "geography",
-            "duplicates": 164463,
+            "duplicates": 166282,
             "info": [],
-            "time_range": [0, 451],
-            "type": "string",
+            "time_range": [0, 456],
+            "type": "integer",
             "missing": 0,
-            "table": {
-              "00": 3164,
-              "01": 3163,
-              "02": 3164,
-              "04": 3164,
-              "05": 3163,
-              "06": 3164,
-              "08": 3164,
-              "09": 3164,
-              "10": 3164,
-              "11": 3162,
-              "12": 3164,
-              "13": 3164,
-              "15": 3164,
-              "16": 3164,
-              "17": 3164,
-              "18": 3164,
-              "19": 3164,
-              "20": 3164,
-              "21": 3164,
-              "22": 3164,
-              "23": 3164,
-              "24": 3164,
-              "25": 3164,
-              "26": 3164,
-              "27": 3164,
-              "28": 3160,
-              "29": 3164,
-              "30": 3164,
-              "31": 3164,
-              "32": 3164,
-              "33": 3163,
-              "34": 3163,
-              "35": 3164,
-              "36": 3164,
-              "37": 3164,
-              "38": 3164,
-              "39": 3164,
-              "40": 3164,
-              "41": 3164,
-              "42": 3164,
-              "44": 3163,
-              "45": 3164,
-              "46": 3164,
-              "47": 3163,
-              "48": 3164,
-              "49": 3164,
-              "50": 3164,
-              "51": 3164,
-              "53": 3164,
-              "54": 3164,
-              "55": 3164,
-              "56": 3163
-            }
+            "mean": 28.404469,
+            "sd": 16.026578,
+            "min": 0,
+            "max": 56
           },
           {
             "name": "age",
-            "duplicates": 164508,
+            "duplicates": 166327,
             "info": {
               "id": "age",
               "short_name": "Age",
@@ -3288,24 +3134,24 @@
                 }
               ]
             },
-            "time_range": [0, 451],
+            "time_range": [0, 456],
             "type": "string",
             "missing": 0,
             "table": {
-              "<1 Years": 23504,
-              "1-4 Years": 23501,
-              "18-49 Years": 23503,
-              "5-17 Years": 23503,
-              "50-64 Years": 23503,
-              "65+ Years": 23498,
-              "Total": 23503
+              "1-4 Years": 23763,
+              "18-49 Years": 23763,
+              "5-17 Years": 23764,
+              "50-64 Years": 23760,
+              "65+ Years": 23758,
+              "<1 Years": 23764,
+              "Total": 23762
             }
           },
           {
             "name": "time",
-            "duplicates": 164063,
+            "duplicates": 165877,
             "info": [],
-            "time_range": [0, 451],
+            "time_range": [0, 456],
             "type": "string",
             "missing": 0,
             "table": {
@@ -3760,12 +3606,17 @@
               "2026-08-15": 364,
               "2026-08-22": 364,
               "2026-08-29": 364,
-              "2026-09-05": 351
+              "2026-09-05": 364,
+              "2026-09-12": 364,
+              "2026-09-19": 364,
+              "2026-09-26": 364,
+              "2026-10-03": 364,
+              "2026-10-10": 350
             }
           },
           {
             "name": "epic_n_rsv",
-            "duplicates": 163269,
+            "duplicates": 165071,
             "info": {
               "id": "epic_n_rsv",
               "short_name": "RSV Patients",
@@ -3781,17 +3632,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 451],
+            "time_range": [0, 456],
             "type": "integer",
             "missing": 0,
-            "mean": 25.451108,
-            "sd": 220.441659,
+            "mean": 26.258726,
+            "sd": 228.367162,
             "min": 5,
-            "max": 15456
+            "max": 15957
           },
           {
             "name": "epic_n_covid",
-            "duplicates": 161067,
+            "duplicates": 162841,
             "info": {
               "id": "epic_n_covid",
               "short_name": "COVID Patients",
@@ -3807,17 +3658,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 451],
+            "time_range": [0, 456],
             "type": "integer",
             "missing": 0,
-            "mean": 166.323679,
-            "sd": 1453.351978,
+            "mean": 172.445032,
+            "sd": 1507.924553,
             "min": 5,
-            "max": 142689
+            "max": 149190
           },
           {
             "name": "epic_n_flu",
-            "duplicates": 161387,
+            "duplicates": 163129,
             "info": {
               "id": "epic_n_flu",
               "short_name": "Influenza Patients",
@@ -3833,17 +3684,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 451],
+            "time_range": [0, 456],
             "type": "integer",
             "missing": 0,
-            "mean": 134.406826,
-            "sd": 1460.422765,
+            "mean": 140.137362,
+            "sd": 1520.096836,
             "min": 5,
-            "max": 136953
+            "max": 141641
           },
           {
             "name": "epic_n_all_encounters_weekly",
-            "duplicates": 135787,
+            "duplicates": 136450,
             "info": {
               "id": "epic_n_all_encounters_weekly",
               "short_name": "All-Cause ED Encounters (Weekly)",
@@ -3859,17 +3710,17 @@
                 }
               ]
             },
-            "time_range": [0, 451],
+            "time_range": [0, 456],
             "type": "integer",
             "missing": 0,
-            "mean": 10814.488466,
-            "sd": 60374.377734,
+            "mean": 11398.91169,
+            "sd": 63503.565627,
             "min": 5,
-            "max": 1424080
+            "max": 1515469
           },
           {
             "name": "epic_pct_rsv",
-            "duplicates": 118226,
+            "duplicates": 118239,
             "info": {
               "id": "epic_pct_rsv",
               "short_name": "RSV Patients (%)",
@@ -3885,17 +3736,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 451],
+            "time_range": [0, 456],
             "type": "float",
             "missing": 0,
-            "mean": 2.61439,
-            "sd": 9.552554,
-            "min": 0.000685,
+            "mean": 2.517276,
+            "sd": 9.343455,
+            "min": 0.000654,
             "max": 100
           },
           {
             "name": "epic_pct_flu",
-            "duplicates": 97935,
+            "duplicates": 97067,
             "info": {
               "id": "epic_pct_flu",
               "short_name": "Influenza Patients (%)",
@@ -3911,17 +3762,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 451],
+            "time_range": [0, 456],
             "type": "float",
             "missing": 0,
-            "mean": 3.336095,
-            "sd": 9.687024,
-            "min": 0.003112,
+            "mean": 3.244819,
+            "sd": 9.4902,
+            "min": 0.002968,
             "max": 100
           },
           {
             "name": "epic_pct_covid",
-            "duplicates": 88428,
+            "duplicates": 87641,
             "info": {
               "id": "epic_pct_covid",
               "short_name": "COVID Patients (%)",
@@ -3937,17 +3788,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 451],
+            "time_range": [0, 456],
             "type": "float",
             "missing": 0,
-            "mean": 3.366032,
-            "sd": 9.516996,
-            "min": 0.000549,
+            "mean": 3.270582,
+            "sd": 9.315337,
+            "min": 0.000519,
             "max": 100
           },
           {
             "name": "epic_suppressed_flag_rsv",
-            "duplicates": 164513,
+            "duplicates": 166332,
             "info": {
               "id": "epic_suppressed_flag_rsv",
               "short_name": "Fewer than 10 cases in the strata?",
@@ -3962,17 +3813,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 451],
+            "time_range": [0, 456],
             "type": "integer",
             "missing": 0,
-            "mean": 0.821913,
-            "sd": 0.382587,
+            "mean": 0.817782,
+            "sd": 0.386025,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_covid",
-            "duplicates": 164513,
+            "duplicates": 166332,
             "info": {
               "id": "epic_suppressed_flag_covid",
               "short_name": "Fewer than 10 cases in the strata?",
@@ -3987,17 +3838,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 451],
+            "time_range": [0, 456],
             "type": "integer",
             "missing": 0,
-            "mean": 0.541926,
-            "sd": 0.498241,
+            "mean": 0.533998,
+            "sd": 0.498844,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_flu",
-            "duplicates": 164513,
+            "duplicates": 166332,
             "info": {
               "id": "epic_suppressed_flag_flu",
               "short_name": "Fewer than 10 cases in the strata?",
@@ -4012,17 +3863,17 @@
               ],
               "category": "respiratory"
             },
-            "time_range": [0, 451],
+            "time_range": [0, 456],
             "type": "integer",
             "missing": 0,
-            "mean": 0.636598,
-            "sd": 0.480981,
+            "mean": 0.626342,
+            "sd": 0.483776,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_all_encounters_weekly",
-            "duplicates": 164513,
+            "duplicates": 166332,
             "info": {
               "id": "epic_suppressed_flag_all_encounters_weekly",
               "short_name": "All Encounters Count Suppressed? (Weekly)",
@@ -4037,11 +3888,11 @@
                 }
               ]
             },
-            "time_range": [0, 451],
+            "time_range": [0, 456],
             "type": "integer",
             "missing": 0,
-            "mean": 0.007562,
-            "sd": 0.086628,
+            "mean": 0.00722,
+            "sd": 0.084666,
             "min": 0,
             "max": 1
           }
@@ -4450,7 +4301,7 @@
           "id": "_catalog"
         }
       },
-      "sha512": "d8b9a57fcb5fa928c77d024e395085021207cf83ef02b9efc7e7f6fedc5dceb999e2174f8fbb8f31e1ba454c34d379c54dcdca62405d36a6aff36c6b3a0d84ea"
+      "sha512": "c3eb4ca1f62c8b7c57086a6cdd1591d1cca4f5cbbf0da21474cfeb2a483933fd60f5d21f451082b1679d554149b866d2c8333171c6dff99ae0ee5f7b7d44ac19"
     }
   ],
   "change_report": {
@@ -4548,7 +4399,10 @@
         "time": {
           "status": "present",
           "same_type": true,
-          "added_levels": ["2026-08-29", "2026-09-05"],
+          "added_levels": [
+            "2026-08-29",
+            "2026-09-05"
+          ],
           "dropped_levels": []
         },
         "epic_n_rsv": {

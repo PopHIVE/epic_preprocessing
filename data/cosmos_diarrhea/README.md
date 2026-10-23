@@ -29,7 +29,7 @@ range, export date) that produced the current `standard/` files.
 
 | Folder | Session | Rows | Columns |
 |---|---|---|---|
-| `raw/staging_diarrhea_wide/` | 2849923 — "Number of ED Encounters by ED Diagnoses and Age at Time of Visit Range and State of Residence" | State of Residence, Year, Week | ED Diagnoses buckets (all-cause diarrhea A00-09 R19.7; Nausea and vomiting R11.\*; Total) x Age at Time of Visit |
+| `raw/staging_diarrhea_wide/` | 2869731 — "Number of ED Encounters by ED Diagnoses and Age at Time of Visit Range and State of Residence" (last export 2026-10-23) | Year, Week, State of Residence (any order; resolved by header label) | ED Diagnoses buckets (all-cause diarrhea A00-09 R19.7; Nausea and vomiting R11.\*; norovirus A08.11 and rotavirus A08.0, parsed but not yet released; Total) x Age at Time of Visit |
 | `raw/staging_diarrhea_all_encounters_weekly_wide/` | All encounter types, diarrhea | Year, Week, State of Residence | diarrhea; None of the above (dropped); Total x age |
 | `raw/staging_cyclospora_weekly_wide/` | Cyclospora lab components | Year, Week, Abnormal Lab Components, State of Residence | cyclospora tests; Total |
 
@@ -39,7 +39,9 @@ Residence = United States of America.
 ## Updating
 
 1. Re-run the SlicerDicer session, keeping the same rows and measures listed
-   above, and export to `.xlsx`.
+   above, wait for the queued background session to finish (an early export is
+   a "Sneak Peek" sample -- row 3 of the file says so -- with counts roughly
+   1/80 of the full data), and export to `.xlsx`.
 2. Drop the file into the matching `raw/staging_*` folder, **deleting the
    superseded export** — each `process_*()` function reads a single file per
    folder, and leaving two would double-count overlapping weeks.
@@ -57,11 +59,13 @@ Prerequisites:
 ### When the session structure changes
 
 Column positions are resolved from the export's own header rows (row 12 =
-outcome/bucket labels, row 13 = age labels, row 15+ = data), not hard-coded.
-The ED crosstab's buckets are matched by regex against `ED_OUTCOME_PATTERNS` in
-`ingest.R`; an unrecognized or ambiguous bucket label **stops the run** rather
-than silently landing on the wrong measure. Extend that map when a bucket is
-added or re-worded. The all-encounters and cyclospora parsers have their own
+outcome/bucket labels, row 13 = age labels, row 14 = id column headers, row 15+
+= data), not hard-coded. The ED crosstab's buckets are matched by regex against
+`ED_OUTCOME_PATTERNS` in `ingest.R`, and its three id columns (State of
+Residence, Year, Week) are named by matching row 14 against `ED_ID_LABELS`, so
+exports with either row order parse; an unrecognized or ambiguous label
+**stops the run** rather than silently landing on the wrong measure or column.
+Extend those maps when a bucket or row dimension is added or re-worded. The all-encounters and cyclospora parsers have their own
 label handling in `process_diarrhea_all_encounters_weekly_wide()` and
 `process_cyclospora_weekly_wide()`.
 
