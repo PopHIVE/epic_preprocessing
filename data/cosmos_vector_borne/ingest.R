@@ -575,4 +575,162 @@ if (!identical(process$new_cases_state, new_cases_state)) {
   dcf::dcf_process_record(updated = process)
 }
 
+# -----------------------------------------------------------------------------
+# 3. West Nile new cases by age (raw/staging/west_nile_age/*.xlsx)
+#    -> standard/data_west_nile_age.csv.gz
+#
+# SlicerDicer session 2872838, "n west nile and west nile and Number of Patients
+# by Patient Age in Years (Current) Range and State of Residence and Diagnosis
+# (All)", by Year. Data model Patients, population base All Patients, criteria:
+# first West Nile diagnosis (A92.3, not preceded by A92.3 within 6 months),
+# Country of Care = United States of America, Has Any Encounters. Session date
+# range 1/1/2018 - 10/10/2026 -> ANNUAL data, time = YYYY-12-31; the trailing
+# partial year ("Jan 1 - Oct 10 2026") is dropped.
+# Raw layout: row 11 measure labels (E:G); row 12 dimension labels (A: year,
+# B: age range, C: state, D: diagnosis group); 13+ data rows ordered
+# Year > Age > State > Diagnosis. Year, age and state are merged cells (fill down).
+# `n west nile` and `Number of Patients` are identical (the population is
+# already the West Nile patients) and `west nile (%)` is always 100%, so only
+# the count is kept, one column per diagnosis group.
+# -----------------------------------------------------------------------------
+WNV_AGE_LABELS <- c(
+  "Less than 40"      = "<40",
+  "≥ 40 and < 70" = "40-69",
+  "70 or more"        = "70+",
+  "Total"             = "Overall"
+)
+WNV_DX_LABELS <- c(
+  "Total"             = "total",
+  "Neuroinvasive"     = "neuroinvasive",
+  "Non-neuroinvasive" = "non_neuroinvasive"
+)
+WNV_MEASURE_PATTERNS <- c(
+  n_west_nile = "^n west nile$",
+  pct         = "^west nile \\(%\\)$",
+  n_patients  = "^Number of Patients$"
+)
+
+wnv_age_state <- get_staging_state("raw/staging/west_nile_age", "West Nile by age crosstab")
+
+if (!identical(process$wnv_age_state, wnv_age_state)) {
+  message("== West Nile by age export: ", basename(wnv_age_state$files))
+  grid <- read_epic_grid(wnv_age_state$files[[1]], xlsx_password)
+
+  dim_label_row <- which(grid[[3]] == "State of Residence")
+  if (length(dim_label_row) != 1 ||
+      !identical(grid[[1]][[dim_label_row]], "Year") ||
+      !grepl("^Patient Age in Years", grid[[2]][[dim_label_row]]) ||
+      !grepl("^Diagnosis", grid[[4]][[dim_label_row]])) {
+    stop("Expected row labels 'Year' / 'Patient Age in Years' / 'State of Residence' / 'Diagnosis' on one row; export layout changed.")
+  }
+  measure_keys <- match_measure_labels(
+    trimws(as.character(unlist(grid[dim_label_row - 1L, 5:ncol(grid)]))), WNV_MEASURE_PATTERNS
+  )
+  if (!setequal(measure_keys, names(WNV_MEASURE_PATTERNS)) || length(measure_keys) != 3L) {
+    stop("Expected exactly the measures ", paste(names(WNV_MEASURE_PATTERNS), collapse = ", "), "; export layout changed.")
+  }
+  col_n <- 4L + which(measure_keys == "n_west_nile")
+  col_pat <- 4L + which(measure_keys == "n_patients")
+
+  data_raw <- grid[(dim_label_row + 1L):nrow(grid), , drop = FALSE]
+  data_raw <- data.frame(
+    year = data_raw[[1]], age_raw = data_raw[[2]], state_name = data_raw[[3]], dx_raw = data_raw[[4]],
+    raw_value = data_raw[[col_n]], raw_patients = data_raw[[col_pat]],
+    stringsAsFactors = FALSE
+  ) %>%
+    mutate(
+      across(c(year, age_raw, state_name, dx_raw), ~ na_if(trimws(iconv(.x, to = "UTF-8", sub = "")), ""))
+    ) %>%
+    fill(year, age_raw, state_name, .direction = "down") %>%
+    filter(!is.na(dx_raw))
+
+  # Annual time: keep full calendar years only; drop the trailing partial year
+  # (e.g. "Jan 1 - Oct 10 2026") and any year-level total row.
+  is_full_year <- grepl("^\\d{4}$", data_raw$year)
+  if (any(!is_full_year)) {
+    message("Dropping ", sum(!is_full_year), " row(s) from partial/total year(s): ",
+            paste(unique(data_raw$year[!is_full_year]), collapse = ", "))
+  }
+  data_raw <- data_raw[is_full_year, ]
+  if (nrow(data_raw) == 0) stop("No full-year rows found; the year label format probably changed.")
+  data_raw$time <- paste0(data_raw$year, "-12-31")
+
+  # "Total: Total includes all data ..." footnotes are appended to total labels
+  data_raw <- data_raw %>%
+    mutate(
+      age_raw = if_else(grepl("^Total(:|$)", age_raw), "Total", age_raw),
+      dx_raw  = if_else(grepl("^Total(:|$)", dx_raw), "Total", dx_raw)
+    )
+
+  unknown_age <- setdiff(unique(data_raw$age_raw), names(WNV_AGE_LABELS))
+  if (length(unknown_age) > 0) {
+    stop("Unrecognized age group(s): ", paste(unknown_age, collapse = ", "), ". Update WNV_AGE_LABELS in ingest.R.")
+  }
+  unknown_dx <- setdiff(unique(data_raw$dx_raw), c(names(WNV_DX_LABELS), "None of the above"))
+  if (length(unknown_dx) > 0) {
+    stop("Unrecognized diagnosis group(s): ", paste(unknown_dx, collapse = ", "), ". Update WNV_DX_LABELS in ingest.R.")
+  }
+  n_none <- sum(data_raw$dx_raw == "None of the above")
+  message("Dropping ", n_none, " 'None of the above' diagnosis row(s)")
+  data_raw <- data_raw %>% filter(dx_raw != "None of the above")
+
+  data_raw <- attach_geography(data_raw)
+
+  data_long <- data_raw %>%
+    mutate(
+      age = unname(WNV_AGE_LABELS[age_raw]),
+      dx = unname(WNV_DX_LABELS[dx_raw]),
+      suppressed = as.integer(is_suppressed_count(raw_value)),
+      value = unsuppress_count(raw_value)
+    )
+
+  # n west nile and Number of Patients must agree wherever both are observed
+  both <- !is_suppressed_count(data_long$raw_value) & !is_suppressed_count(data_long$raw_patients)
+  stopifnot(all(as.numeric(data_long$raw_value[both]) == as.numeric(gsub(",", "", data_long$raw_patients[both]))))
+
+  wide_n <- data_long %>%
+    select(geography, time, age, dx, value) %>%
+    pivot_wider(names_from = dx, values_from = value, names_glue = "epic_n_west_nile_new_{dx}")
+  wide_flag <- data_long %>%
+    select(geography, time, age, dx, suppressed) %>%
+    pivot_wider(names_from = dx, values_from = suppressed, names_glue = "epic_west_nile_new_{dx}_suppressed_flag")
+
+  dx_keys <- unname(WNV_DX_LABELS)
+  data_wnv <- left_join(wide_n, wide_flag, by = c("geography", "time", "age")) %>%
+    select(geography, time, age,
+           all_of(unlist(lapply(dx_keys, function(k) {
+             c(paste0("epic_n_west_nile_new_", k), paste0("epic_west_nile_new_", k, "_suppressed_flag"))
+           })))) %>%
+    arrange(geography, time, age)
+
+  # Validation
+  dupes <- data_wnv %>% count(geography, time, age) %>% filter(n > 1)
+  if (nrow(dupes) > 0) stop("Duplicate rows per geography/time/age (", nrow(dupes), " combinations).")
+  stopifnot(
+    all(nchar(data_wnv$geography) == 2),
+    "00" %in% data_wnv$geography,
+    all(grepl("^\\d{4}-12-31$", data_wnv$time)),
+    setequal(data_wnv$age, unname(WNV_AGE_LABELS))
+  )
+  for (k in dx_keys) {
+    n_col <- data_wnv[[paste0("epic_n_west_nile_new_", k)]]
+    flag_col <- data_wnv[[paste0("epic_west_nile_new_", k, "_suppressed_flag")]]
+    stopifnot(
+      !any(is.na(n_col)), all(n_col >= 0),
+      all(flag_col %in% c(0L, 1L)),
+      all(n_col[flag_col == 1L] == 5)
+    )
+    message("  epic_west_nile_new_", k, "_suppressed_flag: ", sum(flag_col), " suppressed/imputed")
+  }
+  message(
+    "Standardized ", nrow(data_wnv), " rows | ", length(unique(data_wnv$geography)),
+    " geographies | ", length(unique(data_wnv$age)), " age groups | time ", unique(data_wnv$time)
+  )
+
+  vroom::vroom_write(data_wnv, "standard/data_west_nile_age.csv.gz", delim = ",")
+
+  process$wnv_age_state <- wnv_age_state
+  dcf::dcf_process_record(updated = process)
+}
+
 

@@ -2,7 +2,7 @@
 
 Monthly Epic Cosmos vector-borne disease data, by state, for six diseases: Lyme disease,
 Babesiosis, Malaria, RMSF (Rocky Mountain Spotted Fever), West Nile virus, and Dengue.
-Two exports, each in its own `raw/staging/` subfolder (one file per folder, replacing the
+Three exports, each in its own `raw/staging/` subfolder (one file per folder, replacing the
 previous file when updating), tracked by its own key in `process.json`, and written to its
 own standard file. This is a dcf data source project, initialized with `dcf::dcf_add_source`.
 
@@ -11,8 +11,23 @@ own standard file. This is a dcf data source project, initialized with `dcf::dcf
 | New cases, session `2863672` | `raw/staging/new_cases/` | `standard/data_new_cases.csv.gz` | `epic_n_new_<dz>`, `epic_pct_new_<dz>`, `epic_new_<dz>_suppressed_flag`, `epic_n_new_patients`, `epic_n_new_patients_suppressed_flag` |
 | Lab component results, session `2863670` | `raw/staging/lab_tests/` | `standard/data_lab_tests.csv.gz` | `epic_n_tests_<dz>`, `epic_pct_tests_<dz>`, `epic_tests_<dz>_suppressed_flag`, `epic_n_lab_results`, `epic_n_lab_results_suppressed_flag` |
 
-Both are PopHIVE wide format: `geography` (FIPS string; `"00"` is national, the SlicerDicer
-`Total` row) and `time` (`YYYY-mm-dd`, the **last day of the month**).
+| West Nile new cases by age, session `2872838` | `raw/staging/west_nile_age/` | `standard/data_west_nile_age.csv.gz` | `age`; `epic_n_west_nile_new_<total\|neuroinvasive\|non_neuroinvasive>` + `epic_west_nile_new_<dx>_suppressed_flag` |
+
+The first two are PopHIVE wide format: `geography` (FIPS string; `"00"` is national, the SlicerDicer
+`Total` row) and `time` (`YYYY-mm-dd`, the **last day of the month**). The West Nile by age
+file is **annual** (`time` = `YYYY-12-31` per full calendar year, 2018 onward; the trailing partial year is dropped) and adds `age`.
+
+## West Nile by age
+
+SlicerDicer session `2872838`: data model `Patients`, population base `All Patients`; patients
+with a first West Nile diagnosis (A92.3, not preceded by A92.3 within 6 months), Country of
+Care = United States, Has Any Encounters; date range 1/1/2018 - 10/10/2026. Rows are
+Year > Age (Current: `<40`, `40-69`, `70+`, `Total` -> `Overall`) > State > Diagnosis group
+(`Total`, `Neuroinvasive`, `Non-neuroinvasive`); `None of the above` is dropped. The export's
+`n west nile` and `Number of Patients` are identical and `west nile (%)` is always 100%, so
+only the count is kept. The ingest `stop()`s on unrecognized age/diagnosis labels or measure
+columns (extend `WNV_AGE_LABELS`, `WNV_DX_LABELS`, `WNV_MEASURE_PATTERNS`). Suppressed
+cells (blank) are imputed as 5 with a per-column flag, so age groups/states may not sum to totals.
 
 ## New cases
 

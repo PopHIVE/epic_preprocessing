@@ -1,0 +1,97 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE,
+                       fig.width = 12, fig.height = 7, dpi = 120)
+
+library(dplyr)
+library(tidyr)
+library(vroom)
+library(ggplot2)
+library(scales)
+library(sf)
+library(tigris)
+
+options(tigris_use_cache = TRUE)
+
+DROP_ST <- c("02", "15", "60", "66", "69", "72", "78")  # AK, HI, territories
+AGE_LEVELS <- c("<40", "40-69", "70+", "Overall")
+DX_LABELS <- c(
+  total = "All West Nile virus", neuroinvasive = "Neuroinvasive",
+  non_neuroinvasive = "Non-neuroinvasive"
+)
+
+dat <- vroom(
+  "../standard/data_west_nile_age.csv.gz", show_col_types = FALSE,
+  col_types = cols(geography = "c", time = "c", age = "c")
+) %>%
+  mutate(year = substr(time, 1, 4), age = factor(age, levels = AGE_LEVELS))
+
+states_sf <- tigris::states(cb = TRUE, resolution = "5m", year = 2022, progress_bar = FALSE) %>%
+  filter(!GEOID %in% DROP_ST) %>%
+  transmute(geography = as.character(GEOID))
+```
+
+```{r national-time-series}
+nat_long <- dat %>%
+  filter(geography == "00") %>%
+  select(year, age, starts_with("epic_n_west_nile_new_")) %>%
+  pivot_longer(starts_with("epic_n_west_nile_new_"), names_to = "dx", values_to = "value") %>%
+  mutate(dx = DX_LABELS[sub("^epic_n_west_nile_new_", "", dx)],
+         dx = factor(dx, levels = DX_LABELS),
+         year = as.integer(year))
+
+ggplot(nat_long, aes(year, value, color = age, group = age)) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 1.5) +
+  facet_wrap(~dx, scales = "free_y", ncol = 3) +
+  scale_x_continuous(breaks = unique(nat_long$year)) +
+  scale_y_continuous(labels = comma) +
+  labs(title = "National new West Nile virus patients, by age group",
+       x = NULL, y = "Patients", color = "Age") +
+  theme_bw(base_size = 11) +
+  theme(strip.text = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r state-maps, fig.width = 11, fig.height = 10}
+# Suppressed cells (imputed as 5) are set to NA so they draw grey
+map_long <- dat %>%
+  filter(geography != "00") %>%
+  select(geography, year, age,
+         neuroinvasive = epic_n_west_nile_new_neuroinvasive,
+         neuroinvasive_flag = epic_west_nile_new_neuroinvasive_suppressed_flag,
+         non_neuroinvasive = epic_n_west_nile_new_non_neuroinvasive,
+         non_neuroinvasive_flag = epic_west_nile_new_non_neuroinvasive_suppressed_flag) %>%
+  pivot_longer(c(neuroinvasive, non_neuroinvasive), names_to = "dx", values_to = "value") %>%
+  mutate(
+    flag = if_else(dx == "neuroinvasive", neuroinvasive_flag, non_neuroinvasive_flag),
+    value = if_else(flag == 1L, NA_real_, value),
+    dx = factor(DX_LABELS[dx], levels = DX_LABELS[c("neuroinvasive", "non_neuroinvasive")])
+  ) %>%
+  select(geography, year, age, dx, value)
+
+fill_limits <- range(map_long$value, na.rm = TRUE)
+
+for (yr in sort(unique(map_long$year))) {
+  map_dat <- states_sf %>%
+    left_join(filter(map_long, year == yr), by = "geography")
+
+  print(
+    ggplot(map_dat) +
+      geom_sf(aes(fill = value), color = "white", linewidth = 0.08) +
+      scale_fill_viridis_c(option = "viridis", trans = "log10", limits = fill_limits,
+                           na.value = "grey80", labels = comma, name = "Patients") +
+      coord_sf(crs = 5070, datum = NA) +
+      facet_grid(age ~ dx) +
+      labs(title = paste0("New West Nile virus patients by state, ", yr,
+                          " (grey = suppressed)")) +
+      theme_void(base_size = 11) +
+      theme(strip.text = element_text(face = "bold"),
+            legend.position = "bottom",
+            legend.key.width = unit(2, "cm"))
+  )
+}
+```
