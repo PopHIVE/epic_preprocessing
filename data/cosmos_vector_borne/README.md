@@ -11,7 +11,7 @@ own standard file. This is a dcf data source project, initialized with `dcf::dcf
 | New cases, session `2863672` | `raw/staging/new_cases/` | `standard/data_new_cases.csv.gz` | `epic_n_new_<dz>`, `epic_pct_new_<dz>`, `epic_new_<dz>_suppressed_flag`, `epic_n_new_patients`, `epic_n_new_patients_suppressed_flag` |
 | Lab component results, session `2863670` | `raw/staging/lab_tests/` | `standard/data_lab_tests.csv.gz` | `epic_n_tests_<dz>`, `epic_pct_tests_<dz>`, `epic_tests_<dz>_suppressed_flag`, `epic_n_lab_results`, `epic_n_lab_results_suppressed_flag` |
 
-| West Nile new cases by age, session `2872838` | `raw/staging/west_nile_age/` | `standard/data_west_nile_age.csv.gz` | `age`; `epic_n_west_nile_new_<total\|neuroinvasive\|non_neuroinvasive>` + `epic_west_nile_new_<dx>_suppressed_flag` |
+| West Nile new cases by age, session `2872838` | `raw/staging/west_nile_age/` | `standard/data_west_nile_age.csv.gz` | `age`; `epic_n_west_nile_new_<total\|neuroinvasive\|non_neuroinvasive>` + `epic_west_nile_new_<dx>_suppressed_flag`; denominator `epic_n_patients` + `epic_n_patients_suppressed_flag` (from the all-patients export, session `2875932`, in `raw/staging/west_nile_age_patients/`) |
 
 The first two are PopHIVE wide format: `geography` (FIPS string; `"00"` is national, the SlicerDicer
 `Total` row) and `time` (`YYYY-mm-dd`, the **last day of the month**). The West Nile by age
