@@ -52,8 +52,14 @@
     "hashes": "865141fa901a0e72c18bfa82c2cb68c0"
   },
   "wnv_age_state": {
-    "files": "raw/staging/west_nile_age/Patients_Crosstab_2026-10-29T07_51_03.xlsx",
-    "hashes": "ef0387a6d085e71e798d05597eba293e"
+    "age": {
+      "files": "raw/staging/west_nile_age/Patients_Crosstab_2026-10-29T07_51_03.xlsx",
+      "hashes": "ef0387a6d085e71e798d05597eba293e"
+    },
+    "patients": {
+      "files": "raw/staging/west_nile_age_patients/Patients_Crosstab_2026-11-04T11_15_56.xlsx",
+      "hashes": "7f0ca672f81aa3a4a016f4a49f2f14b4"
+    }
   },
   "standard_state": {
     "./data/cosmos_vector_borne/measure_info.json": "482a638c5ba190dffb9eef99083086d0",

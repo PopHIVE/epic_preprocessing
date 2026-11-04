@@ -591,7 +591,8 @@ if (!identical(process$new_cases_state, new_cases_state)) {
 # Year > Age > State > Diagnosis. Year, age and state are merged cells (fill down).
 # `n west nile` and `Number of Patients` are identical (the population is
 # already the West Nile patients) and `west nile (%)` is always 100%, so only
-# the count is kept, one column per diagnosis group.
+# the count is kept, one column per diagnosis group. A second export (all
+# patients by year/age/state) supplies the denominator epic_n_patients.
 # -----------------------------------------------------------------------------
 WNV_AGE_LABELS <- c(
   "Less than 40"      = "<40",
@@ -610,11 +611,21 @@ WNV_MEASURE_PATTERNS <- c(
   n_patients  = "^Number of Patients$"
 )
 
-wnv_age_state <- get_staging_state("raw/staging/west_nile_age", "West Nile by age crosstab")
+# Companion denominator export, raw/staging/west_nile_age_patients/*.xlsx:
+# SlicerDicer session 2875932, "Number of Patients by Patient Age in Years
+# (Current) Range and State of Residence" (data model Patients, population base
+# All Patients, criteria Country of Care = United States of America AND Has Any
+# Encounters; same date range). Rows Year > Age > State, one value column
+# (A: year, B: age range, C: state, D: Number of Patients). It is the number of
+# ALL patients per year/age/state, joined on as `epic_n_patients` (+ flag).
+wnv_age_state <- list(
+  age = get_staging_state("raw/staging/west_nile_age", "West Nile by age crosstab"),
+  patients = get_staging_state("raw/staging/west_nile_age_patients", "all-patients by age crosstab")
+)
 
 if (!identical(process$wnv_age_state, wnv_age_state)) {
-  message("== West Nile by age export: ", basename(wnv_age_state$files))
-  grid <- read_epic_grid(wnv_age_state$files[[1]], xlsx_password)
+  message("== West Nile by age export: ", basename(wnv_age_state$age$files))
+  grid <- read_epic_grid(wnv_age_state$age$files[[1]], xlsx_password)
 
   dim_label_row <- which(grid[[3]] == "State of Residence")
   if (length(dim_label_row) != 1 ||
@@ -695,13 +706,60 @@ if (!identical(process$wnv_age_state, wnv_age_state)) {
     select(geography, time, age, dx, suppressed) %>%
     pivot_wider(names_from = dx, values_from = suppressed, names_glue = "epic_west_nile_new_{dx}_suppressed_flag")
 
+  # All-patients denominator (Year > Age > State; same labels as above)
+  message("== All-patients by age export: ", basename(wnv_age_state$patients$files))
+  pgrid <- read_epic_grid(wnv_age_state$patients$files[[1]], xlsx_password)
+  p_label_row <- which(pgrid[[3]] == "State of Residence")
+  if (length(p_label_row) != 1 || ncol(pgrid) != 4 ||
+      !identical(pgrid[[1]][[p_label_row]], "Year") ||
+      !grepl("^Patient Age in Years", pgrid[[2]][[p_label_row]]) ||
+      !identical(trimws(pgrid[[4]][[p_label_row - 1L]]), "Number of Patients")) {
+    stop("Expected 'Year' / 'Patient Age in Years' / 'State of Residence' row labels and a single 'Number of Patients' column in the all-patients export; export layout changed.")
+  }
+  data_pat <- pgrid[(p_label_row + 1L):nrow(pgrid), , drop = FALSE]
+  data_pat <- data.frame(
+    year = data_pat[[1]], age_raw = data_pat[[2]], state_name = data_pat[[3]], raw_patients = data_pat[[4]],
+    stringsAsFactors = FALSE
+  ) %>%
+    mutate(across(c(year, age_raw, state_name), ~ na_if(trimws(iconv(.x, to = "UTF-8", sub = "")), ""))) %>%
+    fill(year, age_raw, .direction = "down") %>%
+    filter(!is.na(state_name), grepl("^\\d{4}$", year)) %>%
+    mutate(
+      time = paste0(year, "-12-31"),
+      age_raw = if_else(grepl("^Total(:|$)", age_raw), "Total", age_raw)
+    )
+  unknown_age_p <- setdiff(unique(data_pat$age_raw), names(WNV_AGE_LABELS))
+  if (length(unknown_age_p) > 0) {
+    stop("Unrecognized age group(s) in all-patients export: ", paste(unknown_age_p, collapse = ", "),
+         ". Update WNV_AGE_LABELS in ingest.R.")
+  }
+  data_pat <- attach_geography(data_pat) %>%
+    mutate(
+      age = unname(WNV_AGE_LABELS[age_raw]),
+      epic_n_patients = unsuppress_count(raw_patients),
+      epic_n_patients_suppressed_flag = as.integer(is_suppressed_count(raw_patients))
+    ) %>%
+    select(geography, time, age, epic_n_patients, epic_n_patients_suppressed_flag)
+  dupes_p <- data_pat %>% count(geography, time, age) %>% filter(n > 1)
+  if (nrow(dupes_p) > 0) stop("Duplicate rows per geography/time/age in all-patients export.")
+
   dx_keys <- unname(WNV_DX_LABELS)
   data_wnv <- left_join(wide_n, wide_flag, by = c("geography", "time", "age")) %>%
+    left_join(data_pat, by = c("geography", "time", "age")) %>%
     select(geography, time, age,
            all_of(unlist(lapply(dx_keys, function(k) {
              c(paste0("epic_n_west_nile_new_", k), paste0("epic_west_nile_new_", k, "_suppressed_flag"))
-           })))) %>%
+           }))),
+           epic_n_patients, epic_n_patients_suppressed_flag) %>%
     arrange(geography, time, age)
+  if (anyNA(data_wnv$epic_n_patients)) {
+    stop(sum(is.na(data_wnv$epic_n_patients)), " West Nile row(s) have no matching all-patients denominator.")
+  }
+  stopifnot(
+    all(data_wnv$epic_n_patients >= 0),
+    all(data_wnv$epic_n_patients_suppressed_flag %in% c(0L, 1L)),
+    all(data_wnv$epic_n_patients[data_wnv$epic_n_patients_suppressed_flag == 1L] == 5)
+  )
 
   # Validation
   dupes <- data_wnv %>% count(geography, time, age) %>% filter(n > 1)
