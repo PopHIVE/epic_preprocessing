@@ -64,6 +64,10 @@ parse_week_range <- function(week_str, year_str) {
   list(start_date = start_date, end_date = end_date, n_days = n_days)
 }
 
+# Last week (Saturday end date) kept from the ED weekly export. Epic data is
+# not complete past this date.
+ED_DATA_CUTOFF <- as.Date("2026-10-24")
+
 # Epic's weekly buckets are Sunday-Saturday spans, matching the project's
 # Saturday-end-of-week convention. Partial weeks (<7 days) at the start/end
 # of the exported date range are dropped.
@@ -354,6 +358,9 @@ process_diarrhea_wide <- function(file, granularity, password = NULL) {
 
   if (granularity == "week") {
     data_long <- filter_full_weeks(data_long, "time_raw", "year_raw")
+    # Epic's data is not complete past this week (complete through the ED_DATA_CUTOFF week);
+    # drop later weeks so they don't enter the standard output.
+    data_long <- data_long %>% filter(time <= ED_DATA_CUTOFF)
   } else {
     # Monthly: keep only rows where the time label is a full 3-letter month
     # abbreviation (partial start/end months use day numbers/ranges instead)
@@ -590,6 +597,7 @@ data_weekly <- full_join(
   weekly_standard_ed, all_encounters_weekly_standard,
   by = c("geography", "age", "time")
 ) %>%
+  filter(time <= ED_DATA_CUTOFF) %>%
   arrange(geography, age, time)
 
 vroom::vroom_write(data_weekly, "standard/data_weekly.csv.gz", ",")

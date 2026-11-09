@@ -5,11 +5,11 @@
     {
       "path": "ingest.R",
       "manual": false,
-      "last_run": "2026-10-23 14:29:38",
+      "last_run": "2026-11-09 15:03:39",
       "frequency": 0,
-      "run_time": 4.682,
+      "run_time": 15.17,
       "last_status": {
-        "log": ["-- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --", "v dplyr     1.2.0     v readr     2.1.5", "v forcats   1.0.0     v stringr   1.5.1", "v ggplot2   4.0.2     v tibble    3.2.1", "v lubridate 1.9.4     v tidyr     1.3.2", "v purrr     1.0.4     ", "-- Conflicts ------------------------------------------ tidyverse_conflicts() --", "x dplyr::filter() masks stats::filter()", "x dplyr::lag()    masks stats::lag()", "i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors", "Rows: 3314 Columns: 3", "\\ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\r", "\\ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\r-- Column specification --------------------------------------------------------", "\\ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\rDelimiter: \"\\t\"", "chr (3): geography, geography_name, state", "", "\\ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\r", "", "\\ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\ri Use `spec()` to retrieve the full column specification for this data.", "\\ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\ri Specify the column types or set `show_col_types = FALSE` to quiet this message.", "\\ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\r", "Processing week file: ED Encounters_Crosstab_2026-10-23T09_52_11.xlsx", "  Row dimensions: Year / Week / State of Residence", "  ED Diagnoses blocks found: diarrhea, vomiting, norovirus, rotavirus, all_encounters", "  Dropping 163072 row(s) from unreleased norovirus/rotavirus buckets"],
+        "log": ["── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──", "✔ dplyr     1.2.1     ✔ readr     2.2.0", "✔ forcats   1.0.1     ✔ stringr   1.6.0", "✔ ggplot2   4.0.3     ✔ tibble    3.3.1", "✔ lubridate 1.9.5     ✔ tidyr     1.3.2", "✔ purrr     1.2.2     ", "── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──", "✖ dplyr::filter() masks stats::filter()", "✖ dplyr::lag()    masks stats::lag()", "ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors", "Rows: 3314 Columns: 3", "⠙ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\r", "⠙ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\r── Column specification ────────────────────────────────────────────────────────", "⠙ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\rDelimiter: \"\\t\"", "chr (3): geography, geography_name, state", "", "⠙ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\r", "", "⠙ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\rℹ Use `spec()` to retrieve the full column specification for this data.", "⠙ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\rℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.", "⠙ processing source cosmos_diarrhea (./data/cosmos_diarrhea/ingest.R)\r", "Processing week file: ED Encounters_Crosstab_2026-11-09T11_10_57.xlsx", "  Row dimensions: Year / Week / State of Residence", "  ED Diagnoses blocks found: diarrhea, vomiting, norovirus, rotavirus, all_encounters", "  Dropping 164528 row(s) from unreleased norovirus/rotavirus buckets"],
         "success": true
       }
     }
@@ -19,7 +19,7 @@
   "standalone": false,
   "vintages": {
     "data_weekly.csv.gz": {
-      "ed": "10/23/2026",
+      "ed": "11/9/2026",
       "all_encounters": "9/25/2026"
     },
     "weekly_tests.csv.gz": {
@@ -31,8 +31,8 @@
     }
   },
   "standard_state": {
-    "./data/cosmos_diarrhea/measure_info.json": "67c6bd3e6d8904839ce7e916f2ad7d62",
-    "./data/cosmos_diarrhea/standard/data_weekly.csv.gz": "86862310e01726fec4eb94f6a99ffdc7",
+    "./data/cosmos_diarrhea/measure_info.json": "3510f82f84685ae78fa1234dcd51a523",
+    "./data/cosmos_diarrhea/standard/data_weekly.csv.gz": "05aefa98407d9dc404d1ac15b5fc27ca",
     "./data/cosmos_diarrhea/standard/weekly_tests.csv.gz": "ef8b1f177f66637eac06b1d59a1031d2"
   }
 }

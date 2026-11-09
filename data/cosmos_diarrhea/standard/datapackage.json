@@ -4,52 +4,64 @@
   "licenses": [],
   "resources": [
     {
-      "bytes": 3300139,
-      "encoding": "ISO-8859-1",
-      "md5": "86862310e01726fec4eb94f6a99ffdc7",
+      "bytes": 3319013,
+      "encoding": "windows-1252",
+      "md5": "05aefa98407d9dc404d1ac15b5fc27ca",
       "format": "csv",
       "name": "data_weekly.csv",
       "filename": "data_weekly.csv.gz",
       "versions": {
         "hash": [
+          "6a38bd46d8c5b9c816e943030f0ea0db95e75d31",
+          "0ef9d0236b42f79c7bf7368a0b4b2392289242c8",
+          "877764b5a049ae305f4630f26bd1d343bc11ce23",
+          "4c5d3e4c7447e37eda1fb72715dd6564b7fc3882",
           "a4233472316926bf879d374f0b530625f331fe54",
           "ab63c6d21a9fb5ae200a45f1c1e9032569f16689",
           "7d74256f7e0e4e9104e6813c6737629dc7c1ab5e",
           "4c7250aa72dbb973edf99243e96a86076d24f819",
           "9080e46d55fc044cb05363d2b2f58f3e8a4be423",
           "fefe3e39e02d3cfaa0cba58696f78000e98683ca",
-          "15a07a619687a62c78228d58874d935b8e2f4baa",
-          "4c5d3e4c7447e37eda1fb72715dd6564b7fc3882"
+          "15a07a619687a62c78228d58874d935b8e2f4baa"
         ],
         "author": [
+          "Callie Annas <callie.annas@yale.edu>",
+          "Madi Baltagulov <156106808+MadiBal@users.noreply.github.com>",
+          "anshap32 <73296024+anshap32@users.noreply.github.com>",
+          "Callie Annas <callie.annas@yale.edu>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
           "danweinberger <daniel.weinberger@yale.edu>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
-          "anshap32 <73296024+anshap32@users.noreply.github.com>",
-          "Callie Annas <callie.annas@yale.edu>"
+          "anshap32 <73296024+anshap32@users.noreply.github.com>"
         ],
         "date": [
+          "Mon Nov 9 13:29:33 2026 -0500",
+          "Fri Oct 23 15:31:49 2026 -0400",
+          "Thu Oct 8 14:27:54 2026 -0400",
+          "Fri Sep 25 13:55:31 2026 -0400",
           "Fri Sep 4 13:31:40 2026 -0400",
           "Tue Aug 18 08:30:59 2026 -0400",
           "Thu Aug 13 08:56:41 2026 -0400",
           "Fri Jul 31 08:26:28 2026 -0400",
           "Sat Jul 18 00:10:06 2026 -0400",
           "Fri Jul 17 16:52:06 2026 -0400",
-          "Fri Jul 17 08:56:35 2026 -0400",
-          "Fri Sep 25 13:55:31 2026 -0400"
+          "Fri Jul 17 08:56:35 2026 -0400"
         ],
         "message": [
+          "Adding data up to 10/17/26",
+          "Oct 23 updates: respiratory and enterics (#62)",
+          "Oct8 updates (#56)",
+          "Updating diarrhea data",
           "update epic correct dates",
           "added vomiting",
           "updated cyclo new data",
           "added latest data",
           "update dates and vaerify outputs",
           "added missing icd10 code",
-          "fixed dates",
-          "Updating diarrhea data"
+          "fixed dates"
         ]
       },
       "source": [],
@@ -59,31 +71,80 @@
           "variable": "geography"
         }
       ],
-      "id_length": 0,
+      "id_length": 2,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-10-23 14:29:38.291548",
-      "last_modified": "2026-10-23 14:29:38.291548",
-      "vintage": ["10/23/2026", "9/25/2026"],
-      "row_count": 79968,
+      "created": "2026-08-17 16:12:55.371017",
+      "last_modified": "2026-11-09 15:03:39.770103",
+      "vintage": ["11/9/2026", "9/25/2026"],
+      "row_count": 80682,
       "entity_count": 51,
       "schema": {
         "fields": [
           {
             "name": "geography",
-            "duplicates": 79917,
+            "duplicates": 80631,
             "info": [],
-            "time_range": [0, 223],
-            "type": "integer",
+            "time_range": [0, 225],
+            "type": "string",
             "missing": 0,
-            "mean": 28.745098,
-            "sd": 15.995005,
-            "min": 0,
-            "max": 56
+            "table": {
+              "00": 1582,
+              "01": 1582,
+              "02": 1582,
+              "04": 1582,
+              "05": 1582,
+              "06": 1582,
+              "08": 1582,
+              "09": 1582,
+              "10": 1582,
+              "12": 1582,
+              "13": 1582,
+              "15": 1582,
+              "16": 1582,
+              "17": 1582,
+              "18": 1582,
+              "19": 1582,
+              "20": 1582,
+              "21": 1582,
+              "22": 1582,
+              "23": 1582,
+              "24": 1582,
+              "25": 1582,
+              "26": 1582,
+              "27": 1582,
+              "28": 1582,
+              "29": 1582,
+              "30": 1582,
+              "31": 1582,
+              "32": 1582,
+              "33": 1582,
+              "34": 1582,
+              "35": 1582,
+              "36": 1582,
+              "37": 1582,
+              "38": 1582,
+              "39": 1582,
+              "40": 1582,
+              "41": 1582,
+              "42": 1582,
+              "44": 1582,
+              "45": 1582,
+              "46": 1582,
+              "47": 1582,
+              "48": 1582,
+              "49": 1582,
+              "50": 1582,
+              "51": 1582,
+              "53": 1582,
+              "54": 1582,
+              "55": 1582,
+              "56": 1582
+            }
           },
           {
             "name": "age",
-            "duplicates": 79961,
+            "duplicates": 80675,
             "info": {
               "id": "age",
               "short_name": "Age",
@@ -99,24 +160,24 @@
                 }
               ]
             },
-            "time_range": [0, 223],
+            "time_range": [0, 225],
             "type": "string",
             "missing": 0,
             "table": {
-              "1-4 Years": 11424,
-              "18-49 Years": 11424,
-              "5-17 Years": 11424,
-              "50-64 Years": 11424,
-              "65+ Years": 11424,
-              "<1 Years": 11424,
-              "Total": 11424
+              "<1 Years": 11526,
+              "1-4 Years": 11526,
+              "18-49 Years": 11526,
+              "5-17 Years": 11526,
+              "50-64 Years": 11526,
+              "65+ Years": 11526,
+              "Total": 11526
             }
           },
           {
             "name": "time",
-            "duplicates": 79744,
+            "duplicates": 80456,
             "info": [],
-            "time_range": [0, 223],
+            "time_range": [0, 225],
             "type": "string",
             "missing": 0,
             "table": {
@@ -343,12 +404,14 @@
               "2026-09-19": 357,
               "2026-09-26": 357,
               "2026-10-03": 357,
-              "2026-10-10": 357
+              "2026-10-10": 357,
+              "2026-10-17": 357,
+              "2026-10-24": 357
             }
           },
           {
             "name": "epic_n_ed_diarrhea",
-            "duplicates": 76909,
+            "duplicates": 77595,
             "info": {
               "id": "epic_n_ed_diarrhea",
               "short_name": "Diarrhea ED Encounters (Weekly)",
@@ -364,17 +427,17 @@
                 }
               ]
             },
-            "time_range": [0, 223],
+            "time_range": [0, 225],
             "type": "integer",
             "missing": 0,
-            "mean": 278.789291,
-            "sd": 1500.03889,
+            "mean": 278.107843,
+            "sd": 1496.967757,
             "min": 5,
-            "max": 38097
+            "max": 38055
           },
           {
             "name": "epic_n_ed_vomiting",
-            "duplicates": 75060,
+            "duplicates": 75725,
             "info": {
               "id": "epic_n_ed_vomiting",
               "short_name": "Nausea and Vomiting ED Encounters (Weekly)",
@@ -390,17 +453,17 @@
                 }
               ]
             },
-            "time_range": [0, 223],
+            "time_range": [0, 225],
             "type": "integer",
             "missing": 0,
-            "mean": 691.163841,
-            "sd": 3761.926781,
+            "mean": 690.157259,
+            "sd": 3758.458251,
             "min": 5,
-            "max": 82040
+            "max": 81917
           },
           {
             "name": "epic_n_ed_encounters_weekly",
-            "duplicates": 57141,
+            "duplicates": 57813,
             "info": {
               "id": "epic_n_ed_encounters_weekly",
               "short_name": "All-Cause ED Encounters (Weekly)",
@@ -416,17 +479,17 @@
                 }
               ]
             },
-            "time_range": [0, 223],
+            "time_range": [0, 225],
             "type": "integer",
             "missing": 0,
-            "mean": 14253.524647,
-            "sd": 76367.128178,
+            "mean": 14226.297365,
+            "sd": 76271.286374,
             "min": 5,
-            "max": 1515469
+            "max": 1519165
           },
           {
             "name": "epic_pct_ed_diarrhea",
-            "duplicates": 27676,
+            "duplicates": 28090,
             "info": {
               "id": "epic_pct_ed_diarrhea",
               "short_name": "Diarrhea ED Encounters (%, Weekly)",
@@ -442,17 +505,17 @@
                 }
               ]
             },
-            "time_range": [0, 223],
+            "time_range": [0, 225],
             "type": "float",
             "missing": 0,
-            "mean": 2.833356,
-            "sd": 4.233402,
-            "min": 0.160514,
+            "mean": 2.829479,
+            "sd": 4.211547,
+            "min": 0.160979,
             "max": 100
           },
           {
             "name": "epic_pct_ed_vomiting",
-            "duplicates": 21352,
+            "duplicates": 21529,
             "info": {
               "id": "epic_pct_ed_vomiting",
               "short_name": "Nausea and Vomiting ED Encounters (%, Weekly)",
@@ -468,17 +531,17 @@
                 }
               ]
             },
-            "time_range": [0, 223],
+            "time_range": [0, 225],
             "type": "float",
             "missing": 0,
-            "mean": 5.711225,
-            "sd": 4.395192,
-            "min": 0.363108,
+            "mean": 5.707992,
+            "sd": 4.374746,
+            "min": 0.364697,
             "max": 100
           },
           {
             "name": "epic_suppressed_flag_ed_diarrhea",
-            "duplicates": 79966,
+            "duplicates": 80680,
             "info": {
               "id": "epic_suppressed_flag_ed_diarrhea",
               "short_name": "Diarrhea Count Suppressed? (Weekly)",
@@ -493,17 +556,17 @@
                 }
               ]
             },
-            "time_range": [0, 223],
+            "time_range": [0, 225],
             "type": "integer",
             "missing": 0,
-            "mean": 0.166979,
-            "sd": 0.37296,
+            "mean": 0.168104,
+            "sd": 0.373961,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_ed_vomiting",
-            "duplicates": 79966,
+            "duplicates": 80680,
             "info": {
               "id": "epic_suppressed_flag_ed_vomiting",
               "short_name": "Nausea and Vomiting Count Suppressed? (Weekly)",
@@ -518,17 +581,17 @@
                 }
               ]
             },
-            "time_range": [0, 223],
+            "time_range": [0, 225],
             "type": "integer",
             "missing": 0,
-            "mean": 0.084471,
-            "sd": 0.278095,
+            "mean": 0.084814,
+            "sd": 0.278607,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_suppressed_flag_ed_encounters_weekly",
-            "duplicates": 79966,
+            "duplicates": 80680,
             "info": {
               "id": "epic_suppressed_flag_ed_encounters_weekly",
               "short_name": "All Encounters Count Suppressed? (ED, Weekly)",
@@ -543,17 +606,17 @@
                 }
               ]
             },
-            "time_range": [0, 223],
+            "time_range": [0, 225],
             "type": "integer",
             "missing": 0,
-            "mean": 0.0012,
-            "sd": 0.034627,
+            "mean": 0.001177,
+            "sd": 0.034294,
             "min": 0,
             "max": 1
           },
           {
             "name": "epic_n_all_diarrhea",
-            "duplicates": 71516,
+            "duplicates": 72230,
             "info": {
               "id": "epic_n_all_diarrhea",
               "short_name": "Diarrhea Encounters (All Encounters)",
@@ -571,7 +634,7 @@
             },
             "time_range": [0, 218],
             "type": "integer",
-            "missing": 1785,
+            "missing": 2499,
             "mean": 2137.767904,
             "sd": 11487.589244,
             "min": 5,
@@ -579,7 +642,7 @@
           },
           {
             "name": "epic_pct_all_diarrhea",
-            "duplicates": 4001,
+            "duplicates": 4715,
             "info": {
               "id": "epic_pct_all_diarrhea",
               "short_name": "Diarrhea Encounters (All Encounters, %)",
@@ -597,7 +660,7 @@
             },
             "time_range": [0, 218],
             "type": "float",
-            "missing": 1785,
+            "missing": 2499,
             "mean": 0.519765,
             "sd": 0.281332,
             "min": 0.060372,
@@ -605,7 +668,7 @@
           },
           {
             "name": "epic_suppressed_flag_all_diarrhea",
-            "duplicates": 79965,
+            "duplicates": 80679,
             "info": {
               "id": "epic_suppressed_flag_all_diarrhea",
               "short_name": "All-Encounters Diarrhea Count Suppressed?",
@@ -622,7 +685,7 @@
             },
             "time_range": [0, 218],
             "type": "integer",
-            "missing": 1785,
+            "missing": 2499,
             "mean": 0.023893,
             "sd": 0.152716,
             "min": 0,
@@ -630,7 +693,7 @@
           },
           {
             "name": "epic_n_encounters_total_weekly",
-            "duplicates": 13787,
+            "duplicates": 14501,
             "info": {
               "id": "epic_n_encounters_total_weekly",
               "short_name": "All Encounters (Any Reason, Weekly)",
@@ -648,7 +711,7 @@
             },
             "time_range": [0, 218],
             "type": "integer",
-            "missing": 1785,
+            "missing": 2499,
             "mean": 554243.62653,
             "sd": 3008902.138359,
             "min": 74,
@@ -656,7 +719,7 @@
           },
           {
             "name": "epic_suppressed_flag_encounters_total_weekly",
-            "duplicates": 79966,
+            "duplicates": 80680,
             "info": {
               "id": "epic_suppressed_flag_encounters_total_weekly",
               "short_name": "Total Weekly Encounters Count Suppressed?",
@@ -673,7 +736,7 @@
             },
             "time_range": [0, 218],
             "type": "integer",
-            "missing": 1785,
+            "missing": 2499,
             "mean": 0,
             "sd": 0,
             "min": 0,
@@ -1006,59 +1069,63 @@
           "id": "_catalog"
         }
       },
-      "sha512": "8c234feedb4251d3c2ba62e076b9694d5e6275ad1cad3845cb5608d7d116c8486d5bb4e4b0c756fde82357ef8c10bbac7aae15ae161295403edbb499f8300fc8"
+      "sha512": "5dbe94e91f4a19b643fd05c0c57b59229aff21b1e855feed46bdd601245cc6f398eede4217acce24845362a584d13894869230f893036a883fe0986d5b4cfb90"
     },
     {
       "bytes": 384728,
-      "encoding": "ISO-8859-1",
+      "encoding": "windows-1252",
       "md5": "ef8b1f177f66637eac06b1d59a1031d2",
       "format": "csv",
       "name": "weekly_tests.csv",
       "filename": "weekly_tests.csv.gz",
       "versions": {
         "hash": [
+          "877764b5a049ae305f4630f26bd1d343bc11ce23",
+          "aa8288c6a5abccffa58c0edebe92bbe9c795e7fe",
           "1c3896f5f600c6461fbd2816d879c325f558264f",
+          "4c5d3e4c7447e37eda1fb72715dd6564b7fc3882",
           "a4233472316926bf879d374f0b530625f331fe54",
           "7d74256f7e0e4e9104e6813c6737629dc7c1ab5e",
           "4c7250aa72dbb973edf99243e96a86076d24f819",
           "9080e46d55fc044cb05363d2b2f58f3e8a4be423",
           "15a07a619687a62c78228d58874d935b8e2f4baa",
-          "50d2122ae8cea711298d27cb8388e87b942de019",
-          "aa8288c6a5abccffa58c0edebe92bbe9c795e7fe",
-          "4c5d3e4c7447e37eda1fb72715dd6564b7fc3882"
+          "50d2122ae8cea711298d27cb8388e87b942de019"
         ],
         "author": [
+          "anshap32 <73296024+anshap32@users.noreply.github.com>",
+          "anshap32 <ashapiro32@gmail.com>",
+          "Callie Annas <callie.annas@yale.edu>",
           "Callie Annas <callie.annas@yale.edu>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
           "danweinberger <daniel.weinberger@yale.edu>",
           "anshap32 <73296024+anshap32@users.noreply.github.com>",
-          "anshap32 <73296024+anshap32@users.noreply.github.com>",
-          "anshap32 <ashapiro32@gmail.com>",
-          "Callie Annas <callie.annas@yale.edu>"
+          "anshap32 <73296024+anshap32@users.noreply.github.com>"
         ],
         "date": [
+          "Thu Oct 8 14:27:54 2026 -0400",
+          "Thu Oct 8 14:00:36 2026 -0400",
           "Fri Sep 25 15:02:14 2026 -0400",
+          "Fri Sep 25 13:55:31 2026 -0400",
           "Fri Sep 4 13:31:40 2026 -0400",
           "Thu Aug 13 08:56:41 2026 -0400",
           "Fri Jul 31 08:26:28 2026 -0400",
           "Sat Jul 18 00:10:06 2026 -0400",
           "Fri Jul 17 08:56:35 2026 -0400",
-          "Thu Jul 16 11:36:52 2026 -0400",
-          "Thu Oct 8 14:00:36 2026 -0400",
-          "Fri Sep 25 13:55:31 2026 -0400"
+          "Thu Jul 16 11:36:52 2026 -0400"
         ],
         "message": [
+          "Oct8 updates (#56)",
+          "update respiratory",
           "Updating cyclo data",
+          "Updating diarrhea data",
           "update epic correct dates",
           "updated cyclo new data",
           "added latest data",
           "update dates and vaerify outputs",
           "fixed dates",
-          "added diarrhea encounters for denom",
-          "update respiratory",
-          "Updating diarrhea data"
+          "added diarrhea encounters for denom"
         ]
       },
       "source": [],
@@ -1068,11 +1135,11 @@
           "variable": "geography"
         }
       ],
-      "id_length": 0,
+      "id_length": 2,
       "time": "time",
       "profile": "data-resource",
-      "created": "2026-10-22 15:32:42.60932",
-      "last_modified": "2026-10-22 15:32:42.60932",
+      "created": "2026-08-17 16:12:55.371017",
+      "last_modified": "2026-11-04 11:04:25.396963",
       "vintage": ["9/25/2026", "9/25/2026"],
       "row_count": 11169,
       "entity_count": 51,
@@ -1083,12 +1150,61 @@
             "duplicates": 11118,
             "info": [],
             "time_range": [0, 218],
-            "type": "integer",
+            "type": "string",
             "missing": 0,
-            "mean": 28.745098,
-            "sd": 15.995621,
-            "min": 0,
-            "max": 56
+            "table": {
+              "00": 219,
+              "01": 219,
+              "02": 219,
+              "04": 219,
+              "05": 219,
+              "06": 219,
+              "08": 219,
+              "09": 219,
+              "10": 219,
+              "12": 219,
+              "13": 219,
+              "15": 219,
+              "16": 219,
+              "17": 219,
+              "18": 219,
+              "19": 219,
+              "20": 219,
+              "21": 219,
+              "22": 219,
+              "23": 219,
+              "24": 219,
+              "25": 219,
+              "26": 219,
+              "27": 219,
+              "28": 219,
+              "29": 219,
+              "30": 219,
+              "31": 219,
+              "32": 219,
+              "33": 219,
+              "34": 219,
+              "35": 219,
+              "36": 219,
+              "37": 219,
+              "38": 219,
+              "39": 219,
+              "40": 219,
+              "41": 219,
+              "42": 219,
+              "44": 219,
+              "45": 219,
+              "46": 219,
+              "47": 219,
+              "48": 219,
+              "49": 219,
+              "50": 219,
+              "51": 219,
+              "53": 219,
+              "54": 219,
+              "55": 219,
+              "56": 219
+            }
           },
           {
             "name": "time",
@@ -1950,11 +2066,7 @@
         "time": {
           "status": "present",
           "same_type": true,
-          "added_levels": [
-            "2026-09-12",
-            "2026-09-19",
-            "2026-09-26"
-          ],
+          "added_levels": "2026-10-24",
           "dropped_levels": []
         },
         "epic_n_ed_diarrhea": {
