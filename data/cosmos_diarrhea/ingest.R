@@ -66,7 +66,7 @@ parse_week_range <- function(week_str, year_str) {
 
 # Last week (Saturday end date) kept from the ED weekly export. Epic data is
 # not complete past this date.
-ED_DATA_CUTOFF <- as.Date("2026-10-17")
+ED_DATA_CUTOFF <- as.Date("2026-10-24")
 
 # Epic's weekly buckets are Sunday-Saturday spans, matching the project's
 # Saturday-end-of-week convention. Partial weeks (<7 days) at the start/end
@@ -358,7 +358,7 @@ process_diarrhea_wide <- function(file, granularity, password = NULL) {
 
   if (granularity == "week") {
     data_long <- filter_full_weeks(data_long, "time_raw", "year_raw")
-    # Epic's data is not complete past this week (incomplete after ~Oct 20, 2026);
+    # Epic's data is not complete past this week (complete through the ED_DATA_CUTOFF week);
     # drop later weeks so they don't enter the standard output.
     data_long <- data_long %>% filter(time <= ED_DATA_CUTOFF)
   } else {
