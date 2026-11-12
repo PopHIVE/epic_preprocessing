@@ -255,10 +255,9 @@ if (!identical(process$raw_state, current_state)) {
       mutate(
         yr_num          = as.integer(sub("yr", "", yr_idx)),
         time            = year_dates[yr_num],
-        # Capture "10 or fewer" on the N column before it is imputed as 5
-        !!paste0("rawsup_", measure_names[3]) := as.integer(
-          trimws(as.character(.data[[measure_names[3]]])) %in% "10 or fewer"
-        )
+        # suppressed_flag = as.integer(
+        #   trimws(as.character(.data[[measure_names[3]]])) == "10 or fewer"
+        # )
       ) %>%
       mutate(across(
         all_of(measure_names),
@@ -268,8 +267,7 @@ if (!identical(process$raw_state, current_state)) {
           as.numeric(gsub("%", "", v))
         }
       )) %>%
-      select(age, geography, time, all_of(measure_names),
-             all_of(paste0("rawsup_", measure_names[3])))
+      select(age, geography, time, all_of(measure_names))
   }
 
   # ---------------------------------------------------------------------------
@@ -298,34 +296,20 @@ if (!identical(process$raw_state, current_state)) {
   # ---------------------------------------------------------------------------
   combined_state <- full_join(dm, ob, by = c("age", "geography", "time")) %>%
     select(age, geography, time, diabetes_a1c_6_5, diabetes_dx_ccw,
-           obesity_bmi, obesity_dx_ccw, n_patients_chronic, n_patients_ob,
-           rawsup_n_patients_chronic, rawsup_n_patients_ob) %>%
+           obesity_bmi, obesity_dx_ccw, n_patients_chronic, n_patients_ob) %>%
     mutate(
       suppressed_diabetes_a1c_6_5    = as.integer(is.na(diabetes_a1c_6_5)),
       suppressed_diabetes_dx_ccw     = as.integer(is.na(diabetes_dx_ccw)),
       suppressed_obesity_bmi         = as.integer(is.na(obesity_bmi)),
       suppressed_obesity_dx_ccw      = as.integer(is.na(obesity_dx_ccw)),
-      # N is suppressed if reported as "10 or fewer" or missing entirely
-      suppressed_n_patients_chronic  = as.integer(is.na(n_patients_chronic) |
-                                                    coalesce(rawsup_n_patients_chronic, 0L) == 1L),
-      suppressed_n_patients_ob       = as.integer(is.na(n_patients_ob) |
-                                                    coalesce(rawsup_n_patients_ob, 0L) == 1L),
+      suppressed_n_patients_chronic  = as.integer(is.na(n_patients_chronic)),
+      suppressed_n_patients_ob       = as.integer(is.na(n_patients_ob)),
       across(c(n_patients_chronic, n_patients_ob), ~ replace(.x, is.na(.x), 5)),
-      # Impute suppressed rates as 5/N*100, but leave NA when N is also suppressed
-      diabetes_a1c_6_5 = case_when(!is.na(diabetes_a1c_6_5) ~ diabetes_a1c_6_5,
-                                   suppressed_n_patients_chronic == 1L ~ NA_real_,
-                                   TRUE ~ 5 / n_patients_chronic * 100),
-      diabetes_dx_ccw  = case_when(!is.na(diabetes_dx_ccw) ~ diabetes_dx_ccw,
-                                   suppressed_n_patients_chronic == 1L ~ NA_real_,
-                                   TRUE ~ 5 / n_patients_chronic * 100),
-      obesity_bmi      = case_when(!is.na(obesity_bmi) ~ obesity_bmi,
-                                   suppressed_n_patients_ob == 1L ~ NA_real_,
-                                   TRUE ~ 5 / n_patients_ob * 100),
-      obesity_dx_ccw   = case_when(!is.na(obesity_dx_ccw) ~ obesity_dx_ccw,
-                                   suppressed_n_patients_ob == 1L ~ NA_real_,
-                                   TRUE ~ 5 / n_patients_ob * 100)
+      diabetes_a1c_6_5 = if_else(is.na(diabetes_a1c_6_5), 5 / n_patients_chronic * 100, diabetes_a1c_6_5),
+      diabetes_dx_ccw  = if_else(is.na(diabetes_dx_ccw),  5 / n_patients_chronic * 100, diabetes_dx_ccw),
+      obesity_bmi      = if_else(is.na(obesity_bmi),      5 / n_patients_ob * 100,       obesity_bmi),
+      obesity_dx_ccw   = if_else(is.na(obesity_dx_ccw),   5 / n_patients_ob * 100,       obesity_dx_ccw)
     ) %>%
-    select(-starts_with("rawsup_")) %>%
     filter(!startsWith(time, "2026")) %>%
     arrange(geography, age, time)
 
@@ -363,9 +347,10 @@ if (!identical(process$raw_state, current_state)) {
         age = gsub("65 Years or more", "65+ Years", age),
         age = if_else(grepl("Total", age), "Total", age),
 
-        # Capture "10 or fewer" on N before it is imputed as 5
-        rawsup_n           = as.integer(trimws(n_patients_chronic) %in% "10 or fewer"),
-        ccw              = as.numeric(na_if(gsub("%", "", ccw), "-")),
+       # suppressed_flag    = as.integer(
+       #  trimws(n_patients_chronic) == "10 or fewer"
+       #),
+        ccw                = as.numeric(na_if(gsub("%", "", ccw), "-")),
         lab                = as.numeric(na_if(gsub("%", "", lab), "-")),
         n_patients_chronic = as.numeric(if_else(
           trimws(n_patients_chronic) == "10 or fewer", "5",
@@ -385,7 +370,7 @@ if (!identical(process$raw_state, current_state)) {
         time    = paste0(yearset, "-01-01")
       ) %>%
       dplyr::select(age, geography, time, ccw, lab,
-                    n_patients_chronic, rawsup_n) %>%
+                    n_patients_chronic) %>% #, suppressed_flag
       filter(!is.na(geography))
   }
 
@@ -394,24 +379,21 @@ if (!identical(process$raw_state, current_state)) {
   # ---------------------------------------------------------------------------
   all_diabetes_county <- lapply(stage_a1c_county, chronic_import_county) %>%
     bind_rows() %>%
-    rename(diabetes_a1c_6_5          = lab,
-           diabetes_dx_ccw           = ccw,
-           rawsup_n_patients_chronic = rawsup_n)
+    rename(diabetes_a1c_6_5 = lab,
+           diabetes_dx_ccw  = ccw)
 
   all_obesity_county <- lapply(stage_obesity_county, chronic_import_county) |>
     bind_rows() |>
     rename(obesity_bmi          = lab,
            obesity_dx_ccw       = ccw,
-           n_patients_ob_county = n_patients_chronic,
-           rawsup_n_patients_ob_county = rawsup_n) |>
+           n_patients_ob_county = n_patients_chronic) |> #,           suppressed_flag_ob   = suppressed_flag
     unique()
 
   combined_county <- all_obesity_county |>
     full_join(all_diabetes_county, by = c("geography", "time", "age")) |>
     select(age, geography, time, diabetes_a1c_6_5, diabetes_dx_ccw,
            obesity_bmi, obesity_dx_ccw, n_patients_chronic,
-           n_patients_ob_county, rawsup_n_patients_chronic,
-           rawsup_n_patients_ob_county) |>
+           n_patients_ob_county) |>
     mutate(
       age = case_when(
         age == "1-5 Years"   ~ "1-4 Years",
@@ -429,27 +411,14 @@ if (!identical(process$raw_state, current_state)) {
       suppressed_diabetes_dx_ccw       = as.integer(is.na(diabetes_dx_ccw)),
       suppressed_obesity_bmi           = as.integer(is.na(obesity_bmi)),
       suppressed_obesity_dx_ccw        = as.integer(is.na(obesity_dx_ccw)),
-      # N is suppressed if reported as "10 or fewer" or missing entirely
-      suppressed_n_patients_chronic    = as.integer(is.na(n_patients_chronic) |
-                                                      coalesce(rawsup_n_patients_chronic, 0L) == 1L),
-      suppressed_n_patients_ob_county  = as.integer(is.na(n_patients_ob_county) |
-                                                      coalesce(rawsup_n_patients_ob_county, 0L) == 1L),
+      suppressed_n_patients_chronic    = as.integer(is.na(n_patients_chronic)),
+      suppressed_n_patients_ob_county  = as.integer(is.na(n_patients_ob_county)),
       across(c(n_patients_chronic, n_patients_ob_county), ~ replace(.x, is.na(.x), 5)),
-      # Impute suppressed rates as 5/N*100, but leave NA when N is also suppressed
-      diabetes_a1c_6_5 = case_when(!is.na(diabetes_a1c_6_5) ~ diabetes_a1c_6_5,
-                                   suppressed_n_patients_chronic == 1L ~ NA_real_,
-                                   TRUE ~ 5 / n_patients_chronic * 100),
-      diabetes_dx_ccw  = case_when(!is.na(diabetes_dx_ccw) ~ diabetes_dx_ccw,
-                                   suppressed_n_patients_chronic == 1L ~ NA_real_,
-                                   TRUE ~ 5 / n_patients_chronic * 100),
-      obesity_bmi      = case_when(!is.na(obesity_bmi) ~ obesity_bmi,
-                                   suppressed_n_patients_ob_county == 1L ~ NA_real_,
-                                   TRUE ~ 5 / n_patients_ob_county * 100),
-      obesity_dx_ccw   = case_when(!is.na(obesity_dx_ccw) ~ obesity_dx_ccw,
-                                   suppressed_n_patients_ob_county == 1L ~ NA_real_,
-                                   TRUE ~ 5 / n_patients_ob_county * 100)
+      diabetes_a1c_6_5 = if_else(is.na(diabetes_a1c_6_5), 5 / n_patients_chronic * 100,   diabetes_a1c_6_5),
+      diabetes_dx_ccw  = if_else(is.na(diabetes_dx_ccw),  5 / n_patients_chronic * 100,   diabetes_dx_ccw),
+      obesity_bmi      = if_else(is.na(obesity_bmi),      5 / n_patients_ob_county * 100,  obesity_bmi),
+      obesity_dx_ccw   = if_else(is.na(obesity_dx_ccw),   5 / n_patients_ob_county * 100,  obesity_dx_ccw)
     ) |>
-    select(-starts_with("rawsup_")) |>
     filter(!startsWith(time, "2026")) |>
     arrange(geography, age, time)
 
