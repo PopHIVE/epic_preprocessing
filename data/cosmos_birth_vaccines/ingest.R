@@ -28,7 +28,7 @@
 # imputed rather than left missing: counts as 5, percentages as 5 divided by
 # the row's patient count. The suppressed_flag stays 1 either way, to mark
 # the value as imputed. Neither session's raw export contains any suppressed
-# cells as of the 2026-09-08 export, but both markers are still handled
+# cells as of the 2026-11-18 export, but both markers are still handled
 # defensively since they are standard Epic Cosmos suppression tokens and may
 # appear in future re-exports.
 # =============================================================================

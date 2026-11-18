@@ -48,13 +48,29 @@ Requires two things in the environment:
 - **Suppression.** Epic Cosmos suppresses patient counts of 10 or fewer as `"10 or
   fewer"` and percentages as `"-"`. Both are imputed rather than left missing: counts as
   5, percentages as 5 divided by the row's `epic_n_patients`. `suppressed_flag` stays 1
-  either way, to mark the value as imputed. As of the 2026-09-08 export neither session
+  either way, to mark the value as imputed. As of the 2026-11-18 export neither session
   has any suppressed cells at this year x state granularity, but both markers are still
   handled defensively.
-- **Coverage.** Both exports cover 49 states (no Rhode Island or DC in either session,
-  across all years 2018-2025) plus national (`"00"`). State-level `epic_n_patients`
+- **Coverage.** Both exports cover all 50 states and DC for every year 2018-2025, plus
+  national (`"00"`). Territories and armed-forces codes in the export are dropped. State-level `epic_n_patients`
   reflects Epic's footprint among birthing facilities, not the underlying birth count.
 - Time resolution is annual; `time` is `12-31-<year>`.
+
+## Change log
+
+**November 18, 2026**
+
+Both sessions were re-exported (`raw/staging/` and `raw/staging_cpt_birth/`), replacing
+the 2026-09-08 exports. The earlier exports were incomplete: the all-patients file lacked
+Rhode Island and DC, and the CPT birth file lacked Alaska, Arizona, DC, Kansas, Maine,
+Missouri and Rhode Island. Both files now cover all 50 states and DC (416 rows each, 52
+geographies x 8 years). Values for existing series also changed in `data.csv.gz` and
+`data_cpt_birth.csv.gz`: national `epic_n_patients` is about 2-4% higher in the
+all-patients file in every year (e.g. 1,702,776 to 1,738,500 in 2025), national Vitamin K
+is about 2 points higher, and some states moved more (for example Washington, 2019
+Vitamin K 62.9 to 94.0 with `epic_n_patients` rising from 27,502 to 40,534). The increase
+is likely due to the Providence healthcare system joining Epic Cosmos. `ingest.R` was not
+changed.
 
 You can use the `dcf` package to check the project:
 
