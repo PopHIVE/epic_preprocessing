@@ -1,16 +1,16 @@
 [
   {
-    "file": "raw/staging_diarrhea_wide/ED Encounters_Crosstab_2026-11-09T11_10_57.xlsx",
-    "md5": "e71a6e52939fd82eecbf3fc06c1c6176",
-    "date_processed": "2026-11-09 15:03:29.715481",
+    "file": "raw/staging_diarrhea_wide/ED Encounters_Crosstab_2026-11-19T10_58_31.xlsx",
+    "md5": "4829ad04772396fbe68a8fae0b741c61",
+    "date_processed": "2026-11-19 14:41:16.763704",
     "Session Title": "Number of ED Encounters by ED Diagnoses and Age at Time of Visit Range and State of Residence",
-    "Session ID": "2877453",
+    "Session ID": "2880790",
     "Data Model": "ED Encounters",
     "Population Base": "All ED Encounters",
     "Population Criteria Filters": "Country of Residence: United States of America",
-    "Session Date Range": "6/26/2022 - 10/24/2026 (Based On Arrival Date)",
+    "Session Date Range": "6/26/2022 - 11/7/2026 (Based On Arrival Date)",
     "Measure": "Number of ED Encounters",
-    "Export User": "Anne Shapiro",
-    "Date of Export": "11/9/2026"
+    "Export User": "Madi Baltagulov",
+    "Date of Export": "11/19/2026"
   }
 ]
