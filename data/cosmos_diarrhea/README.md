@@ -93,7 +93,11 @@ label handling in `process_diarrhea_all_encounters_weekly_wide()` and
   dropped. Export dates per output file are recorded in `process.json` under
   `vintages`.
 - **Reporting lag.** The most recent week or two are understated as encounters
-  continue to be recorded after export.
+  continue to be recorded after export. `drop_lagged_weeks()` in `ingest.R`
+  applies the same rule as `cosmos_resp_infections`: among the 4 most recent
+  weeks per geography/age group, a week is dropped when its total ED encounter
+  volume is below 50% of the median of the 4 weeks before that window. Weeks
+  that are understated by less than that are kept.
 - **Dropped rows.** Non-US geographies (territories, other countries) and
   catch-all rows are dropped in `map_state_to_geography()`; `"Total"` becomes
   geography `"00"`. The all-encounters crosstab's `"None of the above"` outcome

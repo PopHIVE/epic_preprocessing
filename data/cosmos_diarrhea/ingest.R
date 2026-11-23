@@ -64,9 +64,31 @@ parse_week_range <- function(week_str, year_str) {
   list(start_date = start_date, end_date = end_date, n_days = n_days)
 }
 
-# Last week (Saturday end date) kept from the ED weekly export. Epic data is
-# not complete past this date.
-ED_DATA_CUTOFF <- as.Date("2026-10-24")
+# Flag and remove recent weeks with a likely reporting lag (same rule as
+# cosmos_resp_infections/ingest.R). Among the 4 most recent weeks per
+# geography/age group, drop any week where total encounter volume
+# (`volume_col`) fell more than 50% vs. a stable baseline (the median of the
+# 4 weeks before that window) -- a sign of incomplete/still-arriving Epic
+# Cosmos data, not a real decline. Using a fixed baseline (rather than the
+# immediately prior week) ensures weeks that stay low after an initial drop
+# keep getting flagged, instead of only the first week of the decline.
+drop_lagged_weeks <- function(data, volume_col) {
+  data %>%
+    group_by(geography, age) %>%
+    mutate(
+      week_rank = dplyr::min_rank(dplyr::desc(time)),
+      baseline = median(.data[[volume_col]][week_rank %in% 5:8], na.rm = TRUE),
+      remove = if_else(
+        week_rank <= 4 &
+          !is.na(baseline) &
+          .data[[volume_col]] < 0.5 * baseline,
+        1, 0
+      )
+    ) %>%
+    filter(remove != 1) %>%
+    select(-remove, -week_rank, -baseline) %>%
+    ungroup()
+}
 
 # Epic's weekly buckets are Sunday-Saturday spans, matching the project's
 # Saturday-end-of-week convention. Partial weeks (<7 days) at the start/end
@@ -358,9 +380,6 @@ process_diarrhea_wide <- function(file, granularity, password = NULL) {
 
   if (granularity == "week") {
     data_long <- filter_full_weeks(data_long, "time_raw", "year_raw")
-    # Epic's data is not complete past this week (complete through the ED_DATA_CUTOFF week);
-    # drop later weeks so they don't enter the standard output.
-    data_long <- data_long %>% filter(time <= ED_DATA_CUTOFF)
   } else {
     # Monthly: keep only rows where the time label is a full 3-letter month
     # abbreviation (partial start/end months use day numbers/ranges instead)
@@ -456,7 +475,10 @@ weekly_standard_ed <- weekly_standard %>%
     epic_suppressed_flag_ed_diarrhea, epic_suppressed_flag_ed_vomiting,
     epic_suppressed_flag_ed_encounters_weekly
   ) %>%
-  arrange(geography, age, time)
+  arrange(geography, age, time) %>%
+  # Epic's most recent weeks are still filling in at export time; drop the
+  # ones that are clearly incomplete so they don't enter the standard output.
+  drop_lagged_weeks("epic_n_ed_encounters_weekly")
 
 # The non-ED exports (all-encounters by age, cyclospora tests) are no longer
 # updated. Set UPDATE_NON_ED <- TRUE to reprocess them from their raw folders.
@@ -590,14 +612,17 @@ if (!UPDATE_NON_ED) {
     "standard/data_weekly.csv.gz", show_col_types = FALSE,
     col_types = vroom::cols(geography = "c", age = "c", time = "D")
   ) %>%
-    select(geography, age, time, contains("all_diarrhea"), contains("encounters_total_weekly"))
+    select(geography, age, time, contains("all_diarrhea"), contains("encounters_total_weekly")) %>%
+    # Keep only rows that actually hold all-encounters data. The existing file
+    # also has ED-only rows (all-encounters columns NA); carrying those forward
+    # would re-add any week drop_lagged_weeks() just removed, as an all-NA row.
+    filter(if_any(-c(geography, age, time), ~ !is.na(.x)))
 }
 
 data_weekly <- full_join(
   weekly_standard_ed, all_encounters_weekly_standard,
   by = c("geography", "age", "time")
 ) %>%
-  filter(time <= ED_DATA_CUTOFF) %>%
   arrange(geography, age, time)
 
 vroom::vroom_write(data_weekly, "standard/data_weekly.csv.gz", ",")
